@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ressources — Écoute quotidienne · English Colles in Lyon</title>
+<meta name="description" content="Écouter chaque jour quelques minutes d'actualité en anglais : sources officielles et gratuites par pays, avec des consignes d'écoute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;
+  --card:#FFFFFF;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);
+  --r:16px;--tap:48px;--maxw:1120px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;--fs:18px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+body.dys{--font:Verdana,Tahoma,"Atkinson Hyperlegible",sans-serif;letter-spacing:.03em;word-spacing:.12em;line-height:1.85}
+body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#b9a88f}
+body.noanim *{animation:none!important;transition:none!important}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:120}.skip:focus{left:12px}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--tap);padding:0 20px;border-radius:12px;font-weight:700;font-size:.95rem;transition:transform .12s,box-shadow .2s;border:2px solid transparent}
+.btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:var(--shadow)}.btn-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+
+/* header */
+header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
+.top-tools{display:flex;align-items:center;gap:8px}
+.accent{display:flex;align-items:center;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.accent button{min-width:40px;height:36px;border-radius:999px;font-size:.78rem;font-weight:700;color:var(--muted)}
+.accent button.on{background:var(--navy);color:#fff}
+.a11y-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:11px;min-height:40px;padding:0 12px;font-weight:700;font-size:.84rem}
+.a11y-btn:hover{border-color:var(--terra)}
+.accent-note{font-size:.74rem;color:var(--muted);text-align:right;max-width:var(--maxw);margin:0 auto;padding:0 20px 7px}
+.burger{display:none;border:1px solid var(--line);background:var(--card);border-radius:11px;min-width:44px;min-height:40px;font-size:1.2rem}
+
+/* a11y panel */
+.scrim{position:fixed;inset:0;background:rgba(34,49,47,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100}.scrim.open{opacity:1;pointer-events:auto}
+.a11y-panel{position:fixed;top:0;right:0;height:100%;width:min(360px,90vw);background:var(--bg2);border-left:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s ease;z-index:101;overflow-y:auto}.a11y-panel.open{transform:none}
+.a11y-panel .ph{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.a11y-panel h2{font-size:1.2rem;color:var(--navy)}.a11y-panel .close{font-size:1.6rem;color:var(--muted);min-width:var(--tap);min-height:var(--tap)}
+.a11y-body{padding:18px 20px}.a11y-group{margin-bottom:20px}.a11y-group .lbl{font-weight:700;font-size:.9rem;margin-bottom:8px;display:block}
+.seg{display:flex;gap:6px}.seg button,.opt-toggle{border:1px solid var(--line);background:var(--card);border-radius:10px;min-height:44px;font-weight:700;font-size:.86rem;padding:0 14px}
+.seg button{flex:1}.seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;color:var(--ink)}
+.opt-toggle .state{font-size:.78rem;font-weight:700;color:var(--muted)}
+.opt-toggle.on{border-color:var(--sage);background:#f2f6f0}.opt-toggle.on .state{color:var(--sage)}
+.a11y-foot{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+
+section{padding:46px 0}
+.sec-head{max-width:64ch}.sec-head h2{font-size:clamp(1.4rem,3.4vw,1.9rem);color:var(--navy)}.sec-head p{color:var(--muted);margin-top:10px}
+.hero{padding:40px 0 8px}
+.hero h1{font-size:clamp(1.8rem,5vw,2.7rem);color:var(--navy);max-width:18ch}
+.hero .lead{font-size:1.08rem;margin-top:14px;max-width:56ch}
+.callout{margin-top:16px;background:#eef3f1;border:1px solid var(--line);border-left:4px solid var(--sage);border-radius:12px;padding:13px 16px;font-size:.92rem;color:var(--ink);max-width:60ch}
+
+/* method steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:22px}
+.step{border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.step .n{font-family:var(--display);font-size:1.3rem;font-weight:600}
+.step h3{font-size:1.08rem;margin:6px 0 6px;color:var(--navy)}.step p{color:var(--muted);font-size:.9rem}
+.st-observe{background:#fbf0e9}.st-observe .n{color:var(--terra)}
+.st-understand{background:#eef3f1}.st-understand .n{color:var(--sage)}
+.st-connect{background:#fdf6e7}.st-connect .n{color:var(--gold)}
+.st-speak{background:#eef1f6}.st-speak .n{color:var(--navy)}
+
+/* source cards */
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:24px}
+.source{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .14s,box-shadow .25s,border-color .2s}
+.source:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.source .head{display:flex;align-items:center;gap:11px}
+.cc{flex:none;min-width:42px;height:30px;padding:0 9px;border-radius:8px;background:var(--navy);color:#fff;font-weight:700;font-size:.78rem;display:grid;place-items:center;letter-spacing:.03em}
+.source h3{font-size:1.12rem;color:var(--navy)}
+.source .meta{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:2px}
+.source .consigne{margin-top:12px;font-size:.92rem;color:var(--ink);flex:1}
+.source .consigne b{color:var(--terra)}
+.source .listen{margin-top:16px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--terra);min-height:40px}
+.source .listen .ar{transition:transform .18s}.source:hover .listen .ar{transform:translateX(3px)}
+.source.match{border-color:var(--terra);box-shadow:0 0 0 2px rgba(196,106,74,.18),var(--shadow)}
+.matchtag{display:none;position:absolute;top:-9px;right:14px;background:var(--terra);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px}
+.source.match .matchtag{display:inline-block}
+
+.small{font-size:.82rem;color:var(--muted);line-height:1.6;background:var(--bg2);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;margin-top:26px}
+
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0;margin-top:20px}
+.foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:6px}
+.foot-nav a{padding:7px 11px;border-radius:8px;font-size:.88rem;font-weight:600}.foot-nav a:hover{background:#fff;color:var(--terra)}
+.foot-copy{width:100%;color:var(--muted);font-size:.84rem;border-top:1px dashed var(--line);padding-top:16px;margin-top:6px}
+
+@media (max-width:860px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 14px 14px;gap:2px;box-shadow:var(--shadow);margin-left:0}
+  .nav.open{display:flex}.nav a{width:100%}.burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
+}
+@media (max-width:560px){.accent button{min-width:34px}.a11y-btn span.lbl{display:none}section{padding:38px 0}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Aller au contenu</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
+      <span class="name">English Colles in Lyon</span>
+      <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html">Vocabulaire</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html" class="active">Ressources</a>
+      <a href="index.html#about">À propos</a>
+    </nav>
+    <div class="top-tools">
+      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
+        <button data-acc="UK" class="on">UK</button>
+        <button data-acc="US">US</button>
+        <button data-acc="AU">AU</button>
+        <button data-acc="CA">CA</button>
+      </div>
+      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
+        <span class="lbl">Accessibilité</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Réglages d'accessibilité">
+  <div class="ph"><h2>Accessibilité</h2><button class="close" id="closeA11y" aria-label="Fermer">×</button></div>
+  <div class="a11y-body">
+    <div class="a11y-group"><span class="lbl">Taille du texte</span>
+      <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
+    </div>
+    <div class="a11y-group"><span class="lbl">Affichage</span>
+      <button class="opt-toggle" data-opt="contrast"><span>Contraste élevé</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Police dyslexie / lecture confortable</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Réduire les animations</span><span class="state">Off</span></button>
+    </div>
+    <p class="a11y-foot">Tes réglages sont mémorisés sur cet appareil.</p>
+  </div>
+</aside>
+
+<main id="main">
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Ressources · Listening</div>
+  <h1>Quelques minutes d'actualité en anglais, chaque jour</h1>
+  <p class="lead">Écouter régulièrement de courts bulletins d'information est l'un des meilleurs moyens d'habituer ton oreille, d'enrichir ton vocabulaire d'actualité et de nourrir tes colles. Voici des sources <b>officielles et gratuites</b>, courtes, à travers le monde anglophone.</p>
+  <div class="callout">Ces bulletins sont protégés par le droit d'auteur : on ne les héberge pas ici, on t'envoie directement vers les sources officielles, qui restent la meilleure façon de les écouter.</div>
+</div></section>
+
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">La méthode</div><h2>Comment écouter (en 4 temps)</h2><p>La même démarche que le reste du site : de l'écoute globale à la prise de parole.</p></div>
+  <div class="steps">
+    <div class="step st-observe"><div class="n">01</div><h3>Observe</h3><p>Écoute une première fois pour le sens général, sans stresser ni tout comprendre.</p></div>
+    <div class="step st-understand"><div class="n">02</div><h3>Understand</h3><p>Réécoute et note 3 à 5 mots-clés, plus 3 faits que tu as compris.</p></div>
+    <div class="step st-connect"><div class="n">03</div><h3>Connect</h3><p>Relie une information à un thème de colle : économie, société, politique, environnement…</p></div>
+    <div class="step st-speak"><div class="n">04</div><h3>Speak</h3><p>À voix haute&nbsp;: «&nbsp;Today's main story is…&nbsp;» — résume en 3 ou 4 phrases.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Pour commencer</div><h2>En anglais simplifié</h2><p>Débit plus lent, vocabulaire expliqué&nbsp;: idéal si l'écoute des journaux natifs te semble encore rapide.</p></div>
+  <div class="sources">
+    <article class="source" data-acc="UK"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">UK</span><div><h3>BBC Learning English</h3><div class="meta">Learning English from the News · ~8 min · hebdo</div></div></div>
+      <p class="consigne">Une actualité de la semaine, racontée en anglais accessible, avec le vocabulaire des titres. <b>Consigne&nbsp;:</b> note les 3 nouveaux mots de l'épisode et une courte définition pour chacun.</p>
+      <a class="listen" href="https://www.bbc.co.uk/learningenglish/features/learning-english-from-the-news" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="AU"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">AU</span><div><h3>SBS News in Easy English</h3><div class="meta">Australie · ~5 min · chaque jour</div></div></div>
+      <p class="consigne">Un résumé quotidien de cinq minutes, en anglais ralenti, pensé pour les apprenants. <b>Consigne&nbsp;:</b> une première écoute pour le sens, puis relève les trois titres principaux.</p>
+      <a class="listen" href="https://www.sbs.com.au/news/podcast-episodes/news-in-easy-english" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="US"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">US</span><div><h3>VOA Learning English</h3><div class="meta">États-Unis · débit lent · quotidien</div></div></div>
+      <p class="consigne">L'actualité américaine et mondiale en anglais simplifié et à débit lent. <b>Consigne&nbsp;:</b> reformule chaque information entendue en une phrase simple, à ta façon.</p>
+      <a class="listen" href="https://learningenglish.voanews.com/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+  </div>
+</div></section>
+
+<section style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Le tour du monde anglophone</div><h2>En anglais authentique, par pays</h2><p>De vrais bulletins d'information&nbsp;: parfaits pour t'habituer aux différents accents. Le pays de ton accent sélectionné est mis en avant.</p></div>
+  <div class="sources">
+    <article class="source" data-acc="US"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">US</span><div><h3>NPR News Now</h3><div class="meta">États-Unis · 5 min · toutes les heures</div></div></div>
+      <p class="consigne">Toute l'actualité en cinq minutes, mise à jour à chaque heure. <b>Consigne&nbsp;:</b> 1ʳᵉ écoute, les sujets&nbsp;; 2ᵉ écoute, relève un chiffre et un nom propre par information.</p>
+      <a class="listen" href="https://www.npr.org/podcasts/500005/npr-news-now" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="CA"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">CA</span><div><h3>CBC · The World This Hour</h3><div class="meta">Canada · 5 min · toutes les heures</div></div></div>
+      <p class="consigne">L'essentiel de l'actualité canadienne et mondiale en cinq minutes. <b>Consigne&nbsp;:</b> repère ce qui concerne l'Amérique du Nord et relie-le à un thème de colle.</p>
+      <a class="listen" href="https://www.cbc.ca/listen/live-radio/1-9-cbc-news-the-world-this-hour" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="UK"><span class="matchtag">★ ton accent</span>
+      <div class="head"><span class="cc">UK</span><div><h3>BBC · Global News Podcast</h3><div class="meta">Royaume-Uni / monde · ~30 min · 2×/jour</div></div></div>
+      <p class="consigne">Le tour du monde de la BBC, deux fois par jour. <b>Consigne&nbsp;:</b> choisis UN sujet et résume-le en quatre phrases (un mini-plan à l'oral).</p>
+      <a class="listen" href="https://www.bbc.co.uk/programmes/p02nq0gn" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="">
+      <div class="head"><span class="cc">IE</span><div><h3>RTÉ · Morning Ireland</h3><div class="meta">Irlande · matinale d'info</div></div></div>
+      <p class="consigne">L'actualité irlandaise et internationale par le service public irlandais. <b>Consigne&nbsp;:</b> choisis un sujet et prépare une phrase d'ouverture (a hook) pour une colle.</p>
+      <a class="listen" href="https://www.rte.ie/radio/podcasts/morning-ireland/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="">
+      <div class="head"><span class="cc">NZ</span><div><h3>RNZ · News Bulletins</h3><div class="meta">Nouvelle-Zélande · bulletins courts</div></div></div>
+      <p class="consigne">Bulletins néo-zélandais (7h, midi, 17h, 22h)&nbsp;: un accent différent, très utile. <b>Consigne&nbsp;:</b> note un sujet qu'on n'entend pas dans les médias britanniques ou américains.</p>
+      <a class="listen" href="https://www.rnz.co.nz/programmes/news-bulletin-podcast" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="">
+      <div class="head"><span class="cc">ZA</span><div><h3>SABC News · SAfm</h3><div class="meta">Afrique du Sud · bulletins d'info</div></div></div>
+      <p class="consigne">Le regard sud-africain sur l'actualité, en anglais. <b>Consigne&nbsp;:</b> repère un enjeu (économie, société) et un mot-clé anglais à réutiliser en colle.</p>
+      <a class="listen" href="https://www.sabcnews.com/sabcnews/category/audio/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+    <article class="source" data-acc="">
+      <div class="head"><span class="cc">IN</span><div><h3>All India Radio · News on AIR</h3><div class="meta">Inde · bulletins en anglais</div></div></div>
+      <p class="consigne">Les bulletins en anglais du service public indien. <b>Consigne&nbsp;:</b> écoute d'abord pour t'habituer à l'accent, puis relève un fait de politique internationale.</p>
+      <a class="listen" href="https://www.newsonair.gov.in/listen-news/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
+    </article>
+  </div>
+
+  <div class="small"><b>Bon à savoir.</b> Ces liens mènent aux pages officielles des diffuseurs. Les émissions sont aussi disponibles dans la plupart des applis de podcasts (Apple Podcasts, Spotify…)&nbsp;: cherches-y le nom de l'émission (par exemple «&nbsp;NPR News Now&nbsp;» ou «&nbsp;SBS News in Easy English&nbsp;»). Si un lien évolue, préviens-moi&nbsp;: on le met à jour. D'autres ressources (articles, podcasts thématiques, vidéos, lectures) viendront compléter cette page.</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand">English Colles in Lyon</div>
+    <nav class="foot-nav" aria-label="Pied de page">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html">Vocabulaire</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Ressources</a>
+      <a href="index.html#about">À propos</a>
+    </nav>
+  </div>
+  <div class="foot-copy">© Eglantine Lecomte — English Colles in Lyon.</div>
+</div></footer>
+
+<script>
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+
+const ACC_LABEL={UK:"UK English",US:"US English",AU:"Australian English",CA:"Canadian English"};
+const accentBox=document.getElementById('accent'),accentNote=document.getElementById('accentNote');
+function highlightAccent(a){document.querySelectorAll('.source').forEach(s=>s.classList.toggle('match',s.dataset.acc===a));}
+function setAccent(a){accentBox.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.acc===a));accentNote.textContent="Accent selected: "+ACC_LABEL[a];LS.set('eclyon_accent',a);highlightAccent(a);}
+accentBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setAccent(b.dataset.acc)));
+setAccent(LS.get('eclyon_accent','UK'));
+
+const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('scrim');
+function openA11y(){panel.classList.add('open');scrim.classList.add('open');}
+function closeA11y(){panel.classList.remove('open');scrim.classList.remove('open');}
+document.getElementById('openA11y').addEventListener('click',openA11y);
+document.getElementById('closeA11y').addEventListener('click',closeA11y);
+scrim.addEventListener('click',closeA11y);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA11y();});
+
+const SIZES=[18,20.5,23];
+function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i);}
+document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));
+applySize(+LS.get('eclyon_size',0));
+
+function applyOpt(opt,on){document.body.classList.toggle(opt,on);const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off';}LS.set('eclyon_'+opt,on?'1':'0');}
+document.querySelectorAll('.opt-toggle').forEach(btn=>{const opt=btn.dataset.opt;btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');});
+</script>
+</body>
+</html>

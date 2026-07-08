@@ -120,79 +120,66 @@ section{padding:54px 0}
 .hero .cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
 .hero-art{display:grid;place-items:center}
 .news-widget{
-  background:white;
-  border:1px solid #E6D8C8;
-  border-radius:20px;
-  padding:24px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
   width:100%;
-  max-width:340px;
-  box-shadow:0 12px 24px rgba(0,0,0,.08);
+  max-width:360px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(36,59,83,.08), 0 22px 48px rgba(36,59,83,.16);
 }
-
+.news-top{
+  display:flex;align-items:center;gap:11px;
+  padding:14px 18px;
+  background:linear-gradient(135deg,var(--navy),#2f5573);
+  color:#fff;
+}
+.news-top .np-ico{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:rgba(255,255,255,.16);display:grid;place-items:center;
+}
+.news-top .np-ico svg{width:19px;height:19px;stroke:#fff}
 .news-header{
-  font-weight:700;
-  color:var(--navy);
-  margin-bottom:12px;
-  line-height:1.3;
+  font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.2;color:#fff;margin:0;
 }
-
+.news-header .sublab{
+  display:block;font-family:var(--font);font-weight:700;font-size:.62rem;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.82;margin-top:3px;
+}
+.news-body{padding:18px}
+.news-metarow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:13px}
 .news-date{
-  color:var(--muted);
-  font-size:.9rem;
-  margin-bottom:12px;
+  font-size:.74rem;font-weight:700;color:var(--muted);
+  background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;margin:0;
 }
-
 .news-country{
-  font-size:.9rem;
-  font-weight:600;
-  color:var(--terra);
-  margin-bottom:10px;
+  font-size:.74rem;font-weight:700;color:var(--terra);
+  background:#fbeee7;border:1px solid #ecd6c8;border-radius:999px;padding:5px 11px;margin:0;
 }
-
 .news-title{
-  font-size:1.15rem;
-  font-weight:700;
-  color:var(--ink);
-  margin-bottom:10px;
+  font-family:var(--display);font-size:1.3rem;line-height:1.2;font-weight:600;
+  color:var(--navy);margin:0 0 10px;
 }
-
 .news-source{
-  color:var(--muted);
-  font-size:.9rem;
-  margin-bottom:12px;
+  display:flex;align-items:center;gap:7px;
+  font-size:.8rem;color:var(--muted);margin:0 0 16px;
 }
-
-.news-themes{
-  color:var(--muted);
-  font-size:.9rem;
-  margin-bottom:18px;
-}
-
+.news-source::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage);flex:none}
 .news-link{
-  display:inline-block;
-  background:var(--terra);
-  color:white;
-  text-decoration:none;
-  padding:10px 16px;
-  border-radius:999px;
-  font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--terra);color:#fff;text-decoration:none;
+  padding:11px 18px;border-radius:12px;font-weight:700;font-size:.9rem;
+  box-shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 24px rgba(196,106,74,.28);
+  transition:transform .12s;
 }
-
-.news-link:hover{
-  opacity:.9;
+.news-link:hover{transform:translateY(-1px)}
+.news-question{
+  margin-top:16px;
+  background:#eef3f1;border:1px solid var(--line);border-left:4px solid var(--sage);
+  border-radius:12px;padding:13px 15px;
+  font-size:.9rem;line-height:1.55;color:var(--ink);
 }
-   .news-question{
-    margin-top:16px;
-    padding-top:16px;
-    border-top:1px solid #E6D8C8;
-    font-size:.92rem;
-    line-height:1.5;
-    color:var(--ink);
-}
-
-.news-question strong{
-    color:var(--navy);
-}
+.news-question strong{color:var(--navy);display:inline-block;margin-bottom:3px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:26px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);
   display:flex;flex-direction:column;transition:transform .14s, box-shadow .25s}
@@ -331,34 +318,20 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
    <div class="hero-art">
 
   <div class="news-widget">
-
-    <div class="news-header">
-      📰 Today's English-Speaking World Brief
+    <div class="news-top">
+      <span class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H5a1 1 0 0 1-1-1Z"/><path d="M17 8h3v9a2 2 0 0 1-4 0V5"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></span>
+      <div class="news-header">Today's English-Speaking World Brief<span class="sublab">Daily brief · updated every day</span></div>
     </div>
-
-    <div class="news-date">
-      9 July 2026
+    <div class="news-body">
+      <div class="news-metarow">
+        <span class="news-date">9 July 2026</span>
+        <span class="news-country">🇬🇧 United Kingdom</span>
+      </div>
+      <div class="news-title">Universities face financial pressure</div>
+      <div class="news-source">Reuters</div>
+      <a href="#" target="_blank" rel="noopener" class="news-link">Read article →</a>
+      <div class="news-question"><strong>Question for discussion:</strong><br>Should British universities rethink their economic model?</div>
     </div>
-
-    <div class="news-country">
-      🇬🇧 United Kingdom
-    </div>
-
-    <div class="news-title">
-      Universities face financial pressure
-    </div>
-
-    <div class="news-source">
-      Reuters
-    </div>
-
-<a href="#" target="_blank" class="news-link">
-  Read article →
-</a>
-<div class="news-question">
-  <strong>Question for discussion:</strong><br>
-Should British universities rethink their economic model?
-</div>
   </div>
 
 </div>
