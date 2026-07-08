@@ -559,10 +559,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));
   applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');
 }); 
-    document.getElementById("test-news").innerHTML =
-      "Erreur : impossible de charger le fichier JSON.";
-    console.error(error);
-  });
+    
    
    fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
   .then(response => response.json())
