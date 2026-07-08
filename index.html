@@ -270,7 +270,13 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
     </div>
   </div>
 </section>
-
+<section>
+  <div class="wrap">
+    <div id="test-news">
+      Chargement des actualités...
+    </div>
+  </div>
+</section>
 <!-- ============ MAIN CARDS ============ -->
 <section>
   <div class="wrap">
@@ -466,7 +472,18 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   const opt=btn.dataset.opt;
   btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));
   applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');
-});
+}); fetch("daily-news.json")
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("test-news").innerHTML =
+      "<h2>" + data[0].title + "</h2>" +
+      "<p>" + data[0].summary + "</p>";
+  })
+  .catch(error => {
+    document.getElementById("test-news").innerHTML =
+      "Erreur : impossible de charger le fichier JSON.";
+    console.error(error);
+  });
 </script>
 </body>
 </html>
