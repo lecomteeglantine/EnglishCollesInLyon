@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>English Colles in Lyon — CPGE English · Colles · Vocabulary · Civilisation</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#243B53">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="English Colles">
 <meta name="descriptifn" content="Travailler l'anglais de CPGE en autonomie : méthodologie de la colle, civilisation, vocabulaire interactif, Colle Trainer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -548,6 +555,9 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   .catch(error => {
     console.error("News widget error:", error);
   });
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
 </script>
 </body>
 </html>
