@@ -563,6 +563,20 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
       "Erreur : impossible de charger le fichier JSON.";
     console.error(error);
   });
+   
+   fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector(".news-date").textContent = data.date;
+    document.querySelector(".news-country").textContent = data.country;
+    document.querySelector(".news-title").textContent = data.title;
+    document.querySelector(".news-source").textContent = data.source;
+    document.querySelector(".news-question").innerHTML =
+      "<strong>Question for discussion:</strong><br>" + data.question;
+  })
+  .catch(error => {
+    console.error("News widget error:", error);
+  });
 </script>
 </body>
 </html>
