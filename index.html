@@ -571,7 +571,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     document.querySelector(".news-country").textContent = data.country;
     document.querySelector(".news-title").textContent = data.title;
     document.querySelector(".news-source").textContent = data.source;
-     document.querySelector(".news-link").href = data.url;
+    document.querySelector(".news-link").setAttribute("href", data.url);
     document.querySelector(".news-question").innerHTML =
       "<strong>Question for discussion:</strong><br>" + data.question;
   })
