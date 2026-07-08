@@ -1,0 +1,29 @@
+[
+  {
+    "title": "UK universities face financial pressure",
+    "country": "🇬🇧 United Kingdom",
+    "summary": "Several British universities are struggling with rising costs and fewer international students.",
+    "vocabulary": ["tuition fees", "funding", "international students"],
+    "toeicQuestion": "What problem are some UK universities facing?",
+    "answer": "They are facing financial pressure.",
+    "discussion": "Should higher education be mostly funded by students or by the state?"
+  },
+  {
+    "title": "Canada invests in clean energy",
+    "country": "🇨🇦 Canada",
+    "summary": "Canada is increasing investment in renewable energy projects to reduce carbon emissions.",
+    "vocabulary": ["renewable energy", "investment", "carbon emissions"],
+    "toeicQuestion": "Why is Canada investing in clean energy?",
+    "answer": "To reduce carbon emissions.",
+    "discussion": "Can clean energy create enough jobs to replace fossil fuels?"
+  },
+  {
+    "title": "Australian cities prepare for extreme heat",
+    "country": "🇦🇺 Australia",
+    "summary": "Cities in Australia are adapting public spaces to protect people during hotter summers.",
+    "vocabulary": ["heatwave", "public spaces", "adapt"],
+    "toeicQuestion": "What are Australian cities preparing for?",
+    "answer": "They are preparing for extreme heat.",
+    "discussion": "How should cities adapt to climate change?"
+  }
+]
