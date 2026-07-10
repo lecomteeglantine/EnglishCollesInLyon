@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulaire — English Colles in Lyon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF3E7; --bg2:#FFF7ED; --ink:#22312F; --muted:#5d6b66;
+  --navy:#243B53; --terra:#C46A4A; --sage:#7A9B76; --gold:#D9A441;
+  --card:#FFFFFF; --line:#E6D8C8;
+  --shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08), 0 24px 60px rgba(36,59,83,.13);
+  --r:16px; --tap:48px; --maxw:1120px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+  --fs:18px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;font-size:1rem;cursor:pointer}
+
+.top{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}
+.nav a.active{color:var(--terra)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+main{padding:34px 0 60px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin-top:6px}
+.page-head p{color:var(--muted);margin-top:8px;max-width:62ch}
+
+/* recherche */
+.searchbar{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.searchbar input{flex:1;min-width:240px;min-height:var(--tap);border:1px solid var(--line);border-radius:13px;padding:10px 16px;font-family:inherit;font-size:1rem;background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.searchbar input:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.search-count{align-self:center;font-size:.88rem;color:var(--muted);font-weight:700}
+
+/* résultats de recherche de mots */
+.term-results{margin-top:18px;display:none}
+.term-results.on{display:block}
+.term-results h2{font-size:1.15rem;color:var(--navy);margin-bottom:10px}
+.hit{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
+.hit .t{font-weight:700;color:var(--navy)}
+.hit .f{color:var(--terra);font-weight:700}
+.hit .d{color:var(--muted);font-size:.92rem;margin-top:4px}
+.hit .c{font-size:.78rem;color:var(--muted);margin-top:6px}
+.hit .c a{color:var(--sage);font-weight:700}
+.hit .c a:hover{text-decoration:underline}
+
+/* chapitres */
+.part{margin-top:38px}
+.part-title{color:var(--navy);border-left:8px solid var(--gold);padding-left:12px;font-size:1.35rem}
+.part-sub{color:var(--muted);font-size:.88rem;margin-top:4px;padding-left:20px}
+.chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}
+.chap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:8px;transition:transform .14s, box-shadow .25s}
+.chap:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.chap .num{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--gold);text-transform:uppercase}
+.chap h3{font-size:1.08rem;color:var(--navy)}
+.chap .meta{font-size:.82rem;color:var(--muted)}
+.chap .links{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.chap .links a{flex:1;text-align:center;min-height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:.88rem;font-weight:700;border:1px solid var(--line);background:var(--bg2)}
+.chap .links a:hover{background:#fff;color:var(--terra)}
+.chap .links a.fc{background:var(--terra);border-color:var(--terra);color:#fff}
+.chap .links a.fc:hover{background:#b25e41;color:#fff}
+.hidden{display:none}
+.no-result{display:none;margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:center;color:var(--muted)}
+.no-result.on{display:block}
+
+footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+@media (max-width:640px){.nav{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="name">English Colles in Lyon</span>
+      <span class="sub">CPGE · Anglais</span>
+    </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html" class="active">Vocabulaire</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Ressources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Vocabulaire</div>
+      <h1>La bibliothèque de vocabulaire</h1>
+      <p>86 chapitres thématiques, près de 11&nbsp;000 mots et expressions pour les khôlles, les essais et les concours. Chaque chapitre existe en fiche de référence (à lire ou imprimer) et en flashcards (pour mémoriser).</p>
+    </div>
+
+    <div class="searchbar">
+      <input type="search" id="q" placeholder="Chercher un mot, une traduction ou un chapitre… (ex. : democracy, réchauffement, monarchy)" aria-label="Recherche dans le vocabulaire">
+      <span class="search-count" id="qCount"></span>
+    </div>
+
+    <section class="term-results" id="termResults" aria-live="polite">
+      <h2>Mots trouvés</h2>
+      <div id="hits"></div>
+    </section>
+
+    <div id="partsRoot"></div>
+
+    <div class="no-result" id="noResult">
+      <p>Aucun résultat. Essaie un autre mot, en anglais ou en français.</p>
+    </div>
+  </div>
+</main>
+
+<footer>English Colles in Lyon — Bibliothèque de vocabulaire CPGE</footer>
+
+<script src="vocab-data.js"></script>
+<script>
+(function(){
+  "use strict";
+  var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
+  var partNames = (window.VOCAB && window.VOCAB.parts) || {};
+  var root = document.getElementById("partsRoot");
+  var q = document.getElementById("q");
+  var qCount = document.getElementById("qCount");
+  var termResults = document.getElementById("termResults");
+  var hits = document.getElementById("hits");
+  var noResult = document.getElementById("noResult");
+
+  function esc(s){
+    var d = document.createElement("div");
+    d.textContent = s || "";
+    return d.innerHTML;
+  }
+
+  // ---- construire la liste des chapitres, groupés par partie ----
+  var parts = {};
+  chapters.forEach(function(c){ (parts[c.part] = parts[c.part] || []).push(c); });
+
+  Object.keys(parts).sort(function(a,b){return a-b;}).forEach(function(p){
+    var sec = document.createElement("section");
+    sec.className = "part";
+    var total = parts[p].reduce(function(n,c){return n + c.count;}, 0);
+    sec.innerHTML =
+      '<h2 class="part-title">Part ' + p + (partNames[p] ? " — " + esc(partNames[p]) : "") + '</h2>' +
+      '<p class="part-sub">' + parts[p].length + ' chapitres · ' + total + ' entrées</p>' +
+      '<div class="chapters"></div>';
+    var grid = sec.querySelector(".chapters");
+    parts[p].forEach(function(c){
+      var el = document.createElement("article");
+      el.className = "chap";
+      el.dataset.search = (c.title + " chapitre " + c.chapter).toLowerCase();
+      el.innerHTML =
+        '<span class="num">Chapitre ' + c.chapter + '</span>' +
+        '<h3>' + esc(c.title) + '</h3>' +
+        '<span class="meta">' + c.count + ' mots et expressions</span>' +
+        '<div class="links">' +
+          '<a href="' + esc(c.file) + '">Lire la fiche</a>' +
+          '<a class="fc" href="flashcards.html?ch=' + esc(c.id) + '">Flashcards</a>' +
+        '</div>';
+      grid.appendChild(el);
+    });
+    root.appendChild(sec);
+  });
+
+  // ---- index de recherche sur les entrées ----
+  var index = [];
+  chapters.forEach(function(c){
+    c.sections.forEach(function(s){
+      s.entries.forEach(function(e){
+        index.push({
+          term: e.term, fr: e.fr, def: e.def,
+          low: (e.term + " " + e.fr).toLowerCase(),
+          chId: c.id, chTitle: c.title, chFile: c.file, chNum: c.chapter
+        });
+      });
+    });
+  });
+
+  function normalize(s){
+    return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  var timer = null;
+  q.addEventListener("input", function(){
+    clearTimeout(timer);
+    timer = setTimeout(applySearch, 160);
+  });
+
+  function applySearch(){
+    var raw = q.value.trim();
+    var needle = normalize(raw);
+    var chapCards = root.querySelectorAll(".chap");
+    var partSecs = root.querySelectorAll(".part");
+
+    if (needle.length < 2){
+      chapCards.forEach(function(el){ el.classList.remove("hidden"); });
+      partSecs.forEach(function(el){ el.classList.remove("hidden"); });
+      termResults.classList.remove("on");
+      noResult.classList.remove("on");
+      qCount.textContent = "";
+      return;
+    }
+
+    // 1) filtrer les chapitres par titre
+    var chapVisible = 0;
+    chapCards.forEach(function(el){
+      var show = normalize(el.dataset.search).indexOf(needle) !== -1;
+      el.classList.toggle("hidden", !show);
+      if (show) chapVisible++;
+    });
+    partSecs.forEach(function(sec){
+      var any = sec.querySelectorAll(".chap:not(.hidden)").length > 0;
+      sec.classList.toggle("hidden", !any);
+    });
+
+    // 2) chercher dans les mots (terme anglais + traduction)
+    var found = [];
+    for (var i = 0; i < index.length && found.length < 30; i++){
+      if (normalize(index[i].low).indexOf(needle) !== -1) found.push(index[i]);
+    }
+    hits.innerHTML = found.map(function(h){
+      return '<div class="hit">' +
+        '<span class="t">' + esc(h.term) + '</span> — <span class="f">' + esc(h.fr) + '</span>' +
+        '<div class="d">' + esc(h.def) + '</div>' +
+        '<div class="c">Chapitre ' + h.chNum + ' · ' + esc(h.chTitle) +
+          ' · <a href="' + esc(h.chFile) + '">fiche</a>' +
+          ' · <a href="flashcards.html?ch=' + esc(h.chId) + '">flashcards</a></div>' +
+      '</div>';
+    }).join("");
+    termResults.classList.toggle("on", found.length > 0);
+    qCount.textContent = found.length > 0
+      ? found.length + (found.length === 30 ? "+ mots" : (found.length > 1 ? " mots" : " mot"))
+      : "";
+    noResult.classList.toggle("on", found.length === 0 && chapVisible === 0);
+  }
+
+  if (chapters.length === 0){
+    root.innerHTML = '<p style="color:var(--muted);margin-top:30px">Aucune donnée trouvée. Vérifie que <strong>vocab-data.js</strong> est bien présent à côté de cette page.</p>';
+  }
+})();
+</script>
+</body>
+</html>
