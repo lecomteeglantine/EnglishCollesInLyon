@@ -1,5 +1,5 @@
 /* English Colles in Lyon — service worker (offline support) */
-const VERSION = 'eclyon-v1';
+const VERSION = 'eclyon-v2';
 const CORE = [
   './', 'index.html', 'civilisation.html', 'resources.html',
   'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png'
@@ -50,7 +50,19 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Everything else (CSS/JS/images/fonts): cache first, then network.
+  // JS, CSS and data files: serve the cache immediately, but refresh it in the
+  // background so site updates arrive on the next page load (stale-while-revalidate).
+  if (/\.(js|css|json)(\?|$)/.test(url.pathname + url.search)) {
+    event.respondWith(
+      caches.match(req).then(hit => {
+        const fresh = fetch(req).then(res => { putInCache(req, res); return res; }).catch(() => hit);
+        return hit || fresh;
+      })
+    );
+    return;
+  }
+
+  // Everything else (images/fonts): cache first, then network.
   event.respondWith(
     caches.match(req).then(hit =>
       hit || fetch(req).then(res => { putInCache(req, res); return res; }).catch(() => hit)
