@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards — English Colles in Lyon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF3E7; --bg2:#FFF7ED; --ink:#22312F; --muted:#5d6b66;
+  --navy:#243B53; --terra:#C46A4A; --sage:#7A9B76; --gold:#D9A441;
+  --card:#FFFFFF; --line:#E6D8C8;
+  --shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08), 0 24px 60px rgba(36,59,83,.13);
+  --r:16px; --tap:48px; --maxw:900px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+  --fs:18px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;font-size:1rem;cursor:pointer}
+
+/* ---- header (identique au site) ---- */
+.top{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}
+.nav a.active{color:var(--terra)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+main{padding:34px 0 60px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin-top:6px}
+.page-head p{color:var(--muted);margin-top:8px;max-width:60ch}
+
+/* ---- panneau de réglages ---- */
+.controls{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px}
+.field label{font-size:.8rem;font-weight:700;color:var(--navy);letter-spacing:.03em}
+.field select{min-height:var(--tap);border:1px solid var(--line);border-radius:11px;padding:8px 12px;font-family:inherit;font-size:.95rem;background:var(--bg2);color:var(--ink)}
+.seg{display:flex;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.seg button{flex:1;min-height:var(--tap);border:none;background:var(--bg2);color:var(--ink);font-weight:600;padding:8px 14px}
+.seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.btn{min-height:var(--tap);border-radius:11px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);font-weight:700;padding:10px 18px;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{background:#fff}
+.btn.primary{background:var(--terra);border-color:var(--terra);color:#fff}
+.btn.primary:hover{background:#b25e41}
+
+/* ---- zone d'étude ---- */
+.study{margin-top:30px;display:none}
+.study.on{display:block}
+.progress{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.bar{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden;min-width:140px}
+.bar i{display:block;height:100%;width:0;background:var(--sage);border-radius:99px;transition:width .3s}
+.counter{font-size:.9rem;color:var(--muted);font-weight:700;white-space:nowrap}
+.chapter-label{font-size:.85rem;color:var(--muted)}
+
+.scene{perspective:1400px}
+.fcard{position:relative;width:100%;min-height:340px;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,.1,.2,1);cursor:pointer;border:none;background:none;padding:0;display:block;text-align:inherit}
+.fcard.flipped{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-lg);padding:34px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
+.face.back{transform:rotateY(180deg);justify-content:flex-start;padding-top:30px;text-align:left;align-items:stretch;overflow-y:auto}
+.face .term{font-family:var(--display);font-size:clamp(1.6rem,4.5vw,2.4rem);color:var(--navy)}
+.face .ipa{color:var(--muted);font-size:1.05rem}
+.face .hint{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:.78rem;color:var(--muted);letter-spacing:.05em}
+.face .sec{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);position:absolute;top:16px;left:0;right:0;text-align:center}
+.back .fr{font-family:var(--display);font-size:1.6rem;color:var(--terra);text-align:center;margin-bottom:6px}
+.back .pron{text-align:center;color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.back .lbl{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-top:10px}
+.back .txt{color:var(--ink);font-size:.98rem}
+.back .ex{background:var(--bg2);border-left:4px solid var(--gold);border-radius:10px;padding:10px 12px;font-style:italic;margin-top:6px}
+
+.actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.actions .btn{flex:1;min-width:140px;justify-content:center}
+.btn.know{background:var(--sage);border-color:var(--sage);color:#fff}
+.btn.know:hover{background:#688a64}
+.btn.again{background:var(--card)}
+.btn.again:hover{border-color:var(--terra);color:var(--terra)}
+.kbd-help{margin-top:14px;font-size:.8rem;color:var(--muted);text-align:center}
+kbd{background:var(--card);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;font-family:inherit;font-size:.78rem}
+
+/* ---- fin de session ---- */
+.done{display:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:36px 28px;text-align:center;margin-top:30px}
+.done.on{display:block}
+.done h2{color:var(--navy);font-size:1.6rem}
+.done .score{font-family:var(--display);font-size:2.6rem;color:var(--sage);margin:10px 0}
+.done p{color:var(--muted)}
+.done .actions{justify-content:center;margin-top:22px}
+
+footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+
+@media (prefers-reduced-motion: reduce){
+  .fcard{transition:none}
+  .bar i{transition:none}
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .face{padding:26px 18px}
+}
+.fcard:focus-visible{outline:3px solid var(--terra);outline-offset:4px;border-radius:var(--r)}
+.btn:focus-visible,select:focus-visible,.seg button:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="name">English Colles in Lyon</span>
+      <span class="sub">CPGE · Anglais</span>
+    </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html" class="active">Vocabulaire</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Ressources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Vocabulaire</div>
+      <h1>Flashcards</h1>
+      <p>Choisis un chapitre, retourne les cartes, et trie ce que tu maîtrises. Les mots « à revoir » reviennent en fin de pile jusqu'à ce que tu les connaisses.</p>
+    </div>
+
+    <div class="controls">
+      <div class="field">
+        <label for="chapSel">Chapitre</label>
+        <select id="chapSel"></select>
+      </div>
+      <div class="field" style="max-width:240px">
+        <label id="dirLabel">Sens</label>
+        <div class="seg" role="group" aria-labelledby="dirLabel">
+          <button type="button" id="dirEN" aria-pressed="true">EN → FR</button>
+          <button type="button" id="dirFR" aria-pressed="false">FR → EN</button>
+        </div>
+      </div>
+      <button class="btn primary" id="startBtn" type="button">Commencer</button>
+    </div>
+
+    <section class="study" id="study" aria-live="polite">
+      <div class="progress">
+        <span class="counter" id="counter"></span>
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+        <span class="chapter-label" id="chapLabel"></span>
+      </div>
+
+      <div class="scene">
+        <button class="fcard" id="fcard" type="button" aria-label="Carte de vocabulaire. Appuie pour retourner.">
+          <div class="face front" id="faceFront"></div>
+          <div class="face back" id="faceBack"></div>
+        </button>
+      </div>
+
+      <div class="actions">
+        <button class="btn again" id="againBtn" type="button">↺ À revoir</button>
+        <button class="btn know" id="knowBtn" type="button">✓ Je connais</button>
+      </div>
+      <p class="kbd-help"><kbd>Espace</kbd> retourner · <kbd>1</kbd> à revoir · <kbd>2</kbd> je connais</p>
+    </section>
+
+    <section class="done" id="done">
+      <h2>Session terminée !</h2>
+      <div class="score" id="score"></div>
+      <p id="doneMsg"></p>
+      <div class="actions">
+        <button class="btn again" id="redoBtn" type="button">↺ Revoir les cartes difficiles</button>
+        <button class="btn primary" id="restartBtn" type="button">Recommencer le chapitre</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>English Colles in Lyon — Flashcards de vocabulaire CPGE</footer>
+
+<script src="vocab-data.js"></script>
+<script>
+(function(){
+  "use strict";
+  var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
+  var chapSel = document.getElementById("chapSel");
+  var dirEN = document.getElementById("dirEN"), dirFR = document.getElementById("dirFR");
+  var startBtn = document.getElementById("startBtn");
+  var study = document.getElementById("study"), done = document.getElementById("done");
+  var fcard = document.getElementById("fcard");
+  var faceFront = document.getElementById("faceFront"), faceBack = document.getElementById("faceBack");
+  var counter = document.getElementById("counter"), barFill = document.getElementById("barFill");
+  var chapLabel = document.getElementById("chapLabel");
+  var againBtn = document.getElementById("againBtn"), knowBtn = document.getElementById("knowBtn");
+  var scoreEl = document.getElementById("score"), doneMsg = document.getElementById("doneMsg");
+
+  var direction = "EN"; // EN -> FR par défaut
+  var deck = [], idx = 0, total = 0, knownCount = 0, hardCards = [];
+  var flipped = false;
+
+  // ----- remplir le sélecteur de chapitres -----
+  var parts = {};
+  chapters.forEach(function(c){ (parts[c.part] = parts[c.part] || []).push(c); });
+  Object.keys(parts).sort(function(a,b){return a-b;}).forEach(function(p){
+    var og = document.createElement("optgroup");
+    og.label = "Part " + p;
+    parts[p].forEach(function(c){
+      var o = document.createElement("option");
+      o.value = c.id;
+      o.textContent = "Ch. " + c.chapter + " — " + c.title + " (" + c.count + " mots)";
+      og.appendChild(o);
+    });
+    chapSel.appendChild(og);
+  });
+
+  function setDir(d){
+    direction = d;
+    dirEN.setAttribute("aria-pressed", d === "EN");
+    dirFR.setAttribute("aria-pressed", d === "FR");
+  }
+  dirEN.addEventListener("click", function(){ setDir("EN"); });
+  dirFR.addEventListener("click", function(){ setDir("FR"); });
+
+  function shuffle(a){
+    for (var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function esc(s){
+    var d = document.createElement("div");
+    d.textContent = s || "";
+    return d.innerHTML;
+  }
+
+  function getChapter(id){
+    for (var i = 0; i < chapters.length; i++) if (chapters[i].id === id) return chapters[i];
+    return null;
+  }
+
+  function buildDeck(ch){
+    var cards = [];
+    ch.sections.forEach(function(s){
+      s.entries.forEach(function(e){
+        cards.push({ e: e, sec: s.title });
+      });
+    });
+    return shuffle(cards);
+  }
+
+  function start(cards){
+    deck = cards; idx = 0; knownCount = 0; hardCards = []; total = deck.length;
+    done.classList.remove("on");
+    study.classList.add("on");
+    render();
+    study.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function render(){
+    if (idx >= deck.length){ return finish(); }
+    var card = deck[idx], e = card.e;
+    flipped = false;
+    fcard.classList.remove("flipped");
+
+    var frontHTML, backHTML;
+    if (direction === "EN"){
+      frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
+        '<div class="term">' + esc(e.term) + '</div>' +
+        (e.ipa ? '<div class="ipa">' + esc(e.ipa) + '</div>' : '') +
+        '<span class="hint">Appuie pour voir la traduction</span>';
+      backHTML = '<div class="fr">' + esc(e.fr) + '</div>' +
+        (e.pron ? '<div class="pron">' + esc(e.pron) + '</div>' : '') +
+        '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
+        '<div class="lbl">Example</div><div class="txt ex">' + esc(e.ex) + '</div>';
+    } else {
+      frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
+        '<div class="term">' + esc(e.fr) + '</div>' +
+        '<span class="hint">Appuie pour voir le mot anglais</span>';
+      backHTML = '<div class="fr">' + esc(e.term) + '</div>' +
+        '<div class="pron">' + esc(e.ipa) + (e.pron ? ' · ' + esc(e.pron) : '') + '</div>' +
+        '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
+        '<div class="lbl">Example</div><div class="txt ex">' + esc(e.ex) + '</div>';
+    }
+    faceFront.innerHTML = frontHTML;
+    faceBack.innerHTML = backHTML;
+
+    var doneCards = total - (deck.length - idx);
+    counter.textContent = (doneCards + 1) + " / " + total;
+    barFill.style.width = (doneCards / total * 100) + "%";
+  }
+
+  function next(known){
+    var card = deck[idx];
+    if (known){
+      knownCount++;
+    } else {
+      deck.push(card);          // la carte revient en fin de pile
+      if (hardCards.indexOf(card) === -1) hardCards.push(card);
+    }
+    idx++;
+    render();
+  }
+
+  function finish(){
+    study.classList.remove("on");
+    done.classList.add("on");
+    barFill.style.width = "100%";
+    scoreEl.textContent = knownCount + " / " + total;
+    var hard = hardCards.length;
+    doneMsg.textContent = hard === 0
+      ? "Toutes les cartes maîtrisées du premier coup. Impressionnant !"
+      : hard + (hard > 1 ? " cartes ont demandé" : " carte a demandé") + " plusieurs passages. Tu peux les revoir tout de suite.";
+    document.getElementById("redoBtn").style.display = hard === 0 ? "none" : "";
+    done.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+
+  fcard.addEventListener("click", function(){
+    flipped = !flipped;
+    fcard.classList.toggle("flipped", flipped);
+  });
+
+  againBtn.addEventListener("click", function(){ next(false); });
+  knowBtn.addEventListener("click", function(){ next(true); });
+
+  startBtn.addEventListener("click", function(){
+    var ch = getChapter(chapSel.value);
+    if (ch) start(buildDeck(ch));
+  });
+  document.getElementById("restartBtn").addEventListener("click", function(){
+    var ch = getChapter(chapSel.value);
+    if (ch) start(buildDeck(ch));
+  });
+  document.getElementById("redoBtn").addEventListener("click", function(){
+    start(shuffle(hardCards.slice()));
+  });
+
+  document.addEventListener("keydown", function(ev){
+    if (!study.classList.contains("on")) return;
+    if (ev.target.tagName === "SELECT") return;
+    if (ev.key === " "){ ev.preventDefault(); fcard.click(); }
+    else if (ev.key === "1"){ next(false); }
+    else if (ev.key === "2"){ next(true); }
+  });
+
+  if (chapters.length === 0){
+    document.querySelector(".controls").innerHTML =
+      '<p style="color:var(--muted)">Aucune donnée de vocabulaire trouvée. Vérifie que <strong>vocab-data.js</strong> est bien présent à côté de cette page.</p>';
+  }
+})();
+</script>
+</body>
+</html>
