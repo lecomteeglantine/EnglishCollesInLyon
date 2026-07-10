@@ -244,7 +244,8 @@ body.nospeech .wotd-speak{display:none}
   background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
   display:inline-flex;align-items:center;gap:7px;
 }
-.civi-flag{border-radius:3px;box-shadow:0 0 0 1px rgba(36,59,83,.12);flex:none}
+.civi-flag{display:inline-flex;flex:none;width:20px;height:15px;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(36,59,83,.12)}
+.civi-flag svg{width:100%;height:100%;display:block}
 .civi-section{
   font-size:.74rem;font-weight:700;color:var(--sage);
   background:#eef3f1;border:1px solid #d8e4d6;border-radius:999px;padding:5px 11px;
@@ -674,12 +675,13 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
   document.getElementById('civiDate').textContent =
     now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
   var country = document.getElementById('civiCountry');
-  var img = document.createElement('img');
-  img.src = 'https://flagcdn.com/24x18/' + f.code + '.png';
-  img.srcset = 'https://flagcdn.com/48x36/' + f.code + '.png 2x';
-  img.width = 20; img.height = 15; img.alt = '';
-  img.className = 'civi-flag';
-  country.appendChild(img);
+  var flagSvg = (window.CIVI_FLAGS || {})[f.code];
+  if (flagSvg){
+    var span = document.createElement('span');
+    span.className = 'civi-flag';
+    span.innerHTML = flagSvg;
+    country.appendChild(span);
+  }
   country.appendChild(document.createTextNode(f.country));
   document.getElementById('civiSection').textContent = f.section;
   document.getElementById('civiFact').textContent = f.fact;
