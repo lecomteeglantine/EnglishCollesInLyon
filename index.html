@@ -237,6 +237,17 @@ section{padding:54px 0}
 }
 .wotd-link:hover{text-decoration:underline}
 body.nospeech .wotd-speak{display:none}
+.civi-top{background:linear-gradient(135deg,var(--sage),#93b28f)}
+.civi-metarow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.civi-country{
+  font-size:.74rem;font-weight:700;color:var(--navy);
+  background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+}
+.civi-section{
+  font-size:.74rem;font-weight:700;color:var(--sage);
+  background:#eef3f1;border:1px solid #d8e4d6;border-radius:999px;padding:5px 11px;
+}
+.civi-fact{font-size:.93rem;color:var(--ink);line-height:1.55}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:26px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);
   display:flex;flex-direction:column;transition:transform .14s, box-shadow .25s}
@@ -408,6 +419,21 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
       <div class="wotd-def" id="wotdDef"></div>
       <div class="wotd-ex" id="wotdEx"></div>
       <a class="wotd-link" id="wotdLink" href="#">Voir le chapitre →</a>
+    </div>
+  </div>
+
+  <div class="wotd civi" id="civi" hidden>
+    <div class="wotd-top civi-top">
+      <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+      <div class="wotd-header">Civi Fact of the Day<span class="sublab" id="civiDate"></span></div>
+    </div>
+    <div class="wotd-body">
+      <div class="civi-metarow">
+        <span class="civi-country" id="civiCountry"></span>
+        <span class="civi-section" id="civiSection"></span>
+      </div>
+      <div class="civi-fact" id="civiFact"></div>
+      <a class="wotd-link" href="civilisation.html">Explore la civilisation →</a>
     </div>
   </div>
 
@@ -633,6 +659,24 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
 </script>
 <script src="wotd-data.js"></script>
+<script src="civi-data.js"></script>
+<script>
+/* ===== Civi Fact of the Day ===== */
+(function(){
+  var list = window.CIVI || [];
+  var box = document.getElementById('civi');
+  if (!list.length || !box) return;
+  var now = new Date();
+  var dayNumber = Math.floor((now - new Date(2026, 0, 1)) / 86400000);
+  var f = list[((dayNumber % list.length) + list.length) % list.length];
+  document.getElementById('civiDate').textContent =
+    now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+  document.getElementById('civiCountry').textContent = f.flag + ' ' + f.country;
+  document.getElementById('civiSection').textContent = f.section;
+  document.getElementById('civiFact').textContent = f.fact;
+  box.hidden = false;
+})();
+</script>
 <script>
 /* ===== Word of the Day ===== */
 (function(){
