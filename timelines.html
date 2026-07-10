@@ -354,7 +354,7 @@ function render(){
   const term=document.getElementById("search").value.toLowerCase().trim();
   const direction=document.getElementById("sort").value;
  const selectedCountry=document.getElementById("country").value;
-const data=selectedCountry==="usa" ? usaEvents : events;
+const data=usaEvents;
 
 const filtered=data.filter(e=>{
     const hay=[e.date,e.title,e.summary,e.what,e.why,e.keywords.join(" "),e.colle].join(" ").toLowerCase();
