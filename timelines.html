@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronologies — Royaume-Uni · English Colles in Lyon</title>
+<meta name="description" content="Frise chronologique interactive du Royaume-Uni pour préparer les colles d'anglais en CPGE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;
+  --terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--rose:#B06A78;--card:#FFFFFF;
+  --line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);
+  --r:16px;--tap:48px;--maxw:1120px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;--fs:18px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+body.dys{--font:Verdana,Tahoma,"Atkinson Hyperlegible",sans-serif;letter-spacing:.03em;word-spacing:.12em;line-height:1.85}
+body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#9b8669}
+body.noanim *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer;color:inherit}
+svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:120}
+.skip:focus{left:12px}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.88rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}
+.nav a.active{color:var(--terra);background:#fff}
+.top-tools{display:flex;align-items:center;gap:8px}
+.accent{display:flex;align-items:center;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.accent button{border:0;background:transparent;min-width:40px;height:36px;border-radius:999px;font-size:.78rem;font-weight:700;color:var(--muted)}
+.accent button.on{background:var(--navy);color:#fff}
+.a11y-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:11px;min-height:40px;padding:0 12px;font-weight:700;font-size:.84rem}
+.burger{display:none;border:1px solid var(--line);background:var(--card);border-radius:11px;min-width:44px;min-height:40px;font-size:1.2rem}
+.accent-note{font-size:.74rem;color:var(--muted);text-align:right;max-width:var(--maxw);margin:0 auto;padding:0 20px 7px}
+
+/* Accessibility */
+.scrim{position:fixed;inset:0;background:rgba(34,49,47,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100}
+.scrim.open{opacity:1;pointer-events:auto}
+.a11y-panel{position:fixed;top:0;right:0;height:100%;width:min(360px,90vw);background:var(--bg2);border-left:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s ease;z-index:101;overflow-y:auto}
+.a11y-panel.open{transform:none}
+.a11y-panel .ph{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.a11y-panel h2{font-size:1.2rem;color:var(--navy)}
+.a11y-panel .close{font-size:1.6rem;color:var(--muted);min-width:var(--tap);min-height:var(--tap);border:0;background:transparent}
+.a11y-body{padding:18px 20px}.a11y-group{margin-bottom:20px}.a11y-group .lbl{font-weight:700;font-size:.9rem;margin-bottom:8px;display:block}
+.seg{display:flex;gap:6px}.seg button,.opt-toggle{border:1px solid var(--line);background:var(--card);border-radius:10px;min-height:44px;font-weight:700;font-size:.86rem;padding:0 14px}
+.seg button{flex:1}.seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+.opt-toggle .state{font-size:.78rem;color:var(--muted)}
+.opt-toggle.on{border-color:var(--sage);background:#f2f6f0}.opt-toggle.on .state{color:var(--sage)}
+.a11y-foot{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
+
+/* Hero */
+.hero{padding:48px 0 36px;border-bottom:1px solid var(--line);background:
+ radial-gradient(circle at 88% 18%,rgba(217,164,65,.16),transparent 25%),
+ radial-gradient(circle at 8% 82%,rgba(122,155,118,.12),transparent 24%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.hero h1{font-size:clamp(2rem,5.2vw,3.35rem);color:var(--navy);max-width:14ch}
+.hero .lead{font-size:1.08rem;margin-top:16px;max-width:57ch}
+.hero .hint{color:var(--muted);margin-top:10px;max-width:60ch}
+.country-panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow-lg)}
+.country-panel .title{display:flex;align-items:center;gap:12px}
+.flag{font-size:2.6rem;line-height:1}
+.country-panel h2{font-size:1.4rem;color:var(--navy)}
+.country-panel p{color:var(--muted);margin-top:8px}
+.country-select{margin-top:16px}
+.country-select label{display:block;font-weight:700;font-size:.82rem;color:var(--navy);margin-bottom:6px}
+.country-select select{width:100%;min-height:48px;border:1px solid var(--line);background:var(--bg2);border-radius:12px;padding:0 14px;color:var(--ink)}
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px}
+.stat b{display:block;color:var(--terra);font-size:1.15rem}.stat span{font-size:.78rem;color:var(--muted)}
+
+/* Controls */
+.controls-section{padding:28px 0;background:#fff;border-bottom:1px solid var(--line)}
+.controls{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:end}
+.control label{display:block;font-weight:700;font-size:.82rem;color:var(--navy);margin-bottom:6px}
+.control input,.control select{width:100%;min-height:48px;border:1px solid var(--line);background:var(--bg2);border-radius:12px;padding:0 14px;color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 13px;font-weight:700;font-size:.8rem}
+.pill.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.result-count{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* Timeline */
+.timeline-section{padding:48px 0}
+.timeline{position:relative;max-width:930px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:112px;top:0;bottom:0;width:4px;background:linear-gradient(var(--terra),var(--gold),var(--rose),var(--sage),var(--navy));border-radius:4px}
+.event{display:grid;grid-template-columns:92px 1fr;gap:42px;position:relative;margin-bottom:20px}
+.event.hidden{display:none}
+.date{font-family:var(--display);font-weight:600;color:var(--terra);font-size:1.08rem;text-align:right;padding-top:21px}
+.dot{position:absolute;left:103px;top:28px;width:22px;height:22px;border-radius:50%;background:var(--card);border:6px solid var(--terra);box-shadow:0 0 0 4px var(--bg)}
+.event[data-era="state"] .dot{border-color:var(--terra)}
+.event[data-era="empire"] .dot{border-color:var(--gold)}
+.event[data-era="war"] .dot{border-color:var(--rose)}
+.event[data-era="welfare"] .dot{border-color:var(--sage)}
+.event[data-era="modern"] .dot{border-color:var(--navy)}
+.event-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;transition:transform .15s,box-shadow .2s}
+.event-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.event-toggle{width:100%;border:0;background:transparent;text-align:left;padding:20px 22px;display:flex;align-items:flex-start;gap:15px}
+.event-main{flex:1}.event-main h3{font-size:1.2rem;color:var(--navy)}
+.event-main .summary{font-size:.9rem;color:var(--muted);margin-top:6px}
+.tag{display:inline-flex;margin-bottom:8px;border-radius:999px;padding:4px 9px;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fbeee7;color:var(--terra)}
+.chev{font-size:1.15rem;color:var(--muted);transition:transform .2s;margin-top:6px}
+.event-card.open .chev{transform:rotate(180deg)}
+.details{display:none;border-top:1px solid var(--line);padding:18px 22px 22px;background:var(--bg2)}
+.event-card.open .details{display:block}
+.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.details h4{font-family:var(--font);font-size:.84rem;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);margin:0 0 6px}
+.details p{font-size:.91rem}
+.keywords{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.keyword{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:.76rem;font-weight:700}
+.colle{margin-top:14px;background:#eef3f1;border-left:4px solid var(--sage);border-radius:10px;padding:12px 14px;font-size:.9rem}
+.empty{display:none;text-align:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;color:var(--muted)}
+
+/* Toolkit */
+.toolkit{padding:44px 0;background:#fff;border-top:1px solid var(--line)}
+.toolkit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.tool-card{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--bg2)}
+.tool-card h3{font-size:1.15rem;color:var(--navy);margin-bottom:10px}
+.tool-card ol,.tool-card ul{margin:0;padding-left:22px}
+.tool-card li{margin:6px 0}
+
+/* Quiz */
+.quiz-section{padding:44px 0}
+.quiz-box{background:var(--navy);color:#fff;border-radius:22px;padding:28px;box-shadow:var(--shadow-lg)}
+.quiz-box h2{color:#fff;font-size:1.65rem}
+.quiz-box p{margin-top:8px;opacity:.88}
+.quiz-question{margin-top:22px;font-size:1.08rem;font-weight:700}
+.quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.quiz-option{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:12px;padding:13px;text-align:left;font-weight:700}
+.quiz-option:hover{background:rgba(255,255,255,.16)}
+.quiz-option.correct{background:#537a52}.quiz-option.wrong{background:#9a4f4f}
+.quiz-feedback{min-height:28px;margin-top:13px;color:#fff;font-weight:700}
+.quiz-next{display:none;margin-top:8px;border:0;background:var(--gold);color:#243B53;border-radius:12px;padding:11px 16px;font-weight:700}
+
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
+.foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:6px}
+.foot-nav a{padding:7px 11px;border-radius:8px;font-size:.88rem;font-weight:600}
+.foot-copy{width:100%;color:var(--muted);font-size:.84rem;border-top:1px dashed var(--line);padding-top:16px;margin-top:6px}
+
+@media(max-width:940px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 14px 14px;box-shadow:var(--shadow);margin-left:0}
+  .nav.open{display:flex}.nav a{width:100%}.burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
+  .hero-grid,.controls{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .accent{display:none}.a11y-btn span.lbl{display:none}
+  .timeline::before{left:18px}.event{grid-template-columns:1fr;gap:0;padding-left:48px}.date{text-align:left;padding:0 0 5px}
+  .dot{left:9px;top:31px}.details-grid,.toolkit-grid,.quiz-options{grid-template-columns:1fr}
+  .event-toggle{padding:17px}.details{padding:16px 17px 19px}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Aller au contenu</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
+      <span class="name">English Colles in Lyon</span>
+      <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html">Vocabulaire</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Ressources</a>
+      <a href="timelines.html" class="active">Chronologies</a>
+      <a href="index.html#about">À propos</a>
+    </nav>
+    <div class="top-tools">
+      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
+        <button data-acc="UK" class="on">UK</button><button data-acc="US">US</button><button data-acc="AU">AU</button><button data-acc="CA">CA</button>
+      </div>
+      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog"><span aria-hidden="true">◐</span><span class="lbl">Accessibilité</span></button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Réglages d'accessibilité">
+  <div class="ph"><h2>Accessibilité</h2><button class="close" id="closeA11y" aria-label="Fermer">×</button></div>
+  <div class="a11y-body">
+    <div class="a11y-group"><span class="lbl">Taille du texte</span>
+      <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
+    </div>
+    <div class="a11y-group"><span class="lbl">Affichage</span>
+      <button class="opt-toggle" data-opt="contrast"><span>Contraste élevé</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Police de lecture confortable</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Réduire les animations</span><span class="state">Off</span></button>
+    </div>
+    <p class="a11y-foot">Tes réglages sont mémorisés sur cet appareil.</p>
+  </div>
+</aside>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Civilisation · Interactive timeline</div>
+      <h1>The United Kingdom through time</h1>
+      <p class="lead">Une frise chronologique interactive pour retenir les dates essentielles, comprendre leur importance et les réutiliser intelligemment en colle.</p>
+      <p class="hint">Clique sur chaque événement pour afficher les explications, le vocabulaire et un angle de colle.</p>
+    </div>
+    <aside class="country-panel">
+      <div class="title"><div class="flag" aria-hidden="true">🇬🇧</div><div><h2>United Kingdom</h2><p>From Magna Carta to Brexit and the return of Labour.</p></div></div>
+      <div class="country-select">
+        <label for="country">Choisir un pays</label>
+        <select id="country">
+          <option value="uk" selected>🇬🇧 United Kingdom</option>
+          <option disabled>🇺🇸 United States — bientôt</option>
+          <option disabled>🇮🇪 Ireland — bientôt</option>
+          <option disabled>🇨🇦 Canada — bientôt</option>
+          <option disabled>🇦🇺 Australia — bientôt</option>
+          <option disabled>🇳🇿 New Zealand — bientôt</option>
+          <option disabled>🇮🇳 India — bientôt</option>
+          <option disabled>🇿🇦 South Africa — bientôt</option>
+        </select>
+      </div>
+      <div class="hero-stats"><div class="stat"><b>24</b><span>key landmarks</span></div><div class="stat"><b>5</b><span>historical periods</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<section class="controls-section">
+  <div class="wrap">
+    <div class="controls">
+      <div class="control"><label for="search">Rechercher un événement ou un mot-clé</label><input id="search" type="search" placeholder="Ex. Brexit, monarchy, NHS, Empire…"></div>
+      <div class="control"><label for="sort">Ordre d'affichage</label><select id="sort"><option value="asc">Du plus ancien au plus récent</option><option value="desc">Du plus récent au plus ancien</option></select></div>
+    </div>
+    <div class="pills" aria-label="Filtrer par période">
+      <button class="pill on" data-filter="all">Toutes les périodes</button>
+      <button class="pill" data-filter="state">Building the state</button>
+      <button class="pill" data-filter="empire">Empire & industry</button>
+      <button class="pill" data-filter="war">World wars</button>
+      <button class="pill" data-filter="welfare">Welfare & decolonisation</button>
+      <button class="pill" data-filter="modern">Modern Britain</button>
+    </div>
+    <div class="result-count" id="resultCount">24 événements affichés</div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="timeline" id="timeline"></div>
+    <div class="empty" id="empty">Aucun événement ne correspond à ta recherche.</div>
+  </div>
+</section>
+
+<section class="toolkit">
+  <div class="wrap">
+    <div class="eyebrow">Colle toolkit</div>
+    <h2>Comment utiliser cette frise en colle</h2>
+    <div class="toolkit-grid">
+      <div class="tool-card"><h3>La méthode en 4 étapes</h3><ol><li>Retenir la date et le nom de l'événement.</li><li>Expliquer ce qui s'est passé en une phrase.</li><li>Donner trois mots-clés précis.</li><li>Relier l'événement à un débat contemporain.</li></ol></div>
+      <div class="tool-card"><h3>Les 10 dates prioritaires</h3><ul><li>1215 — Magna Carta</li><li>1689 — Bill of Rights</li><li>1707 — Act of Union</li><li>1833 — Abolition of slavery</li><li>1948 — NHS & Windrush</li><li>1973 — Joining the EEC</li><li>1979 — Thatcher</li><li>1998 — Good Friday Agreement</li><li>2016 — Brexit referendum</li><li>2020 — Leaving the EU</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-section">
+  <div class="wrap">
+    <div class="quiz-box">
+      <div class="eyebrow" style="color:#D9A441">Mini quiz</div>
+      <h2>Test your timeline</h2>
+      <p>Une question aléatoire à la fois.</p>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      <button class="quiz-next" id="quizNext">Question suivante</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">English Colles in Lyon</div>
+    <nav class="foot-nav" aria-label="Navigation de pied de page">
+      <a href="index.html">Accueil</a><a href="civilisation.html">Civilisation</a><a href="resources.html">Ressources</a><a href="timelines.html">Chronologies</a>
+    </nav>
+    <div class="foot-copy">Outil pédagogique pour la préparation des colles d'anglais en CPGE.</div>
+  </div>
+</footer>
+
+<script>
+const events = [
+{year:1215,date:"1215",era:"state",tag:"Building the state",title:"Magna Carta",summary:"The king's power is formally limited.",what:"King John accepted a charter limiting royal authority and recognising that the monarch was not above the law.",why:"It became a founding myth of English liberties, constitutional restraint and the rule of law.",keywords:["limited government","the rule of law","individual liberties"],colle:"Can a symbolic historical text still shape modern democracy?"},
+{year:1534,date:"1534",era:"state",tag:"Building the state",title:"The Anglican Reformation",summary:"Henry VIII breaks with Rome.",what:"The Act of Supremacy made the monarch head of the Church of England.",why:"The King remains Supreme Governor of the established Church of England.",keywords:["Church of England","established church","religious settlement"],colle:"Is an established church compatible with a modern, secular society?"},
+{year:1688,date:"1688–89",era:"state",tag:"Building the state",title:"Glorious Revolution & Bill of Rights",summary:"Parliamentary supremacy is consolidated.",what:"James II was removed and William and Mary accepted limits on royal power.",why:"The event established the basis of constitutional monarchy and parliamentary sovereignty.",keywords:["constitutional monarchy","parliamentary sovereignty","Bill of Rights"],colle:"Does Britain need a written constitution?"},
+{year:1707,date:"1707",era:"state",tag:"Building the state",title:"Act of Union",summary:"England and Scotland form Great Britain.",what:"The English and Scottish Parliaments were united at Westminster.",why:"The survival of this Union is now questioned by Scottish nationalism and Brexit.",keywords:["the Union","Scottish identity","Westminster"],colle:"Is the United Kingdom still genuinely united?"},
+{year:1801,date:"1801",era:"state",tag:"Building the state",title:"Union with Ireland",summary:"The United Kingdom of Great Britain and Ireland is created.",what:"Ireland was formally incorporated into the United Kingdom.",why:"The later partition of Ireland and Northern Ireland's status remain central political questions.",keywords:["unionism","Irish nationalism","partition"],colle:"Could Irish reunification reshape the UK?"},
+{year:1807,date:"1807",era:"empire",tag:"Empire & industry",title:"Abolition of the slave trade",summary:"Britain bans the transatlantic slave trade.",what:"British ships were prohibited from transporting enslaved people, although slavery itself continued in the Empire.",why:"The date is central to debates over national pride, responsibility and the memory of slavery.",keywords:["abolition","slave trade","historical memory"],colle:"How should Britain remember both its role in slavery and in abolition?"},
+{year:1833,date:"1833",era:"empire",tag:"Empire & industry",title:"Abolition of slavery in the Empire",summary:"Slavery is abolished across most of the British Empire.",what:"The Slavery Abolition Act emancipated enslaved people in most British colonies.",why:"Compensation went mainly to slave owners, a fact now used in debates about reparations.",keywords:["emancipation","reparations","colonial legacy"],colle:"Should former colonial powers pay reparations?"},
+{year:1837,date:"1837–1901",era:"empire",tag:"Empire & industry",title:"The Victorian era",summary:"Industrial power and imperial expansion reach their height.",what:"Britain became the “workshop of the world” and ruled a vast empire under Queen Victoria.",why:"The era shaped Britain's global influence, class structure, cities and imperial memory.",keywords:["Industrial Revolution","British Empire","urbanisation"],colle:"Is imperial nostalgia preventing Britain from facing its past?"},
+{year:1914,date:"1914–18",era:"war",tag:"World wars",title:"The First World War",summary:"A generation is marked by mass warfare and loss.",what:"Britain fought with the Allies in a conflict that caused enormous military and civilian sacrifice.",why:"Remembrance culture and the poppy remain major elements of British public life.",keywords:["remembrance","the trenches","the poppy"],colle:"How do national rituals shape collective memory?"},
+{year:1939,date:"1939–45",era:"war",tag:"World wars",title:"The Second World War",summary:"Churchill, the Blitz and Britain's “finest hour”.",what:"Britain resisted Nazi Germany, endured the Blitz and emerged victorious but exhausted and indebted.",why:"WWII remains one of the strongest sources of British national mythology.",keywords:["the Blitz","Winston Churchill","national resilience"],colle:"Can heroic national myths distort present-day political choices?"},
+{year:1942,date:"1942",era:"welfare",tag:"Welfare & decolonisation",title:"The Beveridge Report",summary:"A blueprint for the post-war welfare state.",what:"William Beveridge proposed tackling want, disease, ignorance, squalor and idleness.",why:"The report laid the intellectual foundations of the modern British welfare state.",keywords:["welfare state","social solidarity","public services"],colle:"How much responsibility should the state assume for citizens' welfare?"},
+{year:1948,date:"1948",era:"welfare",tag:"Welfare & decolonisation",title:"Creation of the NHS",summary:"Universal healthcare becomes a national institution.",what:"The National Health Service began providing healthcare free at the point of use and funded through taxation.",why:"The NHS is both a symbol of social solidarity and a service under severe pressure.",keywords:["universal healthcare","taxation","waiting lists"],colle:"Can the NHS be reformed without betraying its founding promise?"},
+{year:1948.1,date:"1948",era:"welfare",tag:"Welfare & decolonisation",title:"The Empire Windrush arrives",summary:"A landmark in post-war immigration.",what:"Caribbean migrants arrived to help rebuild Britain after the war.",why:"Windrush symbolises multicultural Britain and the continuing legacy of Empire.",keywords:["Windrush generation","multiculturalism","post-colonial migration"],colle:"Is immigration a challenge to British identity, or one of its foundations?"},
+{year:1956,date:"1956",era:"welfare",tag:"Welfare & decolonisation",title:"The Suez Crisis",summary:"A symbol of Britain's declining global power.",what:"Britain, France and Israel intervened in Egypt but withdrew under international pressure.",why:"Suez exposed Britain's dependence on the United States and the end of superpower status.",keywords:["decline","special relationship","post-imperial power"],colle:"What remains of British global power today?"},
+{year:1973,date:"1973",era:"modern",tag:"Modern Britain",title:"The UK joins the EEC",summary:"Britain enters the European project.",what:"The UK joined the European Economic Community after years of debate and failed applications.",why:"Membership began a difficult relationship with Europe that culminated in Brexit.",keywords:["European integration","Euroscepticism","sovereignty"],colle:"Why has Britain's relationship with Europe always been so uneasy?"},
+{year:1979,date:"1979",era:"modern",tag:"Modern Britain",title:"Margaret Thatcher becomes Prime Minister",summary:"The neoliberal turn begins.",what:"Thatcher launched privatisation, deregulation, tax cuts and confrontation with trade unions.",why:"Thatcherism permanently reshaped the economy and Britain's political vocabulary.",keywords:["privatisation","deregulation","trade unions"],colle:"Did Thatcher modernise Britain or deepen its inequalities?"},
+{year:1984,date:"1984–85",era:"modern",tag:"Modern Britain",title:"The miners' strike",summary:"A decisive defeat for organised labour.",what:"Coal miners fought pit closures in a bitter year-long confrontation with Thatcher's government.",why:"The defeat accelerated deindustrialisation and weakened trade union power.",keywords:["industrial action","deindustrialisation","working class"],colle:"How does economic change reshape communities and political loyalties?"},
+{year:1997,date:"1997",era:"modern",tag:"Modern Britain",title:"New Labour comes to power",summary:"Tony Blair promises a “Third Way”.",what:"Labour returned after eighteen years, combining market economics with social investment.",why:"New Labour introduced devolution and reshaped the centre-left, but Iraq damaged its legacy.",keywords:["Third Way","modernisation","devolution"],colle:"Can centre-left parties combine market efficiency with social justice?"},
+{year:1998,date:"1998",era:"modern",tag:"Modern Britain",title:"The Good Friday Agreement",summary:"A peace settlement for Northern Ireland.",what:"The agreement created power-sharing institutions and largely ended the Troubles.",why:"Brexit complicated the border question and tested the settlement's stability.",keywords:["power-sharing","the Troubles","Irish border"],colle:"Can peace survive when constitutional identities remain unresolved?"},
+{year:1999,date:"1999",era:"modern",tag:"Modern Britain",title:"Devolution takes effect",summary:"New institutions open in Scotland, Wales and Northern Ireland.",what:"Holyrood, the Welsh Assembly and Stormont received powers from Westminster.",why:"Devolution granted autonomy but also strengthened national identities and independence movements.",keywords:["Holyrood","the Senedd","Stormont"],colle:"Has devolution saved the Union or weakened it?"},
+{year:2009,date:"2009",era:"modern",tag:"Modern Britain",title:"The Supreme Court is created",summary:"The highest court becomes institutionally separate from Parliament.",what:"The new Supreme Court replaced the judicial role of the Law Lords.",why:"It strengthened the visible separation of powers and later played a major role during Brexit.",keywords:["Supreme Court","judicial independence","separation of powers"],colle:"Should judges be able to restrain elected governments?"},
+{year:2014,date:"2014",era:"modern",tag:"Modern Britain",title:"Scottish independence referendum",summary:"Scotland votes 55% to remain in the UK.",what:"Scottish voters rejected independence, but the issue remained politically alive.",why:"Scotland's later Remain vote in the Brexit referendum revived demands for another vote.",keywords:["self-determination","Scottish nationalism","the Union"],colle:"Should Scotland be allowed to hold another referendum?"},
+{year:2016,date:"2016",era:"modern",tag:"Modern Britain",title:"The Brexit referendum",summary:"51.9% vote to leave the European Union.",what:"Leave won after a campaign centred on sovereignty, immigration and “taking back control”.",why:"The referendum exposed deep territorial, social and generational divisions.",keywords:["sovereignty","Euroscepticism","political fragmentation"],colle:"Was Brexit primarily a vote about Europe or about British identity?"},
+{year:2020,date:"2020",era:"modern",tag:"Modern Britain",title:"The UK leaves the European Union",summary:"Brexit becomes legally effective.",what:"The UK formally left the EU on 31 January 2020, with the transition ending later that year.",why:"The consequences for trade, immigration, Northern Ireland and Britain's world role remain major debates.",keywords:["trade barriers","Global Britain","regulatory divergence"],colle:"Has Brexit delivered the control and opportunities promised?"},
+{year:2022,date:"2022",era:"modern",tag:"Modern Britain",title:"Elizabeth II dies; Charles III succeeds",summary:"A historic royal transition.",what:"Queen Elizabeth II died after a seventy-year reign and Charles III became King.",why:"The transition reopened debates about monarchy, continuity, cost and relevance.",keywords:["succession","constitutional monarchy","republicanism"],colle:"Can the monarchy remain relevant to younger generations?"},
+{year:2024,date:"2024",era:"modern",tag:"Modern Britain",title:"Labour returns to power",summary:"Keir Starmer becomes Prime Minister.",what:"Labour won the general election after fourteen years of Conservative-led government.",why:"The change marked a major political reset amid pressure on public services, living standards and trust.",keywords:["general election","public services","political change"],colle:"Can a change of government restore trust in British politics?"}
+];
+
+const timeline=document.getElementById("timeline");
+let currentFilter="all";
+
+function escapeHTML(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));}
+function render(){
+  const term=document.getElementById("search").value.toLowerCase().trim();
+  const direction=document.getElementById("sort").value;
+  const filtered=events.filter(e=>{
+    const hay=[e.date,e.title,e.summary,e.what,e.why,e.keywords.join(" "),e.colle].join(" ").toLowerCase();
+    return (currentFilter==="all"||e.era===currentFilter)&&hay.includes(term);
+  }).sort((a,b)=>direction==="asc"?a.year-b.year:b.year-a.year);
+  timeline.innerHTML=filtered.map((e,i)=>`
+    <article class="event" data-era="${e.era}">
+      <div class="date">${escapeHTML(e.date)}</div><span class="dot"></span>
+      <div class="event-card">
+        <button class="event-toggle" aria-expanded="false">
+          <div class="event-main"><span class="tag">${escapeHTML(e.tag)}</span><h3>${escapeHTML(e.title)}</h3><p class="summary">${escapeHTML(e.summary)}</p></div>
+          <span class="chev">⌄</span>
+        </button>
+        <div class="details">
+          <div class="details-grid"><div><h4>What happened?</h4><p>${escapeHTML(e.what)}</p></div><div><h4>Why it still matters</h4><p>${escapeHTML(e.why)}</p></div></div>
+          <div class="keywords">${e.keywords.map(k=>`<span class="keyword">${escapeHTML(k)}</span>`).join("")}</div>
+          <div class="colle"><strong>Colle angle:</strong> ${escapeHTML(e.colle)}</div>
+        </div>
+      </div>
+    </article>`).join("");
+  document.getElementById("resultCount").textContent=`${filtered.length} événement${filtered.length>1?"s":""} affiché${filtered.length>1?"s":""}`;
+  document.getElementById("empty").style.display=filtered.length?"none":"block";
+  document.querySelectorAll(".event-toggle").forEach(btn=>btn.addEventListener("click",()=>{
+    const card=btn.closest(".event-card"); card.classList.toggle("open");
+    btn.setAttribute("aria-expanded",card.classList.contains("open"));
+  }));
+}
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("sort").addEventListener("change",render);
+document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
+  document.querySelectorAll(".pill").forEach(x=>x.classList.remove("on"));p.classList.add("on");currentFilter=p.dataset.filter;render();
+}));
+render();
+
+/* Quiz */
+const quiz=[
+{q:"Which event established the basis of parliamentary sovereignty?",a:["Magna Carta","Glorious Revolution and Bill of Rights","Act of Union","Brexit referendum"],c:1,e:"The Glorious Revolution and the Bill of Rights consolidated constitutional monarchy and parliamentary supremacy."},
+{q:"When was the NHS created?",a:["1942","1948","1956","1973"],c:1,e:"The NHS was created in 1948 and provides healthcare free at the point of use."},
+{q:"Which event is associated with post-war Caribbean immigration?",a:["The Suez Crisis","The Empire Windrush","The miners' strike","Devolution"],c:1,e:"The Empire Windrush arrived in 1948 and became a symbol of multicultural Britain."},
+{q:"What happened in 1707?",a:["The UK joined the EEC","The Act of Union united England and Scotland","The Good Friday Agreement was signed","The slave trade was abolished"],c:1,e:"The 1707 Act of Union created Great Britain by uniting England and Scotland."},
+{q:"Which referendum exposed major territorial and generational divisions?",a:["The 2014 Scottish referendum","The 2016 Brexit referendum","The 1999 devolution referendums","The 1975 EEC referendum"],c:1,e:"The 2016 Brexit referendum produced a narrow Leave victory and revealed deep fractures."},
+{q:"What did the Good Friday Agreement mainly address?",a:["Scottish independence","The Troubles in Northern Ireland","House of Lords reform","The monarchy"],c:1,e:"The 1998 Good Friday Agreement created power-sharing and largely ended the Troubles."}
+];
+let qi=0;
+function loadQuiz(){
+  const item=quiz[qi%quiz.length];
+  document.getElementById("quizQuestion").textContent=item.q;
+  const box=document.getElementById("quizOptions");box.innerHTML="";
+  document.getElementById("quizFeedback").textContent="";
+  document.getElementById("quizNext").style.display="none";
+  item.a.forEach((t,i)=>{
+    const b=document.createElement("button");b.className="quiz-option";b.textContent=t;
+    b.addEventListener("click",()=>{
+      [...box.children].forEach(x=>x.disabled=true);
+      b.classList.add(i===item.c?"correct":"wrong");
+      if(i!==item.c) box.children[item.c].classList.add("correct");
+      document.getElementById("quizFeedback").textContent=(i===item.c?"Correct! ":"Not quite. ")+item.e;
+      document.getElementById("quizNext").style.display="inline-block";
+    });box.appendChild(b);
+  });
+}
+document.getElementById("quizNext").addEventListener("click",()=>{qi=(qi+1)%quiz.length;loadQuiz();});
+loadQuiz();
+
+/* Mobile nav */
+const burger=document.getElementById("burger"),nav=document.getElementById("nav");
+burger.addEventListener("click",()=>{nav.classList.toggle("open");burger.setAttribute("aria-expanded",nav.classList.contains("open"));});
+
+/* Accent selector */
+const note=document.getElementById("accentNote");
+document.querySelectorAll("#accent button").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll("#accent button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");
+  const names={UK:"UK English",US:"US English",AU:"Australian English",CA:"Canadian English"};note.textContent="Accent selected: "+names[btn.dataset.acc];
+}));
+
+/* Accessibility */
+const panel=document.getElementById("a11yPanel"),scrim=document.getElementById("scrim");
+function openPanel(){panel.classList.add("open");scrim.classList.add("open");}
+function closePanel(){panel.classList.remove("open");scrim.classList.remove("open");}
+document.getElementById("openA11y").addEventListener("click",openPanel);
+document.getElementById("closeA11y").addEventListener("click",closePanel);
+scrim.addEventListener("click",closePanel);
+document.querySelectorAll("#sizeSeg button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#sizeSeg button").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+  document.documentElement.style.setProperty("--fs",["18px","20px","22px"][+b.dataset.size]);localStorage.setItem("timelineSize",b.dataset.size);
+}));
+document.querySelectorAll(".opt-toggle").forEach(b=>b.addEventListener("click",()=>{
+  const opt=b.dataset.opt;b.classList.toggle("on");document.body.classList.toggle(opt,b.classList.contains("on"));
+  b.querySelector(".state").textContent=b.classList.contains("on")?"On":"Off";localStorage.setItem("timeline_"+opt,b.classList.contains("on"));
+}));
+const savedSize=localStorage.getItem("timelineSize");
+if(savedSize!==null) document.querySelector(`#sizeSeg button[data-size="${savedSize}"]`)?.click();
+["contrast","dys","noanim"].forEach(opt=>{if(localStorage.getItem("timeline_"+opt)==="true")document.querySelector(`[data-opt="${opt}"]`)?.click();});
+</script>
+</body>
+</html>
