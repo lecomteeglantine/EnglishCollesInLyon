@@ -337,7 +337,14 @@ const events = [
 {year:2024,date:"2024",era:"modern",tag:"Modern Britain",title:"Labour returns to power",summary:"Keir Starmer becomes Prime Minister.",what:"Labour won the general election after fourteen years of Conservative-led government.",why:"The change marked a major political reset amid pressure on public services, living standards and trust.",keywords:["general election","public services","political change"],colle:"Can a change of government restore trust in British politics?"}
 ];
 
-const usaEvents = [  
+const usaEvents = [
+
+{year:1776,date:"1776",era:"founding",tag:"Founding",title:"Declaration of Independence",summary:"The thirteen colonies declare independence from Britain."},
+
+{year:1787,date:"1787",era:"founding",tag:"Founding",title:"US Constitution adopted",summary:"The Constitution establishes the framework of the federal government."},
+
+{year:2021,date:"2021",era:"contemporary",tag:"Politics",title:"Joe Biden inaugurated",summary:"Joe Biden becomes the 46th President of the United States."}
+
 ];
 const timeline=document.getElementById("timeline");
 let currentFilter="all";
@@ -380,10 +387,7 @@ document.getElementById("sort").addEventListener("change",render);
 document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
   document.querySelectorAll(".pill").forEach(x=>x.classList.remove("on"));p.classList.add("on");currentFilter=p.dataset.filter;render();
 }));
-  document.getElementById("country").addEventListener("change",()=>{
-  alert("USA détecté !");
-});
-render();
+document.getElementById("country").addEventListener("change",render);
 
 /* Quiz */
 const quiz=[
