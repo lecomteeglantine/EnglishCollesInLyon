@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colle Atlas — South Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15302A;--ink-soft:#33473F;--slate:#566A61;
+    --paper:#EFEEE6;--card:#FBFBF6;--card-2:#F2F1E8;--line:#D6D8CC;--line-2:#BFC3B5;
+    --brass:#9C6B22;--brass-soft:#C49A53;
+    --g:#3F7A4B;--a:#A86E18;--r:#A6432B;
+    --acc:#9C6B22;--accs:#f2ece1;       /* per-theme accent (set in JS) */
+    --radius:16px;--shadow:0 1px 2px rgba(21,48,42,.05),0 10px 30px rgba(21,48,42,.08);--tap:48px;
+    font-size:18px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:1rem;line-height:1.6;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+  body.reading{letter-spacing:.05em;word-spacing:.16em;line-height:1.9}
+  body.reading p,body.reading li{text-align:left}
+  h1,h2,h3,h4{font-family:"Lexend",sans-serif;font-weight:600;line-height:1.2;margin:0}
+  p{margin:0}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  :focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:8px}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:99}
+  .skip:focus{left:12px}
+  .eyebrow{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
+
+  header.bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar-in{max-width:920px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .brand{display:flex;align-items:baseline;gap:8px;min-height:var(--tap);cursor:pointer}
+  .brand .mark{font-family:"Lexend";font-weight:700;font-size:1.05rem}.brand .sep{color:var(--line-2)}
+  .brand .country{font-weight:600;font-size:.9rem;color:var(--ink-soft)}
+  .bar-spacer{flex:1}
+  .rank{display:flex;flex-direction:column;gap:3px;padding:6px 12px;border:1px solid var(--line);background:var(--card);border-radius:12px;min-width:128px}
+  .rank .rl{font-family:"Lexend";font-size:.72rem;font-weight:600}.rank .rl b{color:var(--brass)}
+  .rank .rb{height:5px;border-radius:99px;background:var(--card-2);overflow:hidden}
+  .rank .rb i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
+  .a11y{display:flex;align-items:center;gap:6px}
+  .a11y button{min-width:42px;min-height:42px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-weight:700;font-size:.85rem;display:grid;place-items:center;padding:0 9px}
+  .a11y button:hover{background:var(--card-2)}.a11y button.on{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
+  .a11y .ttl{font-size:.62rem}.a11y .tlg{font-size:1.05rem}
+
+  .views{padding-bottom:48px}
+  .view{display:none;animation:fade .4s ease both}.view.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+
+  .hero{padding:28px 0 4px;text-align:center}
+  .hero h1{font-size:clamp(1.7rem,6vw,2.5rem);max-width:16ch;margin:6px auto 0}
+  .hero .sub{color:var(--slate);margin:12px auto 0;max-width:44ch}
+
+  .cprog{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;margin:20px 0 6px}
+  .cprog .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .cprog .nm{font-family:"Lexend";font-weight:600;font-size:1.05rem}
+  .cprog .ct{font-family:"Lexend";font-size:.82rem;color:var(--slate)}
+  .cprog .bar{height:12px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden;margin:12px 0 0}
+  .cprog .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft));transition:width .5s}
+  .badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-family:"Lexend";font-size:.74rem;font-weight:600;background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:99px;padding:5px 10px}
+  .badge .s{width:9px;height:9px;border-radius:50%}
+
+  .choices{display:grid;gap:14px;margin:18px 0 6px}
+  .choice{display:flex;align-items:center;gap:16px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-height:var(--tap);box-shadow:var(--shadow);transition:transform .12s,border-color .2s}
+  .choice:hover{transform:translateY(-2px);border-color:var(--line-2)}
+  .choice .ill{flex:none;width:62px;height:62px;border-radius:14px;overflow:hidden;background:var(--card-2)}.choice .ill svg{width:100%;height:100%;display:block}
+  .choice .tx{flex:1}.choice .time{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+  .choice h3{font-size:1.18rem;margin:3px 0 2px}.choice p{font-size:.9rem;color:var(--slate)}
+  .choice .go{flex:none;color:var(--slate);font-size:1.5rem}
+
+  .today{background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0 6px}
+  .today .q{font-family:"Lexend";font-weight:500;font-size:1.05rem;margin:6px 0 10px}
+
+  .section{margin:28px 0 0}
+  .section-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .section-h h2{font-size:1.15rem}.section-h .mini{font-size:.78rem;color:var(--slate)}
+
+  .explore2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .ex{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;min-height:var(--tap);box-shadow:var(--shadow)}
+  .ex:hover{border-color:var(--line-2);background:var(--card-2)}
+  .ex .i{font-size:1.4rem}.ex .t{display:block;font-family:"Lexend";font-weight:600;font-size:.96rem}.ex .d{display:block;font-size:.76rem;color:var(--slate)}
+
+  .chap{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .chap-btn{width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:var(--tap);text-align:left}
+  .chap-btn:hover{background:var(--card-2)}
+  .chap .num{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:.9rem}
+  .chap .ct{flex:1}.chap .ct .ctitle{font-family:"Lexend";font-weight:600;font-size:1.02rem}.chap .ct .csub{font-size:.8rem;color:var(--slate);margin-top:2px}
+  .chap .meter{flex:none}.chap .meter .bar{width:64px;height:8px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}.chap .meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
+  .chap .chev{flex:none;color:var(--slate);transition:transform .3s;font-size:1.1rem}.chap.open .chev{transform:rotate(180deg)}
+  .chap-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.chap.open .chap-body{grid-template-rows:1fr}.chap-body>div{overflow:hidden}
+  .topic{width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;min-height:var(--tap);text-align:left;border-top:1px solid var(--line)}
+  .topic:hover{background:var(--card-2)}
+  .topic .swatch{flex:none;width:10px;height:10px;border-radius:50%}
+  .topic .thumb{flex:none;width:44px;height:44px;border-radius:11px;overflow:hidden;background:var(--card-2)}.topic .thumb svg{width:100%;height:100%}
+  .topic .tn{flex:1}.topic .tn .nm{font-weight:700;font-size:.98rem}.topic .tn .ds{font-size:.76rem;color:var(--slate)}
+  .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
+  .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
+  .topic.soon{opacity:.62}.topic.soon .ds{color:var(--brass)}
+
+  .foot{margin:30px 0 8px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+  .foot button{font-size:.85rem;font-weight:600;color:var(--ink-soft);min-height:var(--tap);padding:0 8px;text-decoration:underline;text-underline-offset:3px}
+  .note{max-width:760px;margin:6px auto 0;padding:0 18px}
+  .note .in{background:var(--card-2);border:1px dashed var(--line-2);border-radius:12px;padding:14px 16px;font-size:.82rem;color:var(--slate);line-height:1.6}.note b{color:var(--ink-soft)}
+
+  .back{min-height:var(--tap);display:inline-flex;align-items:center;gap:8px;color:var(--slate);font-weight:600;font-size:.9rem;margin-top:10px}.back:hover{color:var(--ink)}
+  .progress-top{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
+  .progress-top .bar{flex:1;height:10px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}
+  .progress-top .bar i{display:block;height:100%;background:var(--acc);transition:width .4s}
+  .progress-top .lab{font-family:"Lexend";font-size:.78rem;font-weight:600;color:var(--slate);white-space:nowrap}
+
+  .dots{display:flex;gap:7px;margin-bottom:16px;flex-wrap:wrap}
+  .dots .d{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.76rem;font-weight:600;color:var(--slate);min-height:40px}
+  .dots .d .ix{font-family:"Lexend";font-size:.7rem}
+  .dots .d.active{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
+  .dots .d.cleared{border-color:var(--acc);color:var(--acc)}
+  .dots .d.locked{opacity:.42}
+
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border-top:4px solid var(--acc)}
+  .s-body{padding:22px 22px 8px}.s-body h2{font-size:1.5rem;margin:4px 0 0;display:flex;align-items:center;gap:10px}
+  .s-body h2 .swatch{width:14px;height:14px;border-radius:50%;background:var(--acc);flex:none}
+  .lede{color:var(--ink-soft);font-size:1.02rem;margin-top:12px}.s-body p+p{margin-top:12px}
+  .illo{width:100%;border-radius:13px;overflow:hidden;background:linear-gradient(135deg,#e8ebe2,#dfe4d8);margin:8px 0 4px;border:1px solid var(--line)}.illo svg{width:100%;height:auto;display:block}
+  .cap{font-size:.76rem;color:var(--slate);margin-top:8px;text-align:center}
+  .qbig{font-family:"Lexend";font-weight:500;font-size:1.25rem;line-height:1.35;margin:16px 0}
+
+  .reveal{border:2px solid var(--line);border-radius:13px;overflow:hidden;margin-top:12px}
+  .reveal>button{width:100%;min-height:var(--tap);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:"Lexend";font-weight:600;font-size:.95rem;color:var(--ink)}
+  .reveal>button:hover{background:var(--card-2)}
+  .reveal .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.reveal.open .body{grid-template-rows:1fr}
+  .reveal .body>div{overflow:hidden;padding:0 16px}.reveal.open .body>div{padding:0 16px 16px}
+  .reveal .chev{transition:transform .3s;color:var(--slate)}.reveal.open .chev{transform:rotate(180deg)}
+
+  .sentence{font-family:"Lexend";font-weight:500;font-size:1.1rem;border-left:4px solid var(--acc);padding-left:14px;color:var(--ink)}
+  .facts{list-style:none;padding:0;margin:14px 0 0}.facts li{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.98rem}.facts li:last-child{border:none}.facts .b{color:var(--acc);font-weight:700;flex:none}
+  .pill-line{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}
+  .keybox{flex:1;min-width:220px;background:var(--card-2);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+  .keybox .kt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:4px}
+  .keybox .kc{font-size:.95rem;color:var(--ink-soft)}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .tag{font-family:"Lexend";font-weight:500;font-size:.8rem;background:var(--accs);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+
+  .connect-intro{margin:6px 0 14px}
+  .cchips{display:flex;flex-wrap:wrap;gap:9px}
+  .cchip{font-family:"Lexend";font-weight:600;font-size:.9rem;background:var(--card);border:2px solid var(--line);border-radius:11px;padding:11px 14px;min-height:44px}
+  .cchip:hover{border-color:var(--acc)}.cchip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+  .conn-detail{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:0 16px;max-height:0;overflow:hidden;opacity:0;transition:.3s}
+  .conn-detail.show{padding:15px 16px;max-height:300px;opacity:1}
+  .conn-detail .ct{font-family:"Lexend";font-weight:600;margin-bottom:5px}
+
+  .levelblock{border:1px solid var(--line);border-radius:13px;padding:15px 17px;margin-bottom:12px;background:var(--card)}
+  .levelblock .lh{display:flex;align-items:center;gap:9px;font-family:"Lexend";font-weight:600;margin-bottom:8px}
+  .levelblock .lh .d{width:12px;height:12px;border-radius:50%}
+  .levelblock[data-l=easy] .d{background:var(--g)}.levelblock[data-l=inter] .d{background:var(--a)}.levelblock[data-l=adv] .d{background:var(--r)}
+  .levelblock ul{margin:0;padding-left:20px}.levelblock li{padding:4px 0;font-size:.96rem}
+
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
+  .tabb{font-family:"Lexend";font-weight:600;font-size:.88rem;border:2px solid var(--line);background:var(--card);border-radius:99px;padding:9px 15px;min-height:44px;color:var(--slate)}
+  .tabb.on{background:var(--card-2);border-color:var(--line-2);color:var(--ink)}
+  .opt{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:14px 15px;margin-bottom:10px;font-size:.96rem;min-height:var(--tap)}
+  .opt:hover{border-color:var(--line-2);background:var(--card-2)}
+  .opt.sel{border-color:var(--acc);background:var(--accs)}
+  textarea.notes{width:100%;border:2px solid var(--line);border-radius:12px;padding:13px;font-family:inherit;font-size:1rem;resize:vertical;min-height:90px;background:var(--card-2);line-height:1.6}
+  textarea.notes:focus{outline:none;border-color:var(--acc);background:var(--card)}
+  .plan{list-style:none;padding:0;margin:8px 0 0;counter-reset:p}.plan li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}.plan li:last-child{border:none}
+  .plan li::before{counter-increment:p;content:counter(p,upper-roman);font-family:"Lexend";font-weight:700;color:var(--acc);flex:none;min-width:28px}
+  .hookline{background:var(--accs);border-left:4px solid var(--acc);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.96rem}.hookline b{font-family:"Lexend";color:var(--acc)}
+  .result{margin-top:14px;background:var(--card-2);border:1px solid var(--line);border-radius:12px;padding:15px}
+
+  .res{display:grid;gap:10px;margin-top:6px}
+  .res-c{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:var(--card-2)}
+  .res-c .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:5px}.res-c .ri{font-size:.92rem;color:var(--ink-soft)}
+  .compare{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:15px}.compare .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}.compare p{font-size:.95rem;color:var(--ink-soft);margin-top:6px}
+
+  .s-foot{border-top:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;gap:10px}.s-foot .sp{flex:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Lexend";font-weight:600;font-size:.95rem;border-radius:12px;padding:0 20px;min-height:var(--tap);transition:transform .12s}
+  .btn-primary{background:var(--ink);color:#F4F6EF;box-shadow:var(--shadow)}.btn-primary:hover{transform:translateY(-1px)}
+  .btn-ghost{border:2px solid var(--line-2);color:var(--ink)}.btn-ghost:hover{background:var(--card-2)}
+  .btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px;border-left:4px solid var(--acc)}
+  .panic-c h3{font-family:"Lexend";font-size:1.08rem;display:flex;align-items:center;gap:10px}
+  .panic-c .one{margin-top:9px;font-size:.95rem}.panic-c .one b{font-family:"Lexend";color:var(--acc);font-weight:600;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}
+  .timerbox{text-align:center;margin:16px 0}.timer{font-family:"Lexend";font-weight:700;font-size:2.4rem}.timer.run{color:var(--brass)}.timer-l{font-size:.82rem;color:var(--slate)}
+  .seltopic{width:100%;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:13px;font-size:1rem;font-family:inherit;min-height:var(--tap);margin-bottom:12px}
+
+  .tlcard{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .tlcard-h{width:100%;display:flex;align-items:center;gap:14px;padding:15px 18px;min-height:var(--tap);text-align:left}
+  .tlcard-h:hover{background:var(--card-2)}
+  .tlcard .yr{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:1.05rem;flex:none;min-width:56px}
+  .tlcard .ti{flex:1;font-family:"Lexend";font-weight:600}
+  .tlcard .chev{color:var(--slate);transition:.3s}.tlcard.open .chev{transform:rotate(180deg)}
+  .tlcard-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}.tlcard.open .tlcard-b{grid-template-rows:1fr}.tlcard-b>div{overflow:hidden}
+  .tlcard-in{padding:0 18px 18px}
+
+  .nation{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow);border-left:4px solid var(--acc)}
+  .nation-h{width:100%;display:flex;align-items:center;gap:12px;padding:15px 18px;min-height:var(--tap);text-align:left}.nation-h:hover{background:var(--card-2)}
+  .nation .fl{font-size:1.4rem}.nation .nm{flex:1;font-family:"Lexend";font-weight:600}.nation .chev{color:var(--slate);transition:.3s}.nation.open .chev{transform:rotate(180deg)}
+  .nation-b{display:grid;grid-template-rows:0fr;transition:.35s}.nation.open .nation-b{grid-template-rows:1fr}.nation-b>div{overflow:hidden}.nation-in{padding:0 18px 18px}
+
+  .scrim{position:fixed;inset:0;background:rgba(18,28,24,.55);display:none;place-items:center;z-index:60;padding:16px}.scrim.open{display:grid}
+  .modal{background:var(--paper);border-radius:20px;max-width:440px;width:100%;box-shadow:var(--shadow);overflow:hidden}
+  .m-h{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.m-h h3{font-size:1.1rem}.m-h .x{font-size:1.7rem;color:var(--slate);min-width:var(--tap);min-height:var(--tap)}
+  .flash{padding:24px 20px;text-align:center}.flash .meta{font-family:"Lexend";font-size:.78rem;color:var(--slate);margin-bottom:14px}
+  .flip{background:var(--card);border:2px solid var(--line);border-radius:15px;min-height:150px;display:grid;place-items:center;padding:24px;cursor:pointer}
+  .flip .front{font-family:"Lexend";font-weight:600;font-size:1.25rem}.flip .back{font-size:1rem;color:var(--ink-soft);line-height:1.6;display:none}.flip.flipped .front{display:none}.flip.flipped .back{display:block}
+  .fhint{font-size:.8rem;color:var(--slate);margin-top:12px}
+  .grade{display:flex;gap:10px;margin-top:16px}.grade button{flex:1;border-radius:12px;padding:13px;font-family:"Lexend";font-weight:600;font-size:.9rem;border:2px solid var(--line);min-height:var(--tap)}
+  .grade .again{background:#f7ece8;border-color:#e3bdae;color:#8a3a22}.grade .good{background:#eaf3ea;border-color:#bcd9b2;color:#356030}.grade .iv{display:block;font-family:"Atkinson Hyperlegible";font-weight:400;font-size:.72rem;opacity:.85;margin-top:2px}
+
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120%);background:var(--ink);color:#F4F6EF;padding:13px 20px;border-radius:14px;font-family:"Lexend";font-weight:600;font-size:.9rem;box-shadow:var(--shadow);z-index:70;transition:transform .4s;display:flex;align-items:center;gap:10px}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  .toast .s{width:11px;height:11px;border-radius:50%;background:var(--brass-soft)}
+
+  @media (min-width:640px){:root{font-size:19px}.res{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.explore2{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand" onclick="go('hub')" tabindex="0" role="button" aria-label="Back to start"><span class="mark">Colle Atlas</span><span class="sep">/</span><span class="country">South Africa</span></div>
+    <div class="bar-spacer"></div>
+    <div class="rank" title="Your progress level"><span class="rl">Rank · <b id="rankName">Explorer</b></span><span class="rb"><i id="rankBar" style="width:10%"></i></span></div>
+    <div class="a11y" role="group" aria-label="Reading options">
+      <button onclick="setSize(-1)" aria-label="Smaller text"><span class="ttl">A</span></button>
+      <button onclick="setSize(0)" aria-label="Default text size">A</button>
+      <button onclick="setSize(1)" aria-label="Larger text"><span class="tlg">A</span></button>
+      <button id="readBtn" onclick="toggleReading()" aria-pressed="false" title="Reading mode: more spacing">Reading mode</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="views">
+
+<!-- HUB -->
+<section class="view active" id="view-hub">
+  <div class="wrap">
+    <div class="hero"><div class="eyebrow">South Africa · your revision atlas</div><h1>Where would you like to start?</h1><p class="sub">Pick a way in. Nothing is hidden — each click opens one new layer, like exploring rather than reading a manual.</p></div>
+
+    <div class="cprog">
+      <div class="top"><span class="nm">South Africa</span><span class="ct" id="cpCount">5 / 12 topics explored</span></div>
+      <div class="bar"><i id="cpBar"></i></div>
+      <div class="badges" id="badges"></div>
+    </div>
+
+    <div class="choices">
+      <button class="choice" onclick="openPanic()"><span class="ill" id="ill-panic"></span><span class="tx"><span class="time">5 minutes</span><h3>Panic recap</h3><p>One sentence, one paradox, one statistic, one question and one opening — per topic.</p></span><span class="go">→</span></button>
+      <button class="choice" onclick="openTopic('t1',0)"><span class="ill" id="ill-guided"></span><span class="tx"><span class="time">20 minutes</span><h3>Guided exploration</h3><p>Observe → Understand → Connect → Discuss → Apply → Go Further. Resume Apartheid: the system, or pick a topic below.</p></span><span class="go">→</span></button>
+      <button class="choice" onclick="openTrainer()"><span class="ill" id="ill-train"></span><span class="tx"><span class="time">Train</span><h3>Colle simulator</h3><p>Practise speaking, take a random colle, or play article detective.</p></span><span class="go">→</span></button>
+    </div>
+
+    <div class="today"><div class="eyebrow">Today's question</div><div class="q" id="todayQ"></div>
+      <div class="reveal" id="todayRev"><button onclick="rev('todayRev')">Reveal an angle <span class="chev">▾</span></button><div class="body"><div><p class="lede" id="todayA" style="margin-top:14px"></p></div></div></div>
+    </div>
+
+    <div class="today" id="liveNews" hidden>
+      <div class="eyebrow">Fresh from South Africa <span id="lnSrc" style="text-transform:none;letter-spacing:0;color:var(--slate);font-weight:400">· live headlines</span></div>
+      <ul class="facts" id="lnList" style="margin-top:8px"></ul>
+      <p style="font-size:.78rem;color:var(--slate);margin-top:8px">Tap a headline, then ask yourself: <i>which topics would I bring into a colle?</i></p>
+    </div>
+
+    <div class="section"><div class="section-h"><h2>Explore the country</h2></div>
+      <div class="explore2">
+        <button class="ex" onclick="openTimeline()"><span class="i">📜</span><span><span class="t">Timeline</span><span class="d">key dates, as mini-modules</span></span></button>
+        <button class="ex" onclick="openNations()"><span class="i">🗺️</span><span><span class="t">The great paradoxes</span><span class="d">tap to explore</span></span></button>
+      </div>
+    </div>
+
+    <div class="section"><div class="section-h"><h2>Or pick a topic</h2><span class="mini">tap a chapter to open it</span></div><div id="tree"></div></div>
+
+    <div class="foot">
+      <button onclick="alert('Connections — V2: take one theme (e.g. guns or healthcare) and compare it across the US, the UK, Canada and Australia.')">Connections across countries</button>
+      <button onclick="openDrill()">5-minute memory drill</button>
+      <button onclick="alert('Final challenge — V2: an unseen document, 5 minutes to prepare, a problematic and a plan to build, then a graded model.')">US final challenge</button>
+    </div>
+    <div class="note"><div class="in"><b>Prototype note.</b> A working mock-up of the South Africa path, redesigned around <i>Observe → Understand → Connect → Discuss → Apply → Go Further</i> and the principle of progressive revelation. Themes are colour-coded. Fonts (Atkinson Hyperlegible &amp; Lexend) and the A−/A+ + Reading-mode controls are for low-vision and dyslexic readers. Illustrations are custom SVG (royalty-free); real licensed photos/videos would slot into the same frames. Progress is in-memory and resets on reload.</div></div>
+  </div>
+</section>
+
+<!-- TOPIC -->
+<section class="view" id="view-topic">
+  <div class="wrap">
+    <button class="back" onclick="go('hub')">← South Africa</button>
+    <div class="progress-top"><div class="bar"><i id="ptop"></i></div><span class="lab" id="plab">Step 1 of 6</span></div>
+    <div class="dots" id="dots"></div>
+    <div class="stage"><div class="s-body" id="stage"></div>
+      <div class="s-foot"><button class="btn btn-ghost" id="prevBtn" onclick="stepBy(-1)">Back</button><span class="sp"></span><button class="btn btn-primary" id="nextBtn" onclick="stepBy(1)">Next <span class="ar">→</span></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- PANIC -->
+<section class="view" id="view-panic">
+  <div class="wrap"><button class="back" onclick="go('hub')">← South Africa</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">5-minute panic recap</div><h1 style="font-size:1.8rem">The night before</h1><p class="sub">Per topic: one sentence, one paradox, one statistic, one question, one opening.</p></div>
+    <div id="panicList"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="view" id="view-timeline">
+  <div class="wrap"><button class="back" onclick="go('hub')">← South Africa</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Timeline</div><h1 style="font-size:1.8rem">A frieze you explore</h1><p class="sub">Each date opens as a mini-module: what happened, why it still matters, a question, and links to topics.</p></div>
+    <div id="tlList" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- NATIONS -->
+<section class="view" id="view-nations">
+  <div class="wrap"><button class="back" onclick="go('hub')">← South Africa</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">The great paradoxes</div><h1 style="font-size:1.8rem">Where the best questions are born</h1><p class="sub">Tap a paradox: name the tension precisely — that is where a problematic starts.</p></div>
+    <div id="natList" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section class="view" id="view-trainer">
+  <div class="wrap"><button class="back" onclick="go('hub')">← South Africa</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Colle simulator</div><h1 style="font-size:1.8rem">Train your speaking</h1></div>
+    <div class="tabs"><button class="tabb on" id="tab-colle" onclick="trTab('colle')">Colle questions</button><button class="tabb" id="tab-det" onclick="trTab('det')">Article detective</button></div>
+    <div id="trColle">
+      <select class="seltopic" id="trTopic" onchange="trNew()"></select>
+      <div class="tabs"><button class="tabb on" data-l="easy" onclick="trLevel('easy')">🟢 Easy</button><button class="tabb" data-l="inter" onclick="trLevel('inter')">🟡 Intermediate</button><button class="tabb" data-l="adv" onclick="trLevel('adv')">🔴 Advanced</button><button class="tabb" onclick="trRandom()">🎲 Random colle</button></div>
+      <div class="stage"><div class="s-body"><div class="eyebrow" id="trLab">Easy</div><p class="qbig" id="trQ"></p>
+        <div class="timerbox"><div class="timer" id="trTimer">0:30</div><div class="timer-l">reflection time — note 3 ideas or speak aloud</div></div>
+        <textarea class="notes" id="trNotes" placeholder="Jot your plan…"></textarea><div id="trModel" style="display:none;margin-top:14px"></div></div>
+        <div class="s-foot"><button class="btn btn-ghost" id="trTimerBtn" onclick="trTimerToggle()">Start timer</button><span class="sp"></span><button class="btn btn-ghost" onclick="trNew()">New</button><button class="btn btn-primary" id="trReveal" onclick="trRevealModel()">Reveal plan</button></div>
+      </div>
+    </div>
+    <div id="trDet" style="display:none"></div>
+  </div>
+</section>
+</main>
+
+<div class="scrim" id="scrim"><div class="modal" role="dialog" aria-modal="true" aria-label="Memory drill">
+  <div class="m-h"><h3>Memory drill</h3><button class="x" onclick="closeDrill()" aria-label="Close">×</button></div>
+  <div class="flash"><div class="meta" id="dMeta">Card 1 of 4</div>
+    <div class="flip" id="flip" onclick="flip()" role="button" tabindex="0"><div class="front" id="dFront"></div><div class="back" id="dBack"></div></div>
+    <div class="fhint" id="dHint">tap the card to reveal</div>
+    <div class="grade" id="dGrade" style="display:none"><button class="again" onclick="grade()">Review again<span class="iv">due tomorrow</span></button><button class="good" onclick="grade()">Got it<span class="iv">due in 3 days</span></button></div>
+  </div>
+</div></div>
+<div class="toast" id="toast"><span class="s"></span><span id="toastT"></span></div>
+
+<script>
+/* ---------- illustrations ---------- */
+const ILL={
+  clock:`<svg viewBox="0 0 120 120" role="img" aria-label="Clock"><circle cx="60" cy="60" r="40" fill="#33473F"/><circle cx="60" cy="60" r="40" fill="none" stroke="#9C6B22" stroke-width="5"/><path d="M60 60V36M60 60l18 10" stroke="#EFEEE6" stroke-width="6" stroke-linecap="round"/></svg>`,
+  usmap:`<svg viewBox="0 0 120 120" role="img" aria-label="Map pin"><path d="M24 44c10-8 22-6 34-8 10-2 18-8 28-4 8 3 10 12 8 20-2 9-10 12-12 20-2 7 2 14-4 19-7 6-16 2-24 4-9 2-16 9-24 4-7-5-4-14-8-21-4-8-12-12-10-20 2-9 8-9 12-14Z" fill="#33473F"/><circle cx="82" cy="36" r="14" fill="#B23A2E"/><circle cx="82" cy="36" r="5" fill="#EFEEE6"/></svg>`,
+  speak:`<svg viewBox="0 0 120 120" role="img" aria-label="Speech bubbles"><rect x="20" y="26" width="58" height="40" rx="11" fill="#33473F"/><path d="M34 66l4 12 12-12Z" fill="#33473F"/><rect x="52" y="50" width="48" height="34" rx="10" fill="#9C6B22"/><path d="M86 84l-3 10-10-10Z" fill="#9C6B22"/></svg>`,
+  ballot:`<svg viewBox="0 0 400 200" role="img" aria-label="A ballot box"><circle cx="200" cy="100" r="78" fill="#f0dad3"/><rect x="120" y="96" width="160" height="74" rx="6" fill="#33473F"/><path d="M120 96l40-26h120l40 26Z" fill="#3f574c"/><rect x="170" y="60" width="60" height="44" rx="3" fill="#FBFBF6" stroke="#15302A" stroke-width="2"/><path d="M186 80l8 9 16-18" stroke="#B23A2E" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  scales:`<svg viewBox="0 0 400 200" role="img" aria-label="Scales of justice"><circle cx="200" cy="100" r="78" fill="#e7e3f2"/><path d="M200 40v104" stroke="#33473F" stroke-width="8" stroke-linecap="round"/><path d="M144 60h112" stroke="#33473F" stroke-width="8" stroke-linecap="round"/><path d="M144 60l-20 42h40Z" fill="#6A4C93"/><path d="M256 60l-20 42h40Z" fill="#6A4C93"/><path d="M124 102a20 12 0 0040 0Z" fill="#33473F"/><path d="M236 102a20 12 0 0040 0Z" fill="#33473F"/><rect x="176" y="140" width="48" height="12" rx="5" fill="#33473F"/></svg>`,
+  liberty:`<svg viewBox="0 0 400 200" role="img" aria-label="A torch"><circle cx="200" cy="100" r="78" fill="#d9ecdf"/><path d="M200 34c14 10 22 22 14 36-5 9-16 10-14 22h-0c2-12-9-13-14-22-8-14 0-26 14-36Z" fill="#A86E18"/><path d="M182 96h36l-6 14h-24Z" fill="#3F7A4B"/><rect x="192" y="110" width="16" height="52" rx="6" fill="#33473F"/><path d="M176 166h48" stroke="#33473F" stroke-width="10" stroke-linecap="round"/></svg>`,
+  shield:`<svg viewBox="0 0 400 200" role="img" aria-label="A shield with a star"><circle cx="200" cy="100" r="78" fill="#efe4d2"/><path d="M200 34l52 16v40c0 34-22 58-52 72-30-14-52-38-52-72V50Z" fill="#33473F"/><path d="M200 66l9 19 21 3-15 15 4 21-19-10-19 10 4-21-15-15 21-3Z" fill="#C49A53"/></svg>`,
+  regions:`<svg viewBox="0 0 400 200" role="img" aria-label="Four regions map"><circle cx="200" cy="100" r="80" fill="#e6def0"/><path d="M196 38c8 0 14 6 12 16-2 8 4 12 2 20l-22 4-10-22c-2-10 8-20 18-18Z" fill="#1F3A5F"/><path d="M212 54c10-2 18 6 16 16-2 8 6 14 2 22l-26 2-4-24c0-9 3-14 12-16Z" fill="#B23A2E"/><path d="M188 92l24-2 6 30c2 12-8 22-20 18-8-2-10-10-16-12l6-32Z" fill="#8A5A2B"/><path d="M158 96l30-4-6 34c-8 4-18 0-22-8-4-9 0-16-2-22Z" fill="#3F7A4B"/></svg>`,
+  scroll:`<svg viewBox="0 0 400 200" role="img" aria-label="A parchment"><circle cx="200" cy="100" r="78" fill="#e3e7ee"/><rect x="140" y="46" width="120" height="108" rx="8" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M158 72h84M158 92h84M158 112h60" stroke="#566A61" stroke-width="6" stroke-linecap="round"/><path d="M158 134h44" stroke="#9C6B22" stroke-width="6" stroke-linecap="round"/></svg>`,
+  dome:`<svg viewBox="0 0 400 200" role="img" aria-label="A capitol dome"><circle cx="200" cy="100" r="78" fill="#dcebe9"/><path d="M200 34c26 8 38 28 38 50h-76c0-22 12-42 38-50Z" fill="#2C7A7B"/><rect x="194" y="24" width="12" height="16" rx="4" fill="#33473F"/><rect x="150" y="84" width="100" height="14" rx="4" fill="#33473F"/><path d="M146 98h108v56H146Z" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M166 112v42M200 112v42M234 112v42" stroke="#566A61" stroke-width="6"/></svg>`,
+  chapel:`<svg viewBox="0 0 400 200" role="img" aria-label="A chapel"><circle cx="200" cy="100" r="78" fill="#f1e6cc"/><path d="M200 30v18M192 40h16" stroke="#A86E18" stroke-width="6" stroke-linecap="round"/><path d="M200 50l-34 30h68Z" fill="#A86E18"/><rect x="172" y="80" width="56" height="74" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M200 116a10 12 0 0110 12v26h-20v-26a10 12 0 0110-12Z" fill="#33473F"/></svg>`,
+  heart:`<svg viewBox="0 0 400 200" role="img" aria-label="Heart with medical cross"><circle cx="200" cy="100" r="80" fill="#d4e6f5"/><path d="M200 150c-40-26-58-46-58-70 0-18 14-30 30-30 12 0 22 7 28 18 6-11 16-18 28-18 16 0 30 12 30 30 0 24-18 44-58 70Z" fill="#0072CE"/><path d="M192 70h16v16h16v16h-16v16h-16v-16h-16V86h16Z" fill="#FBFBF6"/></svg>`,
+  globe:`<svg viewBox="0 0 400 200" role="img" aria-label="A globe"><circle cx="200" cy="100" r="78" fill="#efe4d2"/><circle cx="200" cy="100" r="52" fill="#33473F"/><circle cx="200" cy="100" r="52" fill="none" stroke="#B0791A" stroke-width="4"/><path d="M148 100h104M200 48c22 14 22 90 0 104M200 48c-22 14-22 90 0 104" stroke="#EFEEE6" stroke-width="4" fill="none"/></svg>`,
+  flag:`<svg viewBox="0 0 400 200" role="img" aria-label="Stars and stripes"><circle cx="200" cy="100" r="78" fill="#e3e7ee"/><rect x="140" y="56" width="120" height="88" rx="8" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><rect x="140" y="56" width="52" height="44" fill="#1F3A5F"/><path d="M166 68l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Z" fill="#FBFBF6"/><path d="M196 70h60M196 86h60M144 112h112M144 128h112" stroke="#B23A2E" stroke-width="8"/></svg>`,
+  crown:`<svg viewBox="0 0 400 200" role="img" aria-label="A crown"><circle cx="200" cy="100" r="78" fill="#f1e6cc"/><path d="M120 132l-10-58 38 28 12-44 12 44 12-44 12 44 38-28-10 58Z" fill="#B0791A"/><rect x="118" y="132" width="164" height="20" rx="4" fill="#33473F"/><circle cx="148" cy="78" r="6" fill="#A6432B"/><circle cx="200" cy="64" r="6" fill="#A6432B"/><circle cx="252" cy="78" r="6" fill="#A6432B"/></svg>`,
+  leaf:`<svg viewBox="0 0 400 200" role="img" aria-label="A leaf"><circle cx="200" cy="100" r="78" fill="#d9ecdf"/><path d="M200 40c44 8 66 40 60 84-44 8-78-8-92-40 8-18 18-34 32-44Z" fill="#3F7A4B"/><path d="M176 148c18-30 42-52 74-66" stroke="#EFEEE6" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`,
+  generic:`<svg viewBox="0 0 400 200" role="img" aria-label="An open book"><circle cx="200" cy="100" r="80" fill="#dfe6d6"/><path d="M120 70c30-12 56-12 80 2 24-14 50-14 80-2v74c-30-12-56-12-80 2-24-14-50-14-80-2Z" fill="#33473F"/><path d="M200 72v76" stroke="#9C6B22" stroke-width="4"/></svg>`
+};
+function illFor(k){return ILL[k]||ILL.generic;}
+
+/* ---------- structure ---------- */
+const ACC={"t1": "#B23A2E", "t2": "#6A4C93", "t3": "#8A5A2B", "t4": "#3F7A4B", "t5": "#1F3A5F", "t6": "#2C7A7B", "t7": "#A86E18", "t8": "#0072CE", "t9": "#B0791A", "bigpicture": "#1F3A5F", "regions": "#1F3A5F", "timeline": "#1F3A5F"};
+const CHAPTERS=[{"n": "01", "title": "Understanding South Africa", "sub": "the big picture", "topics": ["bigpicture", "regions", "timeline"]}, {"n": "02", "title": "Power & politics", "sub": "apartheid: the system · the anti-apartheid struggle & mandel", "topics": ["t1", "t2", "t3"]}, {"n": "03", "title": "Society", "sub": "the “rainbow nation“ 30 years on · inequality & land reform ", "topics": ["t4", "t5", "t6", "t7"]}, {"n": "04", "title": "South Africa & the world", "sub": "the economy, unemployment & the energy crisis · south africa", "topics": ["t8", "t9"]}];
+const STUBS={"regions": "The great paradoxes", "timeline": "South Africa timeline"};
+const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"connect",l:"Connect"},{k:"discuss",l:"Discuss"},{k:"apply",l:"Apply"},{k:"further",l:"Go Further"}];
+
+const TOPICS={"t1": {"name": "Apartheid: the system", "ill": "scales", "chapter": "Power & politics", "docType": "Press document · the apartheid era", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of memory, justice, the roots of inequality.", "Common trap: apartheid was just segregation → it was a comprehensive legal system of classification, control and dispossession."], "sentence": "Apartheid was a system of legalised racial segregation imposed in South Africa from 1948 to 1994.", "facts5": ["“apartness“.", "Racial classification.", "Pass laws.", "The Group Areas Act.", "Forced removals."], "debate": "How did apartheid differ from ordinary racism?", "paradox": "A modern, industrialised state built on systematic racial injustice.", "whyMatter": "At stake: the roots of present inequality, race, the rule of law abused..", "whyTags": ["race", "segregation", "injustice", "memory"], "learnMore": "It did not merely separate races — it built a whole legal architecture to entrench white minority rule. Apartheid was a total legal system — classification, pass laws, forced removals, Bantustans — designed to entrench white minority rule, which is why its economic geography still scars South Africa today.", "connect": [{"to": "Race", "why": "The press keeps returning to this topic because of memory, justice, the roots of inequality — and race is one of its natural bridges."}, {"to": "Segregation", "why": "A strong answer links apartheid: the system to segregation — that is the reflex examiners reward."}, {"to": "Injustice", "why": "Documents on the apartheid era almost always open onto injustice."}, {"to": "Memory", "why": "Memory gives this topic its wider significance in a colle."}, {"to": "Inequality.", "why": "Linking this to inequality. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: “apartness“.", "In one sentence: Racial classification.", "In one sentence: Pass laws."], "inter": ["Discuss: comparisons with US segregation.", "Discuss: the long shadow of apartheid.", "Discuss: the geography of inequality.."], "adv": ["How did apartheid differ from ordinary racism?", "Why does its legacy persist?", "A modern, industrialised state built on systematic racial injustice — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "How did apartheid differ from ordinary racism?"}, {"label": "The paradox", "q": "A modern, industrialised state built on systematic racial injustice — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against the us (jim crow segregation), colonial settler regimes?"}], "central": {"q": "How did apartheid differ from ordinary racism?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Apartheid was not the absence of law but its perversion — racism written into the statute book."}, "res": [{"t": "Culture", "i": "Cry, the Beloved Country (Alan Paton); the film Sarafina!."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "apartheid, segregation, racial classification, pass laws, the Group Areas Act, forced removals."}], "compare": "Compare with the US (Jim Crow segregation), colonial settler regimes."}, "t2": {"name": "The anti-apartheid struggle & Mandela", "ill": "scales", "chapter": "Power & politics", "docType": "Press document · Mandela", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of memory, leadership, justice.", "Common trap: the struggle was purely peaceful → it combined protest and armed resistance and international pressure."], "sentence": "The struggle against apartheid, embodied by Nelson Mandela, combined mass protest, armed resistance and global pressure.", "facts5": ["The ANC.", "The Freedom Charter.", "Sharpeville (1960).", "The armed struggle.", "The Rivonia Trial."], "debate": "What made the anti-apartheid struggle succeed?", "paradox": "A man jailed as a “terrorist“ who became the world's most admired statesman.", "whyMatter": "At stake: the means of resistance, the role of international pressure, leadership..", "whyTags": ["resistance", "leadership", "human rights", "decolonisation"], "learnMore": "Mandela's 27 years in prison turned him into the moral symbol of a worldwide cause. The defeat of apartheid shows how internal resistance and global pressure converged — and how Mandela transformed 27 years of imprisonment into the moral authority that made reconciliation possible.", "connect": [{"to": "Resistance", "why": "The press keeps returning to this topic because of memory, leadership, justice — and resistance is one of its natural bridges."}, {"to": "Leadership", "why": "A strong answer links the anti-apartheid struggle & mandela to leadership — that is the reflex examiners reward."}, {"to": "Human rights", "why": "Documents on Mandela almost always open onto human rights."}, {"to": "Decolonisation", "why": "Decolonisation gives this topic its wider significance in a colle."}, {"to": "Memory.", "why": "Linking this to memory. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The ANC.", "In one sentence: The Freedom Charter.", "In one sentence: Sharpeville (1960)."], "inter": ["Discuss: other liberation struggles.", "Discuss: the power of global solidarity.", "Discuss: Mandela's legacy.."], "adv": ["What made the anti-apartheid struggle succeed?", "Was Mandela's forgiveness strength or compromise?", "A man jailed as a “terrorist“ who became the world's most admired statesman — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "What made the anti-apartheid struggle succeed?"}, {"label": "The paradox", "q": "A man jailed as a “terrorist“ who became the world's most admired statesman — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against the us civil-rights movement (king), india (gandhi)?"}], "central": {"q": "What made the anti-apartheid struggle succeed?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "The anti-apartheid struggle was won as much in the world's conscience as on South African streets."}, "res": [{"t": "Culture", "i": "Long Walk to Freedom (Mandela); Mandela: Long Walk to Freedom (film)."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "the liberation struggle, the ANC, the Freedom Charter, the armed struggle, Sharpeville, Soweto."}], "compare": "Compare with the US civil-rights movement (King), India (Gandhi)."}, "t3": {"name": "The Truth and Reconciliation Commission", "ill": "generic", "chapter": "Power & politics", "docType": "Press document · reconciliation", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of justice, memory, nation-building.", "Common trap: the TRC was a trial → it was about truth and reconciliation, granting amnesty, not punishment."], "sentence": "The Truth and Reconciliation Commission offered amnesty in exchange for the full truth, choosing reconciliation over revenge.", "facts5": ["The TRC (1996).", "Chaired by Desmond Tutu.", "Amnesty for truth.", "Restorative (not punitive) justice. **."], "debate": "Was the TRC justice or impunity?", "paradox": "Granting amnesty to perpetrators in the name of justice.", "whyMatter": "At stake: justice vs peace, memory, the price of reconciliation..", "whyTags": ["reconciliation", "justice", "memory", "nation-building"], "learnMore": "South Africa pioneered restorative justice as an alternative to both impunity and retribution. The TRC embodied a radical bet: that a divided nation would heal better through public truth-telling and restorative justice than through trials and revenge — a model admired and debated ever since.", "connect": [{"to": "Reconciliation", "why": "The press keeps returning to this topic because of justice, memory, nation-building — and reconciliation is one of its natural bridges."}, {"to": "Justice", "why": "A strong answer links the truth and reconciliation commission to justice — that is the reflex examiners reward."}, {"to": "Memory", "why": "Documents on reconciliation almost always open onto memory."}, {"to": "Nation-building", "why": "Nation-building gives this topic its wider significance in a colle."}, {"to": "Forgiveness.", "why": "Linking this to forgiveness. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The TRC (1996).", "In one sentence: Chaired by Desmond Tutu.", "In one sentence: Amnesty for truth."], "inter": ["Discuss: transitional justice elsewhere (Rwanda).", "Discuss: the limits of forgiveness.", "Discuss: reconciliation vs justice.."], "adv": ["Was the TRC justice or impunity?", "Can a nation reconcile without punishment?", "Granting amnesty to perpetrators in the name of justice — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Was the TRC justice or impunity?"}, {"label": "The paradox", "q": "Granting amnesty to perpetrators in the name of justice — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against rwanda (the gacaca courts), other post-conflict societies; canada/australia (indigenous trcs)?"}], "central": {"q": "Was the TRC justice or impunity?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "The TRC asked whether a nation can heal by confessing rather than punishing."}, "res": [{"t": "Culture", "i": "No Future Without Forgiveness (Desmond Tutu)."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "the Truth and Reconciliation Commission, restorative justice, amnesty, transitional justice, reconciliation, forgiveness."}], "compare": "Compare with Rwanda (the gacaca courts), other post-conflict societies; Canada/Australia (Indigenous TRCs)."}, "t4": {"name": "The “Rainbow Nation“ 30 years on", "ill": "generic", "chapter": "Society", "docType": "Press document · race relations", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of identity, reconciliation, inequality.", "Common trap: South Africa is a united rainbow → the ideal coexists with deep racial inequality and tension."], "sentence": "The 'Rainbow Nation' promised a united, multiracial society — a promise still only half-fulfilled 30 years after 1994.", "facts5": ["Tutu's phrase.", "Non-racialism.", "The 1994 democratic founding.", "Persistent inequality. **."], "debate": "Is the 'Rainbow Nation' a reality or a myth?", "paradox": "A celebrated symbol of unity over a still deeply divided society.", "whyMatter": "At stake: national identity, the gap between political and economic freedom..", "whyTags": ["identity", "race", "reconciliation", "nation-building"], "learnMore": "South Africa won political equality in 1994, but the rainbow's colours remain economically divided. The 'Rainbow Nation' captures both South Africa's triumph and its frustration: a genuinely non-racial democracy was built in 1994, yet economic divides mean the rainbow remains as much an aspiration as a reality.", "connect": [{"to": "Identity", "why": "The press keeps returning to this topic because of identity, reconciliation, inequality — and identity is one of its natural bridges."}, {"to": "Race", "why": "A strong answer links the “rainbow nation“ 30 years on to race — that is the reflex examiners reward."}, {"to": "Reconciliation", "why": "Documents on race relations almost always open onto reconciliation."}, {"to": "Nation-building", "why": "Nation-building gives this topic its wider significance in a colle."}, {"to": "Inequality.", "why": "Linking this to inequality. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Tutu's phrase.", "In one sentence: Non-racialism.", "In one sentence: The 1994 democratic founding."], "inter": ["Discuss: the born-free generation.", "Discuss: the gap between ideal and reality.", "Discuss: national identity.."], "adv": ["Is the 'Rainbow Nation' a reality or a myth?", "What does it mean for the born-free generation?", "A celebrated symbol of unity over a still deeply divided society — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is the 'Rainbow Nation' a reality or a myth?"}, {"label": "The paradox", "q": "A celebrated symbol of unity over a still deeply divided society — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against other multiracial nation-building projects (the us, brazil)?"}], "central": {"q": "Is the 'Rainbow Nation' a reality or a myth?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Thirty years on, the question is whether the rainbow was a description or only a hope."}, "res": [{"t": "Culture", "i": "Invictus (the 1995 Rugby World Cup); Born a Crime (Trevor Noah)."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "the Rainbow Nation, non-racialism, reconciliation, the born-free generation, national identity, unity."}], "compare": "Compare with other multiracial nation-building projects (the US, Brazil)."}, "t5": {"name": "Inequality & land reform", "ill": "leaf", "chapter": "Society", "docType": "Press document · inequality", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of inequality, justice, stability.", "Common trap: democracy ended apartheid's inequality → it ended legal apartheid, not the economic divide."], "sentence": "South Africa remains one of the world's most unequal societies, and land reform is the most explosive attempt to redress apartheid's legacy.", "facts5": ["Among the highest Gini coefficients.", "Townships vs suburbs.", "Skewed land ownership.", "BEE.", "The expropriation debate. **."], "debate": "Why has inequality persisted since 1994?", "paradox": "Political liberation without economic liberation.", "whyMatter": "At stake: justice vs stability, the unfinished economic transition..", "whyTags": ["inequality", "race", "land", "redistribution"], "learnMore": "The wealth gap still tracks the racial lines apartheid drew. South Africa's defining challenge is that 1994 delivered political freedom but not economic freedom: with wealth still tracking apartheid's racial lines, land reform becomes the most charged battleground of redress.", "connect": [{"to": "Inequality", "why": "The press keeps returning to this topic because of inequality, justice, stability — and inequality is one of its natural bridges."}, {"to": "Race", "why": "A strong answer links inequality & land reform to race — that is the reflex examiners reward."}, {"to": "Land", "why": "Documents on inequality almost always open onto land."}, {"to": "Redistribution", "why": "Redistribution gives this topic its wider significance in a colle."}, {"to": "Social justice.", "why": "Linking this to social justice. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Among the highest Gini coefficients.", "In one sentence: Townships vs suburbs.", "In one sentence: Skewed land ownership."], "inter": ["Discuss: the land-expropriation debate.", "Discuss: redistribution vs growth.", "Discuss: global inequality.."], "adv": ["Why has inequality persisted since 1994?", "Is land expropriation justice or risk?", "Political liberation without economic liberation — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Why has inequality persisted since 1994?"}, {"label": "The paradox", "q": "Political liberation without economic liberation — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against brazil, the us (racial wealth gaps), zimbabwe (contested land reform)?"}], "central": {"q": "Why has inequality persisted since 1994?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "In South Africa, apartheid was abolished in law but lingers in the bank balance."}, "res": [{"t": "Culture", "i": "District 9 (an allegory of segregation); reporting on townships."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "inequality, the Gini coefficient, land reform, expropriation, redistribution, Black Economic Empowerment."}], "compare": "Compare with Brazil, the US (racial wealth gaps), Zimbabwe (contested land reform)."}, "t6": {"name": "The Constitution & democracy", "ill": "ballot", "chapter": "Society", "docType": "Press document · the Constitution", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of democracy, accountability, governance.", "Common trap: South Africa = ANC forever → in 2024 the ANC lost its majority, ushering in coalitions."], "sentence": "South Africa built one of the world's most progressive constitutions, and its democracy is now maturing into coalition politics.", "facts5": ["The 1996 Constitution and Bill of Rights.", "The Constitutional Court.", "ANC dominance 1994-2024.", "The 2024 loss of majority and the GNU. **."], "debate": "Is South Africa's democracy healthy?", "paradox": "A model constitution amid corruption and deep inequality.", "whyMatter": "At stake: the resilience of democracy, accountability, the gap between rights and reality..", "whyTags": ["democracy", "rights", "accountability", "governance"], "learnMore": "The 1996 Constitution set a high ideal; the 2024 election showed a democracy able to change its government. South Africa's democracy pairs one of the world's most idealistic constitutions with hard realities — corruption, inequality — yet the 2024 handover of ANC dominance to coalition politics shows the system still works.", "connect": [{"to": "Democracy", "why": "The press keeps returning to this topic because of democracy, accountability, governance — and democracy is one of its natural bridges."}, {"to": "Rights", "why": "A strong answer links the constitution & democracy to rights — that is the reflex examiners reward."}, {"to": "Accountability", "why": "Documents on the Constitution almost always open onto accountability."}, {"to": "Governance", "why": "Governance gives this topic its wider significance in a colle."}, {"to": "Reform.", "why": "Linking this to reform. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The 1996 Constitution and Bill of Rights.", "In one sentence: The Constitutional Court.", "In one sentence: ANC dominance 1994-2024."], "inter": ["Discuss: coalition politics.", "Discuss: the strength of the courts.", "Discuss: democratic accountability.."], "adv": ["Is South Africa's democracy healthy?", "Can an idealistic constitution survive corruption?", "A model constitution amid corruption and deep inequality — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is South Africa's democracy healthy?"}, {"label": "The paradox", "q": "A model constitution amid corruption and deep inequality — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against other young constitutional democracies; established democracies' courts?"}], "central": {"q": "Is South Africa's democracy healthy?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "South Africa wrote an idealistic constitution, then had to make it work amid corruption and inequality."}, "res": [{"t": "Culture", "i": "the work of the Constitutional Court; the Zondo Commission on state capture."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "a progressive constitution, the Bill of Rights, the Constitutional Court, socio-economic rights, accountability, a coalition."}], "compare": "Compare with other young constitutional democracies; established democracies' courts."}, "t7": {"name": "Diversity, languages & xenophobia", "ill": "generic", "chapter": "Society", "docType": "Press document · diversity", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of identity, cohesion, migration.", "Common trap: the Rainbow Nation has no conflict → it sees recurrent xenophobic violence."], "sentence": "South Africa has 12 official languages and celebrates diversity through 'Ubuntu', yet also suffers outbreaks of xenophobic violence.", "facts5": ["12 official languages.", "The Rainbow Nation.", "Ubuntu.", "Xenophobic attacks on African migrants. **."], "debate": "Does xenophobia contradict the Rainbow Nation?", "paradox": "A nation of reconciliation that turns on migrant fellow Africans.", "whyMatter": "At stake: social cohesion, the meaning of the Rainbow Nation, migration..", "whyTags": ["diversity", "identity", "migration", "cohesion"], "learnMore": "The Rainbow Nation's embrace of diversity is tested by hostility towards migrants from other African countries. South Africa's diversity is both its pride and its test: a constitution of twelve languages and the ethic of Ubuntu coexist with xenophobic violence that betrays the Rainbow Nation's own ideal.", "connect": [{"to": "Diversity", "why": "The press keeps returning to this topic because of identity, cohesion, migration — and diversity is one of its natural bridges."}, {"to": "Identity", "why": "A strong answer links diversity, languages & xenophobia to identity — that is the reflex examiners reward."}, {"to": "Migration", "why": "Documents on diversity almost always open onto migration."}, {"to": "Cohesion", "why": "Cohesion gives this topic its wider significance in a colle."}, {"to": "Language.", "why": "Linking this to language. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: 12 official languages.", "In one sentence: The Rainbow Nation.", "In one sentence: Ubuntu."], "inter": ["Discuss: migration across Africa.", "Discuss: the limits of the Rainbow ideal.", "Discuss: multilingualism.."], "adv": ["Does xenophobia contradict the Rainbow Nation?", "Can such diversity be a unifying force?", "A nation of reconciliation that turns on migrant fellow Africans — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Does xenophobia contradict the Rainbow Nation?"}, {"label": "The paradox", "q": "A nation of reconciliation that turns on migrant fellow Africans — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against other diverse societies facing migration tensions?"}], "central": {"q": "Does xenophobia contradict the Rainbow Nation?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "The Rainbow Nation's ideal of inclusion runs up against violence towards fellow Africans."}, "res": [{"t": "Culture", "i": "District 9 (xenophobia as allegory); Born a Crime (Trevor Noah)."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "diversity, multilingualism, the Rainbow Nation, Ubuntu, social cohesion, xenophobia."}], "compare": "Compare with other diverse societies facing migration tensions."}, "t8": {"name": "The economy, unemployment & the energy crisis", "ill": "scroll", "chapter": "South Africa & the world", "docType": "Press document · mining", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of the economy, jobs, development.", "Common trap: South Africa is a rich, industrialised power → it is industrialised but crippled by unemployment and power cuts."], "sentence": "Africa's most industrialised economy is held back by mass unemployment, inequality and a chronic energy crisis.", "facts5": ["Mining and a diversified economy.", "BRICS/G20 member.", "~30%+ unemployment.", "“load-shedding“ and Eskom. **."], "debate": "Why does Africa's most advanced economy struggle?", "paradox": "The continent's most developed economy with one of its worst jobless rates.", "whyMatter": "At stake: jobs, development, the cost of mismanagement and corruption..", "whyTags": ["the economy", "unemployment", "inequality", "development"], "learnMore": "South Africa has the continent's most developed economy and one of its highest jobless rates. South Africa's economy embodies wasted potential: Africa's most diversified, BRICS-level economy is hobbled by mass unemployment and a self-inflicted energy crisis rooted in mismanagement.", "connect": [{"to": "The economy", "why": "The press keeps returning to this topic because of the economy, jobs, development — and the economy is one of its natural bridges."}, {"to": "Unemployment", "why": "A strong answer links the economy, unemployment & the energy crisis to unemployment — that is the reflex examiners reward."}, {"to": "Inequality", "why": "Documents on mining almost always open onto inequality."}, {"to": "Development", "why": "Development gives this topic its wider significance in a colle."}, {"to": "Energy.", "why": "Linking this to energy. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Mining and a diversified economy.", "In one sentence: BRICS/G20 member.", "In one sentence: ~30%+ unemployment."], "inter": ["Discuss: the energy transition.", "Discuss: youth unemployment.", "Discuss: resource economies.."], "adv": ["Why does Africa's most advanced economy struggle?", "Can South Africa fix its energy crisis?", "The continent's most developed economy with one of its worst jobless rates — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Why does Africa's most advanced economy struggle?"}, {"label": "The paradox", "q": "The continent's most developed economy with one of its worst jobless rates — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against nigeria (the other african giant), other resource economies?"}], "central": {"q": "Why does Africa's most advanced economy struggle?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Africa's most advanced economy is throttled by the very power it cannot keep on."}, "res": [{"t": "Culture", "i": "reporting on load-shedding and Eskom; the Marikana mine episode."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "mining, industrialisation, unemployment, the informal economy, inequality, load-shedding."}], "compare": "Compare with Nigeria (the other African giant), other resource economies."}, "t9": {"name": "South Africa in Africa and the world", "ill": "globe", "chapter": "South Africa & the world", "docType": "Press document · African leadership", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of geopolitics, influence, identity.", "Common trap: South Africa sides with the West → it pursues non-alignment and South-South solidarity."], "sentence": "South Africa positions itself as a moral voice and a leading African power, active in the AU, BRICS and the G20.", "facts5": ["A regional power.", "The AU.", "BRICS.", "The G20 (chaired in 2025).", "A rights-and-solidarity-based foreign policy."], "debate": "Is South Africa a credible voice for the Global South?", "paradox": "A middle-income country that wields outsized moral and diplomatic weight.", "whyMatter": "At stake: the global balance, Africa's voice, the legacy of the struggle..", "whyTags": ["geopolitics", "Africa", "the Global South", "soft power"], "learnMore": "Its post-apartheid foreign policy is rooted in solidarity, human rights and non-alignment. South Africa converts the moral authority of its liberation into diplomatic weight: a middle power that champions Africa and the Global South through the AU, BRICS and a deliberately non-aligned foreign policy.", "connect": [{"to": "Geopolitics", "why": "The press keeps returning to this topic because of geopolitics, influence, identity — and geopolitics is one of its natural bridges."}, {"to": "Africa", "why": "A strong answer links south africa in africa and the world to Africa — that is the reflex examiners reward."}, {"to": "The global south", "why": "Documents on African leadership almost always open onto the Global South."}, {"to": "Soft power", "why": "Soft power gives this topic its wider significance in a colle."}, {"to": "Non-alignment.", "why": "Linking this to non-alignment. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: A regional power.", "In one sentence: The AU.", "In one sentence: BRICS."], "inter": ["Discuss: the Global South's rise.", "Discuss: Africa's voice in global affairs.", "Discuss: BRICS vs the West.."], "adv": ["Is South Africa a credible voice for the Global South?", "How does its past shape its foreign policy?", "A middle-income country that wields outsized moral and diplomatic weight — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is South Africa a credible voice for the Global South?"}, {"label": "The paradox", "q": "A middle-income country that wields outsized moral and diplomatic weight — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against india, brazil (other “global south“ powers in brics)?"}], "central": {"q": "Is South Africa a credible voice for the Global South?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "South Africa turned the moral capital of its liberation into a foreign policy of solidarity."}, "res": [{"t": "Culture", "i": "South Africa hosting the 2010 World Cup and the 2025 G20."}, {"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}, {"t": "Words to drop", "i": "a regional power, the African Union, BRICS, the G20, the Global South, non-alignment."}], "compare": "Compare with India, Brazil (other “Global South“ powers in BRICS)."}, "bigpicture": {"name": "Big picture · South Africa", "ill": "flag", "chapter": "Understanding South Africa", "docType": "Map · South Africa", "observeQ": "What does this map reveal about how South Africa works?", "observeNotice": ["South Africa is “the Rainbow Nation“ — a society that dismantled apartheid through negotiation, yet remains one of the world's most unequal countries.", "Every topic below connects back to this frame."], "sentence": "South Africa is “the Rainbow Nation“ — a society that dismantled apartheid through negotiation, yet remains one of the world's most unequal countries.", "facts5": ["Official name: the Republic of South Africa (RSA).", "Three capitals! Pretoria (executive/administrative), Cape Town (legislative — Parliament), Bloemfontein (judicial). Largest city: Johannesburg.", "Population: ~62 million.", "Currency: the South African rand (ZAR).", "System: a constitutional parliamentary democracy in which the President is both head of state and head of government (elected by Parliament)."], "debate": "How did South Africa achieve a peaceful transition from apartheid to democracy?", "paradox": "A nation that overcame apartheid peacefully yet remains one of the world's most unequal.", "whyMatter": "This is the frame every document fits into — start here, then pick a topic.", "whyTags": ["Africa", "democracy", "diversity", "geopolitics"], "learnMore": "A nation that overcame apartheid peacefully yet remains one of the world's most unequal. A “Rainbow Nation“ of reconciliation still scarred by racial economic divides. One of the world's most progressive constitutions in a country of mass poverty and crime.", "connect": [{"to": "Apartheid: the system", "why": "Apartheid was a system of legalised racial segregation imposed in South Africa from 1948 to 1994."}, {"to": "The anti-apartheid struggle & Mandela", "why": "The struggle against apartheid, embodied by Nelson Mandela, combined mass protest, armed resistance and global pressure."}, {"to": "The Truth and Reconciliation Commission", "why": "The Truth and Reconciliation Commission offered amnesty in exchange for the full truth, choosing reconciliation over revenge."}, {"to": "The “Rainbow Nation“ 30 years on", "why": "The 'Rainbow Nation' promised a united, multiracial society — a promise still only half-fulfilled 30 years after 1994."}, {"to": "Inequality & land reform", "why": "South Africa remains one of the world's most unequal societies, and land reform is the most explosive attempt to redress apartheid's legacy."}], "discuss": {"easy": ["In one sentence: Official name: the Republic of South Africa (RSA).", "In one sentence: Three capitals! Pretoria (executive/administrative), Cape Town (legislative — Parliament), Bloemfontein (judicial). Largest city: Johannesburg.", "In one sentence: Population: ~62 million."], "inter": ["Discuss: Political freedom without economic freedom: why does inequality persist.", "Discuss: Land reform: redress for history, or a threat to stability.", "Discuss: What does Mandela's legacy mean 30 years on."], "adv": ["How did South Africa achieve a peaceful transition from apartheid to democracy?", "The Truth and Reconciliation Commission: justice, or impunity for the sake of peace?", "Is the “Rainbow Nation“ a reality or an unfulfilled promise?"]}, "problematics": [{"label": "A paradox", "q": "A nation that overcame apartheid peacefully yet remains one of the world's most unequal — how do you explain it?"}, {"label": "A tension", "q": "How did South Africa achieve a peaceful transition from apartheid to democracy?"}, {"label": "A comparison", "q": "What makes South Africa distinctive among English-speaking countries?"}], "central": {"q": "How did South Africa achieve a peaceful transition from apartheid to democracy?", "plan": ["A nation that overcame apartheid peacefully yet remains one of the world's most unequal.", "A “Rainbow Nation“ of reconciliation still scarred by racial economic divides.", "One of the world's most progressive constitutions in a country of mass poverty and crime."], "hook": "South Africa is “the Rainbow Nation“ — a society that dismantled apartheid through negotiation, yet remains one of the world's most unequal countries."}, "res": [{"t": "Watch", "i": "SABC News and eNCA — South African current affairs."}, {"t": "Read", "i": "Daily Maverick, the Mail & Guardian, News24."}], "compare": "Compare with the other countries of this atlas — the same questions, different answers."}};
+
+/* ---------- country timeline (mini-modules) ---------- */
+const US_TL=[{"y": "1652", "t": "Dutch settlement at the Cape", "ill": "generic", "lines": "The origin of the Afrikaners and of a settler society.", "why": "It is still a live reference in colle documents today.", "q": "Why does Dutch settlement at the Cape still matter today?", "links": []}, {"y": "1912", "t": "the ANC is founded", "ill": "generic", "lines": "The movement that would lead the liberation struggle.", "why": "It is still a live reference in colle documents today.", "q": "Why does the ANC is founded still matter today?", "links": []}, {"y": "1948", "t": "apartheid begins", "ill": "generic", "lines": "The system whose legacy still shapes everything.", "why": "It is still a live reference in colle documents today.", "q": "Why does apartheid begins still matter today?", "links": []}, {"y": "1960", "t": "the Sharpeville massacre", "ill": "generic", "lines": "The turn to armed struggle and global outrage.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Sharpeville massacre still matter today?", "links": []}, {"y": "1976", "t": "the Soweto Uprising", "ill": "generic", "lines": "Youth resistance becomes the face of the struggle.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Soweto Uprising still matter today?", "links": []}, {"y": "1990", "t": "Mandela is freed", "ill": "generic", "lines": "The beginning of the negotiated transition.", "why": "It is still a live reference in colle documents today.", "q": "Why does Mandela is freed still matter today?", "links": []}, {"y": "1994", "t": "the first democratic elections", "ill": "generic", "lines": "The birth of the “Rainbow Nation“.", "why": "It is still a live reference in colle documents today.", "q": "Why does the first democratic elections still matter today?", "links": []}, {"y": "1996", "t": "the Constitution & the TRC", "ill": "generic", "lines": "A progressive charter and a model of reconciliation.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Constitution & the TRC still matter today?", "links": []}, {"y": "2010", "t": "the FIFA World Cup", "ill": "generic", "lines": "South Africa on the world stage, a soft-power moment.", "why": "It is still a live reference in colle documents today.", "q": "Why does the FIFA World Cup still matter today?", "links": []}, {"y": "2024", "t": "the ANC loses its majority", "ill": "generic", "lines": "The end of one-party dominance; coalition politics.", "why": "It is still a live reference in colle documents today.", "q": "Why does the ANC loses its majority still matter today?", "links": []}];
+
+/* ---------- regions ---------- */
+const NATIONS=[{"nm": "A nation that overcame apartheid peacefully yet rema…", "fl": "♻️", "acc": "#B23A2E", "facts": ["A nation that overcame apartheid peacefully yet remains one of the world's most unequal.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "How did South Africa achieve a peaceful transition from apartheid to democracy?", "links": []}, {"nm": "A “Rainbow Nation“ of reconciliation still scarred b…", "fl": "♻️", "acc": "#6A4C93", "facts": ["A “Rainbow Nation“ of reconciliation still scarred by racial economic divides.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "The Truth and Reconciliation Commission: justice, or impunity for the sake of peace?", "links": []}, {"nm": "One of the world's most progressive constitutions in…", "fl": "♻️", "acc": "#8A5A2B", "facts": ["One of the world's most progressive constitutions in a country of mass poverty and crime.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Is the “Rainbow Nation“ a reality or an unfulfilled promise?", "links": []}, {"nm": "A regional power plagued by chronic power cuts (load…", "fl": "♻️", "acc": "#3F7A4B", "facts": ["A regional power plagued by chronic power cuts (load-shedding).", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Political freedom without economic freedom: why does inequality persist?", "links": []}, {"nm": "A society of reconciliation that also sees xenophobi…", "fl": "♻️", "acc": "#1F3A5F", "facts": ["A society of reconciliation that also sees xenophobic violence against fellow Africans.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Land reform: redress for history, or a threat to stability?", "links": []}, {"nm": "Political freedom won in 1994 — economic freedom sti…", "fl": "♻️", "acc": "#2C7A7B", "facts": ["Political freedom won in 1994 — economic freedom still unequal.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "What does Mandela's legacy mean 30 years on?", "links": []}];
+
+/* ---------- state ---------- */
+const state={topics:{}};
+const RANKS=[[0,"Explorer"],[2,"Analyst"],[4,"Commentator"],[7,"Colle Ready"],[10,"Topic Master"]];
+
+/* ---------- a11y ---------- */
+let sizeIx=0;const SIZES=[18,20.5,23];
+function setSize(d){if(d===0)sizeIx=0;else sizeIx=Math.max(0,Math.min(2,sizeIx+d));document.documentElement.style.fontSize=SIZES[sizeIx]+"px";}
+function toggleReading(){const on=document.body.classList.toggle('reading');const b=document.getElementById('readBtn');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);}
+
+/* ---------- routing ---------- */
+function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById('view-'+v).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function rev(id){document.getElementById(id).classList.toggle('open');}
+function nm(id){return TOPICS[id]?.name||STUBS[id]||id;}
+
+/* ---------- ranks / progress / badges ---------- */
+function studiedCount(){return Object.keys(state.topics).length;}
+function updateMeta(){
+  const total=Object.keys(STUBS).length+Object.keys(TOPICS).length; // 8 stubs + 4 = 12
+  const seen=studiedCount();
+  document.getElementById('cpBar').style.width=Math.round(seen/total*100)+"%";
+  document.getElementById('cpCount').textContent=`${seen} / ${total} topics explored`;
+  let r=RANKS[0],next=null;
+  for(let i=0;i<RANKS.length;i++){if(seen>=RANKS[i][0]){r=RANKS[i];next=RANKS[i+1]||null;}}
+  document.getElementById('rankName').textContent=r[1];
+  const lo=r[0],hi=next?next[0]:lo+1,frac=next?Math.min(1,(seen-lo)/(hi-lo)):1;
+  document.getElementById('rankBar').style.width=Math.round(frac*100)+"%";
+  // badges (mastered topics)
+  const b=document.getElementById('badges');b.innerHTML="";
+  Object.keys(state.topics).filter(id=>state.topics[id]==="mastered").forEach(id=>{
+    b.innerHTML+=`<span class="badge"><span class="s" style="background:${ACC[id]||'#9C6B22'}"></span>${nm(id)} · Expert</span>`;
+  });
+}
+
+/* ---------- hub tree ---------- */
+function renderTree(){
+  const host=document.getElementById('tree');host.innerHTML="";
+  CHAPTERS.forEach((ch,ci)=>{
+    const total=ch.topics.length,done=ch.topics.filter(t=>state.topics[t]).length,pct=Math.round(done/total*100);
+    const el=document.createElement('div');el.className="chap";
+    el.innerHTML=`<button class="chap-btn" aria-expanded="false" onclick="toggleChap(${ci})"><span class="num">${ch.n}</span><span class="ct"><span class="ctitle">${ch.title}</span><span class="csub">${ch.sub}</span></span><span class="meter"><span class="bar"><i style="width:${pct}%"></i></span></span><span class="chev">▾</span></button><div class="chap-body"><div>${ch.topics.map(tileHTML).join("")}</div></div>`;
+    host.appendChild(el);
+  });
+  updateMeta();
+}
+function toggleChap(i){document.querySelectorAll('.chap')[i].classList.toggle('open');}
+const VIEWTILES={regions:{fn:"openNations()",ill:"regions",ds:"the great paradoxes"},timeline:{fn:"openTimeline()",ill:"clock",ds:"key dates, as mini-modules"}};
+function tileHTML(id){
+  if(VIEWTILES[id]){
+    const v=VIEWTILES[id],st=state.topics[id]||"",col=ACC[id]||"#9C6B22";
+    const ic=st?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>':"";
+    return `<button class="topic ${st?"done":""}" onclick="${v.fn}"><span class="swatch" style="background:${col}"></span><span class="thumb">${ILL[v.ill]}</span><span class="tn"><span class="nm">${nm(id)}</span><span class="ds">${v.ds}</span></span><span class="st">${ic}</span></button>`;
+  }
+  const st=state.topics[id]||"",detailed=!!TOPICS[id],col=ACC[id]||"#9C6B22";
+  const cls=(st==="mastered"?"mastered":st?"done":"")+(detailed?"":" soon");
+  const ic=st==="mastered"?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>':st?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>':"";
+  return `<button class="topic ${cls}" onclick="${detailed?`openTopic('${id}',0)`:`soon('${id}')`}"><span class="swatch" style="background:${col}"></span><span class="thumb">${illFor(TOPICS[id]?.ill)}</span><span class="tn"><span class="nm">${nm(id)}</span><span class="ds">${detailed?"6-step exploration":"coming soon"}</span></span><span class="st">${ic}</span></button>`;
+}
+function soon(id){alert(`“${nm(id)}” isn’t wired in this prototype. In the real build it opens the same 6-step exploration, generated from its dossier card.\n\nEvery topic is generated from the country dossier.`);}
+
+document.getElementById('ill-panic').innerHTML=ILL.clock;
+document.getElementById('ill-guided').innerHTML=ILL.usmap;
+document.getElementById('ill-train').innerHTML=ILL.speak;
+
+/* ---------- today's question ---------- */
+function setToday(){
+  const pool=[["t1", "adv", 0], ["t2", "adv", 0], ["t3", "adv", 0], ["t4", "adv", 0], ["t5", "adv", 0], ["t6", "adv", 0], ["t7", "adv", 0], ["t8", "adv", 0], ["t9", "adv", 0], ["bigpicture", "adv", 0]];
+  const pick=pool[new Date().getDate()%pool.length];const t=TOPICS[pick[0]];
+  document.getElementById('todayQ').textContent=t.central.q;
+  document.getElementById('todayA').innerHTML=t.central.plan.map((p,i)=>`<b>${['I','II','III'][i]}.</b> ${p}`).join("<br>");
+}
+
+/* ---------- topic flow ---------- */
+let cur={id:null,step:0,max:0};
+function setAccent(id){const c=ACC[id]||"#9C6B22";const v=document.getElementById('view-topic');v.style.setProperty('--acc',c);v.style.setProperty('--accs',c+"18");}
+function openTopic(id,step){if(!TOPICS[id]){soon(id);return;}cur={id,step:step||0,max:step||0};setAccent(id);renderStep();go('topic');}
+function renderDots(){
+  const host=document.getElementById('dots');host.innerHTML="";
+  STEPS.forEach((s,i)=>{const locked=i>cur.max;const cls="d"+(i===cur.step?" active":"")+(i<cur.max?" cleared":"")+(locked?" locked":"");const b=document.createElement('button');b.className=cls;b.innerHTML=`<span class="ix">${i<cur.max?'✓':i+1}</span>${s.l}`;b.disabled=locked;if(!locked)b.onclick=()=>{cur.step=i;renderStep();};host.appendChild(b);});
+}
+function renderStep(){
+  const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
+  if(k==="observe"){
+    h=`<div class="eyebrow">Step 1 · Observe</div><div class="illo">${illFor(t.ill)}</div><div class="cap">${t.docType}</div><p class="qbig">${t.observeQ}</p>
+      <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
+  }else if(k==="understand"){
+    h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
+      <p class="sentence" style="margin-top:14px">${t.sentence}</p>
+      <ul class="facts">${t.facts5.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul>
+      <div class="pill-line"><div class="keybox"><div class="kt">The central debate</div><div class="kc">${t.debate}</div></div><div class="keybox"><div class="kt">The paradox</div><div class="kc">${t.paradox}</div></div></div>
+      <div class="reveal" id="rbW"><button onclick="rev('rbW')">Why does this matter? <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.whyMatter}</p><div class="tags">${t.whyTags.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div></div></div>
+      <div class="reveal" id="rbM"><button onclick="rev('rbM')">Read a little more <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.learnMore}</p></div></div></div>`;
+  }else if(k==="connect"){
+    h=`<div class="eyebrow">Step 3 · Connect</div><h2 style="font-size:1.2rem">Build bridges</h2><p class="connect-intro lede">The best answers link themes. Tap a connected topic to see how it relates to ${t.name}.</p>
+      <div class="cchips">${t.connect.map((c,i)=>`<button class="cchip" id="cc${i}" onclick="connSel(${i})">${c.to}</button>`).join("")}</div>
+      <div class="conn-detail" id="connD"><div class="ct" id="connT"></div><div id="connW"></div></div>`;
+  }else if(k==="discuss"){
+    const blk=(l,lab)=>`<div class="levelblock" data-l="${l}"><div class="lh"><span class="d"></span>${lab}</div><ul>${t.discuss[l].map(q=>`<li>${q}</li>`).join("")}</ul></div>`;
+    h=`<div class="eyebrow">Step 4 · Discuss · Levels of Analysis</div><p class="lede" style="margin:6px 0 14px">Think through the topic, from facts to problematisation. Take any question into <b>Apply</b> to build an answer.</p>${blk('easy','Easy · the facts')}${blk('inter','Intermediate · analysis')}${blk('adv','Advanced · problematisation')}`;
+  }else if(k==="apply"){
+    h=`<div class="eyebrow">Step 5 · Apply · colle workshop</div>
+      <div class="tabs" style="margin-top:8px"><button class="tabb on" id="ap-1" onclick="applyTab(1)">Build a problematic</button><button class="tabb" id="ap-2" onclick="applyTab(2)">Build a plan</button><button class="tabb" id="ap-3" onclick="applyTab(3)">Answer a question</button></div>
+      <div id="apBody"></div>`;
+  }else if(k==="further"){
+    h=`<div class="eyebrow">Step 6 · Go Further</div><h2 style="font-size:1.2rem">Take it deeper</h2><div class="res">${t.res.map(r=>`<div class="res-c"><div class="rt">${r.t}</div><div class="ri">${r.i}</div></div>`).join("")}</div><div class="compare"><div class="rt">Connect & contrast</div><p>${t.compare} <b>Paradox —</b> ${t.paradox}</p></div>`;
+  }
+  s.innerHTML=h;
+  if(k==="apply")applyTab(1);
+  document.getElementById('ptop').style.width=Math.round((cur.step+1)/6*100)+"%";
+  document.getElementById('plab').textContent=`Step ${cur.step+1} of 6 · ${STEPS[cur.step].l}`;
+  document.getElementById('prevBtn').style.visibility=cur.step===0?"hidden":"visible";
+  document.getElementById('nextBtn').innerHTML=cur.step===5?'Finish ✓':'Next <span class="ar">→</span>';
+  renderDots();
+}
+function connSel(i){
+  const c=TOPICS[cur.id].connect[i];
+  document.querySelectorAll('.cchip').forEach((e,j)=>e.classList.toggle('on',j===i));
+  document.getElementById('connT').textContent=`${TOPICS[cur.id].name} ↔ ${c.to}`;
+  document.getElementById('connW').textContent=c.why;
+  document.getElementById('connD').classList.add('show');
+}
+function applyTab(n){
+  [1,2,3].forEach(i=>document.getElementById('ap-'+i).classList.toggle('on',i===n));
+  const t=TOPICS[cur.id],b=document.getElementById('apBody');
+  if(n===1){
+    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">A good problematic names a real tension — never “to what extent…”. Pick an angle:</p>
+      ${t.problematics.map((p,i)=>`<button class="opt" onclick="showProb(${i})"><span><b>${p.label}</b></span><span>→</span></button>`).join("")}
+      <div class="result" id="probR" style="display:none"></div>`;
+  }else if(n===2){
+    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">For the question:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
+      <div class="reveal" id="planR"><button onclick="rev('planR')">Reveal a model 3-part plan <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol></div></div></div>`;
+  }else{
+    b.innerHTML=`<p class="lede" style="margin:6px 0 10px">Answer in your own words, then compare:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
+      <textarea class="notes" placeholder="Your answer…"></textarea>
+      <div class="reveal" id="ansR" style="margin-top:12px"><button onclick="rev('ansR')">Reveal a model answer <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p></div></div></div>`;
+  }
+}
+function showProb(i){const p=TOPICS[cur.id].problematics[i];const r=document.getElementById('probR');r.style.display="block";r.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">${p.label} → a possible problematic</div><p class="qbig" style="font-size:1.12rem;margin:0">${p.q}</p>`;}
+function stepBy(d){
+  if(cur.step===5&&d>0){const was=state.topics[cur.id];if(was!=="mastered")state.topics[cur.id]="done";renderTree();toast(`${TOPICS[cur.id].name} explored`);go('hub');return;}
+  cur.step=Math.max(0,Math.min(5,cur.step+d));cur.max=Math.max(cur.max,cur.step);renderStep();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ---------- toast ---------- */
+let toT;function toast(msg){const el=document.getElementById('toast');document.getElementById('toastT').textContent=msg;el.classList.add('show');clearTimeout(toT);toT=setTimeout(()=>el.classList.remove('show'),2600);}
+
+/* ---------- panic ---------- */
+const STAT={"t1": "A modern, industrialised state built on systematic racial injustice.", "t2": "Sharpeville (1960).", "t3": "The TRC (1996).", "t4": "The 1994 democratic founding.", "t5": "Political liberation without economic liberation.", "t6": "The 1996 Constitution and Bill of Rights.", "t7": "12 official languages.", "t8": "BRICS/G20 member.", "t9": "The G20 (chaired in 2025).", "bigpicture": "Population: ~62 million."};
+function openPanic(){
+  const host=document.getElementById('panicList');host.innerHTML="";
+  Object.keys(TOPICS).forEach(id=>{const t=TOPICS[id];host.innerHTML+=`<div class="panel panic-c" style="--acc:${ACC[id]};--accs:${ACC[id]}18"><h3>${t.name}</h3><div class="one"><b>Say this</b>${t.sentence}</div><div class="one"><b>Paradox</b>${t.paradox}</div><div class="one"><b>Statistic</b>${STAT[id]}</div><div class="one"><b>You might be asked</b>${t.central.q}</div><div class="one"><b>Opening</b>${t.central.hook}</div></div>`;});
+  go('panic');
+}
+
+/* ---------- timeline view ---------- */
+function openTimeline(){
+  state.topics.timeline=state.topics.timeline||"done";renderTree();
+  const host=document.getElementById('tlList');host.innerHTML="";
+  US_TL.forEach((n,i)=>{host.innerHTML+=`<div class="tlcard"><button class="tlcard-h" onclick="tlToggle(${i})"><span class="yr">${n.y}</span><span class="ti">${n.t}</span><span class="chev">▾</span></button><div class="tlcard-b"><div><div class="tlcard-in"><div class="illo" style="max-width:280px">${illFor(n.ill)}</div><p class="lede">${n.lines}</p><div class="keybox" style="margin-top:12px"><div class="kt">Why it still matters</div><div class="kc">${n.why}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
+  go('timeline');
+}
+function tlToggle(i){document.querySelectorAll('#tlList .tlcard')[i].classList.toggle('open');}
+
+/* ---------- nations view ---------- */
+function openNations(){
+  state.topics.regions=state.topics.regions||"done";renderTree();
+  const host=document.getElementById('natList');host.innerHTML="";
+  NATIONS.forEach((n,i)=>{host.innerHTML+=`<div class="nation" style="--acc:${n.acc}"><button class="nation-h" onclick="natToggle(${i})"><span class="fl">${n.fl}</span><span class="nm">${n.nm}</span><span class="chev">▾</span></button><div class="nation-b"><div><div class="nation-in"><ul class="facts">${n.facts.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul><div class="keybox" style="margin-top:12px"><div class="kt">The key debate</div><div class="kc">${n.debate}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
+  go('nations');
+}
+function natToggle(i){document.querySelectorAll('#natList .nation')[i].classList.toggle('open');}
+
+/* ---------- trainer ---------- */
+let tr={topic:"t1",level:"easy",t:30,timer:null,qIx:0};
+function openTrainer(){const s=document.getElementById('trTopic');s.innerHTML=Object.keys(TOPICS).map(id=>`<option value="${id}">${TOPICS[id].name}</option>`).join("");s.value=tr.topic;trTab('colle');trNew();go('trainer');}
+function trTab(which){
+  document.getElementById('tab-colle').classList.toggle('on',which==='colle');
+  document.getElementById('tab-det').classList.toggle('on',which==='det');
+  document.getElementById('trColle').style.display=which==='colle'?"":"none";
+  document.getElementById('trDet').style.display=which==='det'?"":"none";
+  if(which==='det')renderDet();
+}
+function trLevel(l){tr.level=l;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===l));trNew();}
+function trRandom(){const ids=Object.keys(TOPICS),lv=['easy','inter','adv'];tr.topic=ids[Math.floor(Math.random()*ids.length)];tr.level=lv[Math.floor(Math.random()*3)];document.getElementById('trTopic').value=tr.topic;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===tr.level));trNew();toast('🎲 Random colle');}
+function trNew(){tr.topic=document.getElementById('trTopic').value;const arr=TOPICS[tr.topic].discuss[tr.level];tr.qIx=Math.floor(Math.random()*arr.length);const lab={easy:"🟢 Easy",inter:"🟡 Intermediate",adv:"🔴 Advanced"};document.getElementById('trLab').textContent=lab[tr.level]+" · "+TOPICS[tr.topic].name;document.getElementById('trQ').textContent=arr[tr.qIx];document.getElementById('trModel').style.display="none";document.getElementById('trReveal').style.display=tr.level==='adv'?"":"none";document.getElementById('trNotes').value="";trReset();}
+function trRevealModel(){const t=TOPICS[tr.topic];const m=document.getElementById('trModel');m.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">A model approach</div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p>`;m.style.display="block";document.getElementById('trReveal').style.display="none";trStop();}
+function trTimerToggle(){tr.timer?trStop():trStart();}
+function trStart(){document.getElementById('trTimerBtn').textContent="Pause";document.getElementById('trTimer').classList.add('run');tr.timer=setInterval(()=>{tr.t--;trPaint();if(tr.t<=0)trStop();},1000);}
+function trStop(){clearInterval(tr.timer);tr.timer=null;document.getElementById('trTimerBtn').textContent="Start timer";document.getElementById('trTimer').classList.remove('run');}
+function trReset(){trStop();tr.t=30;trPaint();}
+function trPaint(){const m=Math.floor(tr.t/60),s=tr.t%60;document.getElementById('trTimer').textContent=`${m}:${String(s).padStart(2,'0')}`;}
+
+/* ---------- article detective ---------- */
+const DET=[{"head": "In the news: the apartheid era", "opts": [["Race", true], ["Segregation", true], ["Injustice", true], ["Memory", true], ["Inequality", false]]}, {"head": "In the news: Mandela", "opts": [["Resistance", true], ["Leadership", true], ["Human rights", true], ["Decolonisation", true], ["Democracy", false]]}, {"head": "In the news: reconciliation", "opts": [["Reconciliation", true], ["Justice", true], ["Memory", true], ["Nation-building", true], ["Diversity", false]]}];
+let detIx=0,detPick=new Set();
+function renderDet(){
+  detIx=Math.floor(Math.random()*DET.length);detPick=new Set();
+  const d=DET[detIx];
+  document.getElementById('trDet').innerHTML=`<div class="stage"><div class="s-body"><div class="eyebrow">Article detective</div><p class="qbig">“${d.head}”</p><p class="lede" style="margin:0 0 12px">Which themes would you bring into a colle? Tap all that apply.</p>${d.opts.map((o,i)=>`<button class="opt" id="det${i}" onclick="detTog(${i})"><span>${o[0]}</span><span class="tag2"></span></button>`).join("")}<div class="result" id="detR" style="display:none"></div></div><div class="s-foot"><button class="btn btn-ghost" onclick="renderDet()">New headline</button><span class="sp"></span><button class="btn btn-primary" onclick="detCheck()">Check</button></div></div>`;
+}
+function detTog(i){const el=document.getElementById('det'+i);if(detPick.has(i)){detPick.delete(i);el.classList.remove('sel');}else{detPick.add(i);el.classList.add('sel');}}
+function detCheck(){const d=DET[detIx];d.opts.forEach((o,i)=>{const el=document.getElementById('det'+i);el.style.pointerEvents="none";if(o[1]){el.style.borderColor="var(--g)";el.style.background="#eaf3ea";}else if(detPick.has(i)){el.style.borderColor="var(--r)";el.style.background="#f7ece8";}});const right=d.opts.filter(o=>o[1]).map(o=>o[0]);document.getElementById('detR').style.display="block";document.getElementById('detR').innerHTML=`<div class="eyebrow" style="margin-bottom:4px">The connected themes</div>${right.join(" · ")}. <span style="color:var(--slate)">Naming these links is exactly the reflex examiners reward.</span>`;}
+
+/* ---------- drill ---------- */
+const DRILL=[{"f": "True or false: apartheid was just segregation?", "b": "Not quite — It was a comprehensive legal system of classification, control and dispossession."}, {"f": "True or false: the struggle was purely peaceful?", "b": "Not quite — It combined protest and armed resistance and international pressure."}, {"f": "True or false: the TRC was a trial?", "b": "Not quite — It was about truth and reconciliation, granting amnesty, not punishment."}, {"f": "True or false: South Africa is a united rainbow?", "b": "Not quite — The ideal coexists with deep racial inequality and tension."}, {"f": "True or false: democracy ended apartheid's inequality?", "b": "Not quite — It ended legal apartheid, not the economic divide."}, {"f": "True or false: South Africa = ANC forever?", "b": "Not quite — In 2024 the ANC lost its majority, ushering in coalitions."}, {"f": "French-speaker trap", "b": "“apartheid“ is Afrikaans (“apartness“); “Coloured“ is a specific SA identity term."}, {"f": "French-speaker trap", "b": "Ubuntu = a humanist philosophy; xenophobia here targets other African migrants."}];
+let di=0;
+function openDrill(){di=0;showCard();document.getElementById('scrim').classList.add('open');}
+function closeDrill(){document.getElementById('scrim').classList.remove('open');}
+function showCard(){const c=DRILL[di];document.getElementById('dMeta').textContent=`Card ${di+1} of ${DRILL.length}`;document.getElementById('dFront').textContent=c.f;document.getElementById('dBack').textContent=c.b;document.getElementById('flip').classList.remove('flipped');document.getElementById('dHint').style.display="block";document.getElementById('dGrade').style.display="none";}
+function flip(){document.getElementById('flip').classList.add('flipped');document.getElementById('dHint').style.display="none";document.getElementById('dGrade').style.display="flex";}
+function grade(){di++;if(di>=DRILL.length){closeDrill();toast('Drill complete');return;}showCard();}
+document.getElementById('scrim').addEventListener('click',e=>{if(e.target.id==='scrim')closeDrill();});
+document.getElementById('flip').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrill();});
+
+/* ---------- live country news ---------- */
+const NEWS_WORKER="https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+(function(){
+  fetch(NEWS_WORKER+"?country=za&n=3")
+    .then(r=>r.json())
+    .then(data=>{
+      if(!data.items||!data.items.length)return;
+      const list=document.getElementById('lnList');
+      list.innerHTML=data.items.map(it=>
+        `<li><span class="b">›</span><span><a href="${it.url}" target="_blank" rel="noopener" style="color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px">${it.title}</a></span></li>`).join("");
+      document.getElementById('lnSrc').textContent="· "+data.source+", today";
+      document.getElementById('liveNews').hidden=false;
+    })
+    .catch(()=>{ /* hors-ligne ou worker absent : le panneau reste masqué */ });
+})();
+
+/* init */
+renderTree();setToday();
+</script>
+</body>
+</html>

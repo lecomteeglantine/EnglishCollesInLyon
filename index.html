@@ -644,24 +644,50 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 }); 
     
    
-   fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
-  .then(response => response.json())
-  .then(data => {
-    document.querySelector(".news-date").textContent = data.date;
-    document.querySelector(".news-country").textContent = data.country;
-    document.querySelector(".news-title").textContent = data.title;
-    document.querySelector(".news-source").textContent = data.source;
-    document.querySelector(".news-link").setAttribute("href", data.url);
-    document.querySelector(".news-question").innerHTML =
-      "<strong>Question for discussion:</strong><br>" + data.question;
-  })
-  .catch(error => {
-    console.error("News widget error:", error);
-  });
+   /* ===== Daily Brief : rotation quotidienne sur les 8 pays ===== */
+   (function(){
+     var codes = ["gb","us","ie","ca","au","nz","in","za"];
+     var day = Math.floor((new Date() - new Date(2026, 0, 1)) / 86400000);
+     var code = codes[((day % codes.length) + codes.length) % codes.length];
+     var B = (window.BRIEF || {})[code] || {};
+
+     function show(d){
+       document.querySelector(".news-date").textContent = d.date;
+       document.querySelector(".news-country").textContent = d.country;
+       document.querySelector(".news-title").textContent = d.title;
+       document.querySelector(".news-source").textContent = d.source;
+       document.querySelector(".news-link").setAttribute("href", d.url);
+       document.querySelector(".news-question").innerHTML =
+         "<strong>Question for discussion:</strong><br>" + d.question;
+     }
+
+     fetch("https://english-colles-country-news.lecomte-eglantine.workers.dev/?country=" + code + "&n=1")
+       .then(function(r){ return r.json(); })
+       .then(function(data){
+         if (!data.items || !data.items.length) throw new Error("no items");
+         var qs = B.questions || [];
+         show({
+           date: new Date().toLocaleDateString("en-GB", { weekday:"long", day:"numeric", month:"long", year:"numeric" }),
+           country: B.name || data.country,
+           title: data.items[0].title,
+           source: data.source,
+           url: data.items[0].url,
+           question: qs.length ? qs[day % qs.length] : "How would you bring this story into a colle?"
+         });
+       })
+       .catch(function(){
+         // secours : l'ancien service mono-pays
+         fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
+           .then(function(r){ return r.json(); })
+           .then(show)
+           .catch(function(e){ console.error("News widget error:", e); });
+       });
+   })();
 </script>
 <script>
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
 </script>
+<script src="brief-data.js"></script>
 <script src="wotd-data.js"></script>
 <script src="civi-data.js"></script>
 <script>

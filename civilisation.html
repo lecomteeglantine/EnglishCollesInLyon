@@ -1,687 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colle Atlas — United Kingdom</title>
+<title>Civilisation — English Colles in Lyon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#15302A;--ink-soft:#33473F;--slate:#566A61;
-    --paper:#EFEEE6;--card:#FBFBF6;--card-2:#F2F1E8;--line:#D6D8CC;--line-2:#BFC3B5;
-    --brass:#9C6B22;--brass-soft:#C49A53;
-    --g:#3F7A4B;--a:#A86E18;--r:#A6432B;
-    --acc:#9C6B22;--accs:#f2ece1;       /* per-theme accent (set in JS) */
-    --radius:16px;--shadow:0 1px 2px rgba(21,48,42,.05),0 10px 30px rgba(21,48,42,.08);--tap:48px;
-    font-size:18px;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:1rem;line-height:1.6;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
-  body.reading{letter-spacing:.05em;word-spacing:.16em;line-height:1.9}
-  body.reading p,body.reading li{text-align:left}
-  h1,h2,h3,h4{font-family:"Lexend",sans-serif;font-weight:600;line-height:1.2;margin:0}
-  p{margin:0}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-  :focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:8px}
-  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:99}
-  .skip:focus{left:12px}
-  .eyebrow{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
-  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
-
-  header.bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .bar-in{max-width:920px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .brand{display:flex;align-items:baseline;gap:8px;min-height:var(--tap);cursor:pointer}
-  .brand .mark{font-family:"Lexend";font-weight:700;font-size:1.05rem}.brand .sep{color:var(--line-2)}
-  .brand .country{font-weight:600;font-size:.9rem;color:var(--ink-soft)}
-  .bar-spacer{flex:1}
-  .rank{display:flex;flex-direction:column;gap:3px;padding:6px 12px;border:1px solid var(--line);background:var(--card);border-radius:12px;min-width:128px}
-  .rank .rl{font-family:"Lexend";font-size:.72rem;font-weight:600}.rank .rl b{color:var(--brass)}
-  .rank .rb{height:5px;border-radius:99px;background:var(--card-2);overflow:hidden}
-  .rank .rb i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
-  .sitelink{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 12px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-weight:700;font-size:.82rem;color:var(--ink);text-decoration:none}.sitelink:hover{background:var(--card-2)}
-  .a11y{display:flex;align-items:center;gap:6px}
-  .a11y button{min-width:42px;min-height:42px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-weight:700;font-size:.85rem;display:grid;place-items:center;padding:0 9px}
-  .a11y button:hover{background:var(--card-2)}.a11y button.on{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
-  .a11y .ttl{font-size:.62rem}.a11y .tlg{font-size:1.05rem}
-
-  .views{padding-bottom:48px}
-  .view{display:none;animation:fade .4s ease both}.view.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
-
-  .hero{padding:28px 0 4px;text-align:center}
-  .hero h1{font-size:clamp(1.7rem,6vw,2.5rem);max-width:16ch;margin:6px auto 0}
-  .hero .sub{color:var(--slate);margin:12px auto 0;max-width:44ch}
-
-  .cprog{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;margin:20px 0 6px}
-  .cprog .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
-  .cprog .nm{font-family:"Lexend";font-weight:600;font-size:1.05rem}
-  .cprog .ct{font-family:"Lexend";font-size:.82rem;color:var(--slate)}
-  .cprog .bar{height:12px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden;margin:12px 0 0}
-  .cprog .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft));transition:width .5s}
-  .badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-  .badge{display:inline-flex;align-items:center;gap:6px;font-family:"Lexend";font-size:.74rem;font-weight:600;background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:99px;padding:5px 10px}
-  .badge .s{width:9px;height:9px;border-radius:50%}
-
-  .choices{display:grid;gap:14px;margin:18px 0 6px}
-  .choice{display:flex;align-items:center;gap:16px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-height:var(--tap);box-shadow:var(--shadow);transition:transform .12s,border-color .2s}
-  .choice:hover{transform:translateY(-2px);border-color:var(--line-2)}
-  .choice .ill{flex:none;width:62px;height:62px;border-radius:14px;overflow:hidden;background:var(--card-2)}.choice .ill svg{width:100%;height:100%;display:block}
-  .choice .tx{flex:1}.choice .time{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
-  .choice h3{font-size:1.18rem;margin:3px 0 2px}.choice p{font-size:.9rem;color:var(--slate)}
-  .choice .go{flex:none;color:var(--slate);font-size:1.5rem}
-
-  .today{background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0 6px}
-  .today .q{font-family:"Lexend";font-weight:500;font-size:1.05rem;margin:6px 0 10px}
-
-  .section{margin:28px 0 0}
-  .section-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-  .section-h h2{font-size:1.15rem}.section-h .mini{font-size:.78rem;color:var(--slate)}
-
-  .explore2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .ex{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;min-height:var(--tap);box-shadow:var(--shadow)}
-  .ex:hover{border-color:var(--line-2);background:var(--card-2)}
-  .ex .i{font-size:1.4rem}.ex .t{display:block;font-family:"Lexend";font-weight:600;font-size:.96rem}.ex .d{display:block;margin-top:2px;font-size:.76rem;color:var(--slate)}
-
-  .chap{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
-  .chap-btn{width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:var(--tap);text-align:left}
-  .chap-btn:hover{background:var(--card-2)}
-  .chap .num{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:.9rem}
-  .chap .ct{flex:1}.chap .ct .ctitle{display:block;font-family:"Lexend";font-weight:600;font-size:1.02rem}.chap .ct .csub{display:block;font-size:.8rem;color:var(--slate);margin-top:2px}
-  .chap .meter{flex:none}.chap .meter .bar{width:64px;height:8px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}.chap .meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
-  .chap .chev{flex:none;color:var(--slate);transition:transform .3s;font-size:1.1rem}.chap.open .chev{transform:rotate(180deg)}
-  .chap-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.chap.open .chap-body{grid-template-rows:1fr}.chap-body>div{overflow:hidden}
-  .topic{width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;min-height:var(--tap);text-align:left;border-top:1px solid var(--line)}
-  .topic:hover{background:var(--card-2)}
-  .topic .swatch{flex:none;width:10px;height:10px;border-radius:50%}
-  .topic .thumb{flex:none;width:44px;height:44px;border-radius:11px;overflow:hidden;background:var(--card-2)}.topic .thumb svg{width:100%;height:100%}
-  .topic .tn{flex:1}.topic .tn .nm{display:block;font-weight:700;font-size:.98rem}.topic .tn .ds{display:block;margin-top:2px;font-size:.76rem;color:var(--slate)}
-  .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
-  .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
-  .topic.soon{opacity:.62}.topic.soon .ds{color:var(--brass)}
-
-  .foot{margin:30px 0 8px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-  .foot button{font-size:.85rem;font-weight:600;color:var(--ink-soft);min-height:var(--tap);padding:0 8px;text-decoration:underline;text-underline-offset:3px}
-  .note{max-width:760px;margin:6px auto 0;padding:0 18px}
-  .note .in{background:var(--card-2);border:1px dashed var(--line-2);border-radius:12px;padding:14px 16px;font-size:.82rem;color:var(--slate);line-height:1.6}.note b{color:var(--ink-soft)}
-
-  .back{min-height:var(--tap);display:inline-flex;align-items:center;gap:8px;color:var(--slate);font-weight:600;font-size:.9rem;margin-top:10px}.back:hover{color:var(--ink)}
-  .progress-top{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
-  .progress-top .bar{flex:1;height:10px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}
-  .progress-top .bar i{display:block;height:100%;background:var(--acc);transition:width .4s}
-  .progress-top .lab{font-family:"Lexend";font-size:.78rem;font-weight:600;color:var(--slate);white-space:nowrap}
-
-  .dots{display:flex;gap:7px;margin-bottom:16px;flex-wrap:wrap}
-  .dots .d{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.76rem;font-weight:600;color:var(--slate);min-height:40px}
-  .dots .d .ix{font-family:"Lexend";font-size:.7rem}
-  .dots .d.active{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
-  .dots .d.cleared{border-color:var(--acc);color:var(--acc)}
-  .dots .d.locked{opacity:.42}
-
-  .stage{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border-top:4px solid var(--acc)}
-  .s-body{padding:22px 22px 8px}.s-body h2{font-size:1.5rem;margin:4px 0 0;display:flex;align-items:center;gap:10px}
-  .s-body h2 .swatch{width:14px;height:14px;border-radius:50%;background:var(--acc);flex:none}
-  .lede{color:var(--ink-soft);font-size:1.02rem;margin-top:12px}.s-body p+p{margin-top:12px}
-  .illo{width:100%;border-radius:13px;overflow:hidden;background:linear-gradient(135deg,#e8ebe2,#dfe4d8);margin:8px 0 4px;border:1px solid var(--line)}.illo svg{width:100%;height:auto;display:block}
-  .cap{font-size:.76rem;color:var(--slate);margin-top:8px;text-align:center}
-  .qbig{font-family:"Lexend";font-weight:500;font-size:1.25rem;line-height:1.35;margin:16px 0}
-
-  .reveal{border:2px solid var(--line);border-radius:13px;overflow:hidden;margin-top:12px}
-  .reveal>button{width:100%;min-height:var(--tap);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:"Lexend";font-weight:600;font-size:.95rem;color:var(--ink)}
-  .reveal>button:hover{background:var(--card-2)}
-  .reveal .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.reveal.open .body{grid-template-rows:1fr}
-  .reveal .body>div{overflow:hidden;padding:0 16px}.reveal.open .body>div{padding:0 16px 16px}
-  .reveal .chev{transition:transform .3s;color:var(--slate)}.reveal.open .chev{transform:rotate(180deg)}
-
-  .sentence{font-family:"Lexend";font-weight:500;font-size:1.1rem;border-left:4px solid var(--acc);padding-left:14px;color:var(--ink)}
-  .facts{list-style:none;padding:0;margin:14px 0 0}.facts li{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.98rem}.facts li:last-child{border:none}.facts .b{color:var(--acc);font-weight:700;flex:none}
-  .pill-line{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}
-  .keybox{flex:1;min-width:220px;background:var(--card-2);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-  .keybox .kt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:4px}
-  .keybox .kc{font-size:.95rem;color:var(--ink-soft)}
-  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-  .tag{font-family:"Lexend";font-weight:500;font-size:.8rem;background:var(--accs);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
-
-  .connect-intro{margin:6px 0 14px}
-  .cchips{display:flex;flex-wrap:wrap;gap:9px}
-  .cchip{font-family:"Lexend";font-weight:600;font-size:.9rem;background:var(--card);border:2px solid var(--line);border-radius:11px;padding:11px 14px;min-height:44px}
-  .cchip:hover{border-color:var(--acc)}.cchip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
-  .conn-detail{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:0 16px;max-height:0;overflow:hidden;opacity:0;transition:.3s}
-  .conn-detail.show{padding:15px 16px;max-height:300px;opacity:1}
-  .conn-detail .ct{font-family:"Lexend";font-weight:600;margin-bottom:5px}
-
-  .levelblock{border:1px solid var(--line);border-radius:13px;padding:15px 17px;margin-bottom:12px;background:var(--card)}
-  .levelblock .lh{display:flex;align-items:center;gap:9px;font-family:"Lexend";font-weight:600;margin-bottom:8px}
-  .levelblock .lh .d{width:12px;height:12px;border-radius:50%}
-  .levelblock[data-l=easy] .d{background:var(--g)}.levelblock[data-l=inter] .d{background:var(--a)}.levelblock[data-l=adv] .d{background:var(--r)}
-  .levelblock ul{margin:0;padding-left:20px}.levelblock li{padding:4px 0;font-size:.96rem}
-
-  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
-  .tabb{font-family:"Lexend";font-weight:600;font-size:.88rem;border:2px solid var(--line);background:var(--card);border-radius:99px;padding:9px 15px;min-height:44px;color:var(--slate)}
-  .tabb.on{background:var(--card-2);border-color:var(--line-2);color:var(--ink)}
-  .opt{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:14px 15px;margin-bottom:10px;font-size:.96rem;min-height:var(--tap)}
-  .opt:hover{border-color:var(--line-2);background:var(--card-2)}
-  .opt.sel{border-color:var(--acc);background:var(--accs)}
-  textarea.notes{width:100%;border:2px solid var(--line);border-radius:12px;padding:13px;font-family:inherit;font-size:1rem;resize:vertical;min-height:90px;background:var(--card-2);line-height:1.6}
-  textarea.notes:focus{outline:none;border-color:var(--acc);background:var(--card)}
-  .plan{list-style:none;padding:0;margin:8px 0 0;counter-reset:p}.plan li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}.plan li:last-child{border:none}
-  .plan li::before{counter-increment:p;content:counter(p,upper-roman);font-family:"Lexend";font-weight:700;color:var(--acc);flex:none;min-width:28px}
-  .hookline{background:var(--accs);border-left:4px solid var(--acc);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.96rem}.hookline b{font-family:"Lexend";color:var(--acc)}
-  .result{margin-top:14px;background:var(--card-2);border:1px solid var(--line);border-radius:12px;padding:15px}
-
-  .res{display:grid;gap:10px;margin-top:6px}
-  .res-c{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:var(--card-2)}
-  .res-c .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:5px}.res-c .ri{font-size:.92rem;color:var(--ink-soft)}
-  .compare{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:15px}.compare .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}.compare p{font-size:.95rem;color:var(--ink-soft);margin-top:6px}
-
-  .s-foot{border-top:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;gap:10px}.s-foot .sp{flex:1}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Lexend";font-weight:600;font-size:.95rem;border-radius:12px;padding:0 20px;min-height:var(--tap);transition:transform .12s}
-  .btn-primary{background:var(--ink);color:#F4F6EF;box-shadow:var(--shadow)}.btn-primary:hover{transform:translateY(-1px)}
-  .btn-ghost{border:2px solid var(--line-2);color:var(--ink)}.btn-ghost:hover{background:var(--card-2)}
-  .btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
-
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px;border-left:4px solid var(--acc)}
-  .panic-c h3{font-family:"Lexend";font-size:1.08rem;display:flex;align-items:center;gap:10px}
-  .panic-c .one{margin-top:9px;font-size:.95rem}.panic-c .one b{font-family:"Lexend";color:var(--acc);font-weight:600;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}
-  .timerbox{text-align:center;margin:16px 0}.timer{font-family:"Lexend";font-weight:700;font-size:2.4rem}.timer.run{color:var(--brass)}.timer-l{font-size:.82rem;color:var(--slate)}
-  .seltopic{width:100%;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:13px;font-size:1rem;font-family:inherit;min-height:var(--tap);margin-bottom:12px}
-
-  .tlcard{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
-  .tlcard-h{width:100%;display:flex;align-items:center;gap:14px;padding:15px 18px;min-height:var(--tap);text-align:left}
-  .tlcard-h:hover{background:var(--card-2)}
-  .tlcard .yr{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:1.05rem;flex:none;min-width:56px}
-  .tlcard .ti{flex:1;font-family:"Lexend";font-weight:600}
-  .tlcard .chev{color:var(--slate);transition:.3s}.tlcard.open .chev{transform:rotate(180deg)}
-  .tlcard-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}.tlcard.open .tlcard-b{grid-template-rows:1fr}.tlcard-b>div{overflow:hidden}
-  .tlcard-in{padding:0 18px 18px}
-
-  .nation{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow);border-left:4px solid var(--acc)}
-  .nation-h{width:100%;display:flex;align-items:center;gap:12px;padding:15px 18px;min-height:var(--tap);text-align:left}.nation-h:hover{background:var(--card-2)}
-  .nation .fl{font-size:1.4rem}.nation .nm{flex:1;font-family:"Lexend";font-weight:600}.nation .chev{color:var(--slate);transition:.3s}.nation.open .chev{transform:rotate(180deg)}
-  .nation-b{display:grid;grid-template-rows:0fr;transition:.35s}.nation.open .nation-b{grid-template-rows:1fr}.nation-b>div{overflow:hidden}.nation-in{padding:0 18px 18px}
-
-  .scrim{position:fixed;inset:0;background:rgba(18,28,24,.55);display:none;place-items:center;z-index:60;padding:16px}.scrim.open{display:grid}
-  .modal{background:var(--paper);border-radius:20px;max-width:440px;width:100%;box-shadow:var(--shadow);overflow:hidden}
-  .m-h{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.m-h h3{font-size:1.1rem}.m-h .x{font-size:1.7rem;color:var(--slate);min-width:var(--tap);min-height:var(--tap)}
-  .flash{padding:24px 20px;text-align:center}.flash .meta{font-family:"Lexend";font-size:.78rem;color:var(--slate);margin-bottom:14px}
-  .flip{background:var(--card);border:2px solid var(--line);border-radius:15px;min-height:150px;display:grid;place-items:center;padding:24px;cursor:pointer}
-  .flip .front{font-family:"Lexend";font-weight:600;font-size:1.25rem}.flip .back{font-size:1rem;color:var(--ink-soft);line-height:1.6;display:none}.flip.flipped .front{display:none}.flip.flipped .back{display:block}
-  .fhint{font-size:.8rem;color:var(--slate);margin-top:12px}
-  .grade{display:flex;gap:10px;margin-top:16px}.grade button{flex:1;border-radius:12px;padding:13px;font-family:"Lexend";font-weight:600;font-size:.9rem;border:2px solid var(--line);min-height:var(--tap)}
-  .grade .again{background:#f7ece8;border-color:#e3bdae;color:#8a3a22}.grade .good{background:#eaf3ea;border-color:#bcd9b2;color:#356030}.grade .iv{display:block;font-family:"Atkinson Hyperlegible";font-weight:400;font-size:.72rem;opacity:.85;margin-top:2px}
-
-  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120%);background:var(--ink);color:#F4F6EF;padding:13px 20px;border-radius:14px;font-family:"Lexend";font-weight:600;font-size:.9rem;box-shadow:var(--shadow);z-index:70;transition:transform .4s;display:flex;align-items:center;gap:10px}
-  .toast.show{transform:translateX(-50%) translateY(0)}
-  .toast .s{width:11px;height:11px;border-radius:50%;background:var(--brass-soft)}
-
-  @media (min-width:640px){:root{font-size:19px}.res{grid-template-columns:1fr 1fr}}
-  @media (max-width:560px){.explore2{grid-template-columns:1fr}}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:root{
+  --bg:#FAF3E7; --bg2:#FFF7ED; --ink:#22312F; --muted:#5d6b66;
+  --navy:#243B53; --terra:#C46A4A; --sage:#7A9B76; --gold:#D9A441;
+  --card:#FFFFFF; --line:#E6D8C8;
+  --shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08), 0 24px 60px rgba(36,59,83,.13);
+  --r:16px; --tap:48px; --maxw:1120px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+  --fs:18px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}
+.nav a.active{color:var(--terra)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+main{padding:34px 0 60px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin-top:6px}
+.page-head p{color:var(--muted);margin-top:8px;max-width:62ch}
+.countries{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:30px}
+.country-card{display:flex;flex-direction:column;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;transition:transform .14s, box-shadow .25s}
+.country-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.cc-flag{display:block;width:64px;height:48px;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(36,59,83,.15)}
+.cc-flag svg{width:100%;height:100%;display:block}
+.cc-name{display:block;font-family:var(--display);font-weight:600;font-size:1.25rem;color:var(--navy)}
+.cc-fr{display:block;font-family:var(--font);font-weight:400;font-size:.82rem;color:var(--muted)}
+.cc-tag{display:block;font-size:.9rem;color:var(--muted);margin-top:6px;line-height:1.5}
+.cc-go{margin-top:auto;padding-top:8px;font-weight:700;font-size:.9rem;color:var(--terra)}
+.country-card:hover .cc-go{text-decoration:underline}
+.how{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 24px}
+.how h2{font-size:1.2rem;color:var(--navy)}
+.how p{color:var(--muted);margin-top:8px}
+footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+a:focus-visible{outline:3px solid var(--terra);outline-offset:2px;border-radius:8px}
+@media (max-width:640px){.nav{display:none}}
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-
-<header class="bar">
-  <div class="bar-in">
-    <a class="sitelink" href="index.html" aria-label="Retour à l'accueil du site">← Site</a>
-    <div class="brand" onclick="go('hub')" tabindex="0" role="button" aria-label="Back to start"><span class="mark">Colle Atlas</span><span class="sep">/</span><span class="country">United Kingdom</span></div>
-    <div class="bar-spacer"></div>
-    <div class="rank" title="Your progress level"><span class="rl">Rank · <b id="rankName">Explorer</b></span><span class="rb"><i id="rankBar" style="width:10%"></i></span></div>
-    <div class="a11y" role="group" aria-label="Reading options">
-      <button onclick="setSize(-1)" aria-label="Smaller text"><span class="ttl">A</span></button>
-      <button onclick="setSize(0)" aria-label="Default text size">A</button>
-      <button onclick="setSize(1)" aria-label="Larger text"><span class="tlg">A</span></button>
-      <button id="readBtn" onclick="toggleReading()" aria-pressed="false" title="Reading mode: more spacing">Reading mode</button>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="name">English Colles in Lyon</span>
+      <span class="sub">CPGE · Anglais</span>
     </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="methodology.html">Méthodologie</a>
+      <a href="civilisation.html" class="active">Civilisation</a>
+      <a href="vocabulary.html">Vocabulaire</a>
+      <a href="timelines.html">Chronologies</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Ressources</a>
+    </nav>
   </div>
 </header>
-
-<main id="main" class="views">
-
-<!-- HUB -->
-<section class="view active" id="view-hub">
+<main>
   <div class="wrap">
-    <div class="hero"><div class="eyebrow">United Kingdom · your revision atlas</div><h1>Where would you like to start?</h1><p class="sub">Pick a way in. Nothing is hidden — each click opens one new layer, like exploring rather than reading a manual.</p></div>
-
-    <div class="cprog">
-      <div class="top"><span class="nm">United Kingdom</span><span class="ct" id="cpCount">5 / 12 topics explored</span></div>
-      <div class="bar"><i id="cpBar"></i></div>
-      <div class="badges" id="badges"></div>
+    <div class="page-head">
+      <div class="eyebrow">Civilisation</div>
+      <h1>Choisis ton pays</h1>
+      <p>Huit atlas de révision, un par grand pays anglophone. Chacun propose des parcours guidés en six étapes, une frise chronologique, un simulateur de colle, un recap panique de veille d'épreuve — et les actualités du pays en direct.</p>
     </div>
-
-    <div class="choices">
-      <button class="choice" onclick="openPanic()"><span class="ill" id="ill-panic"></span><span class="tx"><span class="time">5 minutes</span><h3>Panic recap</h3><p>One sentence, one paradox, one statistic, one question and one opening — per topic.</p></span><span class="go">→</span></button>
-      <button class="choice" onclick="openTopic('brexit',0)"><span class="ill" id="ill-guided"></span><span class="tx"><span class="time">20 minutes</span><h3>Guided exploration</h3><p>Observe → Understand → Connect → Discuss → Apply → Go Further. Resume Brexit, or pick a topic below.</p></span><span class="go">→</span></button>
-      <button class="choice" onclick="openTrainer()"><span class="ill" id="ill-train"></span><span class="tx"><span class="time">Train</span><h3>Colle simulator</h3><p>Practise speaking, take a random colle, or play article detective.</p></span><span class="go">→</span></button>
+    <div class="countries">
+      <a class="country-card" href="colle-atlas-gb.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 640 480"> <path fill="#012169" d="M0 0h640v480H0z"/> <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z"/> <path fill="#C8102E" d="m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z"/> <path fill="#FFF" d="M241 0v480h160V0zM0 160v160h640V160z"/> <path fill="#C8102E" d="M0 193v96h640v-96zM273 0v480h96V0z"/> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">United Kingdom<span class="cc-fr">Royaume-Uni</span></span>
+          <span class="cc-tag">Monarchy, Brexit, the NHS and a Union under strain.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-us.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 640 480"> <path fill="#bd3d44" d="M0 0h640v480H0"/> <path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/> <path fill="#192f5d" d="M0 0h364.8v258.5H0"/> <marker id="us-a" markerHeight="30" markerWidth="30"> <path fill="#fff" d="m14 0 9 27L0 10h28L5 27z"/> </marker> <path fill="none" marker-mid="url(#us-a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z"/> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">United States<span class="cc-fr">États-Unis</span></span>
+          <span class="cc-tag">The Constitution, race, guns and a contested democracy.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-ie.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ie" viewBox="0 0 640 480"> <g fill-rule="evenodd" stroke-width="1pt"> <path fill="#fff" d="M0 0h640v480H0z"/> <path fill="#009A49" d="M0 0h213.3v480H0z"/> <path fill="#FF7900" d="M426.7 0H640v480H426.7z"/> </g> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">Ireland<span class="cc-fr">Irlande</span></span>
+          <span class="cc-tag">Independence, the border question and a social revolution.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-ca.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ca" viewBox="0 0 640 480"> <path fill="#fff" d="M150.1 0h339.7v480H150z"/> <path fill="#d52b1e" d="M-19.7 0h169.8v480H-19.7zm509.5 0h169.8v480H489.9zM201 232l-13.3 4.4 61.4 54c4.7 13.7-1.6 17.8-5.6 25l66.6-8.4-1.6 67 13.9-.3-3.1-66.6 66.7 8c-4.1-8.7-7.8-13.3-4-27.2l61.3-51-10.7-4c-8.8-6.8 3.8-32.6 5.6-48.9 0 0-35.7 12.3-38 5.8l-9.2-17.5-32.6 35.8c-3.5.9-5-.5-5.9-3.5l15-74.8-23.8 13.4q-3.2 1.3-5.2-2.2l-23-46-23.6 47.8q-2.8 2.5-5 .7L264 130.8l13.7 74.1c-1.1 3-3.7 3.8-6.7 2.2l-31.2-35.3c-4 6.5-6.8 17.1-12.2 19.5s-23.5-4.5-35.6-7c4.2 14.8 17 39.6 9 47.7"/> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">Canada<span class="cc-fr">Canada</span></span>
+          <span class="cc-tag">Federalism, Quebec, multiculturalism and the First Nations.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-au.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-au" viewBox="0 0 640 480"> <path fill="#00008B" d="M0 0h640v480H0z"/> <path fill="#fff" d="m37.5 0 122 90.5L281 0h39v31l-120 89.5 120 89V240h-40l-120-89.5L40.5 240H0v-30l119.5-89L0 32V0z"/> <path fill="red" d="M212 140.5 320 220v20l-135.5-99.5zm-92 10 3 17.5-96 72H0zM320 0v1.5l-124.5 94 1-22L295 0zM0 0l119.5 88h-30L0 21z"/> <path fill="#fff" d="M120.5 0v240h80V0zM0 80v80h320V80z"/> <path fill="red" d="M0 96.5v48h320v-48zM136.5 0v240h48V0z"/> <path fill="#fff" d="m527 396.7-20.5 2.6 2.2 20.5-14.8-14.4-14.7 14.5 2-20.5-20.5-2.4 17.3-11.2-10.9-17.5 19.6 6.5 6.9-19.5 7.1 19.4 19.5-6.7-10.7 17.6zm-3.7-117.2 2.7-13-9.8-9 13.2-1.5 5.5-12.1 5.5 12.1 13.2 1.5-9.8 9 2.7 13-11.6-6.6zm-104.1-60-20.3 2.2 1.8 20.3-14.4-14.5-14.8 14.1 2.4-20.3-20.2-2.7 17.3-10.8-10.5-17.5 19.3 6.8L387 178l6.7 19.3 19.4-6.3-10.9 17.3 17.1 11.2ZM623 186.7l-20.9 2.7 2.3 20.9-15.1-14.7-15 14.8 2.1-21-20.9-2.4 17.7-11.5-11.1-17.9 20 6.7 7-19.8 7.2 19.8 19.9-6.9-11 18zm-96.1-83.5-20.7 2.3 1.9 20.8-14.7-14.8-15.1 14.4 2.4-20.7-20.7-2.8 17.7-11L467 73.5l19.7 6.9 7.3-19.5 6.8 19.7 19.8-6.5-11.1 17.6zM234 385.7l-45.8 5.4 4.6 45.9-32.8-32.4-33 32.2 4.9-45.9-45.8-5.8 38.9-24.8-24-39.4 43.6 15 15.8-43.4 15.5 43.5 43.7-14.7-24.3 39.2 38.8 25.1Z"/> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">Australia<span class="cc-fr">Australie</span></span>
+          <span class="cc-tag">The land, the monarchy debate and Indigenous Australia.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-nz.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-nz" viewBox="0 0 640 480"> <defs> <g id="nz-b"> <g id="nz-a"> <path d="M0-.3v.5l1-.5z"/> <path d="M.2.3 0-.1l1-.2z"/> </g> <use xlink:href="#nz-a" transform="scale(-1 1)"/> <use xlink:href="#nz-a" transform="rotate(72 0 0)"/> <use xlink:href="#nz-a" transform="rotate(-72 0 0)"/> <use xlink:href="#nz-a" transform="scale(-1 1)rotate(72)"/> </g> </defs> <path fill="#00247d" fill-rule="evenodd" d="M0 0h640v480H0z"/> <g transform="translate(-111 36.1)scale(.66825)"> <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="translate(900 120)scale(45.4)"/> <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="matrix(30 0 0 30 900 120)"/> </g> <g transform="rotate(82 525.2 114.6)scale(.66825)"> <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="rotate(-82 519 -457.7)scale(40.4)"/> <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="rotate(-82 519 -457.7)scale(25)"/> </g> <g transform="rotate(82 525.2 114.6)scale(.66825)"> <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="rotate(-82 668.6 -327.7)scale(45.4)"/> <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="rotate(-82 668.6 -327.7)scale(30)"/> </g> <g transform="translate(-111 36.1)scale(.66825)"> <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="translate(900 480)scale(50.4)"/> <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="matrix(35 0 0 35 900 480)"/> </g> <path fill="#012169" d="M0 0h320v240H0z"/> <path fill="#fff" d="m37.5 0 122 90.5L281 0h39v31l-120 89.5 120 89V240h-40l-120-89.5L40.5 240H0v-30l119.5-89L0 32V0z"/> <path fill="#c8102e" d="M212 140.5 320 220v20l-135.5-99.5zm-92 10 3 17.5-96 72H0zM320 0v1.5l-124.5 94 1-22L295 0zM0 0l119.5 88h-30L0 21z"/> <path fill="#fff" d="M120.5 0v240h80V0zM0 80v80h320V80z"/> <path fill="#c8102e" d="M0 96.5v48h320v-48zM136.5 0v240h48V0z"/> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">New Zealand<span class="cc-fr">Nouvelle-Zélande</span></span>
+          <span class="cc-tag">The Treaty of Waitangi, Māori identity and a small-nation model.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-in.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-in" viewBox="0 0 640 480"> <path fill="#f93" d="M0 0h640v160H0z"/> <path fill="#fff" d="M0 160h640v160H0z"/> <path fill="#128807" d="M0 320h640v160H0z"/> <g transform="matrix(3.2 0 0 3.2 320 240)"> <circle r="20" fill="#008"/> <circle r="17.5" fill="#fff"/> <circle r="3.5" fill="#008"/> <g id="in-d"> <g id="in-c"> <g id="in-b"> <g id="in-a" fill="#008"> <circle r=".9" transform="rotate(7.5 -8.8 133.5)"/> <path d="M0 17.5.6 7 0 2l-.6 5z"/> </g> <use xlink:href="#in-a" width="100%" height="100%" transform="rotate(15)"/> </g> <use xlink:href="#in-b" width="100%" height="100%" transform="rotate(30)"/> </g> <use xlink:href="#in-c" width="100%" height="100%" transform="rotate(60)"/> </g> <use xlink:href="#in-d" width="100%" height="100%" transform="rotate(120)"/> <use xlink:href="#in-d" width="100%" height="100%" transform="rotate(-120)"/> </g> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">India<span class="cc-fr">Inde</span></span>
+          <span class="cc-tag">The world’s largest democracy, partition and a rising power.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
+      <a class="country-card" href="colle-atlas-za.html">
+        <span class="cc-flag"><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-za" viewBox="0 0 640 480"> <defs> <clipPath id="za-a"> <path fill-opacity=".7" d="M-71.9 0h682.7v512H-71.9z"/> </clipPath> </defs> <g clip-path="url(#za-a)" transform="translate(67.4)scale(.93748)"> <g fill-rule="evenodd" stroke-width="1pt"> <path fill="#000001" d="M-71.9 407.8V104.4L154 256.1z"/> <path fill="#000c8a" d="m82.2 512.1 253.6-170.6H696V512H82.2z"/> <path fill="#e1392d" d="M66 0h630v170.8H335.7S69.3-1.7 66 0"/> <path fill="#ffb915" d="M-71.9 64v40.4L154 256-72 407.8v40.3l284.5-192z"/> <path fill="#007847" d="M-71.9 64V0h95l301.2 204h371.8v104.2H324.3L23 512h-94.9v-63.9l284.4-192L-71.8 64z"/> <path fill="#fff" d="M23 0h59.2l253.6 170.7H696V204H324.3zm0 512.1h59.2l253.6-170.6H696v-33.2H324.3L23 512z"/> </g> </g> </svg></span>
+        <span class="cc-body">
+          <span class="cc-name">South Africa<span class="cc-fr">Afrique du Sud</span></span>
+          <span class="cc-tag">Apartheid, reconciliation and the rainbow nation’s promises.</span>
+        </span>
+        <span class="cc-go">Ouvrir l'atlas →</span>
+      </a>
     </div>
-
-    <div class="today"><div class="eyebrow">Today's question</div><div class="q" id="todayQ"></div>
-      <div class="reveal" id="todayRev"><button onclick="rev('todayRev')">Reveal an angle <span class="chev">▾</span></button><div class="body"><div><p class="lede" id="todayA" style="margin-top:14px"></p></div></div></div>
+    <div class="how">
+      <h2>Comment travailler avec un atlas ?</h2>
+      <p>Ouvre le pays de ta prochaine colle. Si tu as 5 minutes, lance le « Panic recap ». Si tu en as 20, prends un parcours guidé : Observe → Understand → Connect → Discuss → Apply → Go Further. Et avant chaque colle, jette un œil aux « Fresh headlines » : les documents des colleurs sortent de la presse du moment.</p>
     </div>
-
-    <div class="section"><div class="section-h"><h2>Explore the country</h2></div>
-      <div class="explore2">
-        <button class="ex" onclick="openTimeline()"><span class="i">📜</span><span><span class="t">Timeline</span><span class="d">key dates, as mini-modules</span></span></button>
-        <button class="ex" onclick="openNations()"><span class="i">🗺️</span><span><span class="t">The four nations</span><span class="d">England · Scotland · Wales · NI</span></span></button>
-      </div>
-    </div>
-
-    <div class="section"><div class="section-h"><h2>Or pick a topic</h2><span class="mini">tap a chapter to open it</span></div><div id="tree"></div></div>
-
-    <div class="foot">
-      <button onclick="alert('Connections — V2: take one theme (e.g. the monarchy) and rank/compare it across the UK, Canada, Australia and New Zealand.')">Connections across countries</button>
-      <button onclick="openDrill()">5-minute memory drill</button>
-      <button onclick="alert('Final challenge — V2: an unseen document, 5 minutes to prepare, a problematic and a plan to build, then a graded model.')">UK final challenge</button>
-    </div>
-    <div class="note"><div class="in"><b>Prototype note.</b> A working mock-up of the UK path, redesigned around <i>Observe → Understand → Connect → Discuss → Apply → Go Further</i> and the principle of progressive revelation. Themes are colour-coded. Fonts (Atkinson Hyperlegible &amp; Lexend) and the A−/A+ + Reading-mode controls are for low-vision and dyslexic readers. Illustrations are custom SVG (royalty-free); real licensed photos/videos would slot into the same frames. Progress is in-memory and resets on reload.</div></div>
   </div>
-</section>
-
-<!-- TOPIC -->
-<section class="view" id="view-topic">
-  <div class="wrap">
-    <button class="back" onclick="go('hub')">← United Kingdom</button>
-    <div class="progress-top"><div class="bar"><i id="ptop"></i></div><span class="lab" id="plab">Step 1 of 6</span></div>
-    <div class="dots" id="dots"></div>
-    <div class="stage"><div class="s-body" id="stage"></div>
-      <div class="s-foot"><button class="btn btn-ghost" id="prevBtn" onclick="stepBy(-1)">Back</button><span class="sp"></span><button class="btn btn-primary" id="nextBtn" onclick="stepBy(1)">Next <span class="ar">→</span></button></div>
-    </div>
-  </div>
-</section>
-
-<!-- PANIC -->
-<section class="view" id="view-panic">
-  <div class="wrap"><button class="back" onclick="go('hub')">← United Kingdom</button>
-    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">5-minute panic recap</div><h1 style="font-size:1.8rem">The night before</h1><p class="sub">Per topic: one sentence, one paradox, one statistic, one question, one opening.</p></div>
-    <div id="panicList"></div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="view" id="view-timeline">
-  <div class="wrap"><button class="back" onclick="go('hub')">← United Kingdom</button>
-    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Timeline</div><h1 style="font-size:1.8rem">A frieze you explore</h1><p class="sub">Each date opens as a mini-module: what happened, why it still matters, a question, and links to topics.</p></div>
-    <div id="tlList" style="margin-top:8px"></div>
-  </div>
-</section>
-
-<!-- NATIONS -->
-<section class="view" id="view-nations">
-  <div class="wrap"><button class="back" onclick="go('hub')">← United Kingdom</button>
-    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">The four nations</div><h1 style="font-size:1.8rem">One state, four nations</h1><p class="sub">Tap a nation: essential facts, the key debate, a colle question and its connections.</p></div>
-    <div id="natList" style="margin-top:8px"></div>
-  </div>
-</section>
-
-<!-- TRAINER -->
-<section class="view" id="view-trainer">
-  <div class="wrap"><button class="back" onclick="go('hub')">← United Kingdom</button>
-    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Colle simulator</div><h1 style="font-size:1.8rem">Train your speaking</h1></div>
-    <div class="tabs"><button class="tabb on" id="tab-colle" onclick="trTab('colle')">Colle questions</button><button class="tabb" id="tab-det" onclick="trTab('det')">Article detective</button></div>
-    <div id="trColle">
-      <select class="seltopic" id="trTopic" onchange="trNew()"></select>
-      <div class="tabs"><button class="tabb on" data-l="easy" onclick="trLevel('easy')">🟢 Easy</button><button class="tabb" data-l="inter" onclick="trLevel('inter')">🟡 Intermediate</button><button class="tabb" data-l="adv" onclick="trLevel('adv')">🔴 Advanced</button><button class="tabb" onclick="trRandom()">🎲 Random colle</button></div>
-      <div class="stage"><div class="s-body"><div class="eyebrow" id="trLab">Easy</div><p class="qbig" id="trQ"></p>
-        <div class="timerbox"><div class="timer" id="trTimer">0:30</div><div class="timer-l">reflection time — note 3 ideas or speak aloud</div></div>
-        <textarea class="notes" id="trNotes" placeholder="Jot your plan…"></textarea><div id="trModel" style="display:none;margin-top:14px"></div></div>
-        <div class="s-foot"><button class="btn btn-ghost" id="trTimerBtn" onclick="trTimerToggle()">Start timer</button><span class="sp"></span><button class="btn btn-ghost" onclick="trNew()">New</button><button class="btn btn-primary" id="trReveal" onclick="trRevealModel()">Reveal plan</button></div>
-      </div>
-    </div>
-    <div id="trDet" style="display:none"></div>
-  </div>
-</section>
 </main>
-
-<div class="scrim" id="scrim"><div class="modal" role="dialog" aria-modal="true" aria-label="Memory drill">
-  <div class="m-h"><h3>Memory drill</h3><button class="x" onclick="closeDrill()" aria-label="Close">×</button></div>
-  <div class="flash"><div class="meta" id="dMeta">Card 1 of 4</div>
-    <div class="flip" id="flip" onclick="flip()" role="button" tabindex="0"><div class="front" id="dFront"></div><div class="back" id="dBack"></div></div>
-    <div class="fhint" id="dHint">tap the card to reveal</div>
-    <div class="grade" id="dGrade" style="display:none"><button class="again" onclick="grade()">Review again<span class="iv">due tomorrow</span></button><button class="good" onclick="grade()">Got it<span class="iv">due in 3 days</span></button></div>
-  </div>
-</div></div>
-<div class="toast" id="toast"><span class="s"></span><span id="toastT"></span></div>
-
-<script>
-/* ---------- illustrations ---------- */
-const ILL={
-  clock:`<svg viewBox="0 0 120 120" role="img" aria-label="Clock"><circle cx="60" cy="60" r="40" fill="#33473F"/><circle cx="60" cy="60" r="40" fill="none" stroke="#9C6B22" stroke-width="5"/><path d="M60 60V36M60 60l18 10" stroke="#EFEEE6" stroke-width="6" stroke-linecap="round"/></svg>`,
-  isles:`<svg viewBox="0 0 120 120" role="img" aria-label="Map pin"><path d="M44 22c6-4 14-2 15 6 1 6-3 9-2 14 1 6 7 7 8 14 1 8-5 12-4 19 1 6 6 8 5 15-1 6-8 9-15 7-8-2-9-10-16-12-6-2-12 1-15-5-3-7 3-12 2-19-1-6-7-9-6-16 1-6 8-7 12-12 4-5 2-12 8-16 3-2 6-2 8-1Z" fill="#33473F"/><circle cx="78" cy="40" r="14" fill="#9C6B22"/><circle cx="78" cy="40" r="5" fill="#EFEEE6"/></svg>`,
-  speak:`<svg viewBox="0 0 120 120" role="img" aria-label="Speech bubbles"><rect x="20" y="26" width="58" height="40" rx="11" fill="#33473F"/><path d="M34 66l4 12 12-12Z" fill="#33473F"/><rect x="52" y="50" width="48" height="34" rx="10" fill="#9C6B22"/><path d="M86 84l-3 10-10-10Z" fill="#9C6B22"/></svg>`,
-  brexit:`<svg viewBox="0 0 400 200" role="img" aria-label="A ballot box"><circle cx="200" cy="100" r="78" fill="#f0dad3"/><rect x="120" y="96" width="160" height="74" rx="6" fill="#33473F"/><path d="M120 96l40-26h120l40 26Z" fill="#3f574c"/><rect x="170" y="60" width="60" height="44" rx="3" fill="#FBFBF6" stroke="#15302A" stroke-width="2"/><path d="M186 80l8 9 16-18" stroke="#B23A2E" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  monarchy:`<svg viewBox="0 0 400 200" role="img" aria-label="A crown"><circle cx="200" cy="100" r="78" fill="#f1e6cc"/><path d="M120 132l-10-58 38 28 12-44 12 44 12-44 12 44 38-28-10 58Z" fill="#B0791A"/><rect x="118" y="132" width="164" height="20" rx="4" fill="#33473F"/><circle cx="148" cy="78" r="6" fill="#A6432B"/><circle cx="200" cy="64" r="6" fill="#A6432B"/><circle cx="252" cy="78" r="6" fill="#A6432B"/></svg>`,
-  devolution:`<svg viewBox="0 0 400 200" role="img" aria-label="Four nations map"><circle cx="200" cy="100" r="80" fill="#e6def0"/><path d="M196 38c8 0 14 6 12 16-2 8 4 12 2 20l-22 4-10-22c-2-10 8-20 18-18Z" fill="#3f574c"/><path d="M212 54c10-2 18 6 16 16-2 8 6 14 2 22l-26 2-4-24c0-9 3-14 12-16Z" fill="#6A4C93"/><path d="M188 92l24-2 6 30c2 12-8 22-20 18-8-2-10-10-16-12l6-32Z" fill="#33473F"/><path d="M158 96l30-4-6 34c-8 4-18 0-22-8-4-9 0-16-2-22Z" fill="#5b7065"/></svg>`,
-  nhs:`<svg viewBox="0 0 400 200" role="img" aria-label="Heart with medical cross"><circle cx="200" cy="100" r="80" fill="#d4e6f5"/><path d="M200 150c-40-26-58-46-58-70 0-18 14-30 30-30 12 0 22 7 28 18 6-11 16-18 28-18 16 0 30 12 30 30 0 24-18 44-58 70Z" fill="#0072CE"/><path d="M192 70h16v16h16v16h-16v16h-16v-16h-16V86h16Z" fill="#FBFBF6"/></svg>`,
-  generic:`<svg viewBox="0 0 400 200" role="img" aria-label="An open book"><circle cx="200" cy="100" r="80" fill="#dfe6d6"/><path d="M120 70c30-12 56-12 80 2 24-14 50-14 80-2v74c-30-12-56-12-80 2-24-14-50-14-80-2Z" fill="#33473F"/><path d="M200 72v76" stroke="#9C6B22" stroke-width="4"/></svg>`
-};
-function illFor(k){return ILL[k]||ILL.generic;}
-
-/* ---------- structure ---------- */
-const ACC={monarchy:"#B0791A",brexit:"#B23A2E",nhs:"#0072CE",devolution:"#6A4C93",parliament:"#1F3A5F",bigpicture:"#1F3A5F",nations:"#1F3A5F",timeline:"#1F3A5F",class:"#8A5A2B",immigration:"#3F7A4B",media:"#2C7A7B",empire:"#2C7A7B"};
-const CHAPTERS=[
-  {n:"01",title:"Understanding Britain",sub:"the big picture",topics:["bigpicture","nations","timeline"]},
-  {n:"02",title:"Power & politics",sub:"institutions, monarchy, Brexit",topics:["monarchy","parliament","brexit"]},
-  {n:"03",title:"British society",sub:"class, the NHS, immigration, media",topics:["class","nhs","immigration","media"]},
-  {n:"04",title:"Britain & the world",sub:"empire and the Union",topics:["empire","devolution"]}
-];
-const STUBS={bigpicture:"Big picture",nations:"The four nations",timeline:"UK timeline",parliament:"Constitution & Parliament",class:"Social class",immigration:"Immigration",media:"The media",empire:"The Empire"};
-const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"connect",l:"Connect"},{k:"discuss",l:"Discuss"},{k:"apply",l:"Apply"},{k:"further",l:"Go Further"}];
-
-const TOPICS={
- brexit:{name:"Brexit",ill:"brexit",chapter:"Power & politics",
-  docType:"Photograph · a polling station, June 2016",
-  observeQ:"What does this vote reveal about the state of British democracy?",
-  observeNotice:["A binary choice — leave or remain — for an issue of vast complexity.","A nation almost evenly split: 52 to 48."],
-  sentence:"In 2016 the UK voted to take back control — and reopened the question of what “the UK” even is.",
-  facts5:["June 2016 referendum: 52% Leave / 48% Remain.","Driven by sovereignty and immigration (“take back control”).","Left the EU in Jan 2020; transition ended Dec 2020.","Scotland and Northern Ireland voted Remain.","The Irish border became the hardest problem."],
-  debate:"Was Brexit a democratic reassertion of sovereignty, or a costly act of self-harm?",
-  paradox:"A vote to reassert national sovereignty that strained the UK’s own internal union.",
-  whyMatter:"Brexit reshaped Britain’s economy, its parties and the future of the Union — it sits behind almost any current UK debate.",
-  whyTags:["sovereignty","the Union","democracy","the economy"],
-  learnMore:"The slogan “take back control” bundled law, money and borders. Leaving the single market and customs union meant new trade friction and regulatory divergence; the Northern Ireland Protocol, then the Windsor Framework, tried to square an open Irish land border with a UK outside the EU.",
-  connect:[{to:"Sovereignty",why:"“Take back control” was, above all, a claim about who makes Britain’s laws — Westminster or Brussels."},{to:"Immigration",why:"Ending EU freedom of movement was a central promise of the Leave campaign."},{to:"Scotland",why:"Scotland voted Remain, which revived the SNP’s case for an independence that would rejoin the EU."},{to:"Northern Ireland",why:"Avoiding a hard land border in Ireland became Brexit’s thorniest problem."},{to:"Democracy",why:"A direct referendum overruled the position of most MPs — a clash of direct vs representative democracy."},{to:"The economy",why:"New trade barriers and labour shortages followed the exit from the single market."}],
-  discuss:{easy:["What did the UK vote for in 2016?","When did the UK formally leave the EU?","What did “take back control” refer to?"],
-    inter:["Why did a majority vote to leave?","How did Brexit affect Scotland and Northern Ireland?","Why was the Irish border so difficult?"],
-    adv:["Is Brexit a symptom of democratic vitality or democratic failure?","Did Brexit strengthen or weaken the United Kingdom?","Can national sovereignty mean much in a globalised economy?"]},
-  problematics:[{label:"A tension",q:"How can a vote meant to restore sovereignty end up threatening the unity of the very state it claimed to empower?"},{label:"A paradox",q:"Why did “taking back control” leave Britain with less control over its own internal union?"},{label:"A comparison",q:"What does Brexit reveal about the limits of direct democracy when applied to deeply complex questions?"}],
-  central:{q:"Is Brexit a symptom of democratic vitality or democratic failure?",plan:["Vitality: a sovereign people overruling the establishment by direct vote.","Failure: a binary answer to a hugely complex question, leaving deep and lasting division.","Resolution: Brexit as a mirror of the tension between direct and representative democracy."],hook:"A single yes/no question asked a divided nation to define itself — and it did, by the narrowest of margins."},
-  res:[{t:"Watch",i:"BBC / Channel 4 explainers on the vote and the Irish border."},{t:"Read",i:"The Economist & the FT on regulatory divergence."},{t:"Listen",i:"“Newscast” (BBC) on the politics of Brexit."},{t:"Premium",i:"The UK in a Changing Europe — the specialist source."}],
-  compare:"Compare with other EU members’ Eurosceptic movements, and with referendums as a tool (Scotland, 2014)."},
-
- monarchy:{name:"The monarchy",ill:"monarchy",chapter:"Power & politics",
-  docType:"Photograph · a state coronation",
-  observeQ:"What does this ceremony reveal about power in modern Britain?",
-  observeNotice:["Immense pageantry around an office with almost no real power.","Tradition and continuity staged for a national, televised audience."],
-  sentence:"The crown reigns but does not rule — a powerless institution at the symbolic heart of the state.",
-  facts5:["A constitutional monarchy: the monarch “reigns but does not rule”.","Head of state — not head of government (that is the PM).","The role is symbolic, ceremonial and unifying.","The monarch stays politically neutral.","Charles III since 2022."],
-  debate:"Is an unelected, hereditary head of state compatible with a modern democracy?",
-  paradox:"Powerful in symbolism precisely because it is powerless in fact.",
-  whyMatter:"The monarchy raises core questions of democracy, tradition, national identity and the Commonwealth — and frames the republic debate across the realms.",
-  whyTags:["democracy","tradition","identity","the Commonwealth"],
-  learnMore:"Defenders point to stability, soft power and a neutral figure above party politics; critics see deference, class and an unelected office. The death of Elizabeth II in 2022 revived these debates, including in Australia, Canada and New Zealand.",
-  connect:[{to:"Constitution & Parliament",why:"The monarch’s powers are exercised on the advice of an elected government — the heart of constitutional monarchy."},{to:"Social class",why:"The crown sits atop a hierarchy critics link to deference and inherited privilege."},{to:"The Commonwealth",why:"The monarch is head of state of several other realms now debating republics."},{to:"Identity",why:"For many, the monarchy embodies a shared, continuous national story."},{to:"Soft power",why:"Royal ceremony is one of Britain’s most recognisable global exports."}],
-  discuss:{easy:["What is the role of the monarch?","Who is head of government in the UK?","What does “reigns but does not rule” mean?"],
-    inter:["Why has the monarchy survived in a modern democracy?","What gives the monarchy its soft power?","Why must the monarch stay politically neutral?"],
-    adv:["Is the monarchy a democratic anomaly or a democratic asset?","Can a hereditary institution remain legitimate in a democracy?","Does the monarchy unite or divide modern Britain?"]},
-  problematics:[{label:"A tension",q:"How can an unelected, hereditary office remain legitimate at the heart of a democracy?"},{label:"A paradox",q:"Why is the monarchy’s very lack of power the secret of its survival?"},{label:"A comparison",q:"What does Britain’s attachment to its crown reveal about its relationship with tradition and change?"}],
-  central:{q:"Is the monarchy a democratic anomaly or a democratic asset?",plan:["Anomaly: unelected, hereditary, a symbol of class and deference.","Asset: a neutral head of state, stability and soft power.","Resolution: it survives precisely by being powerless — a symbol, not a sovereign."],hook:"An unelected crown at the heart of a democracy: contradiction, or clever design?"},
-  res:[{t:"Watch",i:"Documentaries on the 2022/23 accession and coronation."},{t:"Read",i:"The Guardian (republican) vs The Telegraph (royalist)."},{t:"Listen",i:"History podcasts on the 1688 settlement."},{t:"Premium",i:"The Constitution Unit (UCL) on the Crown’s powers."}],
-  compare:"Compare with Australia, Canada and New Zealand — the other realms and their republic debates."},
-
- nhs:{name:"The NHS",ill:"nhs",chapter:"British society",
-  docType:"Photograph · an NHS hospital ward",
-  observeQ:"What does the NHS reveal about British values?",
-  observeNotice:["Care given without a bill at the bedside.","An everyday institution that doubles as a national symbol."],
-  sentence:"The NHS is less a health service than a national institution — free at the point of use, and permanently strained.",
-  facts5:["Founded in 1948.","Free at the point of use; funded through taxation.","A symbol of fairness and national identity.","Under chronic strain: ageing, costs, waiting lists, strikes.","Politically very risky to reform."],
-  debate:"Can a universal, tax-funded system stay sustainable — and can it be reformed at all?",
-  paradox:"So loved it is both protected from cuts and shielded from reform.",
-  whyMatter:"The NHS crystallises debates on the welfare state, the role of the state, solidarity and public spending — and a direct contrast with the US.",
-  whyTags:["the welfare state","solidarity","public spending","the role of the state"],
-  learnMore:"Born of the post-war settlement, the NHS was celebrated even at the 2012 Olympics. Today an ageing population, rising costs and staff strikes test it; debate runs between defending the founding principle and arguing for reform or more private provision.",
-  connect:[{to:"The welfare state",why:"The NHS is the most visible pillar of Britain’s post-war social contract."},{to:"Public spending",why:"Funding the NHS shapes every budget and tax debate."},{to:"Immigration",why:"The NHS depends heavily on workers who came from abroad, from Windrush onwards."},{to:"Social class",why:"Universal care was meant to guarantee fairness regardless of wealth."},{to:"Identity",why:"Britons routinely name the NHS among the things they are proudest of."}],
-  discuss:{easy:["What is the NHS?","When and why was it created?","How is it funded?"],
-    inter:["Why is the NHS so central to British identity?","What challenges does it currently face?","Why is reform so politically difficult?"],
-    adv:["Can universal healthcare remain sustainable?","Does the NHS represent solidarity or inefficiency?","Is the NHS a model for other countries?"]},
-  problematics:[{label:"A tension",q:"How can a system be both Britain’s proudest achievement and one of its most troubled?"},{label:"A paradox",q:"Why does the public’s love for the NHS make it harder, not easier, to save?"},{label:"A comparison",q:"What does the NHS reveal about how Britain balances solidarity and cost?"}],
-  central:{q:"Is the NHS a sustainable model or a national sacred cow?",plan:["Model: equity, low administrative cost, true universalism.","Sacred cow: strain, waiting lists and a reform taboo.","Resolution: its symbolic power both protects and paralyses it."],hook:"Britain may love the NHS too much to fund it properly — or to reform it."},
-  res:[{t:"Watch",i:"BBC documentaries on the NHS at its anniversaries."},{t:"Read",i:"The King’s Fund analysis; broadsheet health coverage."},{t:"Listen",i:"Podcasts on the 1948 founding and Bevan."},{t:"Premium",i:"The King’s Fund & the Nuffield Trust."}],
-  compare:"Compare with the US (private), France & Germany (insurance) and Canada (Medicare)."},
-
- devolution:{name:"Devolution & the Union",ill:"devolution",chapter:"Britain & the world",
-  docType:"Map · England, Scotland, Wales and Northern Ireland",
-  observeQ:"What does this map reveal about the unity of the United Kingdom?",
-  observeNotice:["Four nations, very different in size and weight.","One has no parliament of its own — England."],
-  sentence:"The UK handed power to its nations to hold the Union together — and may have loosened it instead.",
-  facts5:["Since 1998: a Scottish Parliament, a Welsh Senedd, an NI Assembly.","Asymmetric — England has no parliament of its own.","Scotland’s 2014 independence vote: 55% No.","Brexit set Scotland and NI against Westminster.","Westminster remains, in theory, sovereign."],
-  debate:"Did devolution save the Union by modernising it, or set it on the road to break-up?",
-  paradox:"Powers devolved to save the Union became a platform for breaking it apart.",
-  whyMatter:"Devolution is central to debates on national identity, federalism, nationalism and the very survival of the UK.",
-  whyTags:["the Union","nationalism","federalism","identity"],
-  learnMore:"Devolution is asymmetric: Scotland and Wales run health and education while England does not have its own parliament. It eased some nationalist pressure but also gave the nations institutions and confidence — fuelling independence movements, above all in Scotland.",
-  connect:[{to:"Brexit",why:"Scotland and NI voted Remain, sharpening the case that the Union no longer serves them."},{to:"Northern Ireland",why:"The Good Friday Agreement built power-sharing on the principle of consent."},{to:"Identity",why:"Devolution gave Scottish, Welsh and Irish identities formal political expression."},{to:"The monarchy",why:"The Crown is one of the threads still binding the four nations together."},{to:"Nationalism",why:"The SNP turned devolved power into a platform for independence."}],
-  discuss:{easy:["What is devolution?","Which nations have their own assembly or parliament?","What did Scotland vote in 2014?"],
-    inter:["Why has devolution changed British politics?","Why is the system called asymmetric?","How did Brexit affect the Union?"],
-    adv:["Has devolution strengthened or weakened the unity of the UK?","Is the break-up of the UK now inevitable?","Should England have its own parliament?"]},
-  problematics:[{label:"A tension",q:"How can sharing power with the nations both hold the Union together and pull it apart?"},{label:"A paradox",q:"Why did a reform designed to defuse nationalism end up empowering it?"},{label:"A comparison",q:"What does devolution reveal about how a multinational state manages its differences?"}],
-  central:{q:"Has devolution strengthened or weakened the unity of the United Kingdom?",plan:["Strengthened: a release valve, modern self-government, peace in NI.","Weakened: institutions that gave independence movements a platform.","Resolution: it preserved the Union by transforming it — perhaps permanently."],hook:"The UK devolved power to save the Union; the real question is whether it loosened it instead."},
-  res:[{t:"Watch",i:"Explainers on the 2014 referendum and the Senedd."},{t:"Read",i:"BBC Scotland / The Herald vs London papers."},{t:"Listen",i:"Podcasts on the Good Friday Agreement at 25."},{t:"Premium",i:"The Institute for Government on the state of the Union."}],
-  compare:"Compare with Canada (Quebec) and Spain (Catalonia)."}
-};
-
-/* ---------- country timeline (mini-modules) ---------- */
-const UK_TL=[
- {y:"1215",t:"Magna Carta",ill:"generic",lines:"Rebel barons force King John to accept that the crown is not above the law.",why:"It is still invoked as the origin of the rule of law and limits on power.",q:"Why do we still talk about a 13th-century charter today?",links:["the monarchy","the constitution"]},
- {y:"1707",t:"Act of Union",ill:"devolution",lines:"England and Scotland are joined into a single kingdom of Great Britain.",why:"It created the very Union that devolution and Scottish independence now question.",q:"Was the Union a partnership or an absorption?",links:["devolution","Scotland"]},
- {y:"1948",t:"NHS founded · Windrush",ill:"nhs",lines:"The NHS opens, and the Empire Windrush brings Caribbean migrants to rebuild Britain.",why:"Two pillars of modern Britain — universal healthcare and multicultural society — begin together.",q:"Why are 1948 and ‘British identity’ so closely linked?",links:["the NHS","immigration"]},
- {y:"1973",t:"Joins the EEC",ill:"brexit",lines:"Britain enters the European project — late, and always an awkward partner.",why:"It set up the membership that Brexit would later undo.",q:"Why was Britain always a reluctant European?",links:["Brexit","sovereignty"]},
- {y:"2016",t:"Brexit referendum",ill:"brexit",lines:"52% vote to leave the EU on a 72% turnout, splitting the four nations.",why:"It reopened the Union question and reshaped every party.",q:"Did the result reflect a united nation or a divided one?",links:["Brexit","devolution"]},
- {y:"2020",t:"Leaves the EU",ill:"brexit",lines:"The UK formally exits; the transition period ends in December.",why:"It began the long, unfinished work of defining life outside the EU.",q:"What does ‘taking back control’ mean in practice?",links:["Brexit","the economy"]}
-];
-
-/* ---------- nations ---------- */
-const NATIONS=[
- {nm:"England",fl:"🏴󠁧󠁢󠁥󠁮󠁧󠁿",acc:"#1F3A5F",facts:["By far the most populous nation.","Has no parliament of its own — the heart of the ‘asymmetry’.","Westminster doubles as England’s legislature."],debate:"Should England have its own parliament?",q:"Does English identity get lost inside ‘British’ identity?",links:["devolution","identity"]},
- {nm:"Scotland",fl:"🏴󠁧󠁢󠁳󠁣󠁴󠁿",acc:"#6A4C93",facts:["Has its own Parliament (Holyrood) since 1999.","Voted 55% No to independence in 2014.","Voted Remain in 2016 — fuelling the independence case."],debate:"Will Scotland leave the UK?",q:"Has Brexit made Scottish independence more likely?",links:["Brexit","devolution"]},
- {nm:"Wales",fl:"🏴󠁧󠁢󠁷󠁬󠁳󠁿",acc:"#3F7A4B",facts:["Has the Senedd, with growing powers.","A strong language-revival movement (Welsh).","Historically closely tied to England."],debate:"How far should Welsh devolution go?",q:"Can a minority language reshape a national identity?",links:["devolution","identity"]},
- {nm:"Northern Ireland",fl:"🇬🇧",acc:"#B23A2E",facts:["Power-sharing Assembly from the 1998 Good Friday Agreement.","The only UK nation with a land border with the EU.","Brexit reignited tensions over that border."],debate:"Could there be a united Ireland?",q:"Why is the Irish border central to Brexit?",links:["Brexit","Ireland"]}
-];
-
-/* ---------- state ---------- */
-const state={topics:{bigpicture:"done",nations:"done",timeline:"mastered",monarchy:"done"}};
-const RANKS=[[0,"Explorer"],[2,"Analyst"],[4,"Commentator"],[7,"Colle Ready"],[10,"Topic Master"]];
-
-/* ---------- a11y ---------- */
-let sizeIx=0;const SIZES=[18,20.5,23];
-function setSize(d){if(d===0)sizeIx=0;else sizeIx=Math.max(0,Math.min(2,sizeIx+d));document.documentElement.style.fontSize=SIZES[sizeIx]+"px";}
-function toggleReading(){const on=document.body.classList.toggle('reading');const b=document.getElementById('readBtn');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);}
-
-/* ---------- routing ---------- */
-function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById('view-'+v).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
-function rev(id){document.getElementById(id).classList.toggle('open');}
-function nm(id){return TOPICS[id]?.name||STUBS[id]||id;}
-
-/* ---------- ranks / progress / badges ---------- */
-function studiedCount(){return Object.keys(state.topics).length;}
-function updateMeta(){
-  const total=Object.keys(STUBS).length+Object.keys(TOPICS).length; // 8 stubs + 4 = 12
-  const seen=studiedCount();
-  document.getElementById('cpBar').style.width=Math.round(seen/total*100)+"%";
-  document.getElementById('cpCount').textContent=`${seen} / ${total} topics explored`;
-  let r=RANKS[0],next=null;
-  for(let i=0;i<RANKS.length;i++){if(seen>=RANKS[i][0]){r=RANKS[i];next=RANKS[i+1]||null;}}
-  document.getElementById('rankName').textContent=r[1];
-  const lo=r[0],hi=next?next[0]:lo+1,frac=next?Math.min(1,(seen-lo)/(hi-lo)):1;
-  document.getElementById('rankBar').style.width=Math.round(frac*100)+"%";
-  // badges (mastered topics)
-  const b=document.getElementById('badges');b.innerHTML="";
-  Object.keys(state.topics).filter(id=>state.topics[id]==="mastered").forEach(id=>{
-    b.innerHTML+=`<span class="badge"><span class="s" style="background:${ACC[id]||'#9C6B22'}"></span>${nm(id)} · Expert</span>`;
-  });
-}
-
-/* ---------- hub tree ---------- */
-function renderTree(){
-  const host=document.getElementById('tree');host.innerHTML="";
-  CHAPTERS.forEach((ch,ci)=>{
-    const total=ch.topics.length,done=ch.topics.filter(t=>state.topics[t]).length,pct=Math.round(done/total*100);
-    const el=document.createElement('div');el.className="chap";
-    el.innerHTML=`<button class="chap-btn" aria-expanded="false" onclick="toggleChap(${ci})"><span class="num">${ch.n}</span><span class="ct"><span class="ctitle">${ch.title}</span><span class="csub">${ch.sub}</span></span><span class="meter"><span class="bar"><i style="width:${pct}%"></i></span></span><span class="chev">▾</span></button><div class="chap-body"><div>${ch.topics.map(tileHTML).join("")}</div></div>`;
-    host.appendChild(el);
-  });
-  updateMeta();
-}
-function toggleChap(i){document.querySelectorAll('.chap')[i].classList.toggle('open');}
-function tileHTML(id){
-  const st=state.topics[id]||"",detailed=!!TOPICS[id],col=ACC[id]||"#9C6B22";
-  const cls=(st==="mastered"?"mastered":st?"done":"")+(detailed?"":" soon");
-  const ic=st==="mastered"?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>':st?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>':"";
-  return `<button class="topic ${cls}" onclick="${detailed?`openTopic('${id}',0)`:`soon('${id}')`}"><span class="swatch" style="background:${col}"></span><span class="thumb">${illFor(TOPICS[id]?.ill)}</span><span class="tn"><span class="nm">${nm(id)}</span><span class="ds">${detailed?"6-step exploration":"coming soon"}</span></span><span class="st">${ic}</span></button>`;
-}
-function soon(id){alert(`“${nm(id)}” isn’t wired in this prototype. In the real build it opens the same 6-step exploration, generated from its dossier card.\n\nTry Brexit, The monarchy, Devolution or The NHS.`);}
-
-document.getElementById('ill-panic').innerHTML=ILL.clock;
-document.getElementById('ill-guided').innerHTML=ILL.isles;
-document.getElementById('ill-train').innerHTML=ILL.speak;
-
-/* ---------- today's question ---------- */
-function setToday(){
-  const pool=[["brexit","adv",0],["monarchy","adv",0],["nhs","adv",0],["devolution","adv",0]];
-  const pick=pool[new Date().getDate()%pool.length];const t=TOPICS[pick[0]];
-  document.getElementById('todayQ').textContent=t.central.q;
-  document.getElementById('todayA').innerHTML=t.central.plan.map((p,i)=>`<b>${['I','II','III'][i]}.</b> ${p}`).join("<br>");
-}
-
-/* ---------- topic flow ---------- */
-let cur={id:null,step:0,max:0};
-function setAccent(id){const c=ACC[id]||"#9C6B22";const v=document.getElementById('view-topic');v.style.setProperty('--acc',c);v.style.setProperty('--accs',c+"18");}
-function openTopic(id,step){if(!TOPICS[id]){soon(id);return;}cur={id,step:step||0,max:step||0};setAccent(id);renderStep();go('topic');}
-function renderDots(){
-  const host=document.getElementById('dots');host.innerHTML="";
-  STEPS.forEach((s,i)=>{const locked=i>cur.max;const cls="d"+(i===cur.step?" active":"")+(i<cur.max?" cleared":"")+(locked?" locked":"");const b=document.createElement('button');b.className=cls;b.innerHTML=`<span class="ix">${i<cur.max?'✓':i+1}</span>${s.l}`;b.disabled=locked;if(!locked)b.onclick=()=>{cur.step=i;renderStep();};host.appendChild(b);});
-}
-function renderStep(){
-  const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
-  if(k==="observe"){
-    h=`<div class="eyebrow">Step 1 · Observe</div><div class="illo">${illFor(t.ill)}</div><div class="cap">${t.docType}</div><p class="qbig">${t.observeQ}</p>
-      <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
-  }else if(k==="understand"){
-    h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
-      <p class="sentence" style="margin-top:14px">${t.sentence}</p>
-      <ul class="facts">${t.facts5.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul>
-      <div class="pill-line"><div class="keybox"><div class="kt">The central debate</div><div class="kc">${t.debate}</div></div><div class="keybox"><div class="kt">The paradox</div><div class="kc">${t.paradox}</div></div></div>
-      <div class="reveal" id="rbW"><button onclick="rev('rbW')">Why does this matter? <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.whyMatter}</p><div class="tags">${t.whyTags.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div></div></div>
-      <div class="reveal" id="rbM"><button onclick="rev('rbM')">Read a little more <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.learnMore}</p></div></div></div>`;
-  }else if(k==="connect"){
-    h=`<div class="eyebrow">Step 3 · Connect</div><h2 style="font-size:1.2rem">Build bridges</h2><p class="connect-intro lede">The best answers link themes. Tap a connected topic to see how it relates to ${t.name}.</p>
-      <div class="cchips">${t.connect.map((c,i)=>`<button class="cchip" id="cc${i}" onclick="connSel(${i})">${c.to}</button>`).join("")}</div>
-      <div class="conn-detail" id="connD"><div class="ct" id="connT"></div><div id="connW"></div></div>`;
-  }else if(k==="discuss"){
-    const blk=(l,lab)=>`<div class="levelblock" data-l="${l}"><div class="lh"><span class="d"></span>${lab}</div><ul>${t.discuss[l].map(q=>`<li>${q}</li>`).join("")}</ul></div>`;
-    h=`<div class="eyebrow">Step 4 · Discuss · Levels of Analysis</div><p class="lede" style="margin:6px 0 14px">Think through the topic, from facts to problematisation. Take any question into <b>Apply</b> to build an answer.</p>${blk('easy','Easy · the facts')}${blk('inter','Intermediate · analysis')}${blk('adv','Advanced · problematisation')}`;
-  }else if(k==="apply"){
-    h=`<div class="eyebrow">Step 5 · Apply · colle workshop</div>
-      <div class="tabs" style="margin-top:8px"><button class="tabb on" id="ap-1" onclick="applyTab(1)">Build a problematic</button><button class="tabb" id="ap-2" onclick="applyTab(2)">Build a plan</button><button class="tabb" id="ap-3" onclick="applyTab(3)">Answer a question</button></div>
-      <div id="apBody"></div>`;
-  }else if(k==="further"){
-    h=`<div class="eyebrow">Step 6 · Go Further</div><h2 style="font-size:1.2rem">Take it deeper</h2><div class="res">${t.res.map(r=>`<div class="res-c"><div class="rt">${r.t}</div><div class="ri">${r.i}</div></div>`).join("")}</div><div class="compare"><div class="rt">Connect & contrast</div><p>${t.compare} <b>Paradox —</b> ${t.paradox}</p></div>`;
-  }
-  s.innerHTML=h;
-  if(k==="apply")applyTab(1);
-  document.getElementById('ptop').style.width=Math.round((cur.step+1)/6*100)+"%";
-  document.getElementById('plab').textContent=`Step ${cur.step+1} of 6 · ${STEPS[cur.step].l}`;
-  document.getElementById('prevBtn').style.visibility=cur.step===0?"hidden":"visible";
-  document.getElementById('nextBtn').innerHTML=cur.step===5?'Finish ✓':'Next <span class="ar">→</span>';
-  renderDots();
-}
-function connSel(i){
-  const c=TOPICS[cur.id].connect[i];
-  document.querySelectorAll('.cchip').forEach((e,j)=>e.classList.toggle('on',j===i));
-  document.getElementById('connT').textContent=`${TOPICS[cur.id].name} ↔ ${c.to}`;
-  document.getElementById('connW').textContent=c.why;
-  document.getElementById('connD').classList.add('show');
-}
-function applyTab(n){
-  [1,2,3].forEach(i=>document.getElementById('ap-'+i).classList.toggle('on',i===n));
-  const t=TOPICS[cur.id],b=document.getElementById('apBody');
-  if(n===1){
-    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">A good problematic names a real tension — never “to what extent…”. Pick an angle:</p>
-      ${t.problematics.map((p,i)=>`<button class="opt" onclick="showProb(${i})"><span><b>${p.label}</b></span><span>→</span></button>`).join("")}
-      <div class="result" id="probR" style="display:none"></div>`;
-  }else if(n===2){
-    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">For the question:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
-      <div class="reveal" id="planR"><button onclick="rev('planR')">Reveal a model 3-part plan <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol></div></div></div>`;
-  }else{
-    b.innerHTML=`<p class="lede" style="margin:6px 0 10px">Answer in your own words, then compare:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
-      <textarea class="notes" placeholder="Your answer…"></textarea>
-      <div class="reveal" id="ansR" style="margin-top:12px"><button onclick="rev('ansR')">Reveal a model answer <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p></div></div></div>`;
-  }
-}
-function showProb(i){const p=TOPICS[cur.id].problematics[i];const r=document.getElementById('probR');r.style.display="block";r.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">${p.label} → a possible problematic</div><p class="qbig" style="font-size:1.12rem;margin:0">${p.q}</p>`;}
-function stepBy(d){
-  if(cur.step===5&&d>0){const was=state.topics[cur.id];if(was!=="mastered")state.topics[cur.id]="done";renderTree();toast(`${TOPICS[cur.id].name} explored`);go('hub');return;}
-  cur.step=Math.max(0,Math.min(5,cur.step+d));cur.max=Math.max(cur.max,cur.step);renderStep();window.scrollTo({top:0,behavior:'smooth'});
-}
-
-/* ---------- toast ---------- */
-let toT;function toast(msg){const el=document.getElementById('toast');document.getElementById('toastT').textContent=msg;el.classList.add('show');clearTimeout(toT);toT=setTimeout(()=>el.classList.remove('show'),2600);}
-
-/* ---------- panic ---------- */
-const STAT={brexit:"52% to 48% — the 2016 margin.",monarchy:"A 70-year reign (Elizabeth II) anchored the institution.",nhs:"Founded 1948; funded almost entirely from taxation.",devolution:"2014: 55% of Scots voted No to independence."};
-function openPanic(){
-  const host=document.getElementById('panicList');host.innerHTML="";
-  Object.keys(TOPICS).forEach(id=>{const t=TOPICS[id];host.innerHTML+=`<div class="panel panic-c" style="--acc:${ACC[id]};--accs:${ACC[id]}18"><h3>${t.name}</h3><div class="one"><b>Say this</b>${t.sentence}</div><div class="one"><b>Paradox</b>${t.paradox}</div><div class="one"><b>Statistic</b>${STAT[id]}</div><div class="one"><b>You might be asked</b>${t.central.q}</div><div class="one"><b>Opening</b>${t.central.hook}</div></div>`;});
-  go('panic');
-}
-
-/* ---------- timeline view ---------- */
-function openTimeline(){
-  const host=document.getElementById('tlList');host.innerHTML="";
-  UK_TL.forEach((n,i)=>{host.innerHTML+=`<div class="tlcard"><button class="tlcard-h" onclick="tlToggle(${i})"><span class="yr">${n.y}</span><span class="ti">${n.t}</span><span class="chev">▾</span></button><div class="tlcard-b"><div><div class="tlcard-in"><div class="illo" style="max-width:280px">${illFor(n.ill)}</div><p class="lede">${n.lines}</p><div class="keybox" style="margin-top:12px"><div class="kt">Why it still matters</div><div class="kc">${n.why}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
-  go('timeline');
-}
-function tlToggle(i){document.querySelectorAll('#tlList .tlcard')[i].classList.toggle('open');}
-
-/* ---------- nations view ---------- */
-function openNations(){
-  const host=document.getElementById('natList');host.innerHTML="";
-  NATIONS.forEach((n,i)=>{host.innerHTML+=`<div class="nation" style="--acc:${n.acc}"><button class="nation-h" onclick="natToggle(${i})"><span class="fl">${n.fl}</span><span class="nm">${n.nm}</span><span class="chev">▾</span></button><div class="nation-b"><div><div class="nation-in"><ul class="facts">${n.facts.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul><div class="keybox" style="margin-top:12px"><div class="kt">The key debate</div><div class="kc">${n.debate}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
-  go('nations');
-}
-function natToggle(i){document.querySelectorAll('#natList .nation')[i].classList.toggle('open');}
-
-/* ---------- trainer ---------- */
-let tr={topic:"brexit",level:"easy",t:30,timer:null,qIx:0};
-function openTrainer(){const s=document.getElementById('trTopic');s.innerHTML=Object.keys(TOPICS).map(id=>`<option value="${id}">${TOPICS[id].name}</option>`).join("");s.value=tr.topic;trTab('colle');trNew();go('trainer');}
-function trTab(which){
-  document.getElementById('tab-colle').classList.toggle('on',which==='colle');
-  document.getElementById('tab-det').classList.toggle('on',which==='det');
-  document.getElementById('trColle').style.display=which==='colle'?"":"none";
-  document.getElementById('trDet').style.display=which==='det'?"":"none";
-  if(which==='det')renderDet();
-}
-function trLevel(l){tr.level=l;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===l));trNew();}
-function trRandom(){const ids=Object.keys(TOPICS),lv=['easy','inter','adv'];tr.topic=ids[Math.floor(Math.random()*ids.length)];tr.level=lv[Math.floor(Math.random()*3)];document.getElementById('trTopic').value=tr.topic;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===tr.level));trNew();toast('🎲 Random colle');}
-function trNew(){tr.topic=document.getElementById('trTopic').value;const arr=TOPICS[tr.topic].discuss[tr.level];tr.qIx=Math.floor(Math.random()*arr.length);const lab={easy:"🟢 Easy",inter:"🟡 Intermediate",adv:"🔴 Advanced"};document.getElementById('trLab').textContent=lab[tr.level]+" · "+TOPICS[tr.topic].name;document.getElementById('trQ').textContent=arr[tr.qIx];document.getElementById('trModel').style.display="none";document.getElementById('trReveal').style.display=tr.level==='adv'?"":"none";document.getElementById('trNotes').value="";trReset();}
-function trRevealModel(){const t=TOPICS[tr.topic];const m=document.getElementById('trModel');m.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">A model approach</div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p>`;m.style.display="block";document.getElementById('trReveal').style.display="none";trStop();}
-function trTimerToggle(){tr.timer?trStop():trStart();}
-function trStart(){document.getElementById('trTimerBtn').textContent="Pause";document.getElementById('trTimer').classList.add('run');tr.timer=setInterval(()=>{tr.t--;trPaint();if(tr.t<=0)trStop();},1000);}
-function trStop(){clearInterval(tr.timer);tr.timer=null;document.getElementById('trTimerBtn').textContent="Start timer";document.getElementById('trTimer').classList.remove('run');}
-function trReset(){trStop();tr.t=30;trPaint();}
-function trPaint(){const m=Math.floor(tr.t/60),s=tr.t%60;document.getElementById('trTimer').textContent=`${m}:${String(s).padStart(2,'0')}`;}
-
-/* ---------- article detective ---------- */
-const DET=[
- {head:"NHS waiting lists rise to a new high",opts:[["The NHS",true],["The welfare state",true],["Public spending",true],["An ageing population",true],["The monarchy",false]]},
- {head:"Scotland renews its call for an independence vote",opts:[["Devolution",true],["The Union",true],["Brexit",true],["Nationalism",true],["The NHS",false]]},
- {head:"Channel small-boat crossings rise again",opts:[["Immigration",true],["Sovereignty",true],["Asylum",true],["Brexit",true],["The monarchy",false]]}
-];
-let detIx=0,detPick=new Set();
-function renderDet(){
-  detIx=Math.floor(Math.random()*DET.length);detPick=new Set();
-  const d=DET[detIx];
-  document.getElementById('trDet').innerHTML=`<div class="stage"><div class="s-body"><div class="eyebrow">Article detective</div><p class="qbig">“${d.head}”</p><p class="lede" style="margin:0 0 12px">Which themes would you bring into a colle? Tap all that apply.</p>${d.opts.map((o,i)=>`<button class="opt" id="det${i}" onclick="detTog(${i})"><span>${o[0]}</span><span class="tag2"></span></button>`).join("")}<div class="result" id="detR" style="display:none"></div></div><div class="s-foot"><button class="btn btn-ghost" onclick="renderDet()">New headline</button><span class="sp"></span><button class="btn btn-primary" onclick="detCheck()">Check</button></div></div>`;
-}
-function detTog(i){const el=document.getElementById('det'+i);if(detPick.has(i)){detPick.delete(i);el.classList.remove('sel');}else{detPick.add(i);el.classList.add('sel');}}
-function detCheck(){const d=DET[detIx];d.opts.forEach((o,i)=>{const el=document.getElementById('det'+i);el.style.pointerEvents="none";if(o[1]){el.style.borderColor="var(--g)";el.style.background="#eaf3ea";}else if(detPick.has(i)){el.style.borderColor="var(--r)";el.style.background="#f7ece8";}});const right=d.opts.filter(o=>o[1]).map(o=>o[0]);document.getElementById('detR').style.display="block";document.getElementById('detR').innerHTML=`<div class="eyebrow" style="margin-bottom:4px">The connected themes</div>${right.join(" · ")}. <span style="color:var(--slate)">Naming these links is exactly the reflex examiners reward.</span>`;}
-
-/* ---------- drill ---------- */
-const DRILL=[{f:"the Northern Ireland Protocol",b:"The post-Brexit arrangement keeping goods checks in the Irish Sea, to avoid a hard land border in Ireland."},{f:"“reigns but does not rule”",b:"The formula for a constitutional monarchy: head of state with no real political power."},{f:"free at the point of use",b:"The precise way to describe the NHS — tax-funded, not literally ‘free’."},{f:"asymmetric devolution",b:"Powers given to Scotland, Wales and NI since 1998 — England has no parliament of its own."}];
-let di=0;
-function openDrill(){di=0;showCard();document.getElementById('scrim').classList.add('open');}
-function closeDrill(){document.getElementById('scrim').classList.remove('open');}
-function showCard(){const c=DRILL[di];document.getElementById('dMeta').textContent=`Card ${di+1} of ${DRILL.length}`;document.getElementById('dFront').textContent=c.f;document.getElementById('dBack').textContent=c.b;document.getElementById('flip').classList.remove('flipped');document.getElementById('dHint').style.display="block";document.getElementById('dGrade').style.display="none";}
-function flip(){document.getElementById('flip').classList.add('flipped');document.getElementById('dHint').style.display="none";document.getElementById('dGrade').style.display="flex";}
-function grade(){di++;if(di>=DRILL.length){closeDrill();toast('Drill complete');return;}showCard();}
-document.getElementById('scrim').addEventListener('click',e=>{if(e.target.id==='scrim')closeDrill();});
-document.getElementById('flip').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrill();});
-
-/* init */
-renderTree();setToday();
-</script>
+<footer>English Colles in Lyon — Atlas de civilisation CPGE</footer>
 </body>
 </html>

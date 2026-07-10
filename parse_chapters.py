@@ -85,7 +85,7 @@ def parse_file(path):
     with open(path, encoding="utf-8") as f:
         p.feed(f.read())
     # Métadonnées depuis le nom de fichier : cpge_vocab_part1_chapter1_political_systems.html
-    m = re.search(r"part(\d+)_chapter(\d+)_(.+)\.html$", os.path.basename(path))
+    m = re.search(r"part(\d+)_chapter(\d+)_(.+?)(?:_premium)?\.html$", os.path.basename(path))
     part, chap, slug = (int(m.group(1)), int(m.group(2)), m.group(3)) if m else (0, 0, "")
     title = slug.replace("_", " ").title() if slug else p.title
     n = sum(len(s["entries"]) for s in p.sections)

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colle Atlas — Canada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15302A;--ink-soft:#33473F;--slate:#566A61;
+    --paper:#EFEEE6;--card:#FBFBF6;--card-2:#F2F1E8;--line:#D6D8CC;--line-2:#BFC3B5;
+    --brass:#9C6B22;--brass-soft:#C49A53;
+    --g:#3F7A4B;--a:#A86E18;--r:#A6432B;
+    --acc:#9C6B22;--accs:#f2ece1;       /* per-theme accent (set in JS) */
+    --radius:16px;--shadow:0 1px 2px rgba(21,48,42,.05),0 10px 30px rgba(21,48,42,.08);--tap:48px;
+    font-size:18px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:1rem;line-height:1.6;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+  body.reading{letter-spacing:.05em;word-spacing:.16em;line-height:1.9}
+  body.reading p,body.reading li{text-align:left}
+  h1,h2,h3,h4{font-family:"Lexend",sans-serif;font-weight:600;line-height:1.2;margin:0}
+  p{margin:0}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  :focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:8px}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:99}
+  .skip:focus{left:12px}
+  .eyebrow{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
+
+  header.bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar-in{max-width:920px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .brand{display:flex;align-items:baseline;gap:8px;min-height:var(--tap);cursor:pointer}
+  .brand .mark{font-family:"Lexend";font-weight:700;font-size:1.05rem}.brand .sep{color:var(--line-2)}
+  .brand .country{font-weight:600;font-size:.9rem;color:var(--ink-soft)}
+  .bar-spacer{flex:1}
+  .rank{display:flex;flex-direction:column;gap:3px;padding:6px 12px;border:1px solid var(--line);background:var(--card);border-radius:12px;min-width:128px}
+  .rank .rl{font-family:"Lexend";font-size:.72rem;font-weight:600}.rank .rl b{color:var(--brass)}
+  .rank .rb{height:5px;border-radius:99px;background:var(--card-2);overflow:hidden}
+  .rank .rb i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
+  .a11y{display:flex;align-items:center;gap:6px}
+  .a11y button{min-width:42px;min-height:42px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-weight:700;font-size:.85rem;display:grid;place-items:center;padding:0 9px}
+  .a11y button:hover{background:var(--card-2)}.a11y button.on{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
+  .a11y .ttl{font-size:.62rem}.a11y .tlg{font-size:1.05rem}
+
+  .views{padding-bottom:48px}
+  .view{display:none;animation:fade .4s ease both}.view.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+
+  .hero{padding:28px 0 4px;text-align:center}
+  .hero h1{font-size:clamp(1.7rem,6vw,2.5rem);max-width:16ch;margin:6px auto 0}
+  .hero .sub{color:var(--slate);margin:12px auto 0;max-width:44ch}
+
+  .cprog{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;margin:20px 0 6px}
+  .cprog .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .cprog .nm{font-family:"Lexend";font-weight:600;font-size:1.05rem}
+  .cprog .ct{font-family:"Lexend";font-size:.82rem;color:var(--slate)}
+  .cprog .bar{height:12px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden;margin:12px 0 0}
+  .cprog .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft));transition:width .5s}
+  .badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-family:"Lexend";font-size:.74rem;font-weight:600;background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:99px;padding:5px 10px}
+  .badge .s{width:9px;height:9px;border-radius:50%}
+
+  .choices{display:grid;gap:14px;margin:18px 0 6px}
+  .choice{display:flex;align-items:center;gap:16px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-height:var(--tap);box-shadow:var(--shadow);transition:transform .12s,border-color .2s}
+  .choice:hover{transform:translateY(-2px);border-color:var(--line-2)}
+  .choice .ill{flex:none;width:62px;height:62px;border-radius:14px;overflow:hidden;background:var(--card-2)}.choice .ill svg{width:100%;height:100%;display:block}
+  .choice .tx{flex:1}.choice .time{font-family:"Lexend";font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+  .choice h3{font-size:1.18rem;margin:3px 0 2px}.choice p{font-size:.9rem;color:var(--slate)}
+  .choice .go{flex:none;color:var(--slate);font-size:1.5rem}
+
+  .today{background:var(--accs,#f2ece1);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0 6px}
+  .today .q{font-family:"Lexend";font-weight:500;font-size:1.05rem;margin:6px 0 10px}
+
+  .section{margin:28px 0 0}
+  .section-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .section-h h2{font-size:1.15rem}.section-h .mini{font-size:.78rem;color:var(--slate)}
+
+  .explore2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .ex{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;min-height:var(--tap);box-shadow:var(--shadow)}
+  .ex:hover{border-color:var(--line-2);background:var(--card-2)}
+  .ex .i{font-size:1.4rem}.ex .t{display:block;font-family:"Lexend";font-weight:600;font-size:.96rem}.ex .d{display:block;font-size:.76rem;color:var(--slate)}
+
+  .chap{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .chap-btn{width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:var(--tap);text-align:left}
+  .chap-btn:hover{background:var(--card-2)}
+  .chap .num{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:.9rem}
+  .chap .ct{flex:1}.chap .ct .ctitle{font-family:"Lexend";font-weight:600;font-size:1.02rem}.chap .ct .csub{font-size:.8rem;color:var(--slate);margin-top:2px}
+  .chap .meter{flex:none}.chap .meter .bar{width:64px;height:8px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}.chap .meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
+  .chap .chev{flex:none;color:var(--slate);transition:transform .3s;font-size:1.1rem}.chap.open .chev{transform:rotate(180deg)}
+  .chap-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.chap.open .chap-body{grid-template-rows:1fr}.chap-body>div{overflow:hidden}
+  .topic{width:100%;display:flex;align-items:center;gap:14px;padding:14px 18px;min-height:var(--tap);text-align:left;border-top:1px solid var(--line)}
+  .topic:hover{background:var(--card-2)}
+  .topic .swatch{flex:none;width:10px;height:10px;border-radius:50%}
+  .topic .thumb{flex:none;width:44px;height:44px;border-radius:11px;overflow:hidden;background:var(--card-2)}.topic .thumb svg{width:100%;height:100%}
+  .topic .tn{flex:1}.topic .tn .nm{font-weight:700;font-size:.98rem}.topic .tn .ds{font-size:.76rem;color:var(--slate)}
+  .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
+  .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
+  .topic.soon{opacity:.62}.topic.soon .ds{color:var(--brass)}
+
+  .foot{margin:30px 0 8px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+  .foot button{font-size:.85rem;font-weight:600;color:var(--ink-soft);min-height:var(--tap);padding:0 8px;text-decoration:underline;text-underline-offset:3px}
+  .note{max-width:760px;margin:6px auto 0;padding:0 18px}
+  .note .in{background:var(--card-2);border:1px dashed var(--line-2);border-radius:12px;padding:14px 16px;font-size:.82rem;color:var(--slate);line-height:1.6}.note b{color:var(--ink-soft)}
+
+  .back{min-height:var(--tap);display:inline-flex;align-items:center;gap:8px;color:var(--slate);font-weight:600;font-size:.9rem;margin-top:10px}.back:hover{color:var(--ink)}
+  .progress-top{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
+  .progress-top .bar{flex:1;height:10px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}
+  .progress-top .bar i{display:block;height:100%;background:var(--acc);transition:width .4s}
+  .progress-top .lab{font-family:"Lexend";font-size:.78rem;font-weight:600;color:var(--slate);white-space:nowrap}
+
+  .dots{display:flex;gap:7px;margin-bottom:16px;flex-wrap:wrap}
+  .dots .d{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.76rem;font-weight:600;color:var(--slate);min-height:40px}
+  .dots .d .ix{font-family:"Lexend";font-size:.7rem}
+  .dots .d.active{background:var(--ink);color:#F4F6EF;border-color:var(--ink)}
+  .dots .d.cleared{border-color:var(--acc);color:var(--acc)}
+  .dots .d.locked{opacity:.42}
+
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border-top:4px solid var(--acc)}
+  .s-body{padding:22px 22px 8px}.s-body h2{font-size:1.5rem;margin:4px 0 0;display:flex;align-items:center;gap:10px}
+  .s-body h2 .swatch{width:14px;height:14px;border-radius:50%;background:var(--acc);flex:none}
+  .lede{color:var(--ink-soft);font-size:1.02rem;margin-top:12px}.s-body p+p{margin-top:12px}
+  .illo{width:100%;border-radius:13px;overflow:hidden;background:linear-gradient(135deg,#e8ebe2,#dfe4d8);margin:8px 0 4px;border:1px solid var(--line)}.illo svg{width:100%;height:auto;display:block}
+  .cap{font-size:.76rem;color:var(--slate);margin-top:8px;text-align:center}
+  .qbig{font-family:"Lexend";font-weight:500;font-size:1.25rem;line-height:1.35;margin:16px 0}
+
+  .reveal{border:2px solid var(--line);border-radius:13px;overflow:hidden;margin-top:12px}
+  .reveal>button{width:100%;min-height:var(--tap);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:"Lexend";font-weight:600;font-size:.95rem;color:var(--ink)}
+  .reveal>button:hover{background:var(--card-2)}
+  .reveal .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.reveal.open .body{grid-template-rows:1fr}
+  .reveal .body>div{overflow:hidden;padding:0 16px}.reveal.open .body>div{padding:0 16px 16px}
+  .reveal .chev{transition:transform .3s;color:var(--slate)}.reveal.open .chev{transform:rotate(180deg)}
+
+  .sentence{font-family:"Lexend";font-weight:500;font-size:1.1rem;border-left:4px solid var(--acc);padding-left:14px;color:var(--ink)}
+  .facts{list-style:none;padding:0;margin:14px 0 0}.facts li{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.98rem}.facts li:last-child{border:none}.facts .b{color:var(--acc);font-weight:700;flex:none}
+  .pill-line{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}
+  .keybox{flex:1;min-width:220px;background:var(--card-2);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+  .keybox .kt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:4px}
+  .keybox .kc{font-size:.95rem;color:var(--ink-soft)}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .tag{font-family:"Lexend";font-weight:500;font-size:.8rem;background:var(--accs);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+
+  .connect-intro{margin:6px 0 14px}
+  .cchips{display:flex;flex-wrap:wrap;gap:9px}
+  .cchip{font-family:"Lexend";font-weight:600;font-size:.9rem;background:var(--card);border:2px solid var(--line);border-radius:11px;padding:11px 14px;min-height:44px}
+  .cchip:hover{border-color:var(--acc)}.cchip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+  .conn-detail{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:0 16px;max-height:0;overflow:hidden;opacity:0;transition:.3s}
+  .conn-detail.show{padding:15px 16px;max-height:300px;opacity:1}
+  .conn-detail .ct{font-family:"Lexend";font-weight:600;margin-bottom:5px}
+
+  .levelblock{border:1px solid var(--line);border-radius:13px;padding:15px 17px;margin-bottom:12px;background:var(--card)}
+  .levelblock .lh{display:flex;align-items:center;gap:9px;font-family:"Lexend";font-weight:600;margin-bottom:8px}
+  .levelblock .lh .d{width:12px;height:12px;border-radius:50%}
+  .levelblock[data-l=easy] .d{background:var(--g)}.levelblock[data-l=inter] .d{background:var(--a)}.levelblock[data-l=adv] .d{background:var(--r)}
+  .levelblock ul{margin:0;padding-left:20px}.levelblock li{padding:4px 0;font-size:.96rem}
+
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
+  .tabb{font-family:"Lexend";font-weight:600;font-size:.88rem;border:2px solid var(--line);background:var(--card);border-radius:99px;padding:9px 15px;min-height:44px;color:var(--slate)}
+  .tabb.on{background:var(--card-2);border-color:var(--line-2);color:var(--ink)}
+  .opt{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:14px 15px;margin-bottom:10px;font-size:.96rem;min-height:var(--tap)}
+  .opt:hover{border-color:var(--line-2);background:var(--card-2)}
+  .opt.sel{border-color:var(--acc);background:var(--accs)}
+  textarea.notes{width:100%;border:2px solid var(--line);border-radius:12px;padding:13px;font-family:inherit;font-size:1rem;resize:vertical;min-height:90px;background:var(--card-2);line-height:1.6}
+  textarea.notes:focus{outline:none;border-color:var(--acc);background:var(--card)}
+  .plan{list-style:none;padding:0;margin:8px 0 0;counter-reset:p}.plan li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}.plan li:last-child{border:none}
+  .plan li::before{counter-increment:p;content:counter(p,upper-roman);font-family:"Lexend";font-weight:700;color:var(--acc);flex:none;min-width:28px}
+  .hookline{background:var(--accs);border-left:4px solid var(--acc);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.96rem}.hookline b{font-family:"Lexend";color:var(--acc)}
+  .result{margin-top:14px;background:var(--card-2);border:1px solid var(--line);border-radius:12px;padding:15px}
+
+  .res{display:grid;gap:10px;margin-top:6px}
+  .res-c{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:var(--card-2)}
+  .res-c .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:5px}.res-c .ri{font-size:.92rem;color:var(--ink-soft)}
+  .compare{margin-top:14px;background:var(--accs);border:1px solid var(--line);border-radius:12px;padding:15px}.compare .rt{font-family:"Lexend";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}.compare p{font-size:.95rem;color:var(--ink-soft);margin-top:6px}
+
+  .s-foot{border-top:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;gap:10px}.s-foot .sp{flex:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Lexend";font-weight:600;font-size:.95rem;border-radius:12px;padding:0 20px;min-height:var(--tap);transition:transform .12s}
+  .btn-primary{background:var(--ink);color:#F4F6EF;box-shadow:var(--shadow)}.btn-primary:hover{transform:translateY(-1px)}
+  .btn-ghost{border:2px solid var(--line-2);color:var(--ink)}.btn-ghost:hover{background:var(--card-2)}
+  .btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px;border-left:4px solid var(--acc)}
+  .panic-c h3{font-family:"Lexend";font-size:1.08rem;display:flex;align-items:center;gap:10px}
+  .panic-c .one{margin-top:9px;font-size:.95rem}.panic-c .one b{font-family:"Lexend";color:var(--acc);font-weight:600;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}
+  .timerbox{text-align:center;margin:16px 0}.timer{font-family:"Lexend";font-weight:700;font-size:2.4rem}.timer.run{color:var(--brass)}.timer-l{font-size:.82rem;color:var(--slate)}
+  .seltopic{width:100%;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:13px;font-size:1rem;font-family:inherit;min-height:var(--tap);margin-bottom:12px}
+
+  .tlcard{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .tlcard-h{width:100%;display:flex;align-items:center;gap:14px;padding:15px 18px;min-height:var(--tap);text-align:left}
+  .tlcard-h:hover{background:var(--card-2)}
+  .tlcard .yr{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:1.05rem;flex:none;min-width:56px}
+  .tlcard .ti{flex:1;font-family:"Lexend";font-weight:600}
+  .tlcard .chev{color:var(--slate);transition:.3s}.tlcard.open .chev{transform:rotate(180deg)}
+  .tlcard-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}.tlcard.open .tlcard-b{grid-template-rows:1fr}.tlcard-b>div{overflow:hidden}
+  .tlcard-in{padding:0 18px 18px}
+
+  .nation{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow);border-left:4px solid var(--acc)}
+  .nation-h{width:100%;display:flex;align-items:center;gap:12px;padding:15px 18px;min-height:var(--tap);text-align:left}.nation-h:hover{background:var(--card-2)}
+  .nation .fl{font-size:1.4rem}.nation .nm{flex:1;font-family:"Lexend";font-weight:600}.nation .chev{color:var(--slate);transition:.3s}.nation.open .chev{transform:rotate(180deg)}
+  .nation-b{display:grid;grid-template-rows:0fr;transition:.35s}.nation.open .nation-b{grid-template-rows:1fr}.nation-b>div{overflow:hidden}.nation-in{padding:0 18px 18px}
+
+  .scrim{position:fixed;inset:0;background:rgba(18,28,24,.55);display:none;place-items:center;z-index:60;padding:16px}.scrim.open{display:grid}
+  .modal{background:var(--paper);border-radius:20px;max-width:440px;width:100%;box-shadow:var(--shadow);overflow:hidden}
+  .m-h{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.m-h h3{font-size:1.1rem}.m-h .x{font-size:1.7rem;color:var(--slate);min-width:var(--tap);min-height:var(--tap)}
+  .flash{padding:24px 20px;text-align:center}.flash .meta{font-family:"Lexend";font-size:.78rem;color:var(--slate);margin-bottom:14px}
+  .flip{background:var(--card);border:2px solid var(--line);border-radius:15px;min-height:150px;display:grid;place-items:center;padding:24px;cursor:pointer}
+  .flip .front{font-family:"Lexend";font-weight:600;font-size:1.25rem}.flip .back{font-size:1rem;color:var(--ink-soft);line-height:1.6;display:none}.flip.flipped .front{display:none}.flip.flipped .back{display:block}
+  .fhint{font-size:.8rem;color:var(--slate);margin-top:12px}
+  .grade{display:flex;gap:10px;margin-top:16px}.grade button{flex:1;border-radius:12px;padding:13px;font-family:"Lexend";font-weight:600;font-size:.9rem;border:2px solid var(--line);min-height:var(--tap)}
+  .grade .again{background:#f7ece8;border-color:#e3bdae;color:#8a3a22}.grade .good{background:#eaf3ea;border-color:#bcd9b2;color:#356030}.grade .iv{display:block;font-family:"Atkinson Hyperlegible";font-weight:400;font-size:.72rem;opacity:.85;margin-top:2px}
+
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120%);background:var(--ink);color:#F4F6EF;padding:13px 20px;border-radius:14px;font-family:"Lexend";font-weight:600;font-size:.9rem;box-shadow:var(--shadow);z-index:70;transition:transform .4s;display:flex;align-items:center;gap:10px}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  .toast .s{width:11px;height:11px;border-radius:50%;background:var(--brass-soft)}
+
+  @media (min-width:640px){:root{font-size:19px}.res{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.explore2{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand" onclick="go('hub')" tabindex="0" role="button" aria-label="Back to start"><span class="mark">Colle Atlas</span><span class="sep">/</span><span class="country">Canada</span></div>
+    <div class="bar-spacer"></div>
+    <div class="rank" title="Your progress level"><span class="rl">Rank · <b id="rankName">Explorer</b></span><span class="rb"><i id="rankBar" style="width:10%"></i></span></div>
+    <div class="a11y" role="group" aria-label="Reading options">
+      <button onclick="setSize(-1)" aria-label="Smaller text"><span class="ttl">A</span></button>
+      <button onclick="setSize(0)" aria-label="Default text size">A</button>
+      <button onclick="setSize(1)" aria-label="Larger text"><span class="tlg">A</span></button>
+      <button id="readBtn" onclick="toggleReading()" aria-pressed="false" title="Reading mode: more spacing">Reading mode</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="views">
+
+<!-- HUB -->
+<section class="view active" id="view-hub">
+  <div class="wrap">
+    <div class="hero"><div class="eyebrow">Canada · your revision atlas</div><h1>Where would you like to start?</h1><p class="sub">Pick a way in. Nothing is hidden — each click opens one new layer, like exploring rather than reading a manual.</p></div>
+
+    <div class="cprog">
+      <div class="top"><span class="nm">Canada</span><span class="ct" id="cpCount">5 / 12 topics explored</span></div>
+      <div class="bar"><i id="cpBar"></i></div>
+      <div class="badges" id="badges"></div>
+    </div>
+
+    <div class="choices">
+      <button class="choice" onclick="openPanic()"><span class="ill" id="ill-panic"></span><span class="tx"><span class="time">5 minutes</span><h3>Panic recap</h3><p>One sentence, one paradox, one statistic, one question and one opening — per topic.</p></span><span class="go">→</span></button>
+      <button class="choice" onclick="openTopic('t1',0)"><span class="ill" id="ill-guided"></span><span class="tx"><span class="time">20 minutes</span><h3>Guided exploration</h3><p>Observe → Understand → Connect → Discuss → Apply → Go Further. Resume Bilingualism & the two founding peoples, or pick a topic below.</p></span><span class="go">→</span></button>
+      <button class="choice" onclick="openTrainer()"><span class="ill" id="ill-train"></span><span class="tx"><span class="time">Train</span><h3>Colle simulator</h3><p>Practise speaking, take a random colle, or play article detective.</p></span><span class="go">→</span></button>
+    </div>
+
+    <div class="today"><div class="eyebrow">Today's question</div><div class="q" id="todayQ"></div>
+      <div class="reveal" id="todayRev"><button onclick="rev('todayRev')">Reveal an angle <span class="chev">▾</span></button><div class="body"><div><p class="lede" id="todayA" style="margin-top:14px"></p></div></div></div>
+    </div>
+
+    <div class="today" id="liveNews" hidden>
+      <div class="eyebrow">Fresh from Canada <span id="lnSrc" style="text-transform:none;letter-spacing:0;color:var(--slate);font-weight:400">· live headlines</span></div>
+      <ul class="facts" id="lnList" style="margin-top:8px"></ul>
+      <p style="font-size:.78rem;color:var(--slate);margin-top:8px">Tap a headline, then ask yourself: <i>which topics would I bring into a colle?</i></p>
+    </div>
+
+    <div class="section"><div class="section-h"><h2>Explore the country</h2></div>
+      <div class="explore2">
+        <button class="ex" onclick="openTimeline()"><span class="i">📜</span><span><span class="t">Timeline</span><span class="d">key dates, as mini-modules</span></span></button>
+        <button class="ex" onclick="openNations()"><span class="i">🗺️</span><span><span class="t">The great paradoxes</span><span class="d">tap to explore</span></span></button>
+      </div>
+    </div>
+
+    <div class="section"><div class="section-h"><h2>Or pick a topic</h2><span class="mini">tap a chapter to open it</span></div><div id="tree"></div></div>
+
+    <div class="foot">
+      <button onclick="alert('Connections — V2: take one theme (e.g. guns or healthcare) and compare it across the US, the UK, Canada and Australia.')">Connections across countries</button>
+      <button onclick="openDrill()">5-minute memory drill</button>
+      <button onclick="alert('Final challenge — V2: an unseen document, 5 minutes to prepare, a problematic and a plan to build, then a graded model.')">US final challenge</button>
+    </div>
+    <div class="note"><div class="in"><b>Prototype note.</b> A working mock-up of the Canada path, redesigned around <i>Observe → Understand → Connect → Discuss → Apply → Go Further</i> and the principle of progressive revelation. Themes are colour-coded. Fonts (Atkinson Hyperlegible &amp; Lexend) and the A−/A+ + Reading-mode controls are for low-vision and dyslexic readers. Illustrations are custom SVG (royalty-free); real licensed photos/videos would slot into the same frames. Progress is in-memory and resets on reload.</div></div>
+  </div>
+</section>
+
+<!-- TOPIC -->
+<section class="view" id="view-topic">
+  <div class="wrap">
+    <button class="back" onclick="go('hub')">← Canada</button>
+    <div class="progress-top"><div class="bar"><i id="ptop"></i></div><span class="lab" id="plab">Step 1 of 6</span></div>
+    <div class="dots" id="dots"></div>
+    <div class="stage"><div class="s-body" id="stage"></div>
+      <div class="s-foot"><button class="btn btn-ghost" id="prevBtn" onclick="stepBy(-1)">Back</button><span class="sp"></span><button class="btn btn-primary" id="nextBtn" onclick="stepBy(1)">Next <span class="ar">→</span></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- PANIC -->
+<section class="view" id="view-panic">
+  <div class="wrap"><button class="back" onclick="go('hub')">← Canada</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">5-minute panic recap</div><h1 style="font-size:1.8rem">The night before</h1><p class="sub">Per topic: one sentence, one paradox, one statistic, one question, one opening.</p></div>
+    <div id="panicList"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="view" id="view-timeline">
+  <div class="wrap"><button class="back" onclick="go('hub')">← Canada</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Timeline</div><h1 style="font-size:1.8rem">A frieze you explore</h1><p class="sub">Each date opens as a mini-module: what happened, why it still matters, a question, and links to topics.</p></div>
+    <div id="tlList" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- NATIONS -->
+<section class="view" id="view-nations">
+  <div class="wrap"><button class="back" onclick="go('hub')">← Canada</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">The great paradoxes</div><h1 style="font-size:1.8rem">Where the best questions are born</h1><p class="sub">Tap a paradox: name the tension precisely — that is where a problematic starts.</p></div>
+    <div id="natList" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section class="view" id="view-trainer">
+  <div class="wrap"><button class="back" onclick="go('hub')">← Canada</button>
+    <div class="hero" style="padding:18px 0 4px"><div class="eyebrow">Colle simulator</div><h1 style="font-size:1.8rem">Train your speaking</h1></div>
+    <div class="tabs"><button class="tabb on" id="tab-colle" onclick="trTab('colle')">Colle questions</button><button class="tabb" id="tab-det" onclick="trTab('det')">Article detective</button></div>
+    <div id="trColle">
+      <select class="seltopic" id="trTopic" onchange="trNew()"></select>
+      <div class="tabs"><button class="tabb on" data-l="easy" onclick="trLevel('easy')">🟢 Easy</button><button class="tabb" data-l="inter" onclick="trLevel('inter')">🟡 Intermediate</button><button class="tabb" data-l="adv" onclick="trLevel('adv')">🔴 Advanced</button><button class="tabb" onclick="trRandom()">🎲 Random colle</button></div>
+      <div class="stage"><div class="s-body"><div class="eyebrow" id="trLab">Easy</div><p class="qbig" id="trQ"></p>
+        <div class="timerbox"><div class="timer" id="trTimer">0:30</div><div class="timer-l">reflection time — note 3 ideas or speak aloud</div></div>
+        <textarea class="notes" id="trNotes" placeholder="Jot your plan…"></textarea><div id="trModel" style="display:none;margin-top:14px"></div></div>
+        <div class="s-foot"><button class="btn btn-ghost" id="trTimerBtn" onclick="trTimerToggle()">Start timer</button><span class="sp"></span><button class="btn btn-ghost" onclick="trNew()">New</button><button class="btn btn-primary" id="trReveal" onclick="trRevealModel()">Reveal plan</button></div>
+      </div>
+    </div>
+    <div id="trDet" style="display:none"></div>
+  </div>
+</section>
+</main>
+
+<div class="scrim" id="scrim"><div class="modal" role="dialog" aria-modal="true" aria-label="Memory drill">
+  <div class="m-h"><h3>Memory drill</h3><button class="x" onclick="closeDrill()" aria-label="Close">×</button></div>
+  <div class="flash"><div class="meta" id="dMeta">Card 1 of 4</div>
+    <div class="flip" id="flip" onclick="flip()" role="button" tabindex="0"><div class="front" id="dFront"></div><div class="back" id="dBack"></div></div>
+    <div class="fhint" id="dHint">tap the card to reveal</div>
+    <div class="grade" id="dGrade" style="display:none"><button class="again" onclick="grade()">Review again<span class="iv">due tomorrow</span></button><button class="good" onclick="grade()">Got it<span class="iv">due in 3 days</span></button></div>
+  </div>
+</div></div>
+<div class="toast" id="toast"><span class="s"></span><span id="toastT"></span></div>
+
+<script>
+/* ---------- illustrations ---------- */
+const ILL={
+  clock:`<svg viewBox="0 0 120 120" role="img" aria-label="Clock"><circle cx="60" cy="60" r="40" fill="#33473F"/><circle cx="60" cy="60" r="40" fill="none" stroke="#9C6B22" stroke-width="5"/><path d="M60 60V36M60 60l18 10" stroke="#EFEEE6" stroke-width="6" stroke-linecap="round"/></svg>`,
+  usmap:`<svg viewBox="0 0 120 120" role="img" aria-label="Map pin"><path d="M24 44c10-8 22-6 34-8 10-2 18-8 28-4 8 3 10 12 8 20-2 9-10 12-12 20-2 7 2 14-4 19-7 6-16 2-24 4-9 2-16 9-24 4-7-5-4-14-8-21-4-8-12-12-10-20 2-9 8-9 12-14Z" fill="#33473F"/><circle cx="82" cy="36" r="14" fill="#B23A2E"/><circle cx="82" cy="36" r="5" fill="#EFEEE6"/></svg>`,
+  speak:`<svg viewBox="0 0 120 120" role="img" aria-label="Speech bubbles"><rect x="20" y="26" width="58" height="40" rx="11" fill="#33473F"/><path d="M34 66l4 12 12-12Z" fill="#33473F"/><rect x="52" y="50" width="48" height="34" rx="10" fill="#9C6B22"/><path d="M86 84l-3 10-10-10Z" fill="#9C6B22"/></svg>`,
+  ballot:`<svg viewBox="0 0 400 200" role="img" aria-label="A ballot box"><circle cx="200" cy="100" r="78" fill="#f0dad3"/><rect x="120" y="96" width="160" height="74" rx="6" fill="#33473F"/><path d="M120 96l40-26h120l40 26Z" fill="#3f574c"/><rect x="170" y="60" width="60" height="44" rx="3" fill="#FBFBF6" stroke="#15302A" stroke-width="2"/><path d="M186 80l8 9 16-18" stroke="#B23A2E" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  scales:`<svg viewBox="0 0 400 200" role="img" aria-label="Scales of justice"><circle cx="200" cy="100" r="78" fill="#e7e3f2"/><path d="M200 40v104" stroke="#33473F" stroke-width="8" stroke-linecap="round"/><path d="M144 60h112" stroke="#33473F" stroke-width="8" stroke-linecap="round"/><path d="M144 60l-20 42h40Z" fill="#6A4C93"/><path d="M256 60l-20 42h40Z" fill="#6A4C93"/><path d="M124 102a20 12 0 0040 0Z" fill="#33473F"/><path d="M236 102a20 12 0 0040 0Z" fill="#33473F"/><rect x="176" y="140" width="48" height="12" rx="5" fill="#33473F"/></svg>`,
+  liberty:`<svg viewBox="0 0 400 200" role="img" aria-label="A torch"><circle cx="200" cy="100" r="78" fill="#d9ecdf"/><path d="M200 34c14 10 22 22 14 36-5 9-16 10-14 22h-0c2-12-9-13-14-22-8-14 0-26 14-36Z" fill="#A86E18"/><path d="M182 96h36l-6 14h-24Z" fill="#3F7A4B"/><rect x="192" y="110" width="16" height="52" rx="6" fill="#33473F"/><path d="M176 166h48" stroke="#33473F" stroke-width="10" stroke-linecap="round"/></svg>`,
+  shield:`<svg viewBox="0 0 400 200" role="img" aria-label="A shield with a star"><circle cx="200" cy="100" r="78" fill="#efe4d2"/><path d="M200 34l52 16v40c0 34-22 58-52 72-30-14-52-38-52-72V50Z" fill="#33473F"/><path d="M200 66l9 19 21 3-15 15 4 21-19-10-19 10 4-21-15-15 21-3Z" fill="#C49A53"/></svg>`,
+  regions:`<svg viewBox="0 0 400 200" role="img" aria-label="Four regions map"><circle cx="200" cy="100" r="80" fill="#e6def0"/><path d="M196 38c8 0 14 6 12 16-2 8 4 12 2 20l-22 4-10-22c-2-10 8-20 18-18Z" fill="#1F3A5F"/><path d="M212 54c10-2 18 6 16 16-2 8 6 14 2 22l-26 2-4-24c0-9 3-14 12-16Z" fill="#B23A2E"/><path d="M188 92l24-2 6 30c2 12-8 22-20 18-8-2-10-10-16-12l6-32Z" fill="#8A5A2B"/><path d="M158 96l30-4-6 34c-8 4-18 0-22-8-4-9 0-16-2-22Z" fill="#3F7A4B"/></svg>`,
+  scroll:`<svg viewBox="0 0 400 200" role="img" aria-label="A parchment"><circle cx="200" cy="100" r="78" fill="#e3e7ee"/><rect x="140" y="46" width="120" height="108" rx="8" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M158 72h84M158 92h84M158 112h60" stroke="#566A61" stroke-width="6" stroke-linecap="round"/><path d="M158 134h44" stroke="#9C6B22" stroke-width="6" stroke-linecap="round"/></svg>`,
+  dome:`<svg viewBox="0 0 400 200" role="img" aria-label="A capitol dome"><circle cx="200" cy="100" r="78" fill="#dcebe9"/><path d="M200 34c26 8 38 28 38 50h-76c0-22 12-42 38-50Z" fill="#2C7A7B"/><rect x="194" y="24" width="12" height="16" rx="4" fill="#33473F"/><rect x="150" y="84" width="100" height="14" rx="4" fill="#33473F"/><path d="M146 98h108v56H146Z" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M166 112v42M200 112v42M234 112v42" stroke="#566A61" stroke-width="6"/></svg>`,
+  chapel:`<svg viewBox="0 0 400 200" role="img" aria-label="A chapel"><circle cx="200" cy="100" r="78" fill="#f1e6cc"/><path d="M200 30v18M192 40h16" stroke="#A86E18" stroke-width="6" stroke-linecap="round"/><path d="M200 50l-34 30h68Z" fill="#A86E18"/><rect x="172" y="80" width="56" height="74" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><path d="M200 116a10 12 0 0110 12v26h-20v-26a10 12 0 0110-12Z" fill="#33473F"/></svg>`,
+  heart:`<svg viewBox="0 0 400 200" role="img" aria-label="Heart with medical cross"><circle cx="200" cy="100" r="80" fill="#d4e6f5"/><path d="M200 150c-40-26-58-46-58-70 0-18 14-30 30-30 12 0 22 7 28 18 6-11 16-18 28-18 16 0 30 12 30 30 0 24-18 44-58 70Z" fill="#0072CE"/><path d="M192 70h16v16h16v16h-16v16h-16v-16h-16V86h16Z" fill="#FBFBF6"/></svg>`,
+  globe:`<svg viewBox="0 0 400 200" role="img" aria-label="A globe"><circle cx="200" cy="100" r="78" fill="#efe4d2"/><circle cx="200" cy="100" r="52" fill="#33473F"/><circle cx="200" cy="100" r="52" fill="none" stroke="#B0791A" stroke-width="4"/><path d="M148 100h104M200 48c22 14 22 90 0 104M200 48c-22 14-22 90 0 104" stroke="#EFEEE6" stroke-width="4" fill="none"/></svg>`,
+  flag:`<svg viewBox="0 0 400 200" role="img" aria-label="Stars and stripes"><circle cx="200" cy="100" r="78" fill="#e3e7ee"/><rect x="140" y="56" width="120" height="88" rx="8" fill="#FBFBF6" stroke="#33473F" stroke-width="4"/><rect x="140" y="56" width="52" height="44" fill="#1F3A5F"/><path d="M166 68l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Z" fill="#FBFBF6"/><path d="M196 70h60M196 86h60M144 112h112M144 128h112" stroke="#B23A2E" stroke-width="8"/></svg>`,
+  crown:`<svg viewBox="0 0 400 200" role="img" aria-label="A crown"><circle cx="200" cy="100" r="78" fill="#f1e6cc"/><path d="M120 132l-10-58 38 28 12-44 12 44 12-44 12 44 38-28-10 58Z" fill="#B0791A"/><rect x="118" y="132" width="164" height="20" rx="4" fill="#33473F"/><circle cx="148" cy="78" r="6" fill="#A6432B"/><circle cx="200" cy="64" r="6" fill="#A6432B"/><circle cx="252" cy="78" r="6" fill="#A6432B"/></svg>`,
+  leaf:`<svg viewBox="0 0 400 200" role="img" aria-label="A leaf"><circle cx="200" cy="100" r="78" fill="#d9ecdf"/><path d="M200 40c44 8 66 40 60 84-44 8-78-8-92-40 8-18 18-34 32-44Z" fill="#3F7A4B"/><path d="M176 148c18-30 42-52 74-66" stroke="#EFEEE6" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`,
+  generic:`<svg viewBox="0 0 400 200" role="img" aria-label="An open book"><circle cx="200" cy="100" r="80" fill="#dfe6d6"/><path d="M120 70c30-12 56-12 80 2 24-14 50-14 80-2v74c-30-12-56-12-80 2-24-14-50-14-80-2Z" fill="#33473F"/><path d="M200 72v76" stroke="#9C6B22" stroke-width="4"/></svg>`
+};
+function illFor(k){return ILL[k]||ILL.generic;}
+
+/* ---------- structure ---------- */
+const ACC={"t1": "#B23A2E", "t2": "#6A4C93", "t3": "#8A5A2B", "t4": "#3F7A4B", "t5": "#1F3A5F", "t6": "#2C7A7B", "t7": "#A86E18", "t8": "#0072CE", "t9": "#B0791A", "bigpicture": "#1F3A5F", "regions": "#1F3A5F", "timeline": "#1F3A5F"};
+const CHAPTERS=[{"n": "01", "title": "Understanding Canada", "sub": "the big picture", "topics": ["bigpicture", "regions", "timeline"]}, {"n": "02", "title": "Power & politics", "sub": "bilingualism & the two founding peoples · quebec, separatism", "topics": ["t1", "t2", "t3"]}, {"n": "03", "title": "Society", "sub": "indigenous peoples & reconciliation · the relationship with ", "topics": ["t4", "t5", "t6", "t7"]}, {"n": "04", "title": "Canada & the world", "sub": "natural resources, oil & climate · immigration & the housing", "topics": ["t8", "t9"]}];
+const STUBS={"regions": "The great paradoxes", "timeline": "Canada timeline"};
+const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"connect",l:"Connect"},{k:"discuss",l:"Discuss"},{k:"apply",l:"Apply"},{k:"further",l:"Go Further"}];
+
+const TOPICS={"t1": {"name": "Bilingualism & the two founding peoples", "ill": "generic", "chapter": "Power & politics", "docType": "Press document · language laws", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of identity, unity, minority rights.", "Common trap: Canada is fully bilingual → it is officially bilingual, but English dominates outside Quebec."], "sentence": "Canada is officially bilingual, but English and French coexist unevenly: French thrives in Quebec while francophones elsewhere fear assimilation.", "facts5": ["Two founding peoples (French & British).", "The Official Languages Act (1969).", "New Brunswick the only bilingual province. **."], "debate": "Is bilingualism a strength or a tension?", "paradox": "An officially bilingual nation that is, in practice, two language worlds.", "whyMatter": "At stake: national unity, identity, the survival of French in North America..", "whyTags": ["identity", "minority languages", "national unity", "multiculturalism"], "learnMore": "Bilingualism is both a founding principle and a permanent negotiation. Canadian bilingualism is less a settled fact than an ongoing negotiation between a confident French Quebec and anxious francophone minorities elsewhere.", "connect": [{"to": "Identity", "why": "The press keeps returning to this topic because of identity, unity, minority rights — and identity is one of its natural bridges."}, {"to": "Minority languages", "why": "A strong answer links bilingualism & the two founding peoples to minority languages — that is the reflex examiners reward."}, {"to": "National unity", "why": "Documents on language laws almost always open onto national unity."}, {"to": "Multiculturalism", "why": "Multiculturalism gives this topic its wider significance in a colle."}, {"to": "Education.", "why": "Linking this to education. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Two founding peoples (French & British).", "In one sentence: The Official Languages Act (1969).", "In one sentence: New Brunswick the only bilingual province. **."], "inter": ["Discuss: minority-language rights.", "Discuss: other bilingual states.", "Discuss: globalisation and English.."], "adv": ["Is bilingualism a strength or a tension?", "Can French survive in North America?", "An officially bilingual nation that is, in practice, two language worlds — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is bilingualism a strength or a tension?"}, {"label": "The paradox", "q": "An officially bilingual nation that is, in practice, two language worlds — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against belgium, switzerland?"}], "central": {"q": "Is bilingualism a strength or a tension?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "In Canada, language is never just communication; it is a question of survival and belonging."}, "res": [{"t": "Culture", "i": "Bon Cop, Bad Cop (the bilingual buddy film)."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "bilingualism, francophone, anglophone, the Official Languages Act, assimilation, minority rights."}], "compare": "Compare with Belgium, Switzerland."}, "t2": {"name": "Quebec, separatism & national unity", "ill": "generic", "chapter": "Power & politics", "docType": "Press document · Quebec's language/secularism laws", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of unity, identity, minority rights.", "Common trap: Quebec separatism is over → support has fallen, but identity politics (language, secularism) persist."], "sentence": "Quebec is a French-speaking 'distinct society' whose drive for autonomy has twice brought Canada to the edge of break-up.", "facts5": ["The Quiet Revolution.", "The Bloc Québécois.", "The 1980 & 1995 referendums (1995: 50.6% No).", "Bills 21 and 96. **."], "debate": "distinct society?", "paradox": "A province that defines its identity both against Canada and within it.", "whyMatter": "At stake: national unity, the protection of a minority identity, the limits of federalism..", "whyTags": ["nationalism", "identity", "federalism", "minority languages"], "learnMore": "Separatism has cooled, but Quebec's assertion of a distinct identity continues by other means. Quebec illustrates how a minority nation can shift from seeking independence to entrenching its distinctiveness through language and secularism laws within the federation.", "connect": [{"to": "Nationalism", "why": "The press keeps returning to this topic because of unity, identity, minority rights — and nationalism is one of its natural bridges."}, {"to": "Identity", "why": "A strong answer links quebec, separatism & national unity to identity — that is the reflex examiners reward."}, {"to": "Federalism", "why": "Documents on Quebec's language/secularism laws almost always open onto federalism."}, {"to": "Minority languages", "why": "Minority languages gives this topic its wider significance in a colle."}, {"to": "National unity.", "why": "Linking this to national unity. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The Quiet Revolution.", "In one sentence: The Bloc Québécois.", "In one sentence: The 1980 & 1995 referendums (1995: 50.6% No)."], "inter": ["Discuss: other separatist movements (Scotland, Catalonia).", "Discuss: the future of the federation.", "Discuss: identity laws.."], "adv": ["distinct society?", "A province that defines its identity both against Canada and within it — how do you explain it?", "A province that defines its identity both against Canada and within it — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "distinct society?"}, {"label": "The paradox", "q": "A province that defines its identity both against Canada and within it — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against scotland, catalonia (independence movements)?"}], "central": {"q": "distinct society?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Quebec has stopped trying to leave Canada and started trying to remake it from within."}, "res": [{"t": "Culture", "i": "the films of Denys Arcand; Quebec's distinct chanson and cinema."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "sovereignty, separatism, a distinct society, the Quiet Revolution, the Bloc Québécois, a referendum."}], "compare": "Compare with Scotland, Catalonia (independence movements)."}, "t3": {"name": "Multiculturalism (the mosaic)", "ill": "liberty", "chapter": "Power & politics", "docType": "Press document · immigration", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of identity, social cohesion, immigration policy.", "Common trap: multiculturalism means no problems → integration, housing and recent backlash remain real challenges."], "sentence": "Canada was the first country to adopt official multiculturalism, picturing itself as a 'mosaic' rather than a 'melting pot'.", "facts5": ["Official multiculturalism (1971).", "The mosaic vs the melting pot.", "Very high immigration.", "Diverse cities. **."], "debate": "Is the mosaic a better model than the melting pot?", "paradox": "A unified national identity built on the celebration of difference.", "whyMatter": "At stake: national identity, integration, social cohesion..", "whyTags": ["immigration", "identity", "diversity", "integration"], "learnMore": "Diversity is presented not as a problem to manage but as the very definition of the nation. Canada's mosaic makes diversity itself the basis of national identity — a bold model whose strength is also its constant test: how to be united by difference.", "connect": [{"to": "Immigration", "why": "The press keeps returning to this topic because of identity, social cohesion, immigration policy — and immigration is one of its natural bridges."}, {"to": "Identity", "why": "A strong answer links multiculturalism (the mosaic) to identity — that is the reflex examiners reward."}, {"to": "Diversity", "why": "Documents on immigration almost always open onto diversity."}, {"to": "Integration", "why": "Integration gives this topic its wider significance in a colle."}, {"to": "National models.", "why": "Linking this to national models. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Official multiculturalism (1971).", "In one sentence: The mosaic vs the melting pot.", "In one sentence: Very high immigration."], "inter": ["Discuss: the limits of multiculturalism.", "Discuss: integration debates.", "Discuss: comparison with the US model.."], "adv": ["Is the mosaic a better model than the melting pot?", "Can diversity be a basis for unity?", "A unified national identity built on the celebration of difference — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is the mosaic a better model than the melting pot?"}, {"label": "The paradox", "q": "A unified national identity built on the celebration of difference — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against the us (melting pot), australia, france (assimilation)?"}], "central": {"q": "Is the mosaic a better model than the melting pot?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Canada turned diversity from a challenge into a national brand."}, "res": [{"t": "Culture", "i": "Kim's Convenience (TV); the diversity of Toronto and Vancouver."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "multiculturalism, the mosaic, the melting pot, diversity, integration, social cohesion."}], "compare": "Compare with the US (melting pot), Australia, France (assimilation)."}, "t4": {"name": "Indigenous peoples & reconciliation", "ill": "generic", "chapter": "Society", "docType": "Press document · residential schools", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of memory, justice, identity.", "Common trap: reconciliation is symbolic → it raises hard questions of land, rights, self-government and justice."], "sentence": "First Nations, Inuit and Métis face the legacy of colonisation, and reconciliation has become one of Canada's defining national projects.", "facts5": ["First Nations, Inuit, Métis.", "Residential schools.", "The Truth and Reconciliation Commission (2015).", "The 2021 graves.", "Treaty and land rights. **."], "debate": "How does a settler nation face its colonial past?", "paradox": "A tolerant, multicultural nation built through the dispossession of its first peoples.", "whyMatter": "At stake: historical justice, identity, the legitimacy of the settler state..", "whyTags": ["colonisation", "memory", "justice", "identity"], "learnMore": "A country built on Indigenous land is now confronting how it was built. Reconciliation makes Canada confront a foundational contradiction: a nation that prides itself on tolerance was built on the assimilation and dispossession of its Indigenous peoples.", "connect": [{"to": "Colonisation", "why": "The press keeps returning to this topic because of memory, justice, identity — and colonisation is one of its natural bridges."}, {"to": "Memory", "why": "A strong answer links indigenous peoples & reconciliation to memory — that is the reflex examiners reward."}, {"to": "Justice", "why": "Documents on residential schools almost always open onto justice."}, {"to": "Identity", "why": "Identity gives this topic its wider significance in a colle."}, {"to": "Reconciliation.", "why": "Linking this to reconciliation. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: First Nations, Inuit, Métis.", "In one sentence: Residential schools.", "In one sentence: The Truth and Reconciliation Commission (2015)."], "inter": ["Discuss: Indigenous self-government.", "Discuss: reconciliation elsewhere (Australia, NZ).", "Discuss: the politics of memory.."], "adv": ["How does a settler nation face its colonial past?", "Is reconciliation possible?", "A tolerant, multicultural nation built through the dispossession of its first peoples — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "How does a settler nation face its colonial past?"}, {"label": "The paradox", "q": "A tolerant, multicultural nation built through the dispossession of its first peoples — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against australia, new zealand (the treaty of waitangi), the us?"}], "central": {"q": "How does a settler nation face its colonial past?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Reconciliation forces a settler nation to confront the foundations on which it was built."}, "res": [{"t": "Culture", "i": "The Inconvenient Indian (Thomas King); Five Little Indians (Michelle Good); the film Indian Horse."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "First Nations, Inuit, Métis, Indigenous peoples, colonisation, residential schools."}], "compare": "Compare with Australia, New Zealand (the Treaty of Waitangi), the US."}, "t5": {"name": "The relationship with the United States", "ill": "generic", "chapter": "Society", "docType": "Press document · trade", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of dependence, sovereignty, identity.", "Common trap: Canada is basically like the US → Canadians stress key differences (healthcare, guns, multiculturalism, peacekeeping)."], "sentence": "Canada's closest ally is also its giant neighbour, and Canadians often define their identity precisely by not being American.", "facts5": ["The US as top ally and trading partner (USMCA/CUSMA).", "~75% of exports go south.", "Recurring trade and tariff tensions. **."], "debate": "Is Canadian identity defined against the US?", "paradox": "A nation most united in defining itself against its closest friend.", "whyMatter": "At stake: economic dependence, sovereignty, cultural identity..", "whyTags": ["globalisation", "identity", "trade", "sovereignty"], "learnMore": "Living next to a superpower means constant interdependence — and constant assertion of difference. The Canada-US relationship is a study in asymmetry: deep economic dependence on a giant neighbour fuels, rather than dissolves, a determined sense of Canadian distinctiveness.", "connect": [{"to": "Globalisation", "why": "The press keeps returning to this topic because of dependence, sovereignty, identity — and globalisation is one of its natural bridges."}, {"to": "Identity", "why": "A strong answer links the relationship with the united states to identity — that is the reflex examiners reward."}, {"to": "Trade", "why": "Documents on trade almost always open onto trade."}, {"to": "Sovereignty", "why": "Sovereignty gives this topic its wider significance in a colle."}, {"to": "Soft power.", "why": "Linking this to soft power. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The US as top ally and trading partner (USMCA/CUSMA).", "In one sentence: ~75% of exports go south.", "In one sentence: Recurring trade and tariff tensions. **."], "inter": ["Discuss: trade dependence.", "Discuss: Canadian sovereignty.", "Discuss: cultural Americanisation.."], "adv": ["Is Canadian identity defined against the US?", "Can Canada be sovereign next to a superpower?", "A nation most united in defining itself against its closest friend — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is Canadian identity defined against the US?"}, {"label": "The paradox", "q": "A nation most united in defining itself against its closest friend — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against mexico (the other usmca partner); other states living beside a giant?"}], "central": {"q": "Is Canadian identity defined against the US?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Canada knows itself best by what it refuses to become."}, "res": [{"t": "Culture", "i": "The Handmaid's Tale (Atwood) — Canada as a refuge from the US."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "interdependence, the USMCA, tariffs, sovereignty, the border, soft power."}], "compare": "Compare with Mexico (the other USMCA partner); other states living beside a giant."}, "t6": {"name": "The Constitution, the monarchy & federalism", "ill": "scales", "chapter": "Society", "docType": "Press document · the Charter", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of rights, the balance of powers, identity.", "Common trap: Canada is independent, so the monarchy is irrelevant → it remains a constitutional monarchy under the King."], "sentence": "Canada is a federal constitutional monarchy whose 1982 Charter Quebec never signed — leaving its constitutional order half-settled.", "facts5": ["Confederation (1867).", "Patriation & the Charter (1982).", "The notwithstanding clause.", "Federalism.", "King as head of state. **."], "debate": "Should Canada keep the monarchy?", "paradox": "A rights charter that includes a clause to suspend rights.", "whyMatter": "At stake: the balance of powers, rights vs majority rule, national unity..", "whyTags": ["the rule of law", "federalism", "rights", "the monarchy"], "learnMore": "Canada gained full independence peacefully and gradually, but its house is not fully in order. Canada's constitution embodies a peculiarly Canadian compromise: entrenched rights tempered by a notwithstanding clause, and a founding text one of its founding peoples never endorsed.", "connect": [{"to": "The rule of law", "why": "The press keeps returning to this topic because of rights, the balance of powers, identity — and the rule of law is one of its natural bridges."}, {"to": "Federalism", "why": "A strong answer links the constitution, the monarchy & federalism to federalism — that is the reflex examiners reward."}, {"to": "Rights", "why": "Documents on the Charter almost always open onto rights."}, {"to": "The monarchy", "why": "The monarchy gives this topic its wider significance in a colle."}, {"to": "Democracy.", "why": "Linking this to democracy. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Confederation (1867).", "In one sentence: Patriation & the Charter (1982).", "In one sentence: The notwithstanding clause."], "inter": ["Discuss: the future of the monarchy.", "Discuss: the notwithstanding clause.", "Discuss: federal reform.."], "adv": ["Should Canada keep the monarchy?", "Is the notwithstanding clause a threat to rights?", "A rights charter that includes a clause to suspend rights — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Should Canada keep the monarchy?"}, {"label": "The paradox", "q": "A rights charter that includes a clause to suspend rights — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against the us (entrenched rights), the uk (unwritten constitution), australia (a federal commonwealth realm)?"}], "central": {"q": "Should Canada keep the monarchy?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Canada's Charter protects rights — and lets governments override them."}, "res": [{"t": "Culture", "i": "debates over Canada becoming a republic."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "Confederation, patriation, the Charter, the notwithstanding clause, federalism, the Governor General."}], "compare": "Compare with the US (entrenched rights), the UK (unwritten constitution), Australia (a federal Commonwealth realm)."}, "t7": {"name": "Universal healthcare (Medicare)", "ill": "heart", "chapter": "Society", "docType": "Press document · waiting times", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of the role of the state, identity, inequality.", "Common trap: Medicare means perfect healthcare → it is universal but strained (waiting lists, staffing)."], "sentence": "Canada's universal, publicly funded healthcare — Medicare — is a cornerstone of national identity and a deliberate contrast with the US.", "facts5": ["Universal, tax-funded, free at the point of care.", "Tommy Douglas as its father.", "Provincially run.", "Rising costs and waiting times. **."], "debate": "Is universal healthcare central to Canadian identity?", "paradox": "A cherished universal system that is permanently stretched.", "whyMatter": "At stake: social solidarity, national identity, the limits of public funding..", "whyTags": ["healthcare", "the welfare state", "identity", "the role of the state"], "learnMore": "Medicare is less a policy than a statement of values — now under serious strain. Medicare functions as a national value as much as a health system: it embodies a Canadian belief in social solidarity, which is precisely why its current strain feels like an identity crisis.", "connect": [{"to": "Healthcare", "why": "The press keeps returning to this topic because of the role of the state, identity, inequality — and healthcare is one of its natural bridges."}, {"to": "The welfare state", "why": "A strong answer links universal healthcare (medicare) to the welfare state — that is the reflex examiners reward."}, {"to": "Identity", "why": "Documents on waiting times almost always open onto identity."}, {"to": "The role of the state", "why": "The role of the state gives this topic its wider significance in a colle."}, {"to": "Inequality.", "why": "Linking this to inequality. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: Universal, tax-funded, free at the point of care.", "In one sentence: Tommy Douglas as its father.", "In one sentence: Provincially run."], "inter": ["Discuss: the strain on public health.", "Discuss: private care debates.", "Discuss: ageing populations.."], "adv": ["Is universal healthcare central to Canadian identity?", "Can Medicare survive its strains?", "A cherished universal system that is permanently stretched — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is universal healthcare central to Canadian identity?"}, {"label": "The paradox", "q": "A cherished universal system that is permanently stretched — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against the uk (nhs), the us (private), france?"}], "central": {"q": "Is universal healthcare central to Canadian identity?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Medicare is the policy through which Canada most clearly says it is not American."}, "res": [{"t": "Culture", "i": "Tommy Douglas, often voted “the Greatest Canadian“; Michael Moore's Sicko."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "Medicare, universal healthcare, publicly funded, free at the point of care, the welfare state, social solidarity."}], "compare": "Compare with the UK (NHS), the US (private), France."}, "t8": {"name": "Natural resources, oil & climate", "ill": "leaf", "chapter": "Canada & the world", "docType": "Press document · the oil sands", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of climate, the economy, Western alienation.", "Common trap: Canada is a green country → it is also a major oil and gas producer, with high per-capita emissions."], "sentence": "Canada is a resource superpower — oil, minerals, timber — which puts its economy on a collision course with its climate goals.", "facts5": ["The Alberta oil sands.", "Pipelines.", "The carbon tax.", "Resource wealth vs emissions. **."], "debate": "Can Canada be both a resource superpower and a climate leader?", "paradox": "A nation of pristine wilderness that is also a fossil-fuel giant.", "whyMatter": "At stake: climate vs prosperity, national unity (Alberta), Indigenous rights..", "whyTags": ["climate", "the economy", "energy", "globalisation"], "learnMore": "The Alberta oil sands crystallise the tension between prosperity and the planet. The oil sands turn climate policy into a national-unity question: every step towards decarbonisation pits Ottawa's commitments against Alberta's economy.", "connect": [{"to": "Climate", "why": "The press keeps returning to this topic because of climate, the economy, Western alienation — and climate is one of its natural bridges."}, {"to": "The economy", "why": "A strong answer links natural resources, oil & climate to the economy — that is the reflex examiners reward."}, {"to": "Energy", "why": "Documents on the oil sands almost always open onto energy."}, {"to": "Globalisation", "why": "Globalisation gives this topic its wider significance in a colle."}, {"to": "Federalism.", "why": "Linking this to federalism. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: The Alberta oil sands.", "In one sentence: Pipelines.", "In one sentence: The carbon tax."], "inter": ["Discuss: the energy transition.", "Discuss: the politics of the carbon tax.", "Discuss: resource economies elsewhere.."], "adv": ["Can Canada be both a resource superpower and a climate leader?", "Who pays for the energy transition?", "A nation of pristine wilderness that is also a fossil-fuel giant — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Can Canada be both a resource superpower and a climate leader?"}, {"label": "The paradox", "q": "A nation of pristine wilderness that is also a fossil-fuel giant — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against norway (oil + climate ambition), australia (coal)?"}], "central": {"q": "Can Canada be both a resource superpower and a climate leader?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Canada must choose between the wealth beneath its soil and the climate above it."}, "res": [{"t": "Culture", "i": "debates over the Alberta oil sands; the wilderness in Canadian art (the Group of Seven)."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "natural resources, the oil sands, fossil fuels, a pipeline, the carbon tax, the energy transition."}], "compare": "Compare with Norway (oil + climate ambition), Australia (coal)."}, "t9": {"name": "Immigration & the housing crisis", "ill": "liberty", "chapter": "Canada & the world", "docType": "Press document · immigration targets", "observeQ": "This lands on your desk in a colle. What would you say first?", "observeNotice": ["The press covers this because of the economy, cohesion, the cost of living.", "Common trap: Canada has no immigration debate → record intake and a housing crisis are straining the consensus."], "sentence": "Canada welcomes immigrants at one of the world's highest rates, but a severe housing crisis is testing the consensus.", "facts5": ["A points-based system.", "Very high per-capita intake.", "Pro-immigration consensus.", "The housing and cost-of-living crisis. **."], "debate": "Is Canada's immigration model sustainable?", "paradox": "A national consensus on immigration tested by its own success.", "whyMatter": "At stake: social cohesion, economic growth, the housing crisis, identity..", "whyTags": ["immigration", "inequality", "housing", "identity"], "learnMore": "The country built on immigration is now asking how much, and how fast, it can absorb. Canada's immigration model — long a point of pride — is now strained from within: record intake collides with a housing shortage, turning a consensus into a debate.", "connect": [{"to": "Immigration", "why": "The press keeps returning to this topic because of the economy, cohesion, the cost of living — and immigration is one of its natural bridges."}, {"to": "Inequality", "why": "A strong answer links immigration & the housing crisis to inequality — that is the reflex examiners reward."}, {"to": "Housing", "why": "Documents on immigration targets almost always open onto housing."}, {"to": "Identity", "why": "Identity gives this topic its wider significance in a colle."}, {"to": "The labour market.", "why": "Linking this to the labour market. shows you see the stakes, not just the facts."}], "discuss": {"easy": ["In one sentence: A points-based system.", "In one sentence: Very high per-capita intake.", "In one sentence: Pro-immigration consensus."], "inter": ["Discuss: immigration and housing across the West.", "Discuss: the limits of growth.", "Discuss: integration.."], "adv": ["Is Canada's immigration model sustainable?", "How does housing reshape the immigration debate?", "A national consensus on immigration tested by its own success — how do you explain it?"]}, "problematics": [{"label": "A tension", "q": "Is Canada's immigration model sustainable?"}, {"label": "The paradox", "q": "A national consensus on immigration tested by its own success — how do you explain it?"}, {"label": "A comparison", "q": "What does this topic reveal when set against australia (points system), the uk, ireland (housing pressures)?"}], "central": {"q": "Is Canada's immigration model sustainable?", "plan": ["Set out the facts.", "Name the tension.", "Resolve it with a wider stake."], "hook": "Canada's openness now collides with a simple question: where will everyone live?"}, "res": [{"t": "Culture", "i": "the immigrant experience in Canadian fiction and film."}, {"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}, {"t": "Words to drop", "i": "a points-based system, immigration targets, integration, the housing crisis, affordability, the cost of living."}], "compare": "Compare with Australia (points system), the UK, Ireland (housing pressures)."}, "bigpicture": {"name": "Big picture · Canada", "ill": "flag", "chapter": "Understanding Canada", "docType": "Map · Canada", "observeQ": "What does this map reveal about how Canada works?", "observeNotice": ["Canada is built on dualities — English/French, federal/provincial, and a constant definition of itself in contrast with the United States.", "Every topic below connects back to this frame."], "sentence": "Canada is built on dualities — English/French, federal/provincial, and a constant definition of itself in contrast with the United States.", "facts5": ["Official name: Canada. Capital: Ottawa (not Toronto or Montreal!).", "Population: ~41 million (rising fast through immigration). Largest cities: Toronto, Montreal, Vancouver.", "Currency: the Canadian dollar (CAD).", "System: a federal parliamentary democracy and a constitutional monarchy.", "Head of state: King Charles III, represented in Canada by the Governor General (Mary Simon, the first Indigenous holder — as of early 2026, to be checked)."], "debate": "Is Canada a nation, or a federation of regions and peoples?", "paradox": "A country with two official languages, one of which dominates everywhere but Quebec.", "whyMatter": "This is the frame every document fits into — start here, then pick a topic.", "whyTags": ["climate", "colonisation", "federalism", "globalisation"], "learnMore": "A country with two official languages, one of which dominates everywhere but Quebec. A “nation of immigrants“ built on Indigenous land it is still reckoning with. A vast country whose population hugs the US border.", "connect": [{"to": "Bilingualism & the two founding peoples", "why": "Canada is officially bilingual, but English and French coexist unevenly: French thrives in Quebec while francophones elsewhere fear assimilation."}, {"to": "Quebec, separatism & national unity", "why": "Quebec is a French-speaking 'distinct society' whose drive for autonomy has twice brought Canada to the edge of break-up."}, {"to": "Multiculturalism (the mosaic)", "why": "Canada was the first country to adopt official multiculturalism, picturing itself as a 'mosaic' rather than a 'melting pot'."}, {"to": "Indigenous peoples & reconciliation", "why": "First Nations, Inuit and Métis face the legacy of colonisation, and reconciliation has become one of Canada's defining national projects."}, {"to": "The relationship with the United States", "why": "Canada's closest ally is also its giant neighbour, and Canadians often define their identity precisely by not being American."}], "discuss": {"easy": ["In one sentence: Official name: Canada. Capital: Ottawa (not Toronto or Montreal!).", "In one sentence: Population: ~41 million (rising fast through immigration). Largest cities: Toronto, Montreal, Vancouver.", "In one sentence: Currency: the Canadian dollar (CAD)."], "inter": ["Discuss: Reconciliation with Indigenous peoples: how does a settler nation face its past.", "Discuss: Can Canada reconcile its resource economy with its climate goals.", "Discuss: How does Canada define itself against the United States."], "adv": ["Is Canada a nation, or a federation of regions and peoples?", "Quebec: how has a distinct society survived inside Canada — and could it still leave?", "The mosaic vs the melting pot: is Canadian multiculturalism a model?"]}, "problematics": [{"label": "A paradox", "q": "A country with two official languages, one of which dominates everywhere but Quebec — how do you explain it?"}, {"label": "A tension", "q": "Is Canada a nation, or a federation of regions and peoples?"}, {"label": "A comparison", "q": "What makes Canada distinctive among English-speaking countries?"}], "central": {"q": "Is Canada a nation, or a federation of regions and peoples?", "plan": ["A country with two official languages, one of which dominates everywhere but Quebec.", "A “nation of immigrants“ built on Indigenous land it is still reckoning with.", "A vast country whose population hugs the US border."], "hook": "Canada is built on dualities — English/French, federal/provincial, and a constant definition of itself in contrast with the United States."}, "res": [{"t": "Watch", "i": "CBC News and CTV News — Canadian current affairs."}, {"t": "Read", "i": "The Globe and Mail, the Toronto Star, the National Post, CBC.ca."}], "compare": "Compare with the other countries of this atlas — the same questions, different answers."}};
+
+/* ---------- country timeline (mini-modules) ---------- */
+const US_TL=[{"y": "1608", "t": "Quebec City founded", "ill": "generic", "lines": "The French root of Canada and of Quebec's distinct identity.", "why": "It is still a live reference in colle documents today.", "q": "Why does Quebec City founded still matter today?", "links": []}, {"y": "1759", "t": "the Plains of Abraham", "ill": "generic", "lines": "British conquest; the origin of the “two solitudes“.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Plains of Abraham still matter today?", "links": []}, {"y": "1867", "t": "Confederation", "ill": "generic", "lines": "The birth of Canada as a federal state.", "why": "It is still a live reference in colle documents today.", "q": "Why does Confederation still matter today?", "links": []}, {"y": "1931", "t": "the Statute of Westminster", "ill": "generic", "lines": "The slow, peaceful path to full independence.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Statute of Westminster still matter today?", "links": []}, {"y": "1969", "t": "the Official Languages Act", "ill": "generic", "lines": "Official bilingualism, a pillar of identity.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Official Languages Act still matter today?", "links": []}, {"y": "1971", "t": "official multiculturalism", "ill": "generic", "lines": "The “mosaic“, a world first.", "why": "It is still a live reference in colle documents today.", "q": "Why does official multiculturalism still matter today?", "links": []}, {"y": "1982", "t": "patriation & the Charter", "ill": "generic", "lines": "Canada's own constitution — but Quebec never signed.", "why": "It is still a live reference in colle documents today.", "q": "Why does patriation & the Charter still matter today?", "links": []}, {"y": "1995", "t": "the Quebec referendum", "ill": "generic", "lines": "The razor-thin No that nearly broke the country.", "why": "It is still a live reference in colle documents today.", "q": "Why does the Quebec referendum still matter today?", "links": []}, {"y": "2015", "t": "Truth and Reconciliation", "ill": "generic", "lines": "The residential-schools reckoning at the centre of national life.", "why": "It is still a live reference in colle documents today.", "q": "Why does Truth and Reconciliation still matter today?", "links": []}, {"y": "2021", "t": "unmarked graves", "ill": "generic", "lines": "Reconciliation becomes an urgent, painful national issue.", "why": "It is still a live reference in colle documents today.", "q": "Why does unmarked graves still matter today?", "links": []}];
+
+/* ---------- regions ---------- */
+const NATIONS=[{"nm": "A country with two official languages, one of which …", "fl": "♻️", "acc": "#B23A2E", "facts": ["A country with two official languages, one of which dominates everywhere but Quebec.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Is Canada a nation, or a federation of regions and peoples?", "links": []}, {"nm": "A “nation of immigrants“ built on Indigenous land it…", "fl": "♻️", "acc": "#6A4C93", "facts": ["A “nation of immigrants“ built on Indigenous land it is still reckoning with.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Quebec: how has a distinct society survived inside Canada — and could it still leave?", "links": []}, {"nm": "A vast country whose population hugs the US border.", "fl": "♻️", "acc": "#8A5A2B", "facts": ["A vast country whose population hugs the US border.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "The mosaic vs the melting pot: is Canadian multiculturalism a model?", "links": []}, {"nm": "An independent nation that keeps the British monarch…", "fl": "♻️", "acc": "#3F7A4B", "facts": ["An independent nation that keeps the British monarch as head of state.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Reconciliation with Indigenous peoples: how does a settler nation face its past?", "links": []}, {"nm": "A G7 power that defines itself partly by not being A…", "fl": "♻️", "acc": "#1F3A5F", "facts": ["A G7 power that defines itself partly by not being American.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "Can Canada reconcile its resource economy with its climate goals?", "links": []}, {"nm": "A multicultural “mosaic“ beside the American melting…", "fl": "♻️", "acc": "#2C7A7B", "facts": ["A multicultural “mosaic“ beside the American melting pot.", "Name the two sides of the tension — precisely."], "debate": "A paradox is a problematic waiting to be written.", "q": "How does Canada define itself against the United States?", "links": []}];
+
+/* ---------- state ---------- */
+const state={topics:{}};
+const RANKS=[[0,"Explorer"],[2,"Analyst"],[4,"Commentator"],[7,"Colle Ready"],[10,"Topic Master"]];
+
+/* ---------- a11y ---------- */
+let sizeIx=0;const SIZES=[18,20.5,23];
+function setSize(d){if(d===0)sizeIx=0;else sizeIx=Math.max(0,Math.min(2,sizeIx+d));document.documentElement.style.fontSize=SIZES[sizeIx]+"px";}
+function toggleReading(){const on=document.body.classList.toggle('reading');const b=document.getElementById('readBtn');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);}
+
+/* ---------- routing ---------- */
+function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById('view-'+v).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function rev(id){document.getElementById(id).classList.toggle('open');}
+function nm(id){return TOPICS[id]?.name||STUBS[id]||id;}
+
+/* ---------- ranks / progress / badges ---------- */
+function studiedCount(){return Object.keys(state.topics).length;}
+function updateMeta(){
+  const total=Object.keys(STUBS).length+Object.keys(TOPICS).length; // 8 stubs + 4 = 12
+  const seen=studiedCount();
+  document.getElementById('cpBar').style.width=Math.round(seen/total*100)+"%";
+  document.getElementById('cpCount').textContent=`${seen} / ${total} topics explored`;
+  let r=RANKS[0],next=null;
+  for(let i=0;i<RANKS.length;i++){if(seen>=RANKS[i][0]){r=RANKS[i];next=RANKS[i+1]||null;}}
+  document.getElementById('rankName').textContent=r[1];
+  const lo=r[0],hi=next?next[0]:lo+1,frac=next?Math.min(1,(seen-lo)/(hi-lo)):1;
+  document.getElementById('rankBar').style.width=Math.round(frac*100)+"%";
+  // badges (mastered topics)
+  const b=document.getElementById('badges');b.innerHTML="";
+  Object.keys(state.topics).filter(id=>state.topics[id]==="mastered").forEach(id=>{
+    b.innerHTML+=`<span class="badge"><span class="s" style="background:${ACC[id]||'#9C6B22'}"></span>${nm(id)} · Expert</span>`;
+  });
+}
+
+/* ---------- hub tree ---------- */
+function renderTree(){
+  const host=document.getElementById('tree');host.innerHTML="";
+  CHAPTERS.forEach((ch,ci)=>{
+    const total=ch.topics.length,done=ch.topics.filter(t=>state.topics[t]).length,pct=Math.round(done/total*100);
+    const el=document.createElement('div');el.className="chap";
+    el.innerHTML=`<button class="chap-btn" aria-expanded="false" onclick="toggleChap(${ci})"><span class="num">${ch.n}</span><span class="ct"><span class="ctitle">${ch.title}</span><span class="csub">${ch.sub}</span></span><span class="meter"><span class="bar"><i style="width:${pct}%"></i></span></span><span class="chev">▾</span></button><div class="chap-body"><div>${ch.topics.map(tileHTML).join("")}</div></div>`;
+    host.appendChild(el);
+  });
+  updateMeta();
+}
+function toggleChap(i){document.querySelectorAll('.chap')[i].classList.toggle('open');}
+const VIEWTILES={regions:{fn:"openNations()",ill:"regions",ds:"the great paradoxes"},timeline:{fn:"openTimeline()",ill:"clock",ds:"key dates, as mini-modules"}};
+function tileHTML(id){
+  if(VIEWTILES[id]){
+    const v=VIEWTILES[id],st=state.topics[id]||"",col=ACC[id]||"#9C6B22";
+    const ic=st?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>':"";
+    return `<button class="topic ${st?"done":""}" onclick="${v.fn}"><span class="swatch" style="background:${col}"></span><span class="thumb">${ILL[v.ill]}</span><span class="tn"><span class="nm">${nm(id)}</span><span class="ds">${v.ds}</span></span><span class="st">${ic}</span></button>`;
+  }
+  const st=state.topics[id]||"",detailed=!!TOPICS[id],col=ACC[id]||"#9C6B22";
+  const cls=(st==="mastered"?"mastered":st?"done":"")+(detailed?"":" soon");
+  const ic=st==="mastered"?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>':st?'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>':"";
+  return `<button class="topic ${cls}" onclick="${detailed?`openTopic('${id}',0)`:`soon('${id}')`}"><span class="swatch" style="background:${col}"></span><span class="thumb">${illFor(TOPICS[id]?.ill)}</span><span class="tn"><span class="nm">${nm(id)}</span><span class="ds">${detailed?"6-step exploration":"coming soon"}</span></span><span class="st">${ic}</span></button>`;
+}
+function soon(id){alert(`“${nm(id)}” isn’t wired in this prototype. In the real build it opens the same 6-step exploration, generated from its dossier card.\n\nEvery topic is generated from the country dossier.`);}
+
+document.getElementById('ill-panic').innerHTML=ILL.clock;
+document.getElementById('ill-guided').innerHTML=ILL.usmap;
+document.getElementById('ill-train').innerHTML=ILL.speak;
+
+/* ---------- today's question ---------- */
+function setToday(){
+  const pool=[["t1", "adv", 0], ["t2", "adv", 0], ["t3", "adv", 0], ["t4", "adv", 0], ["t5", "adv", 0], ["t6", "adv", 0], ["t7", "adv", 0], ["t8", "adv", 0], ["t9", "adv", 0], ["bigpicture", "adv", 0]];
+  const pick=pool[new Date().getDate()%pool.length];const t=TOPICS[pick[0]];
+  document.getElementById('todayQ').textContent=t.central.q;
+  document.getElementById('todayA').innerHTML=t.central.plan.map((p,i)=>`<b>${['I','II','III'][i]}.</b> ${p}`).join("<br>");
+}
+
+/* ---------- topic flow ---------- */
+let cur={id:null,step:0,max:0};
+function setAccent(id){const c=ACC[id]||"#9C6B22";const v=document.getElementById('view-topic');v.style.setProperty('--acc',c);v.style.setProperty('--accs',c+"18");}
+function openTopic(id,step){if(!TOPICS[id]){soon(id);return;}cur={id,step:step||0,max:step||0};setAccent(id);renderStep();go('topic');}
+function renderDots(){
+  const host=document.getElementById('dots');host.innerHTML="";
+  STEPS.forEach((s,i)=>{const locked=i>cur.max;const cls="d"+(i===cur.step?" active":"")+(i<cur.max?" cleared":"")+(locked?" locked":"");const b=document.createElement('button');b.className=cls;b.innerHTML=`<span class="ix">${i<cur.max?'✓':i+1}</span>${s.l}`;b.disabled=locked;if(!locked)b.onclick=()=>{cur.step=i;renderStep();};host.appendChild(b);});
+}
+function renderStep(){
+  const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
+  if(k==="observe"){
+    h=`<div class="eyebrow">Step 1 · Observe</div><div class="illo">${illFor(t.ill)}</div><div class="cap">${t.docType}</div><p class="qbig">${t.observeQ}</p>
+      <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
+  }else if(k==="understand"){
+    h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
+      <p class="sentence" style="margin-top:14px">${t.sentence}</p>
+      <ul class="facts">${t.facts5.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul>
+      <div class="pill-line"><div class="keybox"><div class="kt">The central debate</div><div class="kc">${t.debate}</div></div><div class="keybox"><div class="kt">The paradox</div><div class="kc">${t.paradox}</div></div></div>
+      <div class="reveal" id="rbW"><button onclick="rev('rbW')">Why does this matter? <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.whyMatter}</p><div class="tags">${t.whyTags.map(x=>`<span class="tag">${x}</span>`).join("")}</div></div></div></div>
+      <div class="reveal" id="rbM"><button onclick="rev('rbM')">Read a little more <span class="chev">▾</span></button><div class="body"><div><p class="lede" style="margin-top:14px">${t.learnMore}</p></div></div></div>`;
+  }else if(k==="connect"){
+    h=`<div class="eyebrow">Step 3 · Connect</div><h2 style="font-size:1.2rem">Build bridges</h2><p class="connect-intro lede">The best answers link themes. Tap a connected topic to see how it relates to ${t.name}.</p>
+      <div class="cchips">${t.connect.map((c,i)=>`<button class="cchip" id="cc${i}" onclick="connSel(${i})">${c.to}</button>`).join("")}</div>
+      <div class="conn-detail" id="connD"><div class="ct" id="connT"></div><div id="connW"></div></div>`;
+  }else if(k==="discuss"){
+    const blk=(l,lab)=>`<div class="levelblock" data-l="${l}"><div class="lh"><span class="d"></span>${lab}</div><ul>${t.discuss[l].map(q=>`<li>${q}</li>`).join("")}</ul></div>`;
+    h=`<div class="eyebrow">Step 4 · Discuss · Levels of Analysis</div><p class="lede" style="margin:6px 0 14px">Think through the topic, from facts to problematisation. Take any question into <b>Apply</b> to build an answer.</p>${blk('easy','Easy · the facts')}${blk('inter','Intermediate · analysis')}${blk('adv','Advanced · problematisation')}`;
+  }else if(k==="apply"){
+    h=`<div class="eyebrow">Step 5 · Apply · colle workshop</div>
+      <div class="tabs" style="margin-top:8px"><button class="tabb on" id="ap-1" onclick="applyTab(1)">Build a problematic</button><button class="tabb" id="ap-2" onclick="applyTab(2)">Build a plan</button><button class="tabb" id="ap-3" onclick="applyTab(3)">Answer a question</button></div>
+      <div id="apBody"></div>`;
+  }else if(k==="further"){
+    h=`<div class="eyebrow">Step 6 · Go Further</div><h2 style="font-size:1.2rem">Take it deeper</h2><div class="res">${t.res.map(r=>`<div class="res-c"><div class="rt">${r.t}</div><div class="ri">${r.i}</div></div>`).join("")}</div><div class="compare"><div class="rt">Connect & contrast</div><p>${t.compare} <b>Paradox —</b> ${t.paradox}</p></div>`;
+  }
+  s.innerHTML=h;
+  if(k==="apply")applyTab(1);
+  document.getElementById('ptop').style.width=Math.round((cur.step+1)/6*100)+"%";
+  document.getElementById('plab').textContent=`Step ${cur.step+1} of 6 · ${STEPS[cur.step].l}`;
+  document.getElementById('prevBtn').style.visibility=cur.step===0?"hidden":"visible";
+  document.getElementById('nextBtn').innerHTML=cur.step===5?'Finish ✓':'Next <span class="ar">→</span>';
+  renderDots();
+}
+function connSel(i){
+  const c=TOPICS[cur.id].connect[i];
+  document.querySelectorAll('.cchip').forEach((e,j)=>e.classList.toggle('on',j===i));
+  document.getElementById('connT').textContent=`${TOPICS[cur.id].name} ↔ ${c.to}`;
+  document.getElementById('connW').textContent=c.why;
+  document.getElementById('connD').classList.add('show');
+}
+function applyTab(n){
+  [1,2,3].forEach(i=>document.getElementById('ap-'+i).classList.toggle('on',i===n));
+  const t=TOPICS[cur.id],b=document.getElementById('apBody');
+  if(n===1){
+    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">A good problematic names a real tension — never “to what extent…”. Pick an angle:</p>
+      ${t.problematics.map((p,i)=>`<button class="opt" onclick="showProb(${i})"><span><b>${p.label}</b></span><span>→</span></button>`).join("")}
+      <div class="result" id="probR" style="display:none"></div>`;
+  }else if(n===2){
+    b.innerHTML=`<p class="lede" style="margin:6px 0 12px">For the question:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
+      <div class="reveal" id="planR"><button onclick="rev('planR')">Reveal a model 3-part plan <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol></div></div></div>`;
+  }else{
+    b.innerHTML=`<p class="lede" style="margin:6px 0 10px">Answer in your own words, then compare:</p><p class="qbig" style="font-size:1.1rem">${t.central.q}</p>
+      <textarea class="notes" placeholder="Your answer…"></textarea>
+      <div class="reveal" id="ansR" style="margin-top:12px"><button onclick="rev('ansR')">Reveal a model answer <span class="chev">▾</span></button><div class="body"><div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p></div></div></div>`;
+  }
+}
+function showProb(i){const p=TOPICS[cur.id].problematics[i];const r=document.getElementById('probR');r.style.display="block";r.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">${p.label} → a possible problematic</div><p class="qbig" style="font-size:1.12rem;margin:0">${p.q}</p>`;}
+function stepBy(d){
+  if(cur.step===5&&d>0){const was=state.topics[cur.id];if(was!=="mastered")state.topics[cur.id]="done";renderTree();toast(`${TOPICS[cur.id].name} explored`);go('hub');return;}
+  cur.step=Math.max(0,Math.min(5,cur.step+d));cur.max=Math.max(cur.max,cur.step);renderStep();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ---------- toast ---------- */
+let toT;function toast(msg){const el=document.getElementById('toast');document.getElementById('toastT').textContent=msg;el.classList.add('show');clearTimeout(toT);toT=setTimeout(()=>el.classList.remove('show'),2600);}
+
+/* ---------- panic ---------- */
+const STAT={"t1": "The Official Languages Act (1969).", "t2": "The 1980 & 1995 referendums (1995: 50.6% No).", "t3": "Official multiculturalism (1971).", "t4": "The Truth and Reconciliation Commission (2015).", "t5": "~75% of exports go south.", "t6": "Confederation (1867).", "t7": "A cherished universal system that is permanently stretched.", "t8": "A nation of pristine wilderness that is also a fossil-fuel giant.", "t9": "A national consensus on immigration tested by its own success.", "bigpicture": "Population: ~41 million (rising fast through immigration). Largest cities: Toronto, Montreal, Vancouver."};
+function openPanic(){
+  const host=document.getElementById('panicList');host.innerHTML="";
+  Object.keys(TOPICS).forEach(id=>{const t=TOPICS[id];host.innerHTML+=`<div class="panel panic-c" style="--acc:${ACC[id]};--accs:${ACC[id]}18"><h3>${t.name}</h3><div class="one"><b>Say this</b>${t.sentence}</div><div class="one"><b>Paradox</b>${t.paradox}</div><div class="one"><b>Statistic</b>${STAT[id]}</div><div class="one"><b>You might be asked</b>${t.central.q}</div><div class="one"><b>Opening</b>${t.central.hook}</div></div>`;});
+  go('panic');
+}
+
+/* ---------- timeline view ---------- */
+function openTimeline(){
+  state.topics.timeline=state.topics.timeline||"done";renderTree();
+  const host=document.getElementById('tlList');host.innerHTML="";
+  US_TL.forEach((n,i)=>{host.innerHTML+=`<div class="tlcard"><button class="tlcard-h" onclick="tlToggle(${i})"><span class="yr">${n.y}</span><span class="ti">${n.t}</span><span class="chev">▾</span></button><div class="tlcard-b"><div><div class="tlcard-in"><div class="illo" style="max-width:280px">${illFor(n.ill)}</div><p class="lede">${n.lines}</p><div class="keybox" style="margin-top:12px"><div class="kt">Why it still matters</div><div class="kc">${n.why}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
+  go('timeline');
+}
+function tlToggle(i){document.querySelectorAll('#tlList .tlcard')[i].classList.toggle('open');}
+
+/* ---------- nations view ---------- */
+function openNations(){
+  state.topics.regions=state.topics.regions||"done";renderTree();
+  const host=document.getElementById('natList');host.innerHTML="";
+  NATIONS.forEach((n,i)=>{host.innerHTML+=`<div class="nation" style="--acc:${n.acc}"><button class="nation-h" onclick="natToggle(${i})"><span class="fl">${n.fl}</span><span class="nm">${n.nm}</span><span class="chev">▾</span></button><div class="nation-b"><div><div class="nation-in"><ul class="facts">${n.facts.map(f=>`<li><span class="b">✓</span><span>${f}</span></li>`).join("")}</ul><div class="keybox" style="margin-top:12px"><div class="kt">The key debate</div><div class="kc">${n.debate}</div></div><p class="qbig" style="font-size:1.05rem;margin:14px 0 6px">${n.q}</p><div class="tags">${n.links.map(l=>`<span class="tag">↔ ${l}</span>`).join("")}</div></div></div></div></div>`;});
+  go('nations');
+}
+function natToggle(i){document.querySelectorAll('#natList .nation')[i].classList.toggle('open');}
+
+/* ---------- trainer ---------- */
+let tr={topic:"t1",level:"easy",t:30,timer:null,qIx:0};
+function openTrainer(){const s=document.getElementById('trTopic');s.innerHTML=Object.keys(TOPICS).map(id=>`<option value="${id}">${TOPICS[id].name}</option>`).join("");s.value=tr.topic;trTab('colle');trNew();go('trainer');}
+function trTab(which){
+  document.getElementById('tab-colle').classList.toggle('on',which==='colle');
+  document.getElementById('tab-det').classList.toggle('on',which==='det');
+  document.getElementById('trColle').style.display=which==='colle'?"":"none";
+  document.getElementById('trDet').style.display=which==='det'?"":"none";
+  if(which==='det')renderDet();
+}
+function trLevel(l){tr.level=l;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===l));trNew();}
+function trRandom(){const ids=Object.keys(TOPICS),lv=['easy','inter','adv'];tr.topic=ids[Math.floor(Math.random()*ids.length)];tr.level=lv[Math.floor(Math.random()*3)];document.getElementById('trTopic').value=tr.topic;document.querySelectorAll('#trColle .tabs .tabb[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===tr.level));trNew();toast('🎲 Random colle');}
+function trNew(){tr.topic=document.getElementById('trTopic').value;const arr=TOPICS[tr.topic].discuss[tr.level];tr.qIx=Math.floor(Math.random()*arr.length);const lab={easy:"🟢 Easy",inter:"🟡 Intermediate",adv:"🔴 Advanced"};document.getElementById('trLab').textContent=lab[tr.level]+" · "+TOPICS[tr.topic].name;document.getElementById('trQ').textContent=arr[tr.qIx];document.getElementById('trModel').style.display="none";document.getElementById('trReveal').style.display=tr.level==='adv'?"":"none";document.getElementById('trNotes').value="";trReset();}
+function trRevealModel(){const t=TOPICS[tr.topic];const m=document.getElementById('trModel');m.innerHTML=`<div class="eyebrow" style="margin-bottom:6px">A model approach</div><ol class="plan">${t.central.plan.map(p=>`<li>${p}</li>`).join("")}</ol><p class="hookline"><b>Hook —</b> ${t.central.hook}</p>`;m.style.display="block";document.getElementById('trReveal').style.display="none";trStop();}
+function trTimerToggle(){tr.timer?trStop():trStart();}
+function trStart(){document.getElementById('trTimerBtn').textContent="Pause";document.getElementById('trTimer').classList.add('run');tr.timer=setInterval(()=>{tr.t--;trPaint();if(tr.t<=0)trStop();},1000);}
+function trStop(){clearInterval(tr.timer);tr.timer=null;document.getElementById('trTimerBtn').textContent="Start timer";document.getElementById('trTimer').classList.remove('run');}
+function trReset(){trStop();tr.t=30;trPaint();}
+function trPaint(){const m=Math.floor(tr.t/60),s=tr.t%60;document.getElementById('trTimer').textContent=`${m}:${String(s).padStart(2,'0')}`;}
+
+/* ---------- article detective ---------- */
+const DET=[{"head": "In the news: language laws", "opts": [["Identity", true], ["Minority languages", true], ["National unity", true], ["Multiculturalism", true], ["Globalisation", false]]}, {"head": "In the news: Quebec's language/secularism laws", "opts": [["Nationalism", true], ["Identity", true], ["Federalism", true], ["Minority languages", true], ["The rule of law", false]]}, {"head": "In the news: immigration", "opts": [["Immigration", true], ["Identity", true], ["Diversity", true], ["Integration", true], ["Healthcare", false]]}];
+let detIx=0,detPick=new Set();
+function renderDet(){
+  detIx=Math.floor(Math.random()*DET.length);detPick=new Set();
+  const d=DET[detIx];
+  document.getElementById('trDet').innerHTML=`<div class="stage"><div class="s-body"><div class="eyebrow">Article detective</div><p class="qbig">“${d.head}”</p><p class="lede" style="margin:0 0 12px">Which themes would you bring into a colle? Tap all that apply.</p>${d.opts.map((o,i)=>`<button class="opt" id="det${i}" onclick="detTog(${i})"><span>${o[0]}</span><span class="tag2"></span></button>`).join("")}<div class="result" id="detR" style="display:none"></div></div><div class="s-foot"><button class="btn btn-ghost" onclick="renderDet()">New headline</button><span class="sp"></span><button class="btn btn-primary" onclick="detCheck()">Check</button></div></div>`;
+}
+function detTog(i){const el=document.getElementById('det'+i);if(detPick.has(i)){detPick.delete(i);el.classList.remove('sel');}else{detPick.add(i);el.classList.add('sel');}}
+function detCheck(){const d=DET[detIx];d.opts.forEach((o,i)=>{const el=document.getElementById('det'+i);el.style.pointerEvents="none";if(o[1]){el.style.borderColor="var(--g)";el.style.background="#eaf3ea";}else if(detPick.has(i)){el.style.borderColor="var(--r)";el.style.background="#f7ece8";}});const right=d.opts.filter(o=>o[1]).map(o=>o[0]);document.getElementById('detR').style.display="block";document.getElementById('detR').innerHTML=`<div class="eyebrow" style="margin-bottom:4px">The connected themes</div>${right.join(" · ")}. <span style="color:var(--slate)">Naming these links is exactly the reflex examiners reward.</span>`;}
+
+/* ---------- drill ---------- */
+const DRILL=[{"f": "True or false: Canada is fully bilingual?", "b": "Not quite — It is officially bilingual, but English dominates outside Quebec."}, {"f": "True or false: Quebec separatism is over?", "b": "Not quite — Support has fallen, but identity politics (language, secularism) persist."}, {"f": "True or false: multiculturalism means no problems?", "b": "Not quite — Integration, housing and recent backlash remain real challenges."}, {"f": "True or false: reconciliation is symbolic?", "b": "Not quite — It raises hard questions of land, rights, self-government and justice."}, {"f": "True or false: Canada is basically like the US?", "b": "Not quite — Canadians stress key differences (healthcare, guns, multiculturalism, peacekeeping)."}, {"f": "True or false: Canada is independent, so the monarchy is irrelevant?", "b": "Not quite — It remains a constitutional monarchy under the King."}, {"f": "French-speaker trap", "b": "say francophone / anglophone; the Québécois are the people of Quebec."}, {"f": "French-speaker trap", "b": "Québec = the province; Quebec City = its capital; Bill 21/96 are laws, not “bills“ in the French sense."}];
+let di=0;
+function openDrill(){di=0;showCard();document.getElementById('scrim').classList.add('open');}
+function closeDrill(){document.getElementById('scrim').classList.remove('open');}
+function showCard(){const c=DRILL[di];document.getElementById('dMeta').textContent=`Card ${di+1} of ${DRILL.length}`;document.getElementById('dFront').textContent=c.f;document.getElementById('dBack').textContent=c.b;document.getElementById('flip').classList.remove('flipped');document.getElementById('dHint').style.display="block";document.getElementById('dGrade').style.display="none";}
+function flip(){document.getElementById('flip').classList.add('flipped');document.getElementById('dHint').style.display="none";document.getElementById('dGrade').style.display="flex";}
+function grade(){di++;if(di>=DRILL.length){closeDrill();toast('Drill complete');return;}showCard();}
+document.getElementById('scrim').addEventListener('click',e=>{if(e.target.id==='scrim')closeDrill();});
+document.getElementById('flip').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrill();});
+
+/* ---------- live country news ---------- */
+const NEWS_WORKER="https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+(function(){
+  fetch(NEWS_WORKER+"?country=ca&n=3")
+    .then(r=>r.json())
+    .then(data=>{
+      if(!data.items||!data.items.length)return;
+      const list=document.getElementById('lnList');
+      list.innerHTML=data.items.map(it=>
+        `<li><span class="b">›</span><span><a href="${it.url}" target="_blank" rel="noopener" style="color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px">${it.title}</a></span></li>`).join("");
+      document.getElementById('lnSrc').textContent="· "+data.source+", today";
+      document.getElementById('liveNews').hidden=false;
+    })
+    .catch(()=>{ /* hors-ligne ou worker absent : le panneau reste masqué */ });
+})();
+
+/* init */
+renderTree();setToday();
+</script>
+</body>
+</html>
