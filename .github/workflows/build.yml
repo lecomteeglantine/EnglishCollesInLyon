@@ -1,0 +1,47 @@
+name: Rebuild site content
+
+# Se déclenche à chaque modification d'une source (dossiers de civi, chapitres
+# de vocabulaire, ou outils de génération) — et peut aussi être lancé à la main
+# depuis l'onglet Actions ("Run workflow").
+on:
+  push:
+    paths:
+      - "civilisation-*.md"
+      - "cpge_vocab_*.html"
+      - "build_all.py"
+      - "generate_atlas.py"
+      - "parse_chapters.py"
+      - "atlas-engine.html"
+      - "uk-hand.json"
+      - "flags.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le repo
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Reconstruire les fichiers générés
+        run: python3 build_all.py
+
+      - name: Publier les fichiers reconstruits
+        run: |
+          git config user.name "site-builder"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Rien à publier — les fichiers générés sont déjà à jour."
+          else
+            git commit -m "Reconstruction automatique du contenu généré"
+            git push
+          fi
