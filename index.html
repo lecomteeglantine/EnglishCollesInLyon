@@ -187,6 +187,56 @@ section{padding:54px 0}
   font-size:.9rem;line-height:1.55;color:var(--ink);
 }
 .news-question strong{color:var(--navy);display:inline-block;margin-bottom:3px}
+
+/* --- Word of the Day --- */
+.wotd{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  width:100%;
+  max-width:360px;
+  overflow:hidden;
+  margin-top:18px;
+  box-shadow:0 2px 6px rgba(36,59,83,.08), 0 22px 48px rgba(36,59,83,.16);
+}
+.wotd-top{
+  display:flex;align-items:center;gap:11px;
+  padding:14px 18px;
+  background:linear-gradient(135deg,var(--terra),#d98a63);
+  color:#fff;
+}
+.wotd-ico{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:rgba(255,255,255,.16);display:grid;place-items:center;
+}
+.wotd-ico svg{width:19px;height:19px;stroke:#fff}
+.wotd-header{font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.2;color:#fff}
+.wotd-header .sublab{
+  display:block;font-family:var(--font);font-weight:700;font-size:.62rem;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.82;margin-top:3px;
+}
+.wotd-body{padding:18px}
+.wotd-termrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.wotd-term{font-family:var(--display);font-size:1.45rem;line-height:1.15;font-weight:600;color:var(--navy)}
+.wotd-speak{
+  min-width:40px;min-height:40px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg2);color:var(--navy);font-size:1rem;cursor:pointer;font-family:inherit;
+}
+.wotd-speak:hover{background:#fff;color:var(--terra);border-color:var(--terra)}
+.wotd-speak:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.wotd-ipa{font-size:.9rem;color:var(--muted);margin-top:3px}
+.wotd-fr{font-weight:700;color:var(--terra);margin-top:10px}
+.wotd-def{font-size:.9rem;color:var(--ink);margin-top:8px;line-height:1.5}
+.wotd-ex{
+  margin-top:12px;font-size:.88rem;font-style:italic;color:var(--ink);
+  background:var(--bg2);border-left:4px solid var(--gold);border-radius:10px;padding:11px 13px;line-height:1.5;
+}
+.wotd-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+  font-weight:700;font-size:.88rem;color:var(--sage);
+}
+.wotd-link:hover{text-decoration:underline}
+body.nospeech .wotd-speak{display:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:26px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);
   display:flex;flex-direction:column;transition:transform .14s, box-shadow .25s}
@@ -340,6 +390,24 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
       <div class="news-source">Reuters</div>
       <a href="#" target="_blank" rel="noopener" class="news-link">Read article →</a>
       <div class="news-question"><strong>Question for discussion:</strong><br>Should British universities rethink their economic model?</div>
+    </div>
+  </div>
+
+  <div class="wotd" id="wotd" hidden>
+    <div class="wotd-top">
+      <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2M5.6 18.4 7 17M12 19v2M18.4 18.4 17 17M21 12h-2M18.4 5.6 17 7"/><circle cx="12" cy="12" r="4"/></svg></span>
+      <div class="wotd-header">Word of the Day<span class="sublab" id="wotdDate"></span></div>
+    </div>
+    <div class="wotd-body">
+      <div class="wotd-termrow">
+        <span class="wotd-term" id="wotdTerm"></span>
+        <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Écouter la prononciation" title="Écouter">🔊</button>
+      </div>
+      <div class="wotd-ipa" id="wotdIpa"></div>
+      <div class="wotd-fr" id="wotdFr"></div>
+      <div class="wotd-def" id="wotdDef"></div>
+      <div class="wotd-ex" id="wotdEx"></div>
+      <a class="wotd-link" id="wotdLink" href="#">Voir le chapitre →</a>
     </div>
   </div>
 
@@ -563,6 +631,53 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 </script>
 <script>
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
+</script>
+<script src="wotd-data.js"></script>
+<script>
+/* ===== Word of the Day ===== */
+(function(){
+  var list = window.WOTD || [];
+  var box = document.getElementById('wotd');
+  if (!list.length || !box) return;
+
+  // Mot du jour : même mot pour tout le monde, change chaque jour à minuit (heure locale)
+  var now = new Date();
+  var dayNumber = Math.floor((now - new Date(2026, 0, 1)) / 86400000);
+  var w = list[((dayNumber % list.length) + list.length) % list.length];
+
+  // Date du jour en anglais (ex. : Friday 10 July 2026)
+  var dateEN = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+
+  document.getElementById('wotdDate').textContent = dateEN;
+  document.getElementById('wotdTerm').textContent = w.term;
+  document.getElementById('wotdIpa').textContent = w.ipa + (w.pron ? ' · ' + w.pron : '');
+  document.getElementById('wotdFr').textContent = w.fr;
+  document.getElementById('wotdDef').textContent = w.def;
+  document.getElementById('wotdEx').textContent = w.ex;
+  var link = document.getElementById('wotdLink');
+  link.href = w.chFile;
+  link.textContent = 'Chapter ' + w.chNum + ' — ' + w.chTitle + ' →';
+
+  // Prononciation : respecte l'accent choisi (UK / US / AU / CA)
+  var ACC_LANG = { UK:'en-GB', US:'en-US', AU:'en-AU', CA:'en-CA' };
+  var hasSpeech = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  if (!hasSpeech) document.body.classList.add('nospeech');
+  document.getElementById('wotdSpeak').addEventListener('click', function(){
+    if (!hasSpeech) return;
+    var lang = ACC_LANG[LS.get('eclyon_accent','UK')] || 'en-GB';
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(w.term);
+    u.lang = lang;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var v = voices.filter(function(x){ return x.lang.replace('_','-').indexOf(lang) === 0; })[0]
+         || voices.filter(function(x){ return x.lang.indexOf('en') === 0; })[0];
+    if (v) u.voice = v;
+    u.rate = 0.92;
+    window.speechSynthesis.speak(u);
+  });
+
+  box.hidden = false;
+})();
 </script>
 </body>
 </html>
