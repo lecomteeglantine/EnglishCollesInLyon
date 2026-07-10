@@ -346,7 +346,10 @@ function escapeHTML(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;","
 function render(){
   const term=document.getElementById("search").value.toLowerCase().trim();
   const direction=document.getElementById("sort").value;
-  const filtered=events.filter(e=>{
+ const selectedCountry=document.getElementById("country").value;
+const data=selectedCountry==="usa" ? usaEvents : events;
+
+const filtered=data.filter(e=>{
     const hay=[e.date,e.title,e.summary,e.what,e.why,e.keywords.join(" "),e.colle].join(" ").toLowerCase();
     return (currentFilter==="all"||e.era===currentFilter)&&hay.includes(term);
   }).sort((a,b)=>direction==="asc"?a.year-b.year:b.year-a.year);
