@@ -109,6 +109,15 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
   .face{padding:26px 18px}
 }
 .fcard:focus-visible{outline:3px solid var(--terra);outline-offset:4px;border-radius:var(--r)}
+.speak{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);color:var(--navy);font-size:1.1rem;padding:6px 12px}
+.speak:hover{background:#fff;color:var(--terra);border-color:var(--terra)}
+.speak.small{min-width:38px;min-height:38px;font-size:.95rem;padding:4px 10px}
+.speak:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.term-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.back .term-row{margin-bottom:6px}
+.ex-row{display:flex;align-items:flex-start;gap:8px;margin-top:6px}
+.ex-row .ex{flex:1;margin-top:0}
+.nospeech .speak{display:none}
 .btn:focus-visible,select:focus-visible,.seg button:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
 </style>
 </head>
@@ -162,17 +171,17 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
       </div>
 
       <div class="scene">
-        <button class="fcard" id="fcard" type="button" aria-label="Carte de vocabulaire. Appuie pour retourner.">
+        <div class="fcard" id="fcard" tabindex="0" role="button" aria-label="Carte de vocabulaire. Appuie pour retourner.">
           <div class="face front" id="faceFront"></div>
           <div class="face back" id="faceBack"></div>
-        </button>
+        </div>
       </div>
 
       <div class="actions">
         <button class="btn again" id="againBtn" type="button">↺ À revoir</button>
         <button class="btn know" id="knowBtn" type="button">✓ Je connais</button>
       </div>
-      <p class="kbd-help"><kbd>Espace</kbd> retourner · <kbd>1</kbd> à revoir · <kbd>2</kbd> je connais</p>
+      <p class="kbd-help"><kbd>Espace</kbd> retourner · <kbd>1</kbd> à revoir · <kbd>2</kbd> je connais · <kbd>L</kbd> écouter</p>
     </section>
 
     <section class="done" id="done">
@@ -194,6 +203,39 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
 (function(){
   "use strict";
   var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
+
+  // ----- prononciation (synthèse vocale du navigateur) -----
+  // Respecte l'accent choisi sur la page d'accueil (UK / US / AU / CA)
+  var ACC_LANG = { UK: "en-GB", US: "en-US", AU: "en-AU", CA: "en-CA" };
+  var accent = "UK";
+  try { accent = localStorage.getItem("eclyon_accent") || "UK"; } catch (e) {}
+  var speechLang = ACC_LANG[accent] || "en-GB";
+  var hasSpeech = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+  if (!hasSpeech) document.body.classList.add("nospeech");
+
+  var voices = [];
+  function loadVoices(){ voices = window.speechSynthesis.getVoices() || []; }
+  if (hasSpeech){
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }
+  function pickVoice(){
+    // voix exacte (en-GB…), sinon n'importe quelle voix anglaise, sinon défaut
+    var exact = voices.filter(function(v){ return v.lang.replace("_","-").indexOf(speechLang) === 0; });
+    if (exact.length) return exact[0];
+    var en = voices.filter(function(v){ return v.lang.indexOf("en") === 0; });
+    return en.length ? en[0] : null;
+  }
+  function speak(text){
+    if (!hasSpeech || !text) return;
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = speechLang;
+    var v = pickVoice();
+    if (v) u.voice = v;
+    u.rate = 0.92;
+    window.speechSynthesis.speak(u);
+  }
   var chapSel = document.getElementById("chapSel");
   var dirEN = document.getElementById("dirEN"), dirFR = document.getElementById("dirFR");
   var startBtn = document.getElementById("startBtn");
@@ -281,23 +323,25 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
     fcard.classList.remove("flipped");
 
     var frontHTML, backHTML;
+    var speakTermBtn = '<button type="button" class="speak" data-say="' + esc(e.term) + '" aria-label="Écouter la prononciation" title="Écouter">🔊</button>';
+    var speakExBtn = '<button type="button" class="speak small" data-say="' + esc(e.ex) + '" aria-label="Écouter la phrase d\'exemple" title="Écouter la phrase">🔊</button>';
     if (direction === "EN"){
       frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
-        '<div class="term">' + esc(e.term) + '</div>' +
+        '<div class="term-row"><div class="term">' + esc(e.term) + '</div>' + speakTermBtn + '</div>' +
         (e.ipa ? '<div class="ipa">' + esc(e.ipa) + '</div>' : '') +
         '<span class="hint">Appuie pour voir la traduction</span>';
       backHTML = '<div class="fr">' + esc(e.fr) + '</div>' +
         (e.pron ? '<div class="pron">' + esc(e.pron) + '</div>' : '') +
         '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
-        '<div class="lbl">Example</div><div class="txt ex">' + esc(e.ex) + '</div>';
+        '<div class="lbl">Example</div><div class="ex-row"><div class="txt ex">' + esc(e.ex) + '</div>' + speakExBtn + '</div>';
     } else {
       frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
         '<div class="term">' + esc(e.fr) + '</div>' +
         '<span class="hint">Appuie pour voir le mot anglais</span>';
-      backHTML = '<div class="fr">' + esc(e.term) + '</div>' +
+      backHTML = '<div class="term-row"><div class="fr">' + esc(e.term) + '</div>' + speakTermBtn + '</div>' +
         '<div class="pron">' + esc(e.ipa) + (e.pron ? ' · ' + esc(e.pron) : '') + '</div>' +
         '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
-        '<div class="lbl">Example</div><div class="txt ex">' + esc(e.ex) + '</div>';
+        '<div class="lbl">Example</div><div class="ex-row"><div class="txt ex">' + esc(e.ex) + '</div>' + speakExBtn + '</div>';
     }
     faceFront.innerHTML = frontHTML;
     faceBack.innerHTML = backHTML;
@@ -332,9 +376,14 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
     done.scrollIntoView({behavior:"smooth", block:"center"});
   }
 
-  fcard.addEventListener("click", function(){
+  fcard.addEventListener("click", function(ev){
+    var sp = ev.target.closest ? ev.target.closest(".speak") : null;
+    if (sp){ speak(sp.getAttribute("data-say")); return; }
     flipped = !flipped;
     fcard.classList.toggle("flipped", flipped);
+  });
+  fcard.addEventListener("keydown", function(ev){
+    if (ev.key === "Enter"){ ev.preventDefault(); flipped = !flipped; fcard.classList.toggle("flipped", flipped); }
   });
 
   againBtn.addEventListener("click", function(){ next(false); });
@@ -358,6 +407,10 @@ footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;b
     if (ev.key === " "){ ev.preventDefault(); fcard.click(); }
     else if (ev.key === "1"){ next(false); }
     else if (ev.key === "2"){ next(true); }
+    else if (ev.key === "l" || ev.key === "L"){
+      var e = deck[idx] && deck[idx].e;
+      if (e) speak(e.term);
+    }
   });
 
   if (chapters.length === 0){
