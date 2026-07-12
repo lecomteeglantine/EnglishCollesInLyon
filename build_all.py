@@ -118,6 +118,72 @@ def build_civi_and_brief():
         f.write('window.BRIEF = '); json.dump(brief, f, ensure_ascii=False); f.write(';\n')
     OK.append(f"brief-data.js ({len(brief)} pays)")
 
+
+# ------------------------------------------------------------------ frises chronologiques
+STRAPS = {'gb':"From Magna Carta to Brexit and the return of Labour.",
+          'us':"From the Declaration of Independence to today's divided democracy.",
+          'ie':"From conquest and famine to independence and a social revolution.",
+          'ca':"From New France to a G7 nation still negotiating its identity.",
+          'au':"From the First Fleet to a Pacific nation debating its future.",
+          'nz':"From the Treaty of Waitangi to a small nation with a big voice.",
+          'in':"From the Raj to the world's largest democracy.",
+          'za':"From colonisation and apartheid to the rainbow nation."}
+
+def _tl_bucket(year):
+    if year < 1800: return ("origins", "Origins & foundations")
+    if year < 1914: return ("c19", "The long 19th century")
+    if year < 1960: return ("wars", "Wars & independence")
+    if year < 2000: return ("late20", "Late 20th century")
+    return ("today", "Contemporary")
+
+def build_timelines():
+    mds = sorted(glob.glob('civilisation-*.md'))
+    if not mds:
+        print('frises : aucun dossier trouvé, étape sautée'); return
+    flags = json.load(open('flags.json', encoding='utf-8'))
+    TL = {}
+    for path in mds:
+        num = re.search(r'civilisation-(\d)', path).group(1)
+        code, name = CODES[num], CNAMES[num]
+        C, D = GA.parse_dossier(path)
+        # mots-clés et questions disponibles pour enrichir les événements
+        cards = D['cards']
+        if code == 'gb' and os.path.exists('uk-timeline.json'):
+            events = json.load(open('uk-timeline.json', encoding='utf-8'))
+        else:
+            events = []
+            for d in D['dates']:
+                m = re.search(r'(\d{3,4})', d['y'])
+                if not m: continue
+                year = int(m.group(1))
+                era, tag = _tl_bucket(year)
+                txt = d['why']
+                parts = re.split(r';\s*', txt, maxsplit=1)
+                what = parts[0].strip()
+                why = parts[1].strip().capitalize() if len(parts) > 1 else "It remains a live reference in colle documents and debates today."
+                if not what.endswith('.'): what += '.'
+                if not why.endswith('.'): why += '.'
+                # carte thématique la plus proche (mots communs dans le titre)
+                twords = set(re.findall(r'[a-z]{4,}', (d['t'] + ' ' + txt).lower()))
+                best, score = None, 0
+                for c in cards:
+                    cw = set(re.findall(r'[a-z]{4,}', (c['title'] + ' ' + ' '.join(c['tags'])).lower()))
+                    s = len(twords & cw)
+                    if s > score: best, score = c, s
+                keywords = (best['tags'][:3] if best and best['tags'] else [t for t in list(twords)[:3]])
+                colle = (best['questions'][0] if best and best['questions'] else f"Why does {d['t']} still matter today?")
+                title = d['t'][0].upper() + d['t'][1:] if d['t'] else d['t']
+                events.append(dict(year=year, date=d['y'], era=era, tag=tag, title=title,
+                                   summary=what, what=what, why=why,
+                                   keywords=keywords[:3], colle=colle))
+        priority = [f"{d['y']} — {d['t']}" for d in D['dates']][:10]
+        TL[code] = dict(name=name, strap=STRAPS.get(code, ''), flag=flags.get(code, ''),
+                        events=events, priority=priority)
+    with open('timeline-data.js', 'w', encoding='utf-8') as f:
+        f.write('// Frises chronologiques par pays — généré automatiquement par build_all.py\n')
+        f.write('window.TIMELINES = '); json.dump(TL, f, ensure_ascii=False); f.write(';\n')
+    OK.append(f"timeline-data.js ({len(TL)} pays, {sum(len(v['events']) for v in TL.values())} événements)")
+
 # ------------------------------------------------------------------ atlas
 def build_atlases():
     if not os.path.exists('atlas-engine.html'):
@@ -161,6 +227,7 @@ def merge_uk(path):
 if __name__ == '__main__':
     build_vocab()
     build_civi_and_brief()
+    build_timelines()
     build_atlases()
     print('\nReconstruit :')
     for x in OK: print(' -', x)

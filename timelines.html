@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chronologies — Royaume-Uni · English Colles in Lyon</title>
+<title>Chronologies · English Colles in Lyon</title>
 <meta name="description" content="Frise chronologique interactive du Royaume-Uni pour préparer les colles d'anglais en CPGE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +169,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
   .dot{left:9px;top:31px}.details-grid,.toolkit-grid,.quiz-options{grid-template-columns:1fr}
   .event-toggle{padding:17px}.details{padding:16px 17px 19px}
 }
+.tl-flag{display:grid;place-items:center;overflow:hidden}.tl-flag svg{width:100%;height:100%;display:block;border-radius:inherit}
 </style>
 </head>
 <body>
@@ -222,26 +223,26 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Civilisation · Interactive timeline</div>
-      <h1>The United Kingdom through time</h1>
+      <h1 id="tlH1">The United Kingdom through time</h1>
       <p class="lead">Une frise chronologique interactive pour retenir les dates essentielles, comprendre leur importance et les réutiliser intelligemment en colle.</p>
       <p class="hint">Clique sur chaque événement pour afficher les explications, le vocabulaire et un angle de colle.</p>
     </div>
     <aside class="country-panel">
-      <div class="title"><div class="flag" aria-hidden="true">🇬🇧</div><div><h2>United Kingdom</h2><p>From Magna Carta to Brexit and the return of Labour.</p></div></div>
+      <div class="title"><div class="flag tl-flag" aria-hidden="true" id="tlFlag"></div><div><h2 id="tlName">United Kingdom</h2><p id="tlStrap"></p></div></div>
       <div class="country-select">
         <label for="country">Choisir un pays</label>
         <select id="country">
-          <option value="uk" selected>🇬🇧 United Kingdom</option>
-     <option value="usa">🇺🇸 United States</option>
-          <option disabled>🇮🇪 Ireland — bientôt</option>
-          <option disabled>🇨🇦 Canada — bientôt</option>
-          <option disabled>🇦🇺 Australia — bientôt</option>
-          <option disabled>🇳🇿 New Zealand — bientôt</option>
-          <option disabled>🇮🇳 India — bientôt</option>
-          <option disabled>🇿🇦 South Africa — bientôt</option>
+          <option value="gb" selected>United Kingdom</option>
+          <option value="us">United States</option>
+          <option value="ie">Ireland</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+          <option value="nz">New Zealand</option>
+          <option value="in">India</option>
+          <option value="za">South Africa</option>
         </select>
       </div>
-      <div class="hero-stats"><div class="stat"><b>24</b><span>key landmarks</span></div><div class="stat"><b>5</b><span>historical periods</span></div></div>
+      <div class="hero-stats"><div class="stat"><b id="statEvents">–</b><span>key landmarks</span></div><div class="stat"><b id="statPeriods">–</b><span>historical periods</span></div></div>
     </aside>
   </div>
 </section>
@@ -252,14 +253,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
       <div class="control"><label for="search">Rechercher un événement ou un mot-clé</label><input id="search" type="search" placeholder="Ex. Brexit, monarchy, NHS, Empire…"></div>
       <div class="control"><label for="sort">Ordre d'affichage</label><select id="sort"><option value="asc">Du plus ancien au plus récent</option><option value="desc">Du plus récent au plus ancien</option></select></div>
     </div>
-    <div class="pills" aria-label="Filtrer par période">
-      <button class="pill on" data-filter="all">Toutes les périodes</button>
-      <button class="pill" data-filter="state">Building the state</button>
-      <button class="pill" data-filter="empire">Empire & industry</button>
-      <button class="pill" data-filter="war">World wars</button>
-      <button class="pill" data-filter="welfare">Welfare & decolonisation</button>
-      <button class="pill" data-filter="modern">Modern Britain</button>
-    </div>
+    <div class="pills" id="pills" aria-label="Filtrer par période"></div>
     <div class="result-count" id="resultCount">24 événements affichés</div>
   </div>
 </section>
@@ -277,7 +271,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
     <h2>Comment utiliser cette frise en colle</h2>
     <div class="toolkit-grid">
       <div class="tool-card"><h3>La méthode en 4 étapes</h3><ol><li>Retenir la date et le nom de l'événement.</li><li>Expliquer ce qui s'est passé en une phrase.</li><li>Donner trois mots-clés précis.</li><li>Relier l'événement à un débat contemporain.</li></ol></div>
-      <div class="tool-card"><h3>Les 10 dates prioritaires</h3><ul><li>1215 — Magna Carta</li><li>1689 — Bill of Rights</li><li>1707 — Act of Union</li><li>1833 — Abolition of slavery</li><li>1948 — NHS & Windrush</li><li>1973 — Joining the EEC</li><li>1979 — Thatcher</li><li>1998 — Good Friday Agreement</li><li>2016 — Brexit referendum</li><li>2020 — Leaving the EU</li></ul></div>
+      <div class="tool-card"><h3>Les dates prioritaires</h3><ul id="priorityList"></ul></div>
     </div>
   </div>
 </section>
@@ -308,60 +302,49 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 </footer>
 
 <script>
-const events = [
-{year:1215,date:"1215",era:"state",tag:"Building the state",title:"Magna Carta",summary:"The king's power is formally limited.",what:"King John accepted a charter limiting royal authority and recognising that the monarch was not above the law.",why:"It became a founding myth of English liberties, constitutional restraint and the rule of law.",keywords:["limited government","the rule of law","individual liberties"],colle:"Can a symbolic historical text still shape modern democracy?"},
-{year:1534,date:"1534",era:"state",tag:"Building the state",title:"The Anglican Reformation",summary:"Henry VIII breaks with Rome.",what:"The Act of Supremacy made the monarch head of the Church of England.",why:"The King remains Supreme Governor of the established Church of England.",keywords:["Church of England","established church","religious settlement"],colle:"Is an established church compatible with a modern, secular society?"},
-{year:1688,date:"1688–89",era:"state",tag:"Building the state",title:"Glorious Revolution & Bill of Rights",summary:"Parliamentary supremacy is consolidated.",what:"James II was removed and William and Mary accepted limits on royal power.",why:"The event established the basis of constitutional monarchy and parliamentary sovereignty.",keywords:["constitutional monarchy","parliamentary sovereignty","Bill of Rights"],colle:"Does Britain need a written constitution?"},
-{year:1707,date:"1707",era:"state",tag:"Building the state",title:"Act of Union",summary:"England and Scotland form Great Britain.",what:"The English and Scottish Parliaments were united at Westminster.",why:"The survival of this Union is now questioned by Scottish nationalism and Brexit.",keywords:["the Union","Scottish identity","Westminster"],colle:"Is the United Kingdom still genuinely united?"},
-{year:1801,date:"1801",era:"state",tag:"Building the state",title:"Union with Ireland",summary:"The United Kingdom of Great Britain and Ireland is created.",what:"Ireland was formally incorporated into the United Kingdom.",why:"The later partition of Ireland and Northern Ireland's status remain central political questions.",keywords:["unionism","Irish nationalism","partition"],colle:"Could Irish reunification reshape the UK?"},
-{year:1807,date:"1807",era:"empire",tag:"Empire & industry",title:"Abolition of the slave trade",summary:"Britain bans the transatlantic slave trade.",what:"British ships were prohibited from transporting enslaved people, although slavery itself continued in the Empire.",why:"The date is central to debates over national pride, responsibility and the memory of slavery.",keywords:["abolition","slave trade","historical memory"],colle:"How should Britain remember both its role in slavery and in abolition?"},
-{year:1833,date:"1833",era:"empire",tag:"Empire & industry",title:"Abolition of slavery in the Empire",summary:"Slavery is abolished across most of the British Empire.",what:"The Slavery Abolition Act emancipated enslaved people in most British colonies.",why:"Compensation went mainly to slave owners, a fact now used in debates about reparations.",keywords:["emancipation","reparations","colonial legacy"],colle:"Should former colonial powers pay reparations?"},
-{year:1837,date:"1837–1901",era:"empire",tag:"Empire & industry",title:"The Victorian era",summary:"Industrial power and imperial expansion reach their height.",what:"Britain became the “workshop of the world” and ruled a vast empire under Queen Victoria.",why:"The era shaped Britain's global influence, class structure, cities and imperial memory.",keywords:["Industrial Revolution","British Empire","urbanisation"],colle:"Is imperial nostalgia preventing Britain from facing its past?"},
-{year:1914,date:"1914–18",era:"war",tag:"World wars",title:"The First World War",summary:"A generation is marked by mass warfare and loss.",what:"Britain fought with the Allies in a conflict that caused enormous military and civilian sacrifice.",why:"Remembrance culture and the poppy remain major elements of British public life.",keywords:["remembrance","the trenches","the poppy"],colle:"How do national rituals shape collective memory?"},
-{year:1939,date:"1939–45",era:"war",tag:"World wars",title:"The Second World War",summary:"Churchill, the Blitz and Britain's “finest hour”.",what:"Britain resisted Nazi Germany, endured the Blitz and emerged victorious but exhausted and indebted.",why:"WWII remains one of the strongest sources of British national mythology.",keywords:["the Blitz","Winston Churchill","national resilience"],colle:"Can heroic national myths distort present-day political choices?"},
-{year:1942,date:"1942",era:"welfare",tag:"Welfare & decolonisation",title:"The Beveridge Report",summary:"A blueprint for the post-war welfare state.",what:"William Beveridge proposed tackling want, disease, ignorance, squalor and idleness.",why:"The report laid the intellectual foundations of the modern British welfare state.",keywords:["welfare state","social solidarity","public services"],colle:"How much responsibility should the state assume for citizens' welfare?"},
-{year:1948,date:"1948",era:"welfare",tag:"Welfare & decolonisation",title:"Creation of the NHS",summary:"Universal healthcare becomes a national institution.",what:"The National Health Service began providing healthcare free at the point of use and funded through taxation.",why:"The NHS is both a symbol of social solidarity and a service under severe pressure.",keywords:["universal healthcare","taxation","waiting lists"],colle:"Can the NHS be reformed without betraying its founding promise?"},
-{year:1948.1,date:"1948",era:"welfare",tag:"Welfare & decolonisation",title:"The Empire Windrush arrives",summary:"A landmark in post-war immigration.",what:"Caribbean migrants arrived to help rebuild Britain after the war.",why:"Windrush symbolises multicultural Britain and the continuing legacy of Empire.",keywords:["Windrush generation","multiculturalism","post-colonial migration"],colle:"Is immigration a challenge to British identity, or one of its foundations?"},
-{year:1956,date:"1956",era:"welfare",tag:"Welfare & decolonisation",title:"The Suez Crisis",summary:"A symbol of Britain's declining global power.",what:"Britain, France and Israel intervened in Egypt but withdrew under international pressure.",why:"Suez exposed Britain's dependence on the United States and the end of superpower status.",keywords:["decline","special relationship","post-imperial power"],colle:"What remains of British global power today?"},
-{year:1973,date:"1973",era:"modern",tag:"Modern Britain",title:"The UK joins the EEC",summary:"Britain enters the European project.",what:"The UK joined the European Economic Community after years of debate and failed applications.",why:"Membership began a difficult relationship with Europe that culminated in Brexit.",keywords:["European integration","Euroscepticism","sovereignty"],colle:"Why has Britain's relationship with Europe always been so uneasy?"},
-{year:1979,date:"1979",era:"modern",tag:"Modern Britain",title:"Margaret Thatcher becomes Prime Minister",summary:"The neoliberal turn begins.",what:"Thatcher launched privatisation, deregulation, tax cuts and confrontation with trade unions.",why:"Thatcherism permanently reshaped the economy and Britain's political vocabulary.",keywords:["privatisation","deregulation","trade unions"],colle:"Did Thatcher modernise Britain or deepen its inequalities?"},
-{year:1984,date:"1984–85",era:"modern",tag:"Modern Britain",title:"The miners' strike",summary:"A decisive defeat for organised labour.",what:"Coal miners fought pit closures in a bitter year-long confrontation with Thatcher's government.",why:"The defeat accelerated deindustrialisation and weakened trade union power.",keywords:["industrial action","deindustrialisation","working class"],colle:"How does economic change reshape communities and political loyalties?"},
-{year:1997,date:"1997",era:"modern",tag:"Modern Britain",title:"New Labour comes to power",summary:"Tony Blair promises a “Third Way”.",what:"Labour returned after eighteen years, combining market economics with social investment.",why:"New Labour introduced devolution and reshaped the centre-left, but Iraq damaged its legacy.",keywords:["Third Way","modernisation","devolution"],colle:"Can centre-left parties combine market efficiency with social justice?"},
-{year:1998,date:"1998",era:"modern",tag:"Modern Britain",title:"The Good Friday Agreement",summary:"A peace settlement for Northern Ireland.",what:"The agreement created power-sharing institutions and largely ended the Troubles.",why:"Brexit complicated the border question and tested the settlement's stability.",keywords:["power-sharing","the Troubles","Irish border"],colle:"Can peace survive when constitutional identities remain unresolved?"},
-{year:1999,date:"1999",era:"modern",tag:"Modern Britain",title:"Devolution takes effect",summary:"New institutions open in Scotland, Wales and Northern Ireland.",what:"Holyrood, the Welsh Assembly and Stormont received powers from Westminster.",why:"Devolution granted autonomy but also strengthened national identities and independence movements.",keywords:["Holyrood","the Senedd","Stormont"],colle:"Has devolution saved the Union or weakened it?"},
-{year:2009,date:"2009",era:"modern",tag:"Modern Britain",title:"The Supreme Court is created",summary:"The highest court becomes institutionally separate from Parliament.",what:"The new Supreme Court replaced the judicial role of the Law Lords.",why:"It strengthened the visible separation of powers and later played a major role during Brexit.",keywords:["Supreme Court","judicial independence","separation of powers"],colle:"Should judges be able to restrain elected governments?"},
-{year:2014,date:"2014",era:"modern",tag:"Modern Britain",title:"Scottish independence referendum",summary:"Scotland votes 55% to remain in the UK.",what:"Scottish voters rejected independence, but the issue remained politically alive.",why:"Scotland's later Remain vote in the Brexit referendum revived demands for another vote.",keywords:["self-determination","Scottish nationalism","the Union"],colle:"Should Scotland be allowed to hold another referendum?"},
-{year:2016,date:"2016",era:"modern",tag:"Modern Britain",title:"The Brexit referendum",summary:"51.9% vote to leave the European Union.",what:"Leave won after a campaign centred on sovereignty, immigration and “taking back control”.",why:"The referendum exposed deep territorial, social and generational divisions.",keywords:["sovereignty","Euroscepticism","political fragmentation"],colle:"Was Brexit primarily a vote about Europe or about British identity?"},
-{year:2020,date:"2020",era:"modern",tag:"Modern Britain",title:"The UK leaves the European Union",summary:"Brexit becomes legally effective.",what:"The UK formally left the EU on 31 January 2020, with the transition ending later that year.",why:"The consequences for trade, immigration, Northern Ireland and Britain's world role remain major debates.",keywords:["trade barriers","Global Britain","regulatory divergence"],colle:"Has Brexit delivered the control and opportunities promised?"},
-{year:2022,date:"2022",era:"modern",tag:"Modern Britain",title:"Elizabeth II dies; Charles III succeeds",summary:"A historic royal transition.",what:"Queen Elizabeth II died after a seventy-year reign and Charles III became King.",why:"The transition reopened debates about monarchy, continuity, cost and relevance.",keywords:["succession","constitutional monarchy","republicanism"],colle:"Can the monarchy remain relevant to younger generations?"},
-{year:2024,date:"2024",era:"modern",tag:"Modern Britain",title:"Labour returns to power",summary:"Keir Starmer becomes Prime Minister.",what:"Labour won the general election after fourteen years of Conservative-led government.",why:"The change marked a major political reset amid pressure on public services, living standards and trust.",keywords:["general election","public services","political change"],colle:"Can a change of government restore trust in British politics?"}
-];
-
-const usaEvents = [
-
-{year:1776,date:"1776",era:"founding",tag:"Founding",title:"Declaration of Independence",summary:"The thirteen colonies declare independence from Britain."},
-
-{year:1787,date:"1787",era:"founding",tag:"Founding",title:"US Constitution adopted",summary:"The Constitution establishes the framework of the federal government."},
-
-{year:2021,date:"2021",era:"contemporary",tag:"Politics",title:"Joe Biden inaugurated",summary:"Joe Biden becomes the 46th President of the United States."}
-
-];
+/* ===== Frises multi-pays : les données viennent de timeline-data.js ===== */
+const T = window.TIMELINES || {};
 const timeline=document.getElementById("timeline");
 let currentFilter="all";
+let country = "gb";
+try{
+  const p = new URLSearchParams(location.search).get("country");
+  country = (p && T[p]) ? p : (localStorage.getItem("tl_country") && T[localStorage.getItem("tl_country")] ? localStorage.getItem("tl_country") : "gb");
+}catch(e){}
+document.getElementById("country").value = country;
 
-function escapeHTML(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));}
+function escapeHTML(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));}
+function cur(){ return T[country] || {name:"",strap:"",flag:"",events:[],priority:[]}; }
+
+function renderMeta(){
+  const c = cur();
+  document.getElementById("tlH1").textContent = c.name.replace(/^the /i, m=>m[0].toUpperCase()+m.slice(1)) + " through time";
+  document.getElementById("tlName").textContent = c.name.replace(/^the /i,"").replace(/^\w/,x=>x.toUpperCase());
+  document.getElementById("tlStrap").textContent = c.strap;
+  document.getElementById("tlFlag").innerHTML = c.flag || "";
+  document.getElementById("statEvents").textContent = c.events.length;
+  const eras = [];
+  c.events.slice().sort((a,b)=>a.year-b.year).forEach(e=>{ if(!eras.some(x=>x.era===e.era)) eras.push({era:e.era,tag:e.tag}); });
+  document.getElementById("statPeriods").textContent = eras.length;
+  const pills = document.getElementById("pills");
+  pills.innerHTML = '<button class="pill on" data-filter="all">Toutes les périodes</button>' +
+    eras.map(x=>`<button class="pill" data-filter="${escapeHTML(x.era)}">${escapeHTML(x.tag)}</button>`).join("");
+  currentFilter = "all";
+  pills.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
+    pills.querySelectorAll(".pill").forEach(x=>x.classList.remove("on"));p.classList.add("on");currentFilter=p.dataset.filter;render();
+  }));
+  document.getElementById("priorityList").innerHTML = c.priority.map(x=>`<li>${escapeHTML(x)}</li>`).join("");
+}
+
 function render(){
   const term=document.getElementById("search").value.toLowerCase().trim();
   const direction=document.getElementById("sort").value;
- const selectedCountry=document.getElementById("country").value;
-const data=usaEvents;
-
-const filtered=data.filter(e=>{
-    const hay=[e.date,e.title,e.summary,e.what,e.why,e.keywords.join(" "),e.colle].join(" ").toLowerCase();
+  const filtered=cur().events.filter(e=>{
+    const hay=[e.date,e.title,e.summary,e.what,e.why,(e.keywords||[]).join(" "),e.colle].join(" ").toLowerCase();
     return (currentFilter==="all"||e.era===currentFilter)&&hay.includes(term);
   }).sort((a,b)=>direction==="asc"?a.year-b.year:b.year-a.year);
-  timeline.innerHTML=filtered.map((e,i)=>`
-    <article class="event" data-era="${e.era}">
+  timeline.innerHTML=filtered.map(e=>`
+    <article class="event" data-era="${escapeHTML(e.era)}">
       <div class="date">${escapeHTML(e.date)}</div><span class="dot"></span>
       <div class="event-card">
         <button class="event-toggle" aria-expanded="false">
@@ -370,7 +353,7 @@ const filtered=data.filter(e=>{
         </button>
         <div class="details">
           <div class="details-grid"><div><h4>What happened?</h4><p>${escapeHTML(e.what)}</p></div><div><h4>Why it still matters</h4><p>${escapeHTML(e.why)}</p></div></div>
-          <div class="keywords">${e.keywords.map(k=>`<span class="keyword">${escapeHTML(k)}</span>`).join("")}</div>
+          <div class="keywords">${(e.keywords||[]).map(k=>`<span class="keyword">${escapeHTML(k)}</span>`).join("")}</div>
           <div class="colle"><strong>Colle angle:</strong> ${escapeHTML(e.colle)}</div>
         </div>
       </div>
@@ -384,22 +367,35 @@ const filtered=data.filter(e=>{
 }
 document.getElementById("search").addEventListener("input",render);
 document.getElementById("sort").addEventListener("change",render);
-document.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
-  document.querySelectorAll(".pill").forEach(x=>x.classList.remove("on"));p.classList.add("on");currentFilter=p.dataset.filter;render();
-}));
-document.getElementById("country").addEventListener("change",render);
+document.getElementById("country").addEventListener("change",()=>{
+  country=document.getElementById("country").value;
+  try{localStorage.setItem("tl_country",country);}catch(e){}
+  document.getElementById("search").value="";
+  renderMeta();render();buildQuiz();loadQuiz();
+});
 
-/* Quiz */
-const quiz=[
-{q:"Which event established the basis of parliamentary sovereignty?",a:["Magna Carta","Glorious Revolution and Bill of Rights","Act of Union","Brexit referendum"],c:1,e:"The Glorious Revolution and the Bill of Rights consolidated constitutional monarchy and parliamentary supremacy."},
-{q:"When was the NHS created?",a:["1942","1948","1956","1973"],c:1,e:"The NHS was created in 1948 and provides healthcare free at the point of use."},
-{q:"Which event is associated with post-war Caribbean immigration?",a:["The Suez Crisis","The Empire Windrush","The miners' strike","Devolution"],c:1,e:"The Empire Windrush arrived in 1948 and became a symbol of multicultural Britain."},
-{q:"What happened in 1707?",a:["The UK joined the EEC","The Act of Union united England and Scotland","The Good Friday Agreement was signed","The slave trade was abolished"],c:1,e:"The 1707 Act of Union created Great Britain by uniting England and Scotland."},
-{q:"Which referendum exposed major territorial and generational divisions?",a:["The 2014 Scottish referendum","The 2016 Brexit referendum","The 1999 devolution referendums","The 1975 EEC referendum"],c:1,e:"The 2016 Brexit referendum produced a narrow Leave victory and revealed deep fractures."},
-{q:"What did the Good Friday Agreement mainly address?",a:["Scottish independence","The Troubles in Northern Ireland","House of Lords reform","The monarchy"],c:1,e:"The 1998 Good Friday Agreement created power-sharing and largely ended the Troubles."}
-];
-let qi=0;
+/* ===== Quiz généré depuis les événements du pays ===== */
+let quiz=[], qi=0;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function buildQuiz(){
+  const ev = cur().events;
+  quiz = [];
+  if(ev.length < 4) return;
+  // Type 1 : « When was … ? »  ·  Type 2 : « What happened in … ? »
+  shuffle(ev.slice()).slice(0, 10).forEach((e, k)=>{
+    if(k % 2 === 0){
+      const wrong = shuffle(ev.filter(x=>x.date!==e.date).map(x=>x.date)).slice(0,3);
+      const opts = shuffle([e.date, ...wrong]);
+      quiz.push({q:`When: ${e.title}?`, a:opts, c:opts.indexOf(e.date), e:`${e.date} — ${e.summary}`});
+    } else {
+      const wrong = shuffle(ev.filter(x=>x.title!==e.title).map(x=>x.title)).slice(0,3);
+      const opts = shuffle([e.title, ...wrong]);
+      quiz.push({q:`What happened in ${e.date}?`, a:opts, c:opts.indexOf(e.title), e:`${e.date} — ${e.summary}`});
+    }
+  });
+}
 function loadQuiz(){
+  if(!quiz.length){document.getElementById("quizQuestion").textContent="";return;}
   const item=quiz[qi%quiz.length];
   document.getElementById("quizQuestion").textContent=item.q;
   const box=document.getElementById("quizOptions");box.innerHTML="";
@@ -417,7 +413,9 @@ function loadQuiz(){
   });
 }
 document.getElementById("quizNext").addEventListener("click",()=>{qi=(qi+1)%quiz.length;loadQuiz();});
-loadQuiz();
+
+/* init */
+renderMeta();render();buildQuiz();loadQuiz();
 
 /* Mobile nav */
 const burger=document.getElementById("burger"),nav=document.getElementById("nav");
