@@ -101,7 +101,8 @@
   .doc-slip{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:12px;padding:18px 20px;margin:10px 0 14px;box-shadow:var(--shadow)}
   .doc-kicker{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
   .doc-head{font-family:"Lexend";font-weight:600;font-size:1.15rem;line-height:1.3}
-  .doc-lines{margin-top:12px}.doc-lines i{display:block;height:9px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);margin-top:7px;width:100%}
+  .doc-body{margin-top:12px}.doc-body p{margin:0 0 10px;font-size:.97rem;line-height:1.65}
+  .doc-src{margin-top:6px;font-size:.78rem;font-style:italic;color:var(--slate)}
   .topic .tn{flex:1}.topic .tn .nm{display:block;font-weight:700;font-size:.98rem}.topic .tn .ds{display:block;font-size:.76rem;color:var(--slate)}
   .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
   .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
@@ -391,8 +392,8 @@ const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"conne
 const TOPICS={
  elections:{name:"The Electoral College",ill:"ballot",chapter:"Power & politics",
   docType:"A press article on the electoral map",
-  observeQ:"What does this map reveal about how America chooses its president?",
-  observeNotice:["A country coloured in two blocks — red states and blue states.","The winner of the most votes did not win the White House."],
+  observeQ:"What does this article reveal about how America chooses its president?",
+  observeNotice:["The map vocabulary of US politics: red states, blue states, swing states.","The winner of the most votes did not win the White House."],
   sentence:"Americans do not elect their President directly: the Electoral College can hand victory to the loser of the popular vote.",
   facts5:["538 electors; 270 are needed to win.","In most states, the winner takes all the electors.","The popular-vote loser won in 2000 and in 2016.","Campaigns focus on a handful of swing states.","Abolishing it would require a constitutional amendment."],
   debate:"Is the US electoral system truly democratic?",
@@ -411,8 +412,8 @@ const TOPICS={
 
  race:{name:"Race & civil rights",ill:"scales",chapter:"American society",
   docType:"A press article on the legacy of the March on Washington",
-  observeQ:"What does this crowd reveal about the promise of 1776?",
-  observeNotice:["A mass, peaceful demonstration at the heart of the capital.","A claim on the founding promise: “all men are created equal”."],
+  observeQ:"What does this article reveal about the promise of 1776?",
+  observeNotice:["The vocabulary of the movement: civil rights, segregation, equality.","A claim on the founding promise: “all men are created equal”."],
   sentence:"From slavery to segregation to Black Lives Matter, race remains the deepest fault line in American society.",
   facts5:["Slavery until 1865; legal segregation (Jim Crow) until the 1960s.","The Civil Rights Act (1964) and Voting Rights Act (1965) ended legal segregation.","MLK’s “I Have a Dream” (1963) is the moral summit of the movement.","Deep inequalities persist — the racial wealth gap.","Black Lives Matter renewed the protest tradition."],
   debate:"Has America lived up to its founding promise of equality?",
@@ -431,8 +432,8 @@ const TOPICS={
 
  guns:{name:"Guns & the 2nd Amendment",ill:"shield",chapter:"American society",
   docType:"A press article on America and its guns",
-  observeQ:"What does this ordinary shop reveal about American freedom?",
-  observeNotice:["Firearms sold like everyday consumer goods.","A constitutional right turned into a way of life."],
+  observeQ:"What does this article reveal about American freedom?",
+  observeNotice:["A constitutional right discussed like an everyday consumer good.","A constitutional right turned into a way of life."],
   sentence:"The right to bear arms is written into the Constitution, which makes gun control one of America’s most explosive debates.",
   facts5:["The 2nd Amendment (1791) protects the right to bear arms.","Mass shootings recur — and reform still stalls.","The NRA is one of the country’s most powerful lobbies.","Gun laws vary hugely from state to state.","The divide is partisan, cultural and regional."],
   debate:"Is the right to bear arms a fundamental freedom or a public-health crisis?",
@@ -451,8 +452,8 @@ const TOPICS={
 
  dream:{name:"The American Dream",ill:"liberty",chapter:"American society",
   docType:"A press article on immigration and the Dream",
-  observeQ:"What does this hall reveal about what America promises?",
-  observeNotice:["Millions passed through here to start again from nothing.","A country that defines itself by arrival, not origin."],
+  observeQ:"What does this article reveal about what America promises?",
+  observeNotice:["A country that defines itself by arrival, not origin.","A country that defines itself by arrival, not origin."],
   sentence:"The American Dream promises that anyone can rise through hard work — a powerful myth now under question.",
   facts5:["The US calls itself a nation of immigrants (Ellis Island).","The Dream: origins need not be destiny.","Social mobility has stalled in recent decades.","The melting pot vs the salad bowl — two models of integration.","The border and the Dreamers keep immigration on the front page."],
   debate:"Is the American Dream still alive?",
@@ -471,8 +472,8 @@ const TOPICS={
 
  constitution:{name:"The Constitution & the Court",ill:"scroll",chapter:"Power & politics",
   docType:"A press article on the Constitution in today’s battles",
-  observeQ:"What does the reverence for this document reveal about America?",
-  observeNotice:["A 230-year-old parchment treated almost as scripture.","Three words — “We the People” — that every side claims."],
+  observeQ:"What does this article reveal about America\u2019s constitutional faith?",
+  observeNotice:["A 230-year-old text treated almost as scripture.","Three words — “We the People” — that every side claims."],
   sentence:"The US Constitution divides power between three branches so that none can dominate — a system of checks and balances.",
   facts5:["Written in 1787 — the oldest written constitution still in force.","The Bill of Rights (1791): the first ten amendments.","Three branches: the President, Congress, the Supreme Court.","Judicial review lets the Court strike down laws.","Amending it is deliberately very hard."],
   debate:"Are checks and balances still working?",
@@ -491,7 +492,7 @@ const TOPICS={
 
  presidency:{name:"The presidency",ill:"dome",chapter:"Power & politics",
   docType:"A press article on presidential power",
-  observeQ:"What does this room reveal about American power?",
+  observeQ:"What does this article reveal about presidential power?",
   observeNotice:["The world’s most famous office — and one of the most watched.","One person, at the centre of a system built on distrust of one person."],
   sentence:"The US President is both head of state and head of government — but his power is constantly checked by Congress and the courts.",
   facts5:["Elected for four years through the Electoral College; two terms maximum.","Commander-in-chief of the armed forces.","Can veto laws and issue executive orders.","Checked: Congress votes the budget and can impeach.","Executive orders can be overturned by courts — or reversed by the next president."],
@@ -511,8 +512,8 @@ const TOPICS={
 
  religion:{name:"Religion & the culture wars",ill:"chapel",chapter:"American society",
   docType:"A press article on faith in American politics",
-  observeQ:"What does this full arena reveal about a constitutionally secular country?",
-  observeNotice:["Worship at the scale of a stadium concert.","Faith as a public, organised, political force."],
+  observeQ:"What does this article reveal about faith in a secular republic?",
+  observeNotice:["Faith described as a public, organised, political force.","Faith as a public, organised, political force."],
   sentence:"The US is at once deeply religious and constitutionally secular — which fuels intense culture wars.",
   facts5:["The 1st Amendment separates church and state.","Evangelicals are a major electoral force.","The Bible Belt anchors the religious South.","Roe v. Wade was overturned in 2022 — abortion went back to the states.","School curricula and LGBTQ+ rights are recurring battlegrounds."],
   debate:"Why does religion play such a role in US politics?",
@@ -531,8 +532,8 @@ const TOPICS={
 
  healthcare:{name:"Healthcare & inequality",ill:"heart",chapter:"American society",
   docType:"A press article on the cost of getting sick in America",
-  observeQ:"What does this bill reveal about American society?",
-  observeNotice:["An itemised price for every act of care.","Getting sick as a financial event."],
+  observeQ:"What does this article reveal about American society?",
+  observeNotice:["A price attached to every act of care.","Getting sick as a financial event."],
   sentence:"The world’s richest country has no universal healthcare — which makes inequality a defining American issue.",
   facts5:["No universal coverage: access depends on private insurance.","Obamacare (the ACA) expanded coverage — and remains contested.","Millions are uninsured; medical debt is common.","Medicare (the elderly) and Medicaid (the poor) are the public exceptions.","“The 1%” has become shorthand for the inequality debate."],
   debate:"Is healthcare a right or a commodity?",
@@ -551,8 +552,8 @@ const TOPICS={
 
  world:{name:"America in the world",ill:"globe",chapter:"America & the world",
   docType:"A press article on America’s place in the world",
-  observeQ:"What does this floating airbase reveal about American power?",
-  observeNotice:["A military reach no other country matches.","Power projected — and questioned — worldwide."],
+  observeQ:"What does this article reveal about America\u2019s place in the world?",
+  observeNotice:["A military and cultural reach no other country matches.","Power projected — and questioned — worldwide."],
   sentence:"Since 1945 the US has been the world’s leading power, torn between the temptations of isolationism and of intervention.",
   facts5:["Leader of the post-war order: the UN, NATO, the dollar.","The Cold War, then the War on Terror, shaped its role.","It swings between interventionism and “America First”.","Soft power: Hollywood, Big Tech, the universities.","The rivalry with China now defines the horizon."],
   debate:"Is the US still the world’s policeman?",
@@ -571,8 +572,8 @@ const TOPICS={
 
  bigpicture:{name:"Big picture · one nation or fifty?",ill:"flag",chapter:"Understanding America",
   docType:"A press overview of the United States today",
-  observeQ:"What does this map reveal about how America works?",
-  observeNotice:["Fifty states, each with its own constitution, laws and courts.","One recurring question: who decides — Washington or the states?"],
+  observeQ:"What does this article reveal about how America works?",
+  observeNotice:["Fifty states, each with its own constitution, laws and courts — in one country.","One recurring question: who decides — Washington or the states?"],
   sentence:"The US is built on a tension between a strong federal government and powerful individual states.",
   facts5:["A federal presidential republic of 50 states (~335 million people).","No official language at the federal level.","Each state has its own constitution, governor and courts.","States decide on guns, the death penalty, education — and, since 2022, abortion.","Blue states vs red states: American politics has a geography."],
   debate:"Who should decide: Washington or the states?",
@@ -690,7 +691,7 @@ function renderDots(){
 function renderStep(){
   const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
   if(k==="observe"){
-    h=`<div class="eyebrow">Step 1 · Observe</div><div class="doc-slip"><div class="doc-kicker">In a colle, you get a text — a press article. Imagine it:</div><div class="doc-head">${t.docType}</div><div class="doc-lines"><i></i><i></i><i style="width:62%"></i></div></div><p class="qbig">${t.observeQ}</p>
+    h=`<div class="eyebrow">Step 1 · Observe</div><div class="doc-slip"><div class="doc-kicker">Your document — read it as you would a colle text</div><div class="doc-head">${t.central.hook}</div><div class="doc-body"><p>${t.sentence}</p><p>${t.facts5.slice(0,3).join(" ")}</p></div><div class="doc-src">${t.docType} — composed from your course dossier.</div></div><p class="qbig">${t.observeQ}</p>
       <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
   }else if(k==="understand"){
     h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
