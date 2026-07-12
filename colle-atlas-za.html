@@ -96,7 +96,7 @@
   .topic:hover{background:var(--card-2)}
   .topic .swatch{flex:none;width:10px;height:10px;border-radius:50%}
   .topic .thumb{flex:none;width:44px;height:44px;border-radius:11px;overflow:hidden;background:var(--card-2)}.topic .thumb svg{width:100%;height:100%}
-  .topic .tn{flex:1}.topic .tn .nm{font-weight:700;font-size:.98rem}.topic .tn .ds{font-size:.76rem;color:var(--slate)}
+  .topic .tn{flex:1}.topic .tn .nm{display:block;font-weight:700;font-size:.98rem}.topic .tn .ds{display:block;font-size:.76rem;color:var(--slate)}
   .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
   .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
   .topic.soon{opacity:.62}.topic.soon .ds{color:var(--brass)}
@@ -431,7 +431,7 @@ function renderTree(){
   updateMeta();
 }
 function toggleChap(i){document.querySelectorAll('.chap')[i].classList.toggle('open');}
-const VIEWTILES={regions:{fn:"openNations()",ill:"regions",ds:"the great paradoxes"},timeline:{fn:"openTimeline()",ill:"clock",ds:"key dates, as mini-modules"}};
+const VIEWTILES={regions:{fn:"openNations()",ill:"regions",ds:"where the best colle questions are born"},timeline:{fn:"openTimeline()",ill:"clock",ds:"key dates, as mini-modules"}};
 function tileHTML(id){
   if(VIEWTILES[id]){
     const v=VIEWTILES[id],st=state.topics[id]||"",col=ACC[id]||"#9C6B22";
