@@ -331,7 +331,7 @@ def generate(md_path, engine_path, out_path):
     h = h.replace("openTopic('elections',0)", f"openTopic('{ids[0]}',0)")
     h = h.replace('let tr={topic:"elections"', f'let tr={{topic:"{ids[0]}"')
     h = h.replace('Fresh from the US', C['news'])
-    h = h.replace('?country=us&n=3', f"?country={C['code']}&n=3")
+    h = h.replace('const NEWS_COUNTRY="us";', f'const NEWS_COUNTRY="{C['code']}";')
     h = h.replace('<span class="t">The four regions</span><span class="d">Northeast · South · Midwest · West</span>',
                   f'<span class="t">{C["subview"]}</span><span class="d">{C.get("subsubshort", "tap to explore")}</span>')
     h = h.replace('<div class="eyebrow">The four regions</div><h1 style="font-size:1.8rem">One nation, four Americas</h1><p class="sub">Tap a region: essential facts, the key debate, a colle question and its connections.</p>',
