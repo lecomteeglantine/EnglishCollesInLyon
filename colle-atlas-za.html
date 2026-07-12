@@ -101,6 +101,8 @@
   .doc-slip{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:12px;padding:18px 20px;margin:10px 0 14px;box-shadow:var(--shadow)}
   .doc-kicker{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
   .doc-head{font-family:"Lexend";font-weight:600;font-size:1.15rem;line-height:1.3}
+  .obs-method{margin:10px 0 18px;padding-left:22px}
+  .obs-method li{margin-bottom:10px;line-height:1.55}
   .doc-body{margin-top:12px}.doc-body p{margin:0 0 10px;font-size:.97rem;line-height:1.65}
   .doc-src{margin-top:6px;font-size:.78rem;font-style:italic;color:var(--slate)}
   .topic .tn{flex:1}.topic .tn .nm{display:block;font-weight:700;font-size:.98rem}.topic .tn .ds{display:block;font-size:.76rem;color:var(--slate)}
@@ -465,6 +467,26 @@ function setToday(){
   document.getElementById('todayA').innerHTML=t.central.plan.map((p,i)=>`<b>${['I','II','III'][i]}.</b> ${p}`).join("<br>");
 }
 
+/* ---------- article du jour pour l'étape Observe ---------- */
+let _liveDoc=null;
+function loadLiveDoc(t){
+  const put=(kicker,head,src,href)=>{
+    const K=document.getElementById('liveDocKicker'),H=document.getElementById('liveDocHead'),S=document.getElementById('liveDocSrc');
+    if(!K||!H||!S)return;
+    K.textContent=kicker;
+    H.innerHTML=href?`<a href="${href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:4px">${head} ↗</a>`:head;
+    S.textContent=src;
+  };
+  const fallback=()=>put("No connection — a document from your dossier instead:",escapeHTML? t.central.hook : t.central.hook, t.docType+" — composed from your course dossier.",null);
+  const render=(d)=>{
+    if(!d||!d.items||!d.items.length){fallback();return;}
+    const it=d.items[0];
+    put("Today's real document · "+d.source, it.title, "Open it in a new tab, skim it, come back.", it.url);
+  };
+  if(_liveDoc){render(_liveDoc);return;}
+  fetch(NEWS_WORKER+"?country="+NEWS_COUNTRY+"&n=1").then(r=>r.json()).then(d=>{_liveDoc=d;render(d);}).catch(fallback);
+}
+
 /* ---------- topic flow ---------- */
 let cur={id:null,step:0,max:0};
 function setAccent(id){const c=ACC[id]||"#9C6B22";const v=document.getElementById('view-topic');v.style.setProperty('--acc',c);v.style.setProperty('--accs',c+"18");}
@@ -476,8 +498,21 @@ function renderDots(){
 function renderStep(){
   const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
   if(k==="observe"){
-    h=`<div class="eyebrow">Step 1 · Observe</div><div class="doc-slip"><div class="doc-kicker">Your document — read it as you would a colle text</div><div class="doc-head">${t.central.hook}</div><div class="doc-body"><p>${t.sentence}</p><p>${t.facts5.slice(0,3).join(" ")}</p></div><div class="doc-src">${t.docType} — composed from your course dossier.</div></div><p class="qbig">${t.observeQ}</p>
-      <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
+    h=`<div class="eyebrow">Step 1 · Observe · a real document</div>
+      <div class="doc-slip" id="liveDocSlip">
+        <div class="doc-kicker" id="liveDocKicker">Fetching today's press…</div>
+        <div class="doc-head" id="liveDocHead">${t.central.hook}</div>
+        <div class="doc-src" id="liveDocSrc"></div>
+      </div>
+      <p class="qbig">Read the article (2–3 minutes), then work through the colle method:</p>
+      <ol class="obs-method">
+        <li><b>Identify.</b> What type of text is it, from which outlet, and when?</li>
+        <li><b>Summarise.</b> The story in one English sentence — out loud.</li>
+        <li><b>Find the tension.</b> Who disagrees with whom, about what?</li>
+        <li><b>Connect.</b> Does it open onto <i>${t.name}</i> — or another of your themes? <span class="tags" style="margin-top:6px">${t.whyTags.map(x=>`<span class="tag">${x}</span>`).join("")}</span></li>
+        <li><b>Problematise.</b> Turn the story into one exam-worthy question.</li>
+      </ol>
+      <div class="reveal" id="rb"><button onclick="rev('rb')">Hints for this theme <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
   }else if(k==="understand"){
     h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
       <p class="sentence" style="margin-top:14px">${t.sentence}</p>
@@ -500,6 +535,7 @@ function renderStep(){
     h=`<div class="eyebrow">Step 6 · Go Further</div><h2 style="font-size:1.2rem">Take it deeper</h2><div class="res">${t.res.map(r=>`<div class="res-c"><div class="rt">${r.t}</div><div class="ri">${r.i}</div></div>`).join("")}</div><div class="compare"><div class="rt">Connect & contrast</div><p>${t.compare} <b>Paradox —</b> ${t.paradox}</p></div>`;
   }
   s.innerHTML=h;
+  if(k==="observe")loadLiveDoc(t);
   if(k==="apply")applyTab(1);
   document.getElementById('ptop').style.width=Math.round((cur.step+1)/6*100)+"%";
   document.getElementById('plab').textContent=`Step ${cur.step+1} of 6 · ${STEPS[cur.step].l}`;
@@ -610,8 +646,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrill();});
 
 /* ---------- live country news ---------- */
 const NEWS_WORKER="https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+const NEWS_COUNTRY="za";
 (function(){
-  fetch(NEWS_WORKER+"?country=za&n=3")
+  fetch(NEWS_WORKER+"?country="+NEWS_COUNTRY+"&n=3")
     .then(r=>r.json())
     .then(data=>{
       if(!data.items||!data.items.length)return;
