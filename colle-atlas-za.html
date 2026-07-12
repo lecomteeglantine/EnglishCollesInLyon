@@ -88,7 +88,7 @@
   .chap-btn{width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:var(--tap);text-align:left}
   .chap-btn:hover{background:var(--card-2)}
   .chap .num{font-family:"Lexend";font-weight:700;color:var(--brass);font-size:.9rem}
-  .chap .ct{flex:1}.chap .ct .ctitle{font-family:"Lexend";font-weight:600;font-size:1.02rem}.chap .ct .csub{font-size:.8rem;color:var(--slate);margin-top:2px}
+  .chap .ct{flex:1}.chap .ct .ctitle{display:block;font-family:"Lexend";font-weight:600;font-size:1.02rem}.chap .ct .csub{display:block;font-size:.8rem;color:var(--slate);margin-top:2px}
   .chap .meter{flex:none}.chap .meter .bar{width:64px;height:8px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}.chap .meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--brass-soft))}
   .chap .chev{flex:none;color:var(--slate);transition:transform .3s;font-size:1.1rem}.chap.open .chev{transform:rotate(180deg)}
   .chap-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.chap.open .chap-body{grid-template-rows:1fr}.chap-body>div{overflow:hidden}
@@ -278,7 +278,7 @@
     <div class="foot">
       <button onclick="alert('Connections — V2: take one theme (e.g. guns or healthcare) and compare it across the US, the UK, Canada and Australia.')">Connections across countries</button>
       <button onclick="openDrill()">5-minute memory drill</button>
-      <button onclick="alert('Final challenge — V2: an unseen document, 5 minutes to prepare, a problematic and a plan to build, then a graded model.')">US final challenge</button>
+      <button onclick="alert('Final challenge — V2: an unseen document, 5 minutes to prepare, a problematic and a plan to build, then a graded model.')">South Africa final challenge</button>
     </div>
     <div class="note"><div class="in"><b>Prototype note.</b> A working mock-up of the South Africa path, redesigned around <i>Observe → Understand → Connect → Discuss → Apply → Go Further</i> and the principle of progressive revelation. Themes are colour-coded. Fonts (Atkinson Hyperlegible &amp; Lexend) and the A−/A+ + Reading-mode controls are for low-vision and dyslexic readers. Illustrations are custom SVG (royalty-free); real licensed photos/videos would slot into the same frames. Progress is in-memory and resets on reload.</div></div>
   </div>
@@ -374,7 +374,7 @@ function illFor(k){return ILL[k]||ILL.generic;}
 
 /* ---------- structure ---------- */
 const ACC={"t1": "#B23A2E", "t2": "#6A4C93", "t3": "#8A5A2B", "t4": "#3F7A4B", "t5": "#1F3A5F", "t6": "#2C7A7B", "t7": "#A86E18", "t8": "#0072CE", "t9": "#B0791A", "bigpicture": "#1F3A5F", "regions": "#1F3A5F", "timeline": "#1F3A5F"};
-const CHAPTERS=[{"n": "01", "title": "Understanding South Africa", "sub": "the big picture", "topics": ["bigpicture", "regions", "timeline"]}, {"n": "02", "title": "Power & politics", "sub": "apartheid: the system · the anti-apartheid struggle & mandel", "topics": ["t1", "t2", "t3"]}, {"n": "03", "title": "Society", "sub": "the “rainbow nation“ 30 years on · inequality & land reform ", "topics": ["t4", "t5", "t6", "t7"]}, {"n": "04", "title": "South Africa & the world", "sub": "the economy, unemployment & the energy crisis · south africa", "topics": ["t8", "t9"]}];
+const CHAPTERS=[{"n": "01", "title": "Understanding South Africa", "sub": "the big picture", "topics": ["bigpicture", "regions", "timeline"]}, {"n": "02", "title": "Power & politics", "sub": "apartheid: the system", "topics": ["t1", "t2", "t3"]}, {"n": "03", "title": "Society", "sub": "the “rainbow nation“ 30 years on", "topics": ["t4", "t5", "t6", "t7"]}, {"n": "04", "title": "South Africa & the world", "sub": "the economy, unemployment & the energy crisis", "topics": ["t8", "t9"]}];
 const STUBS={"regions": "The great paradoxes", "timeline": "South Africa timeline"};
 const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"connect",l:"Connect"},{k:"discuss",l:"Discuss"},{k:"apply",l:"Apply"},{k:"further",l:"Go Further"}];
 
