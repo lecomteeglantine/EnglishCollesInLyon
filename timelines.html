@@ -177,6 +177,34 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .golinks{margin-top:12px;font-size:.85rem;color:#5d6b66}
 .golinks a{color:#7A9B76;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .golinks a:hover{color:#C46A4A}
+
+/* ===== radar d'actualité ===== */
+.radar-section{padding:10px 0 48px}
+.radar-box{border:1px dashed var(--terra,#C46A4A);border-radius:16px;padding:24px;background:#fff8f4}
+.radar-head h2{font-size:1.3rem;color:var(--navy,#243B53);margin:4px 0 8px}
+.radar-warn{font-size:.86rem;color:#7a5b4e;line-height:1.55;max-width:70ch}
+.radar-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.radar-item{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line,#E6D8C8);border-radius:12px;padding:14px 16px}
+.radar-item .ri-main{flex:1;min-width:220px}
+.radar-item a.ri-title{font-weight:700;color:var(--ink,#22312F);text-decoration:underline;text-underline-offset:3px}
+.radar-item a.ri-title:hover{color:var(--terra,#C46A4A)}
+.radar-item .ri-src{display:block;font-size:.76rem;color:#8a7a6e;margin-top:3px}
+.ri-propose{flex:none;min-height:40px;border:1.5px solid var(--sage,#7A9B76);background:#fff;color:#4e6b4a;font-weight:700;font-size:.82rem;border-radius:10px;padding:8px 14px;cursor:pointer;font-family:inherit}
+.ri-propose:hover{background:var(--sage,#7A9B76);color:#fff}
+.radar-loading{color:#8a7a6e;font-style:italic}
+.radar-foot{font-size:.8rem;color:#8a7a6e;margin-top:14px}
+/* fenêtre "proposer un jalon" */
+.jalon-mask{position:fixed;inset:0;background:rgba(36,49,47,.5);display:none;place-items:center;z-index:200;padding:20px}
+.jalon-mask.on{display:grid}
+.jalon-card{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.jalon-card h3{font-size:1.2rem;color:var(--navy,#243B53);margin:0 0 6px}
+.jalon-card p{font-size:.9rem;color:#5d6b66;margin:0 0 14px;line-height:1.55}
+.jalon-code{background:#f4efe6;border:1px solid var(--line,#E6D8C8);border-radius:10px;padding:12px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;white-space:pre-wrap;word-break:break-word;color:#3a3226}
+.jalon-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.jalon-btn{min-height:44px;border-radius:11px;padding:10px 18px;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid var(--line,#E6D8C8);background:#fff;color:var(--ink,#22312F)}
+.jalon-btn.primary{background:var(--terra,#C46A4A);border-color:var(--terra,#C46A4A);color:#fff}
+.jalon-copied{color:#4e6b4a;font-weight:700;font-size:.85rem;margin-top:10px;display:none}
+
 /* ===== frise visuelle ===== */
 .frise-wrap{background:var(--card,#fff);border:1px solid var(--line,#E6D8C8);border-radius:16px;padding:18px 6px 10px;margin-bottom:26px;box-shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07)}
 .frise-hint{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5d6b66;padding:0 16px 10px}
@@ -314,7 +342,36 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
     </div>
   </div>
 </section>
+
+<section class="radar-section">
+  <div class="wrap">
+    <div class="radar-box">
+      <div class="radar-head">
+        <div>
+          <div class="eyebrow" style="color:#C46A4A">Radar d'actualité · non vérifié</div>
+          <h2 id="radarTitle">L'actualité récente à considérer</h2>
+          <p class="radar-warn">⚠️ Ces titres viennent directement de la presse du jour et <b>ne font pas partie de la frise</b>. Ils ne sont ni sélectionnés ni vérifiés. Un événement n'entre dans la frise que si Mme Lecomte l'ajoute au dossier.</p>
+        </div>
+      </div>
+      <ul class="radar-list" id="radarList"><li class="radar-loading">Chargement de la presse…</li></ul>
+      <p class="radar-foot" id="radarFoot"></p>
+    </div>
+  </div>
+</section>
 </main>
+
+<div class="jalon-mask" id="jalonMask" role="dialog" aria-modal="true" aria-labelledby="jalonH">
+  <div class="jalon-card">
+    <h3 id="jalonH">Proposer ce fait comme jalon</h3>
+    <p>Si cet événement mérite d'entrer dans la frise, copie la ligne ci-dessous et colle-la dans la section <b>📅</b> du dossier du pays sur GitHub. La frise se régénérera toute seule. <b>Vérifie et corrige la date et la formulation avant de valider</b> — c'est ton regard qui fait la fiabilité de la frise.</p>
+    <div class="jalon-code" id="jalonCode"></div>
+    <div class="jalon-actions">
+      <button class="jalon-btn primary" id="jalonCopy">Copier la ligne</button>
+      <button class="jalon-btn" id="jalonClose">Fermer</button>
+    </div>
+    <div class="jalon-copied" id="jalonCopied">✓ Copié dans le presse-papier</div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap foot-grid">
@@ -444,7 +501,7 @@ document.getElementById("country").addEventListener("change",()=>{
   country=document.getElementById("country").value;
   try{localStorage.setItem("tl_country",country);}catch(e){}
   document.getElementById("search").value="";
-  renderMeta();render();buildQuiz();loadQuiz();
+  renderMeta();render();buildQuiz();loadQuiz();loadRadar();
 });
 
 /* ===== Quiz généré depuis les événements du pays ===== */
@@ -515,8 +572,57 @@ function renderFrise(list){
   }));
 }
 
+/* ===== radar d'actualité (piste 2 : proposition, jamais insertion auto) ===== */
+const RADAR_WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+function loadRadar(){
+  const list = document.getElementById("radarList");
+  const foot = document.getElementById("radarFoot");
+  document.getElementById("radarTitle").textContent = "L'actualité récente à considérer — " + cur().name.replace(/^the /i,"");
+  list.innerHTML = '<li class="radar-loading">Chargement de la presse…</li>';
+  foot.textContent = "";
+  fetch(RADAR_WORKER + "?country=" + country + "&n=6")
+    .then(r=>r.json())
+    .then(d=>{
+      if(!d.items || !d.items.length){ list.innerHTML = '<li class="radar-loading">Pas d\'actualité disponible pour le moment.</li>'; return; }
+      list.innerHTML = d.items.map((it,i)=>`
+        <li class="radar-item">
+          <span class="ri-main">
+            <a class="ri-title" href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)} ↗</a>
+            <span class="ri-src">${escapeHTML(d.source)} · aujourd'hui</span>
+          </span>
+          <button class="ri-propose" data-i="${i}">➕ proposer comme jalon</button>
+        </li>`).join("");
+      foot.textContent = "Source : " + d.source + ". Titres récupérés automatiquement, non filtrés.";
+      list.querySelectorAll(".ri-propose").forEach(btn=>btn.addEventListener("click",()=>openJalon(d.items[+btn.dataset.i])));
+    })
+    .catch(()=>{ list.innerHTML = '<li class="radar-loading">Presse momentanément indisponible.</li>'; });
+}
+
+function openJalon(item){
+  const year = new Date().getFullYear();
+  // ligne au format attendu par le dossier :  - **AAAA — Titre** → pourquoi ça compte.
+  const clean = item.title.replace(/\s+/g," ").trim();
+  const line = `- **${year} — ${clean}** → à compléter : pourquoi cet événement compte pour la civilisation du pays.`;
+  document.getElementById("jalonCode").textContent = line;
+  document.getElementById("jalonCopied").style.display = "none";
+  document.getElementById("jalonMask").classList.add("on");
+  const copyBtn = document.getElementById("jalonCopy");
+  copyBtn.onclick = ()=>{
+    navigator.clipboard.writeText(line).then(()=>{
+      document.getElementById("jalonCopied").style.display = "block";
+    }).catch(()=>{
+      // repli : sélectionner le texte pour copie manuelle
+      const r = document.createRange(); r.selectNodeContents(document.getElementById("jalonCode"));
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    });
+  };
+}
+document.getElementById("jalonClose").addEventListener("click",()=>document.getElementById("jalonMask").classList.remove("on"));
+document.getElementById("jalonMask").addEventListener("click",e=>{ if(e.target.id==="jalonMask") e.currentTarget.classList.remove("on"); });
+
+
 /* init */
-renderMeta();render();buildQuiz();loadQuiz();
+renderMeta();render();buildQuiz();loadQuiz();loadRadar();
 
 /* Mobile nav */
 const burger=document.getElementById("burger"),nav=document.getElementById("nav");
