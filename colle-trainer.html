@@ -81,6 +81,20 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
 .plan-tips{margin:0;padding-left:20px}.plan-tips li{margin:6px 0;line-height:1.55;color:var(--ink)}
 .notes-lab{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin:6px 0 0}
 
+
+.fi{display:inline-grid;place-items:center;width:20px;height:20px;vertical-align:-4px;margin-right:6px;color:var(--terra)}
+.fi svg{width:15px;height:15px}
+.lvl-n svg{width:17px;height:17px;stroke:#fff}
+.ei{display:inline-grid;place-items:center;width:18px;height:18px;vertical-align:-3px;margin-right:6px}
+.ei svg{width:14px;height:14px;stroke:var(--terra)}
+.eyebrow{display:inline-flex;align-items:center}
+.classnote{display:flex;gap:16px;align-items:flex-start;margin-top:22px;background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:14px;padding:20px 22px}
+.cn-ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--sage);display:grid;place-items:center}
+.cn-ic svg{width:22px;height:22px;stroke:#fff}
+.classnote h3{font-family:var(--display);font-weight:600;font-size:1.12rem;color:var(--navy);margin:0 0 8px}
+.classnote p{font-size:.9rem;color:var(--ink);line-height:1.6;margin:0 0 8px}
+.classnote p:last-child{margin-bottom:0}
+
 </style>
 </head>
 <body>
@@ -89,18 +103,18 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
   <nav class="nav"><a href="index.html">Accueil</a><a href="methodology.html">Méthodologie</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulaire</a><a href="timelines.html">Chronologies</a><a href="colle-trainer.html" class="active">Colle Trainer</a><a href="resources.html">Ressources</a></nav>
 </div></header>
 <main><div class="wrap">
-  <div class="page-head"><div class="eyebrow">Colle Trainer</div><h1>Prépare une colle sur l'actualité du jour</h1>
-    <p>Un dossier de documents authentiques du jour — articles et podcasts. Choisis-en un, puis suis les trois étapes : problématiser, construire un plan, prendre la parole en temps limité.</p></div>
+  <div class="page-head"><div class="eyebrow">Colle Trainer</div><h1>Prepare a colle on today's news</h1>
+    <p>A dossier of authentic documents from today — articles and podcasts. Pick one, then work through three steps: interrogate the document, frame a question and plan, and speak against the clock.</p></div>
 
   <div class="setup">
-    <div class="field"><label for="ctCountry">Pays</label>
+    <div class="field"><label for="ctCountry">Country</label>
       <select id="ctCountry"><option value="gb">United Kingdom</option><option value="us">United States</option><option value="ie">Ireland</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="in">India</option><option value="za">South Africa</option></select></div>
-    <button class="btn primary" id="ctGo">Tirer un dossier du jour</button>
+    <button class="btn primary" id="ctGo">Draw today's dossier</button>
   </div>
 
   <section class="dossier" id="dossier">
-    <h2>Le dossier du jour</h2><p class="sub" id="dossierSub"></p>
-    <div class="docs" id="docsList"><p class="loading">Chargement des documents…</p></div>
+    <h2>Today's dossier</h2><p class="sub" id="dossierSub"></p>
+    <div class="docs" id="docsList"><p class="loading">Loading today's documents…</p></div>
   </section>
 
   <section class="workshop" id="workshop">
@@ -112,8 +126,8 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
     </div>
     <div class="panel" id="stepPanel"></div>
     <div class="nav-steps">
-      <button class="btn" id="ctBack">← Changer de document</button>
-      <button class="btn primary" id="ctNext">Étape suivante →</button>
+      <button class="btn" id="ctBack">← Change document</button>
+      <button class="btn primary" id="ctNext">Next step →</button>
     </div>
   </section>
 </div></main>
@@ -135,8 +149,8 @@ function loadDossier(){
   const D=document.getElementById("dossier"), list=document.getElementById("docsList");
   document.getElementById("workshop").classList.remove("on");
   D.classList.add("on");
-  document.getElementById("dossierSub").textContent = CNAME[country] + " · " + new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
-  list.innerHTML='<p class="loading">Chargement des documents…</p>';
+  document.getElementById("dossierSub").textContent = CNAME[country] + " · " + new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
+  list.innerHTML="<p class=\"loading\">Loading today’s documents…</p>";
   Promise.all([
     fetch(WORKER+"?country="+country+"&n=3&type=news").then(r=>r.json()).catch(()=>({items:[]})),
     fetch(WORKER+"?country="+country+"&n=2&type=podcast").then(r=>r.json()).catch(()=>({items:[]}))
@@ -144,13 +158,13 @@ function loadDossier(){
     dossier=[];
     (news.items||[]).slice(0,3).forEach(it=>dossier.push({kind:"article",src:news.source,title:it.title,url:it.url}));
     (pod.items||[]).slice(0,2).forEach(it=>dossier.push({kind:"podcast",src:pod.source,title:it.title,url:it.url,audio:it.audio}));
-    if(!dossier.length){list.innerHTML='<p class="loading">Aucun document disponible pour le moment. Réessaie dans un instant.</p>';return;}
+    if(!dossier.length){list.innerHTML='<p class="loading">No documents available right now. Try again in a moment.</p>';return;}
     list.innerHTML=dossier.map((d,i)=>`
       <article class="doc ${d.kind}">
         <span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
         <h3>${esc(d.title)}</h3>
         <div class="acts">
-          <a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Écouter ↗":"Lire ↗"}</a>
+          <a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Listen ↗":"Read ↗"}</a>
           <button class="pick" data-i="${i}">Travailler ce doc</button>
         </div>
       </article>`).join("");
@@ -163,14 +177,35 @@ function startWorkshop(d){
   const c=document.getElementById("chosen");
   c.innerHTML=`<span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
     <h2>${esc(d.title)}</h2>
-    <a href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Ouvrir le podcast ↗":"Ouvrir l'article ↗"}</a>
+    <a href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Open the podcast ↗":"Open the article ↗"}</a>
     ${d.audio?`<audio controls preload="none" src="${esc(d.audio)}"></audio>`:""}`;
   document.getElementById("workshop").classList.add("on");
   renderStep();
   document.getElementById("workshop").scrollIntoView&&document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
-function fam(title,items){return `<div class="qfam"><h4>${esc(title)}</h4><ul>${items.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;}
+
+/* ===== icônes ===== */
+const IC = {
+  read:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c3-1.5 6-1.5 8 0 2-1.5 5-1.5 8 0v12c-3-1.5-6-1.5-8 0-2-1.5-5-1.5-8 0Z"/><path d="M12 6v12"/></svg>',
+  dig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>',
+  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg>',
+  source:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><circle cx="16" cy="8" r="5"/><path d="M16 6v2l1.5 1"/></svg>',
+  mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>',
+  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>',
+  bolt:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7Z"/></svg>',
+  gears:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  scale:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 8h12"/><path d="M6 8l-3 6a3 3 0 0 0 6 0Z"/><path d="M18 8l-3 6a3 3 0 0 0 6 0Z"/><path d="M8 20h8"/></svg>',
+  globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2Z"/><path d="M8 3v18"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-4a8 8 0 1 1 18-7Z"/></svg>',
+  pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+};
+// une icône par famille du niveau 2 (dans l'ordre)
+const FAMICON = [IC.source,IC.chat,IC.eye,IC.bolt,IC.gears,IC.book,IC.scale,IC.globe,IC.pen];
+
+function fam(title,items,icon){return `<div class="qfam"><h4>${icon?`<span class="fi">${icon}</span>`:""}${esc(title)}</h4><ul>${items.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;}
 function chipbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div></div>`;}
 function tagbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.tensions.map(c=>`<span class="chip tension">⚡ ${esc(c)}</span>`).join("")}</div></div>`;}
 
@@ -178,19 +213,19 @@ function renderStep(){
   [0,1,2].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
   const p=document.getElementById("stepPanel");
   if(step===0){
-    p.innerHTML=`<div class="eyebrow">Step 1 · Interrogate the document</div>
+    p.innerHTML=`<div class="eyebrow"><span class="ei">${IC.eye}</span>Step 1 · Interrogate the document</div>
       <p class="step-lead">Read or listen first. Then work through the three levels — pick the questions that actually bite on this document, you don't need them all.</p>
       <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">1</span><div><div class="lvl-t">${esc(METHOD.n1.label)}</div><div class="lvl-i">${esc(METHOD.n1.intro)}</div></div></div>
+        <div class="lvl-h"><span class="lvl-n">${IC.read}</span><div><div class="lvl-t">${esc(METHOD.n1.label)}</div><div class="lvl-i">${esc(METHOD.n1.intro)}</div></div></div>
         ${METHOD.n1.groups.map(g=>fam(g[0],g[1])).join("")}
       </div>
       ${chipbox(METHOD.verbs)}
       <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">2</span><div><div class="lvl-t">${esc(METHOD.n2.label)}</div><div class="lvl-i">${esc(METHOD.n2.intro)}</div></div></div>
-        ${METHOD.n2.groups.map(g=>fam(g[0],g[1])).join("")}
+        <div class="lvl-h"><span class="lvl-n">${IC.dig}</span><div><div class="lvl-t">${esc(METHOD.n2.label)}</div><div class="lvl-i">${esc(METHOD.n2.intro)}</div></div></div>
+        ${METHOD.n2.groups.map((g,i)=>fam(g[0],g[1],FAMICON[i]||IC.dig)).join("")}
       </div>
       <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">3</span><div><div class="lvl-t">Level 3 · Problematise</div><div class="lvl-i">Turn your analysis into THE question. Go to step 2 when you have it.</div></div></div>
+        <div class="lvl-h"><span class="lvl-n">${IC.spark}</span><div><div class="lvl-t">Level 3 · Problematise</div><div class="lvl-i">Turn your analysis into THE question. Go to step 2 when you have it.</div></div></div>
         ${tagbox(METHOD.keyq)}
       </div>
       <label class="notes-lab">Your working problematic (one sentence):</label>
@@ -204,7 +239,7 @@ function renderStep(){
       <div class="toolbox"><div class="tb-h">${esc(METHOD.plan.label)}</div><p class="tb-i">${esc(METHOD.plan.intro)}</p><ul class="plan-tips">${METHOD.plan.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
       ${["I — take the claim seriously","II — complicate or challenge it","III — reframe / transcend (optional)"].map((t,i)=>`<div class="qfam"><h4>${esc(t)}</h4><textarea class="notes" id="plan${i}" style="min-height:64px" placeholder="Governing idea + one piece of evidence…"></textarea></div>`).join("")}`;
   }else{
-    p.innerHTML=`<div class="eyebrow">Step 3 · Speak</div>
+    p.innerHTML=`<div class="eyebrow"><span class="ei">${IC.mic}</span>Step 3 · Speak</div>
       <p class="step-lead">Colle format: prepare, then present aloud without reading your notes. Use the transition bank to sound structured.</p>
       <div class="timer-box"><div class="timer" id="timer">10:00</div>
         <div class="timer-ctrl"><button class="btn" data-min="5">5 min</button><button class="btn" data-min="10">10 min</button><button class="btn" data-min="15">15 min</button></div>
@@ -213,6 +248,14 @@ function renderStep(){
       </div>
       <div class="toolbox"><div class="tb-h">${esc(METHOD.transitions.label)}</div><p class="tb-i">${esc(METHOD.transitions.intro)}</p>
         ${METHOD.transitions.groups.map(g=>`<div class="altfam"><span class="altfam-t">${esc(g[0])}</span><ul>${g[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
+      </div>
+      <div class="classnote">
+        <div class="cn-ic">${IC.chat}</div>
+        <div>
+          <h3>The real training ground is the classroom</h3>
+          <p>This trainer is a warm-up, not a substitute. The best place to learn how to problematise, think and speak in English is the English lesson itself — where you get a teacher's feedback, live debate, and the chance to actually use your voice in front of others.</p>
+          <p>Preparing your English colles properly is essential too. Think through these questions <b>yourself</b>, do your <b>own</b> research, and build your <b>own</b> reflexes and mental habits — rather than leaning on ChatGPT for every answer. The point is to train your mind, not to outsource it.</p>
+        </div>
       </div>`;
     setupTimer();
   }
