@@ -96,6 +96,10 @@
   .topic:hover{background:var(--card-2)}
   .topic .swatch{flex:none;width:10px;height:10px;border-radius:50%}
   .topic .thumb{flex:none;width:44px;height:44px;border-radius:11px;overflow:hidden;background:var(--card-2)}.topic .thumb svg{width:100%;height:100%}
+  .doc-slip{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:12px;padding:18px 20px;margin:10px 0 14px;box-shadow:var(--shadow)}
+  .doc-kicker{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+  .doc-head{font-family:"Lexend";font-weight:600;font-size:1.15rem;line-height:1.3}
+  .doc-lines{margin-top:12px}.doc-lines i{display:block;height:9px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);margin-top:7px;width:100%}
   .topic .tn{flex:1}.topic .tn .nm{display:block;font-weight:700;font-size:.98rem}.topic .tn .ds{display:block;font-size:.76rem;color:var(--slate)}
   .topic .st{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);display:grid;place-items:center}.topic .st svg{width:15px;height:15px}
   .topic.done .st{border-color:var(--g);background:var(--g);color:#fff}.topic.mastered .st{border-color:var(--brass);background:var(--brass);color:#fff}
@@ -383,7 +387,7 @@ const STEPS=[{k:"observe",l:"Observe"},{k:"understand",l:"Understand"},{k:"conne
 
 const TOPICS={
  elections:{name:"The Electoral College",ill:"ballot",chapter:"Power & politics",
-  docType:"Infographic · the 2016 electoral map",
+  docType:"A press article on the electoral map",
   observeQ:"What does this map reveal about how America chooses its president?",
   observeNotice:["A country coloured in two blocks — red states and blue states.","The winner of the most votes did not win the White House."],
   sentence:"Americans do not elect their President directly: the Electoral College can hand victory to the loser of the popular vote.",
@@ -403,7 +407,7 @@ const TOPICS={
   compare:"Compare with France (a direct, two-round vote) — and with most democracies, which elect their leader directly."},
 
  race:{name:"Race & civil rights",ill:"scales",chapter:"American society",
-  docType:"Photograph · the March on Washington, 1963",
+  docType:"A press article on the legacy of the March on Washington",
   observeQ:"What does this crowd reveal about the promise of 1776?",
   observeNotice:["A mass, peaceful demonstration at the heart of the capital.","A claim on the founding promise: “all men are created equal”."],
   sentence:"From slavery to segregation to Black Lives Matter, race remains the deepest fault line in American society.",
@@ -423,7 +427,7 @@ const TOPICS={
   compare:"Compare with South Africa (apartheid and truth-telling) and Brazil (slavery without formal segregation)."},
 
  guns:{name:"Guns & the 2nd Amendment",ill:"shield",chapter:"American society",
-  docType:"Photograph · a gun shop, anywhere in America",
+  docType:"A press article on America and its guns",
   observeQ:"What does this ordinary shop reveal about American freedom?",
   observeNotice:["Firearms sold like everyday consumer goods.","A constitutional right turned into a way of life."],
   sentence:"The right to bear arms is written into the Constitution, which makes gun control one of America’s most explosive debates.",
@@ -443,7 +447,7 @@ const TOPICS={
   compare:"Compare with the UK, Japan and Australia — which tightened gun laws sharply after mass shootings."},
 
  dream:{name:"The American Dream",ill:"liberty",chapter:"American society",
-  docType:"Photograph · Ellis Island, gateway of a nation",
+  docType:"A press article on immigration and the Dream",
   observeQ:"What does this hall reveal about what America promises?",
   observeNotice:["Millions passed through here to start again from nothing.","A country that defines itself by arrival, not origin."],
   sentence:"The American Dream promises that anyone can rise through hard work — a powerful myth now under question.",
@@ -463,7 +467,7 @@ const TOPICS={
   compare:"Compare with France (assimilation), Canada (the mosaic) and the UK (multiculturalism)."},
 
  constitution:{name:"The Constitution & the Court",ill:"scroll",chapter:"Power & politics",
-  docType:"Facsimile · “We the People”, 1787",
+  docType:"A press article on the Constitution in today’s battles",
   observeQ:"What does the reverence for this document reveal about America?",
   observeNotice:["A 230-year-old parchment treated almost as scripture.","Three words — “We the People” — that every side claims."],
   sentence:"The US Constitution divides power between three branches so that none can dominate — a system of checks and balances.",
@@ -483,7 +487,7 @@ const TOPICS={
   compare:"Compare with the UK (an unwritten constitution) and France (a codified one, easier to revise)."},
 
  presidency:{name:"The presidency",ill:"dome",chapter:"Power & politics",
-  docType:"Photograph · the Oval Office",
+  docType:"A press article on presidential power",
   observeQ:"What does this room reveal about American power?",
   observeNotice:["The world’s most famous office — and one of the most watched.","One person, at the centre of a system built on distrust of one person."],
   sentence:"The US President is both head of state and head of government — but his power is constantly checked by Congress and the courts.",
@@ -503,7 +507,7 @@ const TOPICS={
   compare:"Compare with France (semi-presidential) and the UK (a PM who depends on Parliament)."},
 
  religion:{name:"Religion & the culture wars",ill:"chapel",chapter:"American society",
-  docType:"Photograph · a megachurch on Sunday morning",
+  docType:"A press article on faith in American politics",
   observeQ:"What does this full arena reveal about a constitutionally secular country?",
   observeNotice:["Worship at the scale of a stadium concert.","Faith as a public, organised, political force."],
   sentence:"The US is at once deeply religious and constitutionally secular — which fuels intense culture wars.",
@@ -523,7 +527,7 @@ const TOPICS={
   compare:"Compare with France (laïcité) and the UK (an established but secularised church)."},
 
  healthcare:{name:"Healthcare & inequality",ill:"heart",chapter:"American society",
-  docType:"Document · a US hospital bill",
+  docType:"A press article on the cost of getting sick in America",
   observeQ:"What does this bill reveal about American society?",
   observeNotice:["An itemised price for every act of care.","Getting sick as a financial event."],
   sentence:"The world’s richest country has no universal healthcare — which makes inequality a defining American issue.",
@@ -543,7 +547,7 @@ const TOPICS={
   compare:"Compare with the UK (the NHS), France and Canada (universal systems)."},
 
  world:{name:"America in the world",ill:"globe",chapter:"America & the world",
-  docType:"Photograph · an aircraft carrier at sea",
+  docType:"A press article on America’s place in the world",
   observeQ:"What does this floating airbase reveal about American power?",
   observeNotice:["A military reach no other country matches.","Power projected — and questioned — worldwide."],
   sentence:"Since 1945 the US has been the world’s leading power, torn between the temptations of isolationism and of intervention.",
@@ -563,7 +567,7 @@ const TOPICS={
   compare:"Compare with China (the rising rival) and the EU (a partner and a competitor)."},
 
  bigpicture:{name:"Big picture · one nation or fifty?",ill:"flag",chapter:"Understanding America",
-  docType:"Map · fifty states, one federation",
+  docType:"A press overview of the United States today",
   observeQ:"What does this map reveal about how America works?",
   observeNotice:["Fifty states, each with its own constitution, laws and courts.","One recurring question: who decides — Washington or the states?"],
   sentence:"The US is built on a tension between a strong federal government and powerful individual states.",
@@ -683,7 +687,7 @@ function renderDots(){
 function renderStep(){
   const t=TOPICS[cur.id],k=STEPS[cur.step].k,s=document.getElementById('stage');let h="";
   if(k==="observe"){
-    h=`<div class="eyebrow">Step 1 · Observe</div><div class="illo">${illFor(t.ill)}</div><div class="cap">${t.docType}</div><p class="qbig">${t.observeQ}</p>
+    h=`<div class="eyebrow">Step 1 · Observe</div><div class="doc-slip"><div class="doc-kicker">In a colle, you get a text — a press article. Imagine it:</div><div class="doc-head">${t.docType}</div><div class="doc-lines"><i></i><i></i><i style="width:62%"></i></div></div><p class="qbig">${t.observeQ}</p>
       <div class="reveal" id="rb"><button onclick="rev('rb')">Reveal ideas <span class="chev">▾</span></button><div class="body"><div><ul class="facts" style="margin-top:14px">${t.observeNotice.map(n=>`<li><span class="b">•</span><span>${n}</span></li>`).join("")}</ul><p class="sentence" style="margin-top:14px">${t.sentence}</p></div></div></div>`;
   }else if(k==="understand"){
     h=`<div class="eyebrow">Step 2 · Understand</div><h2><span class="swatch"></span>${t.name}</h2>
