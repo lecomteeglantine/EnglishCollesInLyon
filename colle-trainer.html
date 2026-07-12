@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colle Trainer · English Colles in Lyon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--card:#FFF;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);--shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);--r:16px;--tap:48px;--maxw:1000px;--font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--display:"Fraunces",Georgia,serif}
+*{box-sizing:border-box}html{font-size:18px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}p{margin:0}a{color:inherit;text-decoration:none}button{font-family:inherit;font-size:1rem;cursor:pointer}
+.top{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;min-height:40px;display:inline-flex;align-items:center}.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}main{padding:30px 0 60px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin-top:6px}.page-head p{color:var(--muted);margin-top:8px;max-width:64ch}
+.setup{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin-top:24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
+.field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:170px}
+.field label{font-size:.8rem;font-weight:700;color:var(--navy)}
+.field select{min-height:var(--tap);border:1px solid var(--line);border-radius:11px;padding:8px 12px;font-family:inherit;font-size:.95rem;background:var(--bg2)}
+.btn{min-height:var(--tap);border-radius:12px;border:1.5px solid var(--line);background:var(--bg2);color:var(--ink);font-weight:700;padding:10px 20px;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{background:#fff}.btn.primary{background:var(--terra);border-color:var(--terra);color:#fff}.btn.primary:hover{background:#b25e41}
+.dossier{margin-top:28px;display:none}.dossier.on{display:block}
+.dossier h2{color:var(--navy);font-size:1.3rem;margin-bottom:4px}.dossier .sub{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px;transition:transform .14s,box-shadow .25s}
+.doc:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.doc .kind{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px}
+.doc.article .kind{color:var(--navy)}.doc.podcast .kind{color:var(--terra)}
+.doc h3{font-size:1.05rem;color:var(--ink);line-height:1.35}
+.doc .src{font-size:.8rem;color:var(--muted)}
+.doc .acts{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.doc .acts a,.doc .acts button{flex:1;text-align:center;min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:.84rem;font-weight:700;border:1px solid var(--line);background:var(--bg2)}
+.doc .acts .pick{background:var(--sage);border-color:var(--sage);color:#fff}.doc .acts .pick:hover{background:#688a64}
+.doc .acts .open:hover{color:var(--terra)}
+.loading{color:var(--muted);font-style:italic;padding:20px 0}
+.workshop{margin-top:30px;display:none}.workshop.on{display:block}
+.chosen{background:var(--navy);color:#fff;border-radius:var(--r);padding:18px 20px;margin-bottom:20px}
+.chosen .kind{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.chosen h2{color:#fff;font-size:1.2rem;margin:6px 0 4px}.chosen a{color:#ffd9c7;text-decoration:underline;font-size:.88rem;font-weight:700}
+.chosen audio{width:100%;margin-top:12px}
+.steps{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.stepbtn{flex:1;min-width:120px;min-height:44px;border-radius:11px;border:1.5px solid var(--line);background:var(--card);font-weight:700;font-size:.86rem;color:var(--muted)}
+.stepbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}.stepbtn.done{border-color:var(--sage);color:var(--sage)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px}
+.qfam{margin-bottom:18px}.qfam:last-child{margin-bottom:0}
+.qfam h4{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
+.qfam ul{margin:0;padding-left:20px}.qfam li{margin:7px 0;line-height:1.5}
+.notes{width:100%;min-height:120px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:.95rem;background:var(--bg2);margin-top:12px;resize:vertical}
+.timer-box{text-align:center;padding:14px 0}
+.timer{font-family:var(--display);font-size:3rem;color:var(--navy);font-variant-numeric:tabular-nums}
+.timer.warn{color:var(--terra)}
+.timer-ctrl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.hint{font-size:.85rem;color:var(--muted);margin-top:10px;text-align:center}
+.nav-steps{display:flex;justify-content:space-between;margin-top:18px;gap:10px}
+footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+@media (max-width:640px){.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="name">English Colles in Lyon</span><span class="sub">CPGE · Anglais</span></div>
+  <nav class="nav"><a href="index.html">Accueil</a><a href="methodology.html">Méthodologie</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulaire</a><a href="timelines.html">Chronologies</a><a href="colle-trainer.html" class="active">Colle Trainer</a><a href="resources.html">Ressources</a></nav>
+</div></header>
+<main><div class="wrap">
+  <div class="page-head"><div class="eyebrow">Colle Trainer</div><h1>Prépare une colle sur l'actualité du jour</h1>
+    <p>Un dossier de documents authentiques du jour — articles et podcasts. Choisis-en un, puis suis les trois étapes : problématiser, construire un plan, prendre la parole en temps limité.</p></div>
+
+  <div class="setup">
+    <div class="field"><label for="ctCountry">Pays</label>
+      <select id="ctCountry"><option value="gb">United Kingdom</option><option value="us">United States</option><option value="ie">Ireland</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="in">India</option><option value="za">South Africa</option></select></div>
+    <button class="btn primary" id="ctGo">Tirer un dossier du jour</button>
+  </div>
+
+  <section class="dossier" id="dossier">
+    <h2>Le dossier du jour</h2><p class="sub" id="dossierSub"></p>
+    <div class="docs" id="docsList"><p class="loading">Chargement des documents…</p></div>
+  </section>
+
+  <section class="workshop" id="workshop">
+    <div class="chosen" id="chosen"></div>
+    <div class="steps">
+      <button class="stepbtn on" data-s="0" id="sb0">1 · Problématiser</button>
+      <button class="stepbtn" data-s="1" id="sb1">2 · Construire un plan</button>
+      <button class="stepbtn" data-s="2" id="sb2">3 · Prendre la parole</button>
+    </div>
+    <div class="panel" id="stepPanel"></div>
+    <div class="nav-steps">
+      <button class="btn" id="ctBack">← Changer de document</button>
+      <button class="btn primary" id="ctNext">Étape suivante →</button>
+    </div>
+  </section>
+</div></main>
+<footer>English Colles in Lyon — Colle Trainer</footer>
+
+<script>
+const QUESTIONS = {"Comprendre le document": ["What type of document is this (news report, opinion piece, interview, podcast)?", "Who produced it, and for what audience?", "What is the central claim or story in one sentence?", "What is explicitly said — and what is implied or left out?"], "Situer et contextualiser": ["Which broader debate does this document belong to?", "What background does an examiner expect you to bring to it?", "Is this a recent development or the latest chapter of an old story?", "Which country-specific factors explain why this is happening here?"], "Analyser la tension": ["Who disagrees with whom in this document, and why?", "What values or interests are in conflict?", "What is the strongest argument on each side?", "What paradox or contradiction does the situation reveal?"], "Problématiser": ["Turn the story into a single exam-worthy question.", "Rephrase it as a 'To what extent…?' or 'Is it…?' question.", "What would a naive reading miss that your problematic captures?"], "Élargir et conclure": ["How does this connect to other themes on the syllabus?", "What comparison with another English-speaking country is illuminating?", "What would you predict, or what is at stake for the future?", "What nuanced, balanced conclusion can you defend?"]};
+const WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+const CNAME = {gb:"United Kingdom",us:"United States",ie:"Ireland",ca:"Canada",au:"Australia",nz:"New Zealand",in:"India",za:"South Africa"};
+function esc(s){const d=document.createElement("div");d.textContent=s||"";return d.innerHTML;}
+let country="gb", dossier=[], chosen=null, step=0;
+
+document.getElementById("ctGo").addEventListener("click",()=>{
+  country=document.getElementById("ctCountry").value;
+  loadDossier();
+});
+
+function loadDossier(){
+  const D=document.getElementById("dossier"), list=document.getElementById("docsList");
+  document.getElementById("workshop").classList.remove("on");
+  D.classList.add("on");
+  document.getElementById("dossierSub").textContent = CNAME[country] + " · " + new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+  list.innerHTML='<p class="loading">Chargement des documents…</p>';
+  Promise.all([
+    fetch(WORKER+"?country="+country+"&n=3&type=news").then(r=>r.json()).catch(()=>({items:[]})),
+    fetch(WORKER+"?country="+country+"&n=2&type=podcast").then(r=>r.json()).catch(()=>({items:[]}))
+  ]).then(([news,pod])=>{
+    dossier=[];
+    (news.items||[]).slice(0,3).forEach(it=>dossier.push({kind:"article",src:news.source,title:it.title,url:it.url}));
+    (pod.items||[]).slice(0,2).forEach(it=>dossier.push({kind:"podcast",src:pod.source,title:it.title,url:it.url,audio:it.audio}));
+    if(!dossier.length){list.innerHTML='<p class="loading">Aucun document disponible pour le moment. Réessaie dans un instant.</p>';return;}
+    list.innerHTML=dossier.map((d,i)=>`
+      <article class="doc ${d.kind}">
+        <span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
+        <h3>${esc(d.title)}</h3>
+        <div class="acts">
+          <a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Écouter ↗":"Lire ↗"}</a>
+          <button class="pick" data-i="${i}">Travailler ce doc</button>
+        </div>
+      </article>`).join("");
+    list.querySelectorAll(".pick").forEach(b=>b.addEventListener("click",()=>startWorkshop(dossier[+b.dataset.i])));
+  });
+}
+
+function startWorkshop(d){
+  chosen=d; step=0;
+  const c=document.getElementById("chosen");
+  c.innerHTML=`<span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
+    <h2>${esc(d.title)}</h2>
+    <a href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Ouvrir le podcast ↗":"Ouvrir l'article ↗"}</a>
+    ${d.audio?`<audio controls preload="none" src="${esc(d.audio)}"></audio>`:""}`;
+  document.getElementById("workshop").classList.add("on");
+  renderStep();
+  document.getElementById("workshop").scrollIntoView&&document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function renderStep(){
+  [0,1,2].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
+  const p=document.getElementById("stepPanel");
+  if(step===0){
+    const fams=["Comprendre le document","Situer et contextualiser","Analyser la tension","Problématiser"];
+    p.innerHTML=`<div class="eyebrow">Étape 1 · Interroge le document</div>
+      <p style="margin:8px 0 16px;color:var(--muted)">Lis ou écoute le document, puis passe ces questions en revue. Elles te mènent de la simple compréhension à la problématique.</p>
+      ${fams.map(f=>`<div class="qfam"><h4>${f}</h4><ul>${QUESTIONS[f].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
+      <textarea class="notes" id="notes0" placeholder="Note ici ta problématique en une phrase…"></textarea>`;
+  }else if(step===1){
+    p.innerHTML=`<div class="eyebrow">Étape 2 · Construis ton plan</div>
+      <p style="margin:8px 0 16px;color:var(--muted)">À partir de ta problématique, esquisse un plan en deux ou trois parties. Chaque partie = une idée directrice + un exemple tiré du document ou de tes connaissances.</p>
+      ${["I. Première partie","II. Deuxième partie","III. Troisième partie (facultative)"].map((t,i)=>`<div class="qfam"><h4>${t}</h4><textarea class="notes" id="plan${i}" style="min-height:70px" placeholder="Idée directrice + exemple…"></textarea></div>`).join("")}
+      <div class="qfam"><h4>Élargir et conclure</h4><ul>${QUESTIONS["Élargir et conclure"].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;
+  }else{
+    p.innerHTML=`<div class="eyebrow">Étape 3 · Prends la parole</div>
+      <p style="margin:8px 0 16px;color:var(--muted)">Format colle : prépare, puis parle. Lance le minuteur et présente ta problématique et ton plan à voix haute, sans lire tes notes.</p>
+      <div class="timer-box"><div class="timer" id="timer">10:00</div>
+        <div class="timer-ctrl">
+          <button class="btn" data-min="5">5 min</button><button class="btn" data-min="10">10 min</button><button class="btn" data-min="15">15 min</button>
+        </div>
+        <div class="timer-ctrl" style="margin-top:8px">
+          <button class="btn primary" id="tStart">Démarrer</button><button class="btn" id="tReset">Réinitialiser</button>
+        </div>
+        <p class="hint">Conseil : 1 minute d'accroche + problématique, puis annonce du plan, puis développement. Termine sur une ouverture.</p>
+      </div>`;
+    setupTimer();
+  }
+}
+
+let timer=null,remain=600;
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}
+function setupTimer(){
+  remain=600;const el=document.getElementById("timer");el.textContent=fmt(remain);
+  document.querySelectorAll("[data-min]").forEach(b=>b.addEventListener("click",()=>{stopT();remain=+b.dataset.min*60;el.textContent=fmt(remain);el.classList.remove("warn");}));
+  document.getElementById("tStart").addEventListener("click",()=>{
+    if(timer){stopT();document.getElementById("tStart").textContent="Démarrer";return;}
+    document.getElementById("tStart").textContent="Pause";
+    timer=setInterval(()=>{remain--;el.textContent=fmt(Math.max(0,remain));if(remain<=60)el.classList.add("warn");if(remain<=0){stopT();el.textContent="Fini !";document.getElementById("tStart").textContent="Démarrer";}},1000);
+  });
+  document.getElementById("tReset").addEventListener("click",()=>{stopT();remain=600;el.textContent=fmt(remain);el.classList.remove("warn");document.getElementById("tStart").textContent="Démarrer";});
+}
+function stopT(){if(timer){clearInterval(timer);timer=null;}}
+
+document.getElementById("ctNext").addEventListener("click",()=>{stopT();if(step<2){step++;renderStep();}else{document.getElementById("dossier").scrollIntoView&&document.getElementById("dossier").scrollIntoView({behavior:"smooth"});}});
+document.getElementById("ctBack").addEventListener("click",()=>{stopT();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView&&document.getElementById("dossier").scrollIntoView({behavior:"smooth"});});
+[0,1,2].forEach(i=>document.getElementById("sb"+i).addEventListener("click",()=>{stopT();step=i;renderStep();}));
+</script>
+</body></html>
