@@ -194,8 +194,8 @@ def build_topic(c, tid, C, lib):
     learn = " ".join(x for x in [c['enriched'], c['model']] if x)
     return dict(
         name=c['title'], ill=pick_ill(c['title']), chapter="",
-        docType=f"Press document · {ctx}",
-        observeQ="This lands on your desk in a colle. What would you say first?",
+        docType=f"A recent press article on {ctx}",
+        observeQ="This article lands on your desk. What would you say first?",
         observeNotice=[x for x in [
             f"The press covers this because of {c['presswhy']}." if c['presswhy'] else "",
             f"Common trap: {c['trap']}" if c['trap'] else ""] if x][:2] or ["Look for the tension before the facts."],
@@ -219,8 +219,8 @@ def build_bigpicture(C, D):
     adv = D['angles'][:3]
     return dict(
         name="Big picture · " + C['name'], ill="flag", chapter="",
-        docType=f"Map · {C['the']}",
-        observeQ=f"What does this map reveal about how {C['the']} works?",
+        docType=f"A press overview of {C['the']} today",
+        observeQ=f"What does the press coverage reveal about how {C['the']} works?",
         observeNotice=[D['key'] or (para[0] if para else "One country, many tensions."),
                        "Every topic below connects back to this frame."],
         sentence=D['key'] or (para[0] if para else f"{C['name']} is best understood through its tensions."),
