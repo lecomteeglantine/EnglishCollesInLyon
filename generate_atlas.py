@@ -260,11 +260,18 @@ def generate(md_path, engine_path, out_path):
 
     acc = {tid: PALETTE[i % len(PALETTE)] for i, tid in enumerate(ids)}
     acc.update(bigpicture="#1F3A5F", regions="#1F3A5F", timeline="#1F3A5F")
+    def chapsub(tids):
+        out = []
+        for t in tids:
+            nm = topics[t]['name'].lower()
+            if len(" · ".join(out + [nm])) > 58: break
+            out.append(nm)
+        return " · ".join(out)
     chapters = [
         dict(n="01", title="Understanding " + C['name'], sub="the big picture", topics=["bigpicture", "regions", "timeline"]),
-        dict(n="02", title="Power & politics", sub=" · ".join(topics[t]['name'] for t in chap2).lower()[:60], topics=chap2),
-        dict(n="03", title="Society", sub=" · ".join(topics[t]['name'] for t in chap3).lower()[:60], topics=chap3),
-        dict(n="04", title=C['name'] + " & the world", sub=" · ".join(topics[t]['name'] for t in chap4).lower()[:60], topics=chap4),
+        dict(n="02", title="Power & politics", sub=chapsub(chap2), topics=chap2),
+        dict(n="03", title="Society", sub=chapsub(chap3), topics=chap3),
+        dict(n="04", title=C['name'] + " & the world", sub=chapsub(chap4), topics=chap4),
     ]
     stubs = dict(regions=C['subview'], timeline=C['name'] + " timeline")
 
@@ -330,6 +337,7 @@ def generate(md_path, engine_path, out_path):
     h = h.replace('<div class="eyebrow">The four regions</div><h1 style="font-size:1.8rem">One nation, four Americas</h1><p class="sub">Tap a region: essential facts, the key debate, a colle question and its connections.</p>',
                   f'<div class="eyebrow">{C["subview"]}</div><h1 style="font-size:1.8rem">{C["subhero"]}</h1><p class="sub">{C["subsub"]}</p>')
     h = h.replace('A working mock-up of the US path', f"A working mock-up of the {C['name']} path")
+    h = h.replace('US final challenge', f"{C['name']} final challenge")
     h = h.replace("Try The Electoral College, Race & civil rights, Guns or The American Dream.",
                   "Every topic is generated from the country dossier.")
 
