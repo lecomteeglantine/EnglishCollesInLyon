@@ -385,8 +385,9 @@ def generate(md_path, engine_path, out_path):
     h = h[:start] + f"const pool={js(pool)};" + h[end:]
 
     # VIEWTILES : libellé de la vue subdivisions
+    tileds = {'gb': 'England · Scotland · Wales · NI', 'us': 'Northeast · South · Midwest · West'}.get(C['code'], 'where the best colle questions are born')
     h = h.replace('regions:{fn:"openNations()",ill:"regions",ds:"the four Americas"}',
-                  f'regions:{{fn:"openNations()",ill:"regions",ds:"{C["subview"].lower()}"}}')
+                  f'regions:{{fn:"openNations()",ill:"regions",ds:"{tileds}"}}')
 
     open(out_path, 'w', encoding='utf-8').write(h)
     return C, len(topics), len(tl), len(nations), len(drill)
