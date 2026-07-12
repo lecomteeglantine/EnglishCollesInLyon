@@ -48,7 +48,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;le
 .stepbtn{flex:1;min-width:120px;min-height:44px;border-radius:11px;border:1.5px solid var(--line);background:var(--card);font-weight:700;font-size:.86rem;color:var(--muted)}
 .stepbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}.stepbtn.done{border-color:var(--sage);color:var(--sage)}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px}
-.qfam{margin-bottom:18px}.qfam:last-child{margin-bottom:0}
+
 .qfam h4{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
 .qfam ul{margin:0;padding-left:20px}.qfam li{margin:7px 0;line-height:1.5}
 .notes{width:100%;min-height:120px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:.95rem;background:var(--bg2);margin-top:12px;resize:vertical}
@@ -61,6 +61,26 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;le
 footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
 a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
 @media (max-width:640px){.nav{display:none}}
+
+.step-lead{margin:8px 0 18px;color:var(--muted);line-height:1.6}
+.lvl{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 16px;background:var(--bg2)}
+.lvl-h{display:flex;align-items:flex-start;gap:12px;margin-bottom:6px}
+.lvl-n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:600}
+.lvl-t{font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--navy)}
+.lvl-i{font-size:.85rem;color:var(--muted);margin-top:2px}
+.qfam{margin-top:14px}.qfam h4{font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--terra);margin-bottom:7px}
+.qfam ul{margin:0;padding-left:20px}.qfam li{margin:7px 0;line-height:1.55}
+.toolbox{border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:15px 17px;margin:0 0 16px;background:#fff}
+.tb-h{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--navy)}
+.tb-i{font-size:.86rem;color:var(--muted);margin:4px 0 10px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:.85rem;font-weight:600;color:var(--ink)}
+.chip.tension{background:#fff4ec;border-color:#f0cbb4;color:#a85a3c}
+.altfam{margin-top:12px}.altfam-t{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);margin-bottom:5px}
+.altfam ul{margin:0;padding-left:20px}.altfam li{margin:5px 0;line-height:1.5}
+.plan-tips{margin:0;padding-left:20px}.plan-tips li{margin:6px 0;line-height:1.55;color:var(--ink)}
+.notes-lab{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin:6px 0 0}
+
 </style>
 </head>
 <body>
@@ -86,9 +106,9 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
   <section class="workshop" id="workshop">
     <div class="chosen" id="chosen"></div>
     <div class="steps">
-      <button class="stepbtn on" data-s="0" id="sb0">1 · Problématiser</button>
-      <button class="stepbtn" data-s="1" id="sb1">2 · Construire un plan</button>
-      <button class="stepbtn" data-s="2" id="sb2">3 · Prendre la parole</button>
+      <button class="stepbtn on" data-s="0" id="sb0">1 · Analyse</button>
+      <button class="stepbtn" data-s="1" id="sb1">2 · Question &amp; plan</button>
+      <button class="stepbtn" data-s="2" id="sb2">3 · Speak</button>
     </div>
     <div class="panel" id="stepPanel"></div>
     <div class="nav-steps">
@@ -100,7 +120,7 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
 <footer>English Colles in Lyon — Colle Trainer</footer>
 
 <script>
-const QUESTIONS = {"Comprendre le document": ["What type of document is this (news report, opinion piece, interview, podcast)?", "Who produced it, and for what audience?", "What is the central claim or story in one sentence?", "What is explicitly said — and what is implied or left out?"], "Situer et contextualiser": ["Which broader debate does this document belong to?", "What background does an examiner expect you to bring to it?", "Is this a recent development or the latest chapter of an old story?", "Which country-specific factors explain why this is happening here?"], "Analyser la tension": ["Who disagrees with whom in this document, and why?", "What values or interests are in conflict?", "What is the strongest argument on each side?", "What paradox or contradiction does the situation reveal?"], "Problématiser": ["Turn the story into a single exam-worthy question.", "Rephrase it as a 'To what extent…?' or 'Is it…?' question.", "What would a naive reading miss that your problematic captures?"], "Élargir et conclure": ["How does this connect to other themes on the syllabus?", "What comparison with another English-speaking country is illuminating?", "What would you predict, or what is at stake for the future?", "What nuanced, balanced conclusion can you defend?"]};
+const METHOD = {"n1": {"label": "Level 1 · Read & locate", "intro": "Fast, factual mapping. Answer each in one spoken sentence before moving on.", "groups": [["What & who", ["What kind of document is this, and who produced it (author, outlet, genre)?", "What is its central claim or story, in a single sentence?", "Who are the people, groups or institutions involved?"]], ["Where & when", ["Where is this set, and what do I already know about this country's history, economy and politics?", "When does it take place, and which event or trend does it belong to?"]], ["Say & silence", ["What is explicitly stated — and what is implied, assumed or left unsaid?", "Which word would I replace 'speaks about' with: addresses, highlights, examines, sheds light on, investigates…?"]]]}, "n2": {"label": "Level 2 · Analyse in depth", "intro": "This is where a strong candidate stands out. Pick the questions that bite on your document — you don't need them all.", "groups": [["Source, voice & reliability", ["Who is speaking, from what position, and with what authority or interest in this stance?", "Who is the intended audience, and how does that shape what is said and how?", "How far can this source be trusted — what bias, blind spots or omissions should I flag, and what would I cross-check?"]], ["Rhetoric & argument", ["By what means does the text try to persuade (examples, statistics, cited authorities, emotional register)?", "What effect is sought on the reader, and which devices produce it (irony, generalisation, a single case turned into a rule)?", "Where is the reasoning weakest — which link would an opponent attack first?", "Does the evidence actually support the conclusion, or is there a leap?"]], ["Ideology, assumptions & the unsaid", ["What does the document take for granted without arguing for it?", "What worldview or ideology underpins it — would it be shared elsewhere, or in another era?", "What is strategically left out, and who benefits from that silence?", "Whose voice is missing from this account?"]], ["The central tension", ["What conflict of values or interests structures the document beneath the surface?", "What is the strongest argument on the opposing side — the one you cannot dismiss?", "What paradox does the situation reveal (what is proclaimed vs what is done, what should work but doesn't)?"]], ["Causes, stakes & consequences", ["What are the underlying causes, beyond the ones the document names?", "What is genuinely at stake here — for whom, and in what timeframe?", "What are the likely consequences, intended and unintended?"]], ["Historical & historiographical depth", ["Is this a new development or the latest chapter of a long story?", "How have interpretations of this issue shifted over time — is there a scholarly debate behind it?", "What past parallel illuminates or complicates the present case?"]], ["Ethical & political dimension", ["What ethical question does the situation raise, beyond its practical aspects?", "Which competing principles are in play (liberty vs security, equality vs merit, individual vs community)?", "What would each major political tradition make of this?"]], ["Cultural & conceptual perspective", ["Of what wider debate is this particular case merely one instance?", "Which comparison with another English-speaking country sharpens or nuances the point?", "Which concept, author or theory would raise the analysis a level (name it, don't just gesture at it)?"]], ["Language & style", ["What does the register, tone or lexical field reveal about the intention?", "Which tenses or modals matter for interpretation — past for a rupture, future for a projection, modals for probability?", "Is there a key phrase whose exact wording carries the argument?"]]]}, "verbs": {"label": "Toolbox · don't say 'the document speaks about'", "intro": "Present the document with a precise verb instead:", "chips": ["addresses…", "highlights…", "focuses on…", "examines…", "outlines…", "sheds light on…", "emphasises…", "deals with…", "investigates…"]}, "keyq": {"label": "A key question = a tension", "intro": "A strong problematic exposes a problem, a contradiction or an implicit issue — a limitation, a criticism, a contradiction, or a hidden stake. Always look for a tension:", "tensions": ["Criticism vs Justification", "Progress vs Danger", "Individual vs Society", "Freedom vs Control", "Tradition vs Change", "Equality vs Merit", "Global vs National", "Rights vs Responsibilities"]}, "alt": {"label": "Frame the question · alternatives to 'To what extent'", "intro": "Match the family to your tension, then complete the opener:", "families": [["For analysis", ["How does… influence…?", "What factors explain…?", "What is at stake in…?"]], ["For balanced arguments", ["How far can it be argued that…?", "What are the limits of the claim that…?", "Is it more accurate to say… or…?"]], ["For critical thinking / debate", ["Should we consider… as…?", "Is it justified to claim that…?", "Can… be explained by… alone?"]], ["For causation & impact", ["What role did… play in…?", "How significant was… in…?", "What are the underlying causes of…?", "What explains the impact of…?"]], ["For comparison", ["How does… compare with…?", "What distinguishes… from…?", "Which had a greater impact:… or…?", "In what ways are… and… similar / different?"]]]}, "plan": {"label": "Build a two- or three-part plan", "intro": "Each part = one governing idea + one piece of evidence (from the document or your own knowledge). Avoid a flat for/against; aim for a movement of thought.", "tips": ["Part I usually takes the document's claim seriously; Part II complicates or challenges it; Part III (optional) reframes or transcends the opposition.", "End each part with a mini-conclusion that launches the next.", "Your conclusion should answer your key question and open onto a wider horizon — never just summarise."]}, "transitions": {"label": "Transition bank for speaking", "intro": "A good transition shows the reasoning that links your parts. Pick by function:", "groups": [["Open onto the problematic", ["The article therefore raises a broader question: …", "Beyond the specific case discussed in the article, this issue prompts us to wonder whether…", "This example illustrates a wider debate regarding…", "This leads us to the following question: …"]], ["Announce the plan", ["A twofold approach can be adopted. First, I will focus on…, then I will analyse…", "To answer this question, I will begin by…, then move on to…, before finally considering…"]], ["Move to a new part", ["Another aspect worth considering is…", "Another perspective would be to consider…", "The issue can also be approached from a different angle."]], ["Widen / deepen", ["Beyond the economic dimension, the issue also raises ethical concerns.", "Beyond this particular example, the question reflects a broader trend.", "More fundamentally, this debate raises the question of…", "At a deeper level, the issue concerns…"]], ["Nuance in conclusion", ["The debate should not be reduced to a simple opposition between X and Y."]]]}};
 const WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
 const CNAME = {gb:"United Kingdom",us:"United States",ie:"Ireland",ca:"Canada",au:"Australia",nz:"New Zealand",in:"India",za:"South Africa"};
 function esc(s){const d=document.createElement("div");d.textContent=s||"";return d.innerHTML;}
@@ -150,31 +170,49 @@ function startWorkshop(d){
   document.getElementById("workshop").scrollIntoView&&document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
+function fam(title,items){return `<div class="qfam"><h4>${esc(title)}</h4><ul>${items.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;}
+function chipbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div></div>`;}
+function tagbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.tensions.map(c=>`<span class="chip tension">⚡ ${esc(c)}</span>`).join("")}</div></div>`;}
+
 function renderStep(){
   [0,1,2].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
   const p=document.getElementById("stepPanel");
   if(step===0){
-    const fams=["Comprendre le document","Situer et contextualiser","Analyser la tension","Problématiser"];
-    p.innerHTML=`<div class="eyebrow">Étape 1 · Interroge le document</div>
-      <p style="margin:8px 0 16px;color:var(--muted)">Lis ou écoute le document, puis passe ces questions en revue. Elles te mènent de la simple compréhension à la problématique.</p>
-      ${fams.map(f=>`<div class="qfam"><h4>${f}</h4><ul>${QUESTIONS[f].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
-      <textarea class="notes" id="notes0" placeholder="Note ici ta problématique en une phrase…"></textarea>`;
+    p.innerHTML=`<div class="eyebrow">Step 1 · Interrogate the document</div>
+      <p class="step-lead">Read or listen first. Then work through the three levels — pick the questions that actually bite on this document, you don't need them all.</p>
+      <div class="lvl">
+        <div class="lvl-h"><span class="lvl-n">1</span><div><div class="lvl-t">${esc(METHOD.n1.label)}</div><div class="lvl-i">${esc(METHOD.n1.intro)}</div></div></div>
+        ${METHOD.n1.groups.map(g=>fam(g[0],g[1])).join("")}
+      </div>
+      ${chipbox(METHOD.verbs)}
+      <div class="lvl">
+        <div class="lvl-h"><span class="lvl-n">2</span><div><div class="lvl-t">${esc(METHOD.n2.label)}</div><div class="lvl-i">${esc(METHOD.n2.intro)}</div></div></div>
+        ${METHOD.n2.groups.map(g=>fam(g[0],g[1])).join("")}
+      </div>
+      <div class="lvl">
+        <div class="lvl-h"><span class="lvl-n">3</span><div><div class="lvl-t">Level 3 · Problematise</div><div class="lvl-i">Turn your analysis into THE question. Go to step 2 when you have it.</div></div></div>
+        ${tagbox(METHOD.keyq)}
+      </div>
+      <label class="notes-lab">Your working problematic (one sentence):</label>
+      <textarea class="notes" id="notes0" placeholder="e.g. How far can Britain's housing crisis be read as a failure of the market rather than of the state?"></textarea>`;
   }else if(step===1){
-    p.innerHTML=`<div class="eyebrow">Étape 2 · Construis ton plan</div>
-      <p style="margin:8px 0 16px;color:var(--muted)">À partir de ta problématique, esquisse un plan en deux ou trois parties. Chaque partie = une idée directrice + un exemple tiré du document ou de tes connaissances.</p>
-      ${["I. Première partie","II. Deuxième partie","III. Troisième partie (facultative)"].map((t,i)=>`<div class="qfam"><h4>${t}</h4><textarea class="notes" id="plan${i}" style="min-height:70px" placeholder="Idée directrice + exemple…"></textarea></div>`).join("")}
-      <div class="qfam"><h4>Élargir et conclure</h4><ul>${QUESTIONS["Élargir et conclure"].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;
+    p.innerHTML=`<div class="eyebrow">Step 2 · Frame the question & build a plan</div>
+      <p class="step-lead">First lock your key question, then sketch a plan that moves — not a flat for / against.</p>
+      <div class="toolbox"><div class="tb-h">${esc(METHOD.alt.label)}</div><p class="tb-i">${esc(METHOD.alt.intro)}</p>
+        ${METHOD.alt.families.map(f=>`<div class="altfam"><span class="altfam-t">${esc(f[0])}</span><ul>${f[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
+      </div>
+      <div class="toolbox"><div class="tb-h">${esc(METHOD.plan.label)}</div><p class="tb-i">${esc(METHOD.plan.intro)}</p><ul class="plan-tips">${METHOD.plan.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
+      ${["I — take the claim seriously","II — complicate or challenge it","III — reframe / transcend (optional)"].map((t,i)=>`<div class="qfam"><h4>${esc(t)}</h4><textarea class="notes" id="plan${i}" style="min-height:64px" placeholder="Governing idea + one piece of evidence…"></textarea></div>`).join("")}`;
   }else{
-    p.innerHTML=`<div class="eyebrow">Étape 3 · Prends la parole</div>
-      <p style="margin:8px 0 16px;color:var(--muted)">Format colle : prépare, puis parle. Lance le minuteur et présente ta problématique et ton plan à voix haute, sans lire tes notes.</p>
+    p.innerHTML=`<div class="eyebrow">Step 3 · Speak</div>
+      <p class="step-lead">Colle format: prepare, then present aloud without reading your notes. Use the transition bank to sound structured.</p>
       <div class="timer-box"><div class="timer" id="timer">10:00</div>
-        <div class="timer-ctrl">
-          <button class="btn" data-min="5">5 min</button><button class="btn" data-min="10">10 min</button><button class="btn" data-min="15">15 min</button>
-        </div>
-        <div class="timer-ctrl" style="margin-top:8px">
-          <button class="btn primary" id="tStart">Démarrer</button><button class="btn" id="tReset">Réinitialiser</button>
-        </div>
-        <p class="hint">Conseil : 1 minute d'accroche + problématique, puis annonce du plan, puis développement. Termine sur une ouverture.</p>
+        <div class="timer-ctrl"><button class="btn" data-min="5">5 min</button><button class="btn" data-min="10">10 min</button><button class="btn" data-min="15">15 min</button></div>
+        <div class="timer-ctrl" style="margin-top:8px"><button class="btn primary" id="tStart">Start</button><button class="btn" id="tReset">Reset</button></div>
+        <p class="hint">Aim: hook + problematic (1 min), announce the plan, develop each part with evidence, close on a wider opening.</p>
+      </div>
+      <div class="toolbox"><div class="tb-h">${esc(METHOD.transitions.label)}</div><p class="tb-i">${esc(METHOD.transitions.intro)}</p>
+        ${METHOD.transitions.groups.map(g=>`<div class="altfam"><span class="altfam-t">${esc(g[0])}</span><ul>${g[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
       </div>`;
     setupTimer();
   }
@@ -186,11 +224,11 @@ function setupTimer(){
   remain=600;const el=document.getElementById("timer");el.textContent=fmt(remain);
   document.querySelectorAll("[data-min]").forEach(b=>b.addEventListener("click",()=>{stopT();remain=+b.dataset.min*60;el.textContent=fmt(remain);el.classList.remove("warn");}));
   document.getElementById("tStart").addEventListener("click",()=>{
-    if(timer){stopT();document.getElementById("tStart").textContent="Démarrer";return;}
+    if(timer){stopT();document.getElementById("tStart").textContent="Start";return;}
     document.getElementById("tStart").textContent="Pause";
-    timer=setInterval(()=>{remain--;el.textContent=fmt(Math.max(0,remain));if(remain<=60)el.classList.add("warn");if(remain<=0){stopT();el.textContent="Fini !";document.getElementById("tStart").textContent="Démarrer";}},1000);
+    timer=setInterval(()=>{remain--;el.textContent=fmt(Math.max(0,remain));if(remain<=60)el.classList.add("warn");if(remain<=0){stopT();el.textContent="Time!";document.getElementById("tStart").textContent="Start";}},1000);
   });
-  document.getElementById("tReset").addEventListener("click",()=>{stopT();remain=600;el.textContent=fmt(remain);el.classList.remove("warn");document.getElementById("tStart").textContent="Démarrer";});
+  document.getElementById("tReset").addEventListener("click",()=>{stopT();remain=600;el.textContent=fmt(remain);el.classList.remove("warn");document.getElementById("tStart").textContent="Start";});
 }
 function stopT(){if(timer){clearInterval(timer);timer=null;}}
 
