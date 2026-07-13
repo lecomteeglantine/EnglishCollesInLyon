@@ -189,8 +189,16 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .radar-item a.ri-title{font-weight:700;color:var(--ink,#22312F);text-decoration:underline;text-underline-offset:3px}
 .radar-item a.ri-title:hover{color:var(--terra,#C46A4A)}
 .radar-item .ri-src{display:block;font-size:.76rem;color:#8a7a6e;margin-top:3px}
-.ri-propose{flex:none;min-height:40px;border:1.5px solid var(--sage,#7A9B76);background:#fff;color:#4e6b4a;font-weight:700;font-size:.82rem;border-radius:10px;padding:8px 14px;cursor:pointer;font-family:inherit}
-.ri-propose:hover{background:var(--sage,#7A9B76);color:#fff}
+.event.mine .event-card{border-color:#6A4C93;box-shadow:0 0 0 1px #6A4C9333}
+.mine-badge{display:inline-flex;align-items:center;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:#6A4C93;border-radius:999px;padding:3px 9px;margin-left:8px}
+.mine-remove{margin-top:12px;min-height:40px;border:1.5px solid #d9c9c9;background:#fff;color:#a04141;font-weight:700;font-size:.82rem;border-radius:10px;padding:8px 14px;cursor:pointer;font-family:inherit}
+.mine-remove:hover{background:#a04141;color:#fff;border-color:#a04141}
+.ri-actions{display:flex;gap:8px;flex-wrap:wrap;flex:none}
+.ri-add{min-height:40px;border:1.5px solid #6A4C93;background:#fff;color:#553a7a;font-weight:700;font-size:.82rem;border-radius:10px;padding:8px 14px;cursor:pointer;font-family:inherit}
+.ri-add:hover{background:#6A4C93;color:#fff}
+.ri-add:disabled{opacity:.7;cursor:default}
+.ri-copy{min-height:40px;border:1.5px solid var(--line,#E6D8C8);background:#fff;color:#5d6b66;font-weight:700;font-size:.82rem;border-radius:10px;padding:8px 14px;cursor:pointer;font-family:inherit}
+.ri-copy:hover{border-color:var(--sage,#7A9B76);color:#4e6b4a}
 .radar-loading{color:#8a7a6e;font-style:italic}
 .radar-foot{font-size:.8rem;color:#8a7a6e;margin-top:14px}
 /* fenêtre "proposer un jalon" */
@@ -350,7 +358,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
         <div>
           <div class="eyebrow" style="color:#C46A4A">Radar d'actualité · non vérifié</div>
           <h2 id="radarTitle">L'actualité récente à considérer</h2>
-          <p class="radar-warn">⚠️ Ces titres viennent directement de la presse du jour et <b>ne font pas partie de la frise</b>. Ils ne sont ni sélectionnés ni vérifiés. Un événement n'entre dans la frise que si Mme Lecomte l'ajoute au dossier.</p>
+          <p class="radar-warn">⚠️ Ces titres viennent directement de la presse du jour et <b>ne font pas partie de la frise officielle</b> : ils ne sont ni sélectionnés ni vérifiés. À toi de juger : si un événement te semble marquant, ajoute-le à <b>ta</b> frise personnelle.</p>
         </div>
       </div>
       <ul class="radar-list" id="radarList"><li class="radar-loading">Chargement de la presse…</li></ul>
@@ -362,8 +370,8 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 
 <div class="jalon-mask" id="jalonMask" role="dialog" aria-modal="true" aria-labelledby="jalonH">
   <div class="jalon-card">
-    <h3 id="jalonH">Proposer ce fait comme jalon</h3>
-    <p>Si cet événement mérite d'entrer dans la frise, copie la ligne ci-dessous et colle-la dans la section <b>📅</b> du dossier du pays sur GitHub. La frise se régénérera toute seule. <b>Vérifie et corrige la date et la formulation avant de valider</b> — c'est ton regard qui fait la fiabilité de la frise.</p>
+    <h3 id="jalonH">Copier la ligne de ce jalon</h3>
+    <p>Copie cette ligne au format des dossiers de civilisation. Tu peux la garder dans tes notes, la partager, ou la proposer pour enrichir la frise commune. <b>Vérifie et corrige la date et la formulation</b> : c'est en réfléchissant toi-même que tu progresses.</p>
     <div class="jalon-code" id="jalonCode"></div>
     <div class="jalon-actions">
       <button class="jalon-btn primary" id="jalonCopy">Copier la ligne</button>
@@ -438,7 +446,14 @@ function pickIcon(e){
   return TICONS.star;
 }
 
-function cur(){ return T[country] || {name:"",strap:"",flag:"",events:[],priority:[]}; }
+function myKey(){ return "tl_mine_" + country; }
+function loadMine(){ try{ return JSON.parse(localStorage.getItem(myKey())||"[]"); }catch(e){ return []; } }
+function saveMine(arr){ try{ localStorage.setItem(myKey(), JSON.stringify(arr)); }catch(e){} }
+function cur(){
+  const base = T[country] || {name:"",strap:"",flag:"",events:[],priority:[]};
+  const mine = loadMine().map(m=>Object.assign({mine:true, era:"today", tag:"My addition"}, m));
+  return Object.assign({}, base, {events: base.events.concat(mine)});
+}
 
 function renderMeta(){
   const c = cur();
@@ -468,11 +483,11 @@ function render(){
     return (currentFilter==="all"||e.era===currentFilter)&&hay.includes(term);
   }).sort((a,b)=>direction==="asc"?a.year-b.year:b.year-a.year);
   timeline.innerHTML=filtered.map(e=>`
-    <article class="event" data-era="${escapeHTML(e.era)}">
+    <article class="event${e.mine?" mine":""}" data-era="${escapeHTML(e.era)}">
       <div class="date">${escapeHTML(e.date)}</div><span class="dot"></span>
       <div class="event-card">
         <button class="event-toggle" aria-expanded="false">
-          <div class="event-main"><div class="ehead"><span class="eicon" style="color:${eraColor(e.era)};border-color:${eraColor(e.era)}">${pickIcon(e)}</span><span class="tag">${escapeHTML(e.tag)}</span></div><h3>${escapeHTML(e.title)}</h3><p class="summary">${escapeHTML(e.summary)}</p></div>
+          <div class="event-main"><div class="ehead"><span class="eicon" style="color:${e.mine?"#6A4C93":eraColor(e.era)};border-color:${e.mine?"#6A4C93":eraColor(e.era)}">${pickIcon(e)}</span><span class="tag">${escapeHTML(e.tag)}</span>${e.mine?'<span class="mine-badge">★ My addition</span>':""}</div><h3>${escapeHTML(e.title)}</h3><p class="summary">${escapeHTML(e.summary)}</p></div>
           <span class="chev">⌄</span>
         </button>
         <div class="details">
@@ -484,9 +499,15 @@ function render(){
             <a href="https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(e.title + " " + cur().name)}" target="_blank" rel="noopener">📖 Read (Wikipedia)</a> ·
             <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(e.title + " " + cur().name + " history")}" target="_blank" rel="noopener">▶️ Watch (YouTube)</a>
           </div>
+          ${e.mine?`<button class="mine-remove" data-mid="${escapeHTML(e.mid)}">🗑 Remove from my timeline</button>`:""}
         </div>
       </div>
     </article>`).join("");
+  document.querySelectorAll(".mine-remove").forEach(b=>b.addEventListener("click",()=>{
+    if(!confirm("Remove this milestone from your timeline?"))return;
+    saveMine(loadMine().filter(m=>m.mid!==b.dataset.mid));
+    renderMeta();render();
+  }));
   renderFrise(filtered.slice().sort((a,b)=>a.year-b.year));
   document.getElementById("resultCount").textContent=`${filtered.length} événement${filtered.length>1?"s":""} affiché${filtered.length>1?"s":""}`;
   document.getElementById("empty").style.display=filtered.length?"none":"block";
@@ -590,12 +611,37 @@ function loadRadar(){
             <a class="ri-title" href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)} ↗</a>
             <span class="ri-src">${escapeHTML(d.source)} · aujourd'hui</span>
           </span>
-          <button class="ri-propose" data-i="${i}">➕ proposer comme jalon</button>
+          <div class="ri-actions">
+            <button class="ri-add" data-i="${i}">➕ Add to my timeline</button>
+            <button class="ri-copy" data-i="${i}">📋 Copy the line</button>
+          </div>
         </li>`).join("");
       foot.textContent = "Source : " + d.source + ". Titres récupérés automatiquement, non filtrés.";
-      list.querySelectorAll(".ri-propose").forEach(btn=>btn.addEventListener("click",()=>openJalon(d.items[+btn.dataset.i])));
+      list.querySelectorAll(".ri-add").forEach(btn=>btn.addEventListener("click",()=>addToMine(d.items[+btn.dataset.i],btn)));
+      list.querySelectorAll(".ri-copy").forEach(btn=>btn.addEventListener("click",()=>openJalon(d.items[+btn.dataset.i])));
     })
     .catch(()=>{ list.innerHTML = '<li class="radar-loading">Presse momentanément indisponible.</li>'; });
+}
+
+function addToMine(item, btn){
+  const year = new Date().getFullYear();
+  const title = item.title.replace(/\s+/g," ").trim();
+  const mine = loadMine();
+  if(mine.some(m=>m.title===title)){ btn.textContent="✓ Already added"; return; }
+  mine.push({
+    mid: "m"+Date.now(),
+    year: year, date: String(year), title: title,
+    summary: "Added from the news — write why it matters.",
+    what: "Added from today's press: "+title+".",
+    why: "You judged this event significant. Refine this note with what it changes and why it matters.",
+    keywords: ["my note"],
+    colle: "How could this event feed a colle on "+cur().name.replace(/^the /i,"")+"?",
+    link: item.url
+  });
+  saveMine(mine);
+  btn.textContent="✓ Added to my timeline";
+  btn.disabled = true;
+  renderMeta(); render();
 }
 
 function openJalon(item){
