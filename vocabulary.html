@@ -88,15 +88,13 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 .games{margin-top:50px}
 .games-head h2{color:var(--navy);font-size:clamp(1.4rem,3vw,1.9rem);margin-top:6px}
 .games-head p{color:var(--muted);margin-top:8px;max-width:60ch}
-.games-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
-@media (max-width:900px){.games-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.games-grid{grid-template-columns:1fr}}
+.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:24px}
 .game-card{display:flex;flex-direction:column;gap:8px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .25s;position:relative;overflow:hidden}
 .game-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .game-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px}
-.game-card.g1::before{background:var(--terra)}.game-card.g2::before{background:var(--sage)}.game-card.g3::before{background:var(--gold)}.game-card.g4::before{background:#6A4C93}.game-card.g5::before{background:#2C7A7B}.game-card.g6::before{background:#B23A2E}.game-card.g7::before{background:#0072CE}.game-card.g8::before{background:#A86E18}
+.game-card.g1::before{background:var(--terra)}.game-card.g2::before{background:var(--sage)}.game-card.g3::before{background:var(--gold)}.game-card.g4::before{background:#6A4C93}.game-card.g5::before{background:#2C7A7B}
 .g-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:4px;color:#fff}
-.game-card.g1 .g-ic{background:var(--terra)}.game-card.g2 .g-ic{background:var(--sage)}.game-card.g3 .g-ic{background:var(--gold)}.game-card.g4 .g-ic{background:#6A4C93}.game-card.g5 .g-ic{background:#2C7A7B}.game-card.g6 .g-ic{background:#B23A2E}.game-card.g7 .g-ic{background:#0072CE}.game-card.g8 .g-ic{background:#A86E18}
+.game-card.g1 .g-ic{background:var(--terra)}.game-card.g2 .g-ic{background:var(--sage)}.game-card.g3 .g-ic{background:var(--gold)}.game-card.g4 .g-ic{background:#6A4C93}.game-card.g5 .g-ic{background:#2C7A7B}
 .g-ic svg{width:24px;height:24px;stroke:#fff}
 .g-name{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--navy)}
 .g-desc{font-size:.85rem;color:var(--muted);line-height:1.5;flex:1}
@@ -157,12 +155,14 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
       <span class="sub">CPGE · Anglais</span>
     </div>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="methodology.html">Méthodologie</a>
+      <a href="index.html">Home</a>
+      <a href="methodology.html">Methodology</a>
       <a href="civilisation.html">Civilisation</a>
-      <a href="vocabulary.html" class="active">Vocabulaire</a>
+      <a href="vocabulary.html" class="active">Vocabulary</a>
+      <a href="timelines.html">Timelines</a>
       <a href="colle-trainer.html">Colle Trainer</a>
-      <a href="resources.html">Ressources</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
     </nav>
   </div>
 </header>
@@ -180,6 +180,17 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
       <span class="search-count" id="qCount"></span>
     </div>
 
+    <section class="term-results" id="termResults" aria-live="polite">
+      <h2>Words found</h2>
+      <div id="hits"></div>
+    </section>
+
+    <div id="partsRoot"></div>
+
+    <div class="no-result" id="noResult">
+      <p>No results. Try another word, in English or French.</p>
+    </div>
+  </div>
 
     <section class="games" id="games">
       <div class="games-head">
@@ -218,39 +229,8 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
           <span class="g-desc">Flip cards to pair each English word with its French translation, against the clock.</span>
           <span class="g-go">Play →</span>
         </button>
-        <button class="game-card g6" data-game="storm">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 1 0 12 4 4 0 0 0 0 6"/><path d="M12 3a6 6 0 0 0 0 12 4 4 0 0 1 0 6"/></svg></span>
-          <span class="g-name">Synonym Storm</span>
-          <span class="g-desc">One word, 45 seconds — type as many words from the same semantic field as you can.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g7" data-game="gap">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h6M14 12h6M4 17h16"/><rect x="9.5" y="10" width="5" height="4" rx="1" fill="currentColor" stroke="none"/></svg></span>
-          <span class="g-name">Fill the Gap</span>
-          <span class="g-desc">The word is missing from its real example sentence. Pick the right one — vocabulary in context.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g8" data-game="translate">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h7M7 5v3c0 3-2 5-4 6M5 8c0 3 3 5 6 6"/><path d="M13 19l4-9 4 9M14.5 16h5"/></svg></span>
-          <span class="g-name">Speed Translation</span>
-          <span class="g-desc">A French translation flashes up — type the English word as fast as you can. FR → EN, the hard way.</span>
-          <span class="g-go">Play →</span>
-        </button>
       </div>
     </section>
-
-
-    <section class="term-results" id="termResults" aria-live="polite">
-      <h2>Words found</h2>
-      <div id="hits"></div>
-    </section>
-
-    <div id="partsRoot"></div>
-
-    <div class="no-result" id="noResult">
-      <p>No results. Try another word, in English or French.</p>
-    </div>
-  </div>
 
     <div class="game-modal" id="gameModal" role="dialog" aria-modal="true">
       <div class="gm-inner">
@@ -570,90 +550,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
       };cc.appendChild(b);});
   }
 
-  /* ---------- 6. SYNONYM STORM ---------- */
-  function storm(){
-    open("Synonym Storm");
-    var score=0,time=45,cur=null,found=[];
-    stats.innerHTML='<span>⏱ <b id="tv">45</b>s</span><span>★ <b id="sv">0</b></span>';
-    timerId=setInterval(function(){time--;document.getElementById("tv").textContent=time;if(time<=0)endScreen(score,0,"Time! "+score+" words in the field.",storm);},1000);
-    // choisir une section riche
-    var bySec={};POOL.forEach(function(e){(bySec[e.sec]=bySec[e.sec]||[]).push(e);});
-    var big=Object.keys(bySec).filter(function(k){return bySec[k].length>=6;});
-    var sec=rand(big);var members=bySec[sec];var seed=rand(members);
-    body.innerHTML='<div class="g-sub">Type as many words as you can from the same field as:</div>'+
-      '<div class="g-prompt">'+esc(seed.t)+'</div>'+
-      '<div class="g-sub" style="color:var(--gold)">field: '+esc(sec)+'</div>'+
-      '<input class="g-input" id="ans" autocomplete="off" placeholder="a related word…" />'+
-      '<div class="g-feedback" id="fb"></div>'+
-      '<div class="g-frags" id="got"></div>';
-    var inp=document.getElementById("ans");inp.focus();
-    var valid=members.map(function(e){return e.t.toLowerCase();});
-    inp.addEventListener("keydown",function(e){
-      if(e.key!=="Enter")return;
-      var v=inp.value.trim().toLowerCase();inp.value="";
-      var fb=document.getElementById("fb");
-      if(!v)return;
-      if(found.indexOf(v)>=0){fb.className="g-feedback no";fb.textContent="already found";return;}
-      if(valid.indexOf(v)>=0){found.push(v);score++;document.getElementById("sv").textContent=score;
-        fb.className="g-feedback ok";fb.textContent="✓ +1";
-        var g=document.getElementById("got");var s=document.createElement("span");s.className="g-frag used";s.textContent=v;g.appendChild(s);}
-      else{fb.className="g-feedback no";fb.textContent="not in this field";}
-    });
-  }
-
-  /* ---------- 7. FILL THE GAP ---------- */
-  function gap(){
-    open("Fill the Gap");
-    var score=0,rounds=0;
-    stats.innerHTML='<span>★ <b id="sv">0</b> / <b id="rv">0</b></span>';
-    function esca(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
-    function next(){
-      var e=rand(POOL.filter(function(x){return x.ex && x.t.length>=4 && new RegExp("\\b"+esca(x.t)+"\\b","i").test(x.ex);}));
-      var gapped=e.ex.replace(new RegExp("\\b"+esca(e.t)+"\\b","i"),"______");
-      var wrong=shuffle(POOL.filter(function(x){return x.t!==e.t && Math.abs(x.t.length-e.t.length)<6;})).slice(0,3).map(function(x){return x.t;});
-      var opts=shuffle([e.t].concat(wrong));
-      body.innerHTML='<div class="g-sub">Which word fills the gap?</div>'+
-        '<div class="g-prompt" style="font-size:1.2rem">'+esc(gapped)+'</div>'+
-        '<div class="g-opts" id="opts"></div><div class="g-feedback" id="fb"></div>';
-      var oc=document.getElementById("opts");
-      opts.forEach(function(t){var b=document.createElement("button");b.className="g-opt";b.textContent=t;
-        b.onclick=function(){rounds++;document.getElementById("rv").textContent=rounds;
-          [].forEach.call(oc.children,function(c){c.disabled=true;});
-          if(t===e.t){b.classList.add("correct");score++;document.getElementById("sv").textContent=score;
-            document.getElementById("fb").className="g-feedback ok";document.getElementById("fb").textContent="✓ "+e.t+" — "+e.fr;}
-          else{b.classList.add("wrong");[].forEach.call(oc.children,function(c){if(c.textContent===e.t)c.classList.add("correct");});
-            document.getElementById("fb").className="g-feedback no";document.getElementById("fb").textContent="✗ "+e.t+" — "+e.fr;}
-          setTimeout(next,1200);};
-        oc.appendChild(b);});
-    }
-    next();
-  }
-
-  /* ---------- 8. SPEED TRANSLATION ---------- */
-  function translate(){
-    open("Speed Translation");
-    var score=0,time=60,cur=null;
-    stats.innerHTML='<span>⏱ <b id="tv">60</b>s</span><span>★ <b id="sv">0</b></span>';
-    timerId=setInterval(function(){time--;document.getElementById("tv").textContent=time;if(time<=0)endScreen(score,0,"Time! "+score+" translated.",translate);},1000);
-    function next(){
-      cur=rand(POOL.filter(function(e){return e.t.length<=20 && !e.fr.includes("(");}));
-      body.innerHTML='<div class="g-sub">Type the English for:</div>'+
-        '<div class="g-prompt">'+esc(cur.fr)+'</div>'+
-        '<input class="g-input" id="ans" autocomplete="off" placeholder="in English…" />'+
-        '<div class="g-feedback" id="fb"></div>'+
-        '<button class="g-btn" id="skip">Skip →</button>';
-      var inp=document.getElementById("ans");inp.focus();
-      inp.addEventListener("keydown",function(e){if(e.key==="Enter"){
-        var v=inp.value.trim().toLowerCase();var fb=document.getElementById("fb");
-        if(v===cur.t.toLowerCase()){score++;document.getElementById("sv").textContent=score;fb.className="g-feedback ok";fb.textContent="✓";setTimeout(next,400);}
-        else{fb.className="g-feedback no";fb.textContent="try again";}
-      }});
-      document.getElementById("skip").onclick=function(){var fb=document.getElementById("fb");fb.className="g-feedback no";fb.textContent="answer: "+cur.t;setTimeout(next,700);};
-    }
-    next();
-  }
-
-  var GAMES={sprint:sprint,colloc:colloc,odd:odd,duel:duel,match:match,storm:storm,gap:gap,translate:translate};
+  var GAMES={sprint:sprint,colloc:colloc,odd:odd,duel:duel,match:match};
   document.querySelectorAll(".game-card").forEach(function(card){
     card.addEventListener("click",function(){var g=GAMES[card.dataset.game];if(g)g();});
   });
