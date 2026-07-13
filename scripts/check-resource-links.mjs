@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';
+const data=JSON.parse(await fs.readFile('resources-data.json','utf8'));const resources=data.resources||[];
+async function check(r){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),15000);try{let res=await fetch(r.url,{method:'HEAD',redirect:'follow',headers:{'user-agent':'EnglishCollesInLyon-link-checker/1.0'},signal:controller.signal});if(res.status===405||res.status===403)res=await fetch(r.url,{method:'GET',redirect:'follow',headers:{'user-agent':'EnglishCollesInLyon-link-checker/1.0','range':'bytes=0-2048'},signal:controller.signal});const status=res.status;return{id:r.id,title:r.title,url:r.url,status,ok:status>=200&&status<400,warning:status===403||status===429||status>=500}}catch(e){return{id:r.id,title:r.title,url:r.url,status:0,ok:false,warning:true,error:String(e?.message||e)}}finally{clearTimeout(timer)}}
+const results=[];for(let i=0;i<resources.length;i+=10){results.push(...await Promise.all(resources.slice(i,i+10).map(check)))}
+const output={checkedAt:new Date().toISOString(),total:results.length,ok:results.filter(x=>x.ok).length,warnings:results.filter(x=>x.warning).length,failed:results.filter(x=>!x.ok&&!x.warning).length,items:results.filter(x=>!x.ok)};
+await fs.writeFile('resources-link-status.json',JSON.stringify(output,null,2)+'\n');console.log(output);

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ressources — Écoute quotidienne · English Colles in Lyon</title>
-<meta name="description" content="Écouter chaque jour quelques minutes d'actualité en anglais : sources officielles et gratuites par pays, avec des consignes d'écoute.">
+<title>Resource Hub · English Colles in Lyon</title>
+<meta name="description" content="A curated and automatically updated library of English-language news, podcasts, videos, official sources, data, fact-checking and language tools for English colles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -12,287 +12,134 @@
 :root{
   --bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;
   --card:#FFFFFF;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);
-  --shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);
-  --r:16px;--tap:48px;--maxw:1120px;
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);--r:16px;--tap:48px;--maxw:1180px;
   --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --display:"Fraunces",Georgia,serif;--fs:18px;
 }
-*{box-sizing:border-box}
-html{font-size:var(--fs);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+*{box-sizing:border-box}html{font-size:var(--fs);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;font-size:1rem}
 body.dys{--font:Verdana,Tahoma,"Atkinson Hyperlegible",sans-serif;letter-spacing:.03em;word-spacing:.12em;line-height:1.85}
-body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#b9a88f}
-body.noanim *{animation:none!important;transition:none!important}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
-p{margin:0}a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-svg{display:block;max-width:100%}
-:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:120}.skip:focus{left:12px}
+body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#9e8d75}body.noanim *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.14;margin:0;letter-spacing:-.01em}p{margin:0}a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}button{cursor:pointer;color:inherit}svg{display:block}:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:120}.skip:focus{left:12px}
 .eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--terra)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--tap);padding:0 20px;border-radius:12px;font-weight:700;font-size:.95rem;transition:transform .12s,box-shadow .2s;border:2px solid transparent}
-.btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:var(--shadow)}.btn-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
-
-/* header */
-header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
-.top-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
-.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
-.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
-.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
-.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
-.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
-.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
-.top-tools{display:flex;align-items:center;gap:8px}
-.accent{display:flex;align-items:center;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
-.accent button{min-width:40px;height:36px;border-radius:999px;font-size:.78rem;font-weight:700;color:var(--muted)}
-.accent button.on{background:var(--navy);color:#fff}
-.a11y-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:11px;min-height:40px;padding:0 12px;font-weight:700;font-size:.84rem}
-.a11y-btn:hover{border-color:var(--terra)}
-.accent-note{font-size:.74rem;color:var(--muted);text-align:right;max-width:var(--maxw);margin:0 auto;padding:0 20px 7px}
-.burger{display:none;border:1px solid var(--line);background:var(--card);border-radius:11px;min-width:44px;min-height:40px;font-size:1.2rem}
-
-/* a11y panel */
-.scrim{position:fixed;inset:0;background:rgba(34,49,47,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100}.scrim.open{opacity:1;pointer-events:auto}
-.a11y-panel{position:fixed;top:0;right:0;height:100%;width:min(360px,90vw);background:var(--bg2);border-left:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s ease;z-index:101;overflow-y:auto}.a11y-panel.open{transform:none}
-.a11y-panel .ph{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
-.a11y-panel h2{font-size:1.2rem;color:var(--navy)}.a11y-panel .close{font-size:1.6rem;color:var(--muted);min-width:var(--tap);min-height:var(--tap)}
-.a11y-body{padding:18px 20px}.a11y-group{margin-bottom:20px}.a11y-group .lbl{font-weight:700;font-size:.9rem;margin-bottom:8px;display:block}
-.seg{display:flex;gap:6px}.seg button,.opt-toggle{border:1px solid var(--line);background:var(--card);border-radius:10px;min-height:44px;font-weight:700;font-size:.86rem;padding:0 14px}
-.seg button{flex:1}.seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-.opt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;color:var(--ink)}
-.opt-toggle .state{font-size:.78rem;font-weight:700;color:var(--muted)}
-.opt-toggle.on{border-color:var(--sage);background:#f2f6f0}.opt-toggle.on .state{color:var(--sage)}
-.a11y-foot{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
-
-section{padding:46px 0}
-.sec-head{max-width:64ch}.sec-head h2{font-size:clamp(1.4rem,3.4vw,1.9rem);color:var(--navy)}.sec-head p{color:var(--muted);margin-top:10px}
-.hero{padding:40px 0 8px}
-.hero h1{font-size:clamp(1.8rem,5vw,2.7rem);color:var(--navy);max-width:18ch}
-.hero .lead{font-size:1.08rem;margin-top:14px;max-width:56ch}
-.callout{margin-top:16px;background:#eef3f1;border:1px solid var(--line);border-left:4px solid var(--sage);border-radius:12px;padding:13px 16px;font-size:.92rem;color:var(--ink);max-width:60ch}
-
-/* method steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:22px}
-.step{border:1px solid var(--line);border-radius:var(--r);padding:20px}
-.step .n{font-family:var(--display);font-size:1.3rem;font-weight:600}
-.step h3{font-size:1.08rem;margin:6px 0 6px;color:var(--navy)}.step p{color:var(--muted);font-size:.9rem}
-.st-observe{background:#fbf0e9}.st-observe .n{color:var(--terra)}
-.st-understand{background:#eef3f1}.st-understand .n{color:var(--sage)}
-.st-connect{background:#fdf6e7}.st-connect .n{color:var(--gold)}
-.st-speak{background:#eef1f6}.st-speak .n{color:var(--navy)}
-
-/* source cards */
-.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:24px}
-.source{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .14s,box-shadow .25s,border-color .2s}
-.source:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.source .head{display:flex;align-items:center;gap:11px}
-.cc{flex:none;min-width:42px;height:30px;padding:0 9px;border-radius:8px;background:var(--navy);color:#fff;font-weight:700;font-size:.78rem;display:grid;place-items:center;letter-spacing:.03em}
-.source h3{font-size:1.12rem;color:var(--navy)}
-.source .meta{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:2px}
-.source .consigne{margin-top:12px;font-size:.92rem;color:var(--ink);flex:1}
-.source .consigne b{color:var(--terra)}
-.source .listen{margin-top:16px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--terra);min-height:40px}
-.source .listen .ar{transition:transform .18s}.source:hover .listen .ar{transform:translateX(3px)}
-.source.match{border-color:var(--terra);box-shadow:0 0 0 2px rgba(196,106,74,.18),var(--shadow)}
-.matchtag{display:none;position:absolute;top:-9px;right:14px;background:var(--terra);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px}
-.source.match .matchtag{display:inline-block}
-
-.small{font-size:.82rem;color:var(--muted);line-height:1.6;background:var(--bg2);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;margin-top:26px}
-
-footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0;margin-top:20px}
-.foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-.foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
-.foot-nav{display:flex;flex-wrap:wrap;gap:6px}
-.foot-nav a{padding:7px 11px;border-radius:8px;font-size:.88rem;font-weight:600}.foot-nav a:hover{background:#fff;color:var(--terra)}
-.foot-copy{width:100%;color:var(--muted);font-size:.84rem;border-top:1px dashed var(--line);padding-top:16px;margin-top:6px}
-
-@media (max-width:860px){
-  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 14px 14px;gap:2px;box-shadow:var(--shadow);margin-left:0}
-  .nav.open{display:flex}.nav a{width:100%}.burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
-}
-@media (max-width:560px){.accent button{min-width:34px}.a11y-btn span.lbl{display:none}section{padding:38px 0}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 17px;border-radius:11px;border:1px solid var(--line);background:var(--card);font-weight:700;transition:.18s}
+.btn:hover{transform:translateY(-1px);border-color:var(--terra);box-shadow:var(--shadow)}.btn-primary{background:var(--terra);color:#fff;border-color:var(--terra)}.btn-secondary{background:var(--navy);color:#fff;border-color:var(--navy)}
+header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 91%,transparent);backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}.nav a{padding:9px 11px;border-radius:9px;font-size:.86rem;font-weight:600;min-height:40px;display:inline-flex;align-items:center}.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
+.top-tools{display:flex;align-items:center;gap:8px}.a11y-btn,.burger{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:11px;min-height:40px;padding:0 12px;font-weight:700;font-size:.84rem}.burger{display:none;min-width:44px;justify-content:center;font-size:1.2rem}
+.scrim{position:fixed;inset:0;background:rgba(34,49,47,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100}.scrim.open{opacity:1;pointer-events:auto}.a11y-panel{position:fixed;top:0;right:0;height:100%;width:min(360px,90vw);background:var(--bg2);border-left:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s ease;z-index:101;overflow-y:auto}.a11y-panel.open{transform:none}.a11y-panel .ph{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}.a11y-panel h2{font-size:1.2rem;color:var(--navy)}.a11y-panel .close{font-size:1.6rem;color:var(--muted);min-width:var(--tap);min-height:var(--tap);border:0;background:none}.a11y-body{padding:18px 20px}.a11y-group{margin-bottom:20px}.a11y-group .lbl{font-weight:700;font-size:.9rem;margin-bottom:8px;display:block}.seg{display:flex;gap:6px}.seg button,.opt-toggle{border:1px solid var(--line);background:var(--card);border-radius:10px;min-height:44px;font-weight:700;font-size:.86rem;padding:0 14px}.seg button{flex:1}.seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}.opt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}.opt-toggle .state{font-size:.78rem;color:var(--muted)}.opt-toggle.on{border-color:var(--sage);background:#f2f6f0}.a11y-foot{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
+section{padding:48px 0}.section-white{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.hero{padding:48px 0 34px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.7fr);gap:30px;align-items:end}.hero h1{font-size:clamp(2.1rem,6vw,3.5rem);color:var(--navy);max-width:17ch}.hero .lead{font-size:1.08rem;margin-top:15px;max-width:66ch}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}.stat strong{font-family:var(--display);font-size:1.6rem;color:var(--navy);display:block}.stat span{font-size:.79rem;color:var(--muted)}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}.sec-head-copy{max-width:68ch}.sec-head h2{font-size:clamp(1.5rem,3.4vw,2rem);color:var(--navy)}.sec-head p{color:var(--muted);margin-top:8px}.update-note{font-size:.77rem;color:var(--muted);white-space:nowrap}
+.fresh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.fresh-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:180px;transition:.18s}.fresh-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--terra)}.fresh-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.fresh-source{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--terra)}.fresh-date{font-size:.73rem;color:var(--muted)}.fresh-card h3{font-family:var(--font);font-size:1.02rem;line-height:1.3;margin:13px 0;color:var(--navy)}.fresh-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}.tag{display:inline-flex;align-items:center;min-height:27px;padding:2px 8px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);font-size:.69rem;font-weight:700;color:var(--muted)}
+.category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.category-card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:17px;text-align:left;transition:.18s;min-height:135px}.category-card:hover{border-color:var(--terra);transform:translateY(-2px);box-shadow:var(--shadow)}.cat-icon{font-size:1.35rem}.category-card h3{font-family:var(--font);font-size:.96rem;margin-top:10px;color:var(--navy)}.category-card p{font-size:.78rem;color:var(--muted);margin-top:5px}.category-card .count{font-size:.7rem;font-weight:700;color:var(--terra);margin-top:8px;display:block}
+.library-shell{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}.filter-panel{position:sticky;top:82px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}.filter-panel h3{font-family:var(--font);font-size:1rem;color:var(--navy)}.filter-group{margin-top:16px}.filter-group label{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}.search-wrap{position:relative}.search-wrap svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted)}.filter-panel input,.filter-panel select{width:100%;min-height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);padding:8px 10px}.filter-panel input{padding-left:40px}.filter-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.filter-actions .btn{padding:0 10px;font-size:.82rem}.fav-only{width:100%;margin-top:8px}.fav-only.on{background:#fff7df;border-color:var(--gold)}
+.results-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}.results-count{font-weight:700;color:var(--navy)}.active-filters{display:flex;flex-wrap:wrap;gap:6px}.active-filter{font-size:.7rem;background:#eef3f1;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:4px 9px}.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.resource-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:260px;transition:.18s}.resource-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#d7bfa8}.resource-head{display:flex;gap:11px;align-items:flex-start;padding-right:34px}.format-icon{flex:none;width:38px;height:38px;border-radius:10px;background:#eef1f6;display:grid;place-items:center;font-size:1.05rem}.resource-card h3{font-family:var(--font);font-size:1.02rem;line-height:1.26;color:var(--navy)}.resource-card .desc{font-size:.85rem;color:var(--muted);margin:11px 0 14px}.resource-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}.resource-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:16px;border-top:1px dashed var(--line);padding-top:12px}.open-link{font-size:.83rem;font-weight:700;color:var(--terra);display:inline-flex;gap:6px;align-items:center}.star{position:absolute;right:12px;top:12px;width:35px;height:35px;border:0;border-radius:999px;background:transparent;font-size:1.25rem;color:#9a8d7c}.star:hover,.star.on{background:#fff7df;color:#b78108}.resource-kind{font-size:.7rem;color:var(--muted)}.load-row{text-align:center;margin-top:20px}.empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:30px;text-align:center;color:var(--muted)}
+.country-row{display:flex;flex-wrap:wrap;gap:8px}.country-chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 12px;font-weight:700;font-size:.78rem}.country-chip:hover{border-color:var(--terra);color:var(--terra)}
+.radar{background:linear-gradient(135deg,#253e56,#365d67);color:#fff;border-radius:20px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;box-shadow:var(--shadow-lg)}.radar h2{color:#fff}.radar p{opacity:.88;margin-top:8px;max-width:63ch}.radar .btn{background:#fff;color:var(--navy);border-color:#fff}.radar-result{margin-top:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:14px;display:none}.radar-result.show{display:block}.radar-result a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.maintenance{margin-top:22px;padding:14px 16px;background:var(--bg2);border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0;margin-top:20px}.foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}.foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}.foot-nav{display:flex;flex-wrap:wrap;gap:6px}.foot-nav a{padding:7px 11px;border-radius:8px;font-size:.88rem;font-weight:600}.foot-nav a:hover{background:#fff;color:var(--terra)}.foot-copy{width:100%;color:var(--muted);font-size:.84rem;border-top:1px dashed var(--line);padding-top:16px;margin-top:6px}
+@media(max-width:960px){.fresh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-shell{grid-template-columns:1fr}.filter-panel{position:relative;top:auto}.filter-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.filter-group{margin-top:0}.filter-actions{display:flex}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 14px 14px;box-shadow:var(--shadow);margin-left:0}.nav.open{display:flex}.nav a{width:100%}.burger{display:inline-flex;margin-left:auto}.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:650px){section{padding:38px 0}.fresh-grid,.resource-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.filter-fields{grid-template-columns:1fr}.category-grid{grid-template-columns:1fr 1fr}.radar{grid-template-columns:1fr}.sec-head{align-items:flex-start;flex-direction:column}.update-note{white-space:normal}.a11y-btn span{display:none}}
+@media(max-width:430px){.category-grid{grid-template-columns:1fr}.top-in{gap:8px}.brand .name{font-size:1.05rem}}
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Aller au contenu</a>
-
-<header class="top">
-  <div class="top-in">
-    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
-      <span class="name">English Colles in Lyon</span>
-      <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
-    </a>
-    <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="index.html">Home</a>
-      <a href="methodology.html">Methodology</a>
-      <a href="civilisation.html">Civilisation</a>
-      <a href="vocabulary.html">Vocabulary</a>
-      <a href="timelines.html">Timelines</a>
-      <a href="colle-trainer.html">Colle Trainer</a>
-      <a href="resources.html" class="active">Resources</a>
-      <a href="about.html">About</a>
-    </nav>
-    <div class="top-tools">
-      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
-        <button data-acc="UK" class="on">UK</button>
-        <button data-acc="US">US</button>
-        <button data-acc="AU">AU</button>
-        <button data-acc="CA">CA</button>
-      </div>
-      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
-        <span class="lbl">Accessibilité</span>
-      </button>
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
-    </div>
-  </div>
-  <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
-</header>
-
+<a href="#main" class="skip">Skip to content</a>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html" aria-label="English Colles in Lyon — home"><span class="name">English Colles in Lyon</span><span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span></a>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html" class="active">Resources</a><a href="about.html">About</a>
+  </nav>
+  <div class="top-tools"><button class="a11y-btn" id="openA11y" aria-haspopup="dialog" aria-label="Accessibility settings">◐ <span>Accessibility</span></button><button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button></div>
+</div></header>
 <div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Réglages d'accessibilité">
-  <div class="ph"><h2>Accessibilité</h2><button class="close" id="closeA11y" aria-label="Fermer">×</button></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+  <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
-    <div class="a11y-group"><span class="lbl">Taille du texte</span>
-      <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
-    </div>
-    <div class="a11y-group"><span class="lbl">Affichage</span>
-      <button class="opt-toggle" data-opt="contrast"><span>Contraste élevé</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="dys"><span>Police dyslexie / lecture confortable</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="noanim"><span>Réduire les animations</span><span class="state">Off</span></button>
-    </div>
-    <p class="a11y-foot">Tes réglages sont mémorisés sur cet appareil.</p>
+    <div class="a11y-group"><span class="lbl">Text size</span><div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div></div>
+    <div class="a11y-group"><span class="lbl">Display</span><button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button><button class="opt-toggle" data-opt="dys"><span>Comfortable reading font</span><span class="state">Off</span></button><button class="opt-toggle" data-opt="noanim"><span>Reduce motion</span><span class="state">Off</span></button></div>
+    <p class="a11y-foot">Settings are saved on this device.</p>
   </div>
 </aside>
-
 <main id="main">
-<section class="hero"><div class="wrap">
-  <div class="eyebrow">Ressources · Listening</div>
-  <h1>Quelques minutes d'actualité en anglais, chaque jour</h1>
-  <p class="lead">Écouter régulièrement de courts bulletins d'information est l'un des meilleurs moyens d'habituer ton oreille, d'enrichir ton vocabulaire d'actualité et de nourrir tes colles. Voici des sources <b>officielles et gratuites</b>, courtes, à travers le monde anglophone.</p>
-  <div class="callout">Ces bulletins sont protégés par le droit d'auteur : on ne les héberge pas ici, on t'envoie directement vers les sources officielles, qui restent la meilleure façon de les écouter.</div>
-</div></section>
+<section class="hero"><div class="wrap"><div class="hero-grid">
+  <div><div class="eyebrow">Resource Hub</div><h1>The English-speaking world, properly organised.</h1><p class="lead">A curated library of reliable news, podcasts, videos, official documents, statistics, fact-checking services, background explainers and language tools. Use the search bar or browse by format, country and topic.</p><div class="hero-actions"><a class="btn btn-primary" href="#library">Browse all resources ↓</a><button class="btn" id="heroRandom">Surprise me ✦</button></div></div>
+  <div class="stats"><div class="stat"><strong id="statResources">—</strong><span>curated resources</span></div><div class="stat"><strong id="statCountries">—</strong><span>countries & regions</span></div><div class="stat"><strong id="statFormats">—</strong><span>resource formats</span></div><div class="stat"><strong>2×</strong><span>automatic updates daily</span></div></div>
+</div></div></section>
 
-<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">La méthode</div><h2>Comment écouter (en 4 temps)</h2><p>La même démarche que le reste du site : de l'écoute globale à la prise de parole.</p></div>
-  <div class="steps">
-    <div class="step st-observe"><div class="n">01</div><h3>Observe</h3><p>Écoute une première fois pour le sens général, sans stresser ni tout comprendre.</p></div>
-    <div class="step st-understand"><div class="n">02</div><h3>Understand</h3><p>Réécoute et note 3 à 5 mots-clés, plus 3 faits que tu as compris.</p></div>
-    <div class="step st-connect"><div class="n">03</div><h3>Connect</h3><p>Relie une information à un thème de colle : économie, société, politique, environnement…</p></div>
-    <div class="step st-speak"><div class="n">04</div><h3>Speak</h3><p>À voix haute&nbsp;: «&nbsp;Today's main story is…&nbsp;» — résume en 3 ou 4 phrases.</p></div>
-  </div>
+<section class="section-white" id="fresh"><div class="wrap">
+  <div class="sec-head"><div class="sec-head-copy"><div class="eyebrow">Automatically updated</div><h2>Fresh from reliable sources</h2><p>The latest publications gathered from official and public-service feeds. Titles always open on the original website.</p></div><div class="update-note" id="feedUpdated">Checking the latest update…</div></div>
+  <div class="fresh-grid" id="freshGrid" aria-live="polite"></div>
 </div></section>
 
 <section><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Pour commencer</div><h2>En anglais simplifié</h2><p>Débit plus lent, vocabulaire expliqué&nbsp;: idéal si l'écoute des journaux natifs te semble encore rapide.</p></div>
-  <div class="sources">
-    <article class="source" data-acc="UK"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">UK</span><div><h3>BBC Learning English</h3><div class="meta">Learning English from the News · ~8 min · hebdo</div></div></div>
-      <p class="consigne">Une actualité de la semaine, racontée en anglais accessible, avec le vocabulaire des titres. <b>Consigne&nbsp;:</b> note les 3 nouveaux mots de l'épisode et une courte définition pour chacun.</p>
-      <a class="listen" href="https://www.bbc.co.uk/learningenglish/features/learning-english-from-the-news" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="AU"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">AU</span><div><h3>SBS News in Easy English</h3><div class="meta">Australie · ~5 min · chaque jour</div></div></div>
-      <p class="consigne">Un résumé quotidien de cinq minutes, en anglais ralenti, pensé pour les apprenants. <b>Consigne&nbsp;:</b> une première écoute pour le sens, puis relève les trois titres principaux.</p>
-      <a class="listen" href="https://www.sbs.com.au/news/podcast-episodes/news-in-easy-english" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="US"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">US</span><div><h3>VOA Learning English</h3><div class="meta">États-Unis · débit lent · quotidien</div></div></div>
-      <p class="consigne">L'actualité américaine et mondiale en anglais simplifié et à débit lent. <b>Consigne&nbsp;:</b> reformule chaque information entendue en une phrase simple, à ta façon.</p>
-      <a class="listen" href="https://learningenglish.voanews.com/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-  </div>
+  <div class="sec-head"><div class="sec-head-copy"><div class="eyebrow">Browse by format</div><h2>Choose the kind of source you need</h2><p>Each category applies the corresponding filter to the complete library.</p></div></div>
+  <div class="category-grid" id="categoryGrid"></div>
 </div></section>
 
-<section style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Le tour du monde anglophone</div><h2>En anglais authentique, par pays</h2><p>De vrais bulletins d'information&nbsp;: parfaits pour t'habituer aux différents accents. Le pays de ton accent sélectionné est mis en avant.</p></div>
-  <div class="sources">
-    <article class="source" data-acc="US"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">US</span><div><h3>NPR News Now</h3><div class="meta">États-Unis · 5 min · toutes les heures</div></div></div>
-      <p class="consigne">Toute l'actualité en cinq minutes, mise à jour à chaque heure. <b>Consigne&nbsp;:</b> 1ʳᵉ écoute, les sujets&nbsp;; 2ᵉ écoute, relève un chiffre et un nom propre par information.</p>
-      <a class="listen" href="https://www.npr.org/podcasts/500005/npr-news-now" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="CA"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">CA</span><div><h3>CBC · The World This Hour</h3><div class="meta">Canada · 5 min · toutes les heures</div></div></div>
-      <p class="consigne">L'essentiel de l'actualité canadienne et mondiale en cinq minutes. <b>Consigne&nbsp;:</b> repère ce qui concerne l'Amérique du Nord et relie-le à un thème de colle.</p>
-      <a class="listen" href="https://www.cbc.ca/listen/live-radio/1-9-cbc-news-the-world-this-hour" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="UK"><span class="matchtag">★ ton accent</span>
-      <div class="head"><span class="cc">UK</span><div><h3>BBC · Global News Podcast</h3><div class="meta">Royaume-Uni / monde · ~30 min · 2×/jour</div></div></div>
-      <p class="consigne">Le tour du monde de la BBC, deux fois par jour. <b>Consigne&nbsp;:</b> choisis UN sujet et résume-le en quatre phrases (un mini-plan à l'oral).</p>
-      <a class="listen" href="https://www.bbc.co.uk/programmes/p02nq0gn" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="">
-      <div class="head"><span class="cc">IE</span><div><h3>RTÉ · Morning Ireland</h3><div class="meta">Irlande · matinale d'info</div></div></div>
-      <p class="consigne">L'actualité irlandaise et internationale par le service public irlandais. <b>Consigne&nbsp;:</b> choisis un sujet et prépare une phrase d'ouverture (a hook) pour une colle.</p>
-      <a class="listen" href="https://www.rte.ie/radio/podcasts/morning-ireland/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="">
-      <div class="head"><span class="cc">NZ</span><div><h3>RNZ · News Bulletins</h3><div class="meta">Nouvelle-Zélande · bulletins courts</div></div></div>
-      <p class="consigne">Bulletins néo-zélandais (7h, midi, 17h, 22h)&nbsp;: un accent différent, très utile. <b>Consigne&nbsp;:</b> note un sujet qu'on n'entend pas dans les médias britanniques ou américains.</p>
-      <a class="listen" href="https://www.rnz.co.nz/programmes/news-bulletin-podcast" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="">
-      <div class="head"><span class="cc">ZA</span><div><h3>SABC News · SAfm</h3><div class="meta">Afrique du Sud · bulletins d'info</div></div></div>
-      <p class="consigne">Le regard sud-africain sur l'actualité, en anglais. <b>Consigne&nbsp;:</b> repère un enjeu (économie, société) et un mot-clé anglais à réutiliser en colle.</p>
-      <a class="listen" href="https://www.sabcnews.com/sabcnews/category/audio/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-    <article class="source" data-acc="">
-      <div class="head"><span class="cc">IN</span><div><h3>All India Radio · News on AIR</h3><div class="meta">Inde · bulletins en anglais</div></div></div>
-      <p class="consigne">Les bulletins en anglais du service public indien. <b>Consigne&nbsp;:</b> écoute d'abord pour t'habituer à l'accent, puis relève un fait de politique internationale.</p>
-      <a class="listen" href="https://www.newsonair.gov.in/listen-news/" target="_blank" rel="noopener">Écouter <span class="ar">→</span></a>
-    </article>
-  </div>
-
-  <div class="small"><b>Bon à savoir.</b> Ces liens mènent aux pages officielles des diffuseurs. Les émissions sont aussi disponibles dans la plupart des applis de podcasts (Apple Podcasts, Spotify…)&nbsp;: cherches-y le nom de l'émission (par exemple «&nbsp;NPR News Now&nbsp;» ou «&nbsp;SBS News in Easy English&nbsp;»). Si un lien évolue, préviens-moi&nbsp;: on le met à jour. D'autres ressources (articles, podcasts thématiques, vidéos, lectures) viendront compléter cette page.</div>
+<section class="section-white"><div class="wrap">
+  <div class="sec-head"><div class="sec-head-copy"><div class="eyebrow">Explore geographically</div><h2>Across the English-speaking world</h2><p>Jump directly to national media, institutions, data and reference sources.</p></div></div>
+  <div class="country-row" id="countryRow"></div>
 </div></section>
+
+<section id="library"><div class="wrap">
+  <div class="sec-head"><div class="sec-head-copy"><div class="eyebrow">Complete library</div><h2>Find a resource</h2><p>Search by name or description, then combine country, topic, format and access filters.</p></div></div>
+  <div class="library-shell">
+    <aside class="filter-panel" aria-label="Resource filters"><h3>Search & filters</h3><div class="filter-fields">
+      <div class="filter-group"><label for="searchInput">Search</label><div class="search-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="searchInput" type="search" placeholder="climate, Parliament, pronunciation…"></div></div>
+      <div class="filter-group"><label for="countryFilter">Country or region</label><select id="countryFilter"><option value="">All countries</option></select></div>
+      <div class="filter-group"><label for="formatFilter">Format</label><select id="formatFilter"><option value="">All formats</option></select></div>
+      <div class="filter-group"><label for="topicFilter">Topic</label><select id="topicFilter"><option value="">All topics</option></select></div>
+      <div class="filter-group"><label for="accessFilter">Access</label><select id="accessFilter"><option value="">All access types</option></select></div>
+      <div class="filter-group"><label for="kindFilter">Source type</label><select id="kindFilter"><option value="">All source types</option></select></div>
+    </div><div class="filter-actions"><button class="btn" id="resetFilters">Reset</button><button class="btn btn-secondary" id="randomResource">Random</button></div><button class="btn fav-only" id="favOnly">☆ My saved resources</button></aside>
+    <div><div class="results-top"><div class="results-count" id="resultsCount">Loading resources…</div><div class="active-filters" id="activeFilters"></div></div><div class="resource-grid" id="resourceGrid"></div><div class="load-row"><button class="btn" id="loadMore" hidden>Show more</button></div></div>
+  </div>
+  <div class="maintenance"><span id="curatedDate">Curated library loading…</span><span id="linkCheck">Automatic link check not run yet.</span></div>
+</div></section>
+
+<section><div class="wrap"><div class="radar"><div><div class="eyebrow" style="color:#ffd9c8">Resource Radar</div><h2>Discover something you would not have searched for.</h2><p>The radar selects one resource from the entire library. You can keep the suggestion or launch it again.</p><div class="radar-result" id="radarResult"></div></div><button class="btn" id="launchRadar">Launch the radar ✦</button></div></div></section>
 </main>
-
-<footer><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">English Colles in Lyon</div>
-    <nav class="foot-nav" aria-label="Pied de page">
-      <a href="index.html">Accueil</a>
-      <a href="methodology.html">Méthodologie</a>
-      <a href="civilisation.html">Civilisation</a>
-      <a href="vocabulary.html">Vocabulaire</a>
-      <a href="colle-trainer.html">Colle Trainer</a>
-      <a href="resources.html">Ressources</a>
-      <a href="index.html#about">À propos</a>
-    </nav>
-  </div>
-  <div class="foot-copy">© Eglantine Lecomte — English Colles in Lyon.</div>
-</div></footer>
-
+<footer><div class="wrap"><div class="foot-grid"><div class="foot-brand">English Colles in Lyon</div><nav class="foot-nav" aria-label="Footer"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="about.html">About</a></nav><div class="foot-copy">© Eglantine Lecomte — English Colles in Lyon. External content remains on its original publisher’s website.</div></div></div></footer>
 <script>
-const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
-const nav=document.getElementById('nav'),burger=document.getElementById('burger');
-burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
-
-const ACC_LABEL={UK:"UK English",US:"US English",AU:"Australian English",CA:"Canadian English"};
-const accentBox=document.getElementById('accent'),accentNote=document.getElementById('accentNote');
-function highlightAccent(a){document.querySelectorAll('.source').forEach(s=>s.classList.toggle('match',s.dataset.acc===a));}
-function setAccent(a){accentBox.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.acc===a));accentNote.textContent="Accent selected: "+ACC_LABEL[a];LS.set('eclyon_accent',a);highlightAccent(a);}
-accentBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setAccent(b.dataset.acc)));
-setAccent(LS.get('eclyon_accent','UK'));
-
-const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('scrim');
-function openA11y(){panel.classList.add('open');scrim.classList.add('open');}
-function closeA11y(){panel.classList.remove('open');scrim.classList.remove('open');}
-document.getElementById('openA11y').addEventListener('click',openA11y);
-document.getElementById('closeA11y').addEventListener('click',closeA11y);
-scrim.addEventListener('click',closeA11y);
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA11y();});
-
-const SIZES=[18,20.5,23];
-function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i);}
-document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));
-applySize(+LS.get('eclyon_size',0));
-
-function applyOpt(opt,on){document.body.classList.toggle(opt,on);const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off';}LS.set('eclyon_'+opt,on?'1':'0');}
-document.querySelectorAll('.opt-toggle').forEach(btn=>{const opt=btn.dataset.opt;btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');});
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const state={all:[],filtered:[],visible:24,favourites:new Set(JSON.parse(LS.get('eclyon_resource_favs','[]'))),favOnly:false};
+const FORMAT_INFO={
+  'News':['📰','Current reporting and analysis'],'Podcast':['🎧','Audio news, interviews and documentaries'],'Video':['🎥','Reports, debates, lectures and documentaries'],'Data':['📊','Statistics, charts and downloadable datasets'],'Primary source':['🏛️','Official documents, laws, debates and judgments'],'Fact-check':['✅','Verification and media-literacy sources'],'Explainer':['📚','Background, research and clear institutional guides'],'Language tool':['🔤','Dictionaries, corpora and pronunciation tools']
+};
+const FORMAT_ORDER=Object.keys(FORMAT_INFO); const fmtIcon=f=>(FORMAT_INFO[f]||['🔗'])[0];
+const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const unique=(arr)=>[...new Set(arr)].sort((a,b)=>a.localeCompare(b));
+function populateSelect(id,values){const sel=document.getElementById(id);values.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o)})}
+function saveFavs(){LS.set('eclyon_resource_favs',JSON.stringify([...state.favourites]))}
+function toggleFav(id){state.favourites.has(id)?state.favourites.delete(id):state.favourites.add(id);saveFavs();applyFilters()}
+function openRandom(pool=state.filtered.length?state.filtered:state.all){if(!pool.length)return;const r=pool[Math.floor(Math.random()*pool.length)];window.open(r.url,'_blank','noopener')}
+function setFilter(id,value){document.getElementById(id).value=value;state.visible=24;applyFilters();document.getElementById('library').scrollIntoView({behavior:'smooth'})}
+function applyFilters(){
+  const q=norm(document.getElementById('searchInput').value),country=document.getElementById('countryFilter').value,format=document.getElementById('formatFilter').value,topic=document.getElementById('topicFilter').value,access=document.getElementById('accessFilter').value,kind=document.getElementById('kindFilter').value;
+  state.filtered=state.all.filter(r=>{
+    const hay=norm([r.title,r.description,...r.countries,r.format,...r.topics,r.kind,...r.badges].join(' '));
+    return(!q||hay.includes(q))&&(!country||r.countries.includes(country))&&(!format||r.format===format)&&(!topic||r.topics.includes(topic))&&(!access||r.access===access)&&(!kind||r.kind===kind)&&(!state.favOnly||state.favourites.has(r.id));
+  });renderResources();renderActiveFilters({q,country,format,topic,access,kind})
+}
+function renderActiveFilters(f){const el=document.getElementById('activeFilters');const vals=[f.q&&`Search: ${document.getElementById('searchInput').value}`,f.country,f.format,f.topic,f.access,f.kind,state.favOnly&&'Saved only'].filter(Boolean);el.innerHTML=vals.map(v=>`<span class="active-filter">${esc(v)}</span>`).join('')}
+function renderResources(){const grid=document.getElementById('resourceGrid'),items=state.filtered.slice(0,state.visible);document.getElementById('resultsCount').textContent=`${state.filtered.length} resource${state.filtered.length===1?'':'s'}`;if(!items.length){grid.innerHTML='<div class="empty" style="grid-column:1/-1"><strong>No matching resource.</strong><br>Try removing one filter or using a broader search.</div>'}else grid.innerHTML=items.map(r=>`<article class="resource-card"><button class="star ${state.favourites.has(r.id)?'on':''}" data-fav="${esc(r.id)}" aria-label="${state.favourites.has(r.id)?'Remove from':'Save to'} favourites" title="Save resource">${state.favourites.has(r.id)?'★':'☆'}</button><div class="resource-head"><span class="format-icon">${fmtIcon(r.format)}</span><div><h3>${esc(r.title)}</h3><div class="resource-kind">${esc(r.kind)} · ${esc(r.access)}</div></div></div><p class="desc">${esc(r.description)}</p><div class="resource-tags"><span class="tag">${esc(r.format)}</span>${r.countries.slice(0,2).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}${r.topics.slice(0,2).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}${r.badges.slice(0,2).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="resource-actions"><a class="open-link" href="${esc(r.url)}" target="_blank" rel="noopener">Open resource →</a><span class="resource-kind">Original website</span></div></article>`).join('');
+  grid.querySelectorAll('[data-fav]').forEach(b=>b.addEventListener('click',()=>toggleFav(b.dataset.fav)));const more=document.getElementById('loadMore');more.hidden=state.visible>=state.filtered.length;more.textContent=`Show more (${state.filtered.length-state.visible})`}
+function renderCategories(){const grid=document.getElementById('categoryGrid');grid.innerHTML=FORMAT_ORDER.map(f=>{const info=FORMAT_INFO[f],count=state.all.filter(r=>r.format===f).length;return`<button class="category-card" data-format="${esc(f)}"><span class="cat-icon">${info[0]}</span><h3>${esc(f)}</h3><p>${esc(info[1])}</p><span class="count">${count} resource${count===1?'':'s'} →</span></button>`}).join('');grid.querySelectorAll('[data-format]').forEach(b=>b.addEventListener('click',()=>setFilter('formatFilter',b.dataset.format)))}
+function renderCountries(){const preferred=['United Kingdom','United States','Ireland','Canada','Australia','New Zealand','South Africa','India','Caribbean','International'];const row=document.getElementById('countryRow');row.innerHTML=preferred.filter(c=>state.all.some(r=>r.countries.includes(c))).map(c=>`<button class="country-chip" data-country="${esc(c)}">${esc(c)} <small>(${state.all.filter(r=>r.countries.includes(c)).length})</small></button>`).join('');row.querySelectorAll('[data-country]').forEach(b=>b.addEventListener('click',()=>setFilter('countryFilter',b.dataset.country)))}
+function radar(){const pool=state.all;if(!pool.length)return;const r=pool[Math.floor(Math.random()*pool.length)],el=document.getElementById('radarResult');el.innerHTML=`<strong>${fmtIcon(r.format)} ${esc(r.title)}</strong><br><span>${esc(r.description)}</span><br><a href="${esc(r.url)}" target="_blank" rel="noopener">Open this resource →</a>`;el.classList.add('show')}
+async function loadFeed(){const grid=document.getElementById('freshGrid');try{const res=await fetch('resources-feed.json',{cache:'no-store'});if(!res.ok)throw new Error();const data=await res.json(),items=(data.items||[]).slice(0,6);grid.innerHTML=items.map(i=>`<a class="fresh-card" href="${esc(i.url)}" target="_blank" rel="noopener"><div class="fresh-top"><span class="fresh-source">${esc(i.source)}</span><span class="fresh-date">${i.date?new Date(i.date).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'Latest'}</span></div><h3>${esc(i.title)}</h3><div class="fresh-meta"><span class="tag">${esc(i.format||i.kind||'Resource')}</span><span class="tag">${esc(i.country||'International')}</span>${i.topic?`<span class="tag">${esc(i.topic)}</span>`:''}</div></a>`).join('');document.getElementById('feedUpdated').textContent=data.generatedAt?`Feed updated ${new Date(data.generatedAt).toLocaleString('en-GB')}`:'Automatic feed ready — first update pending.'}catch(e){grid.innerHTML='<div class="empty" style="grid-column:1/-1">The live feed is temporarily unavailable. The permanent library below remains fully accessible.</div>';document.getElementById('feedUpdated').textContent='Live feed temporarily unavailable.'}}
+async function loadStatus(){try{const res=await fetch('resources-link-status.json',{cache:'no-store'}),d=await res.json();if(d.checkedAt){document.getElementById('linkCheck').textContent=`Links checked ${new Date(d.checkedAt).toLocaleDateString('en-GB')}: ${d.ok} working, ${d.warnings} warnings, ${d.failed} failed.`}}catch(e){}}
+async function init(){try{const res=await fetch('resources-data.json');if(!res.ok)throw new Error('data');const data=await res.json();state.all=data.resources||[];state.filtered=[...state.all];document.getElementById('statResources').textContent=state.all.length;document.getElementById('statCountries').textContent=unique(state.all.flatMap(r=>r.countries)).length;document.getElementById('statFormats').textContent=unique(state.all.map(r=>r.format)).length;document.getElementById('curatedDate').textContent=`Permanent library: ${state.all.length} sources · curated ${new Date(data.curatedAt).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}.`;populateSelect('countryFilter',unique(state.all.flatMap(r=>r.countries)));populateSelect('formatFilter',FORMAT_ORDER.filter(f=>state.all.some(r=>r.format===f)));populateSelect('topicFilter',unique(state.all.flatMap(r=>r.topics)));populateSelect('accessFilter',unique(state.all.map(r=>r.access)));populateSelect('kindFilter',unique(state.all.map(r=>r.kind)));renderCategories();renderCountries();applyFilters()}catch(e){document.getElementById('resourceGrid').innerHTML='<div class="empty" style="grid-column:1/-1"><strong>resources-data.json could not be loaded.</strong><br>Check that it was uploaded next to resources.html.</div>';document.getElementById('resultsCount').textContent='Library unavailable'}}
+['countryFilter','formatFilter','topicFilter','accessFilter','kindFilter'].forEach(id=>document.getElementById(id).addEventListener('change',()=>{state.visible=24;applyFilters()}));document.getElementById('searchInput').addEventListener('input',()=>{state.visible=24;applyFilters()});document.getElementById('resetFilters').addEventListener('click',()=>{['searchInput','countryFilter','formatFilter','topicFilter','accessFilter','kindFilter'].forEach(id=>document.getElementById(id).value='');state.favOnly=false;document.getElementById('favOnly').classList.remove('on');document.getElementById('favOnly').textContent='☆ My saved resources';state.visible=24;applyFilters()});document.getElementById('randomResource').addEventListener('click',()=>openRandom());document.getElementById('heroRandom').addEventListener('click',radar);document.getElementById('launchRadar').addEventListener('click',radar);document.getElementById('loadMore').addEventListener('click',()=>{state.visible+=24;renderResources()});document.getElementById('favOnly').addEventListener('click',e=>{state.favOnly=!state.favOnly;e.currentTarget.classList.toggle('on',state.favOnly);e.currentTarget.textContent=state.favOnly?'★ Showing saved resources':'☆ My saved resources';state.visible=24;applyFilters()});
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('scrim');function openA11y(){panel.classList.add('open');scrim.classList.add('open')}function closeA11y(){panel.classList.remove('open');scrim.classList.remove('open')}document.getElementById('openA11y').addEventListener('click',openA11y);document.getElementById('closeA11y').addEventListener('click',closeA11y);scrim.addEventListener('click',closeA11y);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA11y()});
+const SIZES=[18,20.5,23];function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i)}document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));applySize(+LS.get('eclyon_size',0));function applyOpt(opt,on){document.body.classList.toggle(opt,on);const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off'}LS.set('eclyon_'+opt,on?'1':'0')}document.querySelectorAll('.opt-toggle').forEach(btn=>{const opt=btn.dataset.opt;btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1')});
+init();loadFeed();loadStatus();
 </script>
-</body>
-</html>
+</body></html>

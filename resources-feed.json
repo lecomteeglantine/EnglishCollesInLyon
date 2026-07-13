@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "status": "waiting-for-first-update",
+  "items": [
+    {
+      "title": "Latest world headlines",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/world",
+      "date": null,
+      "country": "International",
+      "format": "News",
+      "topic": "International relations",
+      "kind": "News"
+    },
+    {
+      "title": "Latest five-minute bulletin",
+      "source": "NPR News Now",
+      "url": "https://www.npr.org/podcasts/500005/npr-news-now",
+      "date": null,
+      "country": "United States",
+      "format": "Podcast",
+      "topic": "Politics",
+      "kind": "Podcast"
+    },
+    {
+      "title": "Latest UK statistical releases",
+      "source": "Office for National Statistics",
+      "url": "https://www.ons.gov.uk/releasecalendar",
+      "date": null,
+      "country": "United Kingdom",
+      "format": "Data",
+      "topic": "Economy",
+      "kind": "Official"
+    },
+    {
+      "title": "Latest bills in Parliament",
+      "source": "UK Parliament",
+      "url": "https://bills.parliament.uk/",
+      "date": null,
+      "country": "United Kingdom",
+      "format": "Primary source",
+      "topic": "Politics",
+      "kind": "Official"
+    },
+    {
+      "title": "Latest United Nations news",
+      "source": "UN News",
+      "url": "https://news.un.org/en/",
+      "date": null,
+      "country": "International",
+      "format": "News",
+      "topic": "International relations",
+      "kind": "Official"
+    },
+    {
+      "title": "Latest science and space news",
+      "source": "NASA",
+      "url": "https://www.nasa.gov/news/",
+      "date": null,
+      "country": "United States",
+      "format": "News",
+      "topic": "Science & technology",
+      "kind": "Official"
+    }
+  ],
+  "sources": {
+    "successful": 0,
+    "failed": 0
+  }
+}

@@ -1,0 +1,3100 @@
+{
+  "version": 1,
+  "curatedAt": "2026-07-13",
+  "description": "Curated resource library for English Colles in Lyon.",
+  "resources": [
+    {
+      "id": "bbc-news",
+      "title": "BBC News",
+      "description": "Actualité britannique et internationale du service public britannique.",
+      "url": "https://www.bbc.com/news",
+      "countries": [
+        "United Kingdom",
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bbc-world",
+      "title": "BBC World",
+      "description": "Sélection mondiale de la BBC, utile pour replacer un sujet national dans un contexte international.",
+      "url": "https://www.bbc.com/news/world",
+      "countries": [
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "International relations",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Live updates"
+      ],
+      "featured": true
+    },
+    {
+      "id": "reuters",
+      "title": "Reuters",
+      "description": "Dépêches internationales rapides, factuelles et faciles à recouper avec d’autres sources.",
+      "url": "https://www.reuters.com/world/",
+      "countries": [
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Economy",
+        "International relations",
+        "Science & technology"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "Concise"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ap-news",
+      "title": "AP News",
+      "description": "Actualité américaine et internationale produite par une grande agence de presse.",
+      "url": "https://apnews.com/",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "Video"
+      ],
+      "featured": true
+    },
+    {
+      "id": "guardian",
+      "title": "The Guardian",
+      "description": "Actualité, analyses et longs formats, avec une forte couverture du Royaume-Uni et du monde.",
+      "url": "https://www.theguardian.com/international",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Long reads"
+      ],
+      "featured": false
+    },
+    {
+      "id": "financial-times",
+      "title": "Financial Times",
+      "description": "Économie, entreprises, géopolitique et marchés. Une partie des contenus est réservée aux abonnés.",
+      "url": "https://www.ft.com/",
+      "countries": [
+        "United Kingdom",
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Economy",
+        "Politics",
+        "International relations"
+      ],
+      "access": "Metered",
+      "kind": "Independent",
+      "badges": [
+        "Data",
+        "Analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "economist",
+      "title": "The Economist",
+      "description": "Analyses internationales, économie et politique. Accès partiellement réservé aux abonnés.",
+      "url": "https://www.economist.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Economy",
+        "Politics",
+        "International relations"
+      ],
+      "access": "Metered",
+      "kind": "Independent",
+      "badges": [
+        "Analysis",
+        "Podcasts"
+      ],
+      "featured": false
+    },
+    {
+      "id": "npr-news",
+      "title": "NPR News",
+      "description": "Actualité américaine, société, politique et culture avec de nombreux formats audio.",
+      "url": "https://www.npr.org/sections/news/",
+      "countries": [
+        "United States"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "Audio",
+        "Transcript"
+      ],
+      "featured": true
+    },
+    {
+      "id": "pbs-newshour",
+      "title": "PBS NewsHour",
+      "description": "Reportages, entretiens et analyses approfondies sur les États-Unis et le monde.",
+      "url": "https://www.pbs.org/newshour/",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "Video",
+        "Transcript"
+      ],
+      "featured": true
+    },
+    {
+      "id": "conversation-uk",
+      "title": "The Conversation UK",
+      "description": "Articles rédigés par des universitaires et édités pour le grand public.",
+      "url": "https://theconversation.com/uk",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "News",
+      "topics": [
+        "Science & technology",
+        "Society",
+        "Politics",
+        "Education"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Expert authors",
+        "Republishable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "conversation-us",
+      "title": "The Conversation US",
+      "description": "Éclairages universitaires sur l’actualité américaine, les sciences et la société.",
+      "url": "https://theconversation.com/us",
+      "countries": [
+        "United States"
+      ],
+      "format": "News",
+      "topics": [
+        "Science & technology",
+        "Society",
+        "Politics",
+        "Education"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Expert authors"
+      ],
+      "featured": false
+    },
+    {
+      "id": "conversation-africa",
+      "title": "The Conversation Africa",
+      "description": "Analyses universitaires sur l’Afrique anglophone et les grands enjeux du continent.",
+      "url": "https://theconversation.com/africa",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Expert authors"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cbc-news",
+      "title": "CBC News",
+      "description": "Actualité nationale et internationale du service public canadien.",
+      "url": "https://www.cbc.ca/news",
+      "countries": [
+        "Canada"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": true
+    },
+    {
+      "id": "globe-mail",
+      "title": "The Globe and Mail",
+      "description": "Presse canadienne de référence, particulièrement utile pour l’économie et la politique.",
+      "url": "https://www.theglobeandmail.com/",
+      "countries": [
+        "Canada"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society"
+      ],
+      "access": "Metered",
+      "kind": "Independent",
+      "badges": [
+        "Analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rte-news",
+      "title": "RTÉ News",
+      "description": "Actualité irlandaise et internationale du service public irlandais.",
+      "url": "https://www.rte.ie/news/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": true
+    },
+    {
+      "id": "irish-times",
+      "title": "The Irish Times",
+      "description": "Actualité, débats de société et analyses sur la République d’Irlande et l’Irlande du Nord.",
+      "url": "https://www.irishtimes.com/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Metered",
+      "kind": "Independent",
+      "badges": [
+        "Analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "abc-news-au",
+      "title": "ABC News Australia",
+      "description": "Actualité australienne et internationale du service public ABC.",
+      "url": "https://www.abc.net.au/news/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": true
+    },
+    {
+      "id": "sbs-news",
+      "title": "SBS News",
+      "description": "Actualité australienne avec une forte attention portée aux migrations et au multiculturalisme.",
+      "url": "https://www.sbs.com.au/news/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "News",
+      "topics": [
+        "Society",
+        "Politics",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rnz-news",
+      "title": "RNZ News",
+      "description": "Actualité néo-zélandaise et Pacifique du service public Radio New Zealand.",
+      "url": "https://www.rnz.co.nz/news",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Audio"
+      ],
+      "featured": true
+    },
+    {
+      "id": "newsroom-nz",
+      "title": "Newsroom New Zealand",
+      "description": "Analyses et enquêtes sur la politique, l’économie et la société néo-zélandaises.",
+      "url": "https://newsroom.co.nz/",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sabc-news",
+      "title": "SABC News",
+      "description": "Actualité sud-africaine du service public national.",
+      "url": "https://www.sabcnews.com/sabcnews/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Video",
+        "Audio"
+      ],
+      "featured": false
+    },
+    {
+      "id": "daily-maverick",
+      "title": "Daily Maverick",
+      "description": "Journalisme d’enquête et analyses sur l’Afrique du Sud.",
+      "url": "https://www.dailymaverick.co.za/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "Society",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Investigations"
+      ],
+      "featured": false
+    },
+    {
+      "id": "the-hindu",
+      "title": "The Hindu",
+      "description": "Actualité et analyses indiennes, particulièrement solides sur la politique et les relations internationales.",
+      "url": "https://www.thehindu.com/",
+      "countries": [
+        "India"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Metered",
+      "kind": "Independent",
+      "badges": [
+        "Analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "indian-express",
+      "title": "The Indian Express",
+      "description": "Actualité indienne, enquêtes, éditoriaux et explications institutionnelles.",
+      "url": "https://indianexpress.com/",
+      "countries": [
+        "India"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Justice & rights",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Explainers"
+      ],
+      "featured": false
+    },
+    {
+      "id": "jamaica-gleaner",
+      "title": "Jamaica Gleaner",
+      "description": "Actualité jamaïcaine et caribéenne.",
+      "url": "https://jamaica-gleaner.com/",
+      "countries": [
+        "Caribbean"
+      ],
+      "format": "News",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [],
+      "featured": false
+    },
+    {
+      "id": "al-jazeera-english",
+      "title": "Al Jazeera English",
+      "description": "Actualité mondiale et reportages vidéo en anglais, avec une perspective non occidentale.",
+      "url": "https://www.aljazeera.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "News",
+      "topics": [
+        "International relations",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "International broadcaster",
+      "badges": [
+        "Video",
+        "Live"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bbc-global-news-podcast",
+      "title": "BBC Global News Podcast",
+      "description": "Deux éditions quotidiennes consacrées aux principales nouvelles internationales.",
+      "url": "https://www.bbc.co.uk/programmes/p02nq0gn",
+      "countries": [
+        "International"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "International relations",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "~30 min"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bbc-documentary-podcast",
+      "title": "The Documentary Podcast",
+      "description": "Documentaires audio de la BBC sur des sujets internationaux, historiques et sociaux.",
+      "url": "https://www.bbc.co.uk/programmes/p02nq0lx",
+      "countries": [
+        "International"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Society",
+        "History",
+        "International relations",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Long-form"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bbc-newscast",
+      "title": "BBC Newscast",
+      "description": "Décryptage quotidien de l’actualité politique britannique.",
+      "url": "https://www.bbc.co.uk/programmes/p05299nl",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Daily"
+      ],
+      "featured": false
+    },
+    {
+      "id": "npr-news-now",
+      "title": "NPR News Now",
+      "description": "Bulletin de cinq minutes mis à jour chaque heure.",
+      "url": "https://www.npr.org/podcasts/500005/npr-news-now",
+      "countries": [
+        "United States"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "5 min"
+      ],
+      "featured": true
+    },
+    {
+      "id": "npr-up-first",
+      "title": "NPR Up First",
+      "description": "Trois grandes informations à connaître au début de la journée.",
+      "url": "https://www.npr.org/podcasts/510318/up-first",
+      "countries": [
+        "United States"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "~15 min",
+        "Transcript"
+      ],
+      "featured": false
+    },
+    {
+      "id": "npr-consider-this",
+      "title": "NPR Consider This",
+      "description": "Un sujet d’actualité américaine expliqué en profondeur dans un format court.",
+      "url": "https://www.npr.org/podcasts/510355/consider-this-from-npr",
+      "countries": [
+        "United States"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "~15 min",
+        "Transcript"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pbs-full-show",
+      "title": "PBS NewsHour Full Show",
+      "description": "Version audio et vidéo du journal quotidien de PBS.",
+      "url": "https://www.pbs.org/newshour/podcasts",
+      "countries": [
+        "United States"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "Transcript",
+        "Video"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cbc-front-burner",
+      "title": "CBC Front Burner",
+      "description": "Un sujet canadien ou international expliqué en une vingtaine de minutes.",
+      "url": "https://www.cbc.ca/listen/cbc-podcasts/209-front-burner",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "~25 min"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cbc-current",
+      "title": "CBC The Current",
+      "description": "Entretiens et reportages quotidiens sur les grands sujets canadiens.",
+      "url": "https://www.cbc.ca/listen/live-radio/1-63-the-current",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Society",
+        "Politics",
+        "Health",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Interviews"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rte-morning-ireland",
+      "title": "RTÉ Morning Ireland",
+      "description": "Grande matinale d’information du service public irlandais.",
+      "url": "https://www.rte.ie/radio/radio1/morning-ireland/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Daily"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rte-explainer",
+      "title": "RTÉ The Explainer",
+      "description": "Décryptages accessibles de sujets irlandais et internationaux.",
+      "url": "https://www.rte.ie/news/the-explainer/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Explainers"
+      ],
+      "featured": false
+    },
+    {
+      "id": "abc-news-daily",
+      "title": "ABC News Daily",
+      "description": "Un sujet australien ou international expliqué chaque jour.",
+      "url": "https://www.abc.net.au/listen/programs/abc-news-daily",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "~15 min"
+      ],
+      "featured": false
+    },
+    {
+      "id": "abc-late-night-live",
+      "title": "ABC Late Night Live",
+      "description": "Analyses internationales et entretiens approfondis.",
+      "url": "https://www.abc.net.au/listen/programs/latenightlive",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "International relations",
+        "Politics",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Long-form"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sbs-easy-english",
+      "title": "SBS News in Easy English",
+      "description": "Bulletin quotidien australien en anglais simplifié.",
+      "url": "https://www.sbs.com.au/news/podcast-episodes/news-in-easy-english",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "5 min",
+        "Accessible English"
+      ],
+      "featured": true
+    },
+    {
+      "id": "rnz-detail",
+      "title": "RNZ The Detail",
+      "description": "Un thème néo-zélandais ou international expliqué en profondeur.",
+      "url": "https://www.rnz.co.nz/programmes/the-detail",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "~25 min"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rnz-morning-report",
+      "title": "RNZ Morning Report",
+      "description": "Matinale d’actualité nationale et internationale.",
+      "url": "https://www.rnz.co.nz/national/programmes/morningreport",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "Daily"
+      ],
+      "featured": false
+    },
+    {
+      "id": "conversation-weekly",
+      "title": "The Conversation Weekly",
+      "description": "Des universitaires présentent leurs recherches liées à l’actualité.",
+      "url": "https://theconversation.com/uk/podcasts/the-conversation-weekly",
+      "countries": [
+        "International"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Science & technology",
+        "Society",
+        "History",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Expert voices"
+      ],
+      "featured": false
+    },
+    {
+      "id": "hindu-in-focus",
+      "title": "The Hindu In Focus",
+      "description": "Décryptages audio des grands sujets politiques et sociaux indiens.",
+      "url": "https://www.thehindu.com/podcast/in-focus/",
+      "countries": [
+        "India"
+      ],
+      "format": "Podcast",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Explainers"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bbc-news-video",
+      "title": "BBC News Video",
+      "description": "Reportages, entretiens et directs vidéo de la BBC.",
+      "url": "https://www.youtube.com/@BBCNews",
+      "countries": [
+        "International"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "YouTube",
+        "Live"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pbs-youtube",
+      "title": "PBS NewsHour on YouTube",
+      "description": "Journaux complets, extraits d’entretiens et reportages.",
+      "url": "https://www.youtube.com/@PBSNewsHour",
+      "countries": [
+        "United States"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public media",
+      "badges": [
+        "YouTube",
+        "Transcript"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cspan",
+      "title": "C-SPAN",
+      "description": "Séances du Congrès américain, auditions, discours et conférences de presse sans commentaire éditorial.",
+      "url": "https://www.c-span.org/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Public affairs network",
+      "badges": [
+        "Live",
+        "Primary source"
+      ],
+      "featured": true
+    },
+    {
+      "id": "uk-parliament-live",
+      "title": "UK Parliament Live",
+      "description": "Débats, commissions et auditions diffusés en direct ou en replay.",
+      "url": "https://parliamentlive.tv/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Live",
+        "Primary source"
+      ],
+      "featured": true
+    },
+    {
+      "id": "un-web-tv",
+      "title": "UN Web TV",
+      "description": "Réunions, conférences de presse et événements officiels des Nations unies.",
+      "url": "https://webtv.un.org/en",
+      "countries": [
+        "International"
+      ],
+      "format": "Video",
+      "topics": [
+        "International relations",
+        "Justice & rights",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Live",
+        "Primary source"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nasa-video",
+      "title": "NASA Video",
+      "description": "Directs, conférences, missions et vidéos scientifiques officielles.",
+      "url": "https://www.nasa.gov/nasatv/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Video",
+      "topics": [
+        "Science & technology",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Live",
+        "Primary source"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ted",
+      "title": "TED Talks",
+      "description": "Conférences courtes sur les sciences, la société, la culture et les idées.",
+      "url": "https://www.ted.com/talks",
+      "countries": [
+        "International"
+      ],
+      "format": "Video",
+      "topics": [
+        "Science & technology",
+        "Society",
+        "Education",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Educational",
+      "badges": [
+        "Transcript",
+        "Subtitles"
+      ],
+      "featured": false
+    },
+    {
+      "id": "royal-institution",
+      "title": "The Royal Institution",
+      "description": "Conférences scientifiques accessibles, démonstrations et archives.",
+      "url": "https://www.youtube.com/@TheRoyalInstitution",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Video",
+      "topics": [
+        "Science & technology",
+        "History",
+        "Education"
+      ],
+      "access": "Free",
+      "kind": "Educational",
+      "badges": [
+        "YouTube"
+      ],
+      "featured": false
+    },
+    {
+      "id": "dw-documentary",
+      "title": "DW Documentary",
+      "description": "Documentaires internationaux en anglais sur la société, l’environnement et la géopolitique.",
+      "url": "https://www.youtube.com/@DWDocumentary",
+      "countries": [
+        "International"
+      ],
+      "format": "Video",
+      "topics": [
+        "Society",
+        "Environment",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "International broadcaster",
+      "badges": [
+        "YouTube",
+        "Long-form"
+      ],
+      "featured": false
+    },
+    {
+      "id": "aje-video",
+      "title": "Al Jazeera English Video",
+      "description": "Reportages, entretiens et documentaires internationaux en anglais.",
+      "url": "https://www.youtube.com/@aljazeeraenglish",
+      "countries": [
+        "International"
+      ],
+      "format": "Video",
+      "topics": [
+        "International relations",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "International broadcaster",
+      "badges": [
+        "YouTube",
+        "Live"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cbc-national",
+      "title": "CBC The National",
+      "description": "Journal télévisé canadien et reportages approfondis.",
+      "url": "https://www.youtube.com/@CBCTheNational",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "YouTube"
+      ],
+      "featured": false
+    },
+    {
+      "id": "abc-in-depth",
+      "title": "ABC News In-depth",
+      "description": "Analyses vidéo et documentaires australiens.",
+      "url": "https://www.youtube.com/@ABCNewsIndepth",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Video",
+      "topics": [
+        "Politics",
+        "Society",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Public service",
+      "badges": [
+        "YouTube",
+        "Long-form"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ons",
+      "title": "Office for National Statistics",
+      "description": "Statistiques officielles du Royaume-Uni sur l’économie, la population et la société.",
+      "url": "https://www.ons.gov.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Health",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "uk-parliament-data",
+      "title": "UK Parliament Data Dashboards",
+      "description": "Tableaux et visualisations produits par la House of Commons Library.",
+      "url": "https://commonslibrary.parliament.uk/type/data-dashboard/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Data",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uk-data-service",
+      "title": "UK Data Service",
+      "description": "Catalogue de données sociales et économiques britanniques destinées à la recherche.",
+      "url": "https://ukdataservice.ac.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Data",
+      "topics": [
+        "Society",
+        "Economy",
+        "Education",
+        "Health"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Datasets"
+      ],
+      "featured": false
+    },
+    {
+      "id": "us-census",
+      "title": "US Census Bureau",
+      "description": "Données officielles sur la population, le logement, les territoires et l’économie américaine.",
+      "url": "https://www.census.gov/data.html",
+      "countries": [
+        "United States"
+      ],
+      "format": "Data",
+      "topics": [
+        "Society",
+        "Economy",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bls",
+      "title": "US Bureau of Labor Statistics",
+      "description": "Emploi, chômage, salaires, inflation et productivité aux États-Unis.",
+      "url": "https://www.bls.gov/data/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bea",
+      "title": "US Bureau of Economic Analysis",
+      "description": "PIB, revenus, commerce et comptes économiques américains.",
+      "url": "https://www.bea.gov/data",
+      "countries": [
+        "United States"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cdc-data",
+      "title": "CDC Data & Statistics",
+      "description": "Données sanitaires officielles des États-Unis.",
+      "url": "https://www.cdc.gov/data-statistics/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Data",
+      "topics": [
+        "Health",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Dashboards"
+      ],
+      "featured": false
+    },
+    {
+      "id": "data-gov",
+      "title": "Data.gov",
+      "description": "Portail des jeux de données ouverts du gouvernement fédéral américain.",
+      "url": "https://data.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Environment",
+        "Science & technology"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Open data"
+      ],
+      "featured": false
+    },
+    {
+      "id": "statscan",
+      "title": "Statistics Canada",
+      "description": "Statistiques officielles canadiennes sur l’économie, la population et la société.",
+      "url": "https://www.statcan.gc.ca/en/start",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Health",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "abs",
+      "title": "Australian Bureau of Statistics",
+      "description": "Données officielles australiennes sur l’économie, la démographie et la société.",
+      "url": "https://www.abs.gov.au/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Health",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "stats-nz",
+      "title": "Stats NZ",
+      "description": "Statistiques officielles de Nouvelle-Zélande, notamment sur les populations māories et le territoire.",
+      "url": "https://www.stats.govt.nz/",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "stats-sa",
+      "title": "Statistics South Africa",
+      "description": "Données officielles sud-africaines sur la population, l’emploi et les inégalités.",
+      "url": "https://www.statssa.gov.za/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Health"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Reports",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mospi",
+      "title": "India Ministry of Statistics",
+      "description": "Statistiques officielles indiennes sur l’économie, la démographie et les politiques publiques.",
+      "url": "https://www.mospi.gov.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Reports",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "world-bank-data",
+      "title": "World Bank Open Data",
+      "description": "Indicateurs comparables entre pays sur le développement, l’économie, la santé et l’éducation.",
+      "url": "https://data.worldbank.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Health",
+        "Education"
+      ],
+      "access": "Free",
+      "kind": "International institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "oecd-data",
+      "title": "OECD Data Explorer",
+      "description": "Indicateurs internationaux comparables et publications de l’OCDE.",
+      "url": "https://data-explorer.oecd.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Data",
+      "topics": [
+        "Economy",
+        "Society",
+        "Education",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "International institution",
+      "badges": [
+        "Interactive",
+        "Downloadable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "our-world-in-data",
+      "title": "Our World in Data",
+      "description": "Graphiques documentés et téléchargeables sur les grands enjeux mondiaux.",
+      "url": "https://ourworldindata.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Data",
+      "topics": [
+        "Health",
+        "Environment",
+        "Society",
+        "Economy",
+        "Science & technology"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Interactive",
+        "Sources cited"
+      ],
+      "featured": true
+    },
+    {
+      "id": "pew",
+      "title": "Pew Research Center",
+      "description": "Enquêtes et analyses sur la politique, les médias, la religion, la technologie et les attitudes sociales.",
+      "url": "https://www.pewresearch.org/",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "format": "Data",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture",
+        "Science & technology"
+      ],
+      "access": "Free",
+      "kind": "Research institute",
+      "badges": [
+        "Charts",
+        "Reports"
+      ],
+      "featured": true
+    },
+    {
+      "id": "gallup",
+      "title": "Gallup",
+      "description": "Sondages d’opinion et indicateurs internationaux. Une partie des analyses est payante.",
+      "url": "https://www.gallup.com/analytics/",
+      "countries": [
+        "International"
+      ],
+      "format": "Data",
+      "topics": [
+        "Politics",
+        "Society",
+        "Economy"
+      ],
+      "access": "Metered",
+      "kind": "Research institute",
+      "badges": [
+        "Polls"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uk-parliament",
+      "title": "UK Parliament",
+      "description": "Portail officiel des chambres, projets de loi, commissions, membres et travaux parlementaires.",
+      "url": "https://www.parliament.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Live",
+        "Bills"
+      ],
+      "featured": true
+    },
+    {
+      "id": "hansard",
+      "title": "Hansard",
+      "description": "Transcriptions officielles des débats de la Chambre des communes et de la Chambre des lords.",
+      "url": "https://hansard.parliament.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Searchable",
+        "Transcript"
+      ],
+      "featured": false
+    },
+    {
+      "id": "commons-library",
+      "title": "House of Commons Library",
+      "description": "Notes impartiales sur les projets de loi et les grands sujets débattus au Parlement.",
+      "url": "https://commonslibrary.parliament.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "PDF",
+        "Impartial"
+      ],
+      "featured": true
+    },
+    {
+      "id": "lords-library",
+      "title": "House of Lords Library",
+      "description": "Briefings officiels sur la législation, les débats et les enjeux contemporains.",
+      "url": "https://lordslibrary.parliament.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "PDF",
+        "Impartial"
+      ],
+      "featured": false
+    },
+    {
+      "id": "post",
+      "title": "Parliamentary Office of Science and Technology",
+      "description": "Notes de synthèse évaluées par des experts sur les sciences et les politiques publiques.",
+      "url": "https://post.parliament.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Science & technology",
+        "Health",
+        "Environment",
+        "Education"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "PDF",
+        "Peer reviewed"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uk-legislation",
+      "title": "legislation.gov.uk",
+      "description": "Textes de loi britanniques dans leur version originale et révisée.",
+      "url": "https://www.legislation.gov.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Searchable",
+        "Official text"
+      ],
+      "featured": true
+    },
+    {
+      "id": "govuk-policy",
+      "title": "GOV.UK Policy Papers and Consultations",
+      "description": "Rapports, livres blancs, consultations et documents de politique publique du gouvernement britannique.",
+      "url": "https://www.gov.uk/search/policy-papers-and-consultations",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society",
+        "Environment"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "PDF",
+        "Official"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uk-supreme-court",
+      "title": "UK Supreme Court",
+      "description": "Décisions, résumés d’affaires, vidéos et informations institutionnelles.",
+      "url": "https://www.supremecourt.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Judgments",
+        "Video"
+      ],
+      "featured": false
+    },
+    {
+      "id": "white-house",
+      "title": "The White House",
+      "description": "Discours, communiqués, décrets et priorités officielles de l’exécutif américain.",
+      "url": "https://www.whitehouse.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "International relations",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Speeches",
+        "Official"
+      ],
+      "featured": false
+    },
+    {
+      "id": "congress",
+      "title": "Congress.gov",
+      "description": "Textes des projets de loi, votes, commissions et archives du Congrès américain.",
+      "url": "https://www.congress.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Searchable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "us-supreme-court",
+      "title": "US Supreme Court",
+      "description": "Avis, décisions, dossiers et calendrier officiels de la Cour suprême américaine.",
+      "url": "https://www.supremecourt.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Opinions",
+        "Official"
+      ],
+      "featured": false
+    },
+    {
+      "id": "federal-register",
+      "title": "Federal Register",
+      "description": "Journal officiel quotidien des règles, projets réglementaires et documents fédéraux américains.",
+      "url": "https://www.federalregister.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Searchable",
+        "API"
+      ],
+      "featured": false
+    },
+    {
+      "id": "constitution-annotated",
+      "title": "Constitution Annotated",
+      "description": "Analyse officielle du Congrès article par article de la Constitution américaine et de la jurisprudence.",
+      "url": "https://constitution.congress.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Searchable",
+        "Primary references"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gao",
+      "title": "US Government Accountability Office",
+      "description": "Rapports d’audit et d’évaluation des politiques publiques fédérales.",
+      "url": "https://www.gao.gov/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Reports",
+        "PDF"
+      ],
+      "featured": false
+    },
+    {
+      "id": "parliament-canada",
+      "title": "Parliament of Canada",
+      "description": "Travaux, projets de loi, débats et commissions du Parlement canadien.",
+      "url": "https://www.parl.ca/",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Debates"
+      ],
+      "featured": false
+    },
+    {
+      "id": "canada-laws",
+      "title": "Justice Laws Website",
+      "description": "Lois et règlements fédéraux consolidés du Canada.",
+      "url": "https://laws-lois.justice.gc.ca/eng/",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Official text",
+        "Bilingual"
+      ],
+      "featured": false
+    },
+    {
+      "id": "canada-supreme-court",
+      "title": "Supreme Court of Canada",
+      "description": "Décisions, dossiers et informations officielles de la Cour suprême canadienne.",
+      "url": "https://www.scc-csc.ca/",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Judgments",
+        "Bilingual"
+      ],
+      "featured": false
+    },
+    {
+      "id": "australian-parliament",
+      "title": "Parliament of Australia",
+      "description": "Projets de loi, débats, commissions et informations institutionnelles.",
+      "url": "https://www.aph.gov.au/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Hansard"
+      ],
+      "featured": false
+    },
+    {
+      "id": "australian-legislation",
+      "title": "Federal Register of Legislation",
+      "description": "Textes législatifs et réglementaires officiels australiens.",
+      "url": "https://www.legislation.gov.au/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Official text",
+        "Searchable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nz-parliament",
+      "title": "New Zealand Parliament",
+      "description": "Débats, projets de loi, commissions et documents parlementaires.",
+      "url": "https://www.parliament.nz/",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Hansard"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nz-legislation",
+      "title": "New Zealand Legislation",
+      "description": "Lois et règlements officiels de Nouvelle-Zélande.",
+      "url": "https://www.legislation.govt.nz/",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Official text",
+        "Searchable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "waitangi-tribunal",
+      "title": "Waitangi Tribunal",
+      "description": "Rapports et enquêtes officiels sur les revendications liées au Treaty of Waitangi.",
+      "url": "https://www.waitangitribunal.govt.nz/",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "History",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Reports",
+        "Indigenous rights"
+      ],
+      "featured": false
+    },
+    {
+      "id": "oireachtas",
+      "title": "Houses of the Oireachtas",
+      "description": "Travaux parlementaires, débats, projets de loi et commissions en Irlande.",
+      "url": "https://www.oireachtas.ie/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Debates"
+      ],
+      "featured": false
+    },
+    {
+      "id": "irish-statute-book",
+      "title": "Irish Statute Book",
+      "description": "Textes de loi officiels de la République d’Irlande.",
+      "url": "https://www.irishstatutebook.ie/",
+      "countries": [
+        "Ireland"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Official text"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sa-parliament",
+      "title": "Parliament of South Africa",
+      "description": "Travaux, documents, commissions et projets de loi du Parlement sud-africain.",
+      "url": "https://www.parliament.gov.za/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Committees"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sa-constitutional-court",
+      "title": "Constitutional Court of South Africa",
+      "description": "Décisions et documents officiels de la Cour constitutionnelle.",
+      "url": "https://www.concourt.org.za/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Judgments"
+      ],
+      "featured": false
+    },
+    {
+      "id": "india-parliament",
+      "title": "Digital Sansad",
+      "description": "Portail officiel du Parlement indien : débats, questions, projets de loi et membres.",
+      "url": "https://sansad.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Bills",
+        "Debates"
+      ],
+      "featured": false
+    },
+    {
+      "id": "india-code",
+      "title": "India Code",
+      "description": "Base officielle des lois centrales indiennes.",
+      "url": "https://www.indiacode.nic.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Official text",
+        "Searchable"
+      ],
+      "featured": false
+    },
+    {
+      "id": "supreme-court-india",
+      "title": "Supreme Court of India",
+      "description": "Décisions, dossiers, calendrier et informations officielles.",
+      "url": "https://www.sci.gov.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "Justice & rights",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Judgments"
+      ],
+      "featured": false
+    },
+    {
+      "id": "un-documents",
+      "title": "United Nations Digital Library",
+      "description": "Documents, résolutions, discours, votes et archives des Nations unies.",
+      "url": "https://digitallibrary.un.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Primary source",
+      "topics": [
+        "International relations",
+        "Justice & rights",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "International institution",
+      "badges": [
+        "Searchable",
+        "Official"
+      ],
+      "featured": true
+    },
+    {
+      "id": "full-fact",
+      "title": "Full Fact",
+      "description": "Vérification des affirmations politiques et médiatiques au Royaume-Uni.",
+      "url": "https://fullfact.org/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Health",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "Methodology"
+      ],
+      "featured": true
+    },
+    {
+      "id": "reuters-fact-check",
+      "title": "Reuters Fact Check",
+      "description": "Vérification de contenus viraux et d’affirmations diffusées en ligne.",
+      "url": "https://www.reuters.com/fact-check/",
+      "countries": [
+        "International"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "Images",
+        "Social media"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ap-fact-check",
+      "title": "AP Fact Check",
+      "description": "Vérifications de déclarations politiques et de contenus trompeurs.",
+      "url": "https://apnews.com/hub/ap-fact-check",
+      "countries": [
+        "United States"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "US focus"
+      ],
+      "featured": false
+    },
+    {
+      "id": "politifact",
+      "title": "PolitiFact",
+      "description": "Base de vérifications politiques américaine et Truth-O-Meter.",
+      "url": "https://www.politifact.com/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "Database"
+      ],
+      "featured": false
+    },
+    {
+      "id": "factcheck-org",
+      "title": "FactCheck.org",
+      "description": "Projet non partisan de l’Annenberg Public Policy Center consacré au débat politique américain.",
+      "url": "https://www.factcheck.org/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Non-partisan"
+      ],
+      "featured": false
+    },
+    {
+      "id": "snopes",
+      "title": "Snopes",
+      "description": "Vérification de rumeurs, images et phénomènes viraux.",
+      "url": "https://www.snopes.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Media & culture",
+        "Society",
+        "Politics"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "Viral claims"
+      ],
+      "featured": false
+    },
+    {
+      "id": "afp-fact-check",
+      "title": "AFP Fact Check",
+      "description": "Vérifications internationales publiées par l’Agence France-Presse en anglais.",
+      "url": "https://factcheck.afp.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "International"
+      ],
+      "featured": false
+    },
+    {
+      "id": "aap-factcheck",
+      "title": "AAP FactCheck",
+      "description": "Service australien de vérification des faits.",
+      "url": "https://www.aap.com.au/factcheck/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "News agency",
+      "badges": [
+        "Australia"
+      ],
+      "featured": false
+    },
+    {
+      "id": "africa-check",
+      "title": "Africa Check",
+      "description": "Organisation indépendante de fact-checking couvrant plusieurs pays africains.",
+      "url": "https://africacheck.org/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Health",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "Africa"
+      ],
+      "featured": false
+    },
+    {
+      "id": "boom-live",
+      "title": "BOOM Live",
+      "description": "Fact-checking indien sur les contenus viraux, politiques et médiatiques.",
+      "url": "https://www.boomlive.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Independent",
+      "badges": [
+        "India"
+      ],
+      "featured": false
+    },
+    {
+      "id": "alt-news",
+      "title": "Alt News",
+      "description": "Vérification indépendante de désinformation et de contenus viraux en Inde.",
+      "url": "https://www.altnews.in/",
+      "countries": [
+        "India"
+      ],
+      "format": "Fact-check",
+      "topics": [
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "India"
+      ],
+      "featured": false
+    },
+    {
+      "id": "institute-government",
+      "title": "Institute for Government",
+      "description": "Analyses accessibles sur le gouvernement britannique, la fonction publique et les institutions.",
+      "url": "https://www.instituteforgovernment.org.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Justice & rights"
+      ],
+      "access": "Free",
+      "kind": "Think tank",
+      "badges": [
+        "Charts",
+        "Explainers"
+      ],
+      "featured": true
+    },
+    {
+      "id": "constitution-unit",
+      "title": "The Constitution Unit",
+      "description": "Recherche et explications sur la Constitution britannique, les élections et la dévolution.",
+      "url": "https://www.ucl.ac.uk/constitution-unit/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Research"
+      ],
+      "featured": false
+    },
+    {
+      "id": "migration-observatory",
+      "title": "Migration Observatory",
+      "description": "Données et briefings universitaires sur les migrations au Royaume-Uni.",
+      "url": "https://migrationobservatory.ox.ac.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Society",
+        "Politics",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Data",
+        "Briefings"
+      ],
+      "featured": false
+    },
+    {
+      "id": "uk-changing-europe",
+      "title": "UK in a Changing Europe",
+      "description": "Analyses universitaires sur le Brexit, la politique britannique et les relations avec l’Europe.",
+      "url": "https://ukandeu.ac.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Economy",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Academic",
+      "badges": [
+        "Expert analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cfr-backgrounders",
+      "title": "Council on Foreign Relations Backgrounders",
+      "description": "Fiches de contexte sur les crises, institutions et relations internationales.",
+      "url": "https://www.cfr.org/backgrounders",
+      "countries": [
+        "United States"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "International relations",
+        "Politics",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Think tank",
+      "badges": [
+        "Backgrounders"
+      ],
+      "featured": false
+    },
+    {
+      "id": "brookings",
+      "title": "Brookings Institution",
+      "description": "Analyses de politiques publiques américaines et internationales.",
+      "url": "https://www.brookings.edu/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Economy",
+        "Society",
+        "International relations"
+      ],
+      "access": "Free",
+      "kind": "Think tank",
+      "badges": [
+        "Research"
+      ],
+      "featured": false
+    },
+    {
+      "id": "britannica",
+      "title": "Encyclopaedia Britannica",
+      "description": "Articles de référence utiles pour vérifier une notion, une institution ou un contexte historique.",
+      "url": "https://www.britannica.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Politics",
+        "Science & technology",
+        "Media & culture"
+      ],
+      "access": "Metered",
+      "kind": "Reference",
+      "badges": [
+        "Encyclopedia"
+      ],
+      "featured": false
+    },
+    {
+      "id": "canadian-encyclopedia",
+      "title": "The Canadian Encyclopedia",
+      "description": "Encyclopédie bilingue consacrée à l’histoire, aux institutions et à la culture canadiennes.",
+      "url": "https://www.thecanadianencyclopedia.ca/en",
+      "countries": [
+        "Canada"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Politics",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Bilingual"
+      ],
+      "featured": false
+    },
+    {
+      "id": "aiatsis",
+      "title": "AIATSIS",
+      "description": "Ressources fiables sur les peuples aborigènes et insulaires du détroit de Torres.",
+      "url": "https://aiatsis.gov.au/",
+      "countries": [
+        "Australia"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Justice & rights",
+        "Society",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Official research institute",
+      "badges": [
+        "Indigenous knowledge"
+      ],
+      "featured": false
+    },
+    {
+      "id": "te-ara",
+      "title": "Te Ara Encyclopedia of New Zealand",
+      "description": "Encyclopédie officielle sur l’histoire, la société, la géographie et les cultures de Nouvelle-Zélande.",
+      "url": "https://teara.govt.nz/en",
+      "countries": [
+        "New Zealand"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Society",
+        "Environment",
+        "Media & culture"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Encyclopedia"
+      ],
+      "featured": false
+    },
+    {
+      "id": "sahistory",
+      "title": "South African History Online",
+      "description": "Archives et dossiers sur l’histoire politique et sociale de l’Afrique du Sud.",
+      "url": "https://www.sahistory.org.za/",
+      "countries": [
+        "South Africa"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Justice & rights",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "Archives"
+      ],
+      "featured": false
+    },
+    {
+      "id": "prs-india",
+      "title": "PRS Legislative Research",
+      "description": "Explications indépendantes sur les projets de loi, le Parlement et les politiques publiques indiennes.",
+      "url": "https://prsindia.org/",
+      "countries": [
+        "India"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "Politics",
+        "Justice & rights",
+        "Economy"
+      ],
+      "access": "Free",
+      "kind": "Non-profit",
+      "badges": [
+        "Bills",
+        "Data"
+      ],
+      "featured": true
+    },
+    {
+      "id": "commonwealth",
+      "title": "The Commonwealth",
+      "description": "Informations officielles sur les États membres, les programmes et les grands enjeux communs.",
+      "url": "https://thecommonwealth.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "International relations",
+        "Politics",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "International institution",
+      "badges": [
+        "Country profiles"
+      ],
+      "featured": false
+    },
+    {
+      "id": "national-archives-uk",
+      "title": "The National Archives — UK",
+      "description": "Documents historiques numérisés, guides et ressources sur l’histoire britannique.",
+      "url": "https://www.nationalarchives.gov.uk/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Explainer",
+      "topics": [
+        "History",
+        "Politics",
+        "Society"
+      ],
+      "access": "Free",
+      "kind": "Official institution",
+      "badges": [
+        "Archives",
+        "Primary sources"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cambridge-dictionary",
+      "title": "Cambridge Dictionary",
+      "description": "Définitions, prononciations britannique et américaine, exemples et grammaire.",
+      "url": "https://dictionary.cambridge.org/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Audio",
+        "Examples"
+      ],
+      "featured": true
+    },
+    {
+      "id": "oxford-learners",
+      "title": "Oxford Learner’s Dictionaries",
+      "description": "Définitions adaptées aux apprenants, niveaux CECRL, collocations et prononciations.",
+      "url": "https://www.oxfordlearnersdictionaries.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Audio",
+        "CEFR"
+      ],
+      "featured": true
+    },
+    {
+      "id": "collins-dictionary",
+      "title": "Collins Dictionary",
+      "description": "Définitions, fréquence, exemples authentiques et prononciation.",
+      "url": "https://www.collinsdictionary.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Audio",
+        "Examples"
+      ],
+      "featured": false
+    },
+    {
+      "id": "merriam-webster",
+      "title": "Merriam-Webster",
+      "description": "Dictionnaire de référence pour l’anglais américain.",
+      "url": "https://www.merriam-webster.com/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Audio",
+        "US English"
+      ],
+      "featured": false
+    },
+    {
+      "id": "longman",
+      "title": "Longman Dictionary of Contemporary English",
+      "description": "Définitions simples, exemples et collocations pour apprenants.",
+      "url": "https://www.ldoceonline.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Audio",
+        "Collocations"
+      ],
+      "featured": false
+    },
+    {
+      "id": "youglish",
+      "title": "YouGlish",
+      "description": "Recherche un mot ou une expression dans des vidéos authentiques avec choix de l’accent.",
+      "url": "https://youglish.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Language technology",
+      "badges": [
+        "Video",
+        "Pronunciation"
+      ],
+      "featured": true
+    },
+    {
+      "id": "forvo",
+      "title": "Forvo",
+      "description": "Prononciations enregistrées par des locuteurs de différentes régions.",
+      "url": "https://forvo.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Community",
+      "badges": [
+        "Audio",
+        "Accents"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ozdic",
+      "title": "Ozdic Collocation Dictionary",
+      "description": "Dictionnaire de collocations anglaises utile pour produire des formulations naturelles.",
+      "url": "https://ozdic.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Collocations"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ludwig",
+      "title": "Ludwig",
+      "description": "Recherche d’exemples de phrases issus de sources éditées. Accès gratuit limité.",
+      "url": "https://ludwig.guru/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Freemium",
+      "kind": "Language technology",
+      "badges": [
+        "Examples"
+      ],
+      "featured": false
+    },
+    {
+      "id": "skell",
+      "title": "SKELL",
+      "description": "Concordancier gratuit pour observer les mots en contexte et leurs collocations.",
+      "url": "https://skell.sketchengine.eu/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Free",
+      "kind": "Language technology",
+      "badges": [
+        "Corpus",
+        "Collocations"
+      ],
+      "featured": false
+    },
+    {
+      "id": "coca",
+      "title": "Corpus of Contemporary American English",
+      "description": "Grand corpus d’anglais américain contemporain avec recherche de fréquence et de contexte.",
+      "url": "https://www.english-corpora.org/coca/",
+      "countries": [
+        "United States"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Freemium",
+      "kind": "Academic",
+      "badges": [
+        "Corpus",
+        "US English"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bnc",
+      "title": "British National Corpus",
+      "description": "Corpus de référence pour l’anglais britannique.",
+      "url": "https://www.english-corpora.org/bnc/",
+      "countries": [
+        "United Kingdom"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language"
+      ],
+      "access": "Freemium",
+      "kind": "Academic",
+      "badges": [
+        "Corpus",
+        "UK English"
+      ],
+      "featured": false
+    },
+    {
+      "id": "now-corpus",
+      "title": "News on the Web Corpus",
+      "description": "Corpus de presse anglophone continuellement enrichi, utile pour suivre l’usage contemporain.",
+      "url": "https://www.english-corpora.org/now/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language",
+        "Media & culture"
+      ],
+      "access": "Freemium",
+      "kind": "Academic",
+      "badges": [
+        "Corpus",
+        "Current usage"
+      ],
+      "featured": false
+    },
+    {
+      "id": "google-ngram",
+      "title": "Google Books Ngram Viewer",
+      "description": "Visualise l’évolution de la fréquence de mots et expressions dans les livres.",
+      "url": "https://books.google.com/ngrams/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Language technology",
+      "badges": [
+        "Charts",
+        "Historical usage"
+      ],
+      "featured": false
+    },
+    {
+      "id": "etymonline",
+      "title": "Online Etymology Dictionary",
+      "description": "Origine et évolution historique des mots anglais.",
+      "url": "https://www.etymonline.com/",
+      "countries": [
+        "International"
+      ],
+      "format": "Language tool",
+      "topics": [
+        "Language",
+        "History"
+      ],
+      "access": "Free",
+      "kind": "Reference",
+      "badges": [
+        "Etymology"
+      ],
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "english-colles-resource-updater",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  }
+}
