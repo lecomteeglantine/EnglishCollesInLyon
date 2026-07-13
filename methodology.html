@@ -407,7 +407,123 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .closing h3{font-family:var(--display);font-weight:600;color:var(--navy);font-size:1.2rem;margin:0 0 8px}
 .closing p{color:var(--ink);line-height:1.6;margin:0 0 8px;font-size:.92rem}
 .closing p:last-child{margin:0}
-@media (max-width:640px){.dd{grid-template-columns:1fr}.mm-hero{padding-top:24px}}
+@media (max-width:640px){.dd{grid-template-columns:1fr}.mm-hero{padding-top:24px}.cls-cols{grid-template-columns:1fr}.sim-setup{flex-direction:column;align-items:stretch}}
+
+/* ===== learn banner ===== */
+.learn-banner{background:linear-gradient(135deg,#fff4ea,#eef3f1);border:1px solid var(--line);border-left:5px solid var(--terra);border-radius:14px;padding:16px 20px;margin:18px 0}
+.learn-banner b{display:block;font-family:var(--display);font-size:1.1rem;color:var(--navy);margin-bottom:6px}
+.learn-banner span{font-size:.9rem;color:var(--ink);line-height:1.55}
+.mm-privacy{font-size:.78rem;color:var(--muted);margin-top:8px}
+/* ===== diagnostic + help panels ===== */
+.mm-panel{margin:8px 0 18px}
+.mm-details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.mm-details summary{cursor:pointer;padding:16px 20px;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--navy);display:flex;align-items:center;gap:10px;list-style:none}
+.mm-details summary::-webkit-details-marker{display:none}
+.mm-details summary::after{content:"\25be";margin-left:auto;transition:transform .2s}
+.mm-details[open] summary::after{transform:rotate(180deg)}
+.mm-sum-ic{font-size:1.1rem}
+.mm-details>div{padding:0 20px 20px}
+.diag-items{display:grid;gap:8px;margin-bottom:14px}
+.diag-item{display:flex;align-items:flex-start;gap:10px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer;font-size:.92rem}
+.diag-item input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--terra)}
+.diag-result{margin-top:14px}
+.diag-result h4{font-family:var(--display);color:var(--navy);margin:0 0 8px}
+.diag-chips,.help-grid{display:flex;flex-wrap:wrap;gap:8px}
+.diag-chip,.help-chip{border:1.5px solid var(--sage);background:#fff;color:#4e6b4a;border-radius:10px;padding:9px 13px;font-family:inherit;font-weight:700;font-size:.85rem;cursor:pointer;min-height:40px}
+.diag-chip:hover,.help-chip:hover{background:var(--sage);color:#fff}
+.help-chip{border-color:var(--navy);color:var(--navy)}
+.help-chip:hover{background:var(--navy);color:#fff}
+/* ===== module skill line ===== */
+.mskill{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-top:3px}
+/* ===== exercises: wrappers, kinds ===== */
+.ex-wrap{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px}
+.ex-kind{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
+.ex-q{margin-bottom:14px}
+.ex-q:last-child{margin-bottom:0}
+.ex-q .qtext{font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.4}
+.blank{color:var(--terra);font-weight:700;letter-spacing:.1em}
+.ex-opts{display:grid;gap:8px}
+.ex-opt{text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:11px 14px;font-family:inherit;font-size:.92rem;color:var(--ink);cursor:pointer}
+.ex-opt:hover:not(:disabled){border-color:var(--terra)}
+.ex-opt.correct{background:var(--sage);border-color:var(--sage);color:#fff}
+.ex-opt.wrong{background:#f0d0c9;border-color:var(--terra);color:#a5402f}
+.ex-opt:disabled{cursor:default}
+.ex-fb{margin-top:10px;font-size:.88rem;line-height:1.5;padding:0;border-radius:9px;display:none}
+.ex-fb.show{display:block;padding:10px 12px}
+.ex-fb.ok{background:#e7f0e5;color:#3f5a3b}
+.ex-fb.no{background:#fbe9e6;color:#8a3a2c}
+.ex-check{min-height:44px;border-radius:11px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;font-family:inherit;font-weight:700;font-size:.9rem;padding:9px 18px;cursor:pointer;margin-top:6px}
+.ex-check:hover{background:#1b2c40}
+/* order */
+.ord-list{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.ord-item{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:10px 12px;font-size:.9rem}
+.ord-txt{flex:1}
+.ord-btns{display:flex;gap:4px}
+.ord-btns button{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--bg2);cursor:pointer;font-weight:700}
+.ord-btns button:hover:not(:disabled){border-color:var(--terra)}
+.ord-btns button:disabled{opacity:.3;cursor:default}
+/* classify */
+.cls-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.cls-col{border:1.5px dashed var(--line);border-radius:12px;padding:10px;min-height:90px;background:var(--card)}
+.cls-h{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--navy);text-align:center;margin-bottom:8px}
+.cls-drop{display:flex;flex-direction:column;gap:6px;min-height:40px}
+.cls-pool{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.cls-chip{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem}
+.cls-chip.ok{background:#e7f0e5;border-color:var(--sage)}
+.cls-chip.no{background:#fbe9e6;border-color:var(--terra)}
+.cls-move{margin-left:auto;display:flex;gap:4px}
+.cls-move button{width:30px;height:30px;border-radius:7px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.8rem}
+.cls-move button:hover{border-color:var(--terra)}
+/* ===== tools ===== */
+.tool{background:linear-gradient(135deg,#fbf6ee,#f3f7f4);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:16px 0}
+.tool-h{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--navy);margin-bottom:6px}
+.tool-field{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.tool-field.inline{flex:1}
+.tool-field span{font-size:.82rem;font-weight:700;color:var(--navy)}
+.tool-field input,.tool-field select,.tool-field textarea{border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;font-family:inherit;font-size:.92rem;background:#fff;color:var(--ink)}
+.tool-field input:focus,.tool-field textarea:focus,.tool-field select:focus{outline:none;border-color:var(--terra)}
+.tool-out{margin-top:12px}
+.tool-note{font-size:.85rem;padding:9px 12px;border-radius:9px;background:#eef3f1;color:var(--ink);margin-bottom:8px}
+.tool-note.ok{background:#e7f0e5;color:#3f5a3b}
+.tool-note.no{background:#fbe9e6;color:#8a3a2c}
+.tool-model{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.95rem;line-height:1.6;color:var(--ink)}
+.kqw-tensions,.kqw-openers{margin:4px 0 12px;line-height:2}
+.kqw-lbl{font-size:.8rem;font-weight:700;color:var(--muted);margin-right:6px}
+.chip-mini{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 10px;font-size:.8rem;font-weight:600;color:var(--ink)}
+.chip-mini.alt{border-color:#c9b6d6;color:#6A4C93}
+/* ===== simulator ===== */
+.sim-setup{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:14px}
+.sim-run{border-top:1px solid var(--line);padding-top:16px}
+.sim-doc{background:var(--navy);border-radius:12px;padding:14px 16px;margin-bottom:14px;display:flex;flex-direction:column;gap:4px}
+.sim-doc .fd-kind{color:var(--gold)}
+.sim-doc-title{color:#fff;font-weight:700;font-size:1rem;text-decoration:none}
+.sim-doc-title:hover{text-decoration:underline}
+.sim-timer{font-family:var(--display);font-size:2.4rem;color:var(--navy);text-align:center;font-variant-numeric:tabular-nums}
+.sim-timer.warn{color:var(--terra)}
+.sim-timer-ctrl{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.sim-hint{font-size:.78rem;color:var(--muted)}
+.g-btn{min-height:44px;border-radius:11px;border:1.5px solid var(--line);background:var(--bg2);font-family:inherit;font-weight:700;padding:9px 16px;cursor:pointer;color:var(--ink)}
+.g-btn:hover{background:#fff;border-color:var(--terra)}
+.sim-grid-wrap{margin-top:16px}
+.sim-grid-wrap h4{font-family:var(--display);color:var(--navy);margin:0 0 4px}
+.sim-grid{display:grid;gap:6px}
+.sim-crit{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:.88rem}
+.sim-stars button{background:none;border:none;font-size:1.15rem;color:var(--gold);cursor:pointer;padding:0 1px}
+.sim-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.sim-model{margin-top:14px}
+.sim-model h4{font-family:var(--display);color:var(--navy);margin:0 0 6px}
+.loading{color:var(--muted);font-style:italic;padding:14px 0}
+/* ===== print ===== */
+@media print{
+  .top,.mm-rail,.mm-reset,.mm-progress,.mm-panel,.a11y-panel,.scrim,.a11y-btn,.accent,.burger,.accent-note,
+  .ex-check,.ord-btns,.cls-move,.mm-done-btn,.cta-link,.sim-timer-ctrl,.sim-actions,.sim-setup,.reveal-btn,[data-opensim]{display:none !important}
+  body{background:#fff}
+  .module{box-shadow:none;border:1px solid #ccc;break-inside:avoid;page-break-inside:avoid}
+  .learn-banner,.closing{border:1px solid #ccc}
+  .ex-opt,.ord-item,.cls-chip{border:1px solid #bbb}
+  a{color:#000;text-decoration:underline}
+}
+
 </style>
 
 </head>
@@ -448,14 +564,31 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
   <div class="wrap">
     <section class="mm-hero">
       <div class="eyebrow">Methodology</div>
-      <h1>Learn to build a colle, step by step</h1>
-      <p>A guided course in six modules — from reading the document to speaking with confidence. Each module gives you the lesson, a worked example on a real document, what to do and avoid, and a hands-on exercise. Linear is recommended, but you can jump anywhere.</p>
+      <h1>Master Your English Colle</h1>
+      <p>A complete, step-by-step course: sixteen modules from understanding the exam to a full simulation, each with a lesson, a worked example on real documents, what to do and avoid, and auto-corrected exercises.</p>
+      <div class="learn-banner">
+        <b>Learn it. Practise it. Use it in class. Apply it in your next colle.</b>
+        <span>Reading a method is not enough. Every skill trained here must be tested aloud, corrected by a teacher, and reused in your next colles. Your teacher's and school's specific instructions always take priority — preparation time and expected structure vary by track.</span>
+      </div>
       <div class="mm-progress">
         <span class="mm-bar-lbl" id="mmPct">0% complete</span>
         <div class="mm-bar"><span id="mmBar"></span></div>
         <button class="mm-reset" id="mmReset">Reset progress</button>
       </div>
+      <p class="mm-privacy">Your progress and notes are stored only in this browser. They are not uploaded or shared.</p>
     </section>
+
+    <section class="mm-panel">
+      <details class="mm-details" open>
+        <summary><span class="mm-sum-ic">\ud83e\udded</span> Take the diagnostic — where should I start?</summary>
+        <div id="diagMount"></div>
+      </details>
+      <details class="mm-details">
+        <summary><span class="mm-sum-ic">\ud83c\udfaf</span> I need help with…</summary>
+        <div class="help-grid" id="helpMount"></div>
+      </details>
+    </section>
+
     <div class="mm-rail" id="mmRail"></div>
     <div id="mmModules"></div>
     <section class="closing">
@@ -544,168 +677,137 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 (function(){
   var M = window.METHO;
   if(!M) return;
-  var LSK = "ecl_methodology_done";
-  function loadDone(){ try{ return JSON.parse(localStorage.getItem(LSK)||"[]"); }catch(e){ return []; } }
-  function saveDone(a){ try{ localStorage.setItem(LSK, JSON.stringify(a)); }catch(e){} }
+  var LSK = "ecl_methodology_done", NOTEK = "ecl_methodology_notes";
+  function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}}
+  function LSset(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  function loadDone(){try{return JSON.parse(LSget(LSK,"[]"));}catch(e){return [];}}
+  function saveDone(a){LSset(LSK,JSON.stringify(a));}
   var done = loadDone();
 
-  var FLAGS = (window.CIVI_FLAGS)||{};
   function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML;}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function flagSVG(code){var col={gb:"#00247d",us:"#b22234"}[code]||"#888";return '<svg viewBox="0 0 24 18"><rect width="24" height="18" fill="'+col+'"/></svg>';}
 
-  function flagSVG(code){
-    // drapeau simple si CIVI_FLAGS absent
-    if(FLAGS[code]) return FLAGS[code];
-    var col = {gb:"#00247d",us:"#b22234"}[code]||"#888";
-    return '<svg viewBox="0 0 24 18"><rect width="24" height="18" fill="'+col+'"/></svg>';
-  }
-
-  /* ---------- progress ---------- */
+  /* ============ PROGRESS ============ */
   function updateProgress(){
     var pct = Math.round(done.length / M.modules.length * 100);
     document.getElementById("mmBar").style.width = pct+"%";
     document.getElementById("mmPct").textContent = pct+"% complete";
-    document.querySelectorAll(".mm-chip").forEach(function(c){
-      c.classList.toggle("done", done.indexOf(c.dataset.id)>=0);
-    });
+    document.querySelectorAll(".mm-chip").forEach(function(c){ c.classList.toggle("done", done.indexOf(c.dataset.id)>=0); });
     document.querySelectorAll(".mm-done-btn").forEach(function(b){
       var d = done.indexOf(b.dataset.id)>=0;
       b.classList.toggle("is-done", d);
-      b.textContent = d ? "✓ Module completed" : "Mark this module as done";
+      b.textContent = d ? "\u2713 Module completed" : "Mark this module as done";
     });
   }
   function markDone(id){
-    if(done.indexOf(id)<0){ done.push(id); saveDone(done); updateProgress(); }
-    else { done = done.filter(function(x){return x!==id;}); saveDone(done); updateProgress(); }
+    if(done.indexOf(id)<0) done.push(id); else done = done.filter(function(x){return x!==id;});
+    saveDone(done); updateProgress();
   }
 
-  /* ---------- rail ---------- */
+  /* ============ RAIL ============ */
   function renderRail(){
     var rail = document.getElementById("mmRail");
     rail.innerHTML = M.modules.map(function(m){
-      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+m.n+'</span> '+esc(m.title)+' <span class="tick">✓</span></button>';
+      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+m.n+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
     }).join("");
     rail.querySelectorAll(".mm-chip").forEach(function(c){
       c.addEventListener("click",function(){
         rail.querySelectorAll(".mm-chip").forEach(function(x){x.classList.remove("on");});
         c.classList.add("on");
         var el = document.getElementById(c.dataset.id);
-        if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
+        if(el && el.scrollIntoView) el.scrollIntoView({behavior:"smooth",block:"start"});
       });
     });
   }
 
-  /* ---------- lesson / fil rouge / do-dont ---------- */
+  /* ============ LESSON / FIL ROUGE / DO-DONT ============ */
   function lessonHTML(m){
-    return '<div class="mseg mseg-lesson"><span class="mseg-tag">📘 Lesson</span>'+
+    return '<div class="mseg mseg-lesson"><span class="mseg-tag">\ud83d\udcd8 Lesson</span>'+
       m.lesson.map(function(l){return '<div class="lz"><h4>'+esc(l.h)+'</h4><p>'+esc(l.p)+'</p></div>';}).join("")+'</div>';
   }
   function docCard(dkey){
     var d = M.docs[dkey]; if(!d) return "";
     return '<div class="fr-doc"><span class="fl">'+flagSVG(d.flag)+'</span>'+
-      '<span><span class="fd-kind">'+esc(d.kind)+'</span><br><span class="fd-title">'+esc(d.title)+'</span>'+
-      '<span class="fd-meta">'+esc(d.source)+' · '+esc(d.date)+'</span></span>'+
-      '<a class="fd-link" href="'+esc(d.search)+'" target="_blank" rel="noopener">Find it ↗</a></div>';
+      '<span class="fd-txt"><span class="fd-kind">'+esc(d.kind)+'</span><span class="fd-title">'+esc(d.title)+'</span>'+
+      '<span class="fd-meta">'+esc(d.source)+' \u00b7 '+esc(d.date)+'</span></span>'+
+      '<a class="fd-link" href="'+esc(d.search)+'" target="_blank" rel="noopener">Find it \u2197</a></div>';
   }
   function filrougeHTML(m){
     if(!m.filrouge) return "";
-    var fr = m.filrouge, html = '<div class="mseg mseg-fr"><span class="mseg-tag">🧵 Worked example</span>';
-    if(fr.doc==="all"){
-      html += '<p class="ex-intro">The same method, applied to each of the three fil-rouge documents:</p>';
-    } else if(M.docs[fr.doc]){
-      html += docCard(fr.doc);
-    }
+    var fr = m.filrouge, html = '<div class="mseg mseg-fr"><span class="mseg-tag">\ud83e\uddf5 Worked example</span>';
+    if(fr.doc==="all") html += '<p class="ex-intro">The same method, applied to our fil-rouge documents:</p>';
+    else if(M.docs[fr.doc]) html += docCard(fr.doc);
     html += fr.steps.map(function(s){return '<div class="fr-step"><h5>'+esc(s.h)+'</h5><p>'+esc(s.p)+'</p></div>';}).join("");
-    if(fr.link){
-      html += '<a class="cta-link" href="colle-trainer.html">Open the Colle Trainer →</a>';
-    }
+    if(fr.link) html += '<a class="cta-link" href="colle-trainer.html">Open the Colle Trainer \u2192</a>';
+    if(fr.sim) html += '<button class="cta-link" data-opensim="1">Launch the simulator \u2193</button>';
     html += '</div>';
     return html;
   }
   function dodontHTML(m){
     if(!m.dodont||!m.dodont.length) return "";
-    return '<div class="mseg mseg-dd"><span class="mseg-tag">⚖️ Do / Don&#39;t</span>'+
+    return '<div class="mseg mseg-dd"><span class="mseg-tag">\u2696\ufe0f Do / Don&#39;t</span>'+
       m.dodont.map(function(d){
-        return '<div class="dd"><div class="dd-card dd-bad"><div class="dd-h">✗ Weak</div>'+esc(d.bad)+'</div>'+
-          '<div class="dd-card dd-good"><div class="dd-h">✓ Strong</div>'+esc(d.good)+'</div></div>'+
+        return '<div class="dd"><div class="dd-card dd-bad"><div class="dd-h">\u2717 Weak</div>'+esc(d.bad)+'</div>'+
+          '<div class="dd-card dd-good"><div class="dd-h">\u2713 Strong</div>'+esc(d.good)+'</div></div>'+
           '<p class="dd-why"><b>Why:</b> '+esc(d.why)+'</p>';
       }).join("")+'</div>';
   }
 
-  /* ---------- exercises ---------- */
-  function qcmHTML(pr, mid){
-    var h = '<div class="mseg mseg-pr"><span class="mseg-tag">✏️ Practice</span><p class="ex-intro">'+esc(pr.intro)+'</p>';
-    pr.items.forEach(function(it,qi){
-      h += '<div class="ex-q" data-q="'+qi+'"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">';
-      it.opts.forEach(function(o,oi){ h += '<button class="ex-opt" data-o="'+oi+'">'+esc(o)+'</button>'; });
-      h += '</div><div class="ex-fb"></div></div>';
-    });
-    return h + '</div>';
+  /* ============ EXERCISES (all closed, auto-corrected) ============ */
+  function exQCM(e){
+    return e.items.map(function(it,qi){
+      return '<div class="ex-q" data-type="choice"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">'+
+        it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+
+        '</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
+    }).join("");
   }
-  function spotHTML(pr){
-    var h = '<div class="mseg mseg-pr"><span class="mseg-tag">✏️ Practice</span><p class="ex-intro">'+esc(pr.intro)+'</p>';
-    pr.items.forEach(function(it,qi){
-      h += '<div class="ex-q" data-q="'+qi+'"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">';
-      it.opts.forEach(function(o,oi){ h += '<button class="ex-opt" data-o="'+oi+'">'+esc(o)+'</button>'; });
-      h += '</div><div class="ex-fb"></div></div>';
-    });
-    if(pr.live && pr.live.enabled){
-      h += '<div class="live-box"><div class="lv-h">🗞️ On a real document</div><div class="lv-doc" id="liveDoc-'+Math.random().toString(36).slice(2,7)+'">'+esc(pr.live.prompt)+'</div></div>';
-    }
-    return h + '</div>';
+  function exGap(e){
+    return e.items.map(function(it){
+      return '<div class="ex-q" data-type="choice"><div class="qtext">'+esc(it.text).replace("____","<span class=\"blank\">_____</span>")+'</div><div class="ex-opts">'+
+        it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+
+        '</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
+    }).join("");
   }
-  function orderHTML(pr, uid){
-    var h = '<div class="mseg mseg-pr"><span class="mseg-tag">✏️ Practice</span><p class="ex-intro">'+esc(pr.intro)+'</p>';
-    (pr.sets||[]).forEach(function(set,si){
-      h += '<div class="ord-block" data-set="'+si+'" data-uid="'+uid+'-'+si+'"><div class="ord-list"></div>'+
-           '<button class="ex-opt" style="max-width:220px" data-check="1">Check the order</button><div class="ex-fb"></div></div>';
-    });
-    // reframe
-    if(pr.reframe && pr.reframe.enabled){
-      h += '<p class="ex-intro" style="margin-top:18px">'+esc(pr.reframe.intro)+'</p>';
-      pr.reframe.items.forEach(function(r){
-        h += '<div class="reframe-card"><div class="weak">✗ '+esc(r.weak)+'</div><div class="hint">💡 '+esc(r.hint)+'</div>'+
-             '<button class="reveal-btn">Show a strong version</button><div class="model">✓ '+esc(r.model)+'</div></div>';
-      });
-    }
-    // match
-    if(pr.match && pr.match.enabled){
-      h += '<p class="ex-intro" style="margin-top:18px">'+esc(pr.match.intro)+'</p>';
-      pr.match.items.forEach(function(it,qi){
-        h += '<div class="ex-q" data-q="match'+qi+'"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">';
-        it.opts.forEach(function(o,oi){ h += '<button class="ex-opt" data-o="'+oi+'" data-match="'+it.c+'">'+esc(o)+'</button>'; });
-        h += '</div><div class="ex-fb"></div></div>';
-      });
-    }
-    // order2 (single ordered list, used in m4)
-    if(pr.order2 && pr.order2.enabled){
-      h += '<p class="ex-intro" style="margin-top:18px">'+esc(pr.order2.intro)+'</p>'+
-           '<div class="ord-block" data-set="single" data-uid="'+uid+'-o2"><div class="ord-list"></div>'+
-           '<button class="ex-opt" style="max-width:220px" data-check="1">Check the order</button><div class="ex-fb"></div></div>';
-    }
-    return h + '</div>';
+  function exOrder(e, uid){
+    return '<div class="ord-block" data-uid="'+uid+'" data-correct="'+esc(JSON.stringify(e.correct))+'" data-fb="'+esc(e.fb)+'">'+
+      '<div class="ord-list"></div><button class="ex-check" data-check="1">Check the order</button><div class="ex-fb"></div></div>';
   }
-  function linkHTML(pr){
-    return '<div class="mseg mseg-pr"><span class="mseg-tag">✏️ Practice</span><p class="ex-intro">'+esc(pr.intro)+'</p>'+
-      '<a class="cta-link" href="'+esc(pr.cta.href)+'">'+esc(pr.cta.label)+'</a></div>';
+  function exClassify(e, uid){
+    return '<div class="cls-block" data-uid="'+uid+'" data-fb="Sort each item into the correct column."><div class="cls-cols">'+
+      '<div class="cls-col" data-bin="A"><div class="cls-h">'+esc(e.binA)+'</div><div class="cls-drop" data-bin="A"></div></div>'+
+      '<div class="cls-col" data-bin="B"><div class="cls-h">'+esc(e.binB)+'</div><div class="cls-drop" data-bin="B"></div></div>'+
+      '</div><div class="cls-pool"></div><button class="ex-check" data-check="1">Check</button><div class="ex-fb"></div></div>';
   }
-  function practiceHTML(m, uid){
-    var pr = m.practice;
-    if(pr.type==="qcm") return qcmHTML(pr, uid);
-    if(pr.type==="spot") return spotHTML(pr);
-    if(pr.type==="order") return orderHTML(pr, uid);
-    if(pr.type==="link") return linkHTML(pr);
-    return "";
+  var EXTITLE = {qcm:"Multiple choice",gap:"Fill the gap",order:"Put in order",classify:"Sort into columns",match:"Match the pairs",spot:"Spot the flaw"};
+  function exerciseHTML(e, uid){
+    var inner="";
+    if(e.type==="qcm"||e.type==="spot") inner=exQCM(e);
+    else if(e.type==="gap") inner=exGap(e);
+    else if(e.type==="match") inner=exQCM({items:e.items});
+    else if(e.type==="order") inner=exOrder(e, uid);
+    else if(e.type==="classify") inner=exClassify(e, uid);
+    return '<div class="ex-wrap" data-extype="'+e.type+'"><div class="ex-kind">'+esc(EXTITLE[e.type]||"Exercise")+'</div>'+
+      (e.intro?'<p class="ex-intro">'+esc(e.intro)+'</p>':'')+inner+'</div>';
+  }
+  function practiceHTML(m){
+    var ex = m.exercises||[];
+    if(!ex.length) return "";
+    return '<div class="mseg mseg-pr"><span class="mseg-tag">\u270f\ufe0f Practice</span>'+
+      ex.map(function(e,i){return exerciseHTML(e, m.id+"-"+i);}).join("")+'</div>';
   }
 
-  /* shuffle helper */
-  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
-
-  /* ---------- render all modules ---------- */
+  /* ============ RENDER MODULES ============ */
   var host = document.getElementById("mmModules");
   host.innerHTML = M.modules.map(function(m){
     return '<section class="module" id="'+m.id+'">'+
-      '<div class="module-h"><span class="mnum">'+m.n+'</span><div><h2>'+esc(m.title)+'</h2><div class="mlead">'+esc(m.lead)+'</div></div></div>'+
-      lessonHTML(m)+filrougeHTML(m)+dodontHTML(m)+practiceHTML(m, m.id)+
+      '<div class="module-h"><span class="mnum">'+m.n+'</span><div><h2>'+esc(m.title)+'</h2>'+
+        '<div class="mskill">'+esc(m.skill||"")+(m.time?' \u00b7 '+esc(m.time):"")+'</div>'+
+        '<div class="mlead">'+esc(m.lead)+'</div></div></div>'+
+      lessonHTML(m)+filrougeHTML(m)+dodontHTML(m)+practiceHTML(m)+
+      (m.id==="m6"?'<div id="ctxBuilderMount"></div>':"")+
+      (m.id==="m7"?'<div id="kqwMount"></div>':"")+
+      (m.id==="m15"?'<div id="simMount"></div>':"")+
       '<button class="mm-done-btn" data-id="'+m.id+'">Mark this module as done</button>'+
     '</section>';
   }).join("");
@@ -713,68 +815,41 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   document.getElementById("mmClosing").innerHTML =
     '<h3>'+esc(M.closing.title)+'</h3><p>'+esc(M.closing.p1)+'</p><p>'+esc(M.closing.p2)+'</p>';
 
-  /* ---------- wire QCM / spot / match ---------- */
-  function wireChoice(scope){
-    scope.querySelectorAll(".ex-q").forEach(function(q){
-      var opts = q.querySelectorAll(".ex-opt[data-o]");
-      opts.forEach(function(o){
-        o.addEventListener("click",function(){
-          if(o.disabled) return;
-          // find correct index: from data (qcm/spot use module data), match uses data-match
-          var block = q.closest(".module");
-          var mid = block.id;
-          var mod = M.modules.filter(function(x){return x.id===mid;})[0];
-          var qi = q.dataset.q;
-          var correct, fb;
-          if(String(qi).indexOf("match")===0){
-            correct = parseInt(o.dataset.match,10);
-            var mi = parseInt(qi.replace("match",""),10);
-            fb = mod.practice.match.items[mi].fb;
-          } else {
-            var it = mod.practice.items[+qi];
-            correct = it.c; fb = it.fb;
-          }
-          var chosen = +o.dataset.o;
-          opts.forEach(function(x){x.disabled=true;});
-          opts[correct].classList.add("correct");
-          if(chosen!==correct) o.classList.add("wrong");
-          var fbEl = q.querySelector(".ex-fb");
-          fbEl.className = "ex-fb show "+(chosen===correct?"ok":"no");
-          fbEl.textContent = (chosen===correct?"✓ ":"✗ ")+fb;
-        });
+  /* ============ WIRE CHOICE (qcm/gap/spot/match) ============ */
+  host.querySelectorAll('.ex-q[data-type="choice"]').forEach(function(q){
+    var opts = q.querySelectorAll(".ex-opt");
+    opts.forEach(function(o){
+      o.addEventListener("click",function(){
+        if(o.disabled) return;
+        var correct = +o.dataset.c, chosen = +o.dataset.o;
+        opts.forEach(function(x){x.disabled=true;});
+        opts[correct].classList.add("correct");
+        if(chosen!==correct) o.classList.add("wrong");
+        var fbEl = q.querySelector(".ex-fb");
+        fbEl.className = "ex-fb show "+(chosen===correct?"ok":"no");
+        fbEl.textContent = (chosen===correct?"\u2713 ":"\u2717 ")+fbEl.dataset.fb;
       });
     });
-  }
-  wireChoice(host);
-
-  /* ---------- wire reframe reveal ---------- */
-  host.querySelectorAll(".reveal-btn").forEach(function(b){
-    b.addEventListener("click",function(){ b.nextElementSibling.classList.toggle("show"); });
   });
 
-  /* ---------- wire ordering ---------- */
+  /* ============ WIRE ORDER ============ */
   host.querySelectorAll(".ord-block").forEach(function(block){
     var mid = block.closest(".module").id;
-    var mod = M.modules.filter(function(x){return x.id===mid;})[0];
-    var pr = mod.practice;
-    var setKey = block.dataset.set;
-    var items, correct;
-    if(setKey==="single"){ items = pr.order2.scrambled.slice(); correct = pr.order2.correct; }
-    else { var set = pr.sets[+setKey]; items = set.scrambled.slice(); correct = set.correct; }
-    // current order = shuffled index array referencing items
+    var exIdx = +block.dataset.uid.split("-")[1];
+    var e = M.modules.filter(function(x){return x.id===mid;})[0].exercises[exIdx];
+    var items = e.scrambled.slice(), correct = e.correct;
     var order = shuffle(items.map(function(_,i){return i;}));
     var listEl = block.querySelector(".ord-list");
     function draw(){
       listEl.innerHTML = order.map(function(idx,pos){
-        return '<div class="ord-item"><span>'+esc(items[idx])+'</span><span class="ord-btns">'+
-          '<button data-dir="up" '+(pos===0?"disabled":"")+'>↑</button>'+
-          '<button data-dir="down" '+(pos===order.length-1?"disabled":"")+'>↓</button></span></div>';
+        return '<div class="ord-item"><span class="ord-txt">'+esc(items[idx])+'</span><span class="ord-btns">'+
+          '<button data-dir="up" aria-label="Move up" '+(pos===0?"disabled":"")+'>\u2191</button>'+
+          '<button data-dir="down" aria-label="Move down" '+(pos===order.length-1?"disabled":"")+'>\u2193</button></span></div>';
       }).join("");
       listEl.querySelectorAll(".ord-item").forEach(function(row,pos){
         row.querySelectorAll("button").forEach(function(btn){
           btn.addEventListener("click",function(){
-            var dir = btn.dataset.dir;
-            var swap = dir==="up"?pos-1:pos+1;
+            var swap = btn.dataset.dir==="up"?pos-1:pos+1;
             if(swap<0||swap>=order.length) return;
             var t=order[pos];order[pos]=order[swap];order[swap]=t;draw();
           });
@@ -784,33 +859,206 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     draw();
     block.querySelector("[data-check]").addEventListener("click",function(){
       var fbEl = block.querySelector(".ex-fb");
-      // order maps position->itemIndex; correct maps position->itemIndex
-      var ok = order.every(function(idx,pos){ return idx===correct[pos]; });
-      var fb = setKey==="single" ? pr.order2.fb : pr.sets[+setKey].fb;
+      var ok = order.every(function(idx,pos){return idx===correct[pos];});
       fbEl.className = "ex-fb show "+(ok?"ok":"no");
-      fbEl.textContent = (ok?"✓ Correct order! ":"✗ Not yet — ")+fb;
+      fbEl.textContent = (ok?"\u2713 Correct order! ":"\u2717 Not yet \u2014 ")+block.dataset.fb;
     });
   });
 
-  /* ---------- done buttons ---------- */
-  host.querySelectorAll(".mm-done-btn").forEach(function(b){
-    b.addEventListener("click",function(){ markDone(b.dataset.id); });
+  /* ============ WIRE CLASSIFY (keyboard-accessible, no drag required) ============ */
+  host.querySelectorAll(".cls-block").forEach(function(block){
+    var mid = block.closest(".module").id;
+    var exIdx = +block.dataset.uid.split("-")[1];
+    var e = M.modules.filter(function(x){return x.id===mid;})[0].exercises[exIdx];
+    var pool = block.querySelector(".cls-pool");
+    var items = shuffle(e.items.map(function(it,i){return {i:i,t:it.t,bin:it.bin};}));
+    function chip(it){
+      return '<div class="cls-chip" data-i="'+it.i+'" data-bin="'+it.bin+'" data-at="pool" tabindex="0">'+esc(it.t)+
+        '<span class="cls-move"><button data-to="A" aria-label="To first column">\u25c0</button><button data-to="B" aria-label="To second column">\u25b6</button></span></div>';
+    }
+    pool.innerHTML = items.map(chip).join("");
+    function wire(chipEl){
+      chipEl.querySelectorAll(".cls-move button").forEach(function(btn){
+        btn.addEventListener("click",function(ev){
+          ev.stopPropagation();
+          var to = btn.dataset.to;
+          var drop = block.querySelector('.cls-drop[data-bin="'+to+'"]');
+          drop.appendChild(chipEl); chipEl.dataset.at=to;
+        });
+      });
+    }
+    pool.querySelectorAll(".cls-chip").forEach(wire);
+    block.querySelector("[data-check]").addEventListener("click",function(){
+      var fbEl = block.querySelector(".ex-fb");
+      var all = block.querySelectorAll(".cls-chip"), good=0, placed=0;
+      all.forEach(function(c){
+        var at=c.dataset.at;
+        if(at==="A"||at==="B"){ placed++; if(at===c.dataset.bin) good++; }
+        c.classList.remove("ok","no");
+        if(at==="A"||at==="B") c.classList.add(at===c.dataset.bin?"ok":"no");
+      });
+      var total=all.length;
+      fbEl.className="ex-fb show "+(good===total?"ok":"no");
+      fbEl.textContent = good===total ? "\u2713 All sorted correctly!" :
+        ("\u2717 "+good+"/"+total+" correct. Green = right column, red = wrong. "+(placed<total?"Some items are still unsorted.":""));
+    });
   });
+
+  /* ============ DONE BUTTONS + RESET ============ */
+  host.querySelectorAll(".mm-done-btn").forEach(function(b){ b.addEventListener("click",function(){markDone(b.dataset.id);}); });
   document.getElementById("mmReset").addEventListener("click",function(){
     if(confirm("Reset your progress on this page?")){ done=[]; saveDone(done); updateProgress(); }
   });
 
-  /* ---------- live document (real article of the day) in module 1 ---------- */
-  var NEWS_WORKER="https://english-colles-country-news.lecomte-eglantine.workers.dev/";
-  host.querySelectorAll(".live-box").forEach(function(box){
-    var codes=["gb","us","ie","ca","au"];
-    var code=codes[Math.floor(Math.random()*codes.length)];
-    fetch(NEWS_WORKER+"?country="+code+"&n=1").then(function(r){return r.json();}).then(function(d){
-      if(!d.items||!d.items.length) return;
-      var it=d.items[0];
-      var target=box.querySelector(".lv-doc");
-      target.innerHTML = target.textContent+'<br><br><b>Your document:</b> <a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+' ↗</a> <span style="color:var(--muted)">('+esc(d.source)+')</span>';
-    }).catch(function(){});
+  /* ============ LIVE DOC WORKER ============ */
+  var WORKER="https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+  function fetchDoc(code){ return fetch(WORKER+"?country="+code+"&n=1").then(function(r){return r.json();}); }
+
+  /* ============ DIAGNOSTIC ============ */
+  (function(){
+    var d = M.diagnostic; if(!d) return;
+    var mount = document.getElementById("diagMount"); if(!mount) return;
+    mount.innerHTML = '<p class="ex-intro">'+esc(d.intro)+'</p>'+
+      '<div class="diag-items">'+d.items.map(function(it,i){
+        return '<label class="diag-item"><input type="checkbox" data-mods="'+esc(it.mods.join(","))+'"> <span>'+esc(it.t)+'</span></label>';
+      }).join("")+'</div>'+
+      '<button class="cta-link" id="diagRun">Show my recommended modules</button>'+
+      '<div class="diag-result" id="diagResult"></div>';
+    document.getElementById("diagRun").addEventListener("click",function(){
+      var recs={};
+      mount.querySelectorAll('input:checked').forEach(function(cb){
+        cb.dataset.mods.split(",").forEach(function(mid){ recs[mid]=(recs[mid]||0)+1; });
+      });
+      var ids = Object.keys(recs);
+      var res = document.getElementById("diagResult");
+      if(!ids.length){ res.innerHTML='<p>Tick the statements that apply to you, then click again.</p>'; return; }
+      // order by module order
+      ids.sort(function(a,b){ return M.modules.findIndex(function(m){return m.id===a;}) - M.modules.findIndex(function(m){return m.id===b;}); });
+      res.innerHTML = '<h4>Start with these modules:</h4><div class="diag-chips">'+
+        ids.map(function(mid){ var m=M.modules.filter(function(x){return x.id===mid;})[0]; if(!m) return "";
+          return '<button class="diag-chip" data-goto="'+mid+'">'+m.n+' \u00b7 '+esc(m.title)+'</button>'; }).join("")+'</div>';
+      res.querySelectorAll(".diag-chip").forEach(function(b){
+        b.addEventListener("click",function(){ var el=document.getElementById(b.dataset.goto); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth"}); });
+      });
+    });
+  })();
+
+  /* ============ "I NEED HELP WITH..." ============ */
+  (function(){
+    var mount = document.getElementById("helpMount"); if(!mount||!M.help) return;
+    mount.innerHTML = M.help.map(function(h){
+      return '<button class="help-chip" data-goto="'+h.mod+'">'+esc(h.t)+'</button>';
+    }).join("");
+    mount.querySelectorAll(".help-chip").forEach(function(b){
+      b.addEventListener("click",function(){ var el=document.getElementById(b.dataset.goto); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth"}); });
+    });
+  })();
+
+  /* ============ CONTEXT BUILDER ============ */
+  (function(){
+    var t = M.tools.context_builder, mount = document.getElementById("ctxBuilderMount"); if(!t||!mount) return;
+    mount.innerHTML = '<div class="tool"><div class="tool-h">\ud83e\uddf1 '+esc(t.title)+'</div><p class="ex-intro">'+esc(t.intro)+'</p>'+
+      t.fields.map(function(f){return '<label class="tool-field"><span>'+esc(f.label)+'</span><input type="text" data-k="'+f.k+'" placeholder="'+esc(f.ph)+'"></label>';}).join("")+
+      '<button class="ex-check" id="ctxBuild">Assemble my context</button><div class="tool-out" id="ctxOut"></div></div>';
+    document.getElementById("ctxBuild").addEventListener("click",function(){
+      var vals={}; mount.querySelectorAll("input[data-k]").forEach(function(i){vals[i.dataset.k]=i.value.trim()||("["+i.dataset.k+"]");});
+      var txt = t.template.replace(/\{(\w+)\}/g,function(_,k){return vals[k]||("["+k+"]");});
+      document.getElementById("ctxOut").innerHTML = '<div class="tool-note">A structure to complete in your own words \u2014 refine it, don\u0027t recite it:</div><p class="tool-model">'+esc(txt)+'</p>';
+    });
+  })();
+
+  /* ============ KEY QUESTION WORKSHOP ============ */
+  (function(){
+    var t = M.tools.key_question_workshop, mount = document.getElementById("kqwMount"); if(!t||!mount) return;
+    mount.innerHTML = '<div class="tool"><div class="tool-h">\ud83d\udd11 '+esc(t.title)+'</div><p class="ex-intro">'+esc(t.intro)+'</p>'+
+      '<div class="kqw-tensions"><span class="kqw-lbl">Common tensions:</span> '+t.tensions.map(function(x){return '<span class="chip-mini">\u26a1 '+esc(x)+'</span>';}).join(" ")+'</div>'+
+      t.steps.map(function(s){return '<label class="tool-field"><span>'+esc(s.label)+'</span><input type="text" data-k="'+s.k+'" placeholder="'+esc(s.ph)+'"></label>';}).join("")+
+      '<div class="kqw-openers"><span class="kqw-lbl">Openers (never \u201cTo what extent\u201d):</span> '+t.openers.map(function(x){return '<span class="chip-mini alt">'+esc(x)+'</span>';}).join(" ")+'</div>'+
+      '<button class="ex-check" id="kqwCheck">Check my key question</button><div class="tool-out" id="kqwOut"></div></div>';
+    document.getElementById("kqwCheck").addEventListener("click",function(){
+      var q = (mount.querySelector('input[data-k="question"]').value||"").trim();
+      var out = document.getElementById("kqwOut"), msgs=[];
+      if(!q){ out.innerHTML='<div class="tool-note no">Write your key question in step 4 first.</div>'; return; }
+      var low = q.toLowerCase();
+      if(low.indexOf("to what extent")>=0) msgs.push(["no","\u2717 Avoid \u201cTo what extent\u201d \u2014 use a sharper opener from the list above."]);
+      if(q.indexOf("?")<0) msgs.push(["no","\u2717 A key question must be genuinely interrogative \u2014 it needs a question mark."]);
+      if((q.match(/\?/g)||[]).length>1) msgs.push(["no","\u2717 Keep it to a single main question, not two or three."]);
+      if(low.split(" ").length<5) msgs.push(["no","\u2717 This looks too short to carry a real tension \u2014 develop it."]);
+      if(/^(is|are|was|were|do|does|did|can|will)\b/.test(low) && low.split(" ").length<8) msgs.push(["no","\u26a0 This may be a yes/no question \u2014 make sure it opens a real debate, not a flat answer."]);
+      if(!msgs.length) msgs.push(["ok","\u2713 Formally sound: one interrogative question, no banned opener. Now check it names a real tension and ties to your document \u2014 that judgement is yours."]);
+      out.innerHTML = msgs.map(function(m){return '<div class="tool-note '+m[0]+'">'+esc(m[1])+'</div>';}).join("");
+    });
+  })();
+
+  /* ============ SIMULATOR ============ */
+  (function(){
+    var t = M.tools.simulator, mount = document.getElementById("simMount"); if(!t||!mount) return;
+    var COUNTRIES=[["gb","United Kingdom"],["us","United States"],["ie","Ireland"],["ca","Canada"],["au","Australia"]];
+    mount.innerHTML = '<div class="tool sim"><div class="tool-h">\ud83c\udf9b\ufe0f '+esc(t.title)+'</div><p class="ex-intro">'+esc(t.intro)+'</p>'+
+      '<div class="sim-setup"><label class="tool-field inline"><span>Country</span><select id="simCountry">'+
+        COUNTRIES.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>';}).join("")+'</select></label>'+
+      '<label class="tool-field inline"><span>Prep time</span><select id="simPrep"><option value="10">10 min</option><option value="20" selected>20 min</option><option value="30">30 min</option></select></label>'+
+      '<button class="cta-link" id="simStart">Draw a document &amp; start</button></div>'+
+      '<div class="sim-run" id="simRun" style="display:none"></div></div>';
+
+    document.getElementById("simStart").addEventListener("click",function(){
+      var code=document.getElementById("simCountry").value, prep=+document.getElementById("simPrep").value;
+      var run=document.getElementById("simRun"); run.style.display="block";
+      run.innerHTML='<p class="loading">Drawing a document of the day\u2026</p>';
+      fetchDoc(code).then(function(d){
+        if(!d.items||!d.items.length){ run.innerHTML='<p class="loading">No document available right now. Try again shortly.</p>'; return; }
+        var it=d.items[0];
+        var saved={}; try{saved=JSON.parse(LSget(NOTEK,"{}"));}catch(e){}
+        run.innerHTML =
+          '<div class="sim-doc"><span class="fd-kind">\ud83d\udcf0 Article of the day \u00b7 '+esc(d.source)+'</span>'+
+            '<a class="sim-doc-title" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+' \u2197</a></div>'+
+          '<div class="sim-timer" id="simTimer">'+prep+':00</div>'+
+          '<div class="sim-timer-ctrl"><button class="g-btn" id="simTStart">Start prep timer</button><button class="g-btn" id="simTReset">Reset</button><span class="sim-hint">The timer is a guide, not a stressor \u2014 you can turn it off.</span></div>'+
+          t.steps.map(function(s){return '<label class="tool-field"><span>'+esc(s.label)+'</span><textarea data-k="'+esc(s.k)+'" rows="2" placeholder="'+esc(s.ph)+'">'+esc(saved[s.k]||"")+'</textarea></label>';}).join("")+
+          '<div class="sim-grid-wrap"><h4>Self-assessment grid</h4><p class="ex-intro">Rate yourself honestly on each criterion. This structures reflection \u2014 it is not a substitute for a teacher\u0027s mark.</p>'+
+            '<div class="sim-grid">'+t.grid.map(function(g){return '<div class="sim-crit"><span>'+esc(g)+'</span><span class="sim-stars" data-crit="'+esc(g)+'">'+[1,2,3,4,5].map(function(n){return '<button data-n="'+n+'" aria-label="'+n+'/5">\u2606</button>';}).join("")+'</span></div>';}).join("")+'</div></div>'+
+          '<div class="sim-actions"><button class="ex-check" id="simSave">Save my notes</button><button class="g-btn" id="simClear">Clear notes</button><button class="g-btn" id="simModel">Show the fil-rouge model</button></div>'+
+          '<div class="sim-model" id="simModel2" style="display:none"></div>';
+
+        // timer
+        var remain=prep*60, tid=null, tEl=document.getElementById("simTimer");
+        function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}
+        document.getElementById("simTStart").addEventListener("click",function(){
+          if(tid){clearInterval(tid);tid=null;this.textContent="Start prep timer";return;}
+          this.textContent="Pause";
+          tid=setInterval(function(){remain--;tEl.textContent=fmt(Math.max(0,remain));if(remain<=60)tEl.classList.add("warn");if(remain<=0){clearInterval(tid);tid=null;tEl.textContent="Time \u2014 present now";}},1000);
+        });
+        document.getElementById("simTReset").addEventListener("click",function(){if(tid){clearInterval(tid);tid=null;}remain=prep*60;tEl.textContent=fmt(remain);tEl.classList.remove("warn");document.getElementById("simTStart").textContent="Start prep timer";});
+        // stars
+        run.querySelectorAll(".sim-stars").forEach(function(row){
+          row.querySelectorAll("button").forEach(function(b){
+            b.addEventListener("click",function(){var n=+b.dataset.n;row.querySelectorAll("button").forEach(function(x){x.textContent=(+x.dataset.n<=n)?"\u2605":"\u2606";});});
+          });
+        });
+        // save/clear
+        document.getElementById("simSave").addEventListener("click",function(){
+          var o={}; run.querySelectorAll("textarea[data-k]").forEach(function(t){o[t.dataset.k]=t.value;});
+          LSset(NOTEK,JSON.stringify(o)); this.textContent="\u2713 Saved locally"; var b=this; setTimeout(function(){b.textContent="Save my notes";},1500);
+        });
+        document.getElementById("simClear").addEventListener("click",function(){
+          if(confirm("Clear your saved simulator notes?")){ LSset(NOTEK,"{}"); run.querySelectorAll("textarea[data-k]").forEach(function(t){t.value="";}); }
+        });
+        document.getElementById("simModel").addEventListener("click",function(){
+          var mdl=document.getElementById("simModel2");
+          if(mdl.style.display==="none"){
+            mdl.style.display="block";
+            mdl.innerHTML='<h4>The fil-rouge model (Port Talbot)</h4><p class="tool-note">This is the worked example from the modules \u2014 a model of the method on a fixed document, to compare your <i>approach</i> against (not a corrected version of your live article).</p>'+
+              '<p class="tool-model"><b>Tension:</b> progress vs its human cost.<br><b>Key question:</b> Can a nation decarbonise heavy industry without sacrificing the communities built around it?<br><b>Outline:</b> I the green case is real \u2192 II its cost is unequal \u2192 III the true issue is how transition is governed.</p>';
+            this.textContent="Hide the model";
+          } else { mdl.style.display="none"; this.textContent="Show the fil-rouge model"; }
+        });
+      }).catch(function(){ run.innerHTML='<p class="loading">Could not load a document. Check your connection and try again.</p>'; });
+    });
+  })();
+
+  /* open-sim button inside fil rouge */
+  host.querySelectorAll("[data-opensim]").forEach(function(b){
+    b.addEventListener("click",function(){ var el=document.getElementById("simMount"); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth"}); });
   });
 
   renderRail();
