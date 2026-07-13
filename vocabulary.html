@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +82,7 @@ main{padding:34px 0 60px}
 
 footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
 a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
-@media (max-width:640px){.nav{display:none}}
+@media (max-width:640px){.nav{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;max-width:100%;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}}
 
 /* ===== jeux de vocabulaire ===== */
 .games{margin-top:50px}
@@ -144,6 +144,76 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 .g-end h3{color:var(--navy);font-size:1.5rem}
 @media (max-width:520px){.g-cards{grid-template-columns:repeat(3,1fr)}.g-duel{grid-template-columns:1fr}}
 
+
+/* ===== What do you need today? ===== */
+.need-today{margin-top:24px}
+.need-lbl{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:10px}
+.need-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.need-card{display:flex;flex-direction:column;gap:3px;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:15px;padding:16px 18px;cursor:pointer;font-family:inherit;box-shadow:var(--shadow);transition:transform .14s,box-shadow .25s,border-color .15s}
+.need-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--terra)}
+.need-ic{font-size:1.5rem;margin-bottom:4px}
+.need-t{font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--navy)}
+.need-d{font-size:.82rem;color:var(--muted)}
+/* ===== search extras ===== */
+.clear-btn{min-height:var(--tap);border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:0 14px;font-family:inherit;font-weight:700;font-size:.9rem;color:var(--muted);cursor:pointer}
+.clear-btn:hover{border-color:var(--terra);color:var(--terra)}
+.hit mark{background:#fbe7c2;color:inherit;border-radius:3px;padding:0 2px}
+.hit .save-star{float:right;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--gold);line-height:1;padding:0 0 0 8px}
+.hit .save-star:hover{transform:scale(1.15)}
+.hit .sub{font-size:.76rem;color:var(--muted);font-style:italic}
+.hit .ex{font-size:.85rem;color:var(--ink);margin-top:4px;padding-left:10px;border-left:2px solid var(--line)}
+/* ===== Today's word + revision list ===== */
+.tw-and-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.today-word{background:linear-gradient(135deg,#fff7ed,#f3f7f4);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:15px;padding:18px 20px}
+.today-word .tw-h{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.today-word .tw-term{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--navy);line-height:1.15}
+.today-word .tw-ipa{font-size:.85rem;color:var(--muted);margin-left:6px;font-family:inherit}
+.today-word .tw-fr{color:var(--terra);font-weight:700;margin-top:2px}
+.today-word .tw-def{font-size:.9rem;color:var(--ink);margin-top:6px;line-height:1.5}
+.today-word .tw-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.today-word .tw-actions button,.today-word .tw-actions a{border:1px solid var(--line);background:var(--card);border-radius:9px;padding:7px 11px;font-family:inherit;font-weight:700;font-size:.8rem;color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.today-word .tw-actions button:hover,.today-word .tw-actions a:hover{border-color:var(--terra);color:var(--terra)}
+.today-word .tw-actions .tw-ch{color:var(--sage);border-color:var(--sage)}
+.revlist-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.revlist-card .rl-h{font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--navy)}
+.revlist-card .rl-count{font-size:.85rem;color:var(--muted);margin:2px 0 12px}
+.revlist-card .rl-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.revlist-card .rl-actions button{border:1.5px solid var(--line);background:var(--bg2);border-radius:10px;padding:8px 12px;font-family:inherit;font-weight:700;font-size:.82rem;color:var(--ink);cursor:pointer}
+.revlist-card .rl-actions button:hover{border-color:var(--terra);color:var(--terra)}
+.revlist-card .rl-actions .rl-primary{background:var(--sage);border-color:var(--sage);color:#fff}
+.revlist-card .rl-actions .rl-primary:hover{background:#688a64;color:#fff}
+.revlist-card .rl-empty{font-size:.88rem;color:var(--muted);line-height:1.5}
+/* ===== Train with (scope selector) ===== */
+.train-with{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0 6px}
+.tw-lbl{font-size:.82rem;font-weight:700;color:var(--navy)}
+.tw-opts{display:flex;flex-wrap:wrap;gap:6px}
+.tw-opt{border:1.5px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-family:inherit;font-weight:700;font-size:.82rem;color:var(--muted);cursor:pointer;min-height:40px}
+.tw-opt:hover{border-color:var(--terra)}
+.tw-opt.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.tw-select{min-height:40px;border:1.5px solid var(--line);border-radius:10px;padding:6px 10px;font-family:inherit;font-size:.85rem;background:var(--bg2);color:var(--ink);max-width:280px}
+.tw-count{font-size:.82rem;color:var(--muted);font-weight:700}
+/* ===== 5-minute revision ===== */
+.rev-card{max-width:460px;margin:0 auto;text-align:center}
+.rev-progress{font-size:.85rem;color:var(--muted);font-weight:700;margin-bottom:14px}
+.rev-term{font-family:var(--display);font-size:2.1rem;font-weight:600;color:var(--navy);line-height:1.15}
+.rev-ipa{font-size:.9rem;color:var(--muted);margin-top:2px}
+.rev-reveal{margin-top:16px;min-height:90px}
+.rev-fr{color:var(--terra);font-weight:700;font-size:1.2rem}
+.rev-def{font-size:.95rem;color:var(--ink);margin-top:8px;line-height:1.5}
+.rev-ex{font-size:.88rem;color:var(--muted);font-style:italic;margin-top:8px;padding-left:12px;border-left:2px solid var(--line);text-align:left}
+.rev-show-btn{margin-top:16px;min-height:var(--tap);border-radius:12px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;font-family:inherit;font-weight:700;font-size:.95rem;padding:10px 24px;cursor:pointer}
+.rev-show-btn:hover{background:#1b2c40}
+.rev-verdict{display:flex;gap:12px;justify-content:center;margin-top:18px}
+.rev-verdict button{flex:1;max-width:180px;min-height:var(--tap);border-radius:12px;font-family:inherit;font-weight:700;font-size:.95rem;cursor:pointer;border:1.5px solid var(--line)}
+.rev-know{background:var(--sage);border-color:var(--sage);color:#fff}
+.rev-know:hover{background:#688a64}
+.rev-again{background:var(--card);color:var(--terra);border-color:var(--terra)}
+.rev-again:hover{background:#fbe9e6}
+.rev-speak{background:none;border:1px solid var(--line);border-radius:9px;padding:6px 12px;font-family:inherit;font-weight:700;font-size:.82rem;cursor:pointer;color:var(--ink);margin-top:12px}
+.rev-speak:hover{border-color:var(--terra);color:var(--terra)}
+.rev-end .score{font-family:var(--display);font-size:2.6rem;color:var(--sage);margin:10px 0}
+@media (max-width:640px){.need-grid{grid-template-columns:1fr}.tw-and-list{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -172,12 +242,27 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
     <div class="page-head">
       <div class="eyebrow">Vocabulary</div>
       <h1>The vocabulary library</h1>
-      <p>86 thematic chapters, nearly 11,000 words and expressions for colles, essays and the concours. Each chapter comes as a reference sheet (to read or print) and as flashcards (to memorise) — and now as five vocabulary games.</p>
+      <p>86 thematic chapters, nearly 11,000 words and expressions for colles, essays and the concours. Find a word, revise in five minutes, or study a specific topic.</p>
+    </div>
+
+    <div class="need-today" role="group" aria-label="What do you need today?">
+      <span class="need-lbl">What do you need today?</span>
+      <div class="need-grid">
+        <button class="need-card" data-need="find"><span class="need-ic">🔎</span><span class="need-t">Find a word</span><span class="need-d">Search all 11,000 entries</span></button>
+        <button class="need-card" data-need="revise"><span class="need-ic">⏱️</span><span class="need-t">Revise for 5 minutes</span><span class="need-d">Ten words, quick recall</span></button>
+        <button class="need-card" data-need="study"><span class="need-ic">📚</span><span class="need-t">Study a topic</span><span class="need-d">Pick a chapter and play</span></button>
+      </div>
     </div>
 
     <div class="searchbar">
-      <input type="search" id="q" placeholder="Search a word, a translation or a chapter… (e.g. democracy, warming, monarchy)" aria-label="Search the vocabulary">
+      <input type="search" id="q" placeholder="Search a word, a translation, a definition or an example… (e.g. make something weaker)" aria-label="Search the vocabulary">
+      <button class="clear-btn" id="clearBtn" aria-label="Clear search" hidden>✕ Clear</button>
       <span class="search-count" id="qCount"></span>
+    </div>
+
+    <div class="tw-and-list">
+      <div class="today-word" id="todayWord" aria-live="polite"></div>
+      <div class="revlist-card" id="revListCard"></div>
     </div>
 
     <section class="term-results" id="termResults" aria-live="polite">
@@ -192,11 +277,24 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
     </div>
   </div>
 
-    <section class="games" id="games">
+    <section class="games wrap" id="games">
       <div class="games-head">
         <div class="eyebrow">Play &amp; revise</div>
-        <h2>Five ways to train your vocabulary</h2>
-        <p>Quick games built from all 11,000 entries — mixed across every chapter. Pick one, no setup needed.</p>
+        <h2>Eight ways to train your vocabulary</h2>
+        <p>Choose what to train, then pick a game. By default the games draw from every chapter — but you can focus on one topic, your saved words, or your mistakes.</p>
+      </div>
+      <div class="train-with" role="group" aria-label="Train with">
+        <span class="tw-lbl">Train with:</span>
+        <div class="tw-opts">
+          <button class="tw-opt on" data-scope="all">All vocabulary</button>
+          <button class="tw-opt" data-scope="chapter">A specific chapter</button>
+          <button class="tw-opt" data-scope="part">A complete part</button>
+          <button class="tw-opt" data-scope="saved">My saved words</button>
+          <button class="tw-opt" data-scope="mistakes">My mistakes</button>
+        </div>
+        <select class="tw-select" id="twChapter" hidden aria-label="Choose a chapter"></select>
+        <select class="tw-select" id="twPart" hidden aria-label="Choose a part"></select>
+        <span class="tw-count" id="twCount"></span>
       </div>
       <div class="games-grid">
         <button class="game-card g1" data-game="sprint">
@@ -242,135 +340,205 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
         <div class="gm-body" id="gmBody"></div>
       </div>
     </div>
+
+    <div class="game-modal" id="revModal" role="dialog" aria-modal="true" aria-label="5-minute revision">
+      <div class="gm-inner">
+        <div class="gm-bar">
+          <span class="gm-title" id="revTitle">Revise for 5 minutes</span>
+          <div class="gm-stats" id="revStats"></div>
+          <button class="gm-close" id="revClose" aria-label="Close">✕</button>
+        </div>
+        <div class="gm-body" id="revBody"></div>
+      </div>
+    </div>
 </main>
 
 <footer>English Colles in Lyon — CPGE Vocabulary Library</footer>
 
 <script src="vocab-data.js"></script>
 <script>
-(function(){
-  "use strict";
+/* ============ SHARED CORE : data, saved list, mistakes ============ */
+window.VOCLIB = (function(){
   var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
   var partNames = (window.VOCAB && window.VOCAB.parts) || {};
+  // index plat de toutes les entrées
+  var ALL = [];
+  chapters.forEach(function(c){
+    c.sections.forEach(function(s){
+      var sub = (s.title||"").replace(/^[A-Z]\. /,"");
+      s.entries.forEach(function(e){
+        if(e.term && e.fr){
+          ALL.push({term:e.term,ipa:e.ipa||"",fr:e.fr,def:e.def||"",ex:e.ex||"",
+                    sub:sub, chId:c.id, chTitle:c.title, chFile:c.file, chNum:c.chapter, part:c.part});
+        }
+      });
+    });
+  });
+  function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}}
+  function LSset(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  var SAVEK="ecl_vocab_saved", MISSK="ecl_vocab_mistakes";
+  function loadSet(k){try{return JSON.parse(LSget(k,"[]"));}catch(e){return [];}}
+  function saveSet(k,a){LSset(k,JSON.stringify(a));}
+  // saved / mistakes stockent des "term|||chId" pour identifier de façon unique
+  function keyOf(e){return e.term+"|||"+e.chId;}
+  var saved = loadSet(SAVEK), mistakes = loadSet(MISSK);
+  function isSaved(e){return saved.indexOf(keyOf(e))>=0;}
+  function toggleSave(e){var k=keyOf(e),i=saved.indexOf(k);if(i>=0)saved.splice(i,1);else saved.push(k);saveSet(SAVEK,saved);return i<0;}
+  function addMistake(e){var k=keyOf(e);if(mistakes.indexOf(k)<0){mistakes.push(k);saveSet(MISSK,mistakes);}}
+  function clearMistakes(){mistakes=[];saveSet(MISSK,mistakes);}
+  function removeSaved(k){var i=saved.indexOf(k);if(i>=0){saved.splice(i,1);saveSet(SAVEK,saved);}}
+  function clearSaved(){saved=[];saveSet(SAVEK,saved);}
+  function entriesFor(keys){
+    var set={};keys.forEach(function(k){set[k]=1;});
+    return ALL.filter(function(e){return set[keyOf(e)];});
+  }
+  return {
+    ALL:ALL, chapters:chapters, partNames:partNames,
+    saved:function(){return saved;}, mistakes:function(){return mistakes;},
+    isSaved:isSaved, toggleSave:toggleSave, addMistake:addMistake,
+    clearMistakes:clearMistakes, removeSaved:removeSaved, clearSaved:clearSaved,
+    savedEntries:function(){return entriesFor(saved);},
+    mistakeEntries:function(){return entriesFor(mistakes);},
+    keyOf:keyOf
+  };
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var L = window.VOCLIB;
+  var chapters = L.chapters, partNames = L.partNames;
   var root = document.getElementById("partsRoot");
   var q = document.getElementById("q");
   var qCount = document.getElementById("qCount");
   var termResults = document.getElementById("termResults");
   var hits = document.getElementById("hits");
   var noResult = document.getElementById("noResult");
+  var clearBtn = document.getElementById("clearBtn");
 
-  function esc(s){
-    var d = document.createElement("div");
-    d.textContent = s || "";
-    return d.innerHTML;
+  function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML;}
+  function normalize(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
+  function hl(text, needle){
+    if(!needle) return esc(text);
+    var t=esc(text), n=normalize(needle), nt=normalize(text), out="", i=0;
+    while(i<t.length){
+      var pos=nt.indexOf(n,i);
+      if(pos<0){out+=t.slice(i);break;}
+      // approx: map on escaped string (les entités peuvent décaler; on reste simple et sûr)
+      out+=t.slice(i,pos)+"<mark>"+t.slice(pos,pos+n.length)+"</mark>";
+      i=pos+n.length;
+    }
+    return out;
   }
 
-  // ---- construire la liste des chapitres, groupés par partie ----
+  // ---- rendu des chapitres (avec bouton Practise this chapter) ----
   var parts = {};
-  chapters.forEach(function(c){ (parts[c.part] = parts[c.part] || []).push(c); });
-
+  chapters.forEach(function(c){ (parts[c.part]=parts[c.part]||[]).push(c); });
   Object.keys(parts).sort(function(a,b){return a-b;}).forEach(function(p){
-    var sec = document.createElement("section");
-    sec.className = "part";
-    var total = parts[p].reduce(function(n,c){return n + c.count;}, 0);
-    sec.innerHTML =
-      '<h2 class="part-title">Part ' + p + (partNames[p] ? " — " + esc(partNames[p]) : "") + '</h2>' +
-      '<p class="part-sub">' + parts[p].length + ' chapters · ' + total + ' entries</p>' +
-      '<div class="chapters"></div>';
-    var grid = sec.querySelector(".chapters");
+    var sec=document.createElement("section");sec.className="part";
+    var total=parts[p].reduce(function(n,c){return n+c.count;},0);
+    sec.innerHTML='<h2 class="part-title">Part '+p+(partNames[p]?" — "+esc(partNames[p]):"")+'</h2>'+
+      '<p class="part-sub">'+parts[p].length+' chapters · '+total+' entries</p><div class="chapters"></div>';
+    var grid=sec.querySelector(".chapters");
     parts[p].forEach(function(c){
-      var el = document.createElement("article");
-      el.className = "chap";
-      el.dataset.search = (c.title + " chapitre " + c.chapter).toLowerCase();
-      el.innerHTML =
-        '<span class="num">Chapter ' + c.chapter + '</span>' +
-        '<h3>' + esc(c.title) + '</h3>' +
-        '<span class="meta">' + c.count + ' words & expressions</span>' +
-        '<div class="links">' +
-          '<a href="' + esc(c.file) + '">Read the sheet</a>' +
-          '<a class="fc" href="flashcards.html?ch=' + esc(c.id) + '">Flashcards</a>' +
-        '</div>';
+      var el=document.createElement("article");el.className="chap";
+      el.dataset.search=(c.title+" chapter "+c.chapter).toLowerCase();
+      el.innerHTML='<span class="num">Chapter '+c.chapter+'</span><h3>'+esc(c.title)+'</h3>'+
+        '<span class="meta">'+c.count+' words &amp; expressions</span>'+
+        '<div class="links"><a href="'+esc(c.file)+'">Read the sheet</a>'+
+        '<a class="fc" href="flashcards.html?ch='+esc(c.id)+'">Flashcards</a>'+
+        '<button class="practise-ch" data-ch="'+esc(c.id)+'">Practise this chapter</button></div>';
       grid.appendChild(el);
     });
     root.appendChild(sec);
   });
-
-  // ---- index de recherche sur les entries ----
-  var index = [];
-  chapters.forEach(function(c){
-    c.sections.forEach(function(s){
-      s.entries.forEach(function(e){
-        index.push({
-          term: e.term, fr: e.fr, def: e.def,
-          low: (e.term + " " + e.fr).toLowerCase(),
-          chId: c.id, chTitle: c.title, chFile: c.file, chNum: c.chapter
-        });
-      });
-    });
+  // clic "Practise this chapter" -> passe le scope aux jeux
+  root.addEventListener("click",function(ev){
+    var b=ev.target.closest(".practise-ch");
+    if(!b)return;
+    if(window.VOCGAMES && window.VOCGAMES.focusChapter){
+      window.VOCGAMES.focusChapter(b.dataset.ch);
+      document.getElementById("games").scrollIntoView({behavior:"smooth",block:"start"});
+    }
   });
 
-  function normalize(s){
-    return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  }
-
-  var timer = null;
-  q.addEventListener("input", function(){
-    clearTimeout(timer);
-    timer = setTimeout(applySearch, 160);
-  });
-
+  // ---- recherche enrichie : term, fr, def, ex, sub ----
   function applySearch(){
-    var raw = q.value.trim();
-    var needle = normalize(raw);
-    var chapCards = root.querySelectorAll(".chap");
-    var partSecs = root.querySelectorAll(".part");
-
-    if (needle.length < 2){
-      chapCards.forEach(function(el){ el.classList.remove("hidden"); });
-      partSecs.forEach(function(el){ el.classList.remove("hidden"); });
-      termResults.classList.remove("on");
-      noResult.classList.remove("on");
-      qCount.textContent = "";
+    var raw=q.value.trim(), needle=normalize(raw);
+    clearBtn.hidden = raw.length===0;
+    var chapCards=root.querySelectorAll(".chap"), partSecs=root.querySelectorAll(".part");
+    if(needle.length<2){
+      chapCards.forEach(function(el){el.classList.remove("hidden");});
+      partSecs.forEach(function(el){el.classList.remove("hidden");});
+      termResults.classList.remove("on");noResult.classList.remove("on");qCount.textContent="";
       return;
     }
-
-    // 1) filtrer les chapitres par titre
-    var chapVisible = 0;
+    var chapVisible=0;
     chapCards.forEach(function(el){
-      var show = normalize(el.dataset.search).indexOf(needle) !== -1;
-      el.classList.toggle("hidden", !show);
-      if (show) chapVisible++;
+      var show=normalize(el.dataset.search).indexOf(needle)!==-1;
+      el.classList.toggle("hidden",!show);if(show)chapVisible++;
     });
     partSecs.forEach(function(sec){
-      var any = sec.querySelectorAll(".chap:not(.hidden)").length > 0;
-      sec.classList.toggle("hidden", !any);
+      sec.classList.toggle("hidden", sec.querySelectorAll(".chap:not(.hidden)").length===0);
     });
-
-    // 2) chercher dans les mots (terme anglais + traduction)
-    var found = [];
-    for (var i = 0; i < index.length && found.length < 30; i++){
-      if (normalize(index[i].low).indexOf(needle) !== -1) found.push(index[i]);
+    // recherche mots : score pour classer exact d'abord
+    var scored=[];
+    for(var i=0;i<L.ALL.length;i++){
+      var e=L.ALL[i];
+      var nterm=normalize(e.term), nfr=normalize(e.fr), ndef=normalize(e.def), nex=normalize(e.ex), nsub=normalize(e.sub);
+      var score=-1;
+      if(nterm===needle||nfr===needle) score=0;              // exact
+      else if(nterm.indexOf(needle)===0||nfr.indexOf(needle)===0) score=1; // commence par
+      else if(nterm.indexOf(needle)>=0||nfr.indexOf(needle)>=0) score=2;   // contient (terme/fr)
+      else if(nsub.indexOf(needle)>=0) score=3;              // sous-catégorie
+      else if(ndef.indexOf(needle)>=0) score=4;              // définition
+      else if(nex.indexOf(needle)>=0) score=5;               // exemple
+      if(score>=0) scored.push({e:e,s:score});
     }
-    hits.innerHTML = found.map(function(h){
-      return '<div class="hit">' +
-        '<span class="t">' + esc(h.term) + '</span> — <span class="f">' + esc(h.fr) + '</span>' +
-        '<div class="d">' + esc(h.def) + '</div>' +
-        '<div class="c">Chapter ' + h.chNum + ' · ' + esc(h.chTitle) +
-          ' · <a href="' + esc(h.chFile) + '">sheet</a>' +
-          ' · <a href="flashcards.html?ch=' + esc(h.chId) + '">flashcards</a></div>' +
+    scored.sort(function(a,b){return a.s-b.s;});
+    var found=scored.slice(0,40).map(function(x){return x.e;});
+    hits.innerHTML=found.map(function(h){
+      var starOn=L.isSaved(h);
+      return '<div class="hit" data-k="'+esc(L.keyOf(h))+'">'+
+        '<button class="save-star" data-save="'+esc(L.keyOf(h))+'" aria-label="Save this word" title="Save this word">'+(starOn?"★":"☆")+'</button>'+
+        '<span class="t">'+hl(h.term,raw)+'</span> — <span class="f">'+hl(h.fr,raw)+'</span>'+
+        (h.sub?' <span class="sub">('+esc(h.sub)+')</span>':'')+
+        '<div class="d">'+hl(h.def,raw)+'</div>'+
+        (h.ex?'<div class="ex">'+hl(h.ex,raw)+'</div>':'')+
+        '<div class="c">Chapter '+h.chNum+' · '+esc(h.chTitle)+
+          ' · <a href="'+esc(h.chFile)+'">sheet</a>'+
+          ' · <a href="flashcards.html?ch='+esc(h.chId)+'">flashcards</a></div>'+
       '</div>';
     }).join("");
-    termResults.classList.toggle("on", found.length > 0);
-    qCount.textContent = found.length > 0
-      ? found.length + (found.length === 30 ? "+ mots" : (found.length > 1 ? " mots" : " mot"))
-      : "";
-    noResult.classList.toggle("on", found.length === 0 && chapVisible === 0);
+    termResults.classList.toggle("on", found.length>0);
+    qCount.textContent = found.length>0 ? (found.length+(found.length===40?"+ words":(found.length>1?" words":" word"))) : "";
+    noResult.classList.toggle("on", found.length===0 && chapVisible===0);
   }
 
-  if (chapters.length === 0){
-    root.innerHTML = '<p style="color:var(--muted);margin-top:30px">Aucune donnée trouvée. Vérifie que <strong>vocab-data.js</strong> est bien présent à côté de cette page.</p>';
+  var timer=null;
+  q.addEventListener("input",function(){clearTimeout(timer);timer=setTimeout(applySearch,150);});
+  clearBtn.addEventListener("click",function(){q.value="";applySearch();q.focus();});
+
+  // étoile save dans les résultats
+  hits.addEventListener("click",function(ev){
+    var b=ev.target.closest(".save-star");if(!b)return;
+    var k=b.dataset.save;
+    var e=L.ALL.filter(function(x){return L.keyOf(x)===k;})[0];
+    if(!e)return;
+    var now=L.toggleSave(e);
+    b.textContent=now?"★":"☆";
+    if(window.VOCREV && window.VOCREV.refreshList) window.VOCREV.refreshList();
+  });
+
+  if(chapters.length===0){
+    root.innerHTML='<p style="color:var(--muted);margin-top:30px">No data found. Check that <strong>vocab-data.js</strong> is present next to this page.</p>';
   }
+
+  // exposer applySearch + focus recherche pour le hero "Find a word"
+  window.VOCSEARCH = { focus:function(){ q.scrollIntoView({behavior:"smooth",block:"center"}); q.focus(); } };
 })();
+
 </script>
 <script>
 
@@ -378,10 +546,30 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 (function(){
   var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
   if(!chapters.length) return;
-  var POOL = [];
+  var L = window.VOCLIB;
+
+  // réservoir complet (toutes entrées)
+  var FULL = [];
   chapters.forEach(function(c){c.sections.forEach(function(s){s.entries.forEach(function(e){
-    if(e.term&&e.fr&&e.def) POOL.push({t:e.term,fr:e.fr,d:e.def,ex:e.ex||"",sec:(s.title||"").replace(/^[A-Z]\. /,"")});
+    if(e.term&&e.fr&&e.def) FULL.push({t:e.term,fr:e.fr,d:e.def,ex:e.ex||"",sec:(s.title||"").replace(/^[A-Z]\. /,""),chId:c.id,chNum:c.chapter,part:c.part,term:e.term});
   });});});
+
+  // scope courant + POOL dynamique
+  var scope = {type:"all", chId:null, part:null};
+  var POOL = FULL.slice();
+  function keyOf(x){return x.term+"|||"+x.chId;}
+  function rebuildPool(){
+    if(scope.type==="chapter" && scope.chId){ POOL = FULL.filter(function(e){return e.chId===scope.chId;}); }
+    else if(scope.type==="part" && scope.part){ POOL = FULL.filter(function(e){return String(e.part)===String(scope.part);}); }
+    else if(scope.type==="saved"){ var s={};L.saved().forEach(function(k){s[k]=1;}); POOL = FULL.filter(function(e){return s[keyOf(e)];}); }
+    else if(scope.type==="mistakes"){ var m={};L.mistakes().forEach(function(k){m[k]=1;}); POOL = FULL.filter(function(e){return m[keyOf(e)];}); }
+    else { POOL = FULL.slice(); }
+    updateScopeCount();
+  }
+  function updateScopeCount(){
+    var el=document.getElementById("twCount");
+    if(el) el.textContent = POOL.length ? (POOL.length+" words in this set") : "This set is empty";
+  }
 
   var modal=document.getElementById("gameModal"),body=document.getElementById("gmBody"),
       title=document.getElementById("gmTitle"),stats=document.getElementById("gmStats"),
@@ -392,7 +580,8 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function pick(n,filter){var p=filter?POOL.filter(filter):POOL;return shuffle(p).slice(0,n);}
   function rand(arr){return arr[Math.floor(Math.random()*arr.length)];}
-  function open(t){title.textContent=t;stats.innerHTML="";modal.classList.add("on");document.body.style.overflow="hidden";}
+  function noteMistake(item){ if(item&&item.term&&item.chId&&L) L.addMistake({term:item.term,chId:item.chId}); }
+  function open(t){if(!POOL.length){alert("This set is empty. Save some words or pick another topic first.");return false;}title.textContent=t;stats.innerHTML="";modal.classList.add("on");document.body.style.overflow="hidden";return true;}
   function close(){modal.classList.remove("on");document.body.style.overflow="";if(timerId){clearInterval(timerId);timerId=null;}body.innerHTML="";}
   closeB.onclick=close;
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("on"))close();});
@@ -405,7 +594,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 
   /* ---------- 1. DEFINITION SPRINT ---------- */
   function sprint(){
-    open("Definition Sprint");
+    if(!open("Definition Sprint"))return;
     var score=0,time=60,rounds=0,cur=null,revealed=0;
     stats.innerHTML='<span>⏱ <b id="tv">60</b>s</span><span>★ <b id="sv">0</b></span>';
     function tick(){time--;document.getElementById("tv").textContent=time;if(time<=0)endScreen(score,rounds,"Time! You nailed "+score+" words.",sprint);}
@@ -437,7 +626,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 
   /* ---------- 2. COLLOCATION BUILDER ---------- */
   function colloc(){
-    open("Collocation Builder");
+    if(!open("Collocation Builder"))return;
     var score=0,rounds=0;
     stats.innerHTML='<span>★ <b id="sv">0</b> / <b id="rv">0</b></span>';
     function next(){
@@ -471,7 +660,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 
   /* ---------- 3. ODD ONE OUT ---------- */
   function odd(){
-    open("Odd One Out");
+    if(!open("Odd One Out"))return;
     var score=0,rounds=0;
     stats.innerHTML='<span>★ <b id="sv">0</b> / <b id="rv">0</b></span>';
     function next(){
@@ -501,7 +690,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 
   /* ---------- 4. WORD DUEL ---------- */
   function duel(){
-    open("Word Duel");
+    if(!open("Word Duel"))return;
     var score=0,combo=0,best=0,lives=3;
     stats.innerHTML='<span>🔥 <b id="cv">0</b></span><span>♥ <b id="lv">3</b></span><span>★ <b id="sv">0</b></span>';
     function next(){
@@ -529,7 +718,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 
   /* ---------- 5. MEMORY MATCH ---------- */
   function match(){
-    open("Memory Match");
+    if(!open("Memory Match"))return;
     var pairs=pick(6,function(e){return e.t.length<=22&&e.fr.length<=22;});
     var cards=[];pairs.forEach(function(e,i){cards.push({id:i,txt:e.t,face:"en"});cards.push({id:i,txt:e.fr,face:"fr"});});
     cards=shuffle(cards);
@@ -554,8 +743,217 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
   document.querySelectorAll(".game-card").forEach(function(card){
     card.addEventListener("click",function(){var g=GAMES[card.dataset.game];if(g)g();});
   });
+
+  /* ---- Train with : sélecteur de scope ---- */
+  var twChapter=document.getElementById("twChapter"), twPart=document.getElementById("twPart");
+  // remplir les selects
+  if(twChapter){
+    twChapter.innerHTML = chapters.slice().sort(function(a,b){return a.part-b.part||a.chapter-b.chapter;})
+      .map(function(c){return '<option value="'+esc(c.id)+'">Ch.'+c.chapter+' — '+esc(c.title)+'</option>';}).join("");
+  }
+  if(twPart){
+    var pn=(window.VOCAB&&window.VOCAB.parts)||{};
+    var seen={}; var opts=[];
+    chapters.forEach(function(c){ if(!seen[c.part]){seen[c.part]=1;opts.push(c.part);} });
+    opts.sort(function(a,b){return a-b;});
+    twPart.innerHTML = opts.map(function(p){return '<option value="'+p+'">Part '+p+(pn[p]?" — "+esc(pn[p]):"")+'</option>';}).join("");
+  }
+  function setScope(type){
+    scope.type=type;
+    document.querySelectorAll(".tw-opt").forEach(function(b){b.classList.toggle("on",b.dataset.scope===type);});
+    twChapter.hidden = type!=="chapter";
+    twPart.hidden = type!=="part";
+    if(type==="chapter") scope.chId=twChapter.value;
+    if(type==="part") scope.part=twPart.value;
+    rebuildPool();
+  }
+  document.querySelectorAll(".tw-opt").forEach(function(b){
+    b.addEventListener("click",function(){setScope(b.dataset.scope);});
+  });
+  if(twChapter) twChapter.addEventListener("change",function(){scope.chId=twChapter.value;rebuildPool();});
+  if(twPart) twPart.addEventListener("change",function(){scope.part=twPart.value;rebuildPool();});
+
+  // API publique pour "Practise this chapter" et refresh externe
+  window.VOCGAMES = {
+    focusChapter:function(chId){ scope.type="chapter";scope.chId=chId;
+      document.querySelectorAll(".tw-opt").forEach(function(b){b.classList.toggle("on",b.dataset.scope==="chapter");});
+      twChapter.hidden=false;twPart.hidden=true;if(twChapter)twChapter.value=chId;rebuildPool();
+    },
+    refresh:function(){rebuildPool();}
+  };
+  rebuildPool();
 })();
 
 </script>
+<script>
+/* ============ Today's word · 5-min revision · revision list ============ */
+(function(){
+  var L = window.VOCLIB; if(!L) return;
+  var ALL = L.ALL;
+  function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML;}
+  function rand(a){return a[Math.floor(Math.random()*a.length)];}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+  // synthèse vocale (accent respecté si dispo)
+  function speak(text){
+    try{
+      if(!window.speechSynthesis) return;
+      var u=new SpeechSynthesisUtterance(text); u.lang="en-GB"; u.rate=.95;
+      window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+
+  /* ---------- Today's word (déterministe par date, + Another word) ---------- */
+  var twEl=document.getElementById("todayWord");
+  function dayIndex(offset){
+    var now=new Date();
+    var seed=Math.floor(now/8.64e7)+(offset||0); // jour + offset
+    // hash simple -> index stable dans ALL
+    var x=Math.sin(seed*9973)*10000; x=x-Math.floor(x);
+    return Math.floor(x*ALL.length);
+  }
+  var twOffset=0;
+  function renderToday(){
+    if(!twEl||!ALL.length) return;
+    var e=ALL[dayIndex(twOffset)%ALL.length];
+    var starOn=L.isSaved(e);
+    twEl.innerHTML =
+      '<div class="tw-h">'+(twOffset===0?"Today\u2019s word":"Another word")+'</div>'+
+      '<div class="tw-term">'+esc(e.term)+(e.ipa?'<span class="tw-ipa">'+esc(e.ipa)+'</span>':'')+'</div>'+
+      '<div class="tw-fr">'+esc(e.fr)+'</div>'+
+      (e.def?'<div class="tw-def">'+esc(e.def)+'</div>':'')+
+      '<div class="tw-actions">'+
+        '<button data-act="speak">\ud83d\udd0a Listen</button>'+
+        '<button data-act="save">'+(starOn?"\u2605 Saved":"\u2606 Save for later")+'</button>'+
+        '<button data-act="another">\u21bb Another word</button>'+
+        '<a class="tw-ch" href="'+esc(e.chFile)+'">See chapter '+e.chNum+' \u2192</a>'+
+      '</div>';
+    twEl.querySelector('[data-act="speak"]').addEventListener("click",function(){speak(e.term);});
+    twEl.querySelector('[data-act="save"]').addEventListener("click",function(){
+      var now=L.toggleSave(e); this.textContent=now?"\u2605 Saved":"\u2606 Save for later"; refreshList();
+    });
+    twEl.querySelector('[data-act="another"]').addEventListener("click",function(){twOffset++;renderToday();});
+  }
+
+  /* ---------- Revision list card ---------- */
+  var listEl=document.getElementById("revListCard");
+  function refreshList(){
+    if(!listEl) return;
+    var n=L.saved().length;
+    if(!n){
+      listEl.innerHTML='<div class="rl-h">My revision list</div><div class="rl-count">No saved words yet</div>'+
+        '<p class="rl-empty">Tap the \u2606 star on any search result or on Today\u2019s word to build your personal list. It\u2019s stored only in this browser.</p>';
+      return;
+    }
+    listEl.innerHTML='<div class="rl-h">My revision list</div><div class="rl-count">'+n+(n>1?" words":" word")+'</div>'+
+      '<div class="rl-actions">'+
+        '<button class="rl-primary" data-rl="review">Review as flashcards</button>'+
+        '<button data-rl="play">Play with these words</button>'+
+        '<button data-rl="see">See list</button>'+
+        '<button data-rl="clear">Clear mastered</button>'+
+      '</div>';
+    listEl.querySelector('[data-rl="review"]').addEventListener("click",function(){startRevision(L.savedEntries().map(toRev));});
+    listEl.querySelector('[data-rl="play"]').addEventListener("click",function(){
+      if(window.VOCGAMES){ document.querySelector('.tw-opt[data-scope="saved"]').click(); document.getElementById("games").scrollIntoView({behavior:"smooth"}); }
+    });
+    listEl.querySelector('[data-rl="see"]').addEventListener("click",function(){showList();});
+    listEl.querySelector('[data-rl="clear"]').addEventListener("click",function(){
+      if(confirm("Remove all saved words from your revision list?")){ L.clearSaved(); refreshList(); if(window.VOCGAMES)window.VOCGAMES.refresh(); }
+    });
+  }
+  function toRev(e){return {term:e.term,ipa:e.ipa,fr:e.fr,def:e.def,ex:e.ex,chFile:e.chFile,chNum:e.chNum,chId:e.chId};}
+
+  // liste détaillée dans le modal de révision (réutilise revModal)
+  function showList(){
+    var entries=L.savedEntries();
+    openRev("My revision list");
+    revBody.innerHTML='<div style="max-width:520px;margin:0 auto">'+
+      entries.map(function(e){return '<div class="hit" style="margin-bottom:8px"><button class="save-star" data-k="'+esc(L.keyOf(e))+'" style="float:right;background:none;border:none;font-size:1.2rem;color:var(--gold);cursor:pointer">\u2605</button>'+
+        '<span class="t" style="font-weight:700;color:var(--navy)">'+esc(e.term)+'</span> — <span style="color:var(--terra);font-weight:700">'+esc(e.fr)+'</span>'+
+        (e.def?'<div style="color:var(--muted);font-size:.9rem;margin-top:4px">'+esc(e.def)+'</div>':'')+'</div>';}).join("")+
+      '</div>';
+    revBody.querySelectorAll(".save-star").forEach(function(b){
+      b.addEventListener("click",function(){ L.removeSaved(b.dataset.k); b.closest(".hit").remove(); refreshList(); if(window.VOCGAMES)window.VOCGAMES.refresh(); });
+    });
+  }
+
+  /* ---------- 5-minute revision (10 words, I know it / Review again) ---------- */
+  var revModal=document.getElementById("revModal"), revBody=document.getElementById("revBody"),
+      revStats=document.getElementById("revStats"), revTitle=document.getElementById("revTitle"),
+      revClose=document.getElementById("revClose");
+  function openRev(t){revTitle.textContent=t||"Revise for 5 minutes";revStats.innerHTML="";revModal.classList.add("on");document.body.style.overflow="hidden";}
+  function closeRev(){revModal.classList.remove("on");document.body.style.overflow="";revBody.innerHTML="";}
+  revClose.addEventListener("click",closeRev);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&revModal.classList.contains("on"))closeRev();});
+
+  function startRevision(deck){
+    if(!deck||!deck.length){ deck = shuffle(ALL).slice(0,10).map(toRev); }
+    deck = shuffle(deck).slice(0,10);
+    openRev("Revise for 5 minutes");
+    var i=0, know=0, again=[];
+    function show(){
+      if(i>=deck.length){
+        // s'il reste des "review again", refaire un tour avec eux
+        if(again.length){ deck=again.slice(); again=[]; i=0; }
+        else { return end(); }
+      }
+      var c=deck[i];
+      revStats.innerHTML='<span>'+(i+1)+' / '+deck.length+'</span>';
+      revBody.innerHTML='<div class="rev-card"><div class="rev-progress">Word '+(i+1)+' of '+deck.length+'</div>'+
+        '<div class="rev-term">'+esc(c.term)+'</div>'+
+        (c.ipa?'<div class="rev-ipa">'+esc(c.ipa)+'</div>':'')+
+        '<button class="rev-speak" data-act="speak">\ud83d\udd0a Listen</button>'+
+        '<div class="rev-reveal" id="revReveal"></div>'+
+        '<button class="rev-show-btn" id="revShow">Show meaning</button>'+
+        '<div class="rev-verdict" id="revVerdict" style="display:none">'+
+          '<button class="rev-again" data-v="again">Review again</button>'+
+          '<button class="rev-know" data-v="know">I know it</button>'+
+        '</div></div>';
+      revBody.querySelector('[data-act="speak"]').addEventListener("click",function(){speak(c.term);});
+      document.getElementById("revShow").addEventListener("click",function(){
+        document.getElementById("revReveal").innerHTML=
+          '<div class="rev-fr">'+esc(c.fr)+'</div>'+
+          (c.def?'<div class="rev-def">'+esc(c.def)+'</div>':'')+
+          (c.ex?'<div class="rev-ex">'+esc(c.ex)+'</div>':'');
+        this.style.display="none";
+        document.getElementById("revVerdict").style.display="flex";
+      });
+      revBody.querySelectorAll('[data-v]').forEach(function(b){
+        b.addEventListener("click",function(){
+          if(b.dataset.v==="know") know++; else { again.push(c); L.addMistake({term:c.term,chId:c.chId}); }
+          i++; show();
+        });
+      });
+    }
+    function end(){
+      revStats.innerHTML="";
+      revBody.innerHTML='<div class="rev-card rev-end"><h3 style="font-family:var(--display);color:var(--navy)">Session complete</h3>'+
+        '<div class="score">'+know+' / 10</div>'+
+        '<p style="color:var(--muted)">Words you reviewed again were added to \u201cMy mistakes\u201d for later practice.</p>'+
+        '<button class="rev-show-btn" id="revRestart">Revise ten more</button></div>';
+      document.getElementById("revRestart").addEventListener("click",function(){startRevision();});
+      if(window.VOCGAMES) window.VOCGAMES.refresh();
+    }
+    show();
+  }
+
+  /* ---------- Hero "What do you need today?" ---------- */
+  document.querySelectorAll(".need-card").forEach(function(card){
+    card.addEventListener("click",function(){
+      var need=card.dataset.need;
+      if(need==="find"){ if(window.VOCSEARCH) window.VOCSEARCH.focus(); }
+      else if(need==="revise"){ startRevision(); }
+      else if(need==="study"){ document.getElementById("games").scrollIntoView({behavior:"smooth",block:"start"}); }
+    });
+  });
+
+  // exposer refreshList pour le script de recherche
+  window.VOCREV = { refreshList:refreshList, startRevision:startRevision };
+
+  renderToday();
+  refreshList();
+})();
+</script>
+
 </body>
 </html>
