@@ -1,71 +1,192 @@
 {
   "version": 1,
-  "generatedAt": null,
-  "status": "waiting-for-first-update",
+  "generatedAt": "2026-07-13T22:18:07.457Z",
+  "status": "ok",
   "items": [
     {
-      "title": "Latest world headlines",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/world",
-      "date": null,
-      "country": "International",
-      "format": "News",
-      "topic": "International relations",
-      "kind": "News"
-    },
-    {
-      "title": "Latest five-minute bulletin",
-      "source": "NPR News Now",
-      "url": "https://www.npr.org/podcasts/500005/npr-news-now",
-      "date": null,
+      "title": "NASA Study Points to Smoother Air Taxi Rides",
+      "source": "NASA",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-study-points-to-smoother-air-taxi-rides/",
+      "date": "2026-07-13T21:46:11.000Z",
       "country": "United States",
-      "format": "Podcast",
-      "topic": "Politics",
-      "kind": "Podcast"
-    },
-    {
-      "title": "Latest UK statistical releases",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releasecalendar",
-      "date": null,
-      "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
+      "format": "News",
+      "topic": "Science & technology",
       "kind": "Official"
     },
     {
-      "title": "Latest bills in Parliament",
-      "source": "UK Parliament",
-      "url": "https://bills.parliament.uk/",
-      "date": null,
+      "title": "Steel Industry (Nationalisation) Bill",
+      "source": "UK Parliament Bills",
+      "url": "https://bills.parliament.uk/bills/4123",
+      "date": "2026-07-13T17:38:57.000Z",
       "country": "United Kingdom",
       "format": "Primary source",
       "topic": "Politics",
       "kind": "Official"
     },
     {
-      "title": "Latest United Nations news",
-      "source": "UN News",
-      "url": "https://news.un.org/en/",
-      "date": null,
-      "country": "International",
-      "format": "News",
-      "topic": "International relations",
+      "title": "Public Procurement (British Goods and Services) Bill",
+      "source": "UK Parliament Bills",
+      "url": "https://bills.parliament.uk/bills/4260",
+      "date": "2026-07-13T17:08:03.000Z",
+      "country": "United Kingdom",
+      "format": "Primary source",
+      "topic": "Politics",
       "kind": "Official"
     },
     {
-      "title": "Latest science and space news",
-      "source": "NASA",
-      "url": "https://www.nasa.gov/news/",
-      "date": null,
+      "title": "Untitled publication",
+      "source": "NPR News Now",
+      "url": "e9879bde-4433-4b00-bf28-0882002ed861",
+      "date": "2026-07-13T22:12:29.000Z",
+      "country": "United States",
+      "format": "Podcast",
+      "topic": "Politics",
+      "kind": "Podcast"
+    },
+    {
+      "title": "Untitled publication",
+      "source": "NPR News Now",
+      "url": "0b0dd83b-491d-4177-9553-8618bbf22365",
+      "date": "2026-07-13T21:12:41.000Z",
+      "country": "United States",
+      "format": "Podcast",
+      "topic": "Politics",
+      "kind": "Podcast"
+    },
+    {
+      "title": "Five whale entanglements in five days on Ningaloo Reef",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-14/five-whale-entanglements-sharks-swarm-ningaloo-beach-close/106902868",
+      "date": "2026-07-13T22:04:17.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Dutch football 'deeply saddened' as axed World Cup referee dies at 38",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-14/dutch-referee-rob-dieperink-dies-after-world-cup-removal/106911984",
+      "date": "2026-07-13T21:56:01.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Trump reinstates Iran port blockade and vows 20% charge on cargo passing through Hormuz",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c8d2vn38dy1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-13T21:46:06.000Z",
+      "country": "International",
+      "format": "News",
+      "topic": "International relations",
+      "kind": "News"
+    },
+    {
+      "title": "How our property obsession killed productivity",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-14/will-property-tax-changes-save-australia-productivity-crisis/106910926",
+      "date": "2026-07-13T21:44:51.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Live: Oil posts biggest gain since 2020 as Middle East war fears reignite",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-14/asx-markets-business-live-news-july-14-2026/106911966",
+      "date": "2026-07-13T21:39:13.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Ann Widdecombe suspect not known to Prevent as counter terrorism police take over investigation",
+      "source": "BBC UK",
+      "url": "https://www.bbc.co.uk/news/articles/c0mydjl12mwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-13T21:26:28.000Z",
+      "country": "United Kingdom",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Move-on order fears already pushing rough sleepers out of city - social service provider",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/community/712747/move-on-order-fears-already-pushing-rough-sleepers-out-of-city-social-service-provider",
+      "date": "2026-07-13T21:24:20.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Vehicle fire shuts northbound lanes on Transmission Gully on Kāpiti Coast",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/emergencies_local/714456/vehicle-fire-shuts-northbound-lanes-on-transmission-gully-on-kapiti-coast",
+      "date": "2026-07-13T21:11:40.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Burnham cements Labour leadership with backing of 349 MPs",
+      "source": "BBC UK",
+      "url": "https://www.bbc.co.uk/news/articles/c05y3rj09qqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-13T21:11:08.000Z",
+      "country": "United Kingdom",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Hungary parliament votes to remove president from office",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cp8r002gdevo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-13T20:39:14.000Z",
+      "country": "International",
+      "format": "News",
+      "topic": "International relations",
+      "kind": "News"
+    },
+    {
+      "title": "Woman says 'heroes' saved her from sinking SUV in Sask. slough",
+      "source": "CBC News",
+      "url": "https://www.cbc.ca/news/canada/saskatchewan/regina-man-rescues-senior-woman-dog-from-slough-craven-9.7268497?cmp=rss",
+      "date": "2026-07-13T20:23:29.000Z",
+      "country": "Canada",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Landmark NZ study finds link between pre-natal exposure to nitrate in drinking water and premature births",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/science-and-technology/713399/landmark-nz-study-finds-link-between-pre-natal-exposure-to-nitrate-in-drinking-water-and-premature-births",
+      "date": "2026-07-13T20:22:50.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Trump's HHS abandons threat to withhold Medicare and Medicaid funding over trans care",
+      "source": "NPR News",
+      "url": "https://www.npr.org/2026/07/13/nx-s1-5888586/transgender-gender-affirming-care-medicare-medicaid-hhs",
+      "date": "2026-07-13T20:22:49.000Z",
       "country": "United States",
       "format": "News",
-      "topic": "Science & technology",
-      "kind": "Official"
+      "topic": "Politics",
+      "kind": "News"
     }
   ],
   "sources": {
-    "successful": 0,
-    "failed": 0
+    "successful": 16,
+    "failed": 0,
+    "failures": []
   }
 }
