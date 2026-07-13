@@ -1,8 +1,241 @@
 {
-  "checkedAt": null,
+  "checkedAt": "2026-07-13T22:13:31.894Z",
   "total": 144,
-  "ok": null,
-  "warnings": null,
-  "failed": null,
-  "items": []
+  "ok": 115,
+  "warnings": 23,
+  "failed": 6,
+  "items": [
+    {
+      "id": "reuters",
+      "title": "Reuters",
+      "url": "https://www.reuters.com/world/",
+      "status": 401,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "financial-times",
+      "title": "Financial Times",
+      "url": "https://www.ft.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "economist",
+      "title": "The Economist",
+      "url": "https://www.economist.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "rte-explainer",
+      "title": "RTÉ The Explainer",
+      "url": "https://www.rte.ie/news/the-explainer/",
+      "status": 404,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "sbs-easy-english",
+      "title": "SBS News in Easy English",
+      "url": "https://www.sbs.com.au/news/podcast-episodes/news-in-easy-english",
+      "status": 404,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "hindu-in-focus",
+      "title": "The Hindu In Focus",
+      "url": "https://www.thehindu.com/podcast/in-focus/",
+      "status": 404,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "nasa-video",
+      "title": "NASA Video",
+      "url": "https://www.nasa.gov/nasatv/",
+      "status": 429,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "uk-parliament-data",
+      "title": "UK Parliament Data Dashboards",
+      "url": "https://commonslibrary.parliament.uk/type/data-dashboard/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "cdc-data",
+      "title": "CDC Data & Statistics",
+      "url": "https://www.cdc.gov/data-statistics/",
+      "status": 404,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "uk-parliament",
+      "title": "UK Parliament",
+      "url": "https://www.parliament.uk/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "hansard",
+      "title": "Hansard",
+      "url": "https://hansard.parliament.uk/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "commons-library",
+      "title": "House of Commons Library",
+      "url": "https://commonslibrary.parliament.uk/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "lords-library",
+      "title": "House of Lords Library",
+      "url": "https://lordslibrary.parliament.uk/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "post",
+      "title": "Parliamentary Office of Science and Technology",
+      "url": "https://post.parliament.uk/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "congress",
+      "title": "Congress.gov",
+      "url": "https://www.congress.gov/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "constitution-annotated",
+      "title": "Constitution Annotated",
+      "url": "https://constitution.congress.gov/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "australian-parliament",
+      "title": "Parliament of Australia",
+      "url": "https://www.aph.gov.au/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "sa-parliament",
+      "title": "Parliament of South Africa",
+      "url": "https://www.parliament.gov.za/",
+      "status": 500,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "reuters-fact-check",
+      "title": "Reuters Fact Check",
+      "url": "https://www.reuters.com/fact-check/",
+      "status": 401,
+      "ok": false,
+      "warning": false
+    },
+    {
+      "id": "britannica",
+      "title": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "aiatsis",
+      "title": "AIATSIS",
+      "url": "https://aiatsis.gov.au/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "te-ara",
+      "title": "Te Ara Encyclopedia of New Zealand",
+      "url": "https://teara.govt.nz/en",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "collins-dictionary",
+      "title": "Collins Dictionary",
+      "url": "https://www.collinsdictionary.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "merriam-webster",
+      "title": "Merriam-Webster",
+      "url": "https://www.merriam-webster.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "forvo",
+      "title": "Forvo",
+      "url": "https://forvo.com/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "ludwig",
+      "title": "Ludwig",
+      "url": "https://ludwig.guru/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "coca",
+      "title": "Corpus of Contemporary American English",
+      "url": "https://www.english-corpora.org/coca/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "bnc",
+      "title": "British National Corpus",
+      "url": "https://www.english-corpora.org/bnc/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    },
+    {
+      "id": "now-corpus",
+      "title": "News on the Web Corpus",
+      "url": "https://www.english-corpora.org/now/",
+      "status": 403,
+      "ok": false,
+      "warning": true
+    }
+  ]
 }
