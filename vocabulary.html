@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocabulaire — English Colles in Lyon</title>
+<title>Vocabulary — English Colles in Lyon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -83,6 +83,67 @@ main{padding:34px 0 60px}
 footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
 a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
 @media (max-width:640px){.nav{display:none}}
+
+/* ===== jeux de vocabulaire ===== */
+.games{margin-top:50px}
+.games-head h2{color:var(--navy);font-size:clamp(1.4rem,3vw,1.9rem);margin-top:6px}
+.games-head p{color:var(--muted);margin-top:8px;max-width:60ch}
+.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:24px}
+.game-card{display:flex;flex-direction:column;gap:8px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .25s;position:relative;overflow:hidden}
+.game-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.game-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px}
+.game-card.g1::before{background:var(--terra)}.game-card.g2::before{background:var(--sage)}.game-card.g3::before{background:var(--gold)}.game-card.g4::before{background:#6A4C93}.game-card.g5::before{background:#2C7A7B}
+.g-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:4px;color:#fff}
+.game-card.g1 .g-ic{background:var(--terra)}.game-card.g2 .g-ic{background:var(--sage)}.game-card.g3 .g-ic{background:var(--gold)}.game-card.g4 .g-ic{background:#6A4C93}.game-card.g5 .g-ic{background:#2C7A7B}
+.g-ic svg{width:24px;height:24px;stroke:#fff}
+.g-name{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--navy)}
+.g-desc{font-size:.85rem;color:var(--muted);line-height:1.5;flex:1}
+.g-go{font-weight:700;font-size:.88rem;color:var(--terra);margin-top:4px}
+.game-card:hover .g-go{text-decoration:underline}
+
+/* modale plein écran */
+.game-modal{position:fixed;inset:0;background:var(--bg);z-index:300;display:none;flex-direction:column}
+.game-modal.on{display:flex}
+.gm-inner{display:flex;flex-direction:column;height:100%;max-width:760px;margin:0 auto;width:100%}
+.gm-bar{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.gm-title{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.gm-stats{margin-left:auto;display:flex;gap:14px;font-weight:700;font-size:.9rem;color:var(--muted)}
+.gm-stats b{color:var(--navy)}
+.gm-close{width:44px;height:44px;border-radius:11px;border:1px solid var(--line);background:var(--card);font-size:1.1rem;cursor:pointer;color:var(--ink)}
+.gm-close:hover{border-color:var(--terra);color:var(--terra)}
+.gm-body{flex:1;overflow-y:auto;padding:26px 20px 40px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+
+/* éléments de jeu communs */
+.g-prompt{font-family:var(--display);font-size:1.5rem;color:var(--navy);text-align:center;line-height:1.35;margin:10px 0 6px;max-width:34ch}
+.g-sub{color:var(--muted);font-size:.9rem;text-align:center;margin-bottom:20px}
+.g-input{width:100%;max-width:420px;min-height:var(--tap);border:2px solid var(--line);border-radius:13px;padding:10px 16px;font-family:inherit;font-size:1.15rem;text-align:center;background:var(--card)}
+.g-input:focus{outline:none;border-color:var(--terra)}
+.g-opts{display:grid;gap:12px;width:100%;max-width:460px;margin-top:6px}
+.g-opt{min-height:var(--tap);border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-family:inherit;font-size:1.02rem;font-weight:600;color:var(--ink);cursor:pointer;padding:12px 16px;transition:transform .1s}
+.g-opt:hover{border-color:var(--terra);transform:translateY(-1px)}
+.g-opt.correct{background:var(--sage);border-color:var(--sage);color:#fff}
+.g-opt.wrong{background:#e9857040;border-color:var(--terra);color:var(--terra)}
+.g-duel{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:500px}
+.g-feedback{min-height:28px;font-weight:700;margin:14px 0;text-align:center}
+.g-feedback.ok{color:var(--sage)}.g-feedback.no{color:var(--terra)}
+.g-btn{min-height:var(--tap);border-radius:12px;border:1.5px solid var(--line);background:var(--bg2);font-family:inherit;font-weight:700;padding:10px 22px;cursor:pointer;color:var(--ink)}
+.g-btn.primary{background:var(--terra);border-color:var(--terra);color:#fff}.g-btn.primary:hover{background:#b25e41}
+.g-hintword{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.6rem;letter-spacing:.35em;color:var(--gold);margin:8px 0 18px}
+.g-frags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:520px;margin-top:8px}
+.g-frag{border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:10px 16px;font-family:inherit;font-size:1rem;font-weight:600;cursor:pointer;color:var(--ink)}
+.g-frag:hover{border-color:var(--sage)}
+.g-frag.used{opacity:.35;pointer-events:none}
+.g-build{min-height:52px;border:2px dashed var(--line);border-radius:13px;width:100%;max-width:520px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-bottom:14px}
+.g-build .bw{background:var(--sage);color:#fff;border-radius:8px;padding:5px 12px;font-weight:600}
+.g-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:520px}
+.g-mcard{aspect-ratio:3/4;border-radius:12px;border:none;cursor:pointer;background:var(--navy);color:#fff;font-weight:600;font-size:.82rem;display:grid;place-items:center;padding:6px;text-align:center;font-family:inherit;transition:transform .15s}
+.g-mcard.flipped{background:var(--card);color:var(--ink);border:1.5px solid var(--gold)}
+.g-mcard.matched{background:var(--sage);color:#fff;pointer-events:none;opacity:.7}
+.g-end{text-align:center}
+.g-end .score{font-family:var(--display);font-size:3rem;color:var(--sage);margin:8px 0}
+.g-end h3{color:var(--navy);font-size:1.5rem}
+@media (max-width:520px){.g-cards{grid-template-columns:repeat(3,1fr)}.g-duel{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -107,30 +168,81 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 <main>
   <div class="wrap">
     <div class="page-head">
-      <div class="eyebrow">Vocabulaire</div>
-      <h1>La bibliothèque de vocabulaire</h1>
-      <p>86 chapitres thématiques, près de 11&nbsp;000 mots et expressions pour les khôlles, les essais et les concours. Chaque chapitre existe en fiche de référence (à lire ou imprimer) et en flashcards (pour mémoriser).</p>
+      <div class="eyebrow">Vocabulary</div>
+      <h1>The vocabulary library</h1>
+      <p>86 thematic chapters, nearly 11,000 words and expressions for colles, essays and the concours. Each chapter comes as a reference sheet (to read or print) and as flashcards (to memorise) — and now as five vocabulary games.</p>
     </div>
 
     <div class="searchbar">
-      <input type="search" id="q" placeholder="Chercher un mot, une traduction ou un chapitre… (ex. : democracy, réchauffement, monarchy)" aria-label="Recherche dans le vocabulaire">
+      <input type="search" id="q" placeholder="Search a word, a translation or a chapter… (e.g. democracy, warming, monarchy)" aria-label="Search the vocabulary">
       <span class="search-count" id="qCount"></span>
     </div>
 
     <section class="term-results" id="termResults" aria-live="polite">
-      <h2>Mots trouvés</h2>
+      <h2>Words found</h2>
       <div id="hits"></div>
     </section>
 
     <div id="partsRoot"></div>
 
     <div class="no-result" id="noResult">
-      <p>Aucun résultat. Essaie un autre mot, en anglais ou en français.</p>
+      <p>No results. Try another word, in English or French.</p>
     </div>
   </div>
+
+    <section class="games" id="games">
+      <div class="games-head">
+        <div class="eyebrow">Play &amp; revise</div>
+        <h2>Five ways to train your vocabulary</h2>
+        <p>Quick games built from all 11,000 entries — mixed across every chapter. Pick one, no setup needed.</p>
+      </div>
+      <div class="games-grid">
+        <button class="game-card g1" data-game="sprint">
+          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span class="g-name">Definition Sprint</span>
+          <span class="g-desc">A definition appears — type the word before the clock runs out. Letters reveal as hints.</span>
+          <span class="g-go">Play →</span>
+        </button>
+        <button class="game-card g2" data-game="colloc">
+          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><path d="M11 7h6a2 2 0 0 1 2 2v4"/></svg></span>
+          <span class="g-name">Collocation Builder</span>
+          <span class="g-desc">Assemble the right expression from fragments. The words that go together — the colle edge.</span>
+          <span class="g-go">Play →</span>
+        </button>
+        <button class="game-card g3" data-game="odd">
+          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3"/></svg></span>
+          <span class="g-name">Odd One Out</span>
+          <span class="g-desc">Four words, one intruder. Spot the odd one and sharpen your sense of meaning.</span>
+          <span class="g-go">Play →</span>
+        </button>
+        <button class="game-card g4" data-game="duel">
+          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-4 1-4-4 1-4ZM10 21l-7-7 4-1 4 4-1 4Z"/><path d="M9 9l6 6"/></svg></span>
+          <span class="g-name">Word Duel</span>
+          <span class="g-desc">Two words, one clue. Draw the right one fast — build a combo, don't break the chain.</span>
+          <span class="g-go">Play →</span>
+        </button>
+        <button class="game-card g5" data-game="match">
+          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span>
+          <span class="g-name">Memory Match</span>
+          <span class="g-desc">Flip cards to pair each English word with its French translation, against the clock.</span>
+          <span class="g-go">Play →</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="game-modal" id="gameModal" role="dialog" aria-modal="true">
+      <div class="gm-inner">
+        <div class="gm-bar">
+          <span class="gm-title" id="gmTitle"></span>
+          <div class="gm-stats" id="gmStats"></div>
+          <button class="gm-close" id="gmClose" aria-label="Close">✕</button>
+        </div>
+        <div class="gm-body" id="gmBody"></div>
+      </div>
+    </div>
 </main>
 
-<footer>English Colles in Lyon — Bibliothèque de vocabulaire CPGE</footer>
+<footer>English Colles in Lyon — CPGE Vocabulary Library</footer>
 
 <script src="vocab-data.js"></script>
 <script>
@@ -161,7 +273,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
     var total = parts[p].reduce(function(n,c){return n + c.count;}, 0);
     sec.innerHTML =
       '<h2 class="part-title">Part ' + p + (partNames[p] ? " — " + esc(partNames[p]) : "") + '</h2>' +
-      '<p class="part-sub">' + parts[p].length + ' chapitres · ' + total + ' entrées</p>' +
+      '<p class="part-sub">' + parts[p].length + ' chapters · ' + total + ' entries</p>' +
       '<div class="chapters"></div>';
     var grid = sec.querySelector(".chapters");
     parts[p].forEach(function(c){
@@ -169,11 +281,11 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
       el.className = "chap";
       el.dataset.search = (c.title + " chapitre " + c.chapter).toLowerCase();
       el.innerHTML =
-        '<span class="num">Chapitre ' + c.chapter + '</span>' +
+        '<span class="num">Chapter ' + c.chapter + '</span>' +
         '<h3>' + esc(c.title) + '</h3>' +
-        '<span class="meta">' + c.count + ' mots et expressions</span>' +
+        '<span class="meta">' + c.count + ' words & expressions</span>' +
         '<div class="links">' +
-          '<a href="' + esc(c.file) + '">Lire la fiche</a>' +
+          '<a href="' + esc(c.file) + '">Read the sheet</a>' +
           '<a class="fc" href="flashcards.html?ch=' + esc(c.id) + '">Flashcards</a>' +
         '</div>';
       grid.appendChild(el);
@@ -181,7 +293,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
     root.appendChild(sec);
   });
 
-  // ---- index de recherche sur les entrées ----
+  // ---- index de recherche sur les entries ----
   var index = [];
   chapters.forEach(function(c){
     c.sections.forEach(function(s){
@@ -241,8 +353,8 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
       return '<div class="hit">' +
         '<span class="t">' + esc(h.term) + '</span> — <span class="f">' + esc(h.fr) + '</span>' +
         '<div class="d">' + esc(h.def) + '</div>' +
-        '<div class="c">Chapitre ' + h.chNum + ' · ' + esc(h.chTitle) +
-          ' · <a href="' + esc(h.chFile) + '">fiche</a>' +
+        '<div class="c">Chapter ' + h.chNum + ' · ' + esc(h.chTitle) +
+          ' · <a href="' + esc(h.chFile) + '">sheet</a>' +
           ' · <a href="flashcards.html?ch=' + esc(h.chId) + '">flashcards</a></div>' +
       '</div>';
     }).join("");
@@ -257,6 +369,191 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
     root.innerHTML = '<p style="color:var(--muted);margin-top:30px">Aucune donnée trouvée. Vérifie que <strong>vocab-data.js</strong> est bien présent à côté de cette page.</p>';
   }
 })();
+</script>
+<script>
+
+/* ============ VOCABULARY GAMES ============ */
+(function(){
+  var chapters = (window.VOCAB && window.VOCAB.chapters) || [];
+  if(!chapters.length) return;
+  var POOL = [];
+  chapters.forEach(function(c){c.sections.forEach(function(s){s.entries.forEach(function(e){
+    if(e.term&&e.fr&&e.def) POOL.push({t:e.term,fr:e.fr,d:e.def,ex:e.ex||"",sec:(s.title||"").replace(/^[A-Z]\. /,"")});
+  });});});
+
+  var modal=document.getElementById("gameModal"),body=document.getElementById("gmBody"),
+      title=document.getElementById("gmTitle"),stats=document.getElementById("gmStats"),
+      closeB=document.getElementById("gmClose");
+  var timerId=null;
+
+  function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML;}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function pick(n,filter){var p=filter?POOL.filter(filter):POOL;return shuffle(p).slice(0,n);}
+  function rand(arr){return arr[Math.floor(Math.random()*arr.length)];}
+  function open(t){title.textContent=t;stats.innerHTML="";modal.classList.add("on");document.body.style.overflow="hidden";}
+  function close(){modal.classList.remove("on");document.body.style.overflow="";if(timerId){clearInterval(timerId);timerId=null;}body.innerHTML="";}
+  closeB.onclick=close;
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("on"))close();});
+
+  function endScreen(score,total,msg,replay){
+    if(timerId){clearInterval(timerId);timerId=null;}
+    body.innerHTML='<div class="g-end"><h3>'+esc(msg||"Nice run!")+'</h3><div class="score">'+score+(total?" / "+total:"")+'</div><button class="g-btn primary" id="gReplay">Play again</button></div>';
+    document.getElementById("gReplay").onclick=replay;
+  }
+
+  /* ---------- 1. DEFINITION SPRINT ---------- */
+  function sprint(){
+    open("Definition Sprint");
+    var score=0,time=60,rounds=0,cur=null,revealed=0;
+    stats.innerHTML='<span>⏱ <b id="tv">60</b>s</span><span>★ <b id="sv">0</b></span>';
+    function tick(){time--;document.getElementById("tv").textContent=time;if(time<=0)endScreen(score,rounds,"Time! You nailed "+score+" words.",sprint);}
+    timerId=setInterval(tick,1000);
+    function next(){
+      cur=rand(POOL.filter(function(e){return e.t.length<=18;}));revealed=0;
+      var hint=cur.t.replace(/[a-zA-Z]/g,"·");
+      body.innerHTML='<div class="g-sub">Type the English word that fits this definition</div>'+
+        '<div class="g-prompt">'+esc(cur.d)+'</div>'+
+        '<div class="g-hintword" id="hint">'+esc(hint)+'</div>'+
+        '<input class="g-input" id="ans" autocomplete="off" placeholder="your answer" />'+
+        '<div class="g-feedback" id="fb"></div>'+
+        '<button class="g-btn" id="hintBtn">Reveal a letter</button>';
+      var inp=document.getElementById("ans");inp.focus();
+      inp.addEventListener("keydown",function(e){if(e.key==="Enter")check();});
+      document.getElementById("hintBtn").onclick=function(){
+        revealed++;var t=cur.t,h="";for(var i=0;i<t.length;i++){h+=(/[a-zA-Z]/.test(t[i])&&i>=revealed)?"·":t[i];}
+        document.getElementById("hint").textContent=h;
+      };
+      function check(){
+        var v=inp.value.trim().toLowerCase();
+        if(v===cur.t.toLowerCase()){score++;document.getElementById("sv").textContent=score;rounds++;
+          var fb=document.getElementById("fb");fb.className="g-feedback ok";fb.textContent="✓ "+cur.t;setTimeout(next,550);}
+        else{var fb=document.getElementById("fb");fb.className="g-feedback no";fb.textContent="Try again — or reveal a letter";}
+      }
+    }
+    next();
+  }
+
+  /* ---------- 2. COLLOCATION BUILDER ---------- */
+  function colloc(){
+    open("Collocation Builder");
+    var score=0,rounds=0;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / <b id="rv">0</b></span>';
+    function next(){
+      var e=rand(POOL.filter(function(x){return x.t.split(" ").length>=2&&x.t.split(" ").length<=5;}));
+      var words=e.t.split(" ");var frags=shuffle(words);
+      body.innerHTML='<div class="g-sub">French: <b>'+esc(e.fr)+'</b> · rebuild the English expression</div>'+
+        '<div class="g-build" id="build"></div>'+
+        '<div class="g-frags" id="frags"></div>'+
+        '<div class="g-feedback" id="fb"></div>'+
+        '<button class="g-btn" id="clr">Clear</button>';
+      var built=[];
+      function draw(){
+        document.getElementById("build").innerHTML=built.map(function(w){return '<span class="bw">'+esc(w)+'</span>';}).join("")||'<span style="color:var(--muted)">tap the fragments in order…</span>';
+        var fc=document.getElementById("frags");fc.innerHTML="";
+        frags.forEach(function(w,i){var b=document.createElement("button");b.className="g-frag"+(used[i]?" used":"");b.textContent=w;
+          b.onclick=function(){used[i]=true;built.push(w);draw();chk();};fc.appendChild(b);});
+      }
+      var used=frags.map(function(){return false;});
+      function chk(){
+        if(built.length===words.length){rounds++;document.getElementById("rv").textContent=rounds;
+          var fb=document.getElementById("fb");
+          if(built.join(" ")===e.t){score++;document.getElementById("sv").textContent=score;fb.className="g-feedback ok";fb.textContent="✓ "+e.t;}
+          else{fb.className="g-feedback no";fb.textContent="✗ answer: "+e.t;}
+          setTimeout(next,900);}
+      }
+      document.getElementById("clr").onclick=function(){built=[];used=frags.map(function(){return false;});draw();};
+      draw();
+    }
+    next();
+  }
+
+  /* ---------- 3. ODD ONE OUT ---------- */
+  function odd(){
+    open("Odd One Out");
+    var score=0,rounds=0;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / <b id="rv">0</b></span>';
+    function next(){
+      var sections={};POOL.forEach(function(e){(sections[e.sec]=sections[e.sec]||[]).push(e);});
+      var bigs=Object.keys(sections).filter(function(k){return sections[k].length>=3;});
+      var secA=rand(bigs);var three=shuffle(sections[secA]).slice(0,3);
+      var intruder=rand(POOL.filter(function(e){return e.sec!==secA;}));
+      var opts=shuffle(three.concat([intruder]));
+      body.innerHTML='<div class="g-sub">Three words share a theme. Tap the <b>intruder</b>.</div>'+
+        '<div class="g-opts" id="opts"></div>'+
+        '<div class="g-feedback" id="fb"></div>';
+      var oc=document.getElementById("opts");
+      opts.forEach(function(e){var b=document.createElement("button");b.className="g-opt";b.textContent=e.t;
+        b.onclick=function(){
+          rounds++;document.getElementById("rv").textContent=rounds;
+          [].forEach.call(oc.children,function(c){c.disabled=true;});
+          if(e===intruder){b.classList.add("correct");score++;document.getElementById("sv").textContent=score;
+            document.getElementById("fb").className="g-feedback ok";document.getElementById("fb").textContent="✓ Others: "+secA;}
+          else{b.classList.add("wrong");
+            [].forEach.call(oc.children,function(c){if(c.textContent===intruder.t)c.classList.add("correct");});
+            document.getElementById("fb").className="g-feedback no";document.getElementById("fb").textContent="✗ intruder was "+intruder.t;}
+          setTimeout(next,1100);};
+        oc.appendChild(b);});
+    }
+    next();
+  }
+
+  /* ---------- 4. WORD DUEL ---------- */
+  function duel(){
+    open("Word Duel");
+    var score=0,combo=0,best=0,lives=3;
+    stats.innerHTML='<span>🔥 <b id="cv">0</b></span><span>♥ <b id="lv">3</b></span><span>★ <b id="sv">0</b></span>';
+    function next(){
+      var correct=rand(POOL);var other=rand(POOL.filter(function(e){return e.t!==correct.t;}));
+      var pair=shuffle([correct,other]);
+      var useEx=correct.ex&&Math.random()<0.5;
+      var clue=useEx?correct.ex.replace(new RegExp(correct.t,"i"),"____"):correct.d;
+      body.innerHTML='<div class="g-sub">Which word fits?</div><div class="g-prompt">'+esc(clue)+'</div>'+
+        '<div class="g-duel" id="duel"></div><div class="g-feedback" id="fb"></div>';
+      var dc=document.getElementById("duel");
+      pair.forEach(function(e){var b=document.createElement("button");b.className="g-opt";b.textContent=e.t;
+        b.onclick=function(){
+          [].forEach.call(dc.children,function(c){c.disabled=true;});
+          if(e===correct){b.classList.add("correct");combo++;score+=10*Math.max(1,combo);
+            best=Math.max(best,combo);document.getElementById("cv").textContent=combo;document.getElementById("sv").textContent=score;
+            setTimeout(next,450);}
+          else{b.classList.add("wrong");[].forEach.call(dc.children,function(c){if(c.textContent===correct.t)c.classList.add("correct");});
+            combo=0;lives--;document.getElementById("cv").textContent=0;document.getElementById("lv").textContent=lives;
+            if(lives<=0)setTimeout(function(){endScreen(score,0,"Out of lives! Best combo: "+best,duel);},900);
+            else setTimeout(next,900);}
+        };dc.appendChild(b);});
+    }
+    next();
+  }
+
+  /* ---------- 5. MEMORY MATCH ---------- */
+  function match(){
+    open("Memory Match");
+    var pairs=pick(6,function(e){return e.t.length<=22&&e.fr.length<=22;});
+    var cards=[];pairs.forEach(function(e,i){cards.push({id:i,txt:e.t,face:"en"});cards.push({id:i,txt:e.fr,face:"fr"});});
+    cards=shuffle(cards);
+    var flipped=[],matched=0,moves=0,time=0;
+    stats.innerHTML='<span>⏱ <b id="tv">0</b>s</span><span>moves <b id="mv">0</b></span>';
+    timerId=setInterval(function(){time++;document.getElementById("tv").textContent=time;},1000);
+    body.innerHTML='<div class="g-sub">Pair each English word with its French translation</div><div class="g-cards" id="cards"></div>';
+    var cc=document.getElementById("cards");
+    cards.forEach(function(c,idx){var b=document.createElement("button");b.className="g-mcard";b.dataset.idx=idx;b.textContent="?";
+      b.onclick=function(){
+        if(b.classList.contains("flipped")||b.classList.contains("matched")||flipped.length>=2)return;
+        b.classList.add("flipped");b.textContent=c.txt;flipped.push({b:b,c:c});
+        if(flipped.length===2){moves++;document.getElementById("mv").textContent=moves;
+          var a=flipped[0],d=flipped[1];
+          if(a.c.id===d.c.id&&a.b!==d.b){a.b.classList.add("matched");d.b.classList.add("matched");matched++;flipped=[];
+            if(matched===pairs.length){clearInterval(timerId);timerId=null;setTimeout(function(){endScreen(moves,0,"Cleared in "+time+"s and "+moves+" moves!",match);},400);}}
+          else{setTimeout(function(){a.b.classList.remove("flipped");a.b.textContent="?";d.b.classList.remove("flipped");d.b.textContent="?";flipped=[];},750);}}
+      };cc.appendChild(b);});
+  }
+
+  var GAMES={sprint:sprint,colloc:colloc,odd:odd,duel:duel,match:match};
+  document.querySelectorAll(".game-card").forEach(function(card){
+    card.addEventListener("click",function(){var g=GAMES[card.dataset.game];if(g)g();});
+  });
+})();
+
 </script>
 </body>
 </html>
