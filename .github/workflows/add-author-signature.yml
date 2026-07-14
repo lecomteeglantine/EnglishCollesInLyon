@@ -1,0 +1,166 @@
+name: Add Eglantine Lecomte credit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add-credit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Add author credit to every HTML page
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          STYLE = """<style id="ecl-author-signature-style">
+          .ecl-author-byline{
+            display:block!important;margin-top:2px!important;
+            font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+            font-size:.66rem!important;line-height:1.2!important;font-weight:700!important;
+            letter-spacing:.055em!important;color:#C46A4A!important;text-transform:none!important;
+          }
+          .ecl-site-signature{
+            display:flex!important;flex-direction:column!important;align-items:center!important;
+            justify-content:center!important;gap:1px!important;width:100%!important;min-height:54px!important;
+            padding:7px 16px!important;margin:0!important;border:0!important;border-radius:0!important;
+            background:#243B53!important;color:#fff!important;text-decoration:none!important;text-align:center!important;
+            box-shadow:none!important;font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+            position:relative!important;z-index:2!important;
+          }
+          .ecl-site-signature:hover{background:#2f5573!important;color:#fff!important}
+          .ecl-site-signature .ecl-site-title{
+            font-family:Georgia,"Times New Roman",serif!important;font-size:1.03rem!important;
+            line-height:1.15!important;font-weight:700!important;letter-spacing:0!important;
+          }
+          .ecl-site-signature .ecl-site-author{
+            font-size:.7rem!important;line-height:1.2!important;font-weight:700!important;
+            letter-spacing:.055em!important;color:#F1C66A!important;
+          }
+          .ecl-author-footer{
+            display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;
+            gap:.35em!important;width:100%!important;max-width:1120px!important;margin:18px auto 0!important;
+            padding:14px 16px 0!important;border-top:1px dashed rgba(122,155,118,.55)!important;
+            color:#5d6b66!important;background:transparent!important;text-align:center!important;
+            font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+            font-size:.82rem!important;line-height:1.45!important;font-weight:400!important;
+          }
+          .ecl-author-footer strong{color:#243B53!important;font-weight:700!important}
+          footer.ecl-generated-footer{
+            display:block!important;width:100%!important;margin:0!important;padding:22px 16px!important;
+            border-top:1px solid #E6D8C8!important;background:#FFF7ED!important;
+          }
+          footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-top:0!important;border-top:0!important}
+          @media(max-width:560px){
+            .ecl-site-signature{min-height:49px!important;padding:6px 12px!important}
+            .ecl-site-signature .ecl-site-title{font-size:.96rem!important}
+            .ecl-author-footer{font-size:.76rem!important}
+          }
+          </style>"""
+
+          TOP = """<a class="ecl-site-signature" href="index.html" aria-label="English Colles in Lyon — accueil">
+            <span class="ecl-site-title">English Colles in Lyon</span>
+            <span class="ecl-site-author">by Eglantine Lecomte</span>
+          </a>"""
+
+          BOTTOM = """<div class="ecl-author-footer">
+            <span>Designed and created by</span>
+            <strong>Eglantine Lecomte</strong>
+            <span>· English Colles in Lyon</span>
+          </div>"""
+
+          def transform(text):
+              changed = False
+
+              if not re.search(r'<meta\s+name=["\']author["\']', text, re.I):
+                  text, n = re.subn(
+                      r'</head>',
+                      '  <meta name="author" content="Eglantine Lecomte">\n' + STYLE + '\n</head>',
+                      text, count=1, flags=re.I
+                  )
+                  changed |= bool(n)
+              elif 'id="ecl-author-signature-style"' not in text:
+                  text, n = re.subn(r'</head>', STYLE + '\n</head>', text, count=1, flags=re.I)
+                  changed |= bool(n)
+
+              if "ecl-author-byline" not in text and "ecl-site-signature" not in text:
+                  main_brand = r'(<span\s+class=["\']name["\']\s*>\s*English Colles in Lyon\s*</span>)'
+                  if re.search(main_brand, text, re.I):
+                      text, n = re.subn(
+                          main_brand,
+                          r'\1\n      <span class="ecl-author-byline">by Eglantine Lecomte</span>',
+                          text, count=1, flags=re.I
+                      )
+                      changed |= bool(n)
+                  else:
+                      text, n = re.subn(r'(<body\b[^>]*>)', r'\1\n' + TOP, text, count=1, flags=re.I)
+                      changed |= bool(n)
+
+              existing = False
+              for pattern in (
+                  r'©\s*Eglantine Lecomte\s*[—–-]\s*English Colles in Lyon\.',
+                  r'&copy;\s*Eglantine Lecomte\s*[—–-]\s*English Colles in Lyon\.',
+              ):
+                  text, n = re.subn(
+                      pattern,
+                      'Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon.',
+                      text,
+                      flags=re.I
+                  )
+                  if n:
+                      existing = True
+                      changed = True
+
+              if re.search(r'Designed and created by\s*(?:<strong>)?Eglantine Lecomte', text, re.I):
+                  existing = True
+
+              if "ecl-author-footer" not in text and not existing:
+                  closings = list(re.finditer(r'</footer>', text, re.I))
+                  if closings:
+                      m = closings[-1]
+                      text = text[:m.start()] + BOTTOM + "\n" + text[m.start():]
+                      changed = True
+                  else:
+                      text, n = re.subn(
+                          r'</body>',
+                          '<footer class="ecl-generated-footer">\n' + BOTTOM + '\n</footer>\n</body>',
+                          text, count=1, flags=re.I
+                      )
+                      changed |= bool(n)
+
+              return text, changed
+
+          modified = 0
+          for path in Path(".").rglob("*.html"):
+              original = path.read_text(encoding="utf-8")
+              updated, changed = transform(original)
+              if changed:
+                  path.write_text(updated, encoding="utf-8")
+                  modified += 1
+
+          print(f"{modified} HTML page(s) updated.")
+          PY
+
+      - name: Commit the changes
+        run: |
+          git config user.name "site-author-credit"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "The author credit is already present on every page."
+          else
+            git commit -m "Add Eglantine Lecomte author credit across the site"
+            git push
+          fi
