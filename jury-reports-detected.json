@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-07-14T00:00:00Z",
+  "documents": [
+    {
+      "sourceId": "bce",
+      "sourceName": "BCE / ELVi",
+      "year": 2025,
+      "label": "ELVi LVA Anglais — rapport 2025",
+      "type": "report",
+      "url": "https://www.concours-bce.com/sites/default/files/2025-10/75%20-%20ELVi%20LVA%20Anglais%202025.pdf",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "ecricome",
+      "sourceName": "ECRICOME",
+      "year": 2025,
+      "label": "Annales Anglais LVA 2025",
+      "type": "report",
+      "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-All_Angl_Esp_LVA.pdf",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "centrale",
+      "sourceName": "CentraleSupélec",
+      "year": 2025,
+      "label": "Rapports du jury 2025",
+      "type": "report",
+      "url": "https://www.concours-centrale-supelec.fr/sujets-rapports",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "mines",
+      "sourceName": "Mines-Ponts",
+      "year": 2025,
+      "label": "Rapport oral 2025",
+      "type": "report",
+      "url": "https://concoursminesponts.fr/wp-content/uploads/2025/10/Rapport-Oral-2025-VF.pdf",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "ccinp",
+      "sourceName": "CCINP",
+      "year": 2025,
+      "label": "Rapport oral de langue vivante 2025",
+      "type": "report",
+      "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LV_ORAL_2025_19.09.pdf?download=true",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "pt",
+      "sourceName": "Banque PT",
+      "year": 2025,
+      "label": "Rapport oral anglais LV1 2025",
+      "type": "report",
+      "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_ang_oral_2025.pdf",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    },
+    {
+      "sourceId": "xens",
+      "sourceName": "École polytechnique / ENS",
+      "year": 2025,
+      "label": "Sujets et rapports 2025",
+      "type": "official-page",
+      "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports",
+      "firstSeen": "2026-07-14",
+      "isNew": false
+    }
+  ]
+}

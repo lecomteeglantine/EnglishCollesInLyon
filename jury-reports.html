@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jury Reports Decoder — English Colles in Lyon</title>
+<meta name="description" content="Rapports de jury d’anglais en CPGE : attentes, erreurs récurrentes, recommandations et liens officiels, classés par concours et filière.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;
+  --terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--teal:#3f7d7a;--rose:#b06a78;
+  --card:#fff;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);
+  --r:16px;--tap:48px;--maxw:1180px;--fs:18px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+}
+*{box-sizing:border-box}html{font-size:var(--fs);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+body.dys{--font:Verdana,Tahoma,"Atkinson Hyperlegible",sans-serif;letter-spacing:.03em;word-spacing:.1em;line-height:1.82}
+body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#a9967b}
+body.noanim *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.14;margin:0;color:var(--navy)}
+p{margin:0}a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+button{cursor:pointer}.wrap{max-width:var(--maxw);margin:auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:999}.skip:focus{left:12px}
+.eyebrow{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+header.top{position:sticky;top:0;z-index:80;background:rgba(250,243,231,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:44px;justify-content:center}
+.brand .name{font-family:var(--display);font-size:1.16rem;font-weight:600;color:var(--navy)}
+.brand .sub{font-size:.68rem;color:var(--muted)}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.nav a{padding:8px 10px;border-radius:9px;font-size:.84rem;font-weight:700}
+.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
+.tools{display:flex;gap:7px}.tool,.burger{min-height:40px;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 11px;font-weight:700;color:var(--ink)}
+.burger{display:none;font-size:1.15rem}
+.scrim{position:fixed;inset:0;background:rgba(34,49,47,.44);opacity:0;pointer-events:none;z-index:100}.scrim.open{opacity:1;pointer-events:auto}
+.panel{position:fixed;right:0;top:0;height:100%;width:min(360px,92vw);background:var(--bg2);z-index:101;transform:translateX(100%);transition:.25s;box-shadow:var(--shadow-lg);padding:20px}.panel.open{transform:none}
+.panel-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px}.panel h2{font-size:1.2rem}
+.close{border:0;background:none;font-size:1.5rem}.setting{margin-top:18px}.setting b{display:block;margin-bottom:8px}.seg{display:flex;gap:7px}
+.seg button,.toggle{min-height:42px;border:1px solid var(--line);border-radius:9px;background:var(--card);padding:0 12px;font-weight:700}
+.seg button{flex:1}.seg button.on{background:var(--navy);color:#fff}.toggle{width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:7px}.toggle.on{background:#eef3f1;border-color:var(--sage)}
+.hero{padding:52px 0 34px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+.hero h1{font-size:clamp(2.2rem,6vw,3.65rem);max-width:12ch}.hero .lead{font-size:1.12rem;margin-top:15px;max-width:57ch}
+.hero .more{margin-top:10px;color:var(--muted);max-width:62ch}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tap);padding:0 17px;border-radius:12px;border:2px solid transparent;font-weight:700}
+.btn-primary{background:var(--terra);color:#fff}.btn-secondary{background:var(--navy);color:#fff}.btn-ghost{background:var(--card);border-color:var(--line)}
+.status-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow-lg)}
+.status-top{display:flex;align-items:center;gap:11px}.pulse{width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 7px rgba(217,164,65,.17)}
+.status-card.ok .pulse{background:var(--sage);box-shadow:0 0 0 7px rgba(122,155,118,.17)}
+.status-card.warn .pulse{background:var(--terra);box-shadow:0 0 0 7px rgba(196,106,74,.17)}
+.status-card h2{font-size:1.18rem}.status-msg{margin-top:12px;color:var(--muted);font-size:.9rem}.status-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;text-align:center;padding:11px 6px}.stat b{display:block;font-size:1.3rem;color:var(--navy)}.stat span{font-size:.68rem;color:var(--muted)}
+section{padding:50px 0}.white{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:70ch}.sec-head h2{font-size:clamp(1.55rem,3.8vw,2.25rem)}.sec-head p{color:var(--muted);margin-top:9px}
+.filters{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:23px;box-shadow:var(--shadow)}
+.filter-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:10px}.field label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin-bottom:5px}
+.field input,.field select{width:100%;min-height:46px;border:1px solid var(--line);border-radius:11px;padding:8px 12px;background:var(--bg2);color:var(--ink)}
+.filter-foot{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;color:var(--muted);font-size:.83rem}.reset{border:0;background:none;color:var(--terra);font-weight:700}
+.consensus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:23px}.consensus{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:21px;box-shadow:var(--shadow)}
+.consensus.do{border-top:5px solid var(--sage)}.consensus.avoid{border-top:5px solid var(--terra)}.consensus.rec{border-top:5px solid var(--gold)}
+.consensus h3{font-size:1.17rem}.consensus ul{padding-left:20px;margin:13px 0 0}.consensus li{margin:7px 0;font-size:.9rem}
+.competition-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:23px}
+.competition{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:21px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.18s}
+.competition:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}.competition::before{content:"";height:6px;position:absolute;inset:0 0 auto;background:var(--terra)}
+.competition[data-color="navy"]::before{background:var(--navy)}.competition[data-color="sage"]::before{background:var(--sage)}.competition[data-color="gold"]::before{background:var(--gold)}.competition[data-color="teal"]::before{background:var(--teal)}.competition[data-color="rose"]::before{background:var(--rose)}
+.comp-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-top:3px}.comp-top h3{font-size:1.25rem}.year{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.fullname{color:var(--muted);font-size:.83rem;margin-top:3px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}.tag{border-radius:999px;padding:4px 9px;font-size:.7rem;font-weight:700;background:#eef3f1;color:#486745}
+.tag.assess{background:#eef1f6;color:var(--navy)}.snapshot{margin-top:14px;font-size:.88rem;color:var(--ink);flex:1}.snapshot strong{color:var(--navy)}
+.comp-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.open-decoder,.official{min-height:42px;border-radius:10px;padding:0 13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.open-decoder{border:0;background:var(--terra);color:#fff}.official{border:1px solid var(--line);background:var(--bg2)}
+.empty{display:none;text-align:center;padding:30px;color:var(--muted)}.empty.on{display:block}
+.latest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:13px;margin-top:22px}.report-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px}
+.report-meta{display:flex;gap:7px;flex-wrap:wrap}.badge{font-size:.68rem;font-weight:700;border-radius:999px;padding:4px 8px;background:var(--bg2);border:1px solid var(--line)}.badge.new{background:#fbeee7;color:var(--terra);border-color:#ecd6c8}
+.report-card h3{font-size:1.02rem;margin-top:10px}.report-card p{font-size:.8rem;color:var(--muted);margin-top:4px}.report-card a{display:inline-flex;margin-top:11px;color:var(--terra);font-weight:700;font-size:.85rem}
+.heat-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow)}
+.heat{border-collapse:collapse;width:100%;min-width:850px}.heat th,.heat td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:center;font-size:.8rem}.heat th:first-child,.heat td:first-child{text-align:left;position:sticky;left:0;background:var(--card);min-width:230px}
+.dot{display:inline-block;width:15px;height:15px;border-radius:50%;background:#e8e1d7}.dot.l1{background:#efd4c9}.dot.l2{background:#dca086}.dot.l3{background:var(--terra)}
+.action-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:22px}.action-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:var(--shadow)}
+.action-card .jury-says{font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;color:var(--terra);font-weight:700}.action-card h3{font-size:1rem;margin-top:7px}.action-card a{display:inline-flex;margin-top:12px;font-weight:700;color:var(--sage)}
+.note{margin-top:20px;border-left:5px solid var(--gold);background:#fdf6e7;border-radius:13px;padding:15px 17px;font-size:.88rem}
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:32px 0}.foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}.foot-brand{font-family:var(--display);color:var(--navy);font-size:1.1rem}.foot-nav{display:flex;flex-wrap:wrap;gap:5px}.foot-nav a{padding:6px 9px;border-radius:7px;font-size:.82rem;font-weight:700}.foot-nav a:hover{background:#fff;color:var(--terra)}
+.principle{width:100%;text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:10px 14px;font-weight:700;margin-top:7px}.copy{width:100%;border-top:1px dashed var(--line);padding-top:13px;color:var(--muted);font-size:.8rem}
+.modal{position:fixed;inset:0;background:rgba(34,49,47,.68);z-index:200;display:none;padding:20px;overflow:auto}.modal.on{display:block}.modal-card{max-width:920px;margin:20px auto;background:var(--bg);border-radius:22px;box-shadow:var(--shadow-lg);overflow:hidden}
+.modal-head{display:flex;align-items:flex-start;gap:12px;padding:22px;border-bottom:1px solid var(--line);background:var(--card)}.modal-head .mh{flex:1}.modal-head h2{font-size:1.65rem}.modal-head p{color:var(--muted);font-size:.85rem;margin-top:4px}.modal-close{width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--bg2);font-size:1.2rem}
+.modal-body{padding:22px}.format-list{background:#eef1f6;border-radius:14px;padding:16px 18px}.format-list ul{margin:8px 0 0;padding-left:20px}
+.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:17px}.decoder-col{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px}.decoder-col h3{font-size:1.05rem}.decoder-col ul{padding-left:19px;margin:10px 0 0}.decoder-col li{font-size:.84rem;margin:6px 0}
+.report-list{margin-top:18px}.report-list h3{font-size:1.12rem}.report-row{display:flex;gap:10px;align-items:center;border:1px solid var(--line);background:var(--card);border-radius:11px;padding:11px 13px;margin-top:8px}.report-row .rr{flex:1}.report-row b{display:block;font-size:.87rem}.report-row span{font-size:.72rem;color:var(--muted)}.report-row a{color:var(--terra);font-weight:700;font-size:.8rem}
+@media(max-width:900px){.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);padding:10px 16px;flex-direction:column;border-bottom:1px solid var(--line)}.nav.open{display:flex}.nav a{width:100%}.burger{display:block}.hero-grid{grid-template-columns:1fr}.filter-grid{grid-template-columns:1fr 1fr}.consensus-grid,.triple{grid-template-columns:1fr}}
+@media(max-width:570px){.filter-grid{grid-template-columns:1fr}.status-stats{grid-template-columns:1fr}.competition-grid{grid-template-columns:1fr}.hero{padding-top:34px}.tools .tool span{display:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Aller au contenu</a>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html"><span class="name">English Colles in Lyon</span><span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html">Vocabulary</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Resources</a><a href="jury-reports.html" class="active">Jury Reports</a>
+    </nav>
+    <div class="tools">
+      <button class="tool" id="openA11y" aria-haspopup="dialog">⚙ <span>Accessibilité</span></button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-label="Réglages d’accessibilité">
+  <div class="panel-head"><h2>Accessibilité</h2><button class="close" id="closePanel">×</button></div>
+  <div class="setting"><b>Taille du texte</b><div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div></div>
+  <div class="setting"><b>Affichage</b><button class="toggle" data-opt="contrast"><span>Contraste élevé</span><span>Off</span></button><button class="toggle" data-opt="dys"><span>Lecture confortable</span><span>Off</span></button><button class="toggle" data-opt="noanim"><span>Réduire les animations</span><span>Off</span></button></div>
+</aside>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Official reports · decoded for students</div>
+      <h1>Jury Reports Decoder</h1>
+      <p class="lead">Les attentes des concours, débarrassées du jargon et classées par filière : ce qu’il faut faire, ce qu’il faut éviter et comment transformer chaque recommandation en travail concret.</p>
+      <p class="more">Cette page couvre les CPGE économiques, commerciales et scientifiques. Les CPGE littéraires et Agro‑Véto BCPST ne font pas partie du périmètre.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#competitions">Choisir mon concours</a>
+        <a class="btn btn-ghost" href="#consensus">Voir les conseils communs</a>
+        <button class="btn btn-secondary" id="surprise">Comparer au hasard</button>
+      </div>
+    </div>
+    <aside class="status-card" id="statusCard">
+      <div class="status-top"><span class="pulse"></span><div><div class="eyebrow">Automatic monitoring</div><h2 id="statusTitle">Checking status…</h2></div></div>
+      <p class="status-msg" id="statusMsg">Chargement du suivi des pages officielles.</p>
+      <div class="status-stats">
+        <div class="stat"><b id="stSources">—</b><span>sources checked</span></div>
+        <div class="stat"><b id="stDocs">—</b><span>documents found</span></div>
+        <div class="stat"><b id="stNew">—</b><span>new reports</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="white" id="consensus">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Jury consensus</div><h2>Ce que les jurys répètent, concours après concours</h2><p>Les formats changent, mais les mêmes forces et les mêmes faiblesses reviennent constamment.</p></div>
+    <div class="consensus-grid" id="consensusGrid"></div>
+  </div>
+</section>
+
+<section id="competitions">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Find your competition</div><h2>Quel concours prépares-tu ?</h2><p>Filtre par filière, famille de concours ou type d’épreuve. Clique ensuite sur une carte pour ouvrir le décodeur complet.</p></div>
+    <div class="filters">
+      <div class="filter-grid">
+        <div class="field"><label for="search">Recherche</label><input id="search" type="search" placeholder="Ex. oral, synthèse, Centrale, interaction…"></div>
+        <div class="field"><label for="track">Filière</label><select id="track"><option value="">Toutes</option></select></div>
+        <div class="field"><label for="family">Famille</label><select id="family"><option value="">Toutes</option><option value="commerce">Commerce</option><option value="science">Ingénieurs</option></select></div>
+        <div class="field"><label for="assessment">Épreuve</label><select id="assessment"><option value="">Écrit et oral</option><option value="Écrit">Écrit</option><option value="Oral">Oral</option></select></div>
+      </div>
+      <div class="filter-foot"><span id="resultCount"></span><button class="reset" id="reset">Réinitialiser</button></div>
+    </div>
+    <div class="competition-grid" id="competitionGrid"></div>
+    <div class="empty" id="empty">Aucun concours ne correspond à ces filtres.</div>
+  </div>
+</section>
+
+<section class="white" id="latest">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Latest official documents</div><h2>Derniers rapports détectés</h2><p>Un nouveau lien officiel apparaît automatiquement ici. Tant que sa synthèse n’a pas été validée, il porte la mention « Summary pending review ».</p></div>
+    <div class="latest-grid" id="latestGrid"></div>
+    <div class="note"><b>Pourquoi une validation ?</b> Les sites officiels mélangent parfois rapport, sujet, corrigé, notice et plusieurs langues dans le même PDF. Le lien peut être publié automatiquement ; les conseils attribués au jury, eux, restent relus avant publication.</div>
+  </div>
+</section>
+
+<section id="heatmap">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Recurring warnings</div><h2>La heatmap des erreurs récurrentes</h2><p>Plus le point est foncé, plus la remarque apparaît nettement dans les rapports et recommandations du concours.</p></div>
+    <div class="heat-wrap"><table class="heat" id="heatTable"></table></div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">From warning to action</div><h2>Le jury signale un problème : que travailler maintenant ?</h2><p>Les rapports ne servent que s’ils modifient concrètement la préparation en cours, en colle et dans le travail autonome.</p></div>
+    <div class="action-grid" id="actionGrid"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">English Colles in Lyon</div>
+    <nav class="foot-nav"><a href="index.html">Accueil</a><a href="methodology.html">Méthodologie</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulaire</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Ressources</a><a href="jury-reports.html">Rapports de jury</a></nav>
+    <div class="principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
+    <div class="copy">© Eglantine Lecomte — English Colles in Lyon. Les rapports restent la propriété de leurs organismes officiels.</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Jury report decoder">
+  <div class="modal-card">
+    <div class="modal-head"><div class="mh"><div class="eyebrow" id="modalEyebrow"></div><h2 id="modalTitle"></h2><p id="modalSub"></p></div><button class="modal-close" id="modalClose">✕</button></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const safe=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+const state={data:null,detected:null,status:null};
+const LS={get(k,d){try{return localStorage.getItem(k)??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+async function loadJSON(url,fallback){try{const r=await fetch(url,{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch(e){return fallback}}
+function bullets(a){return "<ul>"+a.map(x=>"<li>"+safe(x)+"</li>").join("")+"</ul>"}
+
+function renderConsensus(){
+  const c=state.data.consensus;
+  $("#consensusGrid").innerHTML=[
+    ["do","✓ What to do",c.do],["avoid","✕ What to avoid",c.avoid],["rec","→ Recommendations",c.recommend]
+  ].map(([cl,t,a])=>`<article class="consensus ${cl}"><h3>${t}</h3>${bullets(a)}</article>`).join("");
+}
+
+function fillFilters(){
+  $("#track").innerHTML='<option value="">Toutes</option>'+state.data.tracks.map(t=>`<option>${safe(t)}</option>`).join("");
+}
+function searchable(c){return [c.short,c.name,c.family,...c.tracks,...c.assessments,...c.format,...c.do,...c.avoid,...c.recommend].join(" ").toLowerCase()}
+function renderCompetitions(){
+  const q=$("#search").value.trim().toLowerCase(),tr=$("#track").value,fa=$("#family").value,as=$("#assessment").value;
+  const list=state.data.competitions.filter(c=>(!q||searchable(c).includes(q))&&(!tr||c.tracks.includes(tr))&&(!fa||c.family===fa)&&(!as||c.assessments.some(x=>x.includes(as))));
+  $("#resultCount").textContent=list.length+" concours ou banques affichés";
+  $("#empty").classList.toggle("on",!list.length);
+  $("#competitionGrid").innerHTML=list.map(c=>`<article class="competition" data-color="${safe(c.color)}">
+    <div class="comp-top"><div><h3>${safe(c.short)}</h3><div class="fullname">${safe(c.name)}</div></div><span class="year">Curated through ${c.latestCuratedYear}</span></div>
+    <div class="tags">${c.tracks.map(t=>`<span class="tag">${safe(t)}</span>`).join("")}${c.assessments.map(t=>`<span class="tag assess">${safe(t)}</span>`).join("")}</div>
+    <p class="snapshot"><strong>Format :</strong> ${safe(c.format[0])}</p>
+    <div class="comp-actions"><button class="open-decoder" data-id="${safe(c.id)}">Open decoder</button><a class="official" href="${safe(c.officialPage)}" target="_blank" rel="noopener">Official source ↗</a></div>
+  </article>`).join("");
+  $$(".open-decoder").forEach(b=>b.onclick=()=>openCompetition(b.dataset.id));
+}
+
+function openCompetition(id){
+  const c=state.data.competitions.find(x=>x.id===id);if(!c)return;
+  $("#modalEyebrow").textContent=c.tracks.join(" · ")+" · "+c.assessments.join(" · ");
+  $("#modalTitle").textContent=c.short;
+  $("#modalSub").textContent=c.name+" — synthesis curated through "+c.latestCuratedYear;
+  $("#modalBody").innerHTML=`<div class="format-list"><h3>Format and key distinctions</h3>${bullets(c.format)}</div>
+    <div class="triple"><section class="decoder-col"><h3>✓ Do</h3>${bullets(c.do)}</section><section class="decoder-col"><h3>✕ Avoid</h3>${bullets(c.avoid)}</section><section class="decoder-col"><h3>→ Recommendations</h3>${bullets(c.recommend)}</section></div>
+    <div class="report-list"><h3>Official reports and pages</h3>${c.reports.map(r=>`<div class="report-row"><div class="rr"><b>${safe(r.label)}</b><span>${safe(r.type)} · ${r.year} · ${safe(r.status)}</span></div><a href="${safe(r.url)}" target="_blank" rel="noopener">Open ↗</a></div>`).join("")}</div>`;
+  $("#modal").classList.add("on");document.body.style.overflow="hidden";
+}
+function closeModal(){$("#modal").classList.remove("on");document.body.style.overflow=""}
+
+function renderLatest(){
+  const docs=(state.detected?.documents||[]).slice().sort((a,b)=>(b.year||0)-(a.year||0)||String(b.firstSeen).localeCompare(String(a.firstSeen))).slice(0,12);
+  $("#latestGrid").innerHTML=docs.map(d=>`<article class="report-card"><div class="report-meta"><span class="badge">${safe(d.sourceName)}</span><span class="badge">${safe(d.year||"Year unknown")}</span>${d.isNew?'<span class="badge new">New · summary pending review</span>':""}</div><h3>${safe(d.label)}</h3><p>${safe(d.type||"official document")} · first detected ${safe(d.firstSeen||"—")}</p><a href="${safe(d.url)}" target="_blank" rel="noopener">Open official document →</a></article>`).join("")||"<p>Aucun document détecté pour le moment.</p>";
+}
+function renderStatus(){
+  const s=state.status||{},card=$("#statusCard");
+  $("#stSources").textContent=s.sourcesChecked??0;$("#stDocs").textContent=s.documentsFound??0;$("#stNew").textContent=s.newDocuments??0;
+  if(s.lastSuccessfulRun){card.classList.add(s.errors?.length?"warn":"ok");$("#statusTitle").textContent=s.errors?.length?"Monitoring completed with warnings":"Automatic monitoring active";$("#statusMsg").textContent=`Last successful check: ${new Date(s.lastSuccessfulRun).toLocaleString("fr-FR")}. ${s.message||""}`}
+  else{$("#statusTitle").textContent="Ready for first automatic check";$("#statusMsg").textContent=s.message||"Le suivi automatique n’a pas encore été lancé."}
+}
+function renderHeat(){
+  const heads=[["bce","BCE"],["ecricome","ECRICOME"],["centrale","Centrale"],["mines","Mines"],["ccinp","CCINP"],["e3a","e3a"],["pt","PT"],["xens","X / ENS"]];
+  $("#heatTable").innerHTML="<thead><tr><th>Recurring warning</th>"+heads.map(x=>`<th>${x[1]}</th>`).join("")+"</tr></thead><tbody>"+state.data.warnings.map(w=>`<tr><td>${safe(w.label)}</td>${heads.map(([k])=>`<td><span class="dot l${w[k]||0}" title="Intensity ${w[k]||0}/3"></span></td>`).join("")}</tr>`).join("")+"</tbody>";
+}
+function renderActions(){
+  $("#actionGrid").innerHTML=state.data.actions.map(a=>`<article class="action-card"><div class="jury-says">The jury says</div><h3>${safe(a.warning)}</h3><a href="${safe(a.url)}">${safe(a.work)} →</a></article>`).join("");
+}
+function bind(){
+  ["search","track","family","assessment"].forEach(id=>$("#"+id).addEventListener(id==="search"?"input":"change",renderCompetitions));
+  $("#reset").onclick=()=>{$("#search").value="";$("#track").value="";$("#family").value="";$("#assessment").value="";renderCompetitions()};
+  $("#modalClose").onclick=closeModal;$("#modal").onclick=e=>{if(e.target.id==="modal")closeModal()};document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+  $("#surprise").onclick=()=>{const a=state.data.competitions;openCompetition(a[Math.floor(Math.random()*a.length)].id)};
+}
+async function init(){
+  state.data=await loadJSON("jury-reports-data.json",null);
+  state.detected=await loadJSON("jury-reports-detected.json",{documents:[]});
+  state.status=await loadJSON("jury-reports-status.json",{});
+  if(!state.data){document.querySelector("main").innerHTML='<div class="wrap" style="padding:50px 20px">Missing jury-reports-data.json.</div>';return}
+  renderConsensus();fillFilters();renderCompetitions();renderLatest();renderStatus();renderHeat();renderActions();bind();
+}
+init();
+
+/* navigation + accessibility */
+const nav=$("#nav"),burger=$("#burger");burger.onclick=()=>{const o=nav.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+const panel=$("#panel"),scrim=$("#scrim");$("#openA11y").onclick=()=>{panel.classList.add("open");scrim.classList.add("open")};function closePanel(){panel.classList.remove("open");scrim.classList.remove("open")}$("#closePanel").onclick=closePanel;scrim.onclick=closePanel;
+const sizes=[18,20.5,23];function setSize(i){document.documentElement.style.setProperty("--fs",sizes[i]+"px");$$('#sizeSeg button').forEach(b=>b.classList.toggle("on",+b.dataset.size===i));LS.set("jury_size",i)}$$('#sizeSeg button').forEach(b=>b.onclick=()=>setSize(+b.dataset.size));setSize(+LS.get("jury_size",0));
+$$(".toggle").forEach(b=>{const o=b.dataset.opt;function apply(on){document.body.classList.toggle(o,on);b.classList.toggle("on",on);b.lastElementChild.textContent=on?"On":"Off";LS.set("jury_"+o,on?"1":"0")}b.onclick=()=>apply(!document.body.classList.contains(o));apply(LS.get("jury_"+o,"0")==="1")});
+</script>
+</body>
+</html>

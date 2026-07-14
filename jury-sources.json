@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-07-14T00:00:00Z",
+  "sources": [
+    {
+      "id": "bce",
+      "name": "BCE / ELVi",
+      "url": "https://www.concours-bce.com/annales",
+      "tracks": [
+        "ECG",
+        "ECT"
+      ],
+      "keywords": [
+        "anglais",
+        "english",
+        "elvi",
+        "langue vivante",
+        "lva",
+        "lvb"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "ecricome",
+      "name": "ECRICOME",
+      "url": "https://www.ecricome.org/ecricome-prepa-langues-vivantes/",
+      "tracks": [
+        "ECG",
+        "ECT"
+      ],
+      "keywords": [
+        "anglais",
+        "english",
+        "annales",
+        "langues vivantes"
+      ],
+      "reportWords": [
+        "rapport",
+        "annales"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "centrale",
+      "name": "CentraleSupélec",
+      "url": "https://www.concours-centrale-supelec.fr/sujets-rapports",
+      "tracks": [
+        "MP",
+        "MPI",
+        "PC",
+        "PSI",
+        "TSI"
+      ],
+      "keywords": [
+        "anglais",
+        "langues vivantes",
+        "rapport"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "mines",
+      "name": "Mines-Ponts",
+      "url": "https://concoursminesponts.fr/archives/",
+      "tracks": [
+        "MP",
+        "MPI",
+        "PC",
+        "PSI"
+      ],
+      "keywords": [
+        "anglais",
+        "langues",
+        "rapport",
+        "oral",
+        "écrit"
+      ],
+      "reportWords": [
+        "rapport",
+        "methodologique",
+        "méthodologique"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "ccinp",
+      "name": "CCINP",
+      "url": "https://www.concours-commun-inp.fr/fr/epreuves/annales/annales-epreuves-communes.html",
+      "tracks": [
+        "MP",
+        "MPI",
+        "PC",
+        "PSI",
+        "TSI",
+        "TPC"
+      ],
+      "keywords": [
+        "anglais",
+        "langue vivante",
+        "lva",
+        "lvb",
+        "lv_oral"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "e3a",
+      "name": "e3a-Polytech",
+      "url": "https://www.e3a-polytech.fr/annales-et-rapport/",
+      "tracks": [
+        "MP",
+        "MPI",
+        "PC",
+        "PSI"
+      ],
+      "keywords": [
+        "anglais",
+        "lva",
+        "lvb",
+        "rapport"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "pt",
+      "name": "Banque PT",
+      "url": "https://www.banquept.fr/article231.html",
+      "tracks": [
+        "PT"
+      ],
+      "keywords": [
+        "anglais",
+        "lv anglais",
+        "langue vivante",
+        "rapport"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    },
+    {
+      "id": "xens",
+      "name": "École polytechnique / ENS",
+      "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports",
+      "tracks": [
+        "MP",
+        "MPI",
+        "PC",
+        "PSI",
+        "PT",
+        "TSI"
+      ],
+      "keywords": [
+        "anglais",
+        "english",
+        "langue",
+        "rapport"
+      ],
+      "reportWords": [
+        "rapport"
+      ],
+      "allEnglish": false
+    }
+  ]
+}
