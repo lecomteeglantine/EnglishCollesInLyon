@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="English Colles">
-<meta name="descriptifn" content="Travailler l'anglais de CPGE en autonomie : méthodologie de la colle, civilisation, vocabulaire interactif, Colle Trainer.">
+<meta name="description" content="Un compagnon de travail autonome pour préparer les cours et les colles d’anglais en CPGE, exploiter les retours des professeurs et approfondir régulièrement au CDI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -297,6 +297,83 @@ a.t{color:var(--terra)}a.t .ar{transition:transform .18s}a.t:hover .ar{transform
 .reflist .d{font-size:.9rem;color:var(--muted);margin-top:4px}
 @media (max-width:720px){.reflist{grid-template-columns:1fr}}
 
+
+/* ---------- learning cycle: site → class → colles → CDI ---------- */
+.learning-cycle{
+  background:linear-gradient(135deg,#fffaf3,#eef3f1);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.cycle-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);
+  gap:28px;
+  align-items:start;
+}
+.cycle-intro .statement{
+  background:var(--navy);
+  color:#fff;
+  border-radius:22px;
+  padding:30px;
+  box-shadow:var(--shadow-lg);
+}
+.cycle-intro .statement h2{color:#fff;font-size:clamp(1.55rem,3.6vw,2.15rem)}
+.cycle-intro .statement p{margin-top:13px;opacity:.94}
+.cycle-intro .statement strong{color:var(--gold)}
+.cycle-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.cycle-step{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:17px;
+  box-shadow:var(--shadow);
+}
+.cycle-step .cycle-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--bg2);
+  border:1px solid var(--line);
+  color:var(--terra);
+  font-weight:700;
+  margin-bottom:9px;
+}
+.cycle-step h3{font-size:1.05rem;color:var(--navy)}
+.cycle-step p{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.5}
+.cycle-note{
+  margin-top:18px;
+  padding:14px 17px;
+  border-left:4px solid var(--sage);
+  border-radius:12px;
+  background:#eef3f1;
+  color:var(--ink);
+  font-size:.92rem;
+}
+.site-principle{
+  width:100%;
+  text-align:center;
+  background:var(--navy);
+  color:#fff;
+  border-radius:13px;
+  padding:12px 16px;
+  font-weight:700;
+  letter-spacing:.01em;
+  margin-bottom:16px;
+}
+@media (max-width:780px){
+  .cycle-intro{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .cycle-grid{grid-template-columns:1fr}
+}
+
 footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
 .foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
@@ -333,7 +410,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
       <a href="timelines.html">Timelines</a>
       <a href="colle-trainer.html">Colle Trainer</a>
       <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+      <a href="jury-reports.html">Jury Reports</a>
     </nav>
     <div class="top-tools">
       <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
@@ -378,10 +455,10 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">CPGE · Travail en autonomie</div>
-      <h1>Work smarter for your English colles</h1>
-      <p class="welcome">Bienvenue sur ce site pour t'aider à travailler en autonomie en plus des cours d'anglais et des khôlles.</p>
-      <p class="more">Choisis un module, révise à ton rythme, entraîne-toi à parler, et construis progressivement ta méthode.</p>
+      <div class="eyebrow">CPGE · Independent work, guided by feedback</div>
+      <h1>Prepare here. Progress in class and in colles.</h1>
+      <p class="welcome">English Colles in Lyon est un compagnon de travail autonome conçu pour préparer, consolider et prolonger les cours d’anglais — jamais pour les remplacer.</p>
+      <p class="more">Travaille ici à ton rythme, puis réutilise ce que tu apprends en classe, teste-le en colle, exploite les retours de tes professeurs et va régulièrement au CDI pour approfondir et vérifier tes sources.</p>
       <div class="cta">
         <a class="btn btn-primary" href="methodology.html">Commencer par la méthodologie <span class="ar">→</span></a>
         <a class="btn btn-ghost" href="civilisation.html">Explorer la civilisation</a>
@@ -442,11 +519,49 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
   </div>
 
 </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE THE SITE ============ -->
+<section class="learning-cycle">
+  <div class="wrap">
+    <div class="cycle-intro">
+      <div class="statement">
+        <div class="eyebrow" style="color:var(--gold)">How to use this site</div>
+        <h2>Autonomous does not mean isolated.</h2>
+        <p>Le site t’aide à <strong>arriver mieux préparé</strong>, à pratiquer plus régulièrement et à identifier ce que tu dois améliorer. Les cours, les colles et les échanges avec tes professeurs donnent ensuite du sens, du contexte et un retour précis à ce travail.</p>
+        <div class="cycle-note">Ce dispositif ne propose pas de cours parallèle : il organise des outils que tu dois réinvestir dans le vrai travail de prépa.</div>
+      </div>
+      <div class="cycle-grid">
+        <article class="cycle-step">
+          <span class="cycle-tag">01</span>
+          <h3>Prepare here</h3>
+          <p>Révise une notion, découvre un thème, prépare des exemples ou entraîne une compétence précise.</p>
+        </article>
+        <article class="cycle-step">
+          <span class="cycle-tag">02</span>
+          <h3>Use it in class</h3>
+          <p>Pose des questions, confronte tes idées et réutilise activement le vocabulaire et les connaissances étudiés.</p>
+        </article>
+        <article class="cycle-step">
+          <span class="cycle-tag">03</span>
+          <h3>Test it in colles</h3>
+          <p>Transforme la préparation en prise de parole réelle, puis utilise les retours reçus pour cibler la suite du travail.</p>
+        </article>
+        <article class="cycle-step">
+          <span class="cycle-tag">04</span>
+          <h3>Explore further at the CDI</h3>
+          <p>Consulte régulièrement livres, presse, revues et bases documentaires avec l’aide des professeurs documentalistes.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ MAIN CARDS ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Les modules</div><h2>Par où veux-tu commencer&nbsp;?</h2><p>Six espaces de travail, du plus méthodique au plus rapide. Chacun s'utilise seul, à ton rythme.</p></div>
+    <div class="sec-head"><div class="eyebrow">Les modules</div><h2>Par où veux-tu commencer&nbsp;?</h2><p>Sept espaces complémentaires pour préparer, réviser et t’entraîner. Utilise-les en autonomie, puis rapporte ce travail en classe et en colle.</p></div>
     <div class="cards">
       <article class="card">
         <div class="ico t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></div>
@@ -479,6 +594,12 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
         <a class="open" href="panic-mode.html">Ouvrir <span class="ar">→</span></a>
       </article>
       <article class="card">
+        <div class="ico t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18H6z"/><path d="M9 7h6M9 11h6M9 15h4"/><path d="m15 17 1.5 1.5L20 15"/></svg></div>
+        <h3>Rapports de jury</h3>
+        <p>Comprendre les attentes des concours, les réussites valorisées et les erreurs qui reviennent d’année en année.</p>
+        <a class="open" href="jury-reports.html">Consulter <span class="ar">→</span></a>
+      </article>
+      <article class="card">
         <div class="ico t-teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 9 5 3-5 3Z"/><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/></svg></div>
         <h3>Ressources</h3>
         <p>Vidéos, articles, podcasts, sites fiables et lectures recommandées.</p>
@@ -509,6 +630,10 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
         <span class="badge t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span>
         <span class="t"><span class="h">I want to improve my method</span><span class="d">Methodology</span></span><span class="go">→</span>
       </a>
+      <a class="mode" href="jury-reports.html">
+        <span class="badge t-teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18H6z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></span>
+        <span class="t"><span class="h">I want to understand the examiners’ expectations</span><span class="d">Jury Reports</span></span><span class="go">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -525,31 +650,35 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
       <span class="chip">model answers</span>
       <span class="chip">hooks and openings</span>
       <span class="chip">articles and videos</span>
+      <span class="chip">jury reports</span>
       <span class="chip">autonomous practice</span>
+      <span class="chip">CDI research habits</span>
       <span class="chip">accessible design</span>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section id="about">
+<!-- ============ A COMPANION TO TEACHING ============ -->
+<section id="companion">
   <div class="wrap">
     <div class="about">
-      <div class="eyebrow" style="color:var(--gold)">À propos</div>
-      <h2>Un complément, pas un substitut</h2>
-      <p>Ce site a été conçu pour aider les étudiants à travailler régulièrement, sans attendre la veille d'une khôlle. Il ne remplace pas le cours&nbsp;: il le complète, en donnant des outils pour réviser, réfléchir, parler et gagner en autonomie.</p>
-      <p class="by">Créé par Eglantine Lecomte.</p>
+      <div class="eyebrow" style="color:var(--gold)">Designed to support teaching</div>
+      <h2>Un compagnon de travail, pas un cours parallèle</h2>
+      <p>Ce site a été créé par une enseignante pour aider les étudiants à arriver mieux préparés, à pratiquer plus régulièrement et à mieux exploiter les conseils reçus. Il ne remplace ni le cours, ni les colles, ni l’accompagnement des professeurs.</p>
+      <p>Les professeurs restent essentiels pour expliquer, contextualiser, corriger les malentendus, évaluer une prestation et donner un retour individuel. Le site fournit des supports et des occasions de s’entraîner&nbsp;; le progrès se construit ensuite par la mise en pratique, l’échange et le feedback.</p>
+      <p>Le CDI complète également ce dispositif&nbsp;: il permet d’aller au-delà des synthèses en ligne, de consulter des ouvrages et des périodiques, de comparer les sources et de développer de véritables habitudes de recherche.</p>
+      <p class="by">Prepare independently. Learn collectively. Improve through feedback.</p>
     </div>
   </div>
 </section>
 
 <!-- ============ POUR ALLER PLUS LOIN ============ -->
 <section><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Ressources conseillées</div><h2>Pour aller plus loin</h2><p>Quelques références sérieuses pour nourrir sa culture, sa langue et ses khôlles&nbsp;: à lire, à consulter, régulièrement.</p></div>
+  <div class="sec-head"><div class="eyebrow">Au CDI et au-delà</div><h2>Pour aller plus loin, régulièrement</h2><p>Le site n’est qu’un point de départ. Va au CDI, demande conseil aux professeurs documentalistes et consulte des livres, la presse, des revues et des bases de données pour approfondir, vérifier et diversifier tes sources.</p></div>
   <div class="further-grid">
 
     <div class="refcard">
-      <h3><span class="ic t-terra"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg></span>Des livres</h3>
+      <h3><span class="ic t-terra"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg></span>Des livres à chercher au CDI</h3>
       <ul class="reflist">
         <li><span class="t">Practical English Usage</span><div class="s">Michael Swan — Oxford University Press</div><div class="d">La référence pour lever un doute de grammaire ou d'usage&nbsp;: claire, précise, indispensable.</div></li>
         <li><span class="t">British Civilization: An Introduction</span><div class="s">John Oakland — Routledge</div><div class="d">Un panorama clair des institutions, de l'histoire et de la société britanniques.</div></li>
@@ -561,7 +690,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
     </div>
 
     <div class="refcard">
-      <h3><span class="ic t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>Des sites</h3>
+      <h3><span class="ic t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>Des sites à confronter aux ressources du CDI</h3>
       <ul class="reflist">
         <li><a class="t" href="https://theconversation.com/global" target="_blank" rel="noopener">The Conversation <span class="ar">→</span></a><div class="d">Des analyses écrites par des universitaires, en anglais clair et entièrement gratuit.</div></li>
         <li><a class="t" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="ar">→</span></a><div class="d">L'actualité britannique et mondiale&nbsp;: une référence incontournable pour les colles.</div></li>
@@ -586,11 +715,13 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
         <a href="methodology.html">Méthodologie</a>
         <a href="civilisation.html">Civilisation</a>
         <a href="vocabulary.html">Vocabulaire</a>
+        <a href="timelines.html">Timelines</a>
         <a href="colle-trainer.html">Colle Trainer</a>
         <a href="resources.html">Ressources</a>
-        <a href="#about">À propos</a>
+        <a href="jury-reports.html">Rapports de jury</a>
       </nav>
     </div>
+    <div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
     <div class="foot-copy">© Eglantine Lecomte — English Colles in Lyon.</div>
   </div>
 </footer>
