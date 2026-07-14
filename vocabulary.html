@@ -85,7 +85,7 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 @media (max-width:640px){.nav{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;max-width:100%;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}}
 
 /* ===== jeux de vocabulaire ===== */
-.games{margin-top:50px}
+.games{margin-top:30px}
 .games-head h2{color:var(--navy);font-size:clamp(1.4rem,3vw,1.9rem);margin-top:6px}
 .games-head p{color:var(--muted);margin-top:8px;max-width:60ch}
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:24px}
@@ -95,6 +95,40 @@ a:focus-visible,input:focus-visible{outline:3px solid var(--terra);outline-offse
 .game-card.g1::before{background:var(--terra)}.game-card.g2::before{background:var(--sage)}.game-card.g3::before{background:var(--gold)}.game-card.g4::before{background:#6A4C93}.game-card.g5::before{background:#2C7A7B}
 .g-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:4px;color:#fff}
 .game-card.g1 .g-ic{background:var(--terra)}.game-card.g2 .g-ic{background:var(--sage)}.game-card.g3 .g-ic{background:var(--gold)}.game-card.g4 .g-ic{background:#6A4C93}.game-card.g5 .g-ic{background:#2C7A7B}
+.game-card.g6::before{background:#D97706}.game-card.g7::before{background:#4F46E5}.game-card.g8::before{background:#2563EB}.game-card.g9::before{background:#0F766E}.game-card.g10::before{background:#9F3A5D}
+.game-card.g6 .g-ic{background:#D97706}.game-card.g7 .g-ic{background:#4F46E5}.game-card.g8 .g-ic{background:#2563EB}.game-card.g9 .g-ic{background:#0F766E}.game-card.g10 .g-ic{background:#9F3A5D}
+.game-group{margin-top:28px}
+.game-group-head{display:flex;align-items:end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.game-group-head h3{font-size:1.25rem;color:var(--navy);margin-top:3px}
+.game-group-head p{max-width:48ch;color:var(--muted);font-size:.86rem;text-align:right}
+.game-group-kicker{font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--terra)}
+.games-grid-feature{grid-template-columns:1fr}
+.featured-game{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;column-gap:16px}
+.featured-game .g-ic{grid-row:1/4}
+.featured-game .g-name,.featured-game .g-desc,.featured-game .g-go{grid-column:2}
+.featured-game .g-go{margin-top:3px}
+.games-transfer{margin-top:24px;background:#eef3f1;border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:13px;padding:14px 16px;color:var(--ink);font-size:.9rem}
+.games-transfer strong{color:var(--navy)}
+.g-choice-note{max-width:520px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:11px 14px;color:var(--muted);font-size:.85rem;text-align:center;margin-bottom:14px}
+.g-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px}
+.g-word-mask{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.6rem;letter-spacing:.14em;color:var(--navy);text-align:center;margin:10px 0 18px;overflow-wrap:anywhere}
+.g-listen-button{width:74px;height:74px;border-radius:50%;border:0;background:var(--navy);color:#fff;font-size:1.8rem;display:grid;place-items:center;margin:8px auto 20px;box-shadow:var(--shadow-lg)}
+.g-listen-button:hover{transform:scale(1.04)}
+.g-colle-box{width:100%;max-width:620px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);text-align:left}
+.g-colle-topic{font-family:var(--display);font-size:1.45rem;color:var(--navy);line-height:1.3}
+.g-targets{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
+.g-target{background:#eef3f1;border:1px solid #d8e4d6;border-radius:999px;padding:7px 11px;color:var(--navy);font-weight:700;font-size:.86rem}
+.g-phase{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:5px 10px;background:var(--bg2);border:1px solid var(--line);color:var(--terra);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.g-big-timer{font-family:var(--display);font-size:3.5rem;line-height:1;color:var(--terra);text-align:center;margin:20px 0 8px}
+.g-colle-instruction{color:var(--muted);font-size:.92rem;margin-top:10px}
+.g-self-check{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+.g-self-check li{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+@media(max-width:700px){
+  .game-group-head{display:block}
+  .game-group-head p{text-align:left;margin-top:7px}
+  .featured-game{display:flex}
+}
+
 .g-ic svg{width:24px;height:24px;stroke:#fff}
 .g-name{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--navy)}
 .g-desc{font-size:.85rem;color:var(--muted);line-height:1.5;flex:1}
@@ -268,9 +302,9 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div class="brand">
       <span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
-      <span class="sub">CPGE · Anglais</span>
+      <span class="sub">CPGE · English</span>
     </div>
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="methodology.html">Methodology</a>
       <a href="civilisation.html">Civilisation</a>
@@ -278,7 +312,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <a href="timelines.html">Timelines</a>
       <a href="colle-trainer.html">Colle Trainer</a>
       <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+      <a href="jury-reports.html">Jury Reports</a>
     </nav>
   </div>
 </header>
@@ -296,7 +330,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <div class="need-grid">
         <button class="need-card" data-need="find"><span class="need-ic">🔎</span><span class="need-t">Find a word</span><span class="need-d">Search all 11,000 entries</span></button>
         <button class="need-card" data-need="revise"><span class="need-ic">⏱️</span><span class="need-t">Revise for 5 minutes</span><span class="need-d">Ten words, quick recall</span></button>
-        <button class="need-card" data-need="study"><span class="need-ic">📚</span><span class="need-t">Study a topic</span><span class="need-d">Pick a chapter and play</span></button>
+        <button class="need-card" data-need="study"><span class="need-ic">🎯</span><span class="need-t">Play & revise</span><span class="need-d">Choose one of ten activities</span></button>
       </div>
     </div>
 
@@ -311,25 +345,15 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <div class="revlist-card" id="revListCard"></div>
     </div>
 
-    <section class="term-results" id="termResults" aria-live="polite">
-      <h2>Words found</h2>
-      <div id="hits"></div>
-    </section>
 
-    <div id="partsRoot"></div>
-
-    <div class="no-result" id="noResult">
-      <p>No results. Try another word, in English or French.</p>
-    </div>
-  </div>
-
-    <section class="games wrap" id="games">
+    <section class="games" id="games">
       <div class="games-head">
-        <div class="eyebrow">Play &amp; revise</div>
-        <h2>Eight ways to train your vocabulary</h2>
-        <p>Choose what to train, then pick a game. By default the games draw from every chapter — but you can focus on one topic, your saved words, or your mistakes.</p>
+        <div class="eyebrow">Play, remember &amp; reuse</div>
+        <h2>Ten ways to train your vocabulary</h2>
+        <p>Choose a set of words, then train recall, accuracy or spoken use. The final step always happens beyond the screen: reuse the vocabulary in class and in your next colle.</p>
       </div>
-      <div class="train-with" role="group" aria-label="Train with">
+
+      <div class="train-with" role="group" aria-label="Choose the vocabulary set">
         <span class="tw-lbl">Train with:</span>
         <div class="tw-opts">
           <button class="tw-opt on" data-scope="all">All vocabulary</button>
@@ -342,39 +366,120 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
         <select class="tw-select" id="twPart" hidden aria-label="Choose a part"></select>
         <span class="tw-count" id="twCount"></span>
       </div>
-      <div class="games-grid">
-        <button class="game-card g1" data-game="sprint">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <span class="g-name">Definition Sprint</span>
-          <span class="g-desc">A definition appears — type the word before the clock runs out. Letters reveal as hints.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g2" data-game="colloc">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><path d="M11 7h6a2 2 0 0 1 2 2v4"/></svg></span>
-          <span class="g-name">Collocation Builder</span>
-          <span class="g-desc">Assemble the right expression from fragments. The words that go together — the colle edge.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g3" data-game="odd">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3"/></svg></span>
-          <span class="g-name">Odd One Out</span>
-          <span class="g-desc">Four words, one intruder. Spot the odd one and sharpen your sense of meaning.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g4" data-game="duel">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-4 1-4-4 1-4ZM10 21l-7-7 4-1 4 4-1 4Z"/><path d="M9 9l6 6"/></svg></span>
-          <span class="g-name">Word Duel</span>
-          <span class="g-desc">Two words, one clue. Draw the right one fast — build a combo, don't break the chain.</span>
-          <span class="g-go">Play →</span>
-        </button>
-        <button class="game-card g5" data-game="match">
-          <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span>
-          <span class="g-name">Memory Match</span>
-          <span class="g-desc">Flip cards to pair each English word with its French translation, against the clock.</span>
-          <span class="g-go">Play →</span>
-        </button>
+
+      <div class="game-group">
+        <div class="game-group-head">
+          <div>
+            <span class="game-group-kicker">01 · Learn and recall</span>
+            <h3>Make the words stick</h3>
+          </div>
+          <p>Retrieve meanings, spellings and translations until recognition becomes active recall.</p>
+        </div>
+        <div class="games-grid">
+          <button class="game-card g1" data-game="sprint">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span class="g-name">Definition Sprint</span>
+            <span class="g-desc">Type the English word that matches the definition before the clock runs out.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g6" data-game="flash">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 12h7l-1 8 8-12h-7z"/></svg></span>
+            <span class="g-name">Flash Recall</span>
+            <span class="g-desc">Switch rapidly between English and French and choose the right equivalent.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g7" data-game="missing">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h4M16 7h4M4 17h4M16 17h4"/><path d="M10 5h4v4h-4zM10 15h4v4h-4z"/></svg></span>
+            <span class="g-name">Missing Letters</span>
+            <span class="g-desc">Reconstruct a partly hidden word from its meaning and spelling pattern.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g5" data-game="match">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span>
+            <span class="g-name">Memory Match</span>
+            <span class="g-desc">Pair each English word with its French translation against the clock.</span>
+            <span class="g-go">Play →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="game-group">
+        <div class="game-group-head">
+          <div>
+            <span class="game-group-kicker">02 · Use words accurately</span>
+            <h3>Choose the word that actually fits</h3>
+          </div>
+          <p>Work on collocations, context, semantic precision and listening recognition.</p>
+        </div>
+        <div class="games-grid">
+          <button class="game-card g2" data-game="colloc">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><path d="M11 7h6a2 2 0 0 1 2 2v4"/></svg></span>
+            <span class="g-name">Collocation Builder</span>
+            <span class="g-desc">Rebuild natural multi-word expressions from shuffled fragments.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g8" data-game="context">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H8l-4 4z"/><path d="M8 9h8M8 13h5"/></svg></span>
+            <span class="g-name">Context Challenge</span>
+            <span class="g-desc">Complete a real example sentence with the most accurate word or expression.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g3" data-game="odd">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3"/></svg></span>
+            <span class="g-name">Odd One Out</span>
+            <span class="g-desc">Spot the intruder and sharpen your understanding of semantic fields.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g4" data-game="duel">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-4 1-4-4 1-4ZM10 21l-7-7 4-1 4 4-1 4Z"/><path d="M9 9l6 6"/></svg></span>
+            <span class="g-name">Word Duel</span>
+            <span class="g-desc">Choose between two close possibilities and build the longest correct combo.</span>
+            <span class="g-go">Play →</span>
+          </button>
+          <button class="game-card g9" data-game="listen">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg></span>
+            <span class="g-name">Listen &amp; Choose</span>
+            <span class="g-desc">Listen to a word, identify it and connect pronunciation with spelling.</span>
+            <span class="g-go">Play →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="game-group colle-game-group">
+        <div class="game-group-head">
+          <div>
+            <span class="game-group-kicker">03 · Prepare for class and colles</span>
+            <h3>Turn vocabulary into spoken English</h3>
+          </div>
+          <p>This challenge is deliberately different: there is no multiple choice. Speak aloud and put the words to work.</p>
+        </div>
+        <div class="games-grid games-grid-feature">
+          <button class="game-card g10 featured-game" data-game="minute">
+            <span class="g-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/><path d="M8 2h8"/></svg></span>
+            <span class="g-name">One-Minute Colle</span>
+            <span class="g-desc">Prepare a short response, then speak for one minute while using three target expressions accurately. Try it alone, with a partner, in class or before your next colle.</span>
+            <span class="g-go">Start the challenge →</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="games-transfer">
+        <strong>Make the transfer:</strong> after a game, choose two expressions and use them in a complete sentence, a class contribution or your next colle.
       </div>
     </section>
+
+
+    <section class="term-results" id="termResults" aria-live="polite">
+      <h2>Words found</h2>
+      <div id="hits"></div>
+    </section>
+
+    <div id="partsRoot"></div>
+
+    <div class="no-result" id="noResult">
+      <p>No results. Try another word, in English or French.</p>
+    </div>
+  </div>
 
     <div class="game-modal" id="gameModal" role="dialog" aria-modal="true">
       <div class="gm-inner">
@@ -467,6 +572,7 @@ window.VOCLIB = (function(){
   var hits = document.getElementById("hits");
   var noResult = document.getElementById("noResult");
   var clearBtn = document.getElementById("clearBtn");
+  var gamesSec = document.getElementById("games");
 
   function esc(s){var d=document.createElement("div");d.textContent=s||"";return d.innerHTML;}
   function normalize(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
@@ -523,8 +629,10 @@ window.VOCLIB = (function(){
       chapCards.forEach(function(el){el.classList.remove("hidden");});
       partSecs.forEach(function(el){el.classList.remove("hidden");});
       termResults.classList.remove("on");noResult.classList.remove("on");qCount.textContent="";
+      if(gamesSec) gamesSec.hidden=false;
       return;
     }
+    if(gamesSec) gamesSec.hidden=true;
     var chapVisible=0;
     chapCards.forEach(function(el){
       var show=normalize(el.dataset.search).indexOf(needle)!==-1;
@@ -790,7 +898,243 @@ window.VOCLIB = (function(){
       };cc.appendChild(b);});
   }
 
-  var GAMES={sprint:sprint,colloc:colloc,odd:odd,duel:duel,match:match};
+
+  /* ---------- 6. FLASH RECALL ---------- */
+  function flash(){
+    if(!open("Flash Recall"))return;
+    if(POOL.length<2){alert("Choose a set containing at least two words.");close();return;}
+    var score=0,rounds=0,total=10;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / '+total+'</span>';
+    function next(){
+      if(rounds>=total){endScreen(score,total,"Quick recall complete.",flash);return;}
+      var correct=rand(POOL);
+      var direction=Math.random()<0.5?"fr-en":"en-fr";
+      var key=direction==="fr-en"?"t":"fr";
+      var prompt=direction==="fr-en"?correct.fr:correct.t;
+      var candidates=shuffle(POOL.filter(function(e){return e.t!==correct.t && e[key]!==correct[key];})).slice(0,3);
+      var opts=shuffle([correct].concat(candidates));
+      if(opts.length<2){setTimeout(next,0);return;}
+      body.innerHTML='<div class="g-sub">'+(direction==="fr-en"?"Choose the English equivalent":"Choose the French equivalent")+'</div>'+
+        '<div class="g-prompt">'+esc(prompt)+'</div>'+
+        '<div class="g-opts" id="opts"></div><div class="g-feedback" id="fb"></div>';
+      var oc=document.getElementById("opts");
+      opts.forEach(function(item){
+        var b=document.createElement("button");b.className="g-opt";b.textContent=item[key];
+        b.onclick=function(){
+          [].forEach.call(oc.children,function(c){c.disabled=true;});
+          rounds++;
+          if(item===correct){
+            score++;b.classList.add("correct");document.getElementById("sv").textContent=score;
+            document.getElementById("fb").className="g-feedback ok";document.getElementById("fb").textContent="✓ "+correct.t+" — "+correct.fr;
+          }else{
+            b.classList.add("wrong");noteMistake(correct);
+            [].forEach.call(oc.children,function(c){if(c.textContent===correct[key])c.classList.add("correct");});
+            document.getElementById("fb").className="g-feedback no";document.getElementById("fb").textContent="Answer: "+correct.t+" — "+correct.fr;
+          }
+          setTimeout(next,900);
+        };
+        oc.appendChild(b);
+      });
+    }
+    next();
+  }
+
+  /* ---------- 7. MISSING LETTERS ---------- */
+  function missing(){
+    if(!open("Missing Letters"))return;
+    var usable=POOL.filter(function(e){
+      var letters=(e.t.match(/[a-z]/gi)||[]).length;
+      return letters>=4&&letters<=20;
+    });
+    if(!usable.length){alert("This set does not contain suitable words for this game.");close();return;}
+    var score=0,rounds=0,total=10;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / '+total+'</span>';
+    function makeMask(word){
+      var letterPositions=[];for(var i=0;i<word.length;i++)if(/[a-z]/i.test(word[i]))letterPositions.push(i);
+      var hidden={};shuffle(letterPositions.slice(1,-1)).slice(0,Math.max(2,Math.floor(letterPositions.length*.48))).forEach(function(i){hidden[i]=1;});
+      return word.split("").map(function(ch,i){return hidden[i]?"_":ch;}).join("");
+    }
+    function norm(s){return String(s||"").trim().toLowerCase().replace(/[’]/g,"'").replace(/\s+/g," ");}
+    function next(){
+      if(rounds>=total){endScreen(score,total,"Spelling practice complete.",missing);return;}
+      var cur=rand(usable),mask=makeMask(cur.t);
+      body.innerHTML='<div class="g-sub">Complete the English word or expression</div>'+
+        '<div class="g-choice-note"><b>Meaning:</b> '+esc(cur.fr)+'<br>'+esc(cur.d)+'</div>'+
+        '<div class="g-word-mask">'+esc(mask)+'</div>'+
+        '<input class="g-input" id="ans" autocomplete="off" placeholder="type the complete answer">'+
+        '<div class="g-feedback" id="fb"></div>'+
+        '<div class="g-controls"><button class="g-btn primary" id="checkMissing">Check</button><button class="g-btn" id="revealMissing">Reveal</button></div>';
+      var inp=document.getElementById("ans");inp.focus();
+      function finish(ok){
+        rounds++;
+        var fb=document.getElementById("fb");
+        if(ok){score++;document.getElementById("sv").textContent=score;fb.className="g-feedback ok";fb.textContent="✓ "+cur.t;}
+        else{noteMistake(cur);fb.className="g-feedback no";fb.textContent="Answer: "+cur.t;}
+        inp.disabled=true;document.getElementById("checkMissing").disabled=true;document.getElementById("revealMissing").disabled=true;
+        setTimeout(next,1000);
+      }
+      document.getElementById("checkMissing").onclick=function(){finish(norm(inp.value)===norm(cur.t));};
+      document.getElementById("revealMissing").onclick=function(){finish(false);};
+      inp.addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("checkMissing").click();});
+    }
+    next();
+  }
+
+  /* ---------- 8. CONTEXT CHALLENGE ---------- */
+  function context(){
+    if(!open("Context Challenge"))return;
+    function rx(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+    var usable=POOL.filter(function(e){return e.ex&&new RegExp(rx(e.t),"i").test(e.ex);});
+    if(usable.length<2){alert("Choose a larger set: this game needs example sentences.");close();return;}
+    var score=0,rounds=0,total=10;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / '+total+'</span>';
+    function next(){
+      if(rounds>=total){endScreen(score,total,"Context practice complete.",context);return;}
+      var correct=rand(usable);
+      var sentence=correct.ex.replace(new RegExp(rx(correct.t),"i"),"_____");
+      var others=shuffle(POOL.filter(function(e){return e.t!==correct.t;})).slice(0,3);
+      var opts=shuffle([correct].concat(others));
+      body.innerHTML='<div class="g-sub">Which word or expression completes the sentence?</div>'+
+        '<div class="g-prompt">“'+esc(sentence)+'”</div>'+
+        '<div class="g-opts" id="opts"></div><div class="g-feedback" id="fb"></div>';
+      var oc=document.getElementById("opts");
+      opts.forEach(function(item){
+        var b=document.createElement("button");b.className="g-opt";b.textContent=item.t;
+        b.onclick=function(){
+          [].forEach.call(oc.children,function(c){c.disabled=true;});
+          rounds++;
+          if(item===correct){
+            score++;b.classList.add("correct");document.getElementById("sv").textContent=score;
+            document.getElementById("fb").className="g-feedback ok";document.getElementById("fb").textContent="✓ "+correct.t;
+          }else{
+            b.classList.add("wrong");noteMistake(correct);
+            [].forEach.call(oc.children,function(c){if(c.textContent===correct.t)c.classList.add("correct");});
+            document.getElementById("fb").className="g-feedback no";document.getElementById("fb").textContent="Answer: "+correct.t;
+          }
+          setTimeout(next,1050);
+        };
+        oc.appendChild(b);
+      });
+    }
+    next();
+  }
+
+  /* ---------- 9. LISTEN AND CHOOSE ---------- */
+  function listen(){
+    if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window)){
+      alert("Speech synthesis is not available in this browser.");return;
+    }
+    if(!open("Listen & Choose"))return;
+    var listenPool=POOL.filter(function(e){return e.t.length<=28;});
+    if(listenPool.length<2){alert("Choose a set containing at least two short words or expressions.");close();return;}
+    var score=0,rounds=0,total=10,current=null;
+    stats.innerHTML='<span>★ <b id="sv">0</b> / '+total+'</span>';
+    function speakWord(word){
+      window.speechSynthesis.cancel();
+      var accents={UK:"en-GB",US:"en-US",AU:"en-AU",CA:"en-CA"};
+      var selected="UK";try{selected=localStorage.getItem("eclyon_accent")||"UK";}catch(e){}
+      var u=new SpeechSynthesisUtterance(word);u.lang=accents[selected]||"en-GB";u.rate=.88;
+      var voices=window.speechSynthesis.getVoices()||[];
+      var v=voices.filter(function(x){return x.lang.replace("_","-").indexOf(u.lang)===0;})[0]||
+            voices.filter(function(x){return x.lang.indexOf("en")===0;})[0];
+      if(v)u.voice=v;window.speechSynthesis.speak(u);
+    }
+    function next(){
+      if(rounds>=total){endScreen(score,total,"Listening practice complete.",listen);return;}
+      current=rand(listenPool);
+      var others=shuffle(listenPool.filter(function(e){return e.t!==current.t;})).slice(0,3);
+      var opts=shuffle([current].concat(others));
+      body.innerHTML='<div class="g-sub">Listen, then choose the word or expression you heard</div>'+
+        '<button class="g-listen-button" id="playAudio" aria-label="Play the word">🔊</button>'+
+        '<div class="g-opts" id="opts"></div><div class="g-feedback" id="fb"></div>';
+      document.getElementById("playAudio").onclick=function(){speakWord(current.t);};
+      var oc=document.getElementById("opts");
+      opts.forEach(function(item){
+        var b=document.createElement("button");b.className="g-opt";b.textContent=item.t;
+        b.onclick=function(){
+          [].forEach.call(oc.children,function(c){c.disabled=true;});
+          rounds++;
+          if(item===current){
+            score++;b.classList.add("correct");document.getElementById("sv").textContent=score;
+            document.getElementById("fb").className="g-feedback ok";document.getElementById("fb").textContent="✓ "+current.t+" — "+current.fr;
+          }else{
+            b.classList.add("wrong");noteMistake(current);
+            [].forEach.call(oc.children,function(c){if(c.textContent===current.t)c.classList.add("correct");});
+            document.getElementById("fb").className="g-feedback no";document.getElementById("fb").textContent="You heard: "+current.t;
+          }
+          setTimeout(next,1000);
+        };
+        oc.appendChild(b);
+      });
+      setTimeout(function(){speakWord(current.t);},250);
+    }
+    next();
+  }
+
+  /* ---------- 10. ONE-MINUTE COLLE ---------- */
+  function minute(){
+    if(timerId){clearInterval(timerId);timerId=null;}
+    if(!open("One-Minute Colle"))return;
+    if(POOL.length<3){alert("Choose a set containing at least three words.");close();return;}
+    var anchor=rand(POOL);
+    var related=POOL.filter(function(e){return e.chId===anchor.chId;});
+    var chosen=(related.length>=3?shuffle(related):shuffle(POOL)).slice(0,3);
+    var chapter=chapters.filter(function(c){return c.id===chosen[0].chId;})[0];
+    var topic=(chapter&&chapter.title)||chosen[0].sec||"Current affairs";
+    var phase="prepare",remaining=30;
+    stats.innerHTML='<span id="phaseStat">Prepare</span><span>⏱ <b id="tv">30</b>s</span>';
+    function renderPrepare(){
+      body.innerHTML='<div class="g-colle-box">'+
+        '<span class="g-phase">Preparation</span>'+
+        '<div class="g-colle-topic">Speak about: '+esc(topic)+'</div>'+
+        '<p class="g-colle-instruction">Prepare a short, structured response. You must use all three target expressions naturally and accurately.</p>'+
+        '<div class="g-targets">'+chosen.map(function(e){return '<span class="g-target">'+esc(e.t)+'</span>';}).join("")+'</div>'+
+        '<div class="g-big-timer" id="bigTimer">30</div>'+
+        '<div class="g-controls"><button class="g-btn primary" id="startSpeaking">Start speaking now</button><button class="g-btn" id="newMinute">New challenge</button></div>'+
+        '</div>';
+      document.getElementById("startSpeaking").onclick=startSpeaking;
+      document.getElementById("newMinute").onclick=minute;
+    }
+    function startSpeaking(){
+      phase="speak";remaining=60;
+      document.getElementById("phaseStat").textContent="Speak";
+      document.getElementById("tv").textContent=remaining;
+      body.innerHTML='<div class="g-colle-box">'+
+        '<span class="g-phase">Speak aloud</span>'+
+        '<div class="g-colle-topic">'+esc(topic)+'</div>'+
+        '<div class="g-targets">'+chosen.map(function(e){return '<span class="g-target">'+esc(e.t)+'</span>';}).join("")+'</div>'+
+        '<div class="g-big-timer" id="bigTimer">60</div>'+
+        '<p class="g-colle-instruction">Do not read a script. Explain, connect ideas and make the vocabulary serve your argument.</p>'+
+        '<div class="g-controls"><button class="g-btn" id="finishMinute">Finish now</button></div>'+
+        '</div>';
+      document.getElementById("finishMinute").onclick=finish;
+    }
+    function finish(){
+      if(timerId){clearInterval(timerId);timerId=null;}
+      stats.innerHTML="";
+      body.innerHTML='<div class="g-colle-box">'+
+        '<span class="g-phase">Self-check</span>'+
+        '<div class="g-colle-topic">How did the response go?</div>'+
+        '<ul class="g-self-check"><li>□ I used all three expressions accurately.</li><li>□ I organised my answer rather than listing ideas.</li><li>□ I explained why the issue matters.</li><li>□ I spoke clearly without reading.</li></ul>'+
+        '<p class="g-colle-instruction"><strong>Next step:</strong> reuse at least one of these expressions in class or in your next real colle, and ask for feedback.</p>'+
+        '<div class="g-controls"><button class="g-btn primary" id="againMinute">Try another challenge</button><button class="g-btn" id="closeMinute">Close</button></div>'+
+        '</div>';
+      document.getElementById("againMinute").onclick=minute;
+      document.getElementById("closeMinute").onclick=close;
+    }
+    renderPrepare();
+    timerId=setInterval(function(){
+      remaining--;
+      var tv=document.getElementById("tv"),big=document.getElementById("bigTimer");
+      if(tv)tv.textContent=remaining;if(big)big.textContent=remaining;
+      if(remaining<=0){
+        clearInterval(timerId);timerId=null;
+        if(phase==="prepare")startSpeaking();else finish();
+      }
+    },1000);
+  }
+
+  var GAMES={sprint:sprint,flash:flash,missing:missing,colloc:colloc,context:context,odd:odd,duel:duel,listen:listen,match:match,minute:minute};
   document.querySelectorAll(".game-card").forEach(function(card){
     card.addEventListener("click",function(){var g=GAMES[card.dataset.game];if(g)g();});
   });
