@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="English Colles">
-<meta name="description" content="Un compagnon de travail autonome pour préparer les cours et les colles d’anglais en CPGE, exploiter les retours des professeurs et approfondir régulièrement au CDI.">
+<meta name="description" content="A self-study companion for CPGE English: prepare independently, practise for colles, build stronger language and cultural knowledge, and improve through classroom use and teacher feedback.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -374,6 +374,177 @@ a.t{color:var(--terra)}a.t .ar{transition:transform .18s}a.t:hover .ar{transform
   .cycle-grid{grid-template-columns:1fr}
 }
 
+/* ---------- homepage v2: clear autonomous-learning pathway ---------- */
+.routine-label{
+  margin-bottom:10px;
+  color:var(--navy);
+}
+.routine-label h2{
+  font-size:1.15rem;
+  color:var(--navy);
+}
+.routine-label p{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:.88rem;
+  max-width:34ch;
+}
+.hero-art .news-widget,
+.hero-art .wotd{
+  max-width:none;
+}
+.routine-reminder{
+  background:var(--navy);
+  color:#fff;
+  border-radius:14px;
+  padding:14px 16px;
+  font-weight:700;
+  font-size:.9rem;
+  line-height:1.45;
+  text-align:center;
+}
+.pathway{
+  background:linear-gradient(135deg,#fffaf3,#eef3f1);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.pathway-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin-top:24px;
+}
+.path-step{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.path-step .n{
+  display:inline-grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--navy);
+  color:#fff;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.path-step h3{font-size:1.02rem;color:var(--navy)}
+.path-step p{font-size:.84rem;color:var(--muted);margin-top:6px;line-height:1.48}
+
+.goals-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:26px;
+}
+.goal-group{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+.goal-group h3{
+  font-size:1.3rem;
+  color:var(--navy);
+}
+.goal-group > p{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+.goal-links{
+  display:grid;
+  gap:10px;
+  margin-top:18px;
+}
+.goal-link{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--bg2);
+  transition:transform .14s,border-color .2s,background .2s;
+}
+.goal-link:hover{
+  transform:translateY(-2px);
+  border-color:var(--terra);
+  background:#fff;
+}
+.goal-link .mini-ico{
+  flex:none;
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:700;
+}
+.goal-link .txt{flex:1}
+.goal-link .title{
+  display:block;
+  font-weight:700;
+  color:var(--navy);
+}
+.goal-link .desc{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.45;
+}
+.goal-link .arrow{
+  color:var(--terra);
+  font-weight:700;
+  align-self:center;
+}
+.closing-band{
+  background:var(--navy);
+  color:#fff;
+}
+.closing-card{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  align-items:center;
+}
+.closing-card h2{color:#fff;font-size:clamp(1.6rem,3.8vw,2.25rem)}
+.closing-card p{margin-top:12px;opacity:.93;max-width:62ch}
+.closing-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.closing-actions .btn-ghost{
+  background:transparent;
+  color:#fff;
+  border-color:rgba(255,255,255,.38);
+}
+.closing-actions .btn-ghost:hover{
+  background:rgba(255,255,255,.08);
+  border-color:#fff;
+}
+@media(max-width:980px){
+  .pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pathway-grid .path-step:last-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .goals-grid,.closing-card{grid-template-columns:1fr}
+  .closing-actions{justify-content:flex-start}
+}
+@media(max-width:520px){
+  .pathway-grid{grid-template-columns:1fr}
+  .pathway-grid .path-step:last-child{grid-column:auto}
+}
+
 footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
 .foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
@@ -438,17 +609,17 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Aller au contenu</a>
+<a href="#main" class="skip">Skip to content</a>
 
 <!-- ============ HEADER ============ -->
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
       <span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
-      <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
+      <span class="sub">CPGE English · Independent practice · Colles</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Navigation principale">
+    <nav class="nav" id="nav" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="methodology.html">Methodology</a>
       <a href="civilisation.html">Civilisation</a>
@@ -459,7 +630,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <a href="jury-reports.html">Jury Reports</a>
     </nav>
     <div class="top-tools">
-      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
+      <div class="accent" id="accent" role="group" aria-label="Choose an accent">
         <button data-acc="UK" class="on">UK</button>
         <button data-acc="US">US</button>
         <button data-acc="AU">AU</button>
@@ -467,7 +638,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       </div>
       <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
-        <span class="lbl">Accessibilité</span>
+        <span class="lbl">Accessibility</span>
       </button>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
@@ -477,44 +648,51 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 
 <!-- ============ ACCESSIBILITY PANEL ============ -->
 <div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Réglages d'accessibilité">
-  <div class="ph"><h2>Accessibilité</h2><button class="close" id="closeA11y" aria-label="Fermer">×</button></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+  <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
     <div class="a11y-group">
-      <span class="lbl">Taille du texte</span>
+      <span class="lbl">Text size</span>
       <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
     </div>
     <div class="a11y-group">
-      <span class="lbl">Affichage</span>
-      <button class="opt-toggle" data-opt="contrast"><span>Contraste élevé</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="dys"><span>Police dyslexie / lecture confortable</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="noanim"><span>Réduire les animations</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="focus"><span>Mode focus</span><span class="state">Off</span></button>
+      <span class="lbl">Display</span>
+      <button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Reading-friendly font</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Reduce animations</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="focus"><span>Focus mode</span><span class="state">Off</span></button>
     </div>
-    <p class="a11y-foot">Tes réglages sont mémorisés sur cet appareil.</p>
+    <p class="a11y-foot">Your settings are saved on this device.</p>
   </div>
 </aside>
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO + DAILY ROUTINE ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">CPGE · Independent work, guided by feedback</div>
-      <h1>Prepare here. Progress in class and in colles.</h1>
-      <p class="welcome">English Colles in Lyon est un compagnon de travail autonome conçu pour préparer, consolider et prolonger les cours d’anglais — jamais pour les remplacer.</p>
-      <p class="more">Travaille ici à ton rythme, puis réutilise ce que tu apprends en classe, teste-le en colle, exploite les retours de tes professeurs et va régulièrement au CDI pour approfondir et vérifier tes sources.</p>
+      <div class="eyebrow">CPGE English · Independent practice</div>
+      <h1>Build better habits for your English colles.</h1>
+      <p class="welcome">English Colles in Lyon is a self-study companion designed to help you prepare regularly, strengthen your English and build the knowledge you need for class and colles.</p>
+      <p class="more">Work independently here, then reuse what you learn in class, test it during real colles and improve through your teachers’ feedback.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="methodology.html">Commencer par la méthodologie <span class="ar">→</span></a>
-        <a class="btn btn-ghost" href="civilisation.html">Explorer la civilisation</a>
-        <a class="btn btn-ghost" href="vocabulary.html">Travailler le vocabulaire</a>
-        <a class="btn btn-navy" href="colle-trainer.html">Lancer le Colle Trainer <span class="ar">→</span></a>
+        <a class="btn btn-primary" href="methodology.html">Start with methodology <span class="ar">→</span></a>
+        <a class="btn btn-navy" href="colle-trainer.html">Practise a colle <span class="ar">→</span></a>
+      </div>
+      <div class="cycle-note" style="margin-top:20px">
+        This website supports your classes and colles. It does not replace teaching, interaction or individual feedback.
       </div>
     </div>
-   <div class="hero-art">
 
-  <div class="news-widget">
+    <div class="hero-art">
+      <div class="routine-label">
+        <div class="eyebrow">A little every day</div>
+        <h2>Your daily English routine</h2>
+        <p>Read one story, learn one expression and build one piece of background knowledge.</p>
+      </div>
+
+      <div class="news-widget">
     <div class="news-top">
       <span class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H5a1 1 0 0 1-1-1Z"/><path d="M17 8h3v9a2 2 0 0 1-4 0V5"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></span>
       <div class="news-header">Today's English-Speaking World Brief<span class="sublab">Daily brief · updated every day</span></div>
@@ -531,7 +709,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     </div>
   </div>
 
-  <div class="wotd" id="wotd" hidden>
+      <div class="wotd" id="wotd" hidden>
     <div class="wotd-top">
       <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2M5.6 18.4 7 17M12 19v2M18.4 18.4 17 17M21 12h-2M18.4 5.6 17 7"/><circle cx="12" cy="12" r="4"/></svg></span>
       <div class="wotd-header">Word of the Day<span class="sublab" id="wotdDate"></span></div>
@@ -539,216 +717,162 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div class="wotd-body">
       <div class="wotd-termrow">
         <span class="wotd-term" id="wotdTerm"></span>
-        <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Écouter la prononciation" title="Écouter">🔊</button>
+        <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Listen to the pronunciation" title="Listen">🔊</button>
       </div>
       <div class="wotd-ipa" id="wotdIpa"></div>
       <div class="wotd-fr" id="wotdFr"></div>
       <div class="wotd-def" id="wotdDef"></div>
       <div class="wotd-ex" id="wotdEx"></div>
-      <a class="wotd-link" id="wotdLink" href="#">Voir le chapitre →</a>
+      <a class="wotd-link" id="wotdLink" href="#">Open the chapter →</a>
     </div>
   </div>
 
-  <div class="wotd civi" id="civi" hidden>
+      <div class="wotd civi" id="civi" hidden>
     <div class="wotd-top civi-top">
       <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
       <div class="wotd-header">Civi Fact of the Day<span class="sublab" id="civiDate"></span></div>
     </div>
-    <div class="wotd-body">
-      <div class="civi-metarow">
-        <span class="civi-country" id="civiCountry"></span>
-        <span class="civi-section" id="civiSection"></span>
-      </div>
-      <div class="civi-fact" id="civiFact"></div>
-      <a class="wotd-link" href="civilisation.html">Explore la civilisation →</a>
-    </div>
-  </div>
 
-</div>
+      <div class="routine-reminder">Do not stop at reading: reuse today’s material in class or in your next colle.</div>
+    </div>
   </div>
 </section>
 
-<!-- ============ HOW TO USE THE SITE ============ -->
-<section class="learning-cycle">
+<!-- ============ LEARNING PATHWAY ============ -->
+<section class="pathway">
   <div class="wrap">
-    <div class="cycle-intro">
-      <div class="statement">
-        <div class="eyebrow" style="color:var(--gold)">How to use this site</div>
-        <h2>Autonomous does not mean isolated.</h2>
-        <p>Le site t’aide à <strong>arriver mieux préparé</strong>, à pratiquer plus régulièrement et à identifier ce que tu dois améliorer. Les cours, les colles et les échanges avec tes professeurs donnent ensuite du sens, du contexte et un retour précis à ce travail.</p>
-        <div class="cycle-note">Ce dispositif ne propose pas de cours parallèle : il organise des outils que tu dois réinvestir dans le vrai travail de prépa.</div>
-      </div>
-      <div class="cycle-grid">
-        <article class="cycle-step">
-          <span class="cycle-tag">01</span>
-          <h3>Prepare here</h3>
-          <p>Révise une notion, découvre un thème, prépare des exemples ou entraîne une compétence précise.</p>
-        </article>
-        <article class="cycle-step">
-          <span class="cycle-tag">02</span>
-          <h3>Use it in class</h3>
-          <p>Pose des questions, confronte tes idées et réutilise activement le vocabulaire et les connaissances étudiés.</p>
-        </article>
-        <article class="cycle-step">
-          <span class="cycle-tag">03</span>
-          <h3>Test it in colles</h3>
-          <p>Transforme la préparation en prise de parole réelle, puis utilise les retours reçus pour cibler la suite du travail.</p>
-        </article>
-        <article class="cycle-step">
-          <span class="cycle-tag">04</span>
-          <h3>Explore further at the CDI</h3>
-          <p>Consulte régulièrement livres, presse, revues et bases documentaires avec l’aide des professeurs documentalistes.</p>
-        </article>
-      </div>
+    <div class="sec-head">
+      <div class="eyebrow">From self-study to real progress</div>
+      <h2>Independent work only matters when you put it into practice.</h2>
+      <p>Use the site to prepare, then take your questions, vocabulary, examples and ideas back into the classroom and into real colles.</p>
+    </div>
+
+    <div class="pathway-grid">
+      <article class="path-step">
+        <span class="n">1</span>
+        <h3>Prepare independently</h3>
+        <p>Review a skill, study vocabulary, explore a topic or prepare useful examples.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">2</span>
+        <h3>Use it in class</h3>
+        <p>Ask questions, test your understanding and actively reuse what you have learnt.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">3</span>
+        <h3>Test it in colles</h3>
+        <p>Turn preparation into structured, precise and convincing spoken English.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">4</span>
+        <h3>Improve through feedback</h3>
+        <p>Use your teachers’ comments to decide what you should work on next.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">5</span>
+        <h3>Go further at the CDI</h3>
+        <p>Read beyond online summaries, compare sources and strengthen your examples.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============ MAIN CARDS ============ -->
+<!-- ============ GOAL-BASED NAVIGATION ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Les modules</div><h2>Par où veux-tu commencer&nbsp;?</h2><p>Sept espaces complémentaires pour préparer, réviser et t’entraîner. Utilise-les en autonomie, puis rapporte ce travail en classe et en colle.</p></div>
-    <div class="cards">
-      <article class="card">
-        <div class="ico t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></div>
-        <h3>Méthodologie de la colle</h3>
-        <p>Apprendre à analyser un document, construire une problématique, organiser un plan et répondre aux questions.</p>
-        <a class="open" href="methodology.html">Ouvrir <span class="ar">→</span></a>
+    <div class="sec-head">
+      <div class="eyebrow">Start with a clear objective</div>
+      <h2>What do you need to work on today?</h2>
+      <p>Choose a goal rather than wandering through the site. Each section should lead to something you can reuse in class or test in a colle.</p>
+    </div>
+
+    <div class="goals-grid">
+      <article class="goal-group">
+        <h3>Prepare for a colle</h3>
+        <p>Understand the task, organise your ideas and practise speaking under realistic conditions.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="methodology.html">
+            <span class="mini-ico t-navy">M</span>
+            <span class="txt"><span class="title">Methodology</span><span class="desc">Analyse documents, identify the key issue, formulate a relevant key question and build an effective plan.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="colle-trainer.html">
+            <span class="mini-ico t-gold">C</span>
+            <span class="txt"><span class="title">Colle Trainer</span><span class="desc">Practise structuring your ideas, speaking clearly and responding to follow-up questions.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="jury-reports.html">
+            <span class="mini-ico t-teal">J</span>
+            <span class="txt"><span class="title">Jury Reports</span><span class="desc">Understand what examiners expect, reward and repeatedly criticise.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ico t-sage"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
-        <h3>Civilisation</h3>
-        <p>Travailler par pays&nbsp;: Royaume-Uni, États-Unis, Irlande, Canada, Australie, et plus encore.</p>
-        <a class="open" href="civilisation.html">Ouvrir <span class="ar">→</span></a>
+
+      <article class="goal-group">
+        <h3>Build your language and knowledge</h3>
+        <p>Develop the vocabulary, context and historical perspective needed for stronger arguments.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="vocabulary.html">
+            <span class="mini-ico t-terra">V</span>
+            <span class="txt"><span class="title">Vocabulary</span><span class="desc">Study, memorise and reuse precise vocabulary in class and in colles.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="civilisation.html">
+            <span class="mini-ico t-sage">C</span>
+            <span class="txt"><span class="title">Civilisation</span><span class="desc">Build the contextual knowledge needed to understand documents and support arguments.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="timelines.html">
+            <span class="mini-ico t-navy">T</span>
+            <span class="txt"><span class="title">Timelines</span><span class="desc">Identify turning points, continuities and connections rather than memorising isolated dates.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ico t-terra"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg></div>
-        <h3>Vocabulaire CPGE</h3>
-        <p>86 chapitres interactifs avec définitions, prononciation, contexte, collocations et préparation aux khôlles.</p>
-        <a class="open" href="vocabulary.html">Ouvrir <span class="ar">→</span></a>
+
+      <article class="goal-group">
+        <h3>Research further</h3>
+        <p>Find reliable material, then move beyond the website and continue your research at the CDI.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="resources.html">
+            <span class="mini-ico t-teal">R</span>
+            <span class="txt"><span class="title">Resources</span><span class="desc">Find articles, podcasts, videos and reliable sources for further reading and listening.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ico t-gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h12a4 4 0 0 1 0 8H9l-4 4v-4H4Z"/></svg></div>
-        <h3>Colle Trainer</h3>
-        <p>Questions progressives Easy / Intermediate / Advanced, avec des pistes de réponse.</p>
-        <a class="open" href="colle-trainer.html">Ouvrir <span class="ar">→</span></a>
-      </article>
-      <article class="card">
-        <div class="ico t-rose"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16.5v.02"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.8 3h15.4a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
-        <h3>Panic Mode</h3>
-        <p>Réviser vite avant une khôlle&nbsp;: phrases utiles, paradoxes, hooks et ouvertures.</p>
-        <a class="open" href="panic-mode.html">Ouvrir <span class="ar">→</span></a>
-      </article>
-      <article class="card">
-        <div class="ico t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18H6z"/><path d="M9 7h6M9 11h6M9 15h4"/><path d="m15 17 1.5 1.5L20 15"/></svg></div>
-        <h3>Rapports de jury</h3>
-        <p>Comprendre les attentes des concours, les réussites valorisées et les erreurs qui reviennent d’année en année.</p>
-        <a class="open" href="jury-reports.html">Consulter <span class="ar">→</span></a>
-      </article>
-      <article class="card">
-        <div class="ico t-teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 9 5 3-5 3Z"/><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/></svg></div>
-        <h3>Ressources</h3>
-        <p>Vidéos, articles, podcasts, sites fiables et lectures recommandées.</p>
-        <a class="open" href="resources.html">Ouvrir <span class="ar">→</span></a>
+
+      <article class="goal-group">
+        <h3>Work quickly</h3>
+        <p>Use short revision tools when time is limited, without confusing emergency revision with long-term preparation.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="panic-mode.html">
+            <span class="mini-ico t-rose">!</span>
+            <span class="txt"><span class="title">Panic Mode</span><span class="desc">Review essential expressions, useful structures and last-minute strategies.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ CHOOSE YOUR MODE ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Selon ton temps</div><h2>Choisis ton mode</h2><p>Dis simplement ce que tu veux faire&nbsp;: on t'envoie au bon endroit.</p></div>
-    <div class="modes">
-      <a class="mode" href="panic-mode.html">
-        <span class="badge t-rose"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-        <span class="t"><span class="h">I have 5 minutes</span><span class="d">Panic Mode</span></span><span class="go">→</span>
-      </a>
-      <a class="mode" href="vocabulary.html">
-        <span class="badge t-sage"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5ZM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg></span>
-        <span class="t"><span class="h">I want to revise</span><span class="d">Vocabulary / Civilisation</span></span><span class="go">→</span>
-      </a>
-      <a class="mode" href="colle-trainer.html">
-        <span class="badge t-gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h12a4 4 0 0 1 0 8H9l-4 4v-4H4Z"/></svg></span>
-        <span class="t"><span class="h">I want to practise speaking</span><span class="d">Colle Trainer</span></span><span class="go">→</span>
-      </a>
-      <a class="mode" href="methodology.html">
-        <span class="badge t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span>
-        <span class="t"><span class="h">I want to improve my method</span><span class="d">Methodology</span></span><span class="go">→</span>
-      </a>
-      <a class="mode" href="jury-reports.html">
-        <span class="badge t-teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18H6z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></span>
-        <span class="t"><span class="h">I want to understand the examiners’ expectations</span><span class="d">Jury Reports</span></span><span class="go">→</span>
-      </a>
+<!-- ============ CLOSING MESSAGE ============ -->
+<section class="closing-band">
+  <div class="wrap closing-card">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Autonomous does not mean isolated</div>
+      <h2>Bring your work back into the classroom.</h2>
+      <p>Prepare here, test your ideas in class and in colles, listen to your teachers’ feedback and return with a clearer objective. Regular visits to the CDI will help you verify information, broaden your perspective and build stronger examples.</p>
+    </div>
+    <div class="closing-actions">
+      <a class="btn btn-primary" href="methodology.html">Choose a skill to improve <span class="ar">→</span></a>
+      <a class="btn btn-ghost" href="resources.html">Explore reliable sources</a>
     </div>
   </div>
 </section>
 
-<!-- ============ WHAT YOU'LL FIND ============ -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Le contenu</div><h2>Ce que tu trouveras ici</h2></div>
-    <div class="chips">
-      <span class="chip">interactive vocabulary</span>
-      <span class="chip">civilisation atlas</span>
-      <span class="chip">pronunciation support</span>
-      <span class="chip">colle questions</span>
-      <span class="chip">model answers</span>
-      <span class="chip">hooks and openings</span>
-      <span class="chip">articles and videos</span>
-      <span class="chip">jury reports</span>
-      <span class="chip">autonomous practice</span>
-      <span class="chip">CDI research habits</span>
-      <span class="chip">accessible design</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ A COMPANION TO TEACHING ============ -->
-<section id="companion">
-  <div class="wrap">
-    <div class="about">
-      <div class="eyebrow" style="color:var(--gold)">Designed to support teaching</div>
-      <h2>Un compagnon de travail, pas un cours parallèle</h2>
-      <p>Ce site a été créé par une enseignante pour aider les étudiants à arriver mieux préparés, à pratiquer plus régulièrement et à mieux exploiter les conseils reçus. Il ne remplace ni le cours, ni les colles, ni l’accompagnement des professeurs.</p>
-      <p>Les professeurs restent essentiels pour expliquer, contextualiser, corriger les malentendus, évaluer une prestation et donner un retour individuel. Le site fournit des supports et des occasions de s’entraîner&nbsp;; le progrès se construit ensuite par la mise en pratique, l’échange et le feedback.</p>
-      <p>Le CDI complète également ce dispositif&nbsp;: il permet d’aller au-delà des synthèses en ligne, de consulter des ouvrages et des périodiques, de comparer les sources et de développer de véritables habitudes de recherche.</p>
-      <p class="by">Prepare independently. Learn collectively. Improve through feedback.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ POUR ALLER PLUS LOIN ============ -->
-<section><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Au CDI et au-delà</div><h2>Pour aller plus loin, régulièrement</h2><p>Le site n’est qu’un point de départ. Va au CDI, demande conseil aux professeurs documentalistes et consulte des livres, la presse, des revues et des bases de données pour approfondir, vérifier et diversifier tes sources.</p></div>
-  <div class="further-grid">
-
-    <div class="refcard">
-      <h3><span class="ic t-terra"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg></span>Des livres à chercher au CDI</h3>
-      <ul class="reflist">
-        <li><span class="t">Practical English Usage</span><div class="s">Michael Swan — Oxford University Press</div><div class="d">La référence pour lever un doute de grammaire ou d'usage&nbsp;: claire, précise, indispensable.</div></li>
-        <li><span class="t">British Civilization: An Introduction</span><div class="s">John Oakland — Routledge</div><div class="d">Un panorama clair des institutions, de l'histoire et de la société britanniques.</div></li>
-        <li><span class="t">American Civilization: An Introduction</span><div class="s">David Mauk &amp; John Oakland — Routledge</div><div class="d">L'équivalent pour les États-Unis&nbsp;: parfait pour structurer la civilisation américaine.</div></li>
-        <li><span class="t">An Illustrated History of Britain</span><div class="s">David McDowall — Longman</div><div class="d">Une histoire britannique accessible et illustrée, idéale pour se repérer.</div></li>
-        <li><span class="t">Politics and the English Language (et autres essais)</span><div class="s">George Orwell</div><div class="d">Un modèle de clarté et d'argumentation&nbsp;: à lire autant pour le fond que pour le style.</div></li>
-        <li><span class="t">A People's History of the United States</span><div class="s">Howard Zinn</div><div class="d">Une histoire des États-Unis «&nbsp;par le bas&nbsp;»&nbsp;: une perspective engagée, à confronter à d'autres.</div></li>
-      </ul>
-    </div>
-
-    <div class="refcard">
-      <h3><span class="ic t-navy"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>Des sites à confronter aux ressources du CDI</h3>
-      <ul class="reflist">
-        <li><a class="t" href="https://theconversation.com/global" target="_blank" rel="noopener">The Conversation <span class="ar">→</span></a><div class="d">Des analyses écrites par des universitaires, en anglais clair et entièrement gratuit.</div></li>
-        <li><a class="t" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="ar">→</span></a><div class="d">L'actualité britannique et mondiale&nbsp;: une référence incontournable pour les colles.</div></li>
-        <li><a class="t" href="https://www.theguardian.com" target="_blank" rel="noopener">The Guardian <span class="ar">→</span></a><div class="d">Une presse britannique de qualité, largement accessible, riche en articles de fond.</div></li>
-        <li><a class="t" href="https://www.economist.com" target="_blank" rel="noopener">The Economist <span class="ar">→</span></a><div class="d">Analyses économiques et politiques de haut niveau (accès partiellement payant).</div></li>
-        <li><a class="t" href="https://dictionary.cambridge.org" target="_blank" rel="noopener">Cambridge Dictionary <span class="ar">→</span></a><div class="d">Définitions, exemples et prononciation audio (UK et US)&nbsp;: idéal au quotidien.</div></li>
-        <li><a class="t" href="https://www.britannica.com" target="_blank" rel="noopener">Encyclopædia Britannica <span class="ar">→</span></a><div class="d">Des articles de fond fiables pour approfondir un sujet de civilisation.</div></li>
-      </ul>
-    </div>
-
-  </div>
-</div></section>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -756,15 +880,15 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">English Colles in Lyon</div>
-      <nav class="foot-nav" aria-label="Pied de page">
-        <a href="index.html">Accueil</a>
-        <a href="methodology.html">Méthodologie</a>
+      <nav class="foot-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="methodology.html">Methodology</a>
         <a href="civilisation.html">Civilisation</a>
-        <a href="vocabulary.html">Vocabulaire</a>
+        <a href="vocabulary.html">Vocabulary</a>
         <a href="timelines.html">Timelines</a>
         <a href="colle-trainer.html">Colle Trainer</a>
-        <a href="resources.html">Ressources</a>
-        <a href="jury-reports.html">Rapports de jury</a>
+        <a href="resources.html">Resources</a>
+        <a href="jury-reports.html">Jury Reports</a>
       </nav>
     </div>
     <div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
