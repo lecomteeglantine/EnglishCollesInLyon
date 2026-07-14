@@ -1,9 +1,10 @@
 {
-  "lastRun": null,
-  "lastSuccessfulRun": null,
-  "sourcesChecked": 0,
-  "documentsFound": 7,
-  "newDocuments": 0,
+  "lastRun": "2026-07-14T11:03:22.136Z",
+  "lastSuccessfulRun": "2026-07-14T11:03:22.136Z",
+  "sourcesChecked": 8,
+  "documentsFound": 683,
+  "reportsFound": 551,
+  "newDocuments": 676,
   "errors": [],
-  "message": "Automatic monitoring has not run yet. The curated 2025 library is available."
+  "message": "676 nouveau(x) document(s) officiel(s) détecté(s). Les synthèses doivent être validées."
 }
