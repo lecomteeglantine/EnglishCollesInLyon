@@ -91,6 +91,11 @@ BOTTOM = """<div class="ecl-author-footer">
   <span>· English Colles in Lyon</span>
 </div>"""
 
+def has_actual_class(text: str, class_name: str) -> bool:
+    """Detect an actual HTML element class, not a class name inside CSS."""
+    pattern = rf'<[^>]+\bclass=["\'][^"\']*\b{re.escape(class_name)}\b[^"\']*["\']'
+    return bool(re.search(pattern, text, re.I))
+
 def update_page(text: str) -> tuple[str, bool]:
     changed = False
 
@@ -114,7 +119,10 @@ def update_page(text: str) -> tuple[str, bool]:
         )
         changed |= bool(count)
 
-    if "ecl-author-byline" not in text and "ecl-site-signature" not in text:
+    has_byline = has_actual_class(text, "ecl-author-byline")
+    has_banner = has_actual_class(text, "ecl-site-signature")
+
+    if not has_byline and not has_banner:
         brand_pattern = r'(<span\s+class=["\']name["\']\s*>\s*English Colles in Lyon\s*</span>)'
         if re.search(brand_pattern, text, re.I):
             text, count = re.subn(
@@ -135,7 +143,6 @@ def update_page(text: str) -> tuple[str, bool]:
             )
             changed |= bool(count)
 
-    # Upgrade a pre-existing copyright line when present.
     old_copyright = r'(?:©|&copy;)\s*Eglantine Lecomte\s*[—–-]\s*English Colles in Lyon\.?'
     if re.search(old_copyright, text, re.I):
         text, count = re.subn(
@@ -146,13 +153,13 @@ def update_page(text: str) -> tuple[str, bool]:
         )
         changed |= bool(count)
 
-    has_credit = bool(re.search(
+    has_footer_credit = has_actual_class(text, "ecl-author-footer") or bool(re.search(
         r'Designed and created by\s*(?:<strong>)?Eglantine Lecomte',
         text,
         re.I,
     ))
 
-    if "ecl-author-footer" not in text and not has_credit:
+    if not has_footer_credit:
         footer_closings = list(re.finditer(r'</footer>', text, re.I))
         if footer_closings:
             closing = footer_closings[-1]
