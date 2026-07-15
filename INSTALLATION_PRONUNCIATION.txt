@@ -1,0 +1,13 @@
+PRONUNCIATION & INTONATION LAB — INSTALLATION
+
+OPTION LA PLUS SIMPLE
+1. Ouvrir le dépôt GitHub EnglishCollesInLyon.
+2. Cliquer sur Add file > Upload files.
+3. Déposer les 10 fichiers de ce dossier.
+4. Confirmer le remplacement des fichiers existants.
+5. Cliquer sur Commit changes.
+6. Attendre une à deux minutes puis recharger le site avec Ctrl + F5.
+
+Le fichier pronunciation.html est autonome : exercices, défi quotidien, modèles vocaux, progression et enregistrement sont inclus.
+Les neuf autres fichiers ne changent que la navigation afin d'ajouter l'onglet Pronunciation.
+Aucun entretien quotidien n'est nécessaire.
