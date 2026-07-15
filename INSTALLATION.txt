@@ -1,0 +1,10 @@
+CORRECTION — SUPPRESSION DU TABLEAU "YOUR CLASS & COLLE MISSION"
+
+1. Décompressez ce ZIP.
+2. Sur GitHub : Add file > Upload files.
+3. Déposez les trois fichiers site-core.js, colle-trainer.html et service-worker.js.
+4. Validez avec Commit changes.
+5. Attendez 1 à 2 minutes, puis rechargez la page avec Ctrl + F5.
+
+Le grand tableau de suivi de l’accueil est supprimé.
+Le site conserve uniquement des rappels courts indiquant que le travail doit être utilisé en cours d’anglais et en colle.

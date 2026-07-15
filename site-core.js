@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '2026-07-15-2';
+  const VERSION = '2026-07-15-3';
   const STORAGE_KEY = 'eclClassColleMissionsV1';
   const pageFile = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const isHome = pageFile === 'index.html' || pageFile === '';
@@ -53,6 +53,7 @@
       .eclx-mission-task{margin:9px 0 0;color:var(--ink,#22312F);line-height:1.5}.eclx-source{display:inline-flex;margin-top:8px;font-size:.82rem;font-weight:800;color:var(--terra,#C46A4A);text-decoration:none}.eclx-source:hover{text-decoration:underline}.eclx-generated-foot-nav{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:0 auto 16px;padding:0 16px;max-width:var(--maxw,1120px)}.eclx-generated-foot-nav a{font-size:.8rem;font-weight:700;color:var(--muted,#5d6b66);padding:5px 8px;border-radius:8px;text-decoration:none}.eclx-generated-foot-nav a:hover,.eclx-generated-foot-nav a.active{color:var(--terra,#C46A4A);background:var(--bg2,#FFF7ED)}.eclx-remove{border:0;background:transparent;color:var(--muted,#5d6b66);font-size:1.2rem;cursor:pointer;padding:2px 5px;border-radius:7px}.eclx-remove:hover{background:rgba(196,106,74,.12);color:var(--terra,#C46A4A)}
       .eclx-note{margin-top:12px;border-top:1px solid var(--line,#E6D8C8);padding-top:10px}.eclx-note summary{cursor:pointer;color:var(--navy,#243B53);font-size:.86rem;font-weight:800}.eclx-progress-wrap{margin-top:16px}.eclx-progress-meta{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;font-weight:700;color:var(--muted,#5d6b66);margin-bottom:6px}.eclx-progress{height:10px;border-radius:999px;background:var(--line,#E6D8C8);overflow:hidden}.eclx-progress>span{display:block;height:100%;background:linear-gradient(90deg,var(--terra,#C46A4A),var(--sage,#7A9B76));width:0;transition:width .25s}
       .eclx-stale-note{margin-top:9px;padding:8px 10px;border-radius:9px;background:#fff3cd;color:#6b5200;border:1px solid #ead791;font-size:.8rem;line-height:1.35}
+      .eclx-transfer-reminder{margin:26px auto!important}.eclx-transfer-reminder-inner{display:flex;gap:10px;align-items:flex-start;padding:15px 18px;border-left:5px solid var(--terra,#C46A4A);border-radius:10px;background:var(--bg2,#FFF7ED);color:var(--ink,#22312F);line-height:1.5}.eclx-transfer-reminder-inner strong{color:var(--navy,#243B53);white-space:nowrap}.eclx-transfer-reminder-inner span{color:var(--muted,#5d6b66)}
       .eclx-menu-button{display:none;min-height:42px;padding:8px 13px;border:1px solid var(--line,#E6D8C8);border-radius:10px;background:var(--card,#fff);color:var(--navy,#243B53);font:inherit;font-weight:800;cursor:pointer;margin-left:auto}
       .eclx-a11y-fab{position:fixed;right:18px;bottom:18px;z-index:9998;width:50px;height:50px;border-radius:50%;border:2px solid #fff;background:var(--navy,#243B53);color:#fff;box-shadow:0 8px 28px rgba(36,59,83,.25);font:700 1.15rem/1 var(--font,"Atkinson Hyperlegible",sans-serif);cursor:pointer}.eclx-a11y-scrim{position:fixed;inset:0;background:rgba(20,32,43,.46);z-index:9998;display:none}.eclx-a11y-scrim.open{display:block}.eclx-a11y-dialog{position:fixed;right:18px;bottom:80px;z-index:9999;width:min(360px,calc(100vw - 30px));background:var(--card,#fff);border:1px solid var(--line,#E6D8C8);border-radius:16px;box-shadow:0 24px 70px rgba(36,59,83,.25);padding:20px;display:none}.eclx-a11y-dialog.open{display:block}.eclx-a11y-dialog h2{margin:0 0 6px;color:var(--navy,#243B53);font-family:var(--display,"Fraunces",Georgia,serif);font-size:1.35rem}.eclx-a11y-dialog p{margin:0 0 14px;color:var(--muted,#5d6b66);font-size:.88rem}.eclx-a11y-grid{display:grid;gap:9px}.eclx-a11y-option{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:44px;padding:9px 11px;border:1px solid var(--line,#E6D8C8);border-radius:10px;background:var(--bg2,#FFF7ED);font:inherit;font-weight:700;color:var(--ink,#22312F);cursor:pointer}.eclx-a11y-option[aria-pressed="true"]{background:var(--navy,#243B53);color:#fff}.eclx-a11y-close{position:absolute;right:12px;top:10px;border:0;background:transparent;color:var(--muted,#5d6b66);font-size:1.4rem;cursor:pointer}
       html.eclx-large{font-size:112.5%!important}html.eclx-xlarge{font-size:125%!important}body.eclx-contrast{--bg:#fff;--bg2:#fff;--card:#fff;--ink:#000;--muted:#222;--line:#000;--navy:#000;--terra:#8b2100}body.eclx-contrast *{text-shadow:none!important}body.eclx-readable{font-family:"Atkinson Hyperlegible",Arial,sans-serif!important;letter-spacing:.015em}body.eclx-reduce *,body.eclx-reduce *::before,body.eclx-reduce *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
@@ -200,24 +201,20 @@
     if (isHome || document.querySelector('.eclx-transfer-banner')) return;
     const banner = document.createElement('div');
     banner.className = 'eclx-transfer-banner'; banner.setAttribute('role', 'note');
-    banner.innerHTML = `<div class="eclx-inner"><span><strong>English classes and regular colles are indispensable.</strong> Prepare here, use it aloud in class, test it in a real colle and improve through teacher feedback. <a href="index.html#class-colle-mission">View your mission</a></span></div>`;
+    banner.innerHTML = `<div class="eclx-inner"><span><strong>English classes and regular colles are indispensable.</strong> Prepare here, use it aloud in class, test it in a real colle and improve through teacher feedback.</span></div>`;
     const header = document.querySelector('header, .top, .site-header');
     if (header?.parentNode) header.insertAdjacentElement('afterend', banner); else document.body.insertAdjacentElement('afterbegin', banner);
   }
 
   function insertPageMission() {
-    if (isHome || document.querySelector('.eclx-mission-section')) return;
+    if (isHome || document.querySelector('.eclx-transfer-reminder')) return;
     const profile = pageProfile();
     const section = document.createElement('section');
-    section.className = 'eclx-mission-section'; section.id = 'class-colle-transfer'; section.setAttribute('aria-labelledby','eclx-mission-title');
-    section.innerHTML = `<div class="eclx-card"><div class="eclx-card-head"><div class="eclx-eyebrow">Prepare → Class → Colle → Feedback</div><h2 class="eclx-title" id="eclx-mission-title">Do not stop at the screen.</h2><p class="eclx-sub">Save one concrete task. The page is only preparation: the skill must be spoken in class, tested in a real colle and adjusted through teacher feedback.</p></div><div class="eclx-card-body"><label class="eclx-task-label" for="eclx-task-input">Suggested class &amp; colle mission</label><textarea class="eclx-task-input" id="eclx-task-input">${escapeHtml(profile.task)}</textarea><div class="eclx-actions"><button type="button" class="eclx-btn eclx-primary" id="eclx-add-mission">Add to my mission</button><a class="eclx-btn eclx-ghost" href="index.html#class-colle-mission">Open mission dashboard</a></div><div class="eclx-feedback" id="eclx-add-feedback" aria-live="polite"></div></div></div>`;
+    section.className = 'eclx-mission-section eclx-transfer-reminder';
+    section.setAttribute('aria-label', 'Class and colle transfer');
+    section.innerHTML = `<div class="eclx-transfer-reminder-inner"><strong>Use it beyond the screen.</strong><span>${escapeHtml(profile.task)}</span></div>`;
     const footer = document.querySelector('footer');
     if (footer?.parentNode) footer.parentNode.insertBefore(section, footer); else document.body.appendChild(section);
-    section.querySelector('#eclx-add-mission')?.addEventListener('click', () => {
-      const task = section.querySelector('#eclx-task-input')?.value || profile.task;
-      upsertMission(profile, task);
-      section.querySelector('#eclx-add-feedback').textContent = 'Mission saved on this device. It is now visible on the homepage.';
-    });
   }
 
   function renderDashboard() {
@@ -273,6 +270,11 @@
     window.addEventListener('eclx-add-mission', event => add(event.detail));
   }
 
+  function removeLegacyMissionUI() {
+    document.querySelectorAll('.eclx-dashboard').forEach(element => element.remove());
+    document.querySelectorAll('a[href*="#class-colle-mission"]').forEach(link => link.remove());
+  }
+
   function parseDisplayedDate(dateEl) {
     if (dateEl.dataset.iso) { const d=new Date(dateEl.dataset.iso); if(Number.isFinite(d.getTime())) return d; }
     const text=safeText(dateEl.textContent);
@@ -311,7 +313,15 @@
   }
 
   function init() {
-    injectStyles(); normalizeNavigation(); ensureHubFooterNavigation(); installMobileMenuFallback(); insertTransferBanner(); bindExternalMissionAPI(); insertDashboard(); insertPageMission(); addFreshnessWarning(); insertAccessibilityFallback();
+    injectStyles();
+    removeLegacyMissionUI();
+    normalizeNavigation();
+    ensureHubFooterNavigation();
+    installMobileMenuFallback();
+    insertTransferBanner();
+    insertPageMission();
+    addFreshnessWarning();
+    insertAccessibilityFallback();
     document.documentElement.dataset.eclxCore=VERSION;
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();

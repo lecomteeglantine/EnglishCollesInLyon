@@ -296,8 +296,7 @@ function renderStep(){
   } else {
     panel.innerHTML=`<div class="eyebrow">Step 4 · Review, take it to class and test it in a colle</div><p class="step-lead">Self-evaluation is useful only when it leads to a precise action outside the screen.</p><div class="review-grid"><div class="review-card"><h3>Quick self-evaluation</h3>${[
       "I contextualised the document before analysing it.","I formulated a genuine key question.","My plan answered that question and moved forward.","I used precise, contextualised evidence.","I reused accurate grammar and vocabulary.","My stress and intonation helped the listener follow my ideas."
-    ].map((label,i)=>`<label class="review-check"><input type="checkbox" id="eval${i}"><span>${label}</span></label>`).join("")}</div><div class="review-card"><h3>Prepare the feedback loop</h3><label class="inline-label" for="teacherQuestion">One question to ask in English class</label><textarea class="notes compact-notes" id="teacherQuestion" placeholder="What do I still not understand or know how to do?">${esc(work.teacherQuestion)}</textarea><label class="inline-label" for="feedbackNote">Teacher feedback received</label><textarea class="notes compact-notes" id="feedbackNote" placeholder="Complete this after class or after the real colle.">${esc(work.feedback)}</textarea><label class="inline-label" for="nextPriority">One priority for the next real colle</label><textarea class="notes compact-notes" id="nextPriority" placeholder="Keep it specific and manageable.">${esc(work.nextPriority||config.focus)}</textarea></div></div><div class="transfer-box"><h3>Save the real-world mission</h3><p><strong>English class:</strong> ask your question and use one prepared element aloud.<br><strong>Next colle:</strong> focus on one priority and collect feedback.<br><strong>Afterwards:</strong> return to the homepage mission dashboard and record what changed.</p><button class="btn primary" id="saveTransfer" type="button">Add this to my class &amp; colle mission</button><div class="transfer-result" id="transferResult" aria-live="polite"></div></div>`;
-    document.getElementById("saveTransfer").addEventListener("click",saveTransferMission);
+    ].map((label,i)=>`<label class="review-check"><input type="checkbox" id="eval${i}"><span>${label}</span></label>`).join("")}</div><div class="review-card"><h3>Prepare the feedback loop</h3><label class="inline-label" for="teacherQuestion">One question to ask in English class</label><textarea class="notes compact-notes" id="teacherQuestion" placeholder="What do I still not understand or know how to do?">${esc(work.teacherQuestion)}</textarea><label class="inline-label" for="feedbackNote">Teacher feedback received</label><textarea class="notes compact-notes" id="feedbackNote" placeholder="Complete this after class or after the real colle.">${esc(work.feedback)}</textarea><label class="inline-label" for="nextPriority">One priority for the next real colle</label><textarea class="notes compact-notes" id="nextPriority" placeholder="Keep it specific and manageable.">${esc(work.nextPriority||config.focus)}</textarea></div></div><div class="transfer-box"><h3>Take this into English class and your next colle</h3><p><strong>English class:</strong> ask your question and use one prepared element aloud.<br><strong>Next colle:</strong> focus on one manageable priority and collect precise feedback.<br><strong>Afterwards:</strong> update your notes above with what your teacher actually corrected.</p></div>`;
   }
   panel.querySelectorAll("textarea").forEach(el=>el.addEventListener("input",saveWork));
   document.getElementById("ctNext").textContent=step<3?"Next step →":"Finish and return to the dossier";
@@ -318,19 +317,11 @@ function setupRecorder(){
 function revokeAudio(){if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl="";}if(mediaStream){mediaStream.getTracks().forEach(t=>t.stop());mediaStream=null;}}
 function stopAllTimers(){stopPrep();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}}
 
-function saveTransferMission(){
-  saveWork();
-  const priority=(work.nextPriority||config.focus).trim();
-  const teacherQuestion=(work.teacherQuestion||"Ask the teacher for one precise correction").trim();
-  const task=`In English class, ${teacherQuestion.charAt(0).toLowerCase()+teacherQuestion.slice(1)}. In the next real colle, focus on ${priority} and reuse one contextualised example from today’s document. After feedback, record the next priority on the homepage dashboard.`;
-  if(window.ECLTransfer?.addMission){window.ECLTransfer.addMission({id:"colle-trainer",domain:"Colle Trainer",task,page:"colle-trainer.html",pageTitle:chosen?.title||"Colle Trainer"});document.getElementById("transferResult").textContent="Mission saved. It is now visible on the homepage.";}else{document.getElementById("transferResult").textContent="The mission system is still loading. Wait a moment and try again.";}
-}
-
 document.getElementById("ctNext").addEventListener("click",()=>{saveWork();if(step<3){step++;renderStep();}else{stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});}});
 document.getElementById("ctBack").addEventListener("click",()=>{saveWork();stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});});
 [0,1,2,3].forEach(i=>document.getElementById("sb"+i).addEventListener("click",()=>{saveWork();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}step=i;renderStep();}));
 restoreWork();
 </script>
 
-<script src="site-core.js?v=20260715-2"></script>
+<script src="site-core.js?v=20260715-3"></script>
 </body></html>

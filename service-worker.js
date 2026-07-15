@@ -1,5 +1,5 @@
 /* English Colles in Lyon — service worker (offline support without stale update traps) */
-const VERSION = 'eclyon-v4-stabilised-20260715';
+const VERSION = 'eclyon-v5-clean-transfer-20260715';
 const CORE = [
   './', 'index.html', 'methodology.html', 'civilisation.html', 'vocabulary.html',
   'grammar.html', 'pronunciation.html', 'timelines.html', 'colle-trainer.html',
