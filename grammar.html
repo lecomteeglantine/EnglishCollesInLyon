@@ -1,11 +1,152 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grammar Lab · English Colles in Lyon</title><meta name="description" content="86 CPGE grammar chapters, diagnostic, pathways and interactive practice for English colles."><link rel="stylesheet" href="grammar.css"></head><body>
-<header class="site-head"><div class="wrap head-row"><a class="brand" href="index.html">English Colles in Lyon</a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a class="active" href="grammar.html">Grammar</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a></nav><button class="burger" id="burger">☰</button></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Prepare here · Use it in class · Test it in colles</div><h1>Grammar is a tool, not a museum.</h1><p>Diagnose what holds you back, follow a focused pathway, practise actively and reuse the structures in real analysis and colles.</p><div class="hero-actions"><button class="btn btn-primary" id="openDiagnostic">Take the diagnostic</button><a class="btn btn-light" href="#pathways">Explore the pathways</a></div></div></section>
-<div class="wrap progress-strip"><div class="progress-card"><div class="ring"><strong id="overallPct">0%</strong></div><div><strong>Your Grammar Lab progress</strong><div class="bar"><span id="overallBar"></span></div><small id="overallText">0 of 86 chapters studied</small></div><button class="btn btn-primary" id="continueBtn">Continue where I stopped</button></div></div>
-<section><div class="wrap"><div class="section-head"><div><h2>Where should I start?</h2><p>Choose the problem you actually need to solve. The page will take you to the relevant work instead of making you browse blindly.</p></div></div><div class="start-grid"><button class="start-card" data-recommend="basic">🧱<b>I keep making basic mistakes</b><span>Repair word order, articles, questions and core sentence patterns.</span></button><button class="start-card" data-recommend="tenses">⏳<b>I lose control of tenses</b><span>Work on chronology, aspect and tense contrasts.</span></button><button class="start-card" data-recommend="complex">🧩<b>My sentences are too simple</b><span>Build accurate relative, participle and emphatic structures.</span></button><button class="start-card" data-recommend="academic">🎓<b>I want to sound more precise</b><span>Improve register, hedging, cohesion and concision.</span></button><button class="start-card" data-recommend="quick">⚡<b>I only have five minutes</b><span>Use the interactive Grammar Clinic below.</span></button><button class="start-card" data-recommend="lost">🧭<b>I have no idea where to start</b><span>Take a short diagnostic and receive a priority pathway.</span></button></div></div></section>
-<section id="pathways"><div class="wrap"><div class="section-head"><div><h2>Six learning pathways</h2><p>The 86 chapters are organised by communicative purpose, not dumped into one endless list.</p></div></div><div class="track-grid"><article class="track-card"><div class="icon">🧱</div><h3>Foundation Repair</h3><p>Build reliable sentences before aiming for sophistication.</p><div class="track-progress"><span data-track-progress="foundation"></span></div><div class="track-meta"><span>12 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('foundation')">Explore pathway</button></p></article><article class="track-card"><div class="icon">⏳</div><h3>Time & Aspect</h3><p>Control chronology, duration and relationships between events.</p><div class="track-progress"><span data-track-progress="time"></span></div><div class="track-meta"><span>10 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('time')">Explore pathway</button></p></article><article class="track-card"><div class="icon">🔭</div><h3>Modality & Hypothesis</h3><p>Express obligation, probability, deduction, wishes and unreal situations.</p><div class="track-progress"><span data-track-progress="hypothesis"></span></div><div class="track-meta"><span>12 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('hypothesis')">Explore pathway</button></p></article><article class="track-card"><div class="icon">🧩</div><h3>Complex Sentence Building</h3><p>Combine ideas accurately and vary sentence architecture.</p><div class="track-progress"><span data-track-progress="complex"></span></div><div class="track-meta"><span>23 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('complex')">Explore pathway</button></p></article><article class="track-card"><div class="icon">⚖️</div><h3>Argumentation & Nuance</h3><p>Link, qualify, oppose and structure ideas for analysis and discussion.</p><div class="track-progress"><span data-track-progress="argument"></span></div><div class="track-meta"><span>16 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('argument')">Explore pathway</button></p></article><article class="track-card"><div class="icon">🎓</div><h3>Academic Precision</h3><p>Improve register, cohesion, concision and idiomatic accuracy.</p><div class="track-progress"><span data-track-progress="academic"></span></div><div class="track-meta"><span>14 chapters</span><strong class="track-percent">0% complete</strong></div><p><button class="btn btn-ghost" onclick="setFilter('academic')">Explore pathway</button></p></article></div></div></section>
-<section class="lab" id="practice"><div class="wrap"><div class="section-head"><div><h2>Interactive Grammar Lab</h2><p>Make a choice, get immediate feedback and open the chapter that explains the point.</p></div></div><div class="game-tabs"><button class="game-tab active" data-game="clinic">Grammar Clinic</button><button class="game-tab" data-game="precision">Choose the precise form</button><button class="game-tab" data-game="workout">Five-minute workout</button></div><div class="game-card"><div id="gameCounter"></div><h3 id="gameTitle"></h3><p id="gameQuestion"></p><div class="options" id="gameOptions"></div><div class="feedback" id="gameFeedback"></div><div class="game-actions"><span></span><button class="btn btn-primary" id="nextGame">Next question</button></div></div></div></section>
-<section id="allChapters"><div class="wrap"><div class="section-head"><div><h2>Chapter library</h2><p>Search by topic, filter by pathway and record your progress locally on this device.</p></div><strong id="resultCount"></strong></div><div class="controls"><input id="search" class="search" type="search" placeholder="Search: conditionals, articles, hedging…"><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="foundation">Foundation Repair</button><button class="filter" data-filter="time">Time & Aspect</button><button class="filter" data-filter="hypothesis">Modality & Hypothesis</button><button class="filter" data-filter="complex">Complex Sentence Building</button><button class="filter" data-filter="argument">Argumentation & Nuance</button><button class="filter" data-filter="academic">Academic Precision</button></div></div><div class="chapter-grid" id="chapterGrid"></div></div></section>
-<section class="transfer"><div class="wrap"><div class="section-head"><div><h2>Transfer it to class and colles</h2><p>Recognition is not mastery. Use the grammar to produce a real analytical response aloud.</p></div></div><div class="transfer-box"><div class="eyebrow" style="color:#80621a">COLLE TRANSFER CHALLENGE</div><p class="prompt" id="transferPrompt"></p><p>Speak for 60–90 seconds. Record yourself or use the task in class. Then identify the structures you used successfully.</p><button class="btn btn-primary" id="newTransfer">Generate another challenge</button></div></div></section>
-<footer class="footer"><div class="wrap"><strong>English Colles in Lyon</strong><p>Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</p><a href="index.html">Back to home</a></div></footer>
-<div class="diagnostic-modal hidden" id="diagnostic"><div class="diagnostic-card"><div class="modal-top"><div></div><button class="close" id="closeDiagnostic">×</button></div><div id="diagnosticBody"></div></div></div><script src="grammar-data.js"></script><script src="grammar.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammar Lab · English Colles in Lyon</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#243B53">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="English Colles">
+<meta name="description" content="86 CPGE grammar chapters, diagnostic pathways and interactive practice for English colles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="grammar.css">
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
+      <span class="name">English Colles in Lyon</span>
+      <span class="ecl-author-byline">by Eglantine Lecomte</span>
+      <span class="sub">CPGE English · Independent practice · Colles</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="civilisation.html">Civilisation</a>
+      <a href="vocabulary.html">Vocabulary</a>
+      <a href="grammar.html" class="active">Grammar</a>
+      <a href="timelines.html">Timelines</a>
+      <a href="colle-trainer.html">Colle Trainer</a>
+      <a href="resources.html">Resources</a>
+      <a href="jury-reports.html">Jury Reports</a>
+    </nav>
+    <div class="top-tools">
+      <div class="accent" id="accent" role="group" aria-label="Choose an accent">
+        <button data-acc="UK" class="on">UK</button><button data-acc="US">US</button><button data-acc="AU">AU</button><button data-acc="CA">CA</button>
+      </div>
+      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
+        <span class="lbl">Accessibility</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+  <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
+  <div class="a11y-body">
+    <div class="a11y-group"><span class="lbl">Text size</span><div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div></div>
+    <div class="a11y-group"><span class="lbl">Display</span>
+      <button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Reading-friendly font</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Reduce animations</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="focus"><span>Focus mode</span><span class="state">Off</span></button>
+    </div>
+    <p class="a11y-foot">Your settings are saved on this device.</p>
+  </div>
+</aside>
+
+<main id="main">
+<section class="hero grammar-hero">
+  <div class="wrap"><div class="hero-grid grammar-hero-grid">
+    <div>
+      <div class="eyebrow">Grammar · Active practice</div>
+      <h1>Grammar is a tool, not a museum.</h1>
+      <p class="welcome">Diagnose what holds you back, follow a focused pathway and practise actively.</p>
+      <p class="more">Then reuse the structures in real analysis, classroom discussion and colles. Recognition is only the beginning: the aim is accurate, flexible production.</p>
+      <div class="cta"><button class="btn btn-primary" id="openDiagnostic">Take the diagnostic <span class="ar">→</span></button><a class="btn btn-ghost" href="#pathways">Explore the pathways</a></div>
+    </div>
+    <aside class="grammar-progress-widget" aria-label="Grammar progress">
+      <div class="gpw-top"><div class="gpw-icon">✓</div><div class="gpw-title">Your Grammar Lab progress<span>Saved on this device</span></div></div>
+      <div class="gpw-body"><div class="gpw-progress"><div class="ring"><strong id="overallPct">0%</strong></div><div class="progress-copy"><strong>Build reliable habits</strong><div class="bar"><span id="overallBar"></span></div><small id="overallText">0 of 86 chapters studied</small></div></div><button class="btn btn-navy" id="continueBtn">Continue where I stopped <span class="ar">→</span></button><div class="gpw-note">Your status stays private in your browser.</div></div>
+    </aside>
+  </div></div>
+</section>
+
+<section class="grammar-section">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Choose a priority</div><h2>Where should I start?</h2><p>Choose the problem you actually need to solve. The page will take you to relevant work instead of making you browse blindly.</p></div></div>
+  <div class="start-grid">
+    <button class="start-card" data-recommend="basic"><span class="start-icon">🧱</span><span class="start-copy"><b>I keep making basic mistakes</b><span>Repair word order, articles, questions and core sentence patterns.</span></span></button>
+    <button class="start-card" data-recommend="tenses"><span class="start-icon">⏳</span><span class="start-copy"><b>I lose control of tenses</b><span>Work on chronology, aspect and tense contrasts.</span></span></button>
+    <button class="start-card" data-recommend="complex"><span class="start-icon">🧩</span><span class="start-copy"><b>My sentences are too simple</b><span>Build accurate relative, participle and emphatic structures.</span></span></button>
+    <button class="start-card" data-recommend="academic"><span class="start-icon">🎓</span><span class="start-copy"><b>I want to sound more precise</b><span>Improve register, hedging, cohesion and concision.</span></span></button>
+    <button class="start-card" data-recommend="quick"><span class="start-icon">⚡</span><span class="start-copy"><b>I only have five minutes</b><span>Use the interactive Grammar Clinic below.</span></span></button>
+    <button class="start-card" data-recommend="lost"><span class="start-icon">🧭</span><span class="start-copy"><b>I have no idea where to start</b><span>Take a short diagnostic and receive a priority pathway.</span></span></button>
+  </div></div>
+</section>
+
+<section class="grammar-section alt" id="pathways">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Structured progression</div><h2>Six learning pathways</h2><p>The 86 chapters are organised by communicative purpose, not dumped into one endless list.</p></div></div>
+  <div class="track-grid">
+    <article class="track-card"><div class="icon">🧱</div><h3>Foundation Repair</h3><p>Build reliable sentences before aiming for sophistication.</p><div class="track-progress"><span data-track-progress="foundation"></span></div><div class="track-meta"><span>11 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('foundation')">Explore pathway</button></article>
+    <article class="track-card"><div class="icon">⏳</div><h3>Time &amp; Aspect</h3><p>Control chronology, duration and relationships between events.</p><div class="track-progress"><span data-track-progress="time"></span></div><div class="track-meta"><span>10 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('time')">Explore pathway</button></article>
+    <article class="track-card"><div class="icon">🔭</div><h3>Modality &amp; Hypothesis</h3><p>Express obligation, probability, deduction, wishes and unreal situations.</p><div class="track-progress"><span data-track-progress="hypothesis"></span></div><div class="track-meta"><span>12 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('hypothesis')">Explore pathway</button></article>
+    <article class="track-card"><div class="icon">🧩</div><h3>Complex Sentence Building</h3><p>Combine ideas accurately and vary sentence architecture.</p><div class="track-progress"><span data-track-progress="complex"></span></div><div class="track-meta"><span>23 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('complex')">Explore pathway</button></article>
+    <article class="track-card"><div class="icon">⚖️</div><h3>Argumentation &amp; Nuance</h3><p>Link, qualify, oppose and structure ideas for analysis and discussion.</p><div class="track-progress"><span data-track-progress="argument"></span></div><div class="track-meta"><span>16 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('argument')">Explore pathway</button></article>
+    <article class="track-card"><div class="icon">🎓</div><h3>Academic Precision</h3><p>Improve register, cohesion, concision and idiomatic accuracy.</p><div class="track-progress"><span data-track-progress="academic"></span></div><div class="track-meta"><span>14 chapters</span><strong class="track-percent">0% complete</strong></div><button class="btn btn-ghost" onclick="setFilter('academic')">Explore pathway</button></article>
+  </div></div>
+</section>
+
+<section class="grammar-section lab" id="practice">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Practise actively</div><h2>Interactive Grammar Lab</h2><p>Make a choice, get immediate feedback and open the chapter that explains the point.</p></div></div>
+  <div class="game-tabs"><button class="game-tab active" data-game="clinic">Grammar Clinic</button><button class="game-tab" data-game="precision">Choose the precise form</button><button class="game-tab" data-game="workout">Five-minute workout</button></div>
+  <div class="game-card"><div id="gameCounter"></div><h3 id="gameTitle"></h3><p id="gameQuestion"></p><div class="options" id="gameOptions"></div><div class="feedback" id="gameFeedback"></div><div class="game-actions"><span></span><button class="btn btn-primary" id="nextGame">Next question <span class="ar">→</span></button></div></div></div>
+</section>
+
+<section class="grammar-section" id="allChapters">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Browse and track</div><h2>Chapter library</h2><p>Search by topic, filter by pathway and record your progress locally on this device.</p></div><strong id="resultCount"></strong></div>
+  <div class="controls"><input id="search" class="search" type="search" placeholder="Search: conditionals, articles, hedging…"><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="foundation">Foundation Repair</button><button class="filter" data-filter="time">Time &amp; Aspect</button><button class="filter" data-filter="hypothesis">Modality &amp; Hypothesis</button><button class="filter" data-filter="complex">Complex Sentence Building</button><button class="filter" data-filter="argument">Argumentation &amp; Nuance</button><button class="filter" data-filter="academic">Academic Precision</button></div></div><div class="chapter-grid" id="chapterGrid"></div></div>
+</section>
+
+<section class="grammar-section transfer">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">From self-study to real progress</div><h2>Transfer it to class and colles</h2><p>Recognition is not mastery. Use the grammar to produce a real analytical response aloud.</p></div></div>
+  <div class="transfer-box"><div class="eyebrow">Colle transfer challenge</div><p class="prompt" id="transferPrompt"></p><p>Speak for 60–90 seconds. Record yourself or use the task in class. Then identify the structures you used successfully.</p><button class="btn btn-primary" id="newTransfer">Generate another challenge</button></div></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><div class="foot-grid"><div class="foot-brand">English Colles in Lyon</div><nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav></div><div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div><div class="foot-copy">Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon.</div></div>
+</footer>
+
+<div class="diagnostic-modal hidden" id="diagnostic"><div class="diagnostic-card"><div class="modal-top"><div></div><button class="close" id="closeDiagnostic" aria-label="Close diagnostic">×</button></div><div id="diagnosticBody"></div></div></div>
+<script>
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+const ACC_LABEL={UK:"UK English",US:"US English",AU:"Australian English",CA:"Canadian English"};
+const accentBox=document.getElementById('accent'),accentNote=document.getElementById('accentNote');
+function setAccent(a){accentBox.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.acc===a));accentNote.textContent="Accent selected: "+ACC_LABEL[a];LS.set('eclyon_accent',a);}
+accentBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setAccent(b.dataset.acc)));setAccent(LS.get('eclyon_accent','UK'));
+const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('scrim');
+function openA11y(){panel.classList.add('open');scrim.classList.add('open');}function closeA11y(){panel.classList.remove('open');scrim.classList.remove('open');}
+document.getElementById('openA11y').addEventListener('click',openA11y);document.getElementById('closeA11y').addEventListener('click',closeA11y);scrim.addEventListener('click',closeA11y);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA11y();});
+const SIZES=[18,20.5,23];function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i);}
+document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));applySize(+LS.get('eclyon_size',0));
+function applyOpt(opt,on){document.body.classList.toggle(opt,on);const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off';}LS.set('eclyon_'+opt,on?'1':'0');}
+document.querySelectorAll('.opt-toggle').forEach(btn=>{const opt=btn.dataset.opt;btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');});
+</script>
+<script src="grammar-data.js"></script>
+<script src="grammar.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}</script>
+</body>
+</html>
