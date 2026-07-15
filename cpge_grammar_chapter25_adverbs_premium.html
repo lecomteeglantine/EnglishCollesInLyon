@@ -1,73 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGE Grammar Bible — Chapter 25: Adverbs and Adverb Placement</title>
 <style>
 :root{--navy:#1f3a5f;--blue:#2f6f9f;--light-blue:#eaf4fb;--cream:#fffaf0;--ink:#1f2933;--muted:#5f6c7b;--border:#d7e3ec;--accent:#f3c969;--green:#dff3ea}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:var(--ink);line-height:1.55}
-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;padding:44px 28px;text-align:center}header h1{margin:0;font-size:2.15rem}header p{margin:12px auto 0;max-width:900px;font-size:1.05rem;opacity:.96}
+header{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;padding:44px 28px;text-align:center}
+header h1{margin:0;font-size:2.15rem}header p{margin:12px auto 0;max-width:900px;font-size:1.05rem;opacity:.96}
 main{max-width:1120px;margin:0 auto;padding:28px}.intro,.study-box{background:white;border:1px solid var(--border);border-radius:18px;padding:24px;margin-bottom:24px;box-shadow:0 6px 18px rgba(31,58,95,.06)}
-.intro h2,.study-box h2{color:var(--navy);margin-top:0}.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.tag{background:var(--light-blue);color:var(--navy);padding:7px 11px;border-radius:999px;font-size:.9rem;font-weight:bold}.level{background:var(--green);color:#1d5b46}
-.section-title{margin:36px 0 16px;color:var(--navy);border-left:8px solid var(--accent);padding-left:12px;font-size:1.45rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
-.card{background:white;border:1px solid var(--border);border-radius:18px;padding:20px;box-shadow:0 6px 16px rgba(31,58,95,.05)}.card h3{margin:0 0 8px;color:var(--blue);font-size:1.22rem}
-.meta{display:grid;gap:6px;margin-bottom:12px;color:var(--muted);font-size:.94rem}.label{font-weight:bold;color:var(--navy)}.definition{margin:10px 0}.example{background:var(--cream);border-left:4px solid var(--accent);padding:10px 12px;border-radius:10px;margin-top:12px;font-style:italic}
+.intro h2,.study-box h2{color:var(--navy);margin-top:0}.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.tag{background:var(--light-blue);color:var(--navy);padding:7px 11px;border-radius:999px;font-size:.9rem;font-weight:bold}.level{background:var(--green);color:#1d5b46}
+.section-title{margin:36px 0 16px;color:var(--navy);border-left:8px solid var(--accent);padding-left:12px;font-size:1.45rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
+.card{background:white;border:1px solid var(--border);border-radius:18px;padding:20px;box-shadow:0 6px 16px rgba(31,58,95,.05)}
+.card h3{margin:0 0 8px;color:var(--blue);font-size:1.22rem}.meta{display:grid;gap:6px;margin-bottom:12px;color:var(--muted);font-size:.94rem}
+.label{font-weight:bold;color:var(--navy)}.definition{margin:10px 0}.example{background:var(--cream);border-left:4px solid var(--accent);padding:10px 12px;border-radius:10px;margin-top:12px;font-style:italic}
 .mini-table{width:100%;border-collapse:collapse;margin-top:12px}.mini-table th,.mini-table td{border:1px solid var(--border);padding:10px;text-align:left;vertical-align:top}.mini-table th{background:var(--light-blue);color:var(--navy)}
-.formula{font-size:1.25rem;text-align:center;background:#f9fcff;border:1px solid var(--border);border-radius:16px;padding:18px;margin:16px 0;color:var(--navy);font-weight:bold}footer{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
-@media print{body{background:white}.card,.intro,.study-box{box-shadow:none;break-inside:avoid}header{background:var(--navy)}}
-</style>
-  <meta name="author" content="Eglantine Lecomte">
-<style id="ecl-author-signature-style">
-.ecl-author-byline{
-  display:block!important;margin-top:2px!important;
-  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  font-size:.66rem!important;line-height:1.2!important;font-weight:700!important;
-  letter-spacing:.055em!important;color:#C46A4A!important;text-transform:none!important;
-}
-.ecl-site-signature{
-  display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:center!important;gap:1px!important;width:100%!important;min-height:54px!important;
-  padding:7px 16px!important;margin:0!important;border:0!important;border-radius:0!important;
-  background:#243B53!important;color:#fff!important;text-decoration:none!important;text-align:center!important;
-  box-shadow:none!important;font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  position:relative!important;z-index:2!important;
-}
-.ecl-site-signature:hover{background:#2f5573!important;color:#fff!important}
-.ecl-site-signature .ecl-site-title{
-  font-family:Georgia,"Times New Roman",serif!important;font-size:1.03rem!important;
-  line-height:1.15!important;font-weight:700!important;letter-spacing:0!important;
-}
-.ecl-site-signature .ecl-site-author{
-  font-size:.7rem!important;line-height:1.2!important;font-weight:700!important;
-  letter-spacing:.055em!important;color:#F1C66A!important;
-}
-.ecl-author-footer{
-  display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;
-  gap:.35em!important;width:100%!important;max-width:1120px!important;margin:18px auto 0!important;
-  padding:14px 16px 0!important;border-top:1px dashed rgba(122,155,118,.55)!important;
-  color:#5d6b66!important;background:transparent!important;text-align:center!important;
-  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  font-size:.82rem!important;line-height:1.45!important;font-weight:400!important;
-}
-.ecl-author-footer strong{color:#243B53!important;font-weight:700!important}
-footer.ecl-generated-footer{
-  display:block!important;width:100%!important;margin:0!important;padding:22px 16px!important;
-  border-top:1px solid #E6D8C8!important;background:#FFF7ED!important;
-}
-footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-top:0!important;border-top:0!important}
-@media(max-width:560px){
-  .ecl-site-signature{min-height:49px!important;padding:6px 12px!important}
-  .ecl-site-signature .ecl-site-title{font-size:.96rem!important}
-  .ecl-author-footer{font-size:.76rem!important}
-}
+.formula{font-size:1.25rem;text-align:center;background:#f9fcff;border:1px solid var(--border);border-radius:16px;padding:18px;margin:16px 0;color:var(--navy);font-weight:bold}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}@media print{body{background:white}.card,.intro,.study-box{box-shadow:none;break-inside:avoid}header{background:var(--navy)}}
 </style>
 </head>
-<body>
-<a class="ecl-site-signature" href="index.html" aria-label="English Colles in Lyon — accueil">
-  <span class="ecl-site-title">English Colles in Lyon</span>
-  <span class="ecl-site-author">by Eglantine Lecomte</span>
-</a>
+<body><style id="grammar-lab-toolbar-style">.gl-toolbar{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid #d7e3ec;box-shadow:0 4px 14px rgba(31,58,95,.09);padding:10px 16px;font-family:Arial,sans-serif}.gl-toolbar-inner{max-width:1120px;margin:auto;display:flex;gap:10px;align-items:center;justify-content:space-between}.gl-toolbar a,.gl-toolbar button,.gl-toolbar select{border:1px solid #d7e3ec;border-radius:9px;padding:8px 10px;background:#fff;color:#1f3a5f;font-weight:700;text-decoration:none}.gl-toolbar .gl-home{background:#1f3a5f;color:#fff}.gl-toolbar-nav{display:flex;gap:7px;align-items:center;flex-wrap:wrap}@media(max-width:650px){.gl-toolbar-inner{align-items:stretch;flex-direction:column}.gl-toolbar-nav{justify-content:center}.gl-toolbar select{flex:1}}</style><div class="gl-toolbar"><div class="gl-toolbar-inner"><div class="gl-toolbar-nav"><a class="gl-home" href="grammar.html">← Grammar Lab</a><a href="cpge_grammar_chapter24_prepositions_premium.html">Previous</a><a href="cpge_grammar_chapter26_determiners_premium.html">Next</a></div><div class="gl-toolbar-nav"><strong>Chapter 25/86</strong><select id="glStatus" aria-label="Chapter progress"><option value="">To study</option><option value="studying">Studying</option><option value="studied">Studied</option><option value="ready">Ready to use</option><option value="revise">Needs revision</option></select></div></div></div>
 <header>
 <h1>CPGE Grammar Bible</h1>
 <p><strong>Chapter 25 — Adverbs and Adverb Placement</strong><br>B1 → B2 grammar for nuance, precision, data commentary and academic argumentation.</p>
@@ -87,267 +42,62 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <tr><th>Key trap</th><td>Do not confuse <strong>actually</strong> and <strong>currently</strong>: <strong>currently</strong> = now; <strong>actually</strong> = in fact.</td></tr>
 </table>
 </section>
-<h2 class="section-title">A. Lesson — What are adverbs?</h2><section class="grid"><article class="card">
-<h3>Adverbs</h3>
-<div class="meta"><div><span class="label">French:</span> adverbes</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs modify verbs, adjectives, other adverbs or whole sentences.</p>
-<p class="example"><span class="label">Example / answer:</span> The article clearly explains the causes of the crisis.</p>
-</article><article class="card">
-<h3>Manner</h3>
-<div class="meta"><div><span class="label">French:</span> manière</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs of manner explain how something happens.</p>
-<p class="example"><span class="label">Example / answer:</span> The government reacted slowly.</p>
-</article><article class="card">
-<h3>Frequency</h3>
-<div class="meta"><div><span class="label">French:</span> fréquence</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs of frequency explain how often something happens.</p>
-<p class="example"><span class="label">Example / answer:</span> Politicians often promise reform.</p>
-</article><article class="card">
-<h3>Degree</h3>
-<div class="meta"><div><span class="label">French:</span> degré</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs of degree intensify or soften meaning.</p>
-<p class="example"><span class="label">Example / answer:</span> The argument is highly convincing.</p>
-</article><article class="card">
-<h3>Sentence adverbs</h3>
-<div class="meta"><div><span class="label">French:</span> adverbes de phrase</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Some adverbs comment on the whole sentence.</p>
-<p class="example"><span class="label">Example / answer:</span> Clearly, the policy needs more funding.</p>
-</article><article class="card">
-<h3>CPGE use</h3>
-<div class="meta"><div><span class="label">French:</span> usage CPGE</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs help students nuance claims and write more precise academic English.</p>
-<p class="example"><span class="label">Example / answer:</span> The author cautiously suggests that the reform may fail.</p>
-</article></section><h2 class="section-title">B. Adverbs of frequency</h2><section class="grid"><article class="card">
-<h3>Always</h3>
-<div class="meta"><div><span class="label">French:</span> toujours</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means 100% of the time; placed before the main verb but after be.</p>
-<p class="example"><span class="label">Example / answer:</span> Politicians always promise change.</p>
-</article><article class="card">
-<h3>Usually</h3>
-<div class="meta"><div><span class="label">French:</span> habituellement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means most of the time.</p>
-<p class="example"><span class="label">Example / answer:</span> The press usually focuses on conflict.</p>
-</article><article class="card">
-<h3>Often</h3>
-<div class="meta"><div><span class="label">French:</span> souvent</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means frequently.</p>
-<p class="example"><span class="label">Example / answer:</span> The article often refers to recent data.</p>
-</article><article class="card">
-<h3>Sometimes</h3>
-<div class="meta"><div><span class="label">French:</span> parfois</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means occasionally.</p>
-<p class="example"><span class="label">Example / answer:</span> Governments sometimes ignore expert warnings.</p>
-</article><article class="card">
-<h3>Rarely</h3>
-<div class="meta"><div><span class="label">French:</span> rarement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means not often.</p>
-<p class="example"><span class="label">Example / answer:</span> The author rarely mentions rural voters.</p>
-</article><article class="card">
-<h3>Never</h3>
-<div class="meta"><div><span class="label">French:</span> jamais</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means 0%; do not use with another negative.</p>
-<p class="example"><span class="label">Example / answer:</span> The article never claims that reform is easy.</p>
-</article></section><h2 class="section-title">C. Adverbs of manner, place and data</h2><section class="grid"><article class="card">
-<h3>Carefully</h3>
-<div class="meta"><div><span class="label">French:</span> soigneusement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> With attention and precision.</p>
-<p class="example"><span class="label">Example / answer:</span> Students should read the question carefully.</p>
-</article><article class="card">
-<h3>Clearly</h3>
-<div class="meta"><div><span class="label">French:</span> clairement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> In a clear way.</p>
-<p class="example"><span class="label">Example / answer:</span> The article clearly identifies the problem.</p>
-</article><article class="card">
-<h3>Gradually</h3>
-<div class="meta"><div><span class="label">French:</span> progressivement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Little by little; useful for trends.</p>
-<p class="example"><span class="label">Example / answer:</span> Public trust has gradually declined.</p>
-</article><article class="card">
-<h3>Sharply</h3>
-<div class="meta"><div><span class="label">French:</span> fortement / brusquement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Suddenly or strongly; useful for data.</p>
-<p class="example"><span class="label">Example / answer:</span> Prices rose sharply after the energy crisis.</p>
-</article><article class="card">
-<h3>Nationwide</h3>
-<div class="meta"><div><span class="label">French:</span> dans tout le pays</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Across the whole country.</p>
-<p class="example"><span class="label">Example / answer:</span> Protests spread nationwide.</p>
-</article><article class="card">
-<h3>Approximately</h3>
-<div class="meta"><div><span class="label">French:</span> environ</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Useful for rounded figures.</p>
-<p class="example"><span class="label">Example / answer:</span> Approximately 40% of respondents supported the proposal.</p>
-</article></section><h2 class="section-title">D. Adverbs of degree and nuance</h2><section class="grid"><article class="card">
-<h3>Quite</h3>
-<div class="meta"><div><span class="label">French:</span> assez / tout à fait</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> In British English, often means fairly; sometimes completely depending on adjective.</p>
-<p class="example"><span class="label">Example / answer:</span> The argument is quite convincing.</p>
-</article><article class="card">
-<h3>Rather</h3>
-<div class="meta"><div><span class="label">French:</span> plutôt</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Useful for cautious criticism.</p>
-<p class="example"><span class="label">Example / answer:</span> The conclusion is rather simplistic.</p>
-</article><article class="card">
-<h3>Fairly</h3>
-<div class="meta"><div><span class="label">French:</span> assez</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Moderate intensifier; useful for nuance.</p>
-<p class="example"><span class="label">Example / answer:</span> The article is fairly balanced.</p>
-</article><article class="card">
-<h3>Highly</h3>
-<div class="meta"><div><span class="label">French:</span> hautement / très</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Formal intensifier with likely, effective, controversial.</p>
-<p class="example"><span class="label">Example / answer:</span> The reform is highly controversial.</p>
-</article><article class="card">
-<h3>Somewhat</h3>
-<div class="meta"><div><span class="label">French:</span> quelque peu</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Formal softener meaning to some extent.</p>
-<p class="example"><span class="label">Example / answer:</span> The proposal is somewhat unrealistic.</p>
-</article><article class="card">
-<h3>Deeply</h3>
-<div class="meta"><div><span class="label">French:</span> profondément</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Strong emotional or structural intensity.</p>
-<p class="example"><span class="label">Example / answer:</span> The country is deeply divided.</p>
-</article></section><h2 class="section-title">E. Sentence adverbs for argumentation</h2><section class="grid"><article class="card">
-<h3>Arguably</h3>
-<div class="meta"><div><span class="label">French:</span> on peut soutenir que</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means one can argue that; useful for nuanced claims.</p>
-<p class="example"><span class="label">Example / answer:</span> Arguably, the housing crisis is now a generational issue.</p>
-</article><article class="card">
-<h3>Undoubtedly</h3>
-<div class="meta"><div><span class="label">French:</span> sans aucun doute</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means without doubt; strong academic claim.</p>
-<p class="example"><span class="label">Example / answer:</span> Undoubtedly, education remains central to social mobility.</p>
-</article><article class="card">
-<h3>Apparently</h3>
-<div class="meta"><div><span class="label">French:</span> apparemment</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means it seems, based on available evidence.</p>
-<p class="example"><span class="label">Example / answer:</span> Apparently, the policy failed to reassure voters.</p>
-</article><article class="card">
-<h3>Presumably</h3>
-<div class="meta"><div><span class="label">French:</span> vraisemblablement</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Means probably, based on reasonable assumption.</p>
-<p class="example"><span class="label">Example / answer:</span> Presumably, the author wanted to challenge conventional views.</p>
-</article><article class="card">
-<h3>Importantly</h3>
-<div class="meta"><div><span class="label">French:</span> fait important</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Introduces a significant point.</p>
-<p class="example"><span class="label">Example / answer:</span> Importantly, the article does not blame voters themselves.</p>
-</article><article class="card">
-<h3>Interestingly</h3>
-<div class="meta"><div><span class="label">French:</span> fait intéressant</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Introduces a noteworthy observation.</p>
-<p class="example"><span class="label">Example / answer:</span> Interestingly, the graph shows a different trend after 2016.</p>
-</article></section><h2 class="section-title">F. Adverb position and word order</h2><section class="grid"><article class="card">
-<h3>Before the main verb</h3>
-<div class="meta"><div><span class="label">French:</span> avant le verbe principal</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Many adverbs of frequency go before the main verb.</p>
-<p class="example"><span class="label">Example / answer:</span> Voters often distrust institutions.</p>
-</article><article class="card">
-<h3>After be</h3>
-<div class="meta"><div><span class="label">French:</span> après be</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Frequency adverbs usually go after be.</p>
-<p class="example"><span class="label">Example / answer:</span> The issue is often misunderstood.</p>
-</article><article class="card">
-<h3>Between auxiliary and main verb</h3>
-<div class="meta"><div><span class="label">French:</span> entre auxiliaire et verbe</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs often go between auxiliary and main verb.</p>
-<p class="example"><span class="label">Example / answer:</span> The government has recently announced a reform.</p>
-</article><article class="card">
-<h3>End position</h3>
-<div class="meta"><div><span class="label">French:</span> position finale</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverbs of manner, place and time often go at the end.</p>
-<p class="example"><span class="label">Example / answer:</span> The minister spoke clearly yesterday.</p>
-</article><article class="card">
-<h3>Front position</h3>
-<div class="meta"><div><span class="label">French:</span> position initiale</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Sentence adverbs and time adverbials can go at the beginning.</p>
-<p class="example"><span class="label">Example / answer:</span> Recently, the debate has intensified.</p>
-</article><article class="card">
-<h3>CPGE word order</h3>
-<div class="meta"><div><span class="label">French:</span> ordre des mots CPGE</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Adverb placement should support clarity, not imitate French word order.</p>
-<p class="example"><span class="label">Example / answer:</span> The author carefully distinguishes freedom from impunity.</p>
-</article></section><h2 class="section-title">G. Typical mistakes by French speakers</h2><section class="grid"><article class="card">
-<h3>Never with another negative</h3>
-<div class="meta"><div><span class="label">French:</span> double négation</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Never already has negative meaning.</p>
-<p class="example"><span class="label">Example / answer:</span> Wrong: The author does not never mention it. Correct: The author never mentions it.</p>
-</article><article class="card">
-<h3>Actually vs currently</h3>
-<div class="meta"><div><span class="label">French:</span> actually / currently</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Actually means in fact; currently means at the moment.</p>
-<p class="example"><span class="label">Example / answer:</span> Currently, the bill is being debated. Actually, the cost is higher than expected.</p>
-</article><article class="card">
-<h3>Eventually vs éventuellement</h3>
-<div class="meta"><div><span class="label">French:</span> eventually</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Eventually means in the end, not possibly.</p>
-<p class="example"><span class="label">Example / answer:</span> Possibly = possibly / maybe. Eventually = in the end.</p>
-</article><article class="card">
-<h3>Hardly vs hard</h3>
-<div class="meta"><div><span class="label">French:</span> hard / hardly</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Hardly means almost not; hard means with effort or intensity.</p>
-<p class="example"><span class="label">Example / answer:</span> The policy hardly worked. / The government worked hard.</p>
-</article><article class="card">
-<h3>Late vs lately</h3>
-<div class="meta"><div><span class="label">French:</span> late / lately</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Late means not on time; lately means recently.</p>
-<p class="example"><span class="label">Example / answer:</span> The report arrived late. / The issue has attracted attention lately.</p>
-</article><article class="card">
-<h3>Too vs also</h3>
-<div class="meta"><div><span class="label">French:</span> too / also</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Too before adjectives often means excessive; also means addition.</p>
-<p class="example"><span class="label">Example / answer:</span> The reform is too expensive. / The article also discusses poverty.</p>
-</article></section><h2 class="section-title">H. Exercises</h2><section class="grid"><article class="card">
-<h3>Exercise 1 — Place the adverb</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> The author explains the problem. (clearly)</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: The author clearly explains the problem.</p>
-</article><article class="card">
-<h3>Exercise 2 — Place the adverb</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> The government has announced a reform. (recently)</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: The government has recently announced a reform.</p>
-</article><article class="card">
-<h3>Exercise 3 — Choose the best adverb</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Prices rose ___ in 2022. (sharply / hardly)</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: sharply</p>
-</article><article class="card">
-<h3>Exercise 4 — Choose the best adverb</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> The policy ___ worked. (hard / hardly)</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: hardly</p>
-</article><article class="card">
-<h3>Exercise 5 — Correct the mistake</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> The author does not never mention poverty.</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: The author never mentions poverty.</p>
-</article><article class="card">
-<h3>Exercise 6 — Correct the mistake</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Actually, the government is debating the bill.</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: Currently, the government is debating the bill.</p>
-</article><article class="card">
-<h3>Exercise 7 — Translate</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> L’article explique clairement le problème.</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: The article clearly explains the problem.</p>
-</article><article class="card">
-<h3>Exercise 8 — Translate</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Les loyers ont fortement augmenté.</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: Rents have risen sharply.</p>
-</article><article class="card">
-<h3>Exercise 9 — Translate</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> On peut soutenir que la crise du logement est générationnelle.</p>
-<p class="example"><span class="label">Example / answer:</span> Answer: Arguably, the housing crisis is generational.</p>
-</article><article class="card">
-<h3>Exercise 10 — Mini concours challenge</h3>
-<div class="meta"><div><span class="label">French:</span> exercice</div></div>
-<p class="definition"><span class="label">Rule / explanation:</span> Write 6 sentences using clearly, often, sharply, arguably, recently, somewhat.</p>
-<p class="example"><span class="label">Example / answer:</span> Possible answer: The author clearly explains the issue. Voters often distrust institutions. Prices have risen sharply. Arguably, the reform is necessary. The government has recently changed its position. The proposal is somewhat unrealistic.</p>
-</article></section>
+
+<h2 class="section-title">A. Lesson — What are adverbs?</h2>
+<section class="grid">
+<article class="card"><h3>Adverbs</h3><div class="meta"><span class="label">French:</span> adverbes</div><p class="definition"><span class="label">Rule / explanation:</span> Adverbs modify verbs, adjectives, other adverbs or whole sentences.</p><p class="example"><span class="label">Example / answer:</span> The article clearly explains the causes of the crisis.</p></article>
+<article class="card"><h3>Manner</h3><div class="meta"><span class="label">French:</span> manière</div><p class="definition"><span class="label">Rule / explanation:</span> Adverbs of manner explain how something happens.</p><p class="example"><span class="label">Example / answer:</span> The government reacted slowly.</p></article>
+<article class="card"><h3>Frequency</h3><div class="meta"><span class="label">French:</span> fréquence</div><p class="definition"><span class="label">Rule / explanation:</span> Adverbs of frequency explain how often something happens.</p><p class="example"><span class="label">Example / answer:</span> Politicians often promise reform.</p></article>
+<article class="card"><h3>Degree</h3><div class="meta"><span class="label">French:</span> degré</div><p class="definition"><span class="label">Rule / explanation:</span> Adverbs of degree intensify or soften meaning.</p><p class="example"><span class="label">Example / answer:</span> The argument is highly convincing.</p></article>
+</section>
+
+<h2 class="section-title">B. Frequency adverbs</h2>
+<section class="grid">
+<article class="card"><h3>Always / usually / often</h3><div class="meta"><span class="label">French:</span> toujours / habituellement / souvent</div><p class="definition"><span class="label">Rule / explanation:</span> These usually go before the main verb but after <em>be</em>.</p><p class="example"><span class="label">Example / answer:</span> Voters often distrust institutions. / The issue is often misunderstood.</p></article>
+<article class="card"><h3>Sometimes / rarely / never</h3><div class="meta"><span class="label">French:</span> parfois / rarement / jamais</div><p class="definition"><span class="label">Rule / explanation:</span> Use <em>never</em> without another negative.</p><p class="example"><span class="label">Example / answer:</span> The article never claims that reform is easy.</p></article>
+<article class="card"><h3>Hardly ever</h3><div class="meta"><span class="label">French:</span> presque jamais</div><p class="definition"><span class="label">Rule / explanation:</span> Means almost never.</p><p class="example"><span class="label">Example / answer:</span> Voters hardly ever read full party manifestos.</p></article>
+</section>
+
+<h2 class="section-title">C. Adverbs of manner and data commentary</h2>
+<section class="grid">
+<article class="card"><h3>Clearly / carefully</h3><div class="meta"><span class="label">French:</span> clairement / soigneusement</div><p class="definition"><span class="label">Rule / explanation:</span> Useful to describe analysis and method.</p><p class="example"><span class="label">Example / answer:</span> The author carefully distinguishes freedom from impunity.</p></article>
+<article class="card"><h3>Gradually / steadily</h3><div class="meta"><span class="label">French:</span> progressivement / régulièrement</div><p class="definition"><span class="label">Rule / explanation:</span> Useful for slow trends.</p><p class="example"><span class="label">Example / answer:</span> Public trust has gradually declined.</p></article>
+<article class="card"><h3>Sharply / dramatically</h3><div class="meta"><span class="label">French:</span> fortement / spectaculairement</div><p class="definition"><span class="label">Rule / explanation:</span> Useful for strong or sudden changes.</p><p class="example"><span class="label">Example / answer:</span> Prices rose sharply in 2022.</p></article>
+<article class="card"><h3>Slightly / marginally</h3><div class="meta"><span class="label">French:</span> légèrement / marginalement</div><p class="definition"><span class="label">Rule / explanation:</span> Useful for small changes.</p><p class="example"><span class="label">Example / answer:</span> Unemployment fell slightly.</p></article>
+</section>
+
+<h2 class="section-title">D. Degree and nuance</h2>
+<section class="grid">
+<article class="card"><h3>Quite / rather / fairly</h3><div class="meta"><span class="label">French:</span> assez / plutôt</div><p class="definition"><span class="label">Rule / explanation:</span> Useful for moderate judgement and careful criticism.</p><p class="example"><span class="label">Example / answer:</span> The article is fairly balanced, but the conclusion is rather simplistic.</p></article>
+<article class="card"><h3>Highly / deeply / extremely</h3><div class="meta"><span class="label">French:</span> très / profondément / extrêmement</div><p class="definition"><span class="label">Rule / explanation:</span> Strong intensifiers; avoid overusing them.</p><p class="example"><span class="label">Example / answer:</span> The reform is highly controversial.</p></article>
+<article class="card"><h3>Somewhat</h3><div class="meta"><span class="label">French:</span> quelque peu</div><p class="definition"><span class="label">Rule / explanation:</span> Formal softener meaning to some extent.</p><p class="example"><span class="label">Example / answer:</span> The proposal is somewhat unrealistic.</p></article>
+</section>
+
+<h2 class="section-title">E. Sentence adverbs for CPGE argumentation</h2>
+<section class="grid">
+<article class="card"><h3>Arguably</h3><div class="meta"><span class="label">French:</span> on peut soutenir que</div><p class="definition"><span class="label">Rule / explanation:</span> Presents a claim as defendable, not absolute.</p><p class="example"><span class="label">Example / answer:</span> Arguably, the housing crisis is now a generational issue.</p></article>
+<article class="card"><h3>Undoubtedly</h3><div class="meta"><span class="label">French:</span> sans aucun doute</div><p class="definition"><span class="label">Rule / explanation:</span> Strong academic claim; use when evidence is solid.</p><p class="example"><span class="label">Example / answer:</span> Undoubtedly, education remains central to social mobility.</p></article>
+<article class="card"><h3>Apparently / presumably</h3><div class="meta"><span class="label">French:</span> apparemment / vraisemblablement</div><p class="definition"><span class="label">Rule / explanation:</span> Useful for cautious interpretation.</p><p class="example"><span class="label">Example / answer:</span> Presumably, the author wanted to challenge conventional views.</p></article>
+<article class="card"><h3>Interestingly / importantly</h3><div class="meta"><span class="label">French:</span> fait intéressant / point important</div><p class="definition"><span class="label">Rule / explanation:</span> Introduce an observation or key point.</p><p class="example"><span class="label">Example / answer:</span> Importantly, the article does not blame voters themselves.</p></article>
+</section>
+
+<h2 class="section-title">F. Typical mistakes by French speakers</h2>
+<section class="grid">
+<article class="card"><h3>Never + another negative</h3><div class="meta"><span class="label">French:</span> double négation</div><p class="definition"><span class="label">Rule / explanation:</span> Never already has negative meaning.</p><p class="example"><span class="label">Example / answer:</span> Wrong: The author does not never mention it. Correct: The author never mentions it.</p></article>
+<article class="card"><h3>Actually vs currently</h3><div class="meta"><span class="label">French:</span> actually / currently</div><p class="definition"><span class="label">Rule / explanation:</span> Actually = in fact. Currently = at the moment.</p><p class="example"><span class="label">Example / answer:</span> Currently, the bill is being debated. Actually, the cost is higher than expected.</p></article>
+<article class="card"><h3>Eventually vs éventuellement</h3><div class="meta"><span class="label">French:</span> eventually</div><p class="definition"><span class="label">Rule / explanation:</span> Eventually means in the end, not possibly.</p><p class="example"><span class="label">Example / answer:</span> Possibly = maybe. Eventually = in the end.</p></article>
+<article class="card"><h3>Hard vs hardly</h3><div class="meta"><span class="label">French:</span> dur / presque pas</div><p class="definition"><span class="label">Rule / explanation:</span> Hard = with effort; hardly = almost not.</p><p class="example"><span class="label">Example / answer:</span> The government worked hard. / The policy hardly worked.</p></article>
+</section>
+
+<h2 class="section-title">G. Exercises</h2>
+<section class="grid">
+<article class="card"><h3>Exercise 1 — Place the adverb</h3><div class="meta"><span class="label">French:</span> exercice</div><p class="definition"><span class="label">Rule / explanation:</span> The author explains the problem. (clearly)</p><p class="example"><span class="label">Example / answer:</span> The author clearly explains the problem.</p></article>
+<article class="card"><h3>Exercise 2 — Choose the best adverb</h3><div class="meta"><span class="label">French:</span> exercice</div><p class="definition"><span class="label">Rule / explanation:</span> Prices rose ___ in 2022. (sharply / hardly)</p><p class="example"><span class="label">Example / answer:</span> sharply</p></article>
+<article class="card"><h3>Exercise 3 — Correct</h3><div class="meta"><span class="label">French:</span> exercice</div><p class="definition"><span class="label">Rule / explanation:</span> The author does not never mention poverty.</p><p class="example"><span class="label">Example / answer:</span> The author never mentions poverty.</p></article>
+<article class="card"><h3>Exercise 4 — Translate</h3><div class="meta"><span class="label">French:</span> exercice</div><p class="definition"><span class="label">Rule / explanation:</span> L’article explique clairement le problème.</p><p class="example"><span class="label">Example / answer:</span> The article clearly explains the problem.</p></article>
+<article class="card"><h3>Exercise 5 — Mini concours challenge</h3><div class="meta"><span class="label">French:</span> exercice</div><p class="definition"><span class="label">Rule / explanation:</span> Write 6 sentences using clearly, often, sharply, arguably, recently and somewhat.</p><p class="example"><span class="label">Example / answer:</span> Arguably, the reform is necessary, but the proposal is somewhat unrealistic.</p></article>
+</section>
+
 <section class="study-box">
 <h2>Mini recap</h2>
 <table class="mini-table">
@@ -361,11 +111,6 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </table>
 </section>
 </main>
-<footer>CPGE Grammar Bible — Chapter 25: Adverbs and Adverb Placement. Premium HTML grammar file.<div class="ecl-author-footer">
-  <span>Designed and created by</span>
-  <strong>Eglantine Lecomte</strong>
-  <span>· English Colles in Lyon</span>
-</div>
-</footer>
-</body>
+<footer>CPGE Grammar Bible — Chapter 25: Adverbs and Adverb Placement. Premium HTML grammar file.</footer>
+<script id="grammar-lab-progress">(function(){var k='eclGrammarProgressV1',n='25',s=document.getElementById('glStatus'),p={};try{p=JSON.parse(localStorage.getItem(k)||'{}')}catch(e){}s.value=p[n]||'';s.addEventListener('change',function(){p[n]=s.value;try{localStorage.setItem(k,JSON.stringify(p))}catch(e){}})})();</script></body>
 </html>
