@@ -1,8 +1,8 @@
 /* English Colles in Lyon — service worker (offline support) */
-const VERSION = 'eclyon-v2';
+const VERSION = 'eclyon-v3-transfer-loop';
 const CORE = [
   './', 'index.html', 'civilisation.html', 'resources.html',
-  'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png'
+  'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png', 'site-core.js'
 ];
 
 // Install: pre-cache the core files (tolerant: a missing file won't break install)
