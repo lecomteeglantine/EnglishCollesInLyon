@@ -11,6 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="English Colles">
+<!-- Homepage interaction refresh: 2026-07-15 -->
 <meta name="description" content="A self-study companion for CPGE English: prepare independently, practise for colles, build stronger language and cultural knowledge, and improve through classroom use and teacher feedback.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -686,6 +687,200 @@ a.t{color:var(--terra)}a.t .ar{transition:transform .18s}a.t:hover .ar{transform
   .foundation-step{min-height:0}
 }
 
+
+/* ---------- homepage play & practise ---------- */
+.play-zone{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 14%,rgba(217,164,65,.16),transparent 28%),
+    radial-gradient(circle at 92% 88%,rgba(122,155,118,.18),transparent 30%),
+    linear-gradient(180deg,#fffaf3 0%,#f7f3ed 100%);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.play-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:22px;
+}
+.play-head .sec-head{max-width:66ch}
+.surprise-btn{
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  min-height:46px;
+  padding:0 17px;
+  border:1px solid rgba(36,59,83,.2);
+  border-radius:13px;
+  background:var(--card);
+  color:var(--navy);
+  font-weight:700;
+  box-shadow:var(--shadow);
+  transition:transform .15s,border-color .2s,box-shadow .2s;
+}
+.surprise-btn:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:var(--shadow-lg)}
+.challenge-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:28px;
+}
+.challenge-card{
+  --challenge:var(--navy);
+  --challenge-bg:#eef3f7;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:390px;
+  padding:23px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-top:6px solid var(--challenge);
+  border-radius:20px;
+  background:linear-gradient(155deg,var(--card) 0%,var(--challenge-bg) 145%);
+  box-shadow:var(--shadow);
+  transition:transform .16s,border-color .2s,box-shadow .2s;
+}
+.challenge-card:hover{transform:translateY(-3px);border-color:var(--challenge);box-shadow:var(--shadow-lg)}
+.challenge-card.challenge-country{--challenge:var(--sage);--challenge-bg:#eef5ec}
+.challenge-card.challenge-sound{--challenge:#3c8390;--challenge-bg:#eaf5f5}
+.challenge-card.challenge-argument{--challenge:var(--terra);--challenge-bg:#fbeee7}
+.challenge-card.is-highlighted{animation:challengeGlow 1.2s ease}
+@keyframes challengeGlow{
+  0%,100%{box-shadow:var(--shadow)}
+  40%{box-shadow:0 0 0 6px color-mix(in srgb,var(--challenge) 22%,transparent),var(--shadow-lg)}
+}
+.challenge-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.challenge-id{display:flex;align-items:center;gap:11px}
+.challenge-icon{
+  width:43px;height:43px;flex:none;display:grid;place-items:center;
+  border-radius:13px;background:var(--challenge);color:#fff;font-weight:700;font-size:1.05rem;
+  box-shadow:0 8px 20px color-mix(in srgb,var(--challenge) 24%,transparent);
+}
+.challenge-type{
+  display:inline-flex;align-items:center;min-height:25px;padding:0 9px;
+  border-radius:999px;background:color-mix(in srgb,var(--challenge) 12%,#fff);
+  color:var(--challenge);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+}
+.challenge-card h3{font-size:1.28rem;color:var(--navy);margin-top:15px}
+.challenge-intro{margin-top:7px;color:var(--muted);font-size:.88rem;line-height:1.48}
+.challenge-stage{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  margin-top:17px;
+  padding:17px;
+  border:1px solid color-mix(in srgb,var(--challenge) 22%,var(--line));
+  border-radius:15px;
+  background:rgba(255,255,255,.76);
+}
+.challenge-prompt{font-weight:700;color:var(--ink);line-height:1.5}
+.challenge-clue{font-family:var(--display);font-size:1.08rem;color:var(--navy);line-height:1.38}
+.challenge-options{display:grid;gap:8px;margin-top:14px}
+.challenge-option,
+.challenge-control{
+  min-height:43px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fff;
+  text-align:left;
+  color:var(--ink);
+  font-weight:700;
+  font-size:.86rem;
+  transition:transform .12s,border-color .18s,background .18s;
+}
+.challenge-option:hover,.challenge-control:hover{transform:translateY(-1px);border-color:var(--challenge);background:var(--challenge-bg)}
+.challenge-option.correct{border-color:var(--sage);background:#edf6eb;color:#31542f}
+.challenge-option.wrong{border-color:var(--terra);background:#fbece6;color:#7f3f2b}
+.challenge-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.challenge-control{width:auto;text-align:center;color:var(--challenge)}
+.challenge-control.primary{background:var(--challenge);border-color:var(--challenge);color:#fff}
+.challenge-control:disabled,.challenge-option:disabled{opacity:.68;cursor:not-allowed;transform:none}
+.challenge-feedback{
+  display:none;
+  margin-top:13px;
+  padding:12px 13px;
+  border-left:4px solid var(--challenge);
+  border-radius:10px;
+  background:#fff;
+  color:var(--ink);
+  font-size:.84rem;
+  line-height:1.5;
+}
+.challenge-feedback.show{display:block;animation:feedbackIn .2s ease}
+.challenge-feedback strong{color:var(--navy)}
+@keyframes feedbackIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.transfer-strip{
+  margin-top:15px;
+  padding-top:13px;
+  border-top:1px dashed color-mix(in srgb,var(--challenge) 35%,var(--line));
+  color:var(--muted);
+  font-size:.78rem;
+  line-height:1.45;
+}
+.transfer-strip strong{color:var(--challenge);text-transform:uppercase;letter-spacing:.07em;font-size:.69rem}
+.country-clue-list{display:grid;gap:7px;margin-top:11px;padding:0;list-style:none}
+.country-clue-list li{display:none;padding:9px 11px;border-radius:10px;background:var(--challenge-bg);font-size:.84rem}
+.country-clue-list li.visible{display:block;animation:feedbackIn .2s ease}
+.sound-panel{display:grid;place-items:center;gap:12px;padding:9px 0 2px}
+.sound-listen{
+  width:70px;height:70px;border-radius:50%;display:grid;place-items:center;
+  background:var(--challenge);color:#fff;font-size:1.45rem;box-shadow:0 12px 28px rgba(60,131,144,.28);
+  transition:transform .15s;
+}
+.sound-listen:hover{transform:scale(1.04)}
+.sound-note{color:var(--muted);font-size:.78rem;text-align:center}
+.argument-bank,.argument-answer{display:grid;gap:8px;margin-top:11px}
+.argument-piece{
+  display:flex;align-items:flex-start;gap:9px;width:100%;padding:10px 11px;
+  border:1px solid var(--line);border-radius:11px;background:#fff;text-align:left;
+  color:var(--ink);font-size:.83rem;line-height:1.42;font-weight:700;
+}
+.argument-piece .piece-n{
+  flex:none;width:23px;height:23px;border-radius:7px;background:var(--challenge);color:#fff;
+  display:grid;place-items:center;font-size:.7rem;
+}
+.argument-piece[disabled]{opacity:.48}
+.argument-answer{min-height:48px;padding:9px;border:1px dashed var(--terra);border-radius:12px;background:#fff8f4}
+.argument-answer:empty::before{content:"Choose the three parts in the strongest order.";color:var(--muted);font-size:.8rem;padding:4px}
+.play-footnote{
+  display:flex;align-items:flex-start;gap:12px;
+  margin-top:20px;padding:15px 17px;border:1px solid var(--line);border-radius:14px;
+  background:rgba(255,255,255,.72);color:var(--muted);font-size:.87rem;
+}
+.play-footnote .dot{width:12px;height:12px;margin-top:6px;border-radius:50%;background:var(--terra);box-shadow:16px 0 0 var(--gold),32px 0 0 var(--sage);margin-right:32px;flex:none}
+.play-footnote strong{color:var(--navy)}
+
+/* Functional colour cues across the homepage. */
+.path-step:nth-child(1){border-top:4px solid var(--gold)}
+.path-step:nth-child(2){border-top:4px solid var(--sage)}
+.path-step:nth-child(3){border-top:4px solid var(--terra)}
+.path-step:nth-child(4){border-top:4px solid #3c8390}
+.path-step:nth-child(5){border-top:4px solid var(--navy)}
+.path-step:nth-child(1) .n{background:var(--gold)}
+.path-step:nth-child(2) .n{background:var(--sage)}
+.path-step:nth-child(3) .n{background:var(--terra)}
+.path-step:nth-child(4) .n{background:#3c8390}
+.goal-group:nth-child(1){border-top:5px solid var(--terra);background:linear-gradient(155deg,#fff 70%,#fbeee7)}
+.goal-group:nth-child(2){border-top:5px solid var(--sage);background:linear-gradient(155deg,#fff 70%,#eef5ec)}
+.goal-group:nth-child(3){border-top:5px solid #3c8390;background:linear-gradient(155deg,#fff 70%,#eaf5f5)}
+.goal-group:nth-child(4){border-top:5px solid var(--gold);background:linear-gradient(155deg,#fff 70%,#fff5dc)}
+
+@media(max-width:820px){
+  .play-head{align-items:flex-start;flex-direction:column}
+  .challenge-grid{grid-template-columns:1fr}
+  .challenge-card{min-height:0}
+}
+@media(max-width:520px){
+  .challenge-card{padding:18px}
+  .challenge-stage{padding:14px}
+  .surprise-btn{width:100%;justify-content:center}
+}
+
 footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
 .foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
@@ -905,6 +1100,96 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 
       <div class="routine-reminder">Do not stop at reading: reuse today’s material in class or in your next colle.</div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============ PLAY & PRACTISE ============ -->
+<section class="play-zone" id="play-practise">
+  <div class="wrap">
+    <div class="play-head">
+      <div class="sec-head">
+        <div class="eyebrow">Five-minute challenges</div>
+        <h2>Play, notice and practise.</h2>
+        <p>Start with one quick challenge. The correction explains the point, then gives you one small target to reuse aloud in English class or in your next colle.</p>
+      </div>
+      <button class="surprise-btn" id="surpriseChallenge" type="button"><span aria-hidden="true">✦</span> Surprise me</button>
+    </div>
+
+    <div class="challenge-grid">
+      <article class="challenge-card challenge-fix" id="challengeFix" data-challenge-card>
+        <div class="challenge-top">
+          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">✓</span><span class="challenge-type">Choose</span></div>
+        </div>
+        <h3>Fix the sentence</h3>
+        <p class="challenge-intro">Choose the strongest correction, then read the explanation.</p>
+        <div class="challenge-stage">
+          <p class="challenge-prompt" id="fixPrompt"></p>
+          <div class="challenge-options" id="fixOptions"></div>
+          <div class="challenge-feedback" id="fixFeedback" aria-live="polite"></div>
+          <div class="challenge-actions"><button class="challenge-control" id="fixNext" type="button">Another sentence</button></div>
+          <div class="transfer-strip"><strong>Use it beyond the screen</strong><br>Say one accurate sentence with the same structure in class, then reuse it naturally in a colle.</div>
+        </div>
+      </article>
+
+      <article class="challenge-card challenge-country" id="challengeCountry" data-challenge-card>
+        <div class="challenge-top">
+          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">?</span><span class="challenge-type">Retrieve</span></div>
+        </div>
+        <h3>Guess the country</h3>
+        <p class="challenge-intro">Reveal the clues one by one and identify the country they describe.</p>
+        <div class="challenge-stage">
+          <p class="challenge-clue">Which country is it?</p>
+          <ul class="country-clue-list" id="countryClues"></ul>
+          <div class="challenge-actions">
+            <button class="challenge-control primary" id="revealClue" type="button">Reveal a clue</button>
+          </div>
+          <div class="challenge-options" id="countryOptions"></div>
+          <div class="challenge-feedback" id="countryFeedback" aria-live="polite"></div>
+          <div class="challenge-actions"><button class="challenge-control" id="countryNext" type="button">Another country</button></div>
+          <div class="transfer-strip"><strong>Take it to class</strong><br>Explain one clue aloud and connect it to a current debate before trying to reuse it as evidence in a colle.</div>
+        </div>
+      </article>
+
+      <article class="challenge-card challenge-sound" id="challengeSound" data-challenge-card>
+        <div class="challenge-top">
+          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">♪</span><span class="challenge-type">Listen</span></div>
+        </div>
+        <h3>Hear the difference</h3>
+        <p class="challenge-intro">Listen to one word and identify what the browser voice said.</p>
+        <div class="challenge-stage">
+          <div class="sound-panel">
+            <button class="sound-listen" id="soundListen" type="button" aria-label="Listen to the word">▶</button>
+            <div class="sound-note">You can listen more than once. The selected UK, US, AU or CA voice is used when available.</div>
+          </div>
+          <div class="challenge-options" id="soundOptions"></div>
+          <div class="challenge-feedback" id="soundFeedback" aria-live="polite"></div>
+          <div class="challenge-actions"><button class="challenge-control" id="soundNext" type="button">Another pair</button></div>
+          <div class="transfer-strip"><strong>Use it aloud</strong><br>Repeat the target word in a complete sentence, then keep the same sound when you speak spontaneously in class or in a colle.</div>
+        </div>
+      </article>
+
+      <article class="challenge-card challenge-argument" id="challengeArgument" data-challenge-card>
+        <div class="challenge-top">
+          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">→</span><span class="challenge-type">Build</span></div>
+        </div>
+        <h3>Build the argument</h3>
+        <p class="challenge-intro">Choose the three parts in the order that makes the reasoning clearest.</p>
+        <div class="challenge-stage">
+          <div class="argument-bank" id="argumentBank"></div>
+          <div class="argument-answer" id="argumentAnswer" aria-label="Your proposed order"></div>
+          <div class="challenge-actions">
+            <button class="challenge-control primary" id="argumentCheck" type="button">Check the order</button>
+            <button class="challenge-control" id="argumentReset" type="button">Reset</button>
+          </div>
+          <div class="challenge-feedback" id="argumentFeedback" aria-live="polite"></div>
+          <div class="challenge-actions"><button class="challenge-control" id="argumentNext" type="button">Another argument</button></div>
+          <div class="transfer-strip"><strong>Test it in a colle</strong><br>Use the same pattern aloud: make a claim, support it with a precise example and explain why that example matters.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="play-footnote"><span class="dot" aria-hidden="true"></span><p><strong>These challenges are a starting point, not an endpoint.</strong> The real objective is to reuse one corrected structure, one fact, one sound or one argument pattern in class and in real colles.</p></div>
   </div>
 </section>
 
@@ -1306,6 +1591,203 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
   });
 
   box.hidden = false;
+})();
+</script>
+
+
+<script>
+/* ===== Play & practise: short self-contained homepage challenges ===== */
+(function(){
+  var q = function(sel){ return document.querySelector(sel); };
+  var qa = function(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)); };
+  var randomIndex = function(length, previous){
+    if (length < 2) return 0;
+    var n = Math.floor(Math.random() * length);
+    return n === previous ? (n + 1) % length : n;
+  };
+  var clearState = function(container){
+    container.querySelectorAll('button').forEach(function(btn){
+      btn.disabled = false;
+      btn.classList.remove('correct','wrong');
+    });
+  };
+
+  /* Fix the sentence */
+  var fixData = [
+    {
+      prompt:'Which correction is best? “The report explain why the measure has failed.”',
+      options:['The report explains why the measure has failed.','The report is explaining why the measure has failed.','The report explain why the measure failed.'],
+      correct:0,
+      explanation:'A singular subject takes a third-person singular verb in the present simple: “the report explains”.'
+    },
+    {
+      prompt:'Which correction is best? “She suggested to reconsider the proposal.”',
+      options:['She suggested reconsidering the proposal.','She suggested to reconsidered the proposal.','She suggested that reconsider the proposal.'],
+      correct:0,
+      explanation:'“Suggest” is normally followed by a gerund or a that-clause: “suggest reconsidering” or “suggest that we reconsider”.'
+    },
+    {
+      prompt:'Which correction is best? “Despite the reform was popular, it failed.”',
+      options:['Although the reform was popular, it failed.','Despite the reform was popular, however it failed.','In spite the reform was popular, it failed.'],
+      correct:0,
+      explanation:'“Although” introduces a full clause. “Despite” must be followed by a noun phrase or an -ing form.'
+    },
+    {
+      prompt:'Which correction is best? “This policy will permit to reduce inequality.”',
+      options:['This policy will make possible to reduce inequality.','This policy will help reduce inequality.','This policy will permit reducing to inequality.'],
+      correct:1,
+      explanation:'English does not use “permit to” without an object. “Help reduce” is natural, concise and accurate here.'
+    }
+  ];
+  var fixIndex = -1;
+  function loadFix(){
+    fixIndex = randomIndex(fixData.length, fixIndex);
+    var item = fixData[fixIndex], options = q('#fixOptions'), feedback = q('#fixFeedback');
+    q('#fixPrompt').textContent = item.prompt;
+    options.innerHTML = '';
+    feedback.className = 'challenge-feedback';
+    feedback.textContent = '';
+    item.options.forEach(function(label, i){
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'challenge-option'; btn.textContent = label;
+      btn.addEventListener('click', function(){
+        clearState(options);
+        qa('#fixOptions .challenge-option').forEach(function(b){ b.disabled = true; });
+        if (i === item.correct){ btn.classList.add('correct'); feedback.innerHTML = '<strong>Correct.</strong> ' + item.explanation; }
+        else { btn.classList.add('wrong'); qa('#fixOptions .challenge-option')[item.correct].classList.add('correct'); feedback.innerHTML = '<strong>Not quite.</strong> ' + item.explanation; }
+        feedback.classList.add('show');
+      });
+      options.appendChild(btn);
+    });
+  }
+  q('#fixNext').addEventListener('click', loadFix);
+  loadFix();
+
+  /* Guess the country */
+  var countryData = [
+    {answer:'Canada', options:['Canada','Australia','New Zealand','South Africa'], clues:['It is a federal state.','English and French are its official languages at federal level.','Its political system includes a constitutional monarchy and a parliamentary democracy.'], note:'Canada combines federalism, bilingualism and a constitutional monarchy.'},
+    {answer:'New Zealand', options:['Ireland','New Zealand','Canada','India'], clues:['Its parliament is unicameral.','The Treaty of Waitangi remains central to relations between the Crown and Māori.','It was the first self-governing country to grant women the vote.'], note:'New Zealand is often discussed through Māori–Crown relations and progressive political reforms.'},
+    {answer:'South Africa', options:['Australia','South Africa','India','United States'], clues:['It has eleven official languages.','Its democratic transition is closely associated with 1994.','Its constitution emerged from the end of apartheid.'], note:'South Africa’s current debates are inseparable from apartheid, the 1994 transition and persistent inequality.'},
+    {answer:'Ireland', options:['United Kingdom','Ireland','Canada','New Zealand'], clues:['Its head of state is an elected president.','Its modern history is shaped by partition.','The Good Friday Agreement is central to peace on the island.'], note:'Ireland must be understood through partition, Northern Ireland and the peace process.'}
+  ];
+  var countryIndex = -1, visibleClues = 0;
+  function loadCountry(){
+    countryIndex = randomIndex(countryData.length, countryIndex); visibleClues = 0;
+    var item = countryData[countryIndex], list = q('#countryClues'), options = q('#countryOptions'), feedback = q('#countryFeedback');
+    list.innerHTML = ''; options.innerHTML = ''; feedback.className = 'challenge-feedback'; feedback.textContent = '';
+    item.clues.forEach(function(clue){ var li = document.createElement('li'); li.textContent = clue; list.appendChild(li); });
+    item.options.forEach(function(label){
+      var btn = document.createElement('button'); btn.type='button'; btn.className='challenge-option'; btn.textContent=label;
+      btn.addEventListener('click', function(){
+        qa('#countryOptions .challenge-option').forEach(function(b){ b.disabled=true; if(b.textContent===item.answer) b.classList.add('correct'); });
+        if(label===item.answer){ feedback.innerHTML='<strong>Correct.</strong> '+item.note; }
+        else { btn.classList.add('wrong'); feedback.innerHTML='<strong>Not this time.</strong> '+item.note; }
+        feedback.classList.add('show');
+      });
+      options.appendChild(btn);
+    });
+    q('#revealClue').disabled = false;
+  }
+  q('#revealClue').addEventListener('click', function(){
+    var clues = qa('#countryClues li');
+    if (visibleClues < clues.length){ clues[visibleClues].classList.add('visible'); visibleClues += 1; }
+    if (visibleClues >= clues.length) this.disabled = true;
+  });
+  q('#countryNext').addEventListener('click', loadCountry);
+  loadCountry();
+
+  /* Hear the difference */
+  var soundData = [
+    {pair:['think','sink'], tip:'For /θ/ in “think”, place the tip of your tongue lightly between your teeth and let the air pass.'},
+    {pair:['three','free'], tip:'“Three” begins with /θ/; “free” begins with /f/. The mouth position is different.'},
+    {pair:['ship','sheep'], tip:'“Ship” has a short vowel; “sheep” has a longer /iː/ sound.'},
+    {pair:['west','vest'], tip:'“West” begins with /w/; “vest” begins with /v/. Avoid replacing one with the other.'},
+    {pair:['live','leave'], tip:'“Live” has a short vowel; “leave” has a longer /iː/ sound.'}
+  ];
+  var soundIndex=-1, soundTarget='';
+  var langForAccent={UK:'en-GB',US:'en-US',AU:'en-AU',CA:'en-CA'};
+  function speakTarget(){
+    if (!('speechSynthesis' in window)){ q('#soundFeedback').innerHTML='<strong>Audio unavailable.</strong> Your browser does not provide speech synthesis.'; q('#soundFeedback').classList.add('show'); return; }
+    window.speechSynthesis.cancel();
+    var lang = langForAccent[(window.LS && LS.get ? LS.get('eclyon_accent','UK') : 'UK')] || 'en-GB';
+    var u = new SpeechSynthesisUtterance(soundTarget); u.lang=lang; u.rate=.78;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var voice = voices.filter(function(v){ return v.lang.replace('_','-').indexOf(lang)===0; })[0] || voices.filter(function(v){ return /^en/i.test(v.lang); })[0];
+    if (voice) u.voice=voice;
+    window.speechSynthesis.speak(u);
+  }
+  function loadSound(){
+    soundIndex=randomIndex(soundData.length,soundIndex);
+    var item=soundData[soundIndex], options=q('#soundOptions'), feedback=q('#soundFeedback');
+    soundTarget=item.pair[Math.floor(Math.random()*2)]; options.innerHTML=''; feedback.className='challenge-feedback'; feedback.textContent='';
+    item.pair.forEach(function(label){
+      var btn=document.createElement('button'); btn.type='button'; btn.className='challenge-option'; btn.textContent=label;
+      btn.addEventListener('click',function(){
+        qa('#soundOptions .challenge-option').forEach(function(b){b.disabled=true;if(b.textContent===soundTarget)b.classList.add('correct');});
+        if(label===soundTarget){feedback.innerHTML='<strong>Correct: '+soundTarget+'.</strong> '+item.tip;}
+        else{btn.classList.add('wrong');feedback.innerHTML='<strong>The word was '+soundTarget+'.</strong> '+item.tip;}
+        feedback.classList.add('show');
+      }); options.appendChild(btn);
+    });
+  }
+  q('#soundListen').addEventListener('click',speakTarget);
+  q('#soundNext').addEventListener('click',loadSound);
+  loadSound();
+
+  /* Build the argument */
+  var argumentData=[
+    {parts:['Social media can amplify political polarisation.','For example, recommendation systems often promote highly engaging content.','This matters because emotionally charged posts can push users towards more extreme positions.'], explanation:'The clearest structure is claim → precise example → explanation of significance.'},
+    {parts:['Housing shortages can deepen social inequality.','In many major cities, rents have risen faster than wages.','As a result, lower-income households may be pushed farther from jobs and public services.'], explanation:'State the argument, support it with evidence, then show the consequence.'},
+    {parts:['A constitution alone cannot guarantee a healthy democracy.','Some states retain democratic institutions while weakening judicial independence and media freedom.','This shows that democratic practice depends on how institutions are used, not merely on their formal existence.'], explanation:'Move from the main claim to an illustrative pattern and finish with the analytical lesson.'}
+  ];
+  var argumentIndex=-1, chosen=[];
+  function shuffledIndexes(){
+    var arr=[0,1,2];
+    for(var i=arr.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=arr[i];arr[i]=arr[j];arr[j]=t;}
+    return arr;
+  }
+  function renderChosen(item){
+    var answer=q('#argumentAnswer'); answer.innerHTML='';
+    chosen.forEach(function(idx,pos){
+      var piece=document.createElement('div'); piece.className='argument-piece';
+      piece.innerHTML='<span class="piece-n">'+(pos+1)+'</span><span>'+item.parts[idx]+'</span>';
+      answer.appendChild(piece);
+    });
+  }
+  function loadArgument(){
+    argumentIndex=randomIndex(argumentData.length,argumentIndex); chosen=[];
+    var item=argumentData[argumentIndex], bank=q('#argumentBank'), feedback=q('#argumentFeedback');
+    bank.innerHTML=''; q('#argumentAnswer').innerHTML=''; feedback.className='challenge-feedback'; feedback.textContent='';
+    shuffledIndexes().forEach(function(idx){
+      var btn=document.createElement('button'); btn.type='button'; btn.className='argument-piece'; btn.dataset.idx=idx;
+      btn.innerHTML='<span class="piece-n">+</span><span>'+item.parts[idx]+'</span>';
+      btn.addEventListener('click',function(){
+        if(chosen.indexOf(idx)!==-1)return; chosen.push(idx); btn.disabled=true; renderChosen(item);
+      }); bank.appendChild(btn);
+    });
+  }
+  q('#argumentReset').addEventListener('click',function(){
+    chosen=[]; q('#argumentAnswer').innerHTML=''; qa('#argumentBank button').forEach(function(b){b.disabled=false;});
+    q('#argumentFeedback').className='challenge-feedback'; q('#argumentFeedback').textContent='';
+  });
+  q('#argumentCheck').addEventListener('click',function(){
+    var item=argumentData[argumentIndex], feedback=q('#argumentFeedback');
+    if(chosen.length<3){feedback.innerHTML='<strong>Choose all three parts first.</strong>';feedback.classList.add('show');return;}
+    var correct=chosen.join(',')==='0,1,2';
+    feedback.innerHTML=(correct?'<strong>Strong structure.</strong> ':'<strong>Reorder it.</strong> ')+item.explanation;
+    feedback.classList.add('show');
+  });
+  q('#argumentNext').addEventListener('click',loadArgument);
+  loadArgument();
+
+  /* Surprise me */
+  q('#surpriseChallenge').addEventListener('click',function(){
+    var cards=qa('[data-challenge-card]');
+    var card=cards[Math.floor(Math.random()*cards.length)];
+    cards.forEach(function(c){c.classList.remove('is-highlighted');});
+    card.scrollIntoView({behavior:document.body.classList.contains('noanim')?'auto':'smooth',block:'center'});
+    window.setTimeout(function(){card.classList.add('is-highlighted');},200);
+  });
 })();
 </script>
 
