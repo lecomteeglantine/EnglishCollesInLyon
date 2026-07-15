@@ -356,6 +356,12 @@ a.t{color:var(--terra)}a.t .ar{transition:transform .18s}a.t:hover .ar{transform
   color:var(--ink);
   font-size:.92rem;
 }
+.cycle-note strong{
+  display:inline-block;
+  color:var(--navy);
+  font-size:1rem;
+  margin-bottom:4px;
+}
 .site-principle{
   width:100%;
   text-align:center;
@@ -682,7 +688,8 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
         <a class="btn btn-navy" href="colle-trainer.html">Practise a colle <span class="ar">→</span></a>
       </div>
       <div class="cycle-note" style="margin-top:20px">
-        This website supports your classes and colles. It does not replace teaching, interaction or individual feedback.
+        <strong>English classes and regular colles are indispensable.</strong><br>
+        This website helps you prepare, but it cannot replace speaking in class, testing your ideas in real colles, asking questions or receiving individual feedback from your teachers.
       </div>
     </div>
 
@@ -744,8 +751,8 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">From self-study to real progress</div>
-      <h2>Independent work only matters when you put it into practice.</h2>
-      <p>Use the site to prepare, then take your questions, vocabulary, examples and ideas back into the classroom and into real colles.</p>
+      <h2>English classes and colles are indispensable.</h2>
+      <p>Independent practice prepares you. Classes and real colles are where you speak spontaneously, test your understanding, receive feedback and turn preparation into lasting progress.</p>
     </div>
 
     <div class="pathway-grid">
@@ -821,7 +828,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
           </a>
           <a class="goal-link" href="pronunciation.html">
             <span class="mini-ico t-gold">P</span>
-            <span class="txt"><span class="title">Pronunciation</span><span class="desc">Train sounds, stress and intonation, record yourself and reuse the skill in class and in colles.</span></span>
+            <span class="txt"><span class="title">Pronunciation</span><span class="desc">Train sounds, stress and intonation, then test them where it matters: in English class and in real colles.</span></span>
             <span class="arrow">→</span>
           </a>
           <a class="goal-link" href="civilisation.html">
@@ -1048,7 +1055,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
   link.href = w.chFile;
   link.textContent = 'Chapter ' + w.chNum + ' — ' + w.chTitle + ' →';
 
-  // Prononciation : respecte l'accent choisi (UK / US / AU / CA)
+  // Pronunciation: follows the selected accent (UK / US / AU / CA)
   var ACC_LANG = { UK:'en-GB', US:'en-US', AU:'en-AU', CA:'en-CA' };
   var hasSpeech = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
   if (!hasSpeech) document.body.classList.add('nospeech');
