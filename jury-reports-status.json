@@ -1,10 +1,10 @@
 {
-  "lastRun": "2026-07-14T11:03:22.136Z",
-  "lastSuccessfulRun": "2026-07-14T11:03:22.136Z",
+  "lastRun": "2026-07-15T07:24:06.207Z",
+  "lastSuccessfulRun": "2026-07-15T07:24:06.207Z",
   "sourcesChecked": 8,
   "documentsFound": 683,
   "reportsFound": 551,
-  "newDocuments": 676,
+  "newDocuments": 0,
   "errors": [],
-  "message": "676 nouveau(x) document(s) officiel(s) détecté(s). Les synthèses doivent être validées."
+  "message": "Aucun nouveau document officiel détecté."
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T11:03:22.136Z",
+  "generatedAt": "2026-07-15T07:24:06.207Z",
   "documents": [
     {
       "sourceId": "bce",
@@ -9,7 +9,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/76%20AR%20-%20LANGUE_VIVANTE_B_ELVI_ARABE_ITALIEN_PORTUGAIS_RUSSE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -19,7 +19,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/76%20CH%20-%20LANGUE_VIVANTE_B_ELVI_CHINOIS_HEBREU_JAPONAIS_POLONAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -29,7 +29,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/76%20GB%20-%20LANGUE_VIVANTE_B_ELVI_ALLEMAND_ANGLAIS_ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -39,7 +39,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/76%20LA%20-%20LANGUE_VIVANTE_B_ELVI_LATIN_GREC.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -49,7 +49,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/75%20GB%20-%20LANGUE_VIVANTE_A_ELVI_ALLEMAND_ANGLAIS_ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -59,7 +59,7 @@
       "type": "official-document",
       "url": "https://www.concours-bce.com/sites/default/files/2026-04/75%20AR%20-%20LANGUE_VIVANTE_A_ELVI_ARABE_ITALIEN_PORTUGAIS_RUSSE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -69,7 +69,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVA6AN.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -79,7 +79,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVA6AllArabe.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -89,7 +89,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVA6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -99,7 +99,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVB6AE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -109,7 +109,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVB6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -119,7 +119,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2026/06/2026_LVA6AN.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -129,7 +129,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2026/06/2026_LVA6AllArabe.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -139,7 +139,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2026/06/2026_LVA6AU.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -149,7 +149,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2026/06/2026_LVB6AE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -159,7 +159,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2026/06/2026_LVB6AU.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -169,7 +169,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2026/04/08-LVA-2026.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -179,7 +179,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2026/04/04-LVB-2026.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -189,7 +189,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_all_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -209,7 +209,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_fac_all_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -219,7 +219,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_fac_ang_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -229,7 +229,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_ara_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -239,7 +239,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_esp_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -249,7 +249,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_ita_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -259,7 +259,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_por_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -269,7 +269,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_chi_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -279,7 +279,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_inter_si_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -289,7 +289,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_math_algo_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -299,7 +299,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_inter_math_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -309,7 +309,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_manip_phys_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -319,7 +319,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_phys_chim_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -329,7 +329,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_manip_si_oral_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "bce",
@@ -360,7 +360,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LV_RAPPORT_ECRIT_2025_16.10.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -370,7 +370,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVA_Anglais_2025.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -380,7 +380,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVA_Allemand_Arabe_2025.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -390,7 +390,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVA_Autres_2025.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -400,7 +400,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVB_Anglais_Espagnol_2025.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -410,7 +410,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVB_Autres_2025.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -420,7 +420,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapports_Jury_2025_MP.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -430,7 +430,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapports_Jury_2025_MPI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -440,7 +440,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapports_Jury_2025_PC_1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -450,7 +450,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapports_Jury_2025_PSI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -460,7 +460,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapports_Jury_2025_TSI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -470,7 +470,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/Rapport-Francais-Philosophie-2025_VF.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -480,7 +480,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/10/Rapport-MP_ECRIT_Informatique-2025_10.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -490,7 +490,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/10/Rapport-MP_ECRIT_SI_2025_17.09.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -500,7 +500,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/07/rapport_MP_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -510,7 +510,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/10/Rapport-MPI_ECRIT_Informatique_2025_17.09.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -520,7 +520,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/07/rapport_MPI_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -530,7 +530,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/CCINP_PC_RAPPORT_MODELISATION_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -540,7 +540,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/CCINP_PC_RAPPORT_INFORMATIQUE_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -550,7 +550,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/10/Rapport-Ecrits-Informatique-PSI-2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -560,7 +560,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/10/Rapport-Ecrits-Sciences-Industrielles-PSI-2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -570,7 +570,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/07/rapport_PSI_2025_pdf.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -580,7 +580,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/07/rapport_PC_chimie_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -590,7 +590,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/MP.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -600,7 +600,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/MPI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -610,7 +610,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/PC.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -620,7 +620,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/09/PSI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -630,7 +630,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/07/rapport_PC_physique_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -640,7 +640,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/06/LVA_Anglais_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -650,7 +650,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/06/LVA_Allemand_Arabe_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -660,7 +660,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/06/LVA_Autres_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -670,7 +670,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/06/LVB_Anglais_Espagnol_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -680,7 +680,7 @@
       "type": "subject",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2025/06/LVB_Autres_2025.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -690,7 +690,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-Autres_LVB.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -710,7 +710,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-Autres_LVA.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -720,7 +720,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-All_Angl_Esp_LVB.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -730,7 +730,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/10/ANNALES-PREPA_2025-Autres_LVB.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -740,7 +740,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/09/Videos-anglais-2025-Verbatims-1-a-13-DEF.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -750,7 +750,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/02/04P-LVB-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -760,7 +760,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/04/SUJETS-LV1-ANGLAISALLEMAND-ESPAGNOL-PREPA-2025-3h.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -770,7 +770,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2025/04/SUJETS-LVB-ANGLAISALLEMAND-ESPAGNOL-PREPA-2025-3h.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -780,7 +780,7 @@
       "type": "report",
       "url": "https://concoursminesponts.fr/wp-content/uploads/2025/10/Rapport-Ecrit-2025-VF.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -800,7 +800,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_all_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -810,7 +810,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_ang_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -820,7 +820,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_fac_all_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -830,7 +830,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_fac_ang_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -840,7 +840,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_ara_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -850,7 +850,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_esp_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -860,7 +860,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_ita_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -870,7 +870,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_por_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -880,7 +880,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_lv_chi_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -890,7 +890,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_inter_si_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -900,7 +900,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_math_algo_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -910,7 +910,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_inter_math_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -920,7 +920,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_manip_phys_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -930,7 +930,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_phys_chim_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -940,7 +940,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2024/rapport_manip_si_oral_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -950,7 +950,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/LV_ORAL_2024_24.10.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -960,7 +960,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/LV_ECRIT_2024_30.09.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -970,7 +970,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AN.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -980,7 +980,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AA.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -990,7 +990,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -1000,7 +1000,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -1010,7 +1010,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -1020,7 +1020,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20CCS%202024%20MP.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -1030,7 +1030,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20CCS%202024%20PC.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -1040,7 +1040,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20CCS%202024%20PSI_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1050,7 +1050,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/02/PC.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1060,7 +1060,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/2024_LVA6AA1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1070,7 +1070,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/2024_LVA6AN1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1080,7 +1080,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/2024_LVA6AU1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1090,7 +1090,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/2024_LVB6AU13.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1100,7 +1100,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/2024_LVB6AE3.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1110,7 +1110,7 @@
       "type": "report",
       "url": "https://dev.e3a-polytech.fr/wp-content/uploads/2024/11/MP_ECRIT_Informatique-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1120,7 +1120,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/10/MP_ECRIT_SI_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1130,7 +1130,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/rapport_MP_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1140,7 +1140,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/10/MPI_ECRIT_Informatique_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1150,7 +1150,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/rapport_MPI_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1160,7 +1160,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/2024_CCINP_PC_RAPPORT_MODELISATION1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1170,7 +1170,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/2024_CCINP_PC_RAPPORT_INFORMATIQUE1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1180,7 +1180,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/rapport-informatique-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1190,7 +1190,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/rapport-sciences-de-ling%C3%A9nieur-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1200,7 +1200,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/rapport_PSI_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1210,7 +1210,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/rapport_PC_chimie_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1220,7 +1220,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/Rapport_MP_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1230,7 +1230,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/Rapport_MPI_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1240,7 +1240,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/Rapport_PC_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1250,7 +1250,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/07/Rapport_PSI_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -1260,7 +1260,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2024/06/rapport_PC_physique_2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1270,7 +1270,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20BCPST%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1280,7 +1280,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ORAL%20ADS%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1290,7 +1290,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MPI%20RAPPORT%20ORAL%20ADS%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1300,7 +1300,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Rapport%20ADS%20MPI%2024%20math.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1310,7 +1310,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ORAL%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1320,7 +1320,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PSI%20RAPPORT%20ORAL%20ADS%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1330,7 +1330,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PT%20RAPPORT%20ADS%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1340,7 +1340,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORALE%20CHIMIE%20(MAJEURE).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1350,7 +1350,7 @@
       "type": "official-document",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUI-FF%20Session%202%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1360,7 +1360,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1370,7 +1370,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PT%20RAPPORT%20ORAL%20INFORMATIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1380,7 +1380,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20MATHEMATIQUES%20(MINEURE).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1390,7 +1390,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ADS%20MATHEMATIQUES-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1400,7 +1400,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20BCPST%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1410,7 +1410,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PSI%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1420,7 +1420,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(MAJEURE).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1430,7 +1430,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(MINEURE).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1440,7 +1440,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ADS%20PHYSIQUE-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1450,7 +1450,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20BCPST%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1460,7 +1460,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PSI%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1470,7 +1470,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI%20RAPPORT%20ECRIT%20MATHEMATIQUES%20A%20(XLSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1480,7 +1480,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%2C%20MPI%20RAPPORT%20ECRIT%20DE%20MATHS%20B%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1490,7 +1490,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1500,7 +1500,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20ET%20S.I.%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1510,7 +1510,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ECRIT%20INFORMATIQUE%20A%20(XULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1520,7 +1520,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ECRIT%20INFORMATIQUE%20B%20(XLSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1530,7 +1530,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%2C%20MPI%2C%20PC%20RAPPORT%20ECRIT%20DE%20FRANCAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1540,7 +1540,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC%20RAPPORT%20ECRIT%20ANGLAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1550,7 +1550,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC%20RAPPORT%20ECRIT%20ALLEMAND%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1560,7 +1560,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC%20RAPPORT%20ECRIT%20ARABE%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1570,7 +1570,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC%20RAPPORT%20ECRIT%20ESPAGNOL%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1580,7 +1580,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MPI%20RAPPORT%20ECRIT%20PHYSIQUE%20(X)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1590,7 +1590,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MPI%20RAPPORT%20ECRIT%20INFORMATIQUE%20C%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1600,7 +1600,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ECRIT%20MATHEMATIQUES%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1610,7 +1610,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ECRIT%20PHYSIQUE%20B%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1620,7 +1620,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ECRIT%20CHIMIE%20A%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1630,7 +1630,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ORAL%20DE%20MATHEMATIQUES%201%20ET%202.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1640,7 +1640,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1650,7 +1650,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ORAL%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1660,7 +1660,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Rapport%20MPI%2024%20math%20Refait.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1670,7 +1670,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MPI%20RAPPORT%20ORAL%20INFORMATIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1680,7 +1680,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ORAL%20MATHEMATIQUES_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1690,7 +1690,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1700,7 +1700,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20ORAL%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1710,7 +1710,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20DE%20TRAVAUX%20PRATIQUES%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1720,7 +1720,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PC%20RAPPORT%20DE%20TRAVAUX%20PRATIQUES%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1730,7 +1730,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MPI%20RAPPORT%20ORAL%20ALLEMAND_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1740,7 +1740,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-PC-PSI%20RAPPORT%20ORAL%20ARABE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1750,7 +1750,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC%20RAPPORT%20ORAL%20ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1760,7 +1760,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1770,7 +1770,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20FUF%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1780,7 +1780,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ADS%20DE%20MATHEMATIQUES_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1790,7 +1790,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%2C%20MPI%2C%20PC%20RAPPORT%20ORAL%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1800,7 +1800,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%20RAPPORT%20ORAL%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1810,7 +1810,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20PSI%20RAPPORT%20ORAL%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1820,7 +1820,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%2C%20MPI%2C%20PC%20RAPPORT%20ORAL%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -1830,7 +1830,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP-MPI-PC-PSI%20SUJET%20ANGLAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1840,7 +1840,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/09/ANNALES-PREPA-2024-Allemand-Anglais-Espagnol-LVA.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1850,7 +1850,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/09/ANNALES-PREPA-2024-Autres-LVA.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1860,7 +1860,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/09/ANNALES-PREPA-2024-Allemand-Anglais-Espagnol-LVB.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1870,7 +1870,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/09/ANNALES-PREPA-2024-Autres-LVB.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1880,7 +1880,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/09/Videos-anglais-2024-Verbatims-1-a-13-DEF.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -1890,7 +1890,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2024/04/SUJET-LVB-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1900,7 +1900,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Ecrit-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1910,7 +1910,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Ecrit-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1920,7 +1920,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/2023_Rapport-Final-Ecrit.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1930,7 +1930,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Ecrit-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1940,7 +1940,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Oral-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1950,7 +1950,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Oral-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1960,7 +1960,7 @@
       "type": "report",
       "url": "https://wordpress.concoursminesponts.fr/wp-content/uploads/2024/09/Rapport-Final-Oral-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -1970,7 +1970,7 @@
       "type": "report",
       "url": "https://concoursminesponts.fr/wp-content/uploads/2024/11/Rapport-Final-Oral-2024.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -1980,7 +1980,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_all_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -1990,7 +1990,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_ang_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2000,7 +2000,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_fac_all_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2010,7 +2010,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_fac_ang_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2020,7 +2020,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_ara_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2030,7 +2030,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_esp_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2040,7 +2040,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_ita_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2050,7 +2050,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_por_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2060,7 +2060,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_lv_chi_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2070,7 +2070,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_inter_si_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2080,7 +2080,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_math_algo_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2090,7 +2090,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_inter_math_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2100,7 +2100,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_manip_phys_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2110,7 +2110,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_phys_chim_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -2120,7 +2120,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2023/rapport_manip_si_oral_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2130,7 +2130,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2023/communes/LV_ORAL_2023_29.09.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2140,7 +2140,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2023/communes/LV_ECRIT_2023_04.12.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2150,7 +2150,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AA.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2160,7 +2160,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2170,7 +2170,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AN.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2180,7 +2180,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -2190,7 +2190,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -2200,7 +2200,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20des%20%C3%A9preuves%20du%20concours%20Centrale-Sup%C3%A9lec%20pour%20la%20fili%C3%A8re%20MP%20en%202023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -2210,7 +2210,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20des%20%C3%A9preuves%20du%20concours%20Centrale-Sup%C3%A9lec%20pour%20la%20fili%C3%A8re%20MPI%20en%202023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -2220,7 +2220,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20des%20%C3%A9preuves%20du%20concours%20Centrale-Sup%C3%A9lec%20pour%20la%20fili%C3%A8re%20PC%20en%202023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -2230,7 +2230,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20des%20%C3%A9preuves%20du%20concours%20Centrale-Sup%C3%A9lec%20pour%20la%20fili%C3%A8re%20PSI%20en%202023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -2240,7 +2240,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sites/default/files/documents/Rapport%20des%20%C3%A9preuves%20du%20concours%20Centrale-Sup%C3%A9lec%20pour%20la%20fili%C3%A8re%20TSI%20en%202023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2250,7 +2250,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/12/MP.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2260,7 +2260,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/12/MPI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2270,7 +2270,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/12/PSI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2280,7 +2280,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/LVA-Allemand-Arabe-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2290,7 +2290,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/LVA-Anglais-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2300,7 +2300,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/LVA-Espagnol-Italien-Portugais-Russe-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2310,7 +2310,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/LVB-Anglais-Arabe-Italien-Portais-Russe-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2320,7 +2320,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/LVB-Anglais-Espagnol-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2330,7 +2330,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/Rapport_FrPh_22.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2340,7 +2340,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/09/MP_ECRIT_Informatique-2023_07.091.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2350,7 +2350,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/09/MP_ECRIT_SI_2023_18.091.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2360,7 +2360,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/Rapport-Physique-Chimie-MP-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2370,7 +2370,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/09/MPI_ECRIT_Informatique-2023_18.09.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2380,7 +2380,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/Rapport-Physique-Chimie-MPI-2023-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2390,7 +2390,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/08/PC_RAPPORT_MODELISATION_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2400,7 +2400,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/08/PC_RAPPORT_INFORMATIQUE_2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2410,7 +2410,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/Rapport-Physique-Chimie-PC-2023-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2420,7 +2420,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/08/Rapport-Informatique-PSI-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2430,7 +2430,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/08/Rapport-SII-PSI-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -2440,7 +2440,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2023/06/Rapport-Physique-Chimie-PSI-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2450,7 +2450,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20BCPST%20RAPPORT%20ADS%20DE%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2460,7 +2460,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ADS%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2470,7 +2470,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2480,7 +2480,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2490,7 +2490,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PSI%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2500,7 +2500,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PT%20RAPPORT%20ADS%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2510,7 +2510,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20DE%20CHIMIE%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2520,7 +2520,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUI-FF%20Session%20Printemps%20SUJET%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2530,7 +2530,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2540,7 +2540,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PT%20RAPPORT%20ORAL%20INFORMATIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2550,7 +2550,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20MATHEMATIQUES%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2560,7 +2560,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20MATHS%20MINEURE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2570,7 +2570,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20BCPST%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2580,7 +2580,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PSI%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2590,7 +2590,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20DE%20MECANIQUE%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2600,7 +2600,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20DE%20PHYSIQUE%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2610,7 +2610,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(50mn).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2620,7 +2620,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20BCPST%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2630,7 +2630,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PSI%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2640,7 +2640,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI%20RAPPORT%20ECRIT%20MATHEMATIQUES%20A%20(XLSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2650,7 +2650,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI%20RAPPORT%20ECRIT%20MATHEMATIQUES%20B%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2660,7 +2660,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2670,7 +2670,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20ET%20S.I.%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2680,7 +2680,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI%20RAPPORT%20ECRIT%20INFORMATIQUE%20A%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2690,7 +2690,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ECRIT%20INFORMATIQUE%20B%202h%20(XLSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2700,7 +2700,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC-PSI%20RAPPORT%20ECRIT%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2710,7 +2710,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC-PSI%20RAPPORT%20ECRIT%20ANGLAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2720,7 +2720,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ECRIT%20ALLEMAND%20(XEULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2730,7 +2730,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ECRIT%20ARABE%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2740,7 +2740,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-PC%20RAPPORT%20ECRIT%20ESPAGNOL%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2750,7 +2750,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ECRIT%20PHYSIQUE%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2760,7 +2760,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ECRIT%20INFORMATIQUE%20C%20(XULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2770,7 +2770,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ECRIT%20MATHEMATIQUES%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2780,7 +2780,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ECRIT%20PHYSIQUE%20B%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2790,7 +2790,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ECRIT%20CHIMIE%20A%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2800,7 +2800,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ECRIT%20INFORMATIQUE%20B%20(XELC).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2810,7 +2810,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ORAL%20MATHEMATIQUES%201%20ET%202.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2820,7 +2820,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2830,7 +2830,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ORAL%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2840,7 +2840,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2850,7 +2850,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ORAL%20INFORMATIQUE_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2860,7 +2860,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2870,7 +2870,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2880,7 +2880,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20ORAL%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2890,7 +2890,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20TRAVAUX%20PRATIQUES%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2900,7 +2900,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PC%20RAPPORT%20TRAVAUX%20PRATIQUES%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2910,7 +2910,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MPI%20RAPPORT%20ORAL%20ALLEMAND.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2920,7 +2920,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ORAL%20ARABE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2930,7 +2930,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ORAL%20ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2940,7 +2940,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2950,7 +2950,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20FUF%20RAPPORT%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2960,7 +2960,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20BCPST%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2970,7 +2970,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2980,7 +2980,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -2990,7 +2990,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP-MPI-PC%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3000,7 +3000,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20MP%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3010,7 +3010,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PSI%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3020,7 +3020,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2023%20PSI%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3030,7 +3030,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/09/ANNALES-PREPA-2023-Allemand-Anglais-Espagnol-LVA_compressed-2.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3040,7 +3040,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/09/ANNALES-PREPA-2023-Autres-LVA-avec-compression-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3050,7 +3050,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/09/ANNALES-PREPA-2023-Allemand-Anglais-Espagnol-LVB_compressed-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3060,7 +3060,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/09/ANNALES-PREPA-2023-Autres-LVB_compressed-2.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3070,7 +3070,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/09/Videos-anglais-2023-Verbatims-DEF.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3080,7 +3080,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/04/SUJET-LVB-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3090,7 +3090,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2023/04/SUJET-LVA-2023.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3100,7 +3100,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_all_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3110,7 +3110,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_ang_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3120,7 +3120,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_fac_all_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3130,7 +3130,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_fac_ang_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3140,7 +3140,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_ara_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3150,7 +3150,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_esp_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3160,7 +3160,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_ita_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3170,7 +3170,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_por_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3180,7 +3180,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_lv_chi_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3190,7 +3190,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_inter_si_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3200,7 +3200,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_math_algo_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3210,7 +3210,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_inter_math_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3220,7 +3220,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_manip_phys_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3230,7 +3230,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_phys_chim_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -3240,7 +3240,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2022/rapport_manip_si_oral_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3250,7 +3250,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20oraux/MP/2022/LV_ORAL_2022.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3260,7 +3260,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LV_ECRIT_2022-V2.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3270,7 +3270,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Anglais.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3280,7 +3280,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Allemand-Arabe.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3290,7 +3290,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Autres.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3300,7 +3300,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Anglais-Espagnol.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -3310,7 +3310,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Autres.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3320,7 +3320,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/LVA-Allemand-Arabe-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3330,7 +3330,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/LVA-Anglais-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3340,7 +3340,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/LVA-Autres-langues-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3350,7 +3350,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/LVB-Autres-langues-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3360,7 +3360,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/LVB-Anglais-Espagnol-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3370,7 +3370,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/Rapport_FrPh_22.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3380,7 +3380,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/RapportMP_ECRIT_INFORMATIQUE_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3390,7 +3390,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/rapport_MP_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3400,7 +3400,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/rapport_PC_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3410,7 +3410,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/rapport_ecrits-PSI_2022-Informatique.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3420,7 +3420,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/07/rapport_PSI_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3430,7 +3430,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/Rapport_epreuve_PSI_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3440,7 +3440,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/LV_ECRIT_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3450,7 +3450,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/Rapport-LV_ECRIT_2021_02.12.21_final.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3460,7 +3460,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/MP_ECRIT_SI_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3470,7 +3470,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/Rapport_epreuve_PC_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3480,7 +3480,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/rapport_ecrits-PSI_2022-SII.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -3490,7 +3490,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2022/11/Rapport_epreuve_MP_2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3500,7 +3500,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20BCPST%20RAPPORT%20ADS%20DE%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3510,7 +3510,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ADS%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3520,7 +3520,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ADS%20DE%20PHYSIQUE_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3530,7 +3530,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3540,7 +3540,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUI-FF%20S1%20SUJET%20ANGLAIS_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3550,7 +3550,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUI-FF%20Session%20Printemps%20SUJET%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3560,7 +3560,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20INFORMATIQUE%20(1H).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3570,7 +3570,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20MATHEMATIQUES%20(1H).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3580,7 +3580,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20MATHEMATIQUES%20(50mn).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3590,7 +3590,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ADS%20MATHEMATIQUES-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3600,7 +3600,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20BCPST%20RAPPORT%20ORAL%20DE%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3610,7 +3610,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20L3%20(1H).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3620,7 +3620,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(50mn).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3630,7 +3630,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20BCPST%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3640,7 +3640,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PSI%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3650,7 +3650,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ECRIT%20MATHS%20A%20(XLSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3660,7 +3660,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ECRIT%20MATHS%20B%20(X).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3670,7 +3670,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3680,7 +3680,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ECRIT%20PHYSIQUE%20ET%20SCIENCES%20DE%20L",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3690,7 +3690,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ECRIT%20INFORMATIQUE%20A%20(XULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3700,7 +3700,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20RAPPORT%20ECRIT%20INFORMATIQUE%20B%20-2h%20(XLSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3710,7 +3710,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC-PSI%20RAPPORT%20ECRIT%20FRANCAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3720,7 +3720,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ECRIT%20ANGLAIS%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3730,7 +3730,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ECRIT%20ALLEMAND%20(XEULSR)_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3740,7 +3740,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ECRIT%20ARABE%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3750,7 +3750,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ECRIT%20ESPAGNOL%20(XEULSR).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3760,7 +3760,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ECRIT%20MATHEMATIQUES%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3770,7 +3770,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ECRIT%20PHYSIQUE%20B%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3780,7 +3780,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ECRIT%20CHIMIE%20A%20(XEULS).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3790,7 +3790,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ORAL%20MATHEMATIQUES%201%20ET%202.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3800,7 +3800,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3810,7 +3810,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ORAL%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3820,7 +3820,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3830,7 +3830,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ORAL%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3840,7 +3840,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20DE%20TRAVAUX%20PRATIQUES%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3850,7 +3850,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20DE%20TRAVAUX%20PRATIQUES%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3860,7 +3860,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ORAL%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3870,7 +3870,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ORAL%20ARABE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3880,7 +3880,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ORAL%20ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3890,7 +3890,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3900,7 +3900,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3910,7 +3910,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20BCPST%20RAPPORT%20ORAL%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3920,7 +3920,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3930,7 +3930,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3940,7 +3940,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20MP-PC%20RAPPORT%20ORAL%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3950,7 +3950,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PC%20RAPPORT%20ADS%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3960,7 +3960,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PSI%20RAPPORT%20ORAL%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3970,7 +3970,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20PSI%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -3980,7 +3980,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2022%20FUF%20RAPPORT%20ORAL%20CULTURE%20GENERALE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -3990,7 +3990,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/09/ANNALE-LV1-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4000,7 +4000,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/09/ANNALE-LV1-AUTRES-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4010,7 +4010,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/09/ANNALE-LV2-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4020,7 +4020,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/09/ANNALE-LV2-AUTRES-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4030,7 +4030,7 @@
       "type": "official-document",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/10/Anglais-2022-Verbatim-01-13.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4040,7 +4040,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/04/SUJETS-LV2-ANGLAISALLEMANDESPAGNOL-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4050,7 +4050,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2022/04/SUJET-LV1-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2022.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4060,7 +4060,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_all_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4070,7 +4070,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_ang_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4080,7 +4080,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_fac_all_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4090,7 +4090,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_fac_ang_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4100,7 +4100,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_ara_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4110,7 +4110,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_esp_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4120,7 +4120,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_ita_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4130,7 +4130,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_por_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4140,7 +4140,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_lv_chi_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4150,7 +4150,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_inter_si_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4160,7 +4160,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_math_algo_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4170,7 +4170,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_inter_math_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4180,7 +4180,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_manip_phys_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4190,7 +4190,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_phys_chim_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -4200,7 +4200,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2021/rapport_manip_si_oral_2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -4210,7 +4210,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AN.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -4220,7 +4220,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AA.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -4230,7 +4230,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -4240,7 +4240,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -4250,7 +4250,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4260,7 +4260,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/RAPPORT-Physique-Chimie-MP-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4270,7 +4270,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/LVA-AA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4280,7 +4280,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/LVA-Anglais-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4290,7 +4290,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/LVA-AU-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4300,7 +4300,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/LVB-AU-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4310,7 +4310,7 @@
       "type": "official-document",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/LVB-AE-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4320,7 +4320,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/RAPPORT-Physique-Chimie-PC-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4330,7 +4330,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/RAPPORT-Physique-Chimie-PSI-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4340,7 +4340,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/Rapport-FRANCAIS_PHILOSOPHIE_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4350,7 +4350,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/06/Rapport-LV_ECRIT_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4360,7 +4360,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/Compte-rendu-PC-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4370,7 +4370,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/Compte-rendu-PSI-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4380,7 +4380,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/wp-content/uploads/2021/07/Compte-rendu-MP-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4390,7 +4390,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20BCPST%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4400,7 +4400,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20ADS%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4410,7 +4410,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4420,7 +4420,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PSI%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4430,7 +4430,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PT%20RAPPORT%20ADS%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4440,7 +4440,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20CHIMIE%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4450,7 +4450,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20MATHEMATIQUES%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4460,7 +4460,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4470,7 +4470,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(1h).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4480,7 +4480,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20PHYSIQUE%20(50mn).pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4490,7 +4490,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4500,7 +4500,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PSI%20RAPPORT%20ORAL%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4510,7 +4510,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP%20RAPPORT%20ORAL%20MATHEMATIQUES%201%20ET%202.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4520,7 +4520,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4530,7 +4530,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP%20RAPPORT%20ORAL%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4540,7 +4540,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20ORAL%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4550,7 +4550,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20ORAL%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4560,7 +4560,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20ORAL%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4570,7 +4570,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20TP%20DE%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4580,7 +4580,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PC%20RAPPORT%20TP%20DE%20CHIMIE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4590,7 +4590,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP-PC%20RAPPORT%20ORAL%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4600,7 +4600,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP-PC%20RAPPORT%20ORAL%20ARABE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4610,7 +4610,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP-PC%20RAPPORT%20ORAL%20ESPAGNOL.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4620,7 +4620,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4630,7 +4630,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20FUF%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4640,7 +4640,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20BCPST%20RAPPORT%20DE%20FRANCAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4650,7 +4650,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20BCPST%20RAPPORT%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4660,7 +4660,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP%20RAPPORT%20ADS%20MATHEMATIQUES.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4670,7 +4670,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP-PC%20RAPPORT%20ORAL%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4680,7 +4680,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP-PC%20RAPPORT%20ORAL%20FRANCAIS_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4690,7 +4690,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20MP%20RAPPORT%20ADS%20PHYSIQUE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -4700,7 +4700,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2021%20PSI%20RAPPORT%20D",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4710,7 +4710,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/ANNALE-LV1-ANGLAISALLEMAND-ESPAGNOL-PRE%CC%81PA-2020-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4720,7 +4720,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/10/ANNALE-LV1-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4730,7 +4730,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/ANNALE-LV1-AUTRES-PRE%CC%81PA-2020-1.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4740,7 +4740,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/10/ANNALE-LV1-AUTRES-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4750,7 +4750,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/ANNALE-LV2-ANGLAISALLEMAND-ESPAGNOL-PRE%CC%81PA-2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4760,7 +4760,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/10/ANNALE-LV2-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4770,7 +4770,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/ANNALE-LV2-AUTRES-PRE%CC%81PA-2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4780,7 +4780,7 @@
       "type": "report",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/10/ANNALE-LV2-AUTRES-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4790,7 +4790,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/11/Verbatim-Anglais-videos-sept2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4800,7 +4800,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/02/Videos-Anglais-verbatim-et-resumes-.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4810,7 +4810,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/SUJET-LV1-ANGLAISALLEMANDESPAGNOL-PRE%CC%81PA-2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4820,7 +4820,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/04/SUJET-LV1-ANGLAIS-ALLEMAND-ESPAGNOL-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4830,7 +4830,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/01/SUJET-LV2-ANGLAISALLEMANDESPAGNOL-PRE%CC%81PA-2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -4840,7 +4840,7 @@
       "type": "subject",
       "url": "https://www.ecricome.org/wp-content/uploads/2021/04/SUJETS-LV2-ANGLAISALLEMANDESPAGNOL-PREPA-2021.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4850,7 +4850,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/07/LVA__allemand_arabe_LVA6AA.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4860,7 +4860,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/07/LVA_anglais_LVA6AN.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4870,7 +4870,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/07/LVA_autres_LVA6AU.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4880,7 +4880,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/07/LVB_autres_LVB6AU.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4890,7 +4890,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/07/LVB_espagnol_LVB6AE.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4900,7 +4900,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/MP_INFORMATIQUE_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4910,7 +4910,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/MP_SI_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4920,7 +4920,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/Compte-rendu-Maths-MP.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4930,7 +4930,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/Rapport_e3a_MP_physique_chimie_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4940,7 +4940,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/PC_RAPPORT_MODELISATION_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4950,7 +4950,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/Compte-rendu-Maths-PC.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4960,7 +4960,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/Rapport_e3a_PC_physique_chimie_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4970,7 +4970,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/PSI_2020-Informatique.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4980,7 +4980,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/PSI_2020-SII.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -4990,7 +4990,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/FK1ucb-Rapport_e3a_PSI._physique_chimie_2020.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5000,7 +5000,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/10/Compte-rendu-Maths-PSI.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5010,7 +5010,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/01/Rapport-Physique-Chimie-PSI-2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5020,7 +5020,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2020/01/Rapport-Physique-Mod%C3%A9lisation-PC-2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -5030,7 +5030,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2020%20FUI-FF%20S2%20SUJET%20ANGLAIS.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5040,7 +5040,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_all_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5050,7 +5050,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_ang_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5060,7 +5060,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_fac_all_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5070,7 +5070,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_fac_ang_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5080,7 +5080,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_ara_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5090,7 +5090,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_esp_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5100,7 +5100,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_ita_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5110,7 +5110,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_por_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5120,7 +5120,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_lv_chi_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5130,7 +5130,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_inter_si_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5140,7 +5140,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_math_algo_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5150,7 +5150,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_inter_math_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5160,7 +5160,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_manip_phys_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5170,7 +5170,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_phys_chim_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5180,7 +5180,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2019/rapport_manip_si_oral_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5190,7 +5190,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_anglais_LVA6AN.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5200,7 +5200,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA__allemand_arabe_LVA6AA.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5210,7 +5210,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_autres_LVA6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5220,7 +5220,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_espagnol_LVB6AE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5230,7 +5230,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_autres_LVB6AU.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5240,7 +5240,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Anglais%202019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5250,7 +5250,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA-%20All-%20Arabe-2019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5260,7 +5260,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Autres-2019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5270,7 +5270,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20Ang-Esp%20-2019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5280,7 +5280,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20autres.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5290,7 +5290,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/qcm_e3a_2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5300,7 +5300,7 @@
       "type": "official-document",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/qcm_e3a_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5310,7 +5310,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_mp_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5320,7 +5320,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_pc_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5330,7 +5330,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_psi_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5340,7 +5340,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_lv_fr_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5350,7 +5350,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-MP_ECRIT_INFORMATIQUE-19.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5360,7 +5360,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-informatique-19.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5370,7 +5370,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_ecrit_info-18.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5380,7 +5380,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-info-18.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5390,7 +5390,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-MODELISATION-19.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5400,7 +5400,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_ecrit_modelisation-18.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5410,7 +5410,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-MP_ECRIT_SI-2019.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5420,7 +5420,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport-Sciences-Industrielles-19.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5430,7 +5430,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/rapport_ecrit_science_industrielle-18.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -5440,7 +5440,7 @@
       "type": "report",
       "url": "http://www.e3a-polytech.fr/wp-content/uploads/2019/12/Rapport_si-18.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5450,7 +5450,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_all_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5460,7 +5460,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_ang_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5470,7 +5470,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_fac_all_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5480,7 +5480,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_fac_ang_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5490,7 +5490,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_ara_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5500,7 +5500,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_esp_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5510,7 +5510,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_ita_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5520,7 +5520,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_por_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5530,7 +5530,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_lv_chi_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5540,7 +5540,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_inter_si_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5550,7 +5550,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_math_algo_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5560,7 +5560,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_inter_math_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5570,7 +5570,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_manip_phys_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5580,7 +5580,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_phys_chim_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5590,7 +5590,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2018/rapport_manip_si_oral_2018.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5600,7 +5600,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_oral_2018.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5610,7 +5610,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_ecrit_2018.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5620,7 +5620,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA-Anglais%20sujet.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5630,7 +5630,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA_Allemand_Arabe%20sujet.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5640,7 +5640,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA-Autre%20sujet.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5650,7 +5650,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Anglais_Espagnol%20sujet.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5660,7 +5660,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Autre%20sujet.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5670,7 +5670,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_all_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5680,7 +5680,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_ang_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5690,7 +5690,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_fac_all_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5700,7 +5700,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_fac_ang_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5710,7 +5710,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_ara_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5720,7 +5720,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_esp_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5730,7 +5730,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_ita_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5740,7 +5740,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_por_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5750,7 +5750,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_lv_chi_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5760,7 +5760,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_inter_si_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5770,7 +5770,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_math_algo_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5780,7 +5780,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_inter_math_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5790,7 +5790,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_manip_phys_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5800,7 +5800,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_phys_chim_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5810,7 +5810,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2017/rapport_manip_si_oral_2017.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5820,7 +5820,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/LV_oral_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5830,7 +5830,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/LV_ecrit_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5840,7 +5840,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_anglais_lva_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5850,7 +5850,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.arabe_lva_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5860,7 +5860,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_esp.-ital.-russe_port_lva_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5870,7 +5870,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_ang.-esp._lvb_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -5880,7 +5880,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.-arabe-it_portug_russe_lvb_2017.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5890,7 +5890,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_all_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5900,7 +5900,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_ang_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5910,7 +5910,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_fac_all_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5920,7 +5920,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_fac_ang_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5930,7 +5930,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_ara_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5940,7 +5940,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_esp_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5950,7 +5950,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_ita_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5960,7 +5960,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_por_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5970,7 +5970,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_lv_chi_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5980,7 +5980,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_inter_si_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -5990,7 +5990,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_math_algo_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6000,7 +6000,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_inter_math_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6010,7 +6010,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_manip_phys_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6020,7 +6020,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_phys_chim_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6030,7 +6030,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/documents/ecrit/rapport/2016/rapport_manip_si_oral_2016.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6040,7 +6040,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_oral_2016.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6050,7 +6050,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_ecrit_2016.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6060,7 +6060,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_Anglais_Espagnol.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6070,7 +6070,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-Anglais.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6080,7 +6080,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA_Allemand_Arabe.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6090,7 +6090,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-esp-it-portug-russe.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6100,7 +6100,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_all-arabe-it-portug-russe.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6110,7 +6110,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/article154.html",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "pt",
@@ -6120,7 +6120,7 @@
       "type": "report",
       "url": "https://www.banquept.fr/article231.html",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6130,7 +6130,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ORAL_2021_02.12.21_final.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6140,7 +6140,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ORAL_2019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6150,7 +6150,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LV_oral_2015%20rapport.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6160,7 +6160,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_oral_2014%20rapport.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6170,7 +6170,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ECRIT_2020.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6180,7 +6180,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ECRIT_2019.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6190,7 +6190,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LV_ecrit_2015%20rapport.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6200,7 +6200,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_ecrit_2014%20rapport.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6210,7 +6210,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ECRIT_2021_02.12.21_final.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6220,7 +6220,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Anglais.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6230,7 +6230,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Autre.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ccinp",
@@ -6240,7 +6240,7 @@
       "type": "subject",
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV-Anglais.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -6250,7 +6250,7 @@
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sujets-rapports#main-content",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "centrale",
@@ -6270,7 +6270,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/annales-et-rapport/",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6280,7 +6280,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/Rapport_FRPH.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6290,7 +6290,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_INFORMATIQUE.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6300,7 +6300,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-pc-article/2021_PC_rapport_modelisation.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6310,7 +6310,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits%20PSI_Informatique.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6320,7 +6320,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits_PSI_SII.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6330,7 +6330,7 @@
       "type": "report",
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_SI.pdf?download=true",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "e3a",
@@ -6340,7 +6340,7 @@
       "type": "report",
       "url": "https://www.e3a-polytech.fr/rapports-et-resultats/",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6350,7 +6350,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports#",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6360,7 +6360,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports#mainTag",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6370,7 +6370,7 @@
       "type": "official-document",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/FUI-FF%202%202025%20Anglais.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6380,7 +6380,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports#tarteaucitron",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6390,7 +6390,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%20et%20MPI_Maths%20A%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6400,7 +6400,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP_Maths%20B%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6410,7 +6410,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP_Physique%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6420,7 +6420,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP_Physique%20et%20SI%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6430,7 +6430,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%20et%20MPI_Info%20A%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6440,7 +6440,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%20et%20PC_info%20B%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6450,7 +6450,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%2C%20MPI%20et%20PC_fran%C3%A7ais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6460,7 +6460,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%2C%20MPI%2C%20PC%20et%20PSI_anglais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6470,7 +6470,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%2C%20MPI%2C%20PC%20et%20PSI_allemand%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6480,7 +6480,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%2C%20MPI%2C%20PC%20et%20PSI_arabe%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6490,7 +6490,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MP%2C%20MPI%20et%20PC_espagnol%20OK_0.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6500,7 +6500,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MPI_Physique%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6510,7 +6510,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_MPI_Info%20C.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6520,7 +6520,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_PC_Maths%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6530,7 +6530,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_PC_Physique_B%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6540,7 +6540,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Ecrits_PC_Chimie%20A.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6550,7 +6550,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP_%20Phys%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6560,7 +6560,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP_Chimie%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6570,7 +6570,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MPI_Physique%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6580,7 +6580,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Rapport_Phys_MPI_2024%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6590,7 +6590,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MPI_Info%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6600,7 +6600,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PC_Maths%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6610,7 +6610,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PC_physique%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6620,7 +6620,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PC_Chimie%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6630,7 +6630,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PC_TP%20Physique%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6640,7 +6640,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PC_TP%20Chimie%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6650,7 +6650,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP%2C%20MPI%2C%20BCPST%2C%20PC%20et%20PSI_Allemand%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6660,7 +6660,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/OraL_MP%2C%20MPI%2C%20PC_arabe%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6670,7 +6670,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP%2C%20MPI%2C%20BCPST%2C%20PC%20et%20PSI_Espagnol%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6680,7 +6680,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_FUF_Culture%20g%C3%A9n%C3%A9rale%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6690,7 +6690,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_FUF_Fran%C3%A7ais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6700,7 +6700,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_FUF_Anglais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6710,7 +6710,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_BCPST_Fran%C3%A7ais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6720,7 +6720,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP_ADS%20Maths%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6730,7 +6730,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP%2CPC%2C%20MPI_Fran%C3%A7ais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6740,7 +6740,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP_ADS%20Phys%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6750,7 +6750,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_PSI_Fran%C3%A7ais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6760,7 +6760,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP%2C%20MPI%2C%20BCPST%2C%20PC%20et%20PSI_Anglais%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6770,7 +6770,7 @@
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Oral_MP_Maths%20OK.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6780,7 +6780,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/LVE%20Anglais.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6790,7 +6790,7 @@
       "type": "subject",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/Anglais%20sujet.pdf",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "xens",
@@ -6810,7 +6810,7 @@
       "type": "official-document",
       "url": "https://www.ecricome.org/quiz-prepa-anglais-1/",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "ecricome",
@@ -6820,7 +6820,7 @@
       "type": "official-document",
       "url": "https://www.ecricome.org/quiz-prepa-anglais-2/",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     },
     {
       "sourceId": "mines",
@@ -6830,7 +6830,7 @@
       "type": "report",
       "url": "https://concoursminesponts.fr/archives/",
       "firstSeen": "2026-07-14",
-      "isNew": true
+      "isNew": false
     }
   ]
 }
