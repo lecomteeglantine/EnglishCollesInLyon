@@ -1,33 +1,1314 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Une femme qui écrit — Des nouvelles en vrac."><title>Une femme qui écrit</title><link rel="icon" href="assets/images/favicon.jpg"><link rel="stylesheet" href="assets/css/style.css"></head><body>
-<a class="skip-link" href="#contenu">Aller au contenu</a>
-<header class="site-header"><div class="header-inner">
-<a class="brand" href="index.html">Une femme qui écrit</a>
-<nav class="nav" aria-label="Navigation principale"><a href="index.html#nouvelles">Les nouvelles</a><button class="icon-btn" type="button" data-theme aria-label="Activer le mode sombre">☾</button></nav>
-</div></header>
-<main id="contenu">
-<section class="hero-banner" aria-labelledby="titre-site">
-  <img class="hero-banner-image" src="bandeau-wordpress.jpg" alt="Motif floral Art nouveau du bandeau Une femme qui écrit">
-  <div class="hero-banner-overlay" aria-hidden="true"></div>
-  <div class="hero-banner-text">
-    <h1 id="titre-site">Une femme qui écrit</h1>
-    <p>Des nouvelles en vrac</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Colles in Lyon — CPGE English · Colles · Vocabulary · Civilisation</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#243B53">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="English Colles">
+<meta name="description" content="A self-study companion for CPGE English: prepare independently, practise for colles, build stronger language and cultural knowledge, and improve through classroom use and teacher feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ENGLISH COLLES IN LYON — reusable base stylesheet
+   (these classes are meant to be reused on the future pages)
+   ============================================================ */
+:root{
+  --bg:#FAF3E7;            /* fond crème */
+  --bg2:#FFF7ED;
+  --ink:#22312F;           /* texte principal */
+  --muted:#5d6b66;
+  --navy:#243B53;          /* bleu profond */
+  --terra:#C46A4A;         /* terracotta doux */
+  --sage:#7A9B76;          /* vert sauge */
+  --gold:#D9A441;          /* or doux */
+  --card:#FFFFFF;
+  --line:#E6D8C8;          /* bordures */
+  --shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 30px rgba(36,59,83,.07);
+  --shadow-lg:0 2px 6px rgba(36,59,83,.08), 0 24px 60px rgba(36,59,83,.13);
+  --r:16px;
+  --tap:48px;
+  --maxw:1120px;
+  --font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+  --fs:18px;               /* taille de base, pilotée par l'accessibilité */
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;font-size:1rem}
+body.dys{--font:Verdana,Tahoma,"Atkinson Hyperlegible",sans-serif;letter-spacing:.03em;word-spacing:.12em;line-height:1.85}
+body.dys .display{font-family:var(--font)}
+body.contrast{--bg:#fffdf8;--ink:#15201e;--muted:#33433e;--line:#b9a88f}
+body.noanim *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+body.focus .hero-art,body.focus .chips,body.focus footer .foot-brand{opacity:.25}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;z-index:120}
+.skip:focus{left:12px}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+
+/* ---------- buttons (reusable) ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--tap);
+  padding:0 20px;border-radius:12px;font-weight:700;font-size:.95rem;transition:transform .12s, box-shadow .2s, background .2s, color .2s;border:2px solid transparent}
+.btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-navy:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.btn-ghost{border-color:var(--line);background:var(--card);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--terra);background:#fff}
+
+/* ---------- header ---------- */
+header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
+.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}
+.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink);min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:#fff;color:var(--terra)}
+.nav a.active{color:var(--terra)}
+.top-tools{display:flex;align-items:center;gap:8px}
+.accent{display:flex;align-items:center;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.accent button{min-width:40px;height:36px;border-radius:999px;font-size:.78rem;font-weight:700;color:var(--muted)}
+.accent button.on{background:var(--navy);color:#fff}
+.a11y-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);border-radius:11px;min-height:40px;padding:0 12px;font-weight:700;font-size:.84rem}
+.a11y-btn:hover{border-color:var(--terra)}
+.accent-note{font-size:.74rem;color:var(--muted);text-align:right;max-width:var(--maxw);margin:0 auto;padding:0 20px 7px}
+.burger{display:none;border:1px solid var(--line);background:var(--card);border-radius:11px;min-width:44px;min-height:40px;font-size:1.2rem}
+
+/* ---------- accessibility panel ---------- */
+.scrim{position:fixed;inset:0;background:rgba(34,49,47,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100}
+.scrim.open{opacity:1;pointer-events:auto}
+.a11y-panel{position:fixed;top:0;right:0;height:100%;width:min(360px,90vw);background:var(--bg2);border-left:1px solid var(--line);
+  box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s ease;z-index:101;overflow-y:auto}
+.a11y-panel.open{transform:none}
+.a11y-panel .ph{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.a11y-panel h2{font-size:1.2rem;color:var(--navy)}
+.a11y-panel .close{font-size:1.6rem;color:var(--muted);min-width:var(--tap);min-height:var(--tap)}
+.a11y-body{padding:18px 20px}
+.a11y-group{margin-bottom:20px}
+.a11y-group .lbl{font-weight:700;font-size:.9rem;margin-bottom:8px;display:block}
+.seg{display:flex;gap:6px}
+.seg button,.opt-toggle{border:1px solid var(--line);background:var(--card);border-radius:10px;min-height:44px;font-weight:700;font-size:.86rem;padding:0 14px}
+.seg button{flex:1}
+.seg button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;color:var(--ink)}
+.opt-toggle .state{font-size:.78rem;font-weight:700;color:var(--muted)}
+.opt-toggle.on{border-color:var(--sage);background:#f2f6f0}
+.opt-toggle.on .state{color:var(--sage)}
+.a11y-foot{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+
+/* ---------- sections ---------- */
+section{padding:54px 0}
+.sec-head{max-width:62ch}
+.sec-head h2{font-size:clamp(1.5rem,3.6vw,2.1rem);color:var(--navy)}
+.sec-head p{color:var(--muted);margin-top:10px}
+
+.hero{padding:46px 0 30px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:start}
+.hero h1{font-size:clamp(2rem,5.4vw,3.1rem);color:var(--navy);max-width:15ch}
+.hero .welcome{font-size:1.12rem;margin-top:16px;max-width:46ch}
+.hero .more{color:var(--muted);margin-top:10px;max-width:48ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+.hero-art{display:flex;flex-direction:column;gap:16px;align-items:stretch}
+.news-widget{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  width:100%;
+  max-width:360px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(36,59,83,.08), 0 22px 48px rgba(36,59,83,.16);
+}
+.news-top{
+  display:flex;align-items:center;gap:11px;
+  padding:14px 18px;
+  background:linear-gradient(135deg,var(--navy),#2f5573);
+  color:#fff;
+}
+.news-top .np-ico{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:rgba(255,255,255,.16);display:grid;place-items:center;
+}
+.news-top .np-ico svg{width:19px;height:19px;stroke:#fff}
+.news-header{
+  font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.2;color:#fff;margin:0;
+}
+.news-header .sublab{
+  display:block;font-family:var(--font);font-weight:700;font-size:.62rem;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.82;margin-top:3px;
+}
+.news-body{padding:18px}
+.news-metarow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:13px}
+.news-date{
+  font-size:.74rem;font-weight:700;color:var(--muted);
+  background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;margin:0;
+}
+.news-country{
+  font-size:.74rem;font-weight:700;color:var(--terra);
+  background:#fbeee7;border:1px solid #ecd6c8;border-radius:999px;padding:5px 11px;margin:0;
+}
+.news-title{
+  font-family:var(--display);font-size:1.3rem;line-height:1.2;font-weight:600;
+  color:var(--navy);margin:0 0 10px;
+}
+.news-source{
+  display:flex;align-items:center;gap:7px;
+  font-size:.8rem;color:var(--muted);margin:0 0 16px;
+}
+.news-source::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage);flex:none}
+.news-link{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--terra);color:#fff;text-decoration:none;
+  padding:11px 18px;border-radius:12px;font-weight:700;font-size:.9rem;
+  box-shadow:0 1px 2px rgba(36,59,83,.05), 0 10px 24px rgba(196,106,74,.28);
+  transition:transform .12s;
+}
+.news-link:hover{transform:translateY(-1px)}
+.news-question{
+  margin-top:16px;
+  background:#eef3f1;border:1px solid var(--line);border-left:4px solid var(--sage);
+  border-radius:12px;padding:13px 15px;
+  font-size:.9rem;line-height:1.55;color:var(--ink);
+}
+.news-question strong{color:var(--navy);display:inline-block;margin-bottom:3px}
+
+/* --- Word of the Day --- */
+.wotd{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  width:100%;
+  max-width:360px;
+  overflow:hidden;
+  margin-top:18px;
+  box-shadow:0 2px 6px rgba(36,59,83,.08), 0 22px 48px rgba(36,59,83,.16);
+}
+.wotd-top{
+  display:flex;align-items:center;gap:11px;
+  padding:14px 18px;
+  background:linear-gradient(135deg,var(--terra),#d98a63);
+  color:#fff;
+}
+.wotd-ico{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:rgba(255,255,255,.16);display:grid;place-items:center;
+}
+.wotd-ico svg{width:19px;height:19px;stroke:#fff}
+.wotd-header{font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.2;color:#fff}
+.wotd-header .sublab{
+  display:block;font-family:var(--font);font-weight:700;font-size:.62rem;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.82;margin-top:3px;
+}
+.wotd-body{padding:18px}
+.wotd-termrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.wotd-term{font-family:var(--display);font-size:1.45rem;line-height:1.15;font-weight:600;color:var(--navy)}
+.wotd-speak{
+  min-width:40px;min-height:40px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg2);color:var(--navy);font-size:1rem;cursor:pointer;font-family:inherit;
+}
+.wotd-speak:hover{background:#fff;color:var(--terra);border-color:var(--terra)}
+.wotd-speak:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.wotd-ipa{font-size:.9rem;color:var(--muted);margin-top:3px}
+.wotd-fr{font-weight:700;color:var(--terra);margin-top:10px}
+.wotd-def{font-size:.9rem;color:var(--ink);margin-top:8px;line-height:1.5}
+.wotd-ex{
+  margin-top:12px;font-size:.88rem;font-style:italic;color:var(--ink);
+  background:var(--bg2);border-left:4px solid var(--gold);border-radius:10px;padding:11px 13px;line-height:1.5;
+}
+.wotd-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+  font-weight:700;font-size:.88rem;color:var(--sage);
+}
+.wotd-link:hover{text-decoration:underline}
+body.nospeech .wotd-speak{display:none}
+.civi-top{background:linear-gradient(135deg,var(--sage),#93b28f)}
+.civi-metarow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.civi-country{
+  font-size:.74rem;font-weight:700;color:var(--navy);
+  background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.civi-flag{display:inline-flex;flex:none;width:20px;height:15px;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(36,59,83,.12)}
+.civi-flag svg{width:100%;height:100%;display:block}
+.civi-section{
+  font-size:.74rem;font-weight:700;color:var(--sage);
+  background:#eef3f1;border:1px solid #d8e4d6;border-radius:999px;padding:5px 11px;
+}
+.civi-fact{font-size:.93rem;color:var(--ink);line-height:1.55}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;transition:transform .14s, box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card .ico{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;color:#fff}
+.card .ico svg{width:26px;height:26px;stroke:#fff}
+.card h3{font-size:1.22rem;color:var(--navy)}
+.card p{color:var(--muted);font-size:.95rem;margin-top:8px;flex:1}
+.card .open{margin-top:16px;align-self:flex-start;font-weight:700;color:var(--terra);display:inline-flex;align-items:center;gap:8px;min-height:40px}
+.card .open .ar{transition:transform .18s}.card:hover .open .ar{transform:translateX(3px)}
+.t-terra{background:var(--terra)}.t-navy{background:var(--navy)}.t-sage{background:var(--sage)}
+.t-gold{background:var(--gold)}.t-rose{background:#b06a78}.t-teal{background:#3f7d7a}
+
+
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:24px}
+.mode{display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r);padding:18px;min-height:var(--tap);box-shadow:var(--shadow);transition:transform .12s,border-color .2s}
+.mode:hover{transform:translateY(-2px);border-color:var(--terra)}
+.mode .badge{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.mode .badge svg{width:24px;height:24px;stroke:#fff}
+.mode .t{flex:1}.mode .t .h{display:block;font-weight:700;color:var(--navy)}.mode .t .d{display:block;margin-top:3px;font-size:.84rem;color:var(--muted)}
+.mode .go{color:var(--muted);font-size:1.3rem}
+
+.band{background:linear-gradient(135deg,#eef3f1,#f4efe6)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-weight:600;font-size:.9rem;color:var(--ink)}
+.chip::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sage);margin-right:9px;vertical-align:middle}
+
+.about{background:var(--navy);color:#fff;border-radius:24px;padding:40px;max-width:var(--maxw)}
+.about h2{color:#fff}
+.about p{margin-top:14px;opacity:.94;max-width:64ch;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+.about .by{margin-top:18px;font-weight:700;color:var(--gold)} 
+/* --- Pour aller plus loin --- */
+.further-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:24px}
+.refcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.refcard h3{font-size:1.18rem;color:var(--navy);display:flex;align-items:center;gap:11px}
+.refcard h3 .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none;color:#fff}
+.refcard h3 .ic svg{width:20px;height:20px;stroke:#fff}
+.reflist{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.reflist li{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.reflist .t{font-weight:700;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+a.t{color:var(--terra)}a.t .ar{transition:transform .18s}a.t:hover .ar{transform:translateX(3px)}
+.reflist .s{font-size:.82rem;color:var(--muted);margin-top:1px}
+.reflist .d{font-size:.9rem;color:var(--muted);margin-top:4px}
+@media (max-width:720px){.reflist{grid-template-columns:1fr}}
+
+
+/* ---------- learning cycle: site → class → colles → CDI ---------- */
+.learning-cycle{
+  background:linear-gradient(135deg,#fffaf3,#eef3f1);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.cycle-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);
+  gap:28px;
+  align-items:start;
+}
+.cycle-intro .statement{
+  background:var(--navy);
+  color:#fff;
+  border-radius:22px;
+  padding:30px;
+  box-shadow:var(--shadow-lg);
+}
+.cycle-intro .statement h2{color:#fff;font-size:clamp(1.55rem,3.6vw,2.15rem)}
+.cycle-intro .statement p{margin-top:13px;opacity:.94}
+.cycle-intro .statement strong{color:var(--gold)}
+.cycle-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.cycle-step{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:17px;
+  box-shadow:var(--shadow);
+}
+.cycle-step .cycle-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--bg2);
+  border:1px solid var(--line);
+  color:var(--terra);
+  font-weight:700;
+  margin-bottom:9px;
+}
+.cycle-step h3{font-size:1.05rem;color:var(--navy)}
+.cycle-step p{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.5}
+.cycle-note{
+  margin-top:18px;
+  padding:14px 17px;
+  border-left:4px solid var(--sage);
+  border-radius:12px;
+  background:#eef3f1;
+  color:var(--ink);
+  font-size:.92rem;
+}
+.cycle-note strong{
+  display:inline-block;
+  color:var(--navy);
+  font-size:1rem;
+  margin-bottom:4px;
+}
+.site-principle{
+  width:100%;
+  text-align:center;
+  background:var(--navy);
+  color:#fff;
+  border-radius:13px;
+  padding:12px 16px;
+  font-weight:700;
+  letter-spacing:.01em;
+  margin-bottom:16px;
+}
+@media (max-width:780px){
+  .cycle-intro{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .cycle-grid{grid-template-columns:1fr}
+}
+
+/* ---------- homepage v2: clear autonomous-learning pathway ---------- */
+.routine-label{
+  margin-bottom:10px;
+  color:var(--navy);
+}
+.routine-label h2{
+  font-size:1.15rem;
+  color:var(--navy);
+}
+.routine-label p{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:.88rem;
+  max-width:34ch;
+}
+.hero-art .news-widget,
+.hero-art .wotd{
+  max-width:none;
+}
+.routine-reminder{
+  background:var(--navy);
+  color:#fff;
+  border-radius:14px;
+  padding:14px 16px;
+  font-weight:700;
+  font-size:.9rem;
+  line-height:1.45;
+  text-align:center;
+}
+.pathway{
+  background:linear-gradient(135deg,#fffaf3,#eef3f1);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.pathway-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin-top:24px;
+}
+.path-step{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.path-step .n{
+  display:inline-grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--navy);
+  color:#fff;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.path-step h3{font-size:1.02rem;color:var(--navy)}
+.path-step p{font-size:.84rem;color:var(--muted);margin-top:6px;line-height:1.48}
+
+.goals-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:26px;
+}
+.goal-group{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+.goal-group h3{
+  font-size:1.3rem;
+  color:var(--navy);
+}
+.goal-group > p{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+.goal-links{
+  display:grid;
+  gap:10px;
+  margin-top:18px;
+}
+.goal-link{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--bg2);
+  transition:transform .14s,border-color .2s,background .2s;
+}
+.goal-link:hover{
+  transform:translateY(-2px);
+  border-color:var(--terra);
+  background:#fff;
+}
+.goal-link .mini-ico{
+  flex:none;
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:700;
+}
+.goal-link .txt{flex:1}
+.goal-link .title{
+  display:block;
+  font-weight:700;
+  color:var(--navy);
+}
+.goal-link .desc{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.45;
+}
+.goal-link .arrow{
+  color:var(--terra);
+  font-weight:700;
+  align-self:center;
+}
+.closing-band{
+  background:var(--navy);
+  color:#fff;
+}
+.closing-card{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  align-items:center;
+}
+.closing-card h2{color:#fff;font-size:clamp(1.6rem,3.8vw,2.25rem)}
+.closing-card p{margin-top:12px;opacity:.93;max-width:62ch}
+.closing-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.closing-actions .btn-ghost{
+  background:transparent;
+  color:#fff;
+  border-color:rgba(255,255,255,.38);
+}
+.closing-actions .btn-ghost:hover{
+  background:rgba(255,255,255,.08);
+  border-color:#fff;
+}
+@media(max-width:980px){
+  .pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pathway-grid .path-step:last-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .goals-grid,.closing-card{grid-template-columns:1fr}
+  .closing-actions{justify-content:flex-start}
+}
+@media(max-width:520px){
+  .pathway-grid{grid-template-columns:1fr}
+  .pathway-grid .path-step:last-child{grid-column:auto}
+}
+
+
+/* ---------- homepage orientation + Foundation Path ---------- */
+.start-here{padding-top:34px;padding-bottom:54px}
+.start-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:26px;
+}
+.start-route{
+  --route-accent:var(--terra);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:260px;
+  padding:24px;
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-top:5px solid var(--route-accent);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  transition:transform .15s,border-color .2s,box-shadow .2s;
+}
+.start-route:nth-child(2){--route-accent:var(--navy)}
+.start-route:nth-child(3){--route-accent:var(--sage)}
+.start-route:hover{
+  transform:translateY(-3px);
+  border-color:var(--route-accent);
+  box-shadow:var(--shadow-lg);
+}
+.start-route .route-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:22px}
+.start-route .route-mark{
+  display:grid;place-items:center;min-width:42px;height:42px;padding:0 10px;
+  border-radius:11px;background:var(--route-accent);color:#fff;
+  font-size:.73rem;font-weight:700;letter-spacing:.08em;
+}
+.start-route .route-label{font-size:.73rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted)}
+.start-route h3{font-size:1.35rem;color:var(--navy)}
+.start-route p{margin-top:10px;color:var(--muted);font-size:.93rem;line-height:1.55}
+.start-route .route-action{margin-top:auto;padding-top:22px;color:var(--route-accent);font-weight:700}
+
+/* Keep the starting point visible in the opening screen. */
+.hero-start-here{padding:24px 0 4px}
+.hero-start-here > .wrap{max-width:none;padding:0}
+.hero-start-here .sec-head{margin-bottom:0}
+.hero-start-here .sec-head .eyebrow{font-size:.7rem}
+.hero-start-here .sec-head h2{font-size:1.75rem;margin-top:3px}
+.hero-start-here .sec-head p{font-size:.92rem;margin-top:5px;max-width:58ch}
+.hero-start-here .start-grid{grid-template-columns:1fr;gap:10px;margin-top:16px}
+.hero-start-here .start-route{min-height:0;padding:15px 17px;border-top-width:3px;border-radius:14px}
+.hero-start-here .start-route .route-meta{margin-bottom:8px}
+.hero-start-here .start-route .route-mark{min-width:36px;height:32px;border-radius:9px;font-size:.65rem}
+.hero-start-here .start-route .route-label{font-size:.67rem}
+.hero-start-here .start-route h3{font-size:1.08rem}
+.hero-start-here .start-route p{margin-top:5px;font-size:.84rem;line-height:1.45}
+.hero-start-here .start-route .route-action{padding-top:9px;font-size:.86rem}
+
+.foundations{background:linear-gradient(180deg,#fffaf2 0%,var(--bg2) 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.foundation-head{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:28px;
+  align-items:end;
+}
+.foundation-intro{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:5px solid var(--sage);
+  border-radius:15px;
+  padding:19px 21px;
+  color:var(--muted);
+  box-shadow:var(--shadow);
+}
+.foundation-intro strong{color:var(--navy)}
+.foundation-steps{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
+  margin-top:28px;
+}
+.foundation-step{
+  display:flex;
+  flex-direction:column;
+  min-height:285px;
+  padding:20px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+.foundation-step .step-number{
+  width:36px;height:36px;display:grid;place-items:center;
+  border-radius:10px;background:var(--navy);color:#fff;font-weight:700;
+  margin-bottom:15px;
+}
+.foundation-step:nth-child(even) .step-number{background:var(--terra)}
+.foundation-step h3{font-size:1.08rem;color:var(--navy)}
+.foundation-step > p{margin-top:8px;color:var(--muted);font-size:.84rem;line-height:1.5}
+.foundation-step .transfer-target{
+  margin-top:13px;padding-top:12px;border-top:1px dashed var(--line);
+  color:var(--ink);font-size:.78rem;line-height:1.45;
+}
+.foundation-step .transfer-target strong{display:block;color:var(--sage);font-size:.71rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.foundation-step .foundation-link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:17px;
+  color:var(--terra);font-size:.84rem;font-weight:700;
+}
+.foundation-step .foundation-link .ar{transition:transform .18s}
+.foundation-step:hover .foundation-link .ar{transform:translateX(3px)}
+.foundation-transfer{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-top:22px;padding:18px 20px;
+  border-radius:14px;background:#eef3f1;border:1px solid var(--line);
+}
+.foundation-transfer .transfer-icon{
+  flex:none;width:38px;height:38px;border-radius:11px;background:var(--sage);color:#fff;
+  display:grid;place-items:center;font-weight:700;
+}
+.foundation-transfer p{font-size:.91rem;color:var(--muted)}
+.foundation-transfer strong{color:var(--navy)}
+
+@media(max-width:1020px){
+  .foundation-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:820px){
+  .start-grid{grid-template-columns:1fr}
+  .start-route{min-height:0}
+  .foundation-head{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .foundation-steps{grid-template-columns:1fr}
+  .foundation-step{min-height:0}
+}
+
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
+.foot-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.foot-brand{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:6px}
+.foot-nav a{padding:7px 11px;border-radius:8px;font-size:.88rem;font-weight:600;color:var(--ink)}
+.foot-nav a:hover{background:#fff;color:var(--terra)}
+.foot-copy{width:100%;color:var(--muted);font-size:.84rem;border-top:1px dashed var(--line);padding-top:16px;margin-top:6px}
+
+@media (max-width:860px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:8px 14px 14px;gap:2px;box-shadow:var(--shadow);margin-left:0}
+  .nav.open{display:flex}.nav a{width:100%}
+  .burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
+  .hero-grid{grid-template-columns:1fr}.hero-art{order:0}.hero-art svg{max-width:240px}
+}
+@media (max-width:560px){.accent button{min-width:34px}.a11y-btn span.lbl{display:none}section{padding:42px 0}}
+</style>
+  <meta name="author" content="Eglantine Lecomte">
+<style id="ecl-author-signature-style">
+.ecl-author-byline{
+  display:block!important;margin-top:2px!important;
+  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+  font-size:.66rem!important;line-height:1.2!important;font-weight:700!important;
+  letter-spacing:.055em!important;color:#C46A4A!important;text-transform:none!important;
+}
+.ecl-site-signature{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:center!important;gap:1px!important;width:100%!important;min-height:54px!important;
+  padding:7px 16px!important;margin:0!important;border:0!important;border-radius:0!important;
+  background:#243B53!important;color:#fff!important;text-decoration:none!important;text-align:center!important;
+  box-shadow:none!important;font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+  position:relative!important;z-index:2!important;
+}
+.ecl-site-signature:hover{background:#2f5573!important;color:#fff!important}
+.ecl-site-signature .ecl-site-title{
+  font-family:Georgia,"Times New Roman",serif!important;font-size:1.03rem!important;
+  line-height:1.15!important;font-weight:700!important;letter-spacing:0!important;
+}
+.ecl-site-signature .ecl-site-author{
+  font-size:.7rem!important;line-height:1.2!important;font-weight:700!important;
+  letter-spacing:.055em!important;color:#F1C66A!important;
+}
+.ecl-author-footer{
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;
+  gap:.35em!important;width:100%!important;max-width:1120px!important;margin:18px auto 0!important;
+  padding:14px 16px 0!important;border-top:1px dashed rgba(122,155,118,.55)!important;
+  color:#5d6b66!important;background:transparent!important;text-align:center!important;
+  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
+  font-size:.82rem!important;line-height:1.45!important;font-weight:400!important;
+}
+.ecl-author-footer strong{color:#243B53!important;font-weight:700!important}
+footer.ecl-generated-footer{
+  display:block!important;width:100%!important;margin:0!important;padding:22px 16px!important;
+  border-top:1px solid #E6D8C8!important;background:#FFF7ED!important;
+}
+footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-top:0!important;border-top:0!important}
+@media(max-width:560px){
+  .ecl-site-signature{min-height:49px!important;padding:6px 12px!important}
+  .ecl-site-signature .ecl-site-title{font-size:.96rem!important}
+  .ecl-author-footer{font-size:.76rem!important}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
+      <span class="name">English Colles in Lyon</span>
+      <span class="ecl-author-byline">by Eglantine Lecomte</span>
+      <span class="sub">CPGE English · Independent practice · Colles</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html" class="active" aria-current="page">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    <div class="top-tools">
+      <div class="accent" id="accent" role="group" aria-label="Choose an accent">
+        <button data-acc="UK" class="on">UK</button>
+        <button data-acc="US">US</button>
+        <button data-acc="AU">AU</button>
+        <button data-acc="CA">CA</button>
+      </div>
+      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
+        <span class="lbl">Accessibility</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
+</header>
+
+<!-- ============ ACCESSIBILITY PANEL ============ -->
+<div class="scrim" id="scrim"></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+  <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
+  <div class="a11y-body">
+    <div class="a11y-group">
+      <span class="lbl">Text size</span>
+      <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
+    </div>
+    <div class="a11y-group">
+      <span class="lbl">Display</span>
+      <button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Reading-friendly font</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Reduce animations</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="focus"><span>Focus mode</span><span class="state">Off</span></button>
+    </div>
+    <p class="a11y-foot">Your settings are saved on this device.</p>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- ============ HERO + DAILY ROUTINE ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">CPGE English · Independent practice</div>
+      <h1>Build better habits for your English colles.</h1>
+      <p class="welcome">English Colles in Lyon is a self-study companion designed to help you prepare regularly, strengthen your English and build the knowledge you need for class and colles.</p>
+      <p class="more">Work independently here, then reuse what you learn in class, test it during real colles and improve through your teachers’ feedback.</p>
+
+
+      <!-- ============ START HERE ============ -->
+<div class="start-here hero-start-here" id="start-here">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Choose your route</div>
+      <h2>Start here.</h2>
+      <p>You do not need to explore everything at once. Choose the route that matches what you need today.</p>
+    </div>
+
+    <div class="start-grid">
+      <a class="start-route" href="methodology.html#diagMount">
+        <div class="route-meta"><span class="route-mark">NEW</span><span class="route-label">First visit</span></div>
+        <h3>I’m new to the site</h3>
+        <p>Learn how a colle works, take the short methodology diagnostic and choose one realistic priority.</p>
+        <span class="route-action">Show me where to begin <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="start-route" href="colle-trainer.html">
+        <div class="route-meta"><span class="route-mark">NEXT</span><span class="route-label">Upcoming colle</span></div>
+        <h3>I have a colle coming up</h3>
+        <p>Prepare efficiently, practise under timed conditions and identify one point to discuss with your teacher.</p>
+        <span class="route-action">Prepare my next colle <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="start-route" href="#foundations">
+        <div class="route-meta"><span class="route-mark">CORE</span><span class="route-label">Guided route</span></div>
+        <h3>I want to strengthen my foundations</h3>
+        <p>Build confidence through essential grammar, useful vocabulary, clearer pronunciation and short guided speaking tasks.</p>
+        <span class="route-action">Start with the foundations <span aria-hidden="true">↓</span></span>
+      </a>
+    </div>
+  </div>
+</div>
+      <div class="cycle-note" style="margin-top:20px">
+        <strong>English classes and regular colles are indispensable.</strong><br>
+        This website helps you prepare, but it cannot replace speaking in class, testing your ideas in real colles, asking questions or receiving individual feedback from your teachers.
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="routine-label">
+        <div class="eyebrow">A little every day</div>
+        <h2>Your daily English routine</h2>
+        <p>Read one story, learn one expression and build one piece of background knowledge.</p>
+      </div>
+
+      <div class="news-widget">
+    <div class="news-top">
+      <span class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H5a1 1 0 0 1-1-1Z"/><path d="M17 8h3v9a2 2 0 0 1-4 0V5"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></span>
+      <div class="news-header">Today's English-Speaking World Brief<span class="sublab">Daily brief · updated every day</span></div>
+    </div>
+    <div class="news-body">
+      <div class="news-metarow">
+        <span class="news-date">9 July 2026</span>
+        <span class="news-country">🇬🇧 United Kingdom</span>
+      </div>
+      <div class="news-title">Universities face financial pressure</div>
+      <div class="news-source">Reuters</div>
+      <a href="#" target="_blank" rel="noopener" class="news-link">Read article →</a>
+      <div class="news-question"><strong>Question for discussion:</strong><br>Should British universities rethink their economic model?</div>
+    </div>
+  </div>
+
+      <div class="wotd" id="wotd" hidden>
+    <div class="wotd-top">
+      <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2M5.6 18.4 7 17M12 19v2M18.4 18.4 17 17M21 12h-2M18.4 5.6 17 7"/><circle cx="12" cy="12" r="4"/></svg></span>
+      <div class="wotd-header">Word of the Day<span class="sublab" id="wotdDate"></span></div>
+    </div>
+    <div class="wotd-body">
+      <div class="wotd-termrow">
+        <span class="wotd-term" id="wotdTerm"></span>
+        <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Listen to the pronunciation" title="Listen">🔊</button>
+      </div>
+      <div class="wotd-ipa" id="wotdIpa"></div>
+      <div class="wotd-fr" id="wotdFr"></div>
+      <div class="wotd-def" id="wotdDef"></div>
+      <div class="wotd-ex" id="wotdEx"></div>
+      <a class="wotd-link" id="wotdLink" href="#">Open the chapter →</a>
+    </div>
+  </div>
+
+      <div class="wotd civi" id="civi" hidden>
+        <div class="wotd-top civi-top">
+          <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+          <div class="wotd-header">Civi Fact of the Day<span class="sublab" id="civiDate"></span></div>
+        </div>
+        <div class="wotd-body">
+          <div class="civi-metarow"><span class="civi-country" id="civiCountry"></span><span class="civi-section" id="civiSection"></span></div>
+          <p class="civi-fact" id="civiFact"></p>
+          <a class="wotd-link" href="civilisation.html">Explore the Civilisation Lab →</a>
+        </div>
+      </div>
+
+      <div class="routine-reminder">Do not stop at reading: reuse today’s material in class or in your next colle.</div>
+    </div>
   </div>
 </section>
-<section class="section" id="nouvelles"><div class="section-head"><div><div class="eyebrow">Bibliothèque</div><h2>Les nouvelles</h2></div><input class="search" data-search type="search" placeholder="Rechercher un titre ou un passage…" aria-label="Rechercher une nouvelle"></div><div class="story-grid"><article class="story-card" data-story>
-      <div class="story-meta">26 octobre 2025</div>
-      <h3>René</h3>
-      <p>Lyon, 2 juillet 2024 - Wow, quel foutoir chez toi, Rose! Florence entre dans mon 2 pièces en écarquillant les yeux, comme si elle avait atterri dans une autre galaxie. - T’étais pas un monstre de la maniaquerie et du rangement, de…</p>
-      <a class="story-link" href="nouvelles/rene.html" aria-label="Lire René">Lire la nouvelle</a>
-    </article><article class="story-card" data-story>
-      <div class="story-meta">2 octobre 2025</div>
-      <h3>Madeleine</h3>
-      <p>Je ne souris jamais. On me l’a toujours fait remarquer, comme si c’était un handicap. Ou une pratique que j’ai abandonnée en quittant mon pays natal. Chiefland, Floride, 2004 « Look, Grandma ! It’s a letter !! A letter from France !!…</p>
-      <a class="story-link" href="nouvelles/madeleine.html" aria-label="Lire Madeleine">Lire la nouvelle</a>
-    </article><article class="story-card" data-story>
-      <div class="story-meta">18 septembre 2025</div>
-      <h3>Rachel</h3>
-      <p>Elle est une vieille femme, maintenant. Une grand-mère. Ses petits-enfants jouent dehors. Elle les regarde par la fenêtre. Ses yeux se plissent et s’humidifient. Ils s’amusent avec un ballon. Un ballon… Ils sont jeunes, des enfants. Eté 42. Ils jouent tous ensemble.…</p>
-      <a class="story-link" href="nouvelles/rachel.html" aria-label="Lire Rachel">Lire la nouvelle</a>
-    </article></div><p class="empty">Aucune nouvelle ne correspond à cette recherche.</p></section>
 
-</main><footer class="site-footer"><span>Une femme qui écrit</span><span>Des nouvelles en vrac</span></footer><script src="assets/js/main.js"></script></body></html>
+<!-- ============ LEARNING PATHWAY ============ -->
+<section class="pathway">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">From self-study to real progress</div>
+      <h2>English classes and colles are indispensable.</h2>
+      <p>Independent practice prepares you. Classes and real colles are where you speak spontaneously, test your understanding, receive feedback and turn preparation into lasting progress.</p>
+    </div>
+
+    <div class="pathway-grid">
+      <article class="path-step">
+        <span class="n">1</span>
+        <h3>Prepare independently</h3>
+        <p>Review a skill, study vocabulary, explore a topic or prepare useful examples.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">2</span>
+        <h3>Use it in class</h3>
+        <p>Ask questions, test your understanding and actively reuse what you have learnt.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">3</span>
+        <h3>Test it in colles</h3>
+        <p>Turn preparation into structured, precise and convincing spoken English.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">4</span>
+        <h3>Improve through feedback</h3>
+        <p>Use your teachers’ comments to decide what you should work on next.</p>
+      </article>
+      <article class="path-step">
+        <span class="n">5</span>
+        <h3>Go further at the CDI</h3>
+        <p>Read beyond online summaries, compare sources and strengthen your examples.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOUNDATION PATH ============ -->
+<section class="foundations" id="foundations">
+  <div class="wrap">
+    <div class="foundation-head">
+      <div class="sec-head">
+        <div class="eyebrow">A guided route into the site</div>
+        <h2>Build your foundations.</h2>
+        <p>Work through a few essential skills in a clear order, then reuse one small target aloud in class and in your next colle.</p>
+      </div>
+      <div class="foundation-intro">
+        <strong>This route may help if you often translate word for word, struggle to build complete sentences or lose confidence when speaking.</strong>
+        It is not a separate or simplified course: it is a guided way into the same CPGE content.
+      </div>
+    </div>
+
+    <div class="foundation-steps">
+      <article class="foundation-step">
+        <span class="step-number">1</span>
+        <h3>Build a clear sentence</h3>
+        <p>Review word order, complete sentences, negatives and simple questions before adding complexity.</p>
+        <div class="transfer-target"><strong>Use it aloud</strong>Produce one complete sentence during your next English class.</div>
+        <a class="foundation-link" href="cpge_grammar_chapter01_basic_sentence_structure_premium.html">Start with sentence structure <span class="ar">→</span></a>
+      </article>
+
+      <article class="foundation-step">
+        <span class="step-number">2</span>
+        <h3>Control the essential tenses</h3>
+        <p>Focus first on the present, the past, the present perfect and the main ways of referring to the future.</p>
+        <div class="transfer-target"><strong>Use it aloud</strong>Explain one fact or event with a tense you have just reviewed.</div>
+        <a class="foundation-link" href="grammar.html#pathways">Review the essential tenses <span class="ar">→</span></a>
+      </article>
+
+      <article class="foundation-step">
+        <span class="step-number">3</span>
+        <h3>Build core vocabulary</h3>
+        <p>Learn useful verbs, simple connectors and a few expressions that help you explain, compare and qualify ideas.</p>
+        <div class="transfer-target"><strong>Use it aloud</strong>Choose two expressions and deliberately use them in class.</div>
+        <a class="foundation-link" href="vocabulary.html">Build my core vocabulary <span class="ar">→</span></a>
+      </article>
+
+      <article class="foundation-step">
+        <span class="step-number">4</span>
+        <h3>Speak more clearly</h3>
+        <p>Start with TH sounds, final consonants, key-word stress, pauses and a less monotonous intonation.</p>
+        <div class="transfer-target"><strong>Use it aloud</strong>Choose one pronunciation target for your next class or colle.</div>
+        <a class="foundation-link" href="pronunciation.html#th-workshop">Improve clarity and confidence <span class="ar">→</span></a>
+      </article>
+
+      <article class="foundation-step">
+        <span class="step-number">5</span>
+        <h3>Build a short spoken answer</h3>
+        <p>Practise a simple structure: introduce the issue, make one point, support it with one example and explain why it matters.</p>
+        <div class="transfer-target"><strong>Use it aloud</strong>Test the same short answer in class, then develop it in a colle.</div>
+        <a class="foundation-link" href="colle-trainer.html">Build a short response <span class="ar">→</span></a>
+      </article>
+    </div>
+
+    <div class="foundation-transfer">
+      <span class="transfer-icon" aria-hidden="true">→</span>
+      <p><strong>Your goal is not to finish the website.</strong> Prepare one manageable element here, try it in English class, test it again in a real colle and use your teacher’s feedback to choose the next step.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOAL-BASED NAVIGATION ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Start with a clear objective</div>
+      <h2>What do you need to work on today?</h2>
+      <p>Choose a goal rather than wandering through the site. Each section should lead to something you can reuse in class or test in a colle.</p>
+    </div>
+
+    <div class="goals-grid">
+      <article class="goal-group">
+        <h3>Prepare for a colle</h3>
+        <p>Understand the task, organise your ideas and practise speaking under realistic conditions.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="methodology.html">
+            <span class="mini-ico t-navy">M</span>
+            <span class="txt"><span class="title">Methodology</span><span class="desc">Analyse documents, identify the key issue, formulate a relevant key question and build an effective plan.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="colle-trainer.html">
+            <span class="mini-ico t-gold">C</span>
+            <span class="txt"><span class="title">Colle Trainer</span><span class="desc">Practise structuring your ideas, speaking clearly and responding to follow-up questions.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="jury-reports.html">
+            <span class="mini-ico t-teal">J</span>
+            <span class="txt"><span class="title">Jury Reports</span><span class="desc">Understand what examiners expect, reward and repeatedly criticise.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="goal-group">
+        <h3>Build your language and knowledge</h3>
+        <p>Develop the vocabulary, context and historical perspective needed for stronger arguments.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="vocabulary.html">
+            <span class="mini-ico t-terra">V</span>
+            <span class="txt"><span class="title">Vocabulary</span><span class="desc">Study, memorise and reuse precise vocabulary in class and in colles.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="grammar.html">
+            <span class="mini-ico t-navy">G</span>
+            <span class="txt"><span class="title">Grammar</span><span class="desc">Build accurate structures, practise them actively and reuse them spontaneously in class and in your colles.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="pronunciation.html">
+            <span class="mini-ico t-gold">P</span>
+            <span class="txt"><span class="title">Pronunciation</span><span class="desc">Train sounds, stress and intonation, then test them where it matters: in English class and in real colles.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="civilisation.html">
+            <span class="mini-ico t-sage">C</span>
+            <span class="txt"><span class="title">Civilisation</span><span class="desc">Build the contextual knowledge needed to understand documents and support arguments.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="timelines.html">
+            <span class="mini-ico t-navy">T</span>
+            <span class="txt"><span class="title">Timelines</span><span class="desc">Identify turning points, continuities and connections rather than memorising isolated dates.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="goal-group">
+        <h3>Research further</h3>
+        <p>Find reliable material, then move beyond the website and continue your research at the CDI.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="resources.html">
+            <span class="mini-ico t-teal">R</span>
+            <span class="txt"><span class="title">Resources</span><span class="desc">Find articles, podcasts, videos and reliable sources for further reading and listening.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="goal-group">
+        <h3>Work quickly</h3>
+        <p>Use short revision tools when time is limited, without confusing emergency revision with long-term preparation.</p>
+        <div class="goal-links">
+          <a class="goal-link" href="grammar.html#practice">
+            <span class="mini-ico t-rose">5</span>
+            <span class="txt"><span class="title">Five-minute Grammar Workout</span><span class="desc">Use a short interactive activity, then choose one structure to produce aloud in class.</span></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="goal-link" href="pronunciation.html#daily-challenge">
+            <span class="mini-ico t-gold">P</span>
+            <span class="txt"><span class="title">Today’s Pronunciation Challenge</span><span class="desc">Practise one sound, stress or intonation target and carry it into your next class or colle.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING MESSAGE ============ -->
+<section class="closing-band">
+  <div class="wrap closing-card">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Autonomous does not mean isolated</div>
+      <h2>Bring your work back into the classroom.</h2>
+      <p>Prepare here, test your ideas in class and in colles, listen to your teachers’ feedback and return with a clearer objective. Regular visits to the CDI will help you verify information, broaden your perspective and build stronger examples.</p>
+    </div>
+    <div class="closing-actions">
+      <a class="btn btn-primary" href="methodology.html">Choose a skill to improve <span class="ar">→</span></a>
+      <a class="btn btn-ghost" href="resources.html">Explore reliable sources</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">English Colles in Lyon</div>
+      <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    </div>
+    <div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
+    <div class="foot-copy">Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon.</div>
+  </div>
+</footer>
+
+<script src="brief-data.js"></script>
+<script>
+/* ===== safe localStorage ===== */
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}},
+          set(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
+
+/* ===== mobile nav ===== */
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+
+/* ===== accent selector ===== */
+const ACC_LABEL={UK:"UK English",US:"US English",AU:"Australian English",CA:"Canadian English"};
+const accentBox=document.getElementById('accent'),accentNote=document.getElementById('accentNote');
+function setAccent(a){
+  accentBox.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.acc===a));
+  accentNote.textContent="Accent selected: "+ACC_LABEL[a];
+  LS.set('eclyon_accent',a);
+}
+accentBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setAccent(b.dataset.acc)));
+setAccent(LS.get('eclyon_accent','UK'));
+
+/* ===== accessibility panel ===== */
+const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('scrim');
+function openA11y(){panel.classList.add('open');scrim.classList.add('open');}
+function closeA11y(){panel.classList.remove('open');scrim.classList.remove('open');}
+document.getElementById('openA11y').addEventListener('click',openA11y);
+document.getElementById('closeA11y').addEventListener('click',closeA11y);
+scrim.addEventListener('click',closeA11y);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA11y();});
+
+/* text size */
+const SIZES=[18,20.5,23];
+function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');
+  document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i);}
+document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));
+applySize(+LS.get('eclyon_size',0));
+
+/* display toggles */
+function applyOpt(opt,on){document.body.classList.toggle(opt,on);
+  const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');
+  if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off';}
+  LS.set('eclyon_'+opt,on?'1':'0');}
+document.querySelectorAll('.opt-toggle').forEach(btn=>{
+  const opt=btn.dataset.opt;
+  btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));
+  applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1');
+}); 
+    
+   
+   /* ===== Daily Brief : rotation quotidienne sur les 8 pays ===== */
+   (function(){
+     var codes = ["gb","us","ie","ca","au","nz","in","za"];
+     var day = Math.floor((new Date() - new Date(2026, 0, 1)) / 86400000);
+     var code = codes[((day % codes.length) + codes.length) % codes.length];
+     var B = (window.BRIEF || {})[code] || {};
+
+     function show(d){
+       var dateEl = document.querySelector(".news-date");
+       dateEl.textContent = d.date || "Update unavailable";
+       if (d.iso) dateEl.dataset.iso = d.iso;
+       document.querySelector(".news-country").textContent = d.country || "English-speaking world";
+       document.querySelector(".news-title").textContent = d.title || "The automatic brief is temporarily unavailable";
+       document.querySelector(".news-source").textContent = d.source || "";
+       var link = document.querySelector(".news-link");
+       link.setAttribute("href", d.url || "resources.html");
+       link.textContent = d.url ? "Read article →" : "Explore reliable resources →";
+       document.querySelector(".news-question").innerHTML =
+         "<strong>Question for discussion:</strong><br>" + (d.question || "What current story could you bring into class or a colle today?");
+     }
+
+     fetch("https://english-colles-country-news.lecomte-eglantine.workers.dev/?country=" + code + "&n=1")
+       .then(function(r){ return r.json(); })
+       .then(function(data){
+         if (!data.items || !data.items.length) throw new Error("no items");
+         var qs = B.questions || [];
+         show({
+           date: new Date().toLocaleDateString("en-GB", { weekday:"long", day:"numeric", month:"long", year:"numeric" }),
+           iso: new Date().toISOString(),
+           country: B.name || data.country,
+           title: data.items[0].title,
+           source: data.source,
+           url: data.items[0].url,
+           question: qs.length ? qs[day % qs.length] : "How would you bring this story into a colle?"
+         });
+       })
+       .catch(function(){
+         // secours : l'ancien service mono-pays
+         fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
+           .then(function(r){ return r.json(); })
+           .then(show)
+           .catch(function(e){ console.error("News widget error:", e); });
+       });
+   })();
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
+</script>
+<script src="wotd-data.js"></script>
+<script src="civi-data.js"></script>
+<script>
+/* ===== Civi Fact of the Day ===== */
+(function(){
+  var list = window.CIVI || [];
+  var box = document.getElementById('civi');
+  if (!list.length || !box) return;
+  var now = new Date();
+  var dayNumber = Math.floor((now - new Date(2026, 0, 1)) / 86400000);
+  var f = list[((dayNumber % list.length) + list.length) % list.length];
+  document.getElementById('civiDate').textContent =
+    now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+  var country = document.getElementById('civiCountry');
+  var flagSvg = (window.CIVI_FLAGS || {})[f.code];
+  if (flagSvg){
+    var span = document.createElement('span');
+    span.className = 'civi-flag';
+    span.innerHTML = flagSvg;
+    country.appendChild(span);
+  }
+  country.appendChild(document.createTextNode(f.country));
+  document.getElementById('civiSection').textContent = f.section;
+  document.getElementById('civiFact').textContent = f.fact;
+  box.hidden = false;
+})();
+</script>
+<script>
+/* ===== Word of the Day ===== */
+(function(){
+  var list = window.WOTD || [];
+  var box = document.getElementById('wotd');
+  if (!list.length || !box) return;
+
+  // Mot du jour : même mot pour tout le monde, change chaque jour à minuit (heure locale)
+  var now = new Date();
+  var dayNumber = Math.floor((now - new Date(2026, 0, 1)) / 86400000);
+  var w = list[((dayNumber % list.length) + list.length) % list.length];
+
+  // Date du jour en anglais (ex. : Friday 10 July 2026)
+  var dateEN = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+
+  document.getElementById('wotdDate').textContent = dateEN;
+  document.getElementById('wotdTerm').textContent = w.term;
+  document.getElementById('wotdIpa').textContent = w.ipa + (w.pron ? ' · ' + w.pron : '');
+  document.getElementById('wotdFr').textContent = w.fr;
+  document.getElementById('wotdDef').textContent = w.def;
+  document.getElementById('wotdEx').textContent = w.ex;
+  var link = document.getElementById('wotdLink');
+  link.href = w.chFile;
+  link.textContent = 'Chapter ' + w.chNum + ' — ' + w.chTitle + ' →';
+
+  // Pronunciation: follows the selected accent (UK / US / AU / CA)
+  var ACC_LANG = { UK:'en-GB', US:'en-US', AU:'en-AU', CA:'en-CA' };
+  var hasSpeech = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  if (!hasSpeech) document.body.classList.add('nospeech');
+  document.getElementById('wotdSpeak').addEventListener('click', function(){
+    if (!hasSpeech) return;
+    var lang = ACC_LANG[LS.get('eclyon_accent','UK')] || 'en-GB';
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(w.term);
+    u.lang = lang;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var v = voices.filter(function(x){ return x.lang.replace('_','-').indexOf(lang) === 0; })[0]
+         || voices.filter(function(x){ return x.lang.indexOf('en') === 0; })[0];
+    if (v) u.voice = v;
+    u.rate = 0.92;
+    window.speechSynthesis.speak(u);
+  });
+
+  box.hidden = false;
+})();
+</script>
+
+<script src="site-core.js?v=20260715-2"></script>
+</body>
+</html>
