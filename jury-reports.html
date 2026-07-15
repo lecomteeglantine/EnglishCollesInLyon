@@ -146,12 +146,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="top-in">
     <a class="brand" href="index.html"><span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span><span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span></a>
-    <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a>
-      <a href="vocabulary.html">Vocabulary</a>
-      <a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a>
-      <a href="resources.html">Resources</a><a href="jury-reports.html" class="active">Jury Reports</a>
-    </nav>
+    <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html" class="active" aria-current="page">Jury Reports</a></nav>
     <div class="tools">
       <button class="tool" id="openA11y" aria-haspopup="dialog">⚙ <span>Accessibilité</span></button>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
@@ -242,7 +237,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <footer>
   <div class="wrap foot">
     <div class="foot-brand">English Colles in Lyon</div>
-    <nav class="foot-nav"><a href="index.html">Accueil</a><a href="methodology.html">Méthodologie</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulaire</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Ressources</a><a href="jury-reports.html">Rapports de jury</a></nav>
+    <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
     <div class="copy">Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon. Les rapports restent la propriété de leurs organismes officiels.</div>
   </div>
@@ -340,6 +335,6 @@ const sizes=[18,20.5,23];function setSize(i){document.documentElement.style.setP
 $$(".toggle").forEach(b=>{const o=b.dataset.opt;function apply(on){document.body.classList.toggle(o,on);b.classList.toggle("on",on);b.lastElementChild.textContent=on?"On":"Off";LS.set("jury_"+o,on?"1":"0")}b.onclick=()=>apply(!document.body.classList.contains(o));apply(LS.get("jury_"+o,"0")==="1")});
 </script>
 
-<script src="site-core.js?v=20260715-1"></script>
+<script src="site-core.js?v=20260715-2"></script>
 </body>
 </html>

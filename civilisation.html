@@ -68,9 +68,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
     <a class="brand" href="index.html" aria-label="English Colles in Lyon — Home">
       <span class="name">English Colles in Lyon</span><span class="by">by Eglantine Lecomte</span><span class="sub">CPGE English · Independent practice · Colles</span>
     </a>
-    <nav class="nav" id="siteNav" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="methodology.html">Methodology</a><a class="active" href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a>
-    </nav>
+    <nav class="nav" id="siteNav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html" class="active" aria-current="page">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="utility"><button class="icon-btn" id="accessBtn" type="button" aria-expanded="false" aria-controls="accessPanel" title="Accessibility">♿</button><button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteNav" title="Menu">☰</button></div>
   </div>
 </header>
@@ -296,5 +294,5 @@ let qIndex=0;function newQuestion(){qIndex=Math.floor(Math.random()*QUESTION_SET
 const modal=$('#challengeModal');function openChallenge(code){const x=code?c(code):COUNTRIES[Math.floor(Math.random()*COUNTRIES.length)];$('#modalTitle').textContent=x.en;$('#modalSub').textContent=x.focus;$('#modalChallenge').textContent=x.question;$('#modalLink').href=x.href;modal.classList.add('open');$('.modal-close').focus()}$$('.test-country').forEach(b=>b.onclick=()=>openChallenge(b.dataset.code));$('.modal-close').onclick=()=>modal.classList.remove('open');$('#anotherChallenge').onclick=()=>openChallenge();modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
 </script>
 
-<script src="site-core.js?v=20260715-1"></script>
+<script src="site-core.js?v=20260715-2"></script>
 </body></html>

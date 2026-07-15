@@ -67,9 +67,7 @@ footer{background:var(--navy);color:#fff;padding:36px 0 24px}.foot-grid{display:
 <header class="top">
  <div class="top-in">
   <a class="brand" href="index.html" aria-label="English Colles in Lyon — home"><span class="name">English Colles in Lyon</span><span class="ecl-author-byline">by Eglantine Lecomte</span><span class="sub">CPGE English · Independent practice · Colles</span></a>
-  <nav class="nav" id="nav" aria-label="Main navigation">
-   <a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html" class="active">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a>
-  </nav>
+  <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html" class="active" aria-current="page">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
   <div class="top-tools">
    <div class="accent" id="accent" role="group" aria-label="Choose an accent"><button data-acc="UK" class="on">UK</button><button data-acc="US">US</button><button data-acc="AU">AU</button><button data-acc="CA">CA</button></div>
    <button class="a11y-btn" id="openA11y" aria-haspopup="dialog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg><span class="lbl">Accessibility</span></button>
@@ -102,7 +100,7 @@ footer{background:var(--navy);color:#fff;padding:36px 0 24px}.foot-grid{display:
  </div></div>
 </section>
 
-<section class="alt">
+<section class="alt" id="daily-challenge">
  <div class="wrap"><div class="daily">
   <div class="daily-copy"><div class="eyebrow">Today’s pronunciation challenge</div><h2>A new target every day</h2><p class="daily-phrase" id="dailyPhrase"></p><div class="target-tags" id="dailyTags"></div></div>
   <div class="daily-tools"><button class="btn btn-navy" id="listenDaily">▶ Listen to the model</button><button class="btn btn-primary" id="recordDaily">● Record your version</button><button class="btn btn-ghost" id="dailyDone">Mark today as practised</button><div class="streak" id="streak">Current streak: 0 days</div><p class="notice">The model voice comes from your browser. The selected accent is used when a matching voice is available.</p></div>
@@ -218,5 +216,5 @@ const DIAG=[{q:'Which sound begins the word “think”?',o:['/s/','/θ/','/f/']
 if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js').catch(()=>{}))}
 </script>
 
-<script src="site-core.js?v=20260715-1"></script>
+<script src="site-core.js?v=20260715-2"></script>
 </body></html>

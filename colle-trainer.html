@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,6 +95,22 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
 .classnote p{font-size:.9rem;color:var(--ink);line-height:1.6;margin:0 0 8px}
 .classnote p:last-child{margin-bottom:0}
 
+
+/* ===== Stabilised training session ===== */
+.setup{display:grid;grid-template-columns:repeat(5,minmax(135px,1fr));gap:12px;align-items:end}
+.setup .btn{min-width:170px}.setup-note{grid-column:1/-1;font-size:.82rem;color:var(--muted);line-height:1.45;margin-top:-2px}
+.session-toolbar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.session-meta{display:flex;gap:8px;flex-wrap:wrap}.session-chip{display:inline-flex;align-items:center;min-height:30px;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.76rem;font-weight:700;color:var(--navy)}
+.prep-clock{display:flex;align-items:center;gap:8px;justify-content:flex-end}.prep-time{font-family:var(--display);font-size:1.5rem;color:var(--navy);font-variant-numeric:tabular-nums;min-width:70px;text-align:center}.prep-time.warn{color:var(--terra)}
+.icon-btn{min-height:38px;padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--navy);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.prompt-block{border:1px solid var(--line);border-radius:12px;background:var(--bg2);margin:12px 0;overflow:hidden}.prompt-block summary{cursor:pointer;padding:12px 14px;font-weight:700;color:var(--navy);background:#fff}.prompt-block .prompt-body{padding:5px 15px 13px}.prompt-block ul{margin:6px 0 0;padding-left:20px}.prompt-block li{margin:7px 0;line-height:1.5}
+.focus-callout{border-left:5px solid var(--terra);background:#fff7f2;border-radius:12px;padding:14px 16px;margin:14px 0;color:var(--ink)}.focus-callout strong{color:var(--navy)}
+.speaking-grid{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(300px,1.2fr);gap:16px}.studio-card{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:18px}.studio-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}.studio-card .timer{font-size:2.65rem}.record-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.record-status{min-height:1.4em;margin-top:8px;font-size:.84rem;color:var(--muted)}.record-playback{width:100%;margin-top:10px}.privacy-note{font-size:.78rem;color:var(--muted);margin-top:9px;line-height:1.45}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.review-card{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:16px}.review-card h3{font-size:1.02rem;color:var(--navy);margin-bottom:10px}.review-check{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(230,216,200,.75);font-size:.9rem}.review-check:last-child{border-bottom:0}.review-check input{width:18px;height:18px;margin-top:3px;accent-color:var(--terra)}
+.transfer-box{margin-top:16px;border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:14px;background:#fff;padding:18px}.transfer-box h3{font-size:1.08rem;color:var(--navy);margin-bottom:6px}.transfer-result{min-height:1.4em;margin-top:10px;color:var(--sage);font-weight:700;font-size:.88rem}
+.inline-label{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin:12px 0 5px}.compact-notes{min-height:78px}.stepbtn{min-width:150px}.chosen .chosen-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.chosen .chosen-meta span{font-size:.74rem;font-weight:700;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);border-radius:999px;padding:4px 9px}
+@media(max-width:900px){.setup{grid-template-columns:1fr 1fr}.setup .btn{min-width:0}.speaking-grid,.review-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.setup{grid-template-columns:1fr}.session-toolbar{grid-template-columns:1fr}.prep-clock{justify-content:flex-start}.steps{display:grid;grid-template-columns:1fr 1fr}.stepbtn{min-width:0}.nav-steps{flex-direction:column}.nav-steps .btn{width:100%}}
 </style>
   <meta name="author" content="Eglantine Lecomte">
 <style id="ecl-author-signature-style">
@@ -146,16 +162,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <header class="top"><div class="wrap">
   <div class="brand"><span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span><span class="sub">CPGE · Anglais</span></div>
-  <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="methodology.html">Methodology</a>
-      <a href="civilisation.html">Civilisation</a>
-      <a href="vocabulary.html">Vocabulary</a>
-      <a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a>
-      <a href="timelines.html">Timelines</a>
-      <a href="colle-trainer.html" class="active">Colle Trainer</a>
-      <a href="resources.html">Resources</a>
-</nav>
+  <nav class="nav"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html" class="active" aria-current="page">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
 </div></header>
 <main><div class="wrap">
   <div class="page-head"><div class="eyebrow">Colle Trainer</div><h1>Prepare a colle on today's news</h1>
@@ -164,7 +171,12 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="setup">
     <div class="field"><label for="ctCountry">Country</label>
       <select id="ctCountry"><option value="gb">United Kingdom</option><option value="us">United States</option><option value="ie">Ireland</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="in">India</option><option value="za">South Africa</option></select></div>
-    <button class="btn primary" id="ctGo">Draw today's dossier</button>
+    <div class="field"><label for="ctLevel">Support level</label><select id="ctLevel"><option value="foundation">Guided</option><option value="standard" selected>Standard</option><option value="advanced">Advanced</option></select></div>
+    <div class="field"><label for="ctPrep">Preparation time</label><select id="ctPrep"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="25">25 minutes</option></select></div>
+    <div class="field"><label for="ctSpeak">Speaking time</label><select id="ctSpeak"><option value="5">5 minutes</option><option value="8" selected>8 minutes</option><option value="10">10 minutes</option></select></div>
+    <div class="field"><label for="ctFocus">Priority</label><select id="ctFocus"><option value="contextualisation">Contextualisation</option><option value="key question" selected>Key question</option><option value="plan and transitions">Plan & transitions</option><option value="examples and evidence">Examples & evidence</option><option value="grammar and vocabulary">Grammar & vocabulary</option><option value="pronunciation and intonation">Pronunciation & intonation</option></select></div>
+    <button class="btn primary" id="ctGo">Draw today’s dossier</button>
+    <p class="setup-note">The trainer prepares you. The skill must then be used in English class, tested in a real colle and improved through your teacher’s feedback.</p>
   </div>
 
   <section class="dossier" id="dossier">
@@ -174,10 +186,15 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 
   <section class="workshop" id="workshop">
     <div class="chosen" id="chosen"></div>
+    <div class="session-toolbar" id="sessionToolbar">
+      <div class="session-meta" id="sessionMeta"></div>
+      <div class="prep-clock" aria-label="Preparation timer"><span class="prep-time" id="prepTime">20:00</span><button class="icon-btn" id="prepStart" type="button">Start</button><button class="icon-btn" id="prepReset" type="button">Reset</button></div>
+    </div>
     <div class="steps">
       <button class="stepbtn on" data-s="0" id="sb0">1 · Analyse</button>
       <button class="stepbtn" data-s="1" id="sb1">2 · Question &amp; plan</button>
-      <button class="stepbtn" data-s="2" id="sb2">3 · Speak</button>
+      <button class="stepbtn" data-s="2" id="sb2">3 · Speak & record</button>
+      <button class="stepbtn" data-s="3" id="sb3">4 · Review & transfer</button>
     </div>
     <div class="panel" id="stepPanel"></div>
     <div class="nav-steps">
@@ -186,7 +203,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     </div>
   </section>
 </div></main>
-<footer>English Colles in Lyon — Colle Trainer<div class="ecl-author-footer">
+<footer><nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav><div class="site-principle">Prepare here · Use it in class · Test it in colles · Improve through feedback.</div><div class="ecl-author-footer">
   <span>Designed and created by</span>
   <strong>Eglantine Lecomte</strong>
   <span>· English Colles in Lyon</span>
@@ -197,148 +214,123 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 const METHOD = {"n1": {"label": "Level 1 · Read & locate", "intro": "Fast, factual mapping. Answer each in one spoken sentence before moving on.", "groups": [["What & who", ["What kind of document is this, and who produced it (author, outlet, genre)?", "What is its central claim or story, in a single sentence?", "Who are the people, groups or institutions involved?"]], ["Where & when", ["Where is this set, and what do I already know about this country's history, economy and politics?", "When does it take place, and which event or trend does it belong to?"]], ["Say & silence", ["What is explicitly stated — and what is implied, assumed or left unsaid?", "Which word would I replace 'speaks about' with: addresses, highlights, examines, sheds light on, investigates…?"]]]}, "n2": {"label": "Level 2 · Analyse in depth", "intro": "This is where a strong candidate stands out. Pick the questions that bite on your document — you don't need them all.", "groups": [["Source, voice & reliability", ["Who is speaking, from what position, and with what authority or interest in this stance?", "Who is the intended audience, and how does that shape what is said and how?", "How far can this source be trusted — what bias, blind spots or omissions should I flag, and what would I cross-check?"]], ["Rhetoric & argument", ["By what means does the text try to persuade (examples, statistics, cited authorities, emotional register)?", "What effect is sought on the reader, and which devices produce it (irony, generalisation, a single case turned into a rule)?", "Where is the reasoning weakest — which link would an opponent attack first?", "Does the evidence actually support the conclusion, or is there a leap?"]], ["Ideology, assumptions & the unsaid", ["What does the document take for granted without arguing for it?", "What worldview or ideology underpins it — would it be shared elsewhere, or in another era?", "What is strategically left out, and who benefits from that silence?", "Whose voice is missing from this account?"]], ["The central tension", ["What conflict of values or interests structures the document beneath the surface?", "What is the strongest argument on the opposing side — the one you cannot dismiss?", "What paradox does the situation reveal (what is proclaimed vs what is done, what should work but doesn't)?"]], ["Causes, stakes & consequences", ["What are the underlying causes, beyond the ones the document names?", "What is genuinely at stake here — for whom, and in what timeframe?", "What are the likely consequences, intended and unintended?"]], ["Historical & historiographical depth", ["Is this a new development or the latest chapter of a long story?", "How have interpretations of this issue shifted over time — is there a scholarly debate behind it?", "What past parallel illuminates or complicates the present case?"]], ["Ethical & political dimension", ["What ethical question does the situation raise, beyond its practical aspects?", "Which competing principles are in play (liberty vs security, equality vs merit, individual vs community)?", "What would each major political tradition make of this?"]], ["Cultural & conceptual perspective", ["Of what wider debate is this particular case merely one instance?", "Which comparison with another English-speaking country sharpens or nuances the point?", "Which concept, author or theory would raise the analysis a level (name it, don't just gesture at it)?"]], ["Language & style", ["What does the register, tone or lexical field reveal about the intention?", "Which tenses or modals matter for interpretation — past for a rupture, future for a projection, modals for probability?", "Is there a key phrase whose exact wording carries the argument?"]]]}, "verbs": {"label": "Toolbox · don't say 'the document speaks about'", "intro": "Present the document with a precise verb instead:", "chips": ["addresses…", "highlights…", "focuses on…", "examines…", "outlines…", "sheds light on…", "emphasises…", "deals with…", "investigates…"]}, "keyq": {"label": "A key question = a tension", "intro": "A strong problematic exposes a problem, a contradiction or an implicit issue — a limitation, a criticism, a contradiction, or a hidden stake. Always look for a tension:", "tensions": ["Criticism vs Justification", "Progress vs Danger", "Individual vs Society", "Freedom vs Control", "Tradition vs Change", "Equality vs Merit", "Global vs National", "Rights vs Responsibilities"]}, "alt": {"label": "Frame the question · alternatives to 'To what extent'", "intro": "Match the family to your tension, then complete the opener:", "families": [["For analysis", ["How does… influence…?", "What factors explain…?", "What is at stake in…?"]], ["For balanced arguments", ["How far can it be argued that…?", "What are the limits of the claim that…?", "Is it more accurate to say… or…?"]], ["For critical thinking / debate", ["Should we consider… as…?", "Is it justified to claim that…?", "Can… be explained by… alone?"]], ["For causation & impact", ["What role did… play in…?", "How significant was… in…?", "What are the underlying causes of…?", "What explains the impact of…?"]], ["For comparison", ["How does… compare with…?", "What distinguishes… from…?", "Which had a greater impact:… or…?", "In what ways are… and… similar / different?"]]]}, "plan": {"label": "Build a two- or three-part plan", "intro": "Each part = one governing idea + one piece of evidence (from the document or your own knowledge). Avoid a flat for/against; aim for a movement of thought.", "tips": ["Part I usually takes the document's claim seriously; Part II complicates or challenges it; Part III (optional) reframes or transcends the opposition.", "End each part with a mini-conclusion that launches the next.", "Your conclusion should answer your key question and open onto a wider horizon — never just summarise."]}, "transitions": {"label": "Transition bank for speaking", "intro": "A good transition shows the reasoning that links your parts. Pick by function:", "groups": [["Open onto the problematic", ["The article therefore raises a broader question: …", "Beyond the specific case discussed in the article, this issue prompts us to wonder whether…", "This example illustrates a wider debate regarding…", "This leads us to the following question: …"]], ["Announce the plan", ["A twofold approach can be adopted. First, I will focus on…, then I will analyse…", "To answer this question, I will begin by…, then move on to…, before finally considering…"]], ["Move to a new part", ["Another aspect worth considering is…", "Another perspective would be to consider…", "The issue can also be approached from a different angle."]], ["Widen / deepen", ["Beyond the economic dimension, the issue also raises ethical concerns.", "Beyond this particular example, the question reflects a broader trend.", "More fundamentally, this debate raises the question of…", "At a deeper level, the issue concerns…"]], ["Nuance in conclusion", ["The debate should not be reduced to a simple opposition between X and Y."]]]}};
 const WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
 const CNAME = {gb:"United Kingdom",us:"United States",ie:"Ireland",ca:"Canada",au:"Australia",nz:"New Zealand",in:"India",za:"South Africa"};
-function esc(s){const d=document.createElement("div");d.textContent=s||"";return d.innerHTML;}
-let country="gb", dossier=[], chosen=null, step=0;
+const esc = value => String(value || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const fmt = seconds => String(Math.floor(Math.max(0,seconds)/60)).padStart(2,"0")+":"+String(Math.max(0,seconds)%60).padStart(2,"0");
+const IC = {chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-4a8 8 0 1 1 18-7Z"/></svg>'};
 
-document.getElementById("ctGo").addEventListener("click",()=>{
+let country="gb", dossier=[], chosen=null, step=0;
+let config={level:"standard",prep:20,speak:8,focus:"key question"};
+let work={analysis:"",keyQuestion:"",plan0:"",plan1:"",plan2:"",teacherQuestion:"",feedback:"",nextPriority:""};
+let prepRemain=1200, prepTimer=null, speakRemain=480, speakTimer=null;
+let mediaRecorder=null, mediaStream=null, mediaChunks=[], audioUrl="";
+
+function readConfig(){
   country=document.getElementById("ctCountry").value;
-  loadDossier();
-});
+  config={level:document.getElementById("ctLevel").value,prep:+document.getElementById("ctPrep").value,speak:+document.getElementById("ctSpeak").value,focus:document.getElementById("ctFocus").value};
+}
+function saveWork(){
+  const ids=["analysisNotes","keyQuestion","plan0","plan1","plan2","teacherQuestion","feedbackNote","nextPriority"];
+  const keys=["analysis","keyQuestion","plan0","plan1","plan2","teacherQuestion","feedback","nextPriority"];
+  ids.forEach((id,i)=>{const el=document.getElementById(id);if(el)work[keys[i]]=el.value;});
+  try{sessionStorage.setItem("eclColleTrainerWork",JSON.stringify({config,work}));}catch(_){ }
+}
+function restoreWork(){try{const raw=JSON.parse(sessionStorage.getItem("eclColleTrainerWork")||"null");if(raw&&raw.work)work={...work,...raw.work};}catch(_){ }}
+
+document.getElementById("ctGo").addEventListener("click",()=>{readConfig();loadDossier();});
 
 function loadDossier(){
-  const D=document.getElementById("dossier"), list=document.getElementById("docsList");
-  document.getElementById("workshop").classList.remove("on");
-  D.classList.add("on");
-  document.getElementById("dossierSub").textContent = CNAME[country] + " · " + new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
-  list.innerHTML="<p class=\"loading\">Loading today’s documents…</p>";
+  stopAllTimers();
+  const section=document.getElementById("dossier"), list=document.getElementById("docsList");
+  document.getElementById("workshop").classList.remove("on"); section.classList.add("on");
+  document.getElementById("dossierSub").textContent=CNAME[country]+" · "+new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
+  list.innerHTML='<p class="loading">Loading today’s documents…</p>';
   Promise.all([
-    fetch(WORKER+"?country="+country+"&n=3&type=news").then(r=>r.json()).catch(()=>({items:[]})),
-    fetch(WORKER+"?country="+country+"&n=2&type=podcast").then(r=>r.json()).catch(()=>({items:[]}))
+    fetch(WORKER+"?country="+country+"&n=3&type=news").then(r=>r.ok?r.json():Promise.reject()).catch(()=>({items:[]})),
+    fetch(WORKER+"?country="+country+"&n=2&type=podcast").then(r=>r.ok?r.json():Promise.reject()).catch(()=>({items:[]}))
   ]).then(([news,pod])=>{
     dossier=[];
-    (news.items||[]).slice(0,3).forEach(it=>dossier.push({kind:"article",src:news.source,title:it.title,url:it.url}));
-    (pod.items||[]).slice(0,2).forEach(it=>dossier.push({kind:"podcast",src:pod.source,title:it.title,url:it.url,audio:it.audio}));
-    if(!dossier.length){list.innerHTML='<p class="loading">No documents available right now. Try again in a moment.</p>';return;}
-    list.innerHTML=dossier.map((d,i)=>`
-      <article class="doc ${d.kind}">
-        <span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
-        <h3>${esc(d.title)}</h3>
-        <div class="acts">
-          <a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Listen ↗":"Read ↗"}</a>
-          <button class="pick" data-i="${i}">Travailler ce doc</button>
-        </div>
-      </article>`).join("");
-    list.querySelectorAll(".pick").forEach(b=>b.addEventListener("click",()=>startWorkshop(dossier[+b.dataset.i])));
+    (news.items||[]).slice(0,3).forEach(it=>dossier.push({kind:"article",src:news.source||"News source",title:it.title,url:it.url}));
+    (pod.items||[]).slice(0,2).forEach(it=>dossier.push({kind:"podcast",src:pod.source||"Podcast",title:it.title,url:it.url,audio:it.audio}));
+    if(!dossier.length){list.innerHTML='<p class="loading">No documents are available right now. Try another country or return later. You can also choose a source from the Resources page.</p>';return;}
+    list.innerHTML=dossier.map((d,i)=>`<article class="doc ${d.kind}"><span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span><h3>${esc(d.title)}</h3><div class="acts"><a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Listen ↗":"Read ↗"}</a><button class="pick" data-i="${i}">Work on this document</button></div></article>`).join("");
+    list.querySelectorAll(".pick").forEach(button=>button.addEventListener("click",()=>startWorkshop(dossier[+button.dataset.i])));
   });
 }
 
-function startWorkshop(d){
-  chosen=d; step=0;
-  const c=document.getElementById("chosen");
-  c.innerHTML=`<span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span>
-    <h2>${esc(d.title)}</h2>
-    <a href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Open the podcast ↗":"Open the article ↗"}</a>
-    ${d.audio?`<audio controls preload="none" src="${esc(d.audio)}"></audio>`:""}`;
-  document.getElementById("workshop").classList.add("on");
-  renderStep();
-  document.getElementById("workshop").scrollIntoView&&document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
+function startWorkshop(documentItem){
+  chosen=documentItem; step=0; work={analysis:"",keyQuestion:"",plan0:"",plan1:"",plan2:"",teacherQuestion:"",feedback:"",nextPriority:""};
+  prepRemain=config.prep*60; speakRemain=config.speak*60; stopAllTimers(); revokeAudio();
+  document.getElementById("chosen").innerHTML=`<span class="kind">${chosen.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(chosen.src)}</span><h2>${esc(chosen.title)}</h2><a href="${esc(chosen.url)}" target="_blank" rel="noopener">Open the ${chosen.kind} ↗</a>${chosen.audio?`<audio controls preload="none" src="${esc(chosen.audio)}"></audio>`:""}<div class="chosen-meta"><span>${esc(config.level)} support</span><span>${config.prep} min preparation</span><span>${config.speak} min speaking</span><span>Priority: ${esc(config.focus)}</span></div>`;
+  document.getElementById("workshop").classList.add("on"); updateSessionToolbar(); renderStep();
+  document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
+function updateSessionToolbar(){
+  document.getElementById("sessionMeta").innerHTML=`<span class="session-chip">${esc(CNAME[country])}</span><span class="session-chip">${esc(config.level)} support</span><span class="session-chip">Priority: ${esc(config.focus)}</span>`;
+  const el=document.getElementById("prepTime"); el.textContent=fmt(prepRemain); el.classList.toggle("warn",prepRemain<=120);
+  const start=document.getElementById("prepStart"); start.textContent=prepTimer?"Pause":"Start";
+}
+function stopPrep(){if(prepTimer){clearInterval(prepTimer);prepTimer=null;}updateSessionToolbar();}
+function togglePrep(){
+  if(prepTimer){stopPrep();return;}
+  prepTimer=setInterval(()=>{prepRemain=Math.max(0,prepRemain-1);updateSessionToolbar();if(prepRemain===0)stopPrep();},1000); updateSessionToolbar();
+}
+document.getElementById("prepStart").addEventListener("click",togglePrep);
+document.getElementById("prepReset").addEventListener("click",()=>{stopPrep();prepRemain=config.prep*60;updateSessionToolbar();});
 
-/* ===== icônes ===== */
-const IC = {
-  read:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c3-1.5 6-1.5 8 0 2-1.5 5-1.5 8 0v12c-3-1.5-6-1.5-8 0-2-1.5-5-1.5-8 0Z"/><path d="M12 6v12"/></svg>',
-  dig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>',
-  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg>',
-  source:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><circle cx="16" cy="8" r="5"/><path d="M16 6v2l1.5 1"/></svg>',
-  mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>',
-  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>',
-  bolt:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7Z"/></svg>',
-  gears:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>',
-  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
-  scale:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 8h12"/><path d="M6 8l-3 6a3 3 0 0 0 6 0Z"/><path d="M18 8l-3 6a3 3 0 0 0 6 0Z"/><path d="M8 20h8"/></svg>',
-  globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
-  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2Z"/><path d="M8 3v18"/></svg>',
-  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-4a8 8 0 1 1 18-7Z"/></svg>',
-  pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
-};
-// une icône par famille du niveau 2 (dans l'ordre)
-const FAMICON = [IC.source,IC.chat,IC.eye,IC.bolt,IC.gears,IC.book,IC.scale,IC.globe,IC.pen];
-
-function fam(title,items,icon){return `<div class="qfam"><h4>${icon?`<span class="fi">${icon}</span>`:""}${esc(title)}</h4><ul>${items.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`;}
-function chipbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div></div>`;}
-function tagbox(m){return `<div class="toolbox"><div class="tb-h">${esc(m.label)}</div><p class="tb-i">${esc(m.intro)}</p><div class="chips">${m.tensions.map(c=>`<span class="chip tension">⚡ ${esc(c)}</span>`).join("")}</div></div>`;}
-
+function promptDetails(title,groups,open=false){
+  return `<details class="prompt-block" ${open?"open":""}><summary>${esc(title)}</summary><div class="prompt-body">${groups.map(group=>`<h4>${esc(group[0])}</h4><ul>${group[1].map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`).join("")}</div></details>`;
+}
 function renderStep(){
-  [0,1,2].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
-  const p=document.getElementById("stepPanel");
+  [0,1,2,3].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
+  const panel=document.getElementById("stepPanel");
+  const guided=config.level==="foundation", advanced=config.level==="advanced";
   if(step===0){
-    p.innerHTML=`<div class="eyebrow"><span class="ei">${IC.eye}</span>Step 1 · Interrogate the document</div>
-      <p class="step-lead">Read or listen first. Then work through the three levels — pick the questions that actually bite on this document, you don't need them all.</p>
-      <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">${IC.read}</span><div><div class="lvl-t">${esc(METHOD.n1.label)}</div><div class="lvl-i">${esc(METHOD.n1.intro)}</div></div></div>
-        ${METHOD.n1.groups.map(g=>fam(g[0],g[1])).join("")}
-      </div>
-      ${chipbox(METHOD.verbs)}
-      <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">${IC.dig}</span><div><div class="lvl-t">${esc(METHOD.n2.label)}</div><div class="lvl-i">${esc(METHOD.n2.intro)}</div></div></div>
-        ${METHOD.n2.groups.map((g,i)=>fam(g[0],g[1],FAMICON[i]||IC.dig)).join("")}
-      </div>
-      <div class="lvl">
-        <div class="lvl-h"><span class="lvl-n">${IC.spark}</span><div><div class="lvl-t">Level 3 · Problematise</div><div class="lvl-i">Turn your analysis into THE question. Go to step 2 when you have it.</div></div></div>
-        ${tagbox(METHOD.keyq)}
-      </div>
-      <label class="notes-lab">Your working problematic (one sentence):</label>
-      <textarea class="notes" id="notes0" placeholder="e.g. How far can Britain's housing crisis be read as a failure of the market rather than of the state?"></textarea>`;
-  }else if(step===1){
-    p.innerHTML=`<div class="eyebrow">Step 2 · Frame the question & build a plan</div>
-      <p class="step-lead">First lock your key question, then sketch a plan that moves — not a flat for / against.</p>
-      <div class="toolbox"><div class="tb-h">${esc(METHOD.alt.label)}</div><p class="tb-i">${esc(METHOD.alt.intro)}</p>
-        ${METHOD.alt.families.map(f=>`<div class="altfam"><span class="altfam-t">${esc(f[0])}</span><ul>${f[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
-      </div>
-      <div class="toolbox"><div class="tb-h">${esc(METHOD.plan.label)}</div><p class="tb-i">${esc(METHOD.plan.intro)}</p><ul class="plan-tips">${METHOD.plan.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
-      ${["I — take the claim seriously","II — complicate or challenge it","III — reframe / transcend (optional)"].map((t,i)=>`<div class="qfam"><h4>${esc(t)}</h4><textarea class="notes" id="plan${i}" style="min-height:64px" placeholder="Governing idea + one piece of evidence…"></textarea></div>`).join("")}`;
-  }else{
-    p.innerHTML=`<div class="eyebrow"><span class="ei">${IC.mic}</span>Step 3 · Speak</div>
-      <p class="step-lead">Colle format: prepare, then present aloud without reading your notes. Use the transition bank to sound structured.</p>
-      <div class="timer-box"><div class="timer" id="timer">10:00</div>
-        <div class="timer-ctrl"><button class="btn" data-min="5">5 min</button><button class="btn" data-min="10">10 min</button><button class="btn" data-min="15">15 min</button></div>
-        <div class="timer-ctrl" style="margin-top:8px"><button class="btn primary" id="tStart">Start</button><button class="btn" id="tReset">Reset</button></div>
-        <p class="hint">Aim: hook + problematic (1 min), announce the plan, develop each part with evidence, close on a wider opening.</p>
-      </div>
-      <div class="toolbox"><div class="tb-h">${esc(METHOD.transitions.label)}</div><p class="tb-i">${esc(METHOD.transitions.intro)}</p>
-        ${METHOD.transitions.groups.map(g=>`<div class="altfam"><span class="altfam-t">${esc(g[0])}</span><ul>${g[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`).join("")}
-      </div>
-      <div class="classnote">
-        <div class="cn-ic">${IC.chat}</div>
-        <div>
-          <h3>The real training ground is the classroom</h3>
-          <p>This trainer is a warm-up, not a substitute. The best place to learn how to problematise, think and speak in English is the English lesson itself — where you get a teacher's feedback, live debate, and the chance to actually use your voice in front of others.</p>
-          <p>Preparing your English colles properly is essential too. Think through these questions <b>yourself</b>, do your <b>own</b> research, and build your <b>own</b> reflexes and mental habits — rather than leaning on ChatGPT for every answer. The point is to train your mind, not to outsource it.</p>
-        </div>
-      </div>`;
-    setupTimer();
+    const groups=METHOD.n1.groups;
+    panel.innerHTML=`<div class="eyebrow">Step 1 · Understand and interrogate</div><p class="step-lead">Read or listen once for the overall meaning. Then identify what matters. Do not answer every prompt: use the ones that expose the document’s central issue.</p><div class="focus-callout"><strong>Your priority today:</strong> ${esc(config.focus)}. Keep it visible while you work.</div>${promptDetails("Fast factual mapping",groups,!advanced)}${promptDetails("Deeper analysis",METHOD.n2.groups,guided)}<div class="toolbox"><div class="tb-h">Useful presentation verbs</div><div class="chips">${METHOD.verbs.chips.map(v=>`<span class="chip">${esc(v)}</span>`).join("")}</div></div><label class="inline-label" for="analysisNotes">Your essential notes — facts, tension, source limits and one useful example</label><textarea class="notes" id="analysisNotes" placeholder="Keep only what you could actually use aloud.">${esc(work.analysis)}</textarea>`;
+  } else if(step===1){
+    panel.innerHTML=`<div class="eyebrow">Step 2 · Build a key question and a moving plan</div><p class="step-lead">Your key question must expose a tension. Your plan must answer it through a movement of thought — never a flat “for / against” structure.</p><div class="focus-callout"><strong>Non-negotiable:</strong> contextualise the document before announcing the key question. Avoid “To what extent…”.</div><details class="prompt-block" ${guided?"open":""}><summary>Key-question models</summary><div class="prompt-body">${METHOD.alt.families.map(f=>`<h4>${esc(f[0])}</h4><ul>${f[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul>`).join("")}</div></details><label class="inline-label" for="keyQuestion">Your key question</label><textarea class="notes compact-notes" id="keyQuestion" placeholder="A genuine question built around the document’s central tension.">${esc(work.keyQuestion)}</textarea><div class="review-grid"><div><label class="inline-label" for="plan0">I — Take the claim or problem seriously</label><textarea class="notes compact-notes" id="plan0" placeholder="Governing idea + evidence + interpretation">${esc(work.plan0)}</textarea></div><div><label class="inline-label" for="plan1">II — Complicate, challenge or expose limits</label><textarea class="notes compact-notes" id="plan1" placeholder="Governing idea + evidence + transition">${esc(work.plan1)}</textarea></div></div><label class="inline-label" for="plan2">III — Reframe or widen the debate (optional)</label><textarea class="notes compact-notes" id="plan2" placeholder="A deeper perspective, comparison or wider stake">${esc(work.plan2)}</textarea>`;
+  } else if(step===2){
+    panel.innerHTML=`<div class="eyebrow">Step 3 · Speak, record and listen back</div><p class="step-lead">Speak from notes, not from a script. Focus on one priority only. Recording is private and remains in this browser tab.</p><div class="speaking-grid"><div class="studio-card"><h3>Speaking timer</h3><div class="timer" id="speakTime">${fmt(speakRemain)}</div><div class="timer-ctrl"><button class="btn primary" id="speakStart" type="button">Start</button><button class="btn" id="speakReset" type="button">Reset</button></div><p class="hint">Suggested structure: contextualisation → key question → plan → evidence → conclusion.</p></div><div class="studio-card"><h3>Private recording studio</h3><p>Record your response, then listen for structure, fluency and your selected priority: <strong>${esc(config.focus)}</strong>.</p><div class="record-controls"><button class="btn primary" id="recordStart" type="button">● Record</button><button class="btn" id="recordStop" type="button" disabled>Stop</button></div><div class="record-status" id="recordStatus">No recording yet.</div><audio class="record-playback" id="recordPlayback" controls hidden></audio><p class="privacy-note">Nothing is uploaded or sent to your teacher. The recording disappears when the page is closed or reloaded.</p></div></div><div class="classnote"><div class="cn-ic">${IC.chat}</div><div><h3>The website is only the rehearsal room</h3><p>Use this objective again in English class. Then test it under real conditions in your next colle and ask for specific feedback.</p></div></div>`;
+    setupSpeakingTimer(); setupRecorder();
+  } else {
+    panel.innerHTML=`<div class="eyebrow">Step 4 · Review, take it to class and test it in a colle</div><p class="step-lead">Self-evaluation is useful only when it leads to a precise action outside the screen.</p><div class="review-grid"><div class="review-card"><h3>Quick self-evaluation</h3>${[
+      "I contextualised the document before analysing it.","I formulated a genuine key question.","My plan answered that question and moved forward.","I used precise, contextualised evidence.","I reused accurate grammar and vocabulary.","My stress and intonation helped the listener follow my ideas."
+    ].map((label,i)=>`<label class="review-check"><input type="checkbox" id="eval${i}"><span>${label}</span></label>`).join("")}</div><div class="review-card"><h3>Prepare the feedback loop</h3><label class="inline-label" for="teacherQuestion">One question to ask in English class</label><textarea class="notes compact-notes" id="teacherQuestion" placeholder="What do I still not understand or know how to do?">${esc(work.teacherQuestion)}</textarea><label class="inline-label" for="feedbackNote">Teacher feedback received</label><textarea class="notes compact-notes" id="feedbackNote" placeholder="Complete this after class or after the real colle.">${esc(work.feedback)}</textarea><label class="inline-label" for="nextPriority">One priority for the next real colle</label><textarea class="notes compact-notes" id="nextPriority" placeholder="Keep it specific and manageable.">${esc(work.nextPriority||config.focus)}</textarea></div></div><div class="transfer-box"><h3>Save the real-world mission</h3><p><strong>English class:</strong> ask your question and use one prepared element aloud.<br><strong>Next colle:</strong> focus on one priority and collect feedback.<br><strong>Afterwards:</strong> return to the homepage mission dashboard and record what changed.</p><button class="btn primary" id="saveTransfer" type="button">Add this to my class &amp; colle mission</button><div class="transfer-result" id="transferResult" aria-live="polite"></div></div>`;
+    document.getElementById("saveTransfer").addEventListener("click",saveTransferMission);
   }
+  panel.querySelectorAll("textarea").forEach(el=>el.addEventListener("input",saveWork));
+  document.getElementById("ctNext").textContent=step<3?"Next step →":"Finish and return to the dossier";
 }
 
-let timer=null,remain=600;
-function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}
-function setupTimer(){
-  remain=600;const el=document.getElementById("timer");el.textContent=fmt(remain);
-  document.querySelectorAll("[data-min]").forEach(b=>b.addEventListener("click",()=>{stopT();remain=+b.dataset.min*60;el.textContent=fmt(remain);el.classList.remove("warn");}));
-  document.getElementById("tStart").addEventListener("click",()=>{
-    if(timer){stopT();document.getElementById("tStart").textContent="Start";return;}
-    document.getElementById("tStart").textContent="Pause";
-    timer=setInterval(()=>{remain--;el.textContent=fmt(Math.max(0,remain));if(remain<=60)el.classList.add("warn");if(remain<=0){stopT();el.textContent="Time!";document.getElementById("tStart").textContent="Start";}},1000);
-  });
-  document.getElementById("tReset").addEventListener("click",()=>{stopT();remain=600;el.textContent=fmt(remain);el.classList.remove("warn");document.getElementById("tStart").textContent="Start";});
+function setupSpeakingTimer(){
+  const el=document.getElementById("speakTime"), start=document.getElementById("speakStart");
+  const paint=()=>{if(!el)return;el.textContent=fmt(speakRemain);el.classList.toggle("warn",speakRemain<=60);if(start)start.textContent=speakTimer?"Pause":"Start";}; paint();
+  start.addEventListener("click",()=>{if(speakTimer){clearInterval(speakTimer);speakTimer=null;paint();return;}speakTimer=setInterval(()=>{speakRemain=Math.max(0,speakRemain-1);paint();if(speakRemain===0){clearInterval(speakTimer);speakTimer=null;paint();}},1000);paint();});
+  document.getElementById("speakReset").addEventListener("click",()=>{if(speakTimer)clearInterval(speakTimer);speakTimer=null;speakRemain=config.speak*60;paint();});
 }
-function stopT(){if(timer){clearInterval(timer);timer=null;}}
+function setupRecorder(){
+  const start=document.getElementById("recordStart"), stop=document.getElementById("recordStop"), status=document.getElementById("recordStatus"), playback=document.getElementById("recordPlayback");
+  if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){start.disabled=true;status.textContent="Audio recording is not supported by this browser.";return;}
+  start.addEventListener("click",async()=>{try{revokeAudio();mediaStream=await navigator.mediaDevices.getUserMedia({audio:true});mediaChunks=[];mediaRecorder=new MediaRecorder(mediaStream);mediaRecorder.ondataavailable=e=>{if(e.data.size)mediaChunks.push(e.data);};mediaRecorder.onstop=()=>{const blob=new Blob(mediaChunks,{type:mediaRecorder.mimeType||"audio/webm"});audioUrl=URL.createObjectURL(blob);playback.src=audioUrl;playback.hidden=false;status.textContent="Recording ready. Listen back before completing the review.";mediaStream?.getTracks().forEach(t=>t.stop());mediaStream=null;};mediaRecorder.start();start.disabled=true;stop.disabled=false;status.textContent="Recording… Speak naturally from your notes.";}catch(_){status.textContent="Microphone access was blocked. You can still use the timer and speak aloud.";}});
+  stop.addEventListener("click",()=>{if(mediaRecorder&&mediaRecorder.state!=="inactive")mediaRecorder.stop();start.disabled=false;stop.disabled=true;});
+}
+function revokeAudio(){if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl="";}if(mediaStream){mediaStream.getTracks().forEach(t=>t.stop());mediaStream=null;}}
+function stopAllTimers(){stopPrep();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}}
 
-document.getElementById("ctNext").addEventListener("click",()=>{stopT();if(step<2){step++;renderStep();}else{document.getElementById("dossier").scrollIntoView&&document.getElementById("dossier").scrollIntoView({behavior:"smooth"});}});
-document.getElementById("ctBack").addEventListener("click",()=>{stopT();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView&&document.getElementById("dossier").scrollIntoView({behavior:"smooth"});});
-[0,1,2].forEach(i=>document.getElementById("sb"+i).addEventListener("click",()=>{stopT();step=i;renderStep();}));
+function saveTransferMission(){
+  saveWork();
+  const priority=(work.nextPriority||config.focus).trim();
+  const teacherQuestion=(work.teacherQuestion||"Ask the teacher for one precise correction").trim();
+  const task=`In English class, ${teacherQuestion.charAt(0).toLowerCase()+teacherQuestion.slice(1)}. In the next real colle, focus on ${priority} and reuse one contextualised example from today’s document. After feedback, record the next priority on the homepage dashboard.`;
+  if(window.ECLTransfer?.addMission){window.ECLTransfer.addMission({id:"colle-trainer",domain:"Colle Trainer",task,page:"colle-trainer.html",pageTitle:chosen?.title||"Colle Trainer"});document.getElementById("transferResult").textContent="Mission saved. It is now visible on the homepage.";}else{document.getElementById("transferResult").textContent="The mission system is still loading. Wait a moment and try again.";}
+}
+
+document.getElementById("ctNext").addEventListener("click",()=>{saveWork();if(step<3){step++;renderStep();}else{stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});}});
+document.getElementById("ctBack").addEventListener("click",()=>{saveWork();stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});});
+[0,1,2,3].forEach(i=>document.getElementById("sb"+i).addEventListener("click",()=>{saveWork();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}step=i;renderStep();}));
+restoreWork();
 </script>
 
-<script src="site-core.js?v=20260715-1"></script>
+<script src="site-core.js?v=20260715-2"></script>
 </body></html>
