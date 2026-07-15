@@ -339,5 +339,7 @@ const panel=$("#panel"),scrim=$("#scrim");$("#openA11y").onclick=()=>{panel.clas
 const sizes=[18,20.5,23];function setSize(i){document.documentElement.style.setProperty("--fs",sizes[i]+"px");$$('#sizeSeg button').forEach(b=>b.classList.toggle("on",+b.dataset.size===i));LS.set("jury_size",i)}$$('#sizeSeg button').forEach(b=>b.onclick=()=>setSize(+b.dataset.size));setSize(+LS.get("jury_size",0));
 $$(".toggle").forEach(b=>{const o=b.dataset.opt;function apply(on){document.body.classList.toggle(o,on);b.classList.toggle("on",on);b.lastElementChild.textContent=on?"On":"Off";LS.set("jury_"+o,on?"1":"0")}b.onclick=()=>apply(!document.body.classList.contains(o));apply(LS.get("jury_"+o,"0")==="1")});
 </script>
+
+<script src="site-core.js?v=20260715-1"></script>
 </body>
 </html>

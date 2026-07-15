@@ -752,5 +752,7 @@ const savedSize=localStorage.getItem("timelineSize");
 if(savedSize!==null) document.querySelector(`#sizeSeg button[data-size="${savedSize}"]`)?.click();
 ["contrast","dys","noanim"].forEach(opt=>{if(localStorage.getItem("timeline_"+opt)==="true")document.querySelector(`[data-opt="${opt}"]`)?.click();});
 </script>
+
+<script src="site-core.js?v=20260715-1"></script>
 </body>
 </html>

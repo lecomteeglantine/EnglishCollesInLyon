@@ -190,4 +190,6 @@ const panel=document.getElementById('a11yPanel'),scrim=document.getElementById('
 const SIZES=[18,20.5,23];function applySize(i){document.documentElement.style.setProperty('--fs',SIZES[i]+'px');document.querySelectorAll('#sizeSeg button').forEach(b=>b.classList.toggle('on',+b.dataset.size===i));LS.set('eclyon_size',i)}document.querySelectorAll('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>applySize(+b.dataset.size)));applySize(+LS.get('eclyon_size',0));function applyOpt(opt,on){document.body.classList.toggle(opt,on);const btn=document.querySelector('.opt-toggle[data-opt="'+opt+'"]');if(btn){btn.classList.toggle('on',on);btn.querySelector('.state').textContent=on?'On':'Off'}LS.set('eclyon_'+opt,on?'1':'0')}document.querySelectorAll('.opt-toggle').forEach(btn=>{const opt=btn.dataset.opt;btn.addEventListener('click',()=>applyOpt(opt,!document.body.classList.contains(opt)));applyOpt(opt,LS.get('eclyon_'+opt,'0')==='1')});
 init();loadFeed();loadStatus();
 </script>
+
+<script src="site-core.js?v=20260715-1"></script>
 </body></html>
