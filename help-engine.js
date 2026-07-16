@@ -91,7 +91,7 @@
   }
   function welcomeView(){
     const hasProgress=Object.keys(state.statuses).length>0;
-    return `<section class="panel welcome-panel"><div class="eyebrow">Guided support</div><h1>Your Guided Learning Plan</h1>
+    return `<section class="panel welcome-panel"><div class="eyebrow">Guided support</div>
       <p class="lead">Start with a simple diagnostic. The site will identify useful priorities and create a progressive sequence of missions across grammar, vocabulary, pronunciation, methodology, civilisation and colle skills.</p>
       <div class="notice"><strong>This is not an exam.</strong> There is no pass or fail. A correct answer may allow you to skip a mission; a difficult answer simply helps the site choose a useful starting point.</div>
       <div class="domain-strip">${domains.map(d=>{const x=DATA.domains[d];return `<span style="--dc:${x.colour}">${x.letter} · ${esc(x.label)}</span>`}).join('')}</div>
