@@ -328,8 +328,8 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .mm-bar-lbl{font-weight:700;font-size:.85rem;color:var(--navy)}
 .mm-reset{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 12px;font-family:inherit;font-size:.8rem;font-weight:700;color:var(--muted);cursor:pointer}
 .mm-reset:hover{border-color:var(--terra);color:var(--terra)}
-.mm-rail{display:flex;gap:8px;overflow-x:auto;padding:12px 0 18px;position:sticky;top:0;background:var(--bg);z-index:20;scrollbar-width:thinscrollbar-width:none;}
-   .mm-rail::-webkit-scrollbar{display:none}
+.mm-rail{display:flex;gap:8px;overflow-x:auto;padding:12px 0 18px;position:sticky;top:0;background:var(--bg);z-index:20;scrollbar-width:none}
+.mm-rail::-webkit-scrollbar{display:none}
 .mm-chip{flex:none;display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:9px 14px;font-family:inherit;font-weight:700;font-size:.86rem;color:var(--muted);cursor:pointer;min-height:44px}
 .mm-chip .num{font-family:var(--display);color:var(--navy)}
 .mm-chip.on{border-color:var(--navy);background:var(--navy);color:#fff}
@@ -400,6 +400,31 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .mm-done-btn{margin-top:18px;width:100%;min-height:var(--tap);border-radius:13px;border:1.5px solid var(--sage);background:#fff;color:#4e6b4a;font-family:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
 .mm-done-btn:hover{background:var(--sage);color:#fff}
 .mm-done-btn.is-done{background:var(--sage);color:#fff}
+
+.mm-done-btn:disabled{cursor:not-allowed;background:#f2eee7;color:#7b837f;border-color:var(--line);opacity:1}
+.mm-done-btn:disabled:hover{background:#f2eee7;color:#7b837f}
+.action-plan{margin-top:22px;background:linear-gradient(135deg,#fff8f1,#f1f6f3);border:1px solid var(--line);border-left:5px solid var(--terra);border-radius:16px;padding:20px}
+.action-plan-h{font-family:var(--display);font-weight:600;font-size:1.18rem;color:var(--navy);margin-bottom:5px}
+.action-plan-intro{font-size:.88rem;color:var(--muted);line-height:1.55;margin-bottom:14px}
+.action-grid{display:grid;gap:10px}
+.action-card{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;cursor:pointer;transition:border-color .2s,background .2s}
+.action-card:hover{border-color:var(--terra)}
+.action-card.checked{border-color:var(--sage);background:#f2f7f0}
+.action-card input{width:19px;height:19px;margin:3px 0 0;flex:none;accent-color:var(--sage)}
+.action-copy{display:block;min-width:0}
+.action-title{display:block;font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:3px}
+.action-text{display:block;color:var(--ink);font-size:.88rem;line-height:1.5}
+.module-validation{margin-top:18px;border-top:1px dashed var(--line);padding-top:18px}
+.validation-head{font-family:var(--display);font-weight:600;color:var(--navy);font-size:1.05rem;margin-bottom:4px}
+.validation-copy{font-size:.84rem;color:var(--muted);line-height:1.5;margin-bottom:10px}
+.validation-status{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.validation-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:6px 11px;font-size:.78rem;font-weight:700;color:var(--muted)}
+.validation-pill.ok{border-color:var(--sage);background:#edf5ea;color:#456441}
+.validation-feedback{display:none;margin-top:10px;background:#e7f0e5;color:#3f5a3b;border-radius:10px;padding:11px 13px;font-size:.86rem;line-height:1.5}
+.validation-feedback.show{display:block}
+.practice-saved{display:none;margin:0 0 12px;background:#edf5ea;color:#456441;border:1px solid var(--sage);border-radius:10px;padding:9px 12px;font-size:.84rem;font-weight:700}
+.practice-saved.show{display:block}
+@media(max-width:640px){.action-plan{padding:16px}.action-card{padding:12px}.validation-status{display:grid}}
 .cta-link{display:inline-flex;align-items:center;gap:8px;min-height:var(--tap);padding:11px 22px;border-radius:13px;background:var(--terra);color:#fff;font-weight:700;text-decoration:none;margin-top:6px}
 .cta-link:hover{background:#b25e41}
 .closing{background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:16px;padding:24px 26px;margin:10px 0 40px;display:flex;gap:18px;align-items:flex-start}
@@ -472,8 +497,8 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .cls-chip{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem}
 .cls-chip.ok{background:#e7f0e5;border-color:var(--sage)}
 .cls-chip.no{background:#fbe9e6;border-color:var(--terra)}
-.cls-move{margin-left:auto;display:flex;gap:4px}
-.cls-move button{width:30px;height:30px;border-radius:7px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.8rem}
+.cls-move{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.cls-move button{width:auto;min-height:30px;border-radius:7px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.7rem;font-weight:700;padding:4px 8px;line-height:1.2}
 .cls-move button:hover{border-color:var(--terra)}
 /* ===== tools ===== */
 .tool{background:linear-gradient(135deg,#fbf6ee,#f3f7f4);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:16px 0}
@@ -576,14 +601,14 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <body>
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
-     <span class="name">English<br>Colles in Lyon</span>
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
+      <span class="name">English<br>Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
       <span class="sub">CPGE English · Independent practice · Colles</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Home</a><a href="methodology.html" class="active" aria-current="page">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html" class="active" aria-current="page">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="top-tools">
-      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
+      <div class="accent" id="accent" role="group" aria-label="Choose an accent">
         <button data-acc="UK" class="on">UK</button>
         <button data-acc="US">US</button>
         <button data-acc="AU">AU</button>
@@ -647,15 +672,15 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
     <div class="a11y-group">
-      <span class="lbl">Taille du texte</span>
+      <span class="lbl">Text size</span>
       <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
     </div>
     <div class="a11y-group">
-      <span class="lbl">Affichage</span>
+      <span class="lbl">Display</span>
       <button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="dys"><span>Police dyslexie / lecture confortable</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Comfortable reading font</span><span class="state">Off</span></button>
       <button class="opt-toggle" data-opt="noanim"><span>Reduce animations</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="focus"><span>Mode focus</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="focus"><span>Focus mode</span><span class="state">Off</span></button>
     </div>
     <p class="a11y-foot">Your settings are stored on this device.</p>
   </div>
@@ -720,39 +745,74 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 (function(){
   var M = window.METHO;
   if(!M) return;
-  var LSK = "ecl_methodology_done", NOTEK = "ecl_methodology_notes";
+  var LSK = "ecl_methodology_done_v3", NOTEK = "ecl_methodology_notes_v2", ACTIONK = "ecl_methodology_actions_v3", PRACTICEK = "ecl_methodology_practice_v3";
   function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:v;}catch(e){return d;}}
   function LSset(k,v){try{localStorage.setItem(k,v);}catch(e){}}
   function loadDone(){try{return JSON.parse(LSget(LSK,"[]"));}catch(e){return [];}}
   function saveDone(a){LSset(LSK,JSON.stringify(a));}
   var done = loadDone();
+  function loadObject(k){try{return JSON.parse(LSget(k,"{}"));}catch(e){return {};}}
+  var actionState = loadObject(ACTIONK);
+  var practiceState = loadObject(PRACTICEK);
+  function saveActions(){LSset(ACTIONK,JSON.stringify(actionState));}
+  function savePractice(){LSset(PRACTICEK,JSON.stringify(practiceState));}
+  function moduleNo(m){return String(M.modules.indexOf(m)+1).padStart(2,"0");}
 
   function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML;}
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function flagSVG(code){var col={gb:"#00247d",us:"#b22234"}[code]||"#888";return '<svg viewBox="0 0 24 18"><rect width="24" height="18" fill="'+col+'"/></svg>';}
 
-  /* ============ PROGRESS ============ */
+  /* ============ PROGRESS + VALIDATION ============ */
+  function moduleReady(id){
+    var a=actionState[id]||{};
+    return !!practiceState[id] && ["do","say","use","check"].every(function(k){return !!a[k];});
+  }
+  function updateModuleValidation(id){
+    var mod=document.getElementById(id); if(!mod) return;
+    var a=actionState[id]||{}, count=["do","say","use","check"].filter(function(k){return !!a[k];}).length;
+    mod.querySelectorAll('.action-card input').forEach(function(cb){
+      cb.checked=!!a[cb.dataset.action];
+      cb.closest('.action-card').classList.toggle('checked',cb.checked);
+    });
+    var p=mod.querySelector('[data-practice-status]'), ac=mod.querySelector('[data-action-status]');
+    if(p){p.textContent=practiceState[id]?"✓ Interactive practice completed":"Interactive practice not completed";p.classList.toggle('ok',!!practiceState[id]);}
+    if(ac){ac.textContent=count+"/4 real-world actions confirmed";ac.classList.toggle('ok',count===4);}
+    var saved=mod.querySelector('.practice-saved'); if(saved) saved.classList.toggle('show',!!practiceState[id]);
+    var b=mod.querySelector('.mm-done-btn'); if(!b) return;
+    var isDone=done.indexOf(id)>=0;
+    b.classList.toggle('is-done',isDone);
+    if(isDone){b.disabled=false;b.textContent="✓ Module completed";}
+    else if(!practiceState[id]){b.disabled=true;b.textContent="Complete the interactive practice first";}
+    else if(count<4){b.disabled=true;b.textContent="Confirm "+(4-count)+" more action"+((4-count)===1?"":"s");}
+    else{b.disabled=false;b.textContent="Mark this module as complete";}
+  }
   function updateProgress(){
     var pct = Math.round(done.length / M.modules.length * 100);
     document.getElementById("mmBar").style.width = pct+"%";
     document.getElementById("mmPct").textContent = pct+"% complete";
     document.querySelectorAll(".mm-chip").forEach(function(c){ c.classList.toggle("done", done.indexOf(c.dataset.id)>=0); });
-    document.querySelectorAll(".mm-done-btn").forEach(function(b){
-      var d = done.indexOf(b.dataset.id)>=0;
-      b.classList.toggle("is-done", d);
-      b.textContent = d ? "\u2713 Module completed" : "Mark this module as done";
-    });
+    M.modules.forEach(function(m){updateModuleValidation(m.id);});
   }
   function markDone(id){
-    if(done.indexOf(id)<0) done.push(id); else done = done.filter(function(x){return x!==id;});
-    saveDone(done); updateProgress();
+    if(done.indexOf(id)>=0) return;
+    if(!moduleReady(id)){updateModuleValidation(id);return;}
+    done.push(id); saveDone(done); updateProgress();
+    var mod=document.getElementById(id), fb=mod&&mod.querySelector('.validation-feedback');
+    if(fb){fb.textContent="You completed the interactive practice and confirmed the real-world tasks. Reuse this skill in a future colle before treating it as secure.";fb.classList.add('show');}
+  }
+  function markPracticeStep(el){
+    if(!el) return; el.classList.add('is-complete');
+    var mod=el.closest('.module'); if(!mod) return;
+    var steps=mod.querySelectorAll('[data-step-id]');
+    var all=steps.length===0 || Array.prototype.every.call(steps,function(s){return s.classList.contains('is-complete');});
+    if(all){practiceState[mod.id]=true;savePractice();updateModuleValidation(mod.id);}
   }
 
   /* ============ RAIL ============ */
   function renderRail(){
     var rail = document.getElementById("mmRail");
-    rail.innerHTML = M.modules.map(function(m,i){
-      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+String(i+1).padStart(2,"0")+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
+    rail.innerHTML = M.modules.map(function(m){
+      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+moduleNo(m)+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
     }).join("");
     rail.querySelectorAll(".mm-chip").forEach(function(c){
       c.addEventListener("click",function(){
@@ -765,9 +825,21 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   }
 
   /* ============ LESSON / FIL ROUGE / DO-DONT ============ */
+  var ACTION_MAP={"Do it yourself":"do","Say it aloud":"say","Use it in class or in your next colle":"use","Check what you can now do":"check"};
+  function actionItem(m,h){return (m.lesson||[]).filter(function(x){return x.h===h;})[0]||null;}
+  function checkOutcome(m){var x=actionItem(m,"Check what you can now do");return x?x.p:"You can apply the method independently.";}
   function lessonHTML(m){
-    return '<div class="mseg mseg-lesson"><span class="mseg-tag">\ud83d\udcd8 Lesson</span>'+
-      m.lesson.map(function(l){return '<div class="lz"><h4>'+esc(l.h)+'</h4><p>'+esc(l.p)+'</p></div>';}).join("")+'</div>';
+    var core=(m.lesson||[]).filter(function(l){return !ACTION_MAP[l.h];});
+    return '<div class="mseg mseg-lesson"><span class="mseg-tag">\ud83d\udcd8 Lesson</span>'+core.map(function(l){return '<div class="lz"><h4>'+esc(l.h)+'</h4><p>'+esc(l.p)+'</p></div>';}).join("")+'</div>';
+  }
+  function actionPlanHTML(m){
+    var heads=["Do it yourself","Say it aloud","Use it in class or in your next colle","Check what you can now do"];
+    var labels={"Do it yourself":"Independent task","Say it aloud":"Oral practice","Use it in class or in your next colle":"Transfer to class or a colle","Check what you can now do":"Skill check"};
+    var cards=heads.map(function(h){var it=actionItem(m,h);if(!it)return "";var k=ACTION_MAP[h];return '<label class="action-card"><input type="checkbox" data-action="'+k+'"><span class="action-copy"><span class="action-title">'+esc(labels[h])+'</span><span class="action-text">'+esc(it.p)+'</span></span></label>';}).join("");
+    return '<div class="action-plan"><div class="action-plan-h">Apply the method beyond this page</div><p class="action-plan-intro">Complete these actions before validating the module. The site cannot verify work completed aloud or in class, so confirm each step honestly after doing it.</p><div class="action-grid">'+cards+'</div></div>';
+  }
+  function validationHTML(m){
+    return '<div class="module-validation"><div class="validation-head">Ready to validate this module?</div><p class="validation-copy">The final button unlocks only after the interactive practice is correct and the four real-world actions are confirmed.</p><div class="validation-status"><span class="validation-pill" data-practice-status>Interactive practice not completed</span><span class="validation-pill" data-action-status>0/4 real-world actions confirmed</span></div><button class="mm-done-btn" data-id="'+m.id+'" disabled>Complete the interactive practice first</button><div class="validation-feedback" aria-live="polite"></div></div>';
   }
   function docCard(dkey){
     var d = M.docs[dkey]; if(!d) return "";
@@ -798,60 +870,50 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   }
 
   /* ============ EXERCISES (all closed, auto-corrected) ============ */
-  function exQCM(e){
+  function exQCM(e,uid){
     return e.items.map(function(it,qi){
-      return '<div class="ex-q" data-type="choice"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">'+
-        it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+
-        '</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
+      return '<div class="ex-q" data-type="choice" data-step-id="'+uid+'-q'+qi+'"><div class="qtext">'+esc(it.q)+'</div><div class="ex-opts">'+it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+'</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
     }).join("");
   }
-  function exGap(e){
-    return e.items.map(function(it){
-      return '<div class="ex-q" data-type="choice"><div class="qtext">'+esc(it.text).replace("____","<span class=\"blank\">_____</span>")+'</div><div class="ex-opts">'+
-        it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+
-        '</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
+  function exGap(e,uid){
+    return e.items.map(function(it,qi){
+      return '<div class="ex-q" data-type="choice" data-step-id="'+uid+'-q'+qi+'"><div class="qtext">'+esc(it.text).replace("____","<span class=\"blank\">_____</span>")+'</div><div class="ex-opts">'+it.opts.map(function(o,oi){return '<button class="ex-opt" data-o="'+oi+'" data-c="'+it.c+'">'+esc(o)+'</button>';}).join("")+'</div><div class="ex-fb" data-fb="'+esc(it.fb)+'"></div></div>';
     }).join("");
   }
   function exOrder(e, uid){
-    return '<div class="ord-block" data-uid="'+uid+'" data-correct="'+esc(JSON.stringify(e.correct))+'" data-fb="'+esc(e.fb)+'">'+
-      '<div class="ord-list"></div><button class="ex-check" data-check="1">Check the order</button><div class="ex-fb"></div></div>';
+    return '<div class="ord-block" data-step-id="'+uid+'" data-uid="'+uid+'" data-correct="'+esc(JSON.stringify(e.correct))+'" data-fb="'+esc(e.fb)+'"><div class="ord-list"></div><button class="ex-check" data-check="1">Check the order</button><div class="ex-fb"></div></div>';
   }
   function exClassify(e, uid){
-    return '<div class="cls-block" data-uid="'+uid+'" data-fb="Sort each item into the correct column."><div class="cls-cols">'+
-      '<div class="cls-col" data-bin="A"><div class="cls-h">'+esc(e.binA)+'</div><div class="cls-drop" data-bin="A"></div></div>'+
-      '<div class="cls-col" data-bin="B"><div class="cls-h">'+esc(e.binB)+'</div><div class="cls-drop" data-bin="B"></div></div>'+
-      '</div><div class="cls-pool"></div><button class="ex-check" data-check="1">Check</button><div class="ex-fb"></div></div>';
+    return '<div class="cls-block" data-step-id="'+uid+'" data-uid="'+uid+'"><div class="cls-cols"><div class="cls-col" data-bin="A"><div class="cls-h">'+esc(e.binA)+'</div><div class="cls-drop" data-bin="A"></div></div><div class="cls-col" data-bin="B"><div class="cls-h">'+esc(e.binB)+'</div><div class="cls-drop" data-bin="B"></div></div></div><div class="cls-pool"></div><button class="ex-check" data-check="1">Check</button><div class="ex-fb"></div></div>';
   }
   var EXTITLE = {qcm:"Multiple choice",gap:"Fill the gap",order:"Put in order",classify:"Sort into columns",match:"Match the pairs",spot:"Spot the flaw"};
   function exerciseHTML(e, uid){
     var inner="";
-    if(e.type==="qcm"||e.type==="spot") inner=exQCM(e);
-    else if(e.type==="gap") inner=exGap(e);
-    else if(e.type==="match") inner=exQCM({items:e.items});
+    if(e.type==="qcm"||e.type==="spot") inner=exQCM(e,uid);
+    else if(e.type==="gap") inner=exGap(e,uid);
+    else if(e.type==="match") inner=exQCM({items:e.items},uid);
     else if(e.type==="order") inner=exOrder(e, uid);
     else if(e.type==="classify") inner=exClassify(e, uid);
-    return '<div class="ex-wrap" data-extype="'+e.type+'"><div class="ex-kind">'+esc(EXTITLE[e.type]||"Exercise")+'</div>'+
-      (e.intro?'<p class="ex-intro">'+esc(e.intro)+'</p>':'')+inner+'</div>';
+    return '<div class="ex-wrap" data-extype="'+e.type+'"><div class="ex-kind">'+esc(EXTITLE[e.type]||"Exercise")+'</div>'+(e.intro?'<p class="ex-intro">'+esc(e.intro)+'</p>':'')+inner+'</div>';
   }
   function practiceHTML(m){
     var ex = m.exercises||[];
     if(!ex.length) return "";
-    return '<div class="mseg mseg-pr"><span class="mseg-tag">\u270f\ufe0f Practice</span>'+
-      ex.map(function(e,i){return exerciseHTML(e, m.id+"-"+i);}).join("")+'</div>';
+    return '<div class="mseg mseg-pr"><span class="mseg-tag">\u270f\ufe0f Practice</span><div class="practice-saved">✓ Interactive practice already completed on this browser.</div>'+ex.map(function(e,i){return exerciseHTML(e, m.id+"-"+i);}).join("")+'</div>';
   }
 
   /* ============ RENDER MODULES ============ */
   var host = document.getElementById("mmModules");
-  host.innerHTML = M.modules.map(function(m,i){
+  host.innerHTML = M.modules.map(function(m){
     return '<section class="module" id="'+m.id+'">'+
-      '<div class="module-h"><span class="mnum">'+String(i+1).padStart(2,"0")+'</span><div><h2>'+esc(m.title)+'</h2>'+
+      '<div class="module-h"><span class="mnum">'+moduleNo(m)+'</span><div><h2>'+esc(m.title)+'</h2>'+
         '<div class="mskill">'+esc(m.skill||"")+(m.time?' \u00b7 '+esc(m.time):"")+'</div>'+
         '<div class="mlead">'+esc(m.lead)+'</div></div></div>'+
       lessonHTML(m)+filrougeHTML(m)+dodontHTML(m)+practiceHTML(m)+
       (m.id==="m11"?'<div id="ctxBuilderMount"></div>':"")+
       (m.id==="m12"?'<div id="kqwMount"></div>':"")+
       (m.id==="m19"?'<div id="simMount"></div>':"")+
-      '<button class="mm-done-btn" data-id="'+m.id+'">Mark this module as done</button>'+
+      actionPlanHTML(m)+validationHTML(m)+
     '</section>';
   }).join("");
 
@@ -863,14 +925,20 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     var opts = q.querySelectorAll(".ex-opt");
     opts.forEach(function(o){
       o.addEventListener("click",function(){
-        if(o.disabled) return;
+        if(o.disabled || q.classList.contains('is-complete')) return;
         var correct = +o.dataset.c, chosen = +o.dataset.o;
-        opts.forEach(function(x){x.disabled=true;});
-        opts[correct].classList.add("correct");
-        if(chosen!==correct) o.classList.add("wrong");
         var fbEl = q.querySelector(".ex-fb");
-        fbEl.className = "ex-fb show "+(chosen===correct?"ok":"no");
-        fbEl.textContent = (chosen===correct?"\u2713 ":"\u2717 ")+fbEl.dataset.fb;
+        if(chosen===correct){
+          opts.forEach(function(x){x.disabled=true;});
+          opts[correct].classList.add("correct");
+          fbEl.className = "ex-fb show ok";
+          fbEl.textContent = "\u2713 "+fbEl.dataset.fb;
+          markPracticeStep(q);
+        }else{
+          o.classList.add("wrong");o.disabled=true;
+          fbEl.className = "ex-fb show no";
+          fbEl.textContent = "\u2717 Not yet. "+fbEl.dataset.fb+" Try another option.";
+        }
       });
     });
   });
@@ -904,7 +972,8 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
       var fbEl = block.querySelector(".ex-fb");
       var ok = order.every(function(idx,pos){return idx===correct[pos];});
       fbEl.className = "ex-fb show "+(ok?"ok":"no");
-      fbEl.textContent = (ok?"\u2713 Correct order! ":"\u2717 Not yet \u2014 ")+block.dataset.fb;
+      fbEl.textContent = (ok?"\u2713 You placed the steps in the correct sequence. ":"\u2717 Not yet \u2014 ")+block.dataset.fb;
+      if(ok) markPracticeStep(block);
     });
   });
 
@@ -917,7 +986,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     var items = shuffle(e.items.map(function(it,i){return {i:i,t:it.t,bin:it.bin};}));
     function chip(it){
       return '<div class="cls-chip" data-i="'+it.i+'" data-bin="'+it.bin+'" data-at="pool" tabindex="0">'+esc(it.t)+
-        '<span class="cls-move"><button data-to="A" aria-label="To first column">\u25c0</button><button data-to="B" aria-label="To second column">\u25b6</button></span></div>';
+        '<span class="cls-move"><button data-to="A" aria-label="Move to '+esc(e.binA)+'">'+esc(e.binA)+'</button><button data-to="B" aria-label="Move to '+esc(e.binB)+'">'+esc(e.binB)+'</button></span></div>';
     }
     pool.innerHTML = items.map(chip).join("");
     function wire(chipEl){
@@ -942,15 +1011,33 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
       });
       var total=all.length;
       fbEl.className="ex-fb show "+(good===total?"ok":"no");
-      fbEl.textContent = good===total ? "\u2713 All sorted correctly!" :
-        ("\u2717 "+good+"/"+total+" correct. Green = right column, red = wrong. "+(placed<total?"Some items are still unsorted.":""));
+      if(good===total){
+        var outcome=checkOutcome(M.modules.filter(function(x){return x.id===mid;})[0]);
+        fbEl.textContent="\u2713 You correctly distinguished "+e.binA.toLowerCase()+" from "+e.binB.toLowerCase()+". This supports the module goal: "+outcome;
+        markPracticeStep(block);
+      }else{
+        fbEl.textContent="\u2717 "+good+"/"+total+" correct. Green = right column, red = wrong. "+(placed<total?"Some items are still unsorted.":"");
+      }
     });
   });
 
-  /* ============ DONE BUTTONS + RESET ============ */
+  /* ============ ACTION CHECKBOXES + GATED COMPLETION + RESET ============ */
+  host.querySelectorAll('.action-card input').forEach(function(cb){
+    var mid=cb.closest('.module').id;
+    cb.addEventListener('change',function(){
+      actionState[mid]=actionState[mid]||{};
+      actionState[mid][cb.dataset.action]=cb.checked;
+      saveActions();updateModuleValidation(mid);
+    });
+  });
   host.querySelectorAll(".mm-done-btn").forEach(function(b){ b.addEventListener("click",function(){markDone(b.dataset.id);}); });
   document.getElementById("mmReset").addEventListener("click",function(){
-    if(confirm("Reset your progress on this page?")){ done=[]; saveDone(done); updateProgress(); }
+    if(confirm("Reset your progress, practice checks and action confirmations on this page?")){
+      done=[];actionState={};practiceState={};saveDone(done);saveActions();savePractice();
+      host.querySelectorAll('[data-step-id]').forEach(function(x){x.classList.remove('is-complete');});
+      host.querySelectorAll('.validation-feedback').forEach(function(x){x.classList.remove('show');x.textContent='';});
+      location.reload();
+    }
   });
 
   /* ============ LIVE DOC WORKER ============ */
@@ -979,7 +1066,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
       ids.sort(function(a,b){ return M.modules.findIndex(function(m){return m.id===a;}) - M.modules.findIndex(function(m){return m.id===b;}); });
       res.innerHTML = '<h4>Start with these modules:</h4><div class="diag-chips">'+
         ids.map(function(mid){ var m=M.modules.filter(function(x){return x.id===mid;})[0]; if(!m) return "";
-          return '<button class="diag-chip" data-goto="'+mid+'">'+String(M.modules.findIndex(function(x){return x.id===m.id;})+1).padStart(2,"0")+' \u00b7 '+esc(m.title)+'</button>'; }).join("")+'</div>';
+          return '<button class="diag-chip" data-goto="'+mid+'">'+moduleNo(m)+' \u00b7 '+esc(m.title)+'</button>'; }).join("")+'</div>';
       res.querySelectorAll(".diag-chip").forEach(function(b){
         b.addEventListener("click",function(){ var el=document.getElementById(b.dataset.goto); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth"}); });
       });
@@ -1040,7 +1127,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     mount.innerHTML = '<div class="tool sim"><div class="tool-h">\ud83c\udf9b\ufe0f '+esc(t.title)+'</div><p class="ex-intro">'+esc(t.intro)+'</p>'+
       '<div class="sim-setup"><label class="tool-field inline"><span>Country</span><select id="simCountry">'+
         COUNTRIES.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>';}).join("")+'</select></label>'+
-      '<label class="tool-field inline"><span>Prep time</span><select id="simPrep"><option value="10">10 min</option><option value="20" selected>20 min</option><option value="30">30 min</option></select></label>'+
+      '<label class="tool-field inline"><span>Preparation time for this practice</span><select id="simPrep"><option value="10">10 min</option><option value="20" selected>20 min</option><option value="30">30 min</option></select></label>'+
       '<button class="cta-link" id="simStart">Draw a document &amp; start</button></div>'+
       '<div class="sim-run" id="simRun" style="display:none"></div></div>';
 
