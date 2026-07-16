@@ -751,7 +751,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   function renderRail(){
     var rail = document.getElementById("mmRail");
     rail.innerHTML = M.modules.map(function(m,i){
-      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">+String(i+1).padStart(2,"0")+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
+      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+String(i+1).padStart(2,"0")+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
     }).join("");
     rail.querySelectorAll(".mm-chip").forEach(function(c){
       c.addEventListener("click",function(){
