@@ -750,8 +750,8 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
   /* ============ RAIL ============ */
   function renderRail(){
     var rail = document.getElementById("mmRail");
-    rail.innerHTML = M.modules.map(function(m){
-      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">'+m.n+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
+    rail.innerHTML = M.modules.map(function(m,i){
+      return '<button class="mm-chip" data-id="'+m.id+'"><span class="num">+String(i+1).padStart(2,"0")+'</span> '+esc(m.title)+' <span class="tick">\u2713</span></button>';
     }).join("");
     rail.querySelectorAll(".mm-chip").forEach(function(c){
       c.addEventListener("click",function(){
@@ -841,9 +841,9 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 
   /* ============ RENDER MODULES ============ */
   var host = document.getElementById("mmModules");
-  host.innerHTML = M.modules.map(function(m){
+  host.innerHTML = M.modules.map(function(m,i){
     return '<section class="module" id="'+m.id+'">'+
-      '<div class="module-h"><span class="mnum">'+m.n+'</span><div><h2>'+esc(m.title)+'</h2>'+
+      '<div class="module-h"><span class="mnum">'+String(i+1).padStart(2,"0")+'</span><div><h2>'+esc(m.title)+'</h2>'+
         '<div class="mskill">'+esc(m.skill||"")+(m.time?' \u00b7 '+esc(m.time):"")+'</div>'+
         '<div class="mlead">'+esc(m.lead)+'</div></div></div>'+
       lessonHTML(m)+filrougeHTML(m)+dodontHTML(m)+practiceHTML(m)+
@@ -978,7 +978,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
       ids.sort(function(a,b){ return M.modules.findIndex(function(m){return m.id===a;}) - M.modules.findIndex(function(m){return m.id===b;}); });
       res.innerHTML = '<h4>Start with these modules:</h4><div class="diag-chips">'+
         ids.map(function(mid){ var m=M.modules.filter(function(x){return x.id===mid;})[0]; if(!m) return "";
-          return '<button class="diag-chip" data-goto="'+mid+'">'+m.n+' \u00b7 '+esc(m.title)+'</button>'; }).join("")+'</div>';
+          return '<button class="diag-chip" data-goto="'+mid+'">'+String(M.modules.findIndex(function(x){return x.id===m.id;})+1).padStart(2,"0")+' \u00b7 '+esc(m.title)+'</button>'; }).join("")+'</div>';
       res.querySelectorAll(".diag-chip").forEach(function(b){
         b.addEventListener("click",function(){ var el=document.getElementById(b.dataset.goto); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth"}); });
       });
