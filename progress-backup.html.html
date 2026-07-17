@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#243B53">
+  <title>Progress backup — English Colles in Lyon</title>
+  <style>
+    :root {
+      --navy: #243B53;
+      --navy-2: #2F5573;
+      --accent: #C46A4A;
+      --accent-soft: #FFF1E8;
+      --sage: #7A9B76;
+      --bg: #FFF7ED;
+      --card: #ffffff;
+      --ink: #263633;
+      --muted: #5D6B66;
+      --line: #E6D8C8;
+      --danger: #9b3a2d;
+      --danger-bg: #fff0ec;
+      --success-bg: #edf6eb;
+      --shadow: 0 16px 40px rgba(36,59,83,.10);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent) 55%, white);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute; left: -9999px; top: 8px;
+      background: #fff; color: var(--navy); padding: 10px 14px;
+      border-radius: 10px; z-index: 99;
+    }
+    .skip:focus { left: 8px; }
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 18px 22px;
+    }
+    .head {
+      max-width: 980px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 18px; flex-wrap: wrap;
+    }
+    .brand { min-width: 220px; }
+    .brand strong {
+      display: block; font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 3vw, 1.8rem); line-height: 1.1;
+    }
+    .brand span { color: #f6d8bc; font-size: .9rem; }
+    .home {
+      color: #fff; text-decoration: none; font-weight: 700;
+      border: 1px solid rgba(255,255,255,.45); padding: 9px 14px;
+      border-radius: 999px;
+    }
+    .home:hover { background: rgba(255,255,255,.12); }
+    main { max-width: 980px; margin: 0 auto; padding: 50px 20px 70px; }
+    .hero { margin-bottom: 26px; }
+    .eyebrow {
+      color: var(--accent); text-transform: uppercase; letter-spacing: .13em;
+      font-weight: 800; font-size: .78rem;
+    }
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy); line-height: 1.15;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.35rem); margin: 8px 0 12px; }
+    h2 { margin: 0 0 8px; font-size: 1.5rem; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 760px; }
+    .privacy {
+      margin-top: 20px; padding: 15px 17px;
+      background: var(--accent-soft); border-left: 5px solid var(--accent);
+      border-radius: 13px; color: var(--ink);
+    }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 20px; margin-top: 26px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 25px;
+    }
+    .icon {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      border-radius: 14px; background: var(--accent-soft);
+      color: var(--accent); font-size: 1.45rem; margin-bottom: 14px;
+    }
+    .card p { color: var(--muted); }
+    .status {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin: 17px 0 4px; padding: 12px 14px; border-radius: 12px;
+      background: #f7f5f1; border: 1px solid var(--line);
+      color: var(--muted); font-size: .92rem;
+    }
+    .status strong { color: var(--navy); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 9px; width: 100%; min-height: 52px; margin-top: 16px;
+      padding: 12px 18px; border: 0; border-radius: 13px;
+      background: var(--accent); color: #fff; font-weight: 800;
+      transition: transform .15s, filter .15s;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(.96); }
+    .btn.secondary { background: var(--navy); }
+    .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+    .file-label {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 52px; margin-top: 16px; padding: 12px 18px;
+      border: 2px dashed var(--accent); border-radius: 13px;
+      color: var(--navy); font-weight: 800; background: var(--accent-soft);
+      cursor: pointer; text-align: center;
+    }
+    .file-label:hover { filter: brightness(.98); }
+    input[type=file] { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+    .preview {
+      display: none; margin-top: 14px; padding: 14px;
+      border-radius: 12px; background: #f7f5f1; border: 1px solid var(--line);
+      font-size: .92rem;
+    }
+    .preview.show { display: block; }
+    .message {
+      display: none; margin-top: 18px; padding: 15px 17px;
+      border-radius: 13px; font-weight: 700;
+    }
+    .message.show { display: block; }
+    .message.ok { background: var(--success-bg); border: 1px solid var(--sage); color: #31542f; }
+    .message.error { background: var(--danger-bg); border: 1px solid #d68a78; color: var(--danger); }
+    .details {
+      margin-top: 24px; background: #fff; border: 1px solid var(--line);
+      border-radius: 16px; padding: 18px 20px;
+    }
+    .details summary { cursor: pointer; font-weight: 800; color: var(--navy); }
+    .details ul { margin-bottom: 0; color: var(--muted); }
+    .warning {
+      margin-top: 20px; padding: 16px 18px; border-radius: 14px;
+      background: #fff7df; border: 1px solid #e6c86e; color: #624c14;
+    }
+    footer {
+      border-top: 1px solid var(--line); color: var(--muted);
+      text-align: center; padding: 24px 20px 35px; font-size: .88rem;
+    }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding-top: 34px; }
+      .card { padding: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="head">
+    <div class="brand">
+      <strong>English Colles in Lyon</strong>
+      <span>by Eglantine Lecomte · CPGE English · Independent practice</span>
+    </div>
+    <a class="home" href="index.html">← Back to the site</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="eyebrow">Progress · Export and import</div>
+    <h1>Keep your progress when you change device.</h1>
+    <p class="lead">Download a private backup file on your current device, then import it on another computer, tablet or phone.</p>
+    <div class="privacy"><strong>Your data stays private.</strong> Nothing is uploaded to a server. The page only creates or reads a JSON file on your device.</div>
+    <div class="warning"><strong>Important technical point.</strong> All sites hosted under lecomteeglantine.github.io share the same browser storage. To avoid losing any progress, this backup includes every local progress entry stored for that domain, including English Colles in Lyon and Homemade TOEIC Trainer.</div>
+  </section>
+
+  <section class="grid" aria-label="Progress backup actions">
+    <article class="card">
+      <div class="icon" aria-hidden="true">⇩</div>
+      <h2>1. Export my progress</h2>
+      <p>Use this on the device that currently contains your progress. A JSON backup file will be downloaded.</p>
+      <div class="status" id="exportStatus" aria-live="polite"></div>
+      <button class="btn" id="exportBtn" type="button">⇩ Download my backup</button>
+    </article>
+
+    <article class="card">
+      <div class="icon" aria-hidden="true">⇧</div>
+      <h2>2. Import my progress</h2>
+      <p>Use this on the new device. Choose the JSON file downloaded from the old device, then confirm the import.</p>
+      <label class="file-label" for="importFile">📁 Choose my backup file</label>
+      <input id="importFile" type="file" accept=".json,application/json">
+      <div class="preview" id="preview" aria-live="polite"></div>
+      <button class="btn secondary" id="importBtn" type="button" disabled>⇧ Import this backup</button>
+    </article>
+  </section>
+
+  <div class="message" id="message" role="status" aria-live="polite"></div>
+
+  <details class="details">
+    <summary>How to transfer your progress</summary>
+    <ul>
+      <li>On the old device, open this page and download the backup.</li>
+      <li>Send the JSON file to yourself or save it on a USB drive or cloud storage.</li>
+      <li>On the new device, open this same page and select the backup file.</li>
+      <li>After the import, return to the site and refresh the page.</li>
+    </ul>
+  </details>
+</main>
+
+<footer>Designed and created by Eglantine Lecomte · Progress is stored locally in your browser.</footer>
+
+<script>
+(() => {
+  "use strict";
+
+  const FORMAT = "eglantine-local-progress-backup";
+  const VERSION = 1;
+  const MAX_FILE_SIZE = 8 * 1024 * 1024;
+  const exportStatus = document.getElementById("exportStatus");
+  const exportBtn = document.getElementById("exportBtn");
+  const importFile = document.getElementById("importFile");
+  const importBtn = document.getElementById("importBtn");
+  const preview = document.getElementById("preview");
+  const message = document.getElementById("message");
+  let pendingBackup = null;
+
+  const t = {"item": "saved entry found in this browser.", "items": "saved entries found in this browser.", "export_ok": "Backup downloaded successfully: {count} saved entries.", "export_error": "The backup could not be created. Please try again.", "too_large": "This file is too large to be a valid progress backup.", "valid_file": "Valid backup file", "backup_date": "Backup date", "backup_items": "{count} saved entries will be imported.", "wrong_origin": "This backup was created for a different website.", "invalid_file": "This is not a valid progress backup file.", "import_ok": "Import completed: {count} saved entries restored. Return to the site and refresh the page.", "import_partial": "Partial import: {count} entries restored; {failed} could not be imported."};
+
+  function showMessage(text, type) {
+    message.textContent = text;
+    message.className = "message show " + type;
+    message.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function storageSnapshot() {
+    const data = {};
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (key !== null) data[key] = localStorage.getItem(key);
+    }
+    return data;
+  }
+
+  function formatDate(iso) {
+    try {
+      return new Intl.DateTimeFormat(document.documentElement.lang || undefined, {
+        dateStyle: "medium", timeStyle: "short"
+      }).format(new Date(iso));
+    } catch (_) {
+      return iso;
+    }
+  }
+
+  function updateStatus() {
+    const count = localStorage.length;
+    exportStatus.innerHTML = "<strong>" + count + "</strong> " + (count === 1 ? t.item : t.items);
+    exportBtn.disabled = count === 0;
+  }
+
+  function safeFilename() {
+    const stamp = new Date().toISOString().slice(0, 10);
+    return "eglantine-progress-backup-" + stamp + ".json";
+  }
+
+  exportBtn.addEventListener("click", () => {
+    try {
+      const backup = {
+        format: FORMAT,
+        version: VERSION,
+        origin: location.origin,
+        exportedAt: new Date().toISOString(),
+        sourcePath: location.pathname,
+        storageType: "localStorage",
+        data: storageSnapshot()
+      };
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = safeFilename();
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      showMessage(t.export_ok.replace("{count}", Object.keys(backup.data).length), "ok");
+    } catch (error) {
+      console.error(error);
+      showMessage(t.export_error, "error");
+    }
+  });
+
+  importFile.addEventListener("change", async () => {
+    pendingBackup = null;
+    importBtn.disabled = true;
+    preview.className = "preview";
+
+    const file = importFile.files && importFile.files[0];
+    if (!file) return;
+    if (file.size > MAX_FILE_SIZE) {
+      showMessage(t.too_large, "error");
+      importFile.value = "";
+      return;
+    }
+
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text);
+      if (!parsed || parsed.format !== FORMAT || parsed.version !== VERSION || typeof parsed.data !== "object" || Array.isArray(parsed.data)) {
+        throw new Error("Invalid backup format");
+      }
+      if (parsed.origin && parsed.origin !== location.origin) {
+        throw new Error("Origin mismatch");
+      }
+      for (const [key, value] of Object.entries(parsed.data)) {
+        if (typeof key !== "string" || (value !== null && typeof value !== "string")) {
+          throw new Error("Invalid entry");
+        }
+      }
+
+      pendingBackup = parsed;
+      const count = Object.keys(parsed.data).length;
+      preview.innerHTML =
+        "<strong>" + t.valid_file + "</strong><br>" +
+        t.backup_date + ": " + formatDate(parsed.exportedAt) + "<br>" +
+        t.backup_items.replace("{count}", count);
+      preview.className = "preview show";
+      importBtn.disabled = false;
+      message.className = "message";
+    } catch (error) {
+      console.error(error);
+      showMessage(error.message === "Origin mismatch" ? t.wrong_origin : t.invalid_file, "error");
+      importFile.value = "";
+    }
+  });
+
+  importBtn.addEventListener("click", () => {
+    if (!pendingBackup) return;
+    let imported = 0;
+    const failed = [];
+
+    for (const [key, value] of Object.entries(pendingBackup.data)) {
+      try {
+        if (value === null) localStorage.removeItem(key);
+        else localStorage.setItem(key, value);
+        imported += 1;
+      } catch (error) {
+        console.error("Import failed for", key, error);
+        failed.push(key);
+      }
+    }
+
+    updateStatus();
+    if (failed.length) {
+      showMessage(t.import_partial.replace("{count}", imported).replace("{failed}", failed.length), "error");
+    } else {
+      showMessage(t.import_ok.replace("{count}", imported), "ok");
+    }
+  });
+
+  window.addEventListener("storage", updateStatus);
+  updateStatus();
+})();
+</script>
+</body>
+</html>
