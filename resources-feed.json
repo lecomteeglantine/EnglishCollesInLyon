@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T18:10:19.241Z",
+  "generatedAt": "2026-07-19T07:37:03.886Z",
   "status": "ok",
   "items": [
     {
@@ -36,8 +36,8 @@
     {
       "title": "Untitled publication",
       "source": "NPR News Now",
-      "url": "1e64460f-da39-4e85-a5d4-ae752689ca4c",
-      "date": "2026-07-18T17:10:50.000Z",
+      "url": "c03e0a53-3d8d-4a77-bd1d-c940ab5c96c9",
+      "date": "2026-07-19T07:10:58.000Z",
       "country": "United States",
       "format": "Podcast",
       "topic": "Politics",
@@ -46,79 +46,79 @@
     {
       "title": "Untitled publication",
       "source": "NPR News Now",
-      "url": "a2e43bf2-35d7-4aa0-8f79-967b2bb9b63d",
-      "date": "2026-07-18T16:10:41.000Z",
+      "url": "75af58c1-0c6c-45de-9b31-4e2e5f9781df",
+      "date": "2026-07-19T06:10:45.000Z",
       "country": "United States",
       "format": "Podcast",
       "topic": "Politics",
       "kind": "Podcast"
     },
     {
-      "title": "US strikes hit Iran for seventh consecutive night",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T17:44:56.000Z",
-      "country": "International",
-      "format": "News",
-      "topic": "International relations",
-      "kind": "News"
-    },
-    {
-      "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T17:29:50.000Z",
-      "country": "International",
-      "format": "News",
-      "topic": "International relations",
-      "kind": "News"
-    },
-    {
-      "title": "Toronto, New York and Washington top list of most polluted cities as wildfires burn",
-      "source": "BBC Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/c5ywdl9ne3yo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T17:18:47.000Z",
-      "country": "International",
-      "format": "News",
-      "topic": "Science & technology",
-      "kind": "News"
-    },
-    {
-      "title": "Woman killed while asleep with baby ‘was my world’, sister says",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/cd0xzy2r1m7o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T16:41:55.000Z",
-      "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "B.C. wildfire tally surges past 100 as barrage of lightning strikes transforms fire season in a flash",
-      "source": "CBC News",
-      "url": "https://www.cbc.ca/news/canada/british-columbia/bc-wildfires-lightning-9.7275420?cmp=rss",
-      "date": "2026-07-18T16:28:25.000Z",
-      "country": "Canada",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Burnham to announce plans for new North Sea oil and gas drilling",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/c935yx2z9d4o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T15:46:35.000Z",
-      "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Reporter's Notebook: Finding World Cup joy in speaking to women who love soccer",
+      "title": "Cuban artist and dissident exiled from country after 5 years in prison arrives in US",
       "source": "NPR News",
-      "url": "https://www.npr.org/2026/07/18/nx-s1-5897607/2026-world-cup-fifa-argentina-spain-women-fans",
-      "date": "2026-07-18T15:30:00.000Z",
+      "url": "https://www.npr.org/2026/07/19/nx-s1-5899494/cuban-artist-exile-us",
+      "date": "2026-07-19T07:27:59.000Z",
       "country": "United States",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Brondello suspended by WNBA for inappropriate comment",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-19/wnba-suspends-sandy-brondello-for-angel-reese-comment/106933368",
+      "date": "2026-07-19T07:07:43.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "MLS works to bring in a new generation of fans as the World Cup comes to an end",
+      "source": "NPR News",
+      "url": "https://www.npr.org/2026/07/19/nx-s1-5899020/2026-world-cup-fifa-mls-major-league-soccer",
+      "date": "2026-07-19T07:00:00.000Z",
+      "country": "United States",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Russian missiles strike Kyiv killing one, wounding 13",
+      "source": "RTÉ News",
+      "url": "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia/",
+      "date": "2026-07-19T06:14:45.000Z",
+      "country": "Ireland",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Hundreds gather in Alice Springs ahead of Pine Gap protest",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-19/activists-traditional-owners-gather-for-pine-gap-protest/106931634",
+      "date": "2026-07-19T06:01:24.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Expert says new cyber law shows Vic government is out of touch with reality",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-19/victoria-social-media-big-tech-laws/106932668",
+      "date": "2026-07-19T05:43:14.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "'Why do you care how I choose to dress?': Boxer on critics of her hijab",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-19/tina-rahimi-pro-boxing-debut-two-years-after-olympics/106905562",
+      "date": "2026-07-19T05:42:42.000Z",
+      "country": "Australia",
       "format": "News",
       "topic": "Politics",
       "kind": "News"
@@ -126,61 +126,61 @@
     {
       "title": "Untitled publication",
       "source": "NPR News Now",
-      "url": "81f8ddb9-88aa-42d6-8fa7-e47df049c9b1",
-      "date": "2026-07-18T15:11:14.000Z",
+      "url": "336da641-6ab1-4687-a801-6731b5cc22a7",
+      "date": "2026-07-19T05:11:01.000Z",
       "country": "United States",
       "format": "Podcast",
       "topic": "Politics",
       "kind": "Podcast"
     },
     {
-      "title": "Burnham is 'people pleaser' with 'airy fairy' plans, says Kemi Badenoch",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/c304l24m0leo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T15:01:33.000Z",
-      "country": "United Kingdom",
+      "title": "US and Iran exchange strikes after two US soldiers killed in Jordan",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-19T05:10:57.000Z",
+      "country": "International",
+      "format": "News",
+      "topic": "International relations",
+      "kind": "News"
+    },
+    {
+      "title": "Taranaki's St Andrew's Church scheduled for $4.2m restoration",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/regions_taranaki/741806/taranaki-s-st-andrew-s-church-scheduled-for-4-point-2m-restoration",
+      "date": "2026-07-19T05:03:03.000Z",
+      "country": "New Zealand",
       "format": "News",
       "topic": "Society",
       "kind": "News"
     },
     {
-      "title": "Ruthless plotter? Flip-flopper? Dad dancer? Insiders reveal the real Andy Burnham",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/c3043vl2l7zo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-18T14:32:48.000Z",
-      "country": "United Kingdom",
+      "title": "Iranian drone attack kills two US soldiers",
+      "source": "BBC Global News Podcast",
+      "url": "http://www.bbc.co.uk/programmes/p0nzmr17",
+      "date": "2026-07-19T04:12:00.000Z",
+      "country": "International",
+      "format": "Podcast",
+      "topic": "International relations",
+      "kind": "Podcast"
+    },
+    {
+      "title": "Argentina, Spain and their stars Lionel Messi and Lamine Yamal meet in World Cup final",
+      "source": "NPR News",
+      "url": "https://www.npr.org/2026/07/19/nx-s1-5899071/2026-world-cup-fifa-argentina-spain-final-championship",
+      "date": "2026-07-19T04:00:00.000Z",
+      "country": "United States",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Firearms Safety Authority rebukes lobby group over claims of police bullying, standover tactics",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/political/742195/firearms-safety-authority-rebukes-lobby-group-over-claims-of-police-bullying-standover-tactics",
+      "date": "2026-07-19T03:36:45.000Z",
+      "country": "New Zealand",
       "format": "News",
       "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Massive fire becomes Norway's largest in modern times",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-19/norway-massive-fire-largest-in-modern-times/106931942",
-      "date": "2026-07-18T14:28:34.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "'Lack of evidence' means Lao officials won't lay charges over teens' deaths",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-19/laos-officials-blame-no-autopsies-poisoning-deaths-australians/106931892",
-      "date": "2026-07-18T14:04:18.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Indian activist on hunger strike forcibly removed by police",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-18/indian-activist-sonam-wangchuk-hospitalised-by-police/106931802",
-      "date": "2026-07-18T13:28:16.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
       "kind": "News"
     }
   ],
