@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-07-13T22:13:31.894Z",
+  "checkedAt": "2026-07-20T09:43:50.453Z",
   "total": 144,
   "ok": 115,
   "warnings": 23,
@@ -30,6 +30,15 @@
       "warning": true
     },
     {
+      "id": "cbc-current",
+      "title": "CBC The Current",
+      "url": "https://www.cbc.ca/listen/live-radio/1-63-the-current",
+      "status": 0,
+      "ok": false,
+      "warning": true,
+      "error": "This operation was aborted"
+    },
+    {
       "id": "rte-explainer",
       "title": "RTÉ The Explainer",
       "url": "https://www.rte.ie/news/the-explainer/",
@@ -52,14 +61,6 @@
       "status": 404,
       "ok": false,
       "warning": false
-    },
-    {
-      "id": "nasa-video",
-      "title": "NASA Video",
-      "url": "https://www.nasa.gov/nasatv/",
-      "status": 429,
-      "ok": false,
-      "warning": true
     },
     {
       "id": "uk-parliament-data",
