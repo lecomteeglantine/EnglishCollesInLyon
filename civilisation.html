@@ -610,7 +610,7 @@ function filterCountries(){
     const cardText = normaliseSearch(card.textContent);
     const isMatch = !q || cardText.includes(q);
 
-    card.hidden = !isMatch;
+   card.style.display = isMatch ? '' : 'none';
 
     card.querySelectorAll('details').forEach(detail => {
       const detailMatches =
