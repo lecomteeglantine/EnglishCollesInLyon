@@ -632,6 +632,408 @@ let timerInt=null,secs=60,currentCompare=null;function makeCompare(theme){const 
 let qIndex=0;function newQuestion(){qIndex=Math.floor(Math.random()*QUESTION_SETS.length);const q=QUESTION_SETS[qIndex];$('#questionContext').innerHTML=`<b>Document:</b> ${q.context}`;$('#questionAnswers').innerHTML=q.options.map((x,i)=>`<button class="answer-btn" data-i="${i}">${x}</button>`).join('');$('#questionFeedback').textContent='';$('#questionFeedback').className='feedback';$$('#questionAnswers .answer-btn').forEach(b=>b.onclick=()=>{const ok=Number(b.dataset.i)===q.correct;$('#questionFeedback').textContent=(ok?'Exactly. ':'Not quite. ')+q.why;$('#questionFeedback').className='feedback '+(ok?'good':'bad')})}$('#newQuestion').onclick=newQuestion;newQuestion();
 const modal=$('#challengeModal');function openChallenge(code){const x=code?c(code):COUNTRIES[Math.floor(Math.random()*COUNTRIES.length)];$('#modalTitle').textContent=x.en;$('#modalSub').textContent=x.focus;$('#modalChallenge').textContent=x.question;$('#modalLink').href=x.href;modal.classList.add('open');$('.modal-close').focus()}$$('.test-country').forEach(b=>b.onclick=()=>openChallenge(b.dataset.code));$('.modal-close').onclick=()=>modal.classList.remove('open');$('#anotherChallenge').onclick=()=>openChallenge();modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
 </script>
+<script>
+(() => {
+  const oldInput = document.getElementById('countrySearch');
+  if (!oldInput) return;
 
+  /*
+   * Replace the input itself:
+   * this removes every old, broken search listener.
+   */
+  const input = oldInput.cloneNode(true);
+  input.value = oldInput.value;
+  oldInput.replaceWith(input);
+
+  const controls = input.closest('.controls') || input.parentElement;
+  controls.style.position = 'relative';
+  controls.style.display = 'block';
+  input.style.width = '100%';
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #civilisationSearchResults {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      z-index: 100;
+      max-height: 430px;
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid rgba(36,59,85,.18);
+      border-radius: 16px;
+      box-shadow: 0 18px 45px rgba(36,59,85,.18);
+      padding: 8px;
+    }
+
+    #civilisationSearchResults[hidden] {
+      display: none !important;
+    }
+
+    .civilisation-search-result {
+      display: block;
+      width: 100%;
+      padding: 12px 14px;
+      border: 0;
+      border-bottom: 1px solid rgba(36,59,85,.10);
+      background: transparent;
+      color: #243b55;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      border-radius: 10px;
+    }
+
+    .civilisation-search-result:hover,
+    .civilisation-search-result:focus {
+      background: #fff5ed;
+      outline: none;
+    }
+
+    .civilisation-search-result strong {
+      display: block;
+      font-size: .98rem;
+    }
+
+    .civilisation-search-result span {
+      display: block;
+      margin-top: 3px;
+      color: #65716f;
+      font-size: .78rem;
+    }
+
+    .civilisation-search-status {
+      padding: 11px 14px;
+      color: #65716f;
+      font-size: .82rem;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const resultsBox = document.createElement('div');
+  resultsBox.id = 'civilisationSearchResults';
+  resultsBox.hidden = true;
+  controls.appendChild(resultsBox);
+
+  const normalise = value =>
+    (value || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[’‘]/g, "'")
+      .replace(/[–—-]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const countryCards = Array.from(
+    document.querySelectorAll('.country-card')
+  );
+
+  const searchIndex = [];
+
+  function addEntry(entry) {
+    const combinedText = [
+      entry.title,
+      entry.type,
+      entry.text
+    ].filter(Boolean).join(' ');
+
+    searchIndex.push({
+      ...entry,
+      searchText: normalise(combinedText)
+    });
+  }
+
+  /*
+   * Index everything already visible on the Civilisation page:
+   * countries, events, videos, questions and tensions.
+   */
+  countryCards.forEach(card => {
+    const title =
+      card.querySelector('h3')?.textContent.trim() ||
+      'Country overview';
+
+    const atlasLink =
+      card.querySelector('a.btn.primary')?.getAttribute('href') || '';
+
+    addEntry({
+      title,
+      type: 'Country overview',
+      text: card.textContent,
+      card,
+      href: atlasLink,
+      local: true
+    });
+  });
+
+  /*
+   * Index the other main-page Civilisation activities.
+   */
+  document.querySelectorAll('main section[id]').forEach(section => {
+    if (section.id === 'countries') return;
+
+    const heading = section.querySelector('h2, h3');
+    if (!heading) return;
+
+    addEntry({
+      title: heading.textContent.trim(),
+      type: 'Civilisation activity',
+      text: section.textContent,
+      element: section,
+      href: `#${section.id}`,
+      local: true
+    });
+  });
+
+  /*
+   * Fetch and index every linked country atlas.
+   */
+  async function indexAtlas(link) {
+    const href = link.getAttribute('href');
+    const card = link.closest('.country-card');
+
+    if (!href || !card) return;
+
+    const countryName =
+      card.querySelector('h3')?.textContent.trim() || 'Country';
+
+    try {
+      const response = await fetch(href, { cache: 'no-store' });
+      if (!response.ok) return;
+
+      const html = await response.text();
+      const documentCopy =
+        new DOMParser().parseFromString(html, 'text/html');
+
+      documentCopy
+        .querySelectorAll('script, style, nav, header, footer, aside')
+        .forEach(element => element.remove());
+
+      const main =
+        documentCopy.querySelector('main') ||
+        documentCopy.body;
+
+      const headings = Array.from(
+        main.querySelectorAll('h2, h3, h4')
+      );
+
+      if (!headings.length) {
+        addEntry({
+          title: `${countryName} atlas`,
+          type: 'Country atlas',
+          text: main.textContent,
+          href,
+          card
+        });
+        return;
+      }
+
+      headings.forEach(heading => {
+        const title = heading.textContent.trim();
+        if (!title) return;
+
+        const container =
+          heading.closest('section, article') ||
+          heading.parentElement ||
+          main;
+
+        const fragment = heading.id
+          ? `#${encodeURIComponent(heading.id)}`
+          : `#:~:text=${encodeURIComponent(title)}`;
+
+        addEntry({
+          title,
+          type: `${countryName} atlas`,
+          text: `${countryName} ${container.textContent}`,
+          href: `${href}${fragment}`,
+          card
+        });
+      });
+    } catch (error) {
+      console.warn(`Could not index ${href}`, error);
+    }
+  }
+
+  const atlasLinks = Array.from(
+    document.querySelectorAll('.country-card a.btn.primary')
+  );
+
+  let atlasesLoading = true;
+
+  Promise.allSettled(
+    atlasLinks.map(indexAtlas)
+  ).then(() => {
+    atlasesLoading = false;
+    runSearch();
+  });
+
+  function calculateScore(entry, query, words) {
+    const title = normalise(entry.title);
+    let score = 0;
+
+    if (title === query) score += 400;
+    else if (title.startsWith(query)) score += 300;
+    else if (title.includes(query)) score += 220;
+
+    if (entry.searchText.includes(query)) score += 140;
+
+    if (
+      words.length > 1 &&
+      words.every(word => entry.searchText.includes(word))
+    ) {
+      score += 80;
+    }
+
+    return score;
+  }
+
+  function openLocalResult(entry, query) {
+    resultsBox.hidden = true;
+
+    if (entry.card) {
+      countryCards.forEach(card => {
+        card.style.setProperty(
+          'display',
+          card === entry.card ? 'flex' : 'none',
+          'important'
+        );
+      });
+
+      entry.card.querySelectorAll('details').forEach(detail => {
+        const detailText = normalise(detail.textContent);
+        detail.open =
+          detailText.includes(query) ||
+          query.split(' ').every(word => detailText.includes(word));
+      });
+
+      entry.card.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      return;
+    }
+
+    if (entry.element) {
+      entry.element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
+  function displayResults(matches, query) {
+    resultsBox.innerHTML = '';
+    resultsBox.hidden = false;
+
+    if (!matches.length) {
+      const message = document.createElement('div');
+      message.className = 'civilisation-search-status';
+      message.textContent = atlasesLoading
+        ? 'Searching the eight country atlases…'
+        : 'No result found. Try a country, event, institution or key tension.';
+      resultsBox.appendChild(message);
+      return;
+    }
+
+    matches.slice(0, 18).forEach(entry => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'civilisation-search-result';
+
+      const title = document.createElement('strong');
+      title.textContent = entry.title;
+
+      const type = document.createElement('span');
+      type.textContent = entry.type;
+
+      button.append(title, type);
+
+      button.addEventListener('click', () => {
+        if (entry.local) {
+          openLocalResult(entry, query);
+        } else {
+          window.location.href = entry.href;
+        }
+      });
+
+      resultsBox.appendChild(button);
+    });
+
+    if (atlasesLoading) {
+      const status = document.createElement('div');
+      status.className = 'civilisation-search-status';
+      status.textContent =
+        'The detailed country atlases are still being indexed…';
+      resultsBox.appendChild(status);
+    }
+  }
+
+  function runSearch() {
+    const query = normalise(input.value);
+
+    if (!query) {
+      countryCards.forEach(card => {
+        card.style.removeProperty('display');
+      });
+
+      resultsBox.hidden = true;
+      resultsBox.innerHTML = '';
+      return;
+    }
+
+    const words = query.split(' ').filter(Boolean);
+
+    const matches = searchIndex
+      .map(entry => ({
+        ...entry,
+        score: calculateScore(entry, query, words)
+      }))
+      .filter(entry => entry.score > 0)
+      .sort((a, b) => b.score - a.score);
+
+    const matchingCards = new Set(
+      matches
+        .map(entry => entry.card)
+        .filter(Boolean)
+    );
+
+    countryCards.forEach(card => {
+      const shouldShow = matchingCards.has(card);
+
+      card.style.setProperty(
+        'display',
+        shouldShow ? 'flex' : 'none',
+        'important'
+      );
+
+      if (shouldShow) {
+        card.querySelectorAll('details').forEach(detail => {
+          const detailText = normalise(detail.textContent);
+
+          detail.open =
+            detailText.includes(query) ||
+            words.every(word => detailText.includes(word));
+        });
+      }
+    });
+
+    displayResults(matches, query);
+  }
+
+  input.addEventListener('input', runSearch);
+  input.addEventListener('search', runSearch);
+  input.addEventListener('focus', () => {
+    if (input.value.trim()) runSearch();
+  });
+
+  document.addEventListener('click', event => {
+    if (!controls.contains(event.target)) {
+      resultsBox.hidden = true;
+    }
+  });
+})();
+</script>
 <script src="site-core.js?v=20260715-1"></script>
 </body></html>
