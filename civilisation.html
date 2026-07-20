@@ -175,7 +175,9 @@ body.focus .hero-aside,body.focus footer{display:none}
 </div></div></section>
 
 <section class="section" id="countries"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Eight guided atlases</p><h2>Choose a country</h2><p>Each atlas organises background knowledge around key tensions and helps you move from understanding a document to building an analytical response.</p></div></div>
-<div class="controls"><input class="search" id="countrySearch" type="search" placeholder="Search a country or a key tension…" aria-label="Search countries"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="institutions">Institutions</button><button class="filter-btn" data-filter="identity">Identity</button><button class="filter-btn" data-filter="legacy">Colonial legacies</button></div>
+<div class="controls">
+  <input class="search" id="countrySearch" type="search" placeholder="Search a country, event or key tension…" aria-label="Search for a country, event or key tension">
+</div>
 <div class="countries" id="countryGrid" style="align-items:start">
       <article class="country-card" data-country="gb" data-name="united kingdom">
         <div class="country-top">
@@ -593,8 +595,34 @@ $$('#accent button').forEach(b=>b.addEventListener('click',()=>setAccent(b.datas
 function setSize(v){document.documentElement.style.setProperty('--fs',(18+Number(v)*2)+'px');localStorage.setItem('ecl-size',v);$$('#sizeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.size===String(v)))}
 $$('#sizeSeg button').forEach(b=>b.addEventListener('click',()=>setSize(b.dataset.size)));setSize(localStorage.getItem('ecl-size')||'0');
 $$('.opt-toggle').forEach(b=>{const opt=b.dataset.opt,on=localStorage.getItem('ecl-'+opt)==='1';document.body.classList.toggle(opt,on);b.classList.toggle('on',on);$('.state',b).textContent=on?'On':'Off';b.addEventListener('click',()=>{const value=!document.body.classList.contains(opt);document.body.classList.toggle(opt,value);b.classList.toggle('on',value);$('.state',b).textContent=value?'On':'Off';localStorage.setItem('ecl-'+opt,value?'1':'0')})});
-function filterCountries(){const q=$('#countrySearch').value.toLowerCase().trim();const active=$('.filter-btn.active').dataset.filter;$$('.country-card').forEach(card=>{const code=card.dataset.country;const text=card.innerText.toLowerCase();const showText=!q||text.includes(q);const showCat=active==='all'||(category[code]||[]).includes(active);card.hidden=!(showText&&showCat)})}
-$('#countrySearch').addEventListener('input',filterCountries);$$('.filter-btn').forEach(b=>b.addEventListener('click',()=>{$$('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');filterCountries()}));
+function normaliseSearch(value){
+  return (value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}
+
+function filterCountries(){
+  const q = normaliseSearch($('#countrySearch').value);
+
+  $$('.country-card').forEach(card => {
+    const cardText = normaliseSearch(card.textContent);
+    const isMatch = !q || cardText.includes(q);
+
+    card.hidden = !isMatch;
+
+    card.querySelectorAll('details').forEach(detail => {
+      const detailMatches =
+        Boolean(q) &&
+        normaliseSearch(detail.textContent).includes(q);
+
+      detail.open = isMatch && detailMatches;
+    });
+  });
+}
+
+$('#countrySearch').addEventListener('input', filterCountries);
 function c(code){return COUNTRIES.find(x=>x.code===code)};
 function renderTheme(id){const t=THEMES.find(x=>x.id===id)||THEMES[0];$$('.theme-tab').forEach(b=>b.classList.toggle('active',b.dataset.id===t.id));$('#themePanel').innerHTML=`<p class="eyebrow">Theme explorer</p><h3>${t.name}</h3><p class="theme-intro">${t.intro}</p><div class="theme-country-list">${t.countries.map(code=>`<a href="${c(code).href}">${c(code).en}</a>`).join('')}</div><div class="compare-box"><div class="label">Key comparative question</div><p>${t.prompt}</p><div class="compare-actions"><button class="btn primary" type="button" id="themeSprint">Turn it into a 60-second prompt</button><button class="btn ghost" type="button" id="randomTheme">Another theme</button></div></div>`;$('#themeSprint').onclick=()=>{makeCompare(t);go('compare')};$('#randomTheme').onclick=()=>renderTheme(THEMES[Math.floor(Math.random()*THEMES.length)].id)}
 THEMES.forEach((t,i)=>{const b=document.createElement('button');b.className='theme-tab'+(i===0?' active':'');b.dataset.id=t.id;b.textContent=t.name;b.onclick=()=>renderTheme(t.id);$('#themeTabs').appendChild(b)});renderTheme(THEMES[0].id);
