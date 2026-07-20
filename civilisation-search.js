@@ -217,63 +217,6 @@
       href: `${CURRENT_PAGE}#themes`,
       keywords: 'themes comparison democracy identity empire inequality sovereignty'
     },
-    {
-      title: 'Country Detective',
-      type: 'Practice activity',
-      country: 'Civilisation',
-      description: 'Identify a country from three clues.',
-      href: `${CURRENT_PAGE}#games`,
-      keywords: 'game retrieval clues country detective practice'
-    },
-    {
-      title: 'Tension Match',
-      type: 'Practice activity',
-      country: 'Civilisation',
-      description: 'Match a political or social tension with the country that illustrates it.',
-      href: `${CURRENT_PAGE}#games`,
-      keywords: 'tension match game retrieval key question'
-    },
-    {
-      title: '60-second Comparison',
-      type: 'Speaking activity',
-      country: 'Civilisation',
-      description: 'Compare two countries aloud through a shared theme.',
-      href: `${CURRENT_PAGE}#games`,
-      keywords: 'speaking oral comparison sixty second countries'
-    },
-    {
-      title: 'Key Question Builder',
-      type: 'Method activity',
-      country: 'Civilisation',
-      description: 'Choose the key question that reveals a genuine tension.',
-      href: `${CURRENT_PAGE}#games`,
-      keywords: 'key question problematic problematique tension method'
-    }
-  ];
-
-  const VIDEO_RESULTS = [
-    ['An introduction to Parliament', 'United Kingdom', 'gb', 'UK Parliament government House of Commons House of Lords monarchy'],
-    ['Separation of powers and checks and balances', 'United States', 'us', 'Constitution branches executive legislative judicial federal government'],
-    ['The Good Friday Agreement explained', 'Ireland', 'ie', 'Troubles Northern Ireland peace border Belfast Agreement'],
-    ['Residential schools and intergenerational trauma', 'Canada', 'ca', 'Indigenous reconciliation residential school children families communities'],
-    ['The Uluru Statement from the Heart explained', 'Australia', 'au', 'Aboriginal Torres Strait Islander Voice Treaty Truth recognition'],
-    ['Te Tiriti o Waitangi explained', 'New Zealand', 'nz', 'Treaty Waitangi Maori Māori Crown sovereignty rights'],
-    ['The Partition of India explained', 'India', 'in', '1947 British India Pakistan partition migration religious tensions'],
-    ['Apartheid explained', 'South Africa', 'za', 'racial segregation Mandela inequality reconciliation']
-  ];
-
-  const ATLAS_TOPIC_VIDEOS = [
-  {
-    "country": "United Kingdom",
-    "code": "gb",
-    "file": "colle-atlas-gb.html",
-    "key": "t1",
-    "topic": "The monarchy",
-    "title": "The monarchy in Britain: what is its role?",
-    "source": "Shout Out UK",
-    "id": "oDPtCfWwhI4",
-    "url": "https://www.youtube.com/watch?v=oDPtCfWwhI4"
-  },
   {
     "country": "United Kingdom",
     "code": "gb",
