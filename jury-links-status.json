@@ -1,10 +1,10 @@
 {
   "summary": {
-    "checkedAt": "2026-07-14T11:06:46.802Z",
+    "checkedAt": "2026-07-20T08:27:07.001Z",
     "total": 688,
-    "working": 608,
+    "working": 672,
     "warnings": 0,
-    "failed": 80
+    "failed": 16
   },
   "results": [
     {
@@ -159,8 +159,8 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVA6AllArabe.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVA6AllArabe.pdf?download=true"
     },
     {
@@ -177,8 +177,8 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVB6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2026/Ep%20communes/2026_LVB6AU.pdf?download=true"
     },
     {
@@ -321,8 +321,8 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVA_Allemand_Arabe_2025.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVA_Allemand_Arabe_2025.pdf?download=true"
     },
     {
@@ -339,8 +339,8 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVB_Autres_2025.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LVB_Autres_2025.pdf?download=true"
     },
     {
@@ -645,38 +645,38 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/LV_ECRIT_2024_30.09.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/LV_ECRIT_2024_30.09.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AN.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AN.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AA.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AA.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVA6AU.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AE.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AE.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2024/ep%20com/2024_LVB6AU.pdf?download=true"
     },
     {
@@ -1359,32 +1359,32 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AA.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AA.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AE.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AE.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AN.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AN.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVA6AU.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2023/LVB6AU.pdf?download=true"
     },
     {
@@ -2025,38 +2025,38 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LV_ECRIT_2022-V2.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LV_ECRIT_2022-V2.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Anglais.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Anglais.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Allemand-Arabe.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Allemand-Arabe.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Autres.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVA6Autres.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Anglais-Espagnol.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Anglais-Espagnol.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Autres.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2022/Communes/LVB6Autres.pdf?download=true"
     },
     {
@@ -2595,32 +2595,32 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AN.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AN.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AA.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AA.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVA6AU.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AE.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AE.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2021/ep%20communes/LVB6AU.pdf?download=true"
     },
     {
@@ -3183,62 +3183,62 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_anglais_LVA6AN.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_anglais_LVA6AN.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA__allemand_arabe_LVA6AA.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA__allemand_arabe_LVA6AA.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_autres_LVA6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA_autres_LVA6AU.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_espagnol_LVB6AE.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_espagnol_LVB6AE.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_autres_LVB6AU.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB_autres_LVB6AU.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Anglais%202019.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Anglais%202019.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA-%20All-%20Arabe-2019.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA-%20All-%20Arabe-2019.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Autres-2019.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVA%20Autres-2019.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20Ang-Esp%20-2019.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20Ang-Esp%20-2019.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20autres.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2019/LVB%20autres.pdf?download=true"
     },
     {
@@ -3429,14 +3429,14 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_oral_2018.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_oral_2018.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_ecrit_2018.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LV_ecrit_2018.pdf?download=true"
     },
     {
@@ -3447,26 +3447,26 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA_Allemand_Arabe%20sujet.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA_Allemand_Arabe%20sujet.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA-Autre%20sujet.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVA-Autre%20sujet.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Anglais_Espagnol%20sujet.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Anglais_Espagnol%20sujet.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Autre%20sujet.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2018/LVB_Autre%20sujet.pdf?download=true"
     },
     {
@@ -3561,8 +3561,8 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/LV_oral_2017.pdf?download=true",
-      "status": 200,
-      "ok": true,
+      "status": 404,
+      "ok": false,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/LV_oral_2017.pdf?download=true"
     },
     {
@@ -3573,32 +3573,32 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_anglais_lva_2017.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_anglais_lva_2017.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.arabe_lva_2017.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.arabe_lva_2017.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_esp.-ital.-russe_port_lva_2017.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_esp.-ital.-russe_port_lva_2017.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_ang.-esp._lvb_2017.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_ang.-esp._lvb_2017.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.-arabe-it_portug_russe_lvb_2017.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2017/ccp_all.-arabe-it_portug_russe_lvb_2017.pdf?download=true"
     },
     {
@@ -3693,44 +3693,44 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_oral_2016.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_oral_2016.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_ecrit_2016.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/LV_ecrit_2016.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_Anglais_Espagnol.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_Anglais_Espagnol.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-Anglais.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-Anglais.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA_Allemand_Arabe.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA_Allemand_Arabe.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-esp-it-portug-russe.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVA-esp-it-portug-russe.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_all-arabe-it-portug-russe.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2016/CCP_2016_-_LVB_all-arabe-it-portug-russe.pdf?download=true"
     },
     {
@@ -3753,14 +3753,14 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_oral_2014%20rapport.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_oral_2014%20rapport.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ECRIT_2020.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/LV_ECRIT_2020.pdf?download=true"
     },
     {
@@ -3771,14 +3771,14 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LV_ecrit_2015%20rapport.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LV_ecrit_2015%20rapport.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_ecrit_2014%20rapport.pdf?download=true",
-      "status": 200,
-      "ok": true,
+      "status": 404,
+      "ok": false,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV_ecrit_2014%20rapport.pdf?download=true"
     },
     {
@@ -3789,20 +3789,20 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Anglais.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Anglais.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Autre.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2015/LVA-Autre.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV-Anglais.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/Langues/2014/LV-Anglais.pdf?download=true"
     },
     {
@@ -3813,38 +3813,38 @@
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/Rapport_FRPH.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-epreuves-communes-article/Rapport_FRPH.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_INFORMATIQUE.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_INFORMATIQUE.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-pc-article/2021_PC_rapport_modelisation.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-pc-article/2021_PC_rapport_modelisation.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits%20PSI_Informatique.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits%20PSI_Informatique.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits_PSI_SII.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-psi-article/Rapport_ecrits_PSI_SII.pdf?download=true"
     },
     {
       "url": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_SI.pdf?download=true",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "finalUrl": "https://www.concours-commun-inp.fr/_attachment/annales-mp-article/MP_ECRIT_SI.pdf?download=true"
     },
     {
