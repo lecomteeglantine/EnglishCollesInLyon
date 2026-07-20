@@ -262,6 +262,801 @@
     ['Apartheid explained', 'South Africa', 'za', 'racial segregation Mandela inequality reconciliation']
   ];
 
+  const ATLAS_TOPIC_VIDEOS = [
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t1",
+    "topic": "The monarchy",
+    "title": "The monarchy in Britain: what is its role?",
+    "source": "Shout Out UK",
+    "id": "oDPtCfWwhI4",
+    "url": "https://www.youtube.com/watch?v=oDPtCfWwhI4"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t2",
+    "topic": "The Constitution & Parliament",
+    "title": "The UK Constitution explained",
+    "source": "The Constitution Society",
+    "id": "1s0CkvROfcA",
+    "url": "https://www.youtube.com/watch?v=1s0CkvROfcA"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t3",
+    "topic": "Devolution & the Union",
+    "title": "Devolution in the United Kingdom",
+    "source": "Educational explainer",
+    "id": "cECYGPwfXYc",
+    "url": "https://www.youtube.com/watch?v=cECYGPwfXYc"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t4",
+    "topic": "The Empire & its legacy",
+    "title": "The British Empire and its legacy",
+    "source": "BBC Ideas / OpenLearn",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=British+Empire+legacy+explained+BBC+Ideas+OpenLearn"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t5",
+    "topic": "The NHS",
+    "title": "How does the NHS work and how is it changing?",
+    "source": "The King’s Fund",
+    "id": "blapgFKXv0I",
+    "url": "https://www.youtube.com/watch?v=blapgFKXv0I"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t6",
+    "topic": "Social class",
+    "title": "What is social class in Britain?",
+    "source": "BBC",
+    "id": "E9mHzOI9g_0",
+    "url": "https://www.youtube.com/watch?v=E9mHzOI9g_0"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t7",
+    "topic": "Immigration & multiculturalism",
+    "title": "Immigration and multicultural Britain",
+    "source": "BBC Ideas / Migration Observatory",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=immigration+multicultural+Britain+explained+BBC+Ideas+Migration+Observatory"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t8",
+    "topic": "The media (BBC & tabloids)",
+    "title": "The BBC, tabloids and the British media",
+    "source": "BBC / Reuters Institute",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=British+media+BBC+tabloids+explained+Reuters+Institute"
+  },
+  {
+    "country": "United Kingdom",
+    "code": "gb",
+    "file": "colle-atlas-gb.html",
+    "key": "t9",
+    "topic": "Brexit",
+    "title": "Brexit explained",
+    "source": "TDC",
+    "id": "NgVhRVrANhA",
+    "url": "https://www.youtube.com/watch?v=NgVhRVrANhA"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "elections",
+    "topic": "The Electoral College",
+    "title": "The Electoral College explained",
+    "source": "Illustrate to Educate",
+    "id": "j3NX1-lR4M0",
+    "url": "https://www.youtube.com/watch?v=j3NX1-lR4M0"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "race",
+    "topic": "Race & civil rights",
+    "title": "Civil rights and the struggle for racial equality",
+    "source": "Crash Course",
+    "id": "S64zRnnn4Po",
+    "url": "https://www.youtube.com/watch?v=S64zRnnn4Po"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "guns",
+    "topic": "Guns & the 2nd Amendment",
+    "title": "How the NRA changed the Second Amendment",
+    "source": "Adam Ruins Everything",
+    "id": "2Fpk6P4kOqE",
+    "url": "https://www.youtube.com/watch?v=2Fpk6P4kOqE"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "dream",
+    "topic": "The American Dream",
+    "title": "The American Dream and inequality",
+    "source": "Vox / PBS",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=American+Dream+inequality+explained+Vox+PBS"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "constitution",
+    "topic": "The Constitution & the Court",
+    "title": "How US government and the Constitution work",
+    "source": "Crash Course",
+    "id": "lrk4oY7UxpQ",
+    "url": "https://www.youtube.com/watch?v=lrk4oY7UxpQ"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "presidency",
+    "topic": "The presidency",
+    "title": "Presidential power",
+    "source": "Crash Course",
+    "id": "5l02sK5LovI",
+    "url": "https://www.youtube.com/watch?v=5l02sK5LovI"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "religion",
+    "topic": "Religion & the culture wars",
+    "title": "Religion and the American culture wars",
+    "source": "PBS / Pew Research Center",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=religion+culture+wars+United+States+explained+PBS+Pew+Research"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "healthcare",
+    "topic": "Healthcare & inequality",
+    "title": "Why US healthcare is so different",
+    "source": "Vox",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=why+US+healthcare+system+works+this+way+Vox"
+  },
+  {
+    "country": "United States",
+    "code": "us",
+    "file": "colle-atlas-us.html",
+    "key": "world",
+    "topic": "America in the world",
+    "title": "Why US foreign policy matters",
+    "source": "CFR Education",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Why+Does+US+Foreign+Policy+Matter+CFR+Education"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t1",
+    "topic": "Independence & partition",
+    "title": "Ireland 1912–1916: from Home Rule to the Easter Rising",
+    "source": "Century Ireland / RTÉ",
+    "id": "722S-m6T7Hw",
+    "url": "https://www.youtube.com/watch?v=722S-m6T7Hw"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t2",
+    "topic": "The Great Famine & the diaspora",
+    "title": "Ireland’s Great Hunger and the Irish diaspora",
+    "source": "Quinnipiac University",
+    "id": "jMNqaNERDr4",
+    "url": "https://www.youtube.com/watch?v=jMNqaNERDr4"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t3",
+    "topic": "The Irish language & identity",
+    "title": "The revival of the Irish language",
+    "source": "Irish-language documentary",
+    "id": "m7MU64QuZtU",
+    "url": "https://www.youtube.com/watch?v=m7MU64QuZtU"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t4",
+    "topic": "The Catholic Church & social change",
+    "title": "Ireland’s social revolution",
+    "source": "Democracy Now!",
+    "id": "s0rV94woy-8",
+    "url": "https://www.youtube.com/watch?v=s0rV94woy-8"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t5",
+    "topic": "Northern Ireland & reunification",
+    "title": "The Good Friday Agreement explained",
+    "source": "RTÉ News",
+    "id": "MK40dtxzyvo",
+    "url": "https://www.youtube.com/watch?v=MK40dtxzyvo"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t6",
+    "topic": "Brexit & the border",
+    "title": "Brexit and the Irish border explained",
+    "source": "Channel 4 News",
+    "id": "1cfI5on5n84",
+    "url": "https://www.youtube.com/watch?v=1cfI5on5n84"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t7",
+    "topic": "The Celtic Tiger & the economy",
+    "title": "The Celtic Tiger and the Irish economy",
+    "source": "Economic explainer",
+    "id": "_TX8U1PCqFw",
+    "url": "https://www.youtube.com/watch?v=_TX8U1PCqFw"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t8",
+    "topic": "Neutrality & Ireland in the world",
+    "title": "Is Ireland neutral?",
+    "source": "IIEA",
+    "id": "p1ZJ6UzlJiE",
+    "url": "https://www.youtube.com/watch?v=p1ZJ6UzlJiE"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "file": "colle-atlas-ie.html",
+    "key": "t9",
+    "topic": "Modern Ireland: housing, immigration & inequality",
+    "title": "Dublin’s housing crisis",
+    "source": "DW Documentary",
+    "id": "ZOTgP2D_qmQ",
+    "url": "https://www.youtube.com/watch?v=ZOTgP2D_qmQ"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t1",
+    "topic": "Bilingualism & the two founding peoples",
+    "title": "Bilingualism and Canada’s two official languages",
+    "source": "CBC / Historica Canada",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canada+bilingualism+two+official+languages+explained+CBC+Historica+Canada"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t2",
+    "topic": "Quebec, separatism & national unity",
+    "title": "Quebec separatism and the referendum",
+    "source": "CBC Archives",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Quebec+referendum+separatism+explained+CBC+Archives"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t3",
+    "topic": "Multiculturalism (the mosaic)",
+    "title": "Canadian multiculturalism: the cultural mosaic",
+    "source": "Historica Canada / CBC",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canadian+multiculturalism+cultural+mosaic+explained+Historica+Canada+CBC"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t4",
+    "topic": "Indigenous peoples & reconciliation",
+    "title": "Residential schools in Canada: a timeline",
+    "source": "Historica Canada",
+    "id": "VFgNI1lfe0A",
+    "url": "https://www.youtube.com/watch?v=VFgNI1lfe0A"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t5",
+    "topic": "The relationship with the United States",
+    "title": "Canada and the United States: a unique relationship",
+    "source": "CBC / Council on Foreign Relations",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canada+United+States+relationship+explained+CBC+CFR"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t6",
+    "topic": "The Constitution, the monarchy & federalism",
+    "title": "Canada’s Constitution, monarchy and federalism",
+    "source": "Parliament of Canada",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canadian+Constitution+monarchy+federalism+explained+Parliament+of+Canada"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t7",
+    "topic": "Universal healthcare (Medicare)",
+    "title": "How Canadian Medicare works",
+    "source": "CBC / Health Canada",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canadian+Medicare+universal+healthcare+explained+CBC"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t8",
+    "topic": "Natural resources, oil & climate",
+    "title": "Oil, natural resources and climate policy in Canada",
+    "source": "CBC News",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canada+oil+sands+climate+policy+explained+CBC+News"
+  },
+  {
+    "country": "Canada",
+    "code": "ca",
+    "file": "colle-atlas-ca.html",
+    "key": "t9",
+    "topic": "Immigration & the housing crisis",
+    "title": "Immigration and Canada’s housing crisis",
+    "source": "CBC News",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Canada+immigration+housing+crisis+explained+CBC+News"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t1",
+    "topic": "Indigenous Australians & reconciliation",
+    "title": "The Uluru Statement from the Heart explained",
+    "source": "ABC News Australia",
+    "id": "ZLyDUCtegZE",
+    "url": "https://www.youtube.com/watch?v=ZLyDUCtegZE"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t2",
+    "topic": "Convict origins & national myths",
+    "title": "Australia’s convict origins and national myths",
+    "source": "ABC Education / National Museum of Australia",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+convict+origins+national+myths+ABC+Education"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t3",
+    "topic": "From White Australia to multiculturalism",
+    "title": "From White Australia to multiculturalism",
+    "source": "ABC Education",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=White+Australia+policy+multiculturalism+explained+ABC+Education"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t4",
+    "topic": "Asylum seekers & border policy",
+    "title": "Australia’s asylum-seeker and border policy",
+    "source": "ABC News / Behind the News",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+asylum+seekers+border+policy+explained+ABC+News"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t5",
+    "topic": "The monarchy, the republic & the Dismissal",
+    "title": "The monarchy, the republic and the 1975 Dismissal",
+    "source": "ABC News / Museum of Australian Democracy",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+1975+Dismissal+monarchy+republic+explained+ABC"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t6",
+    "topic": "Climate, bushfires & the Great Barrier Reef",
+    "title": "Bushfires, climate change and the Great Barrier Reef",
+    "source": "ABC News Australia",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+bushfires+climate+change+Great+Barrier+Reef+explained+ABC+News"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t7",
+    "topic": "The resource economy & China",
+    "title": "Australia’s resource economy and China",
+    "source": "ABC News / Lowy Institute",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+resource+economy+China+relationship+explained+Lowy+Institute"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t8",
+    "topic": "Australia, the US and Asia",
+    "title": "Australia between the United States and Asia",
+    "source": "Lowy Institute",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Australia+United+States+Asia+foreign+policy+explained+Lowy+Institute"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "file": "colle-atlas-au.html",
+    "key": "t9",
+    "topic": "“The lucky country“: egalitarianism, mateship & sport",
+    "title": "The “lucky country”: egalitarianism, mateship and sport",
+    "source": "ABC Education",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=lucky+country+egalitarianism+mateship+sport+Australia+explained+ABC"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t1",
+    "topic": "The Treaty of Waitangi & biculturalism",
+    "title": "Te Tiriti o Waitangi explained",
+    "source": "RNZ – Treaty Talks",
+    "id": "5EOKhJUaZDE",
+    "url": "https://www.youtube.com/watch?v=5EOKhJUaZDE"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t2",
+    "topic": "Māori culture, te reo & the renaissance",
+    "title": "Māori culture, te reo and the Māori renaissance",
+    "source": "RNZ / Te Papa",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Maori+culture+te+reo+renaissance+explained+RNZ+Te+Papa"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t3",
+    "topic": "MMP & the unitary state",
+    "title": "How MMP works in New Zealand",
+    "source": "New Zealand Electoral Commission",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=MMP+electoral+system+New+Zealand+explained+Electoral+Commission"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t4",
+    "topic": "Nuclear-free & independent foreign policy",
+    "title": "New Zealand’s nuclear-free foreign policy",
+    "source": "RNZ / New Zealand Parliament",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+nuclear+free+policy+explained+RNZ"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t5",
+    "topic": "A nation of “firsts“",
+    "title": "A nation of political “firsts”",
+    "source": "NZ History / RNZ",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+first+women+vote+social+reform+explained+NZ+History"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t6",
+    "topic": "Immigration, the Pacific & multiculturalism",
+    "title": "Immigration, the Pacific and multicultural New Zealand",
+    "source": "RNZ",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+immigration+Pacific+multiculturalism+explained+RNZ"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t7",
+    "topic": "“Clean green“ vs farming & climate",
+    "title": "“Clean green” New Zealand, farming and climate",
+    "source": "RNZ / Climate Commission",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+clean+green+farming+climate+explained+RNZ"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t8",
+    "topic": "The housing crisis & inequality",
+    "title": "New Zealand’s housing crisis and inequality",
+    "source": "RNZ",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+housing+crisis+inequality+explained+RNZ"
+  },
+  {
+    "country": "New Zealand",
+    "code": "nz",
+    "file": "colle-atlas-nz.html",
+    "key": "t9",
+    "topic": "The monarchy & the republic question",
+    "title": "The monarchy and the republic debate in New Zealand",
+    "source": "RNZ / New Zealand Parliament",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=New+Zealand+monarchy+republic+debate+explained+RNZ"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t1",
+    "topic": "Independence, Gandhi & non-violence",
+    "title": "Gandhi, independence and non-violence",
+    "source": "TED-Ed / BBC",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Gandhi+Indian+independence+nonviolence+explained+TED+Ed+BBC"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t2",
+    "topic": "Partition & the Kashmir question",
+    "title": "Why was India split into two countries?",
+    "source": "TED-Ed",
+    "id": "DrcCTgwbsjc",
+    "url": "https://www.youtube.com/watch?v=DrcCTgwbsjc"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t3",
+    "topic": "Secularism vs Hindu nationalism",
+    "title": "Secularism and Hindu nationalism in India",
+    "source": "BBC News / DW",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+secularism+Hindu+nationalism+explained+BBC+DW"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t4",
+    "topic": "The caste system & affirmative action",
+    "title": "The caste system and affirmative action",
+    "source": "BBC / TED-Ed",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+caste+system+affirmative+action+reservations+explained+BBC+TED+Ed"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t5",
+    "topic": "The world's largest democracy",
+    "title": "How the world’s largest democracy works",
+    "source": "BBC / Election Commission of India",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=world+largest+democracy+India+elections+explained+BBC"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t6",
+    "topic": "“Unity in diversity“: religion & language",
+    "title": "India’s unity in diversity: religions and languages",
+    "source": "BBC / National Geographic",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+unity+in+diversity+religions+languages+explained+BBC"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t7",
+    "topic": "Economic rise, IT & inequality",
+    "title": "India’s economic rise, technology and inequality",
+    "source": "DW Documentary / World Bank",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+economic+rise+IT+inequality+explained+DW+Documentary"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t8",
+    "topic": "Gender & women's rights",
+    "title": "Women’s rights and gender inequality in India",
+    "source": "BBC / UN Women",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+women+rights+gender+inequality+explained+BBC+UN+Women"
+  },
+  {
+    "country": "India",
+    "code": "in",
+    "file": "colle-atlas-in.html",
+    "key": "t9",
+    "topic": "India as a rising global power",
+    "title": "India as a rising global power",
+    "source": "CFR / DW",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=India+rising+global+power+explained+CFR+DW"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t1",
+    "topic": "Apartheid: the system",
+    "title": "Apartheid explained",
+    "source": "AJ+",
+    "id": "S7yvnUz2PLE",
+    "url": "https://www.youtube.com/watch?v=S7yvnUz2PLE"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t2",
+    "topic": "The anti-apartheid struggle & Mandela",
+    "title": "Nelson Mandela and the anti-apartheid struggle",
+    "source": "BBC / TED-Ed",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=Nelson+Mandela+anti+apartheid+struggle+explained+BBC+TED+Ed"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t3",
+    "topic": "The Truth and Reconciliation Commission",
+    "title": "The Truth and Reconciliation Commission",
+    "source": "SABC / Al Jazeera English",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+Truth+and+Reconciliation+Commission+explained+SABC"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t4",
+    "topic": "The “Rainbow Nation“ 30 years on",
+    "title": "The Rainbow Nation thirty years on",
+    "source": "BBC News Africa / DW",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+rainbow+nation+30+years+democracy+explained+BBC+DW"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t5",
+    "topic": "Inequality & land reform",
+    "title": "Inequality and land reform in South Africa",
+    "source": "DW Documentary",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+inequality+land+reform+explained+DW+Documentary"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t6",
+    "topic": "The Constitution & democracy",
+    "title": "South Africa’s Constitution and democracy",
+    "source": "Constitution Hill / SABC",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+Constitution+democracy+explained+Constitution+Hill"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t7",
+    "topic": "Diversity, languages & xenophobia",
+    "title": "Languages, diversity and xenophobia in South Africa",
+    "source": "BBC News Africa",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+languages+diversity+xenophobia+explained+BBC"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t8",
+    "topic": "The economy, unemployment & the energy crisis",
+    "title": "Unemployment, the economy and the energy crisis",
+    "source": "DW / BBC News Africa",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+unemployment+energy+crisis+load+shedding+explained+DW+BBC"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "file": "colle-atlas-za.html",
+    "key": "t9",
+    "topic": "South Africa in Africa and the world",
+    "title": "South Africa in Africa and the world",
+    "source": "CFR / Al Jazeera English",
+    "id": "",
+    "url": "https://www.youtube.com/results?search_query=South+Africa+foreign+policy+BRICS+Africa+explained+CFR+Al+Jazeera"
+  }
+];
+
   const normalise = value =>
     String(value || '')
       .toLowerCase()
@@ -359,6 +1154,19 @@
       code,
       currentPageTarget: title,
       keywords
+    });
+  });
+
+
+  ATLAS_TOPIC_VIDEOS.forEach(video => {
+    addEntry({
+      title: video.title,
+      type: 'Video and guided practice',
+      country: video.country,
+      description: `${video.topic} · Suggested source: ${video.source}`,
+      href: `${video.file}?topic=${encodeURIComponent(video.key)}#topic`,
+      code: video.code,
+      keywords: `${video.country} ${video.topic} ${video.title} ${video.source}`
     });
   });
 
