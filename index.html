@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="English Colles">
-<!-- Homepage interaction refresh: 2026-07-15 -->
+<!-- Homepage structure refresh: 2026-07-22 -->
 <meta name="description" content="A self-study companion for CPGE English: prepare independently, practise for colles, build stronger language and cultural knowledge, and improve through classroom use and teacher feedback.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -956,6 +956,55 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   --route-accent:var(--sage);
 }
 </style>
+
+<style id="homepage-2026-refresh">
+/* ===== HOME 2026: one clear route, one daily card, one challenge ===== */
+.home-hero{padding:46px 0 50px;background:
+  radial-gradient(circle at 8% 10%,rgba(217,164,65,.16),transparent 27%),
+  radial-gradient(circle at 92% 90%,rgba(122,155,118,.16),transparent 30%)}
+.home-hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);gap:38px;align-items:start}
+.home-intro{padding-top:8px}.home-intro h1{font-size:clamp(2.2rem,5.5vw,3.7rem);color:var(--navy);max-width:13ch}
+.home-lead{font-size:1.08rem;margin-top:18px;max-width:56ch;color:var(--ink)}
+.home-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.continue-route[hidden]{display:none}
+.home-search{position:relative;margin-top:30px;max-width:680px}
+.home-search>label{display:block;font-weight:700;color:var(--navy);font-size:.86rem;margin-bottom:7px}
+.search-field{position:relative;display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.search-field:focus-within{border-color:var(--terra);box-shadow:0 0 0 3px rgba(196,106,74,.13),var(--shadow)}
+.search-field svg{position:absolute;left:15px;width:20px;height:20px;color:var(--muted);pointer-events:none}
+.search-field input{width:100%;min-height:54px;border:0;background:transparent;padding:0 48px 0 46px;color:var(--ink);font:inherit;outline:0}
+.search-field button{position:absolute;right:7px;width:40px;height:40px;border-radius:10px;font-size:1.3rem;color:var(--muted)}
+.search-field button:hover{background:var(--bg2);color:var(--terra)}
+.search-help{font-size:.78rem;color:var(--muted);margin-top:7px}
+.search-suggestions{position:absolute;left:0;right:0;top:82px;z-index:35;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);padding:7px;max-height:360px;overflow:auto}
+.search-result{display:flex;align-items:center;gap:12px;width:100%;padding:11px 12px;border-radius:10px;text-align:left}
+.search-result:hover,.search-result.active{background:var(--bg2)}
+.search-result .sr-badge{flex:none;min-width:39px;height:34px;padding:0 8px;border-radius:9px;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.65rem;font-weight:700}
+.search-result .sr-copy{min-width:0}.search-result .sr-title{display:block;color:var(--navy);font-weight:700}.search-result .sr-meta{display:block;color:var(--muted);font-size:.76rem;margin-top:1px}
+.search-empty{padding:18px;text-align:center;color:var(--muted);font-size:.88rem}
+.daily-dock{background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow-lg);backdrop-filter:blur(8px)}
+.daily-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}.daily-heading h2{font-size:1.35rem;color:var(--navy);margin-top:3px}
+.daily-time{font-size:.72rem;font-weight:700;color:var(--sage);background:#eef3f1;border:1px solid #d7e4d5;border-radius:999px;padding:5px 10px;white-space:nowrap}
+.daily-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:var(--bg2);border:1px solid var(--line);padding:4px;border-radius:12px;margin-bottom:13px}
+.daily-tabs button{min-height:38px;border-radius:9px;font-weight:700;font-size:.78rem;color:var(--muted)}.daily-tabs button.on{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.daily-panel[hidden]{display:none}.daily-dock .news-widget,.daily-dock .wotd{width:100%;max-width:none;margin:0;box-shadow:none}.daily-dock .news-widget,.daily-dock .wotd{border-radius:15px}
+.daily-transfer{margin-top:12px;padding:10px 12px;border-radius:10px;background:#eef3f1;border-left:4px solid var(--sage);font-size:.8rem;color:var(--ink);font-weight:700;text-align:center}
+.home-routes{padding:52px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.route-head{max-width:70ch}.route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+.route-card{--route:var(--terra);position:relative;display:flex;flex-direction:column;min-height:280px;padding:24px;background:var(--card);border:1px solid var(--line);border-top:6px solid var(--route);border-radius:18px;box-shadow:var(--shadow);transition:transform .15s,border-color .2s,box-shadow .2s}
+.route-card:hover{transform:translateY(-3px);border-color:var(--route);box-shadow:var(--shadow-lg)}.route-colle{--route:var(--navy)}.route-plan{--route:var(--sage)}
+.route-number{position:absolute;right:20px;top:18px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--route) 13%,#fff);color:var(--route);font-weight:700}
+.route-kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--route);padding-right:45px}.route-card h3{font-size:1.32rem;color:var(--navy);margin-top:14px}.route-card p{color:var(--muted);font-size:.91rem;margin-top:10px;line-height:1.55}.route-link{margin-top:auto;padding-top:22px;color:var(--route);font-weight:700}
+.home-challenge{padding:52px 0}.home-challenge .play-head{align-items:center}.challenge-cue{max-width:1120px;margin:12px auto 0;padding:0 20px;color:var(--muted);font-size:.8rem}.challenge-cue strong{color:var(--navy)}
+.home-challenge .challenge-grid{grid-template-columns:1fr;max-width:760px;margin-left:auto;margin-right:auto}.home-challenge .challenge-card{display:none;min-height:0}.home-challenge .challenge-card.active{display:flex}.home-challenge .challenge-card[aria-hidden="true"]{display:none}
+.home-challenge .challenge-card[aria-hidden="false"]{display:flex}.home-challenge .play-footnote{max-width:760px;margin-left:auto;margin-right:auto}
+.home-explore{padding:54px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.explore-head{max-width:70ch}.explore-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px}.explore-card{background:var(--bg2);border:1px solid var(--line);border-radius:17px;padding:21px;box-shadow:var(--shadow)}
+.explore-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:11px;color:#fff;font-weight:700;margin-bottom:14px}.explore-card h3{font-size:1.15rem;color:var(--navy)}.explore-card>p{font-size:.84rem;color:var(--muted);margin-top:7px;min-height:4.2em}.explore-card nav{display:grid;gap:7px;margin-top:16px}.explore-card nav a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 10px;border-radius:10px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:.82rem;color:var(--ink)}.explore-card nav a::after{content:'→';color:var(--terra)}.explore-card nav a:hover{border-color:var(--terra);color:var(--terra)}
+.home-transfer{padding:42px 0}.transfer-card{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;background:var(--navy);color:#fff;border-radius:22px;padding:30px 32px;box-shadow:var(--shadow-lg)}.transfer-card h2{color:#fff;font-size:clamp(1.55rem,3.4vw,2.1rem)}.transfer-card p{margin-top:10px;max-width:70ch;opacity:.92}.transfer-card .eyebrow{color:var(--gold)}
+@media(max-width:980px){.home-hero-grid{grid-template-columns:1fr}.daily-dock{max-width:700px}.explore-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.route-grid{grid-template-columns:1fr}.route-card{min-height:0}.transfer-card{grid-template-columns:1fr}.home-actions .btn{width:100%}.daily-dock{padding:14px}.home-hero{padding-top:32px}}
+@media(max-width:560px){.explore-grid{grid-template-columns:1fr}.search-suggestions{top:80px}.home-intro h1{font-size:2.25rem}.daily-tabs button{font-size:.72rem}.transfer-card{padding:24px 20px}.home-challenge .play-head{align-items:flex-start}}
+</style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
@@ -968,7 +1017,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
       <span class="sub">CPGE English · Independent practice · Colles</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html" class="active" aria-current="page">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a><a href="progress-backup.html" style="font-weight:700;text-decoration:underline">Progress</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html" class="active" aria-current="page">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="top-tools">
       <div class="accent" id="accent" role="group" aria-label="Choose an accent">
         <button data-acc="UK" class="on">UK</button>
@@ -976,7 +1025,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
         <button data-acc="AU">AU</button>
         <button data-acc="CA">CA</button>
       </div>
-      <a class="a11y-btn" href="progress-backup.html" style="text-decoration:none" aria-label="Export or import progress"><span class="lbl">Progress</span></a> <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
+      <a class="a11y-btn" href="progress-backup.html" style="text-decoration:none" aria-label="Export or import progress"><span class="lbl">My progress</span></a> <button class="a11y-btn" id="openA11y" aria-haspopup="dialog">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="1.6"/><path d="M5 8h14M9 8l-1 12M15 8l1 12M12 8v6"/></svg>
         <span class="lbl">Accessibility</span>
       </button>
@@ -1007,438 +1056,279 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </aside>
 
 <main id="main">
+  <section class="home-hero" aria-labelledby="homeTitle">
+    <div class="wrap home-hero-grid">
+      <div class="home-intro">
+        <div class="eyebrow">CPGE English · Independent practice</div>
+        <h1 id="homeTitle">Know what to do next for your English colles.</h1>
+        <p class="home-lead">Prepare independently, strengthen your English and build the knowledge you need — then put it into practice in class and in real colles.</p>
 
-<!-- ============ HERO + DAILY ROUTINE ============ -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">CPGE English · Independent practice</div>
-      <h1>Build better habits for your English colles.</h1>
-      <p class="welcome">English Colles in Lyon is a self-study companion designed to help you prepare regularly, strengthen your English and build the knowledge you need for class and colles.</p>
-      <p class="more">Work independently here, then reuse what you learn in class, test it during real colles and improve through your teachers’ feedback.</p>
+        <div class="home-actions">
+          <a class="btn btn-primary" href="colle-trainer.html" data-track-route data-route-title="My next colle">Prepare my next colle <span class="ar" aria-hidden="true">→</span></a>
+          <a class="btn btn-navy" href="help.html" data-track-route data-route-title="My learning plan">Start my learning plan</a>
+          <a class="btn btn-ghost continue-route" id="continueRoute" href="colle-trainer.html" hidden>Continue where I stopped <span class="ar" aria-hidden="true">→</span></a>
+        </div>
 
+        <div class="home-search" role="search" aria-label="Search the site">
+          <label for="siteSearch">Search the site</label>
+          <div class="search-field">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+            <input id="siteSearch" type="search" autocomplete="off" placeholder="Try: key question, Brexit, TH sounds…" aria-autocomplete="list" aria-controls="searchSuggestions" aria-expanded="false">
+            <button type="button" id="clearSearch" aria-label="Clear search" hidden>×</button>
+          </div>
+          <div class="search-suggestions" id="searchSuggestions" role="listbox" hidden></div>
+          <p class="search-help">Search methodology, grammar, pronunciation, vocabulary, civilisation, timelines and resources.</p>
+        </div>
+      </div>
 
-      <!-- ============ START HERE ============ -->
-<div class="start-here hero-start-here" id="start-here">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Choose your route</div>
-      <h2>Start here.</h2>
-      <p>You do not need to explore everything at once. Choose the route that matches what you need today.</p>
+      <aside class="daily-dock" aria-labelledby="dailyTitle">
+        <div class="daily-heading">
+          <div>
+            <div class="eyebrow">A little every day</div>
+            <h2 id="dailyTitle">Today’s English routine</h2>
+          </div>
+          <span class="daily-time">5–10 min</span>
+        </div>
+        <div class="daily-tabs" role="tablist" aria-label="Daily learning cards">
+          <button type="button" role="tab" class="on" data-daily-tab="news" aria-selected="true">News</button>
+          <button type="button" role="tab" data-daily-tab="word" aria-selected="false">Word</button>
+          <button type="button" role="tab" data-daily-tab="civi" aria-selected="false">Civilisation</button>
+        </div>
+
+        <div class="daily-panel" data-daily-panel="news" role="tabpanel">
+          <div class="news-widget">
+            <div class="news-top">
+              <span class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H5a1 1 0 0 1-1-1Z"/><path d="M17 8h3v9a2 2 0 0 1-4 0V5"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></span>
+              <div class="news-header">Today’s English-Speaking World Brief<span class="sublab">One current story to discuss</span></div>
+            </div>
+            <div class="news-body" aria-live="polite">
+              <div class="news-metarow">
+                <span class="news-date">Checking today’s update…</span>
+                <span class="news-country">English-speaking world</span>
+              </div>
+              <div class="news-title">Loading today’s brief…</div>
+              <div class="news-source">Automatic update</div>
+              <a href="resources.html" target="_blank" rel="noopener" class="news-link">Explore reliable resources →</a>
+              <div class="news-question"><strong>Question for discussion:</strong><br>What current story could you bring into class or a colle today?</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-panel" data-daily-panel="word" role="tabpanel" hidden>
+          <div class="wotd" id="wotd" hidden>
+            <div class="wotd-top">
+              <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2M5.6 18.4 7 17M12 19v2M18.4 18.4 17 17M21 12h-2M18.4 5.6 17 7"/><circle cx="12" cy="12" r="4"/></svg></span>
+              <div class="wotd-header">Word of the Day<span class="sublab" id="wotdDate"></span></div>
+            </div>
+            <div class="wotd-body">
+              <div class="wotd-termrow">
+                <span class="wotd-term" id="wotdTerm"></span>
+                <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Listen to the pronunciation" title="Listen">🔊</button>
+              </div>
+              <div class="wotd-ipa" id="wotdIpa"></div>
+              <div class="wotd-fr" id="wotdFr"></div>
+              <div class="wotd-def" id="wotdDef"></div>
+              <div class="wotd-ex" id="wotdEx"></div>
+              <a class="wotd-link" id="wotdLink" href="vocabulary.html">Open the chapter →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-panel" data-daily-panel="civi" role="tabpanel" hidden>
+          <div class="wotd civi" id="civi" hidden>
+            <div class="wotd-top civi-top">
+              <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+              <div class="wotd-header">Civi Fact of the Day<span class="sublab" id="civiDate"></span></div>
+            </div>
+            <div class="wotd-body">
+              <div class="civi-metarow"><span class="civi-country" id="civiCountry"></span><span class="civi-section" id="civiSection"></span></div>
+              <p class="civi-fact" id="civiFact"></p>
+              <a class="wotd-link" href="civilisation.html" data-track-route data-route-title="Civilisation">Explore the Civilisation Lab →</a>
+            </div>
+          </div>
+        </div>
+        <p class="daily-transfer">Read, notice, then reuse one element aloud.</p>
+      </aside>
     </div>
+  </section>
 
-    <div class="start-grid">
-      <a class="start-route" href="methodology.html#diagMount">
-        <div class="route-meta"><span class="route-mark">NEW</span><span class="route-label">First visit</span></div>
-        <h3>I’m new to the site</h3>
-        <p>Learn how a colle works, take the short methodology diagnostic and choose one realistic priority.</p>
-        <span class="route-action">Show me where to begin <span aria-hidden="true">→</span></span>
-      </a>
-
-       <a class="start-route" href="help.html" style="--route-accent:#B06A78">
-  <div class="route-meta">
-    <span class="route-mark">HELP</span>
-    <span class="route-label">Guided support</span>
-  </div>
-
-  <h3>I find English difficult and need a clear learning plan</h3>
-
-  <p>
-    Take a diagnostic and follow a progressive sequence of missions across
-    grammar, vocabulary, pronunciation, methodology and civilisation.
-  </p>
-
-  <span class="route-action">
-    Create my learning plan <span aria-hidden="true">→</span>
-  </span>
-</a>
-
-      <a class="start-route" href="colle-trainer.html">
-        <div class="route-meta"><span class="route-mark">NEXT</span><span class="route-label">Upcoming colle</span></div>
-        <h3>I have a colle coming up</h3>
-        <p>Prepare efficiently, practise under timed conditions and identify one point to discuss with your teacher.</p>
-        <span class="route-action">Prepare my next colle <span aria-hidden="true">→</span></span>
-      </a>
-
-      <a class="start-route" href="#foundations">
-        <div class="route-meta"><span class="route-mark">CORE</span><span class="route-label">Guided route</span></div>
-        <h3>I want to strengthen my foundations</h3>
-        <p>Build confidence through essential grammar, useful vocabulary, clearer pronunciation and short guided speaking tasks.</p>
-        <span class="route-action">Start with the foundations <span aria-hidden="true">↓</span></span>
-      </a>
+  <section class="home-routes" id="start-here" aria-labelledby="startTitle">
+    <div class="wrap">
+      <div class="sec-head route-head">
+        <div class="eyebrow">Choose one route</div>
+        <h2 id="startTitle">Start here.</h2>
+        <p>You do not need to explore the whole site. Choose the situation that matches what you need today.</p>
+      </div>
+      <div class="route-grid">
+        <a class="route-card route-first" href="methodology.html#diagMount" data-track-route data-route-title="First visit">
+          <span class="route-number">1</span>
+          <span class="route-kicker">First visit</span>
+          <h3>I’m new to the site</h3>
+          <p>Understand what a colle requires, take a short diagnostic and choose one realistic priority.</p>
+          <span class="route-link">Show me where to begin <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="route-card route-colle" href="colle-trainer.html" data-track-route data-route-title="My next colle">
+          <span class="route-number">2</span>
+          <span class="route-kicker">Upcoming colle</span>
+          <h3>I have a colle coming up</h3>
+          <p>Prepare a document, organise your ideas and practise speaking under timed conditions.</p>
+          <span class="route-link">Prepare my next colle <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="route-card route-plan" href="help.html" data-track-route data-route-title="My learning plan">
+          <span class="route-number">3</span>
+          <span class="route-kicker">Guided support</span>
+          <h3>I need a clear learning plan</h3>
+          <p>Follow progressive missions across grammar, vocabulary, pronunciation, methodology and civilisation.</p>
+          <span class="route-link">Create my learning plan <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="play-zone home-challenge" id="play-practise">
+<div class="wrap">
+<div class="play-head">
+<div class="sec-head">
+<div class="eyebrow">Today's five-minute challenge</div>
+<h2>Do one useful thing now.</h2>
+<p>Complete one short activity, read the correction and choose one point to reuse aloud in class or in your next colle.</p>
 </div>
-      <div class="cycle-note" style="margin-top:20px">
-        <strong>English classes and regular colles are indispensable.</strong><br>
-        This website helps you prepare, but it cannot replace speaking in class, testing your ideas in real colles, asking questions or receiving individual feedback from your teachers.
-      </div>
-    </div>
-
-    <div class="hero-art">
-      <div class="routine-label">
-        <div class="eyebrow">A little every day</div>
-        <h2>Your daily English routine</h2>
-        <p>Read one story, learn one expression and build one piece of background knowledge.</p>
-      </div>
-
-      <div class="news-widget">
-    <div class="news-top">
-      <span class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H5a1 1 0 0 1-1-1Z"/><path d="M17 8h3v9a2 2 0 0 1-4 0V5"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></span>
-      <div class="news-header">Today's English-Speaking World Brief<span class="sublab">Daily brief · updated every day</span></div>
-    </div>
-    <div class="news-body">
-      <div class="news-metarow">
-        <span class="news-date">9 July 2026</span>
-        <span class="news-country">🇬🇧 United Kingdom</span>
-      </div>
-      <div class="news-title">Universities face financial pressure</div>
-      <div class="news-source">Reuters</div>
-      <a href="#" target="_blank" rel="noopener" class="news-link">Read article →</a>
-      <div class="news-question"><strong>Question for discussion:</strong><br>Should British universities rethink their economic model?</div>
-    </div>
-  </div>
-
-      <div class="wotd" id="wotd" hidden>
-    <div class="wotd-top">
-      <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2M5.6 18.4 7 17M12 19v2M18.4 18.4 17 17M21 12h-2M18.4 5.6 17 7"/><circle cx="12" cy="12" r="4"/></svg></span>
-      <div class="wotd-header">Word of the Day<span class="sublab" id="wotdDate"></span></div>
-    </div>
-    <div class="wotd-body">
-      <div class="wotd-termrow">
-        <span class="wotd-term" id="wotdTerm"></span>
-        <button type="button" class="wotd-speak" id="wotdSpeak" aria-label="Listen to the pronunciation" title="Listen">🔊</button>
-      </div>
-      <div class="wotd-ipa" id="wotdIpa"></div>
-      <div class="wotd-fr" id="wotdFr"></div>
-      <div class="wotd-def" id="wotdDef"></div>
-      <div class="wotd-ex" id="wotdEx"></div>
-      <a class="wotd-link" id="wotdLink" href="#">Open the chapter →</a>
-    </div>
-  </div>
-
-      <div class="wotd civi" id="civi" hidden>
-        <div class="wotd-top civi-top">
-          <span class="wotd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
-          <div class="wotd-header">Civi Fact of the Day<span class="sublab" id="civiDate"></span></div>
-        </div>
-        <div class="wotd-body">
-          <div class="civi-metarow"><span class="civi-country" id="civiCountry"></span><span class="civi-section" id="civiSection"></span></div>
-          <p class="civi-fact" id="civiFact"></p>
-          <a class="wotd-link" href="civilisation.html">Explore the Civilisation Lab →</a>
-        </div>
-      </div>
-
-      <div class="routine-reminder">Do not stop at reading: reuse today’s material in class or in your next colle.</div>
-    </div>
-  </div>
+<button aria-controls="challengeGrid" class="surprise-btn" id="surpriseChallenge" type="button"><span aria-hidden="true">↻</span> Choose another challenge</button>
+</div><div aria-live="polite" class="challenge-cue">Challenge <strong id="challengePosition">1 of 4</strong></div>
+<div aria-live="polite" class="challenge-grid" id="challengeGrid">
+<article aria-hidden="true" class="challenge-card challenge-fix" data-challenge-card="" id="challengeFix">
+<div class="challenge-top">
+<div class="challenge-id"><span aria-hidden="true" class="challenge-icon">✓</span><span class="challenge-type">Choose</span></div>
+</div>
+<h3>Fix the sentence</h3>
+<p class="challenge-intro">Choose the strongest correction, then read the explanation.</p>
+<div class="challenge-stage">
+<p class="challenge-prompt" id="fixPrompt"></p>
+<div class="challenge-options" id="fixOptions"></div>
+<div aria-live="polite" class="challenge-feedback" id="fixFeedback"></div>
+<div class="challenge-actions"><button class="challenge-control" id="fixNext" type="button">Another sentence</button></div>
+<div class="transfer-strip"><strong>Use it beyond the screen</strong><br/>Say one accurate sentence with the same structure in class, then reuse it naturally in a colle.</div>
+</div>
+</article>
+<article aria-hidden="true" class="challenge-card challenge-country" data-challenge-card="" id="challengeCountry">
+<div class="challenge-top">
+<div class="challenge-id"><span aria-hidden="true" class="challenge-icon">?</span><span class="challenge-type">Retrieve</span></div>
+</div>
+<h3>Guess the country</h3>
+<p class="challenge-intro">Reveal the clues one by one and identify the country they describe.</p>
+<div class="challenge-stage">
+<p class="challenge-clue">Which country is it?</p>
+<ul class="country-clue-list" id="countryClues"></ul>
+<div class="challenge-actions">
+<button class="challenge-control primary" id="revealClue" type="button">Reveal a clue</button>
+</div>
+<div class="challenge-options" id="countryOptions"></div>
+<div aria-live="polite" class="challenge-feedback" id="countryFeedback"></div>
+<div class="challenge-actions"><button class="challenge-control" id="countryNext" type="button">Another country</button></div>
+<div class="transfer-strip"><strong>Take it to class</strong><br/>Explain one clue aloud and connect it to a current debate before trying to reuse it as evidence in a colle.</div>
+</div>
+</article>
+<article aria-hidden="true" class="challenge-card challenge-sound" data-challenge-card="" id="challengeSound">
+<div class="challenge-top">
+<div class="challenge-id"><span aria-hidden="true" class="challenge-icon">♪</span><span class="challenge-type">Listen</span></div>
+</div>
+<h3>Hear the difference</h3>
+<p class="challenge-intro">Listen to one word and identify what the browser voice said.</p>
+<div class="challenge-stage">
+<div class="sound-panel">
+<button aria-label="Listen to the word" class="sound-listen" id="soundListen" type="button">▶</button>
+<div class="sound-note">You can listen more than once. The selected UK, US, AU or CA voice is used when available.</div>
+</div>
+<div class="challenge-options" id="soundOptions"></div>
+<div aria-live="polite" class="challenge-feedback" id="soundFeedback"></div>
+<div class="challenge-actions"><button class="challenge-control" id="soundNext" type="button">Another pair</button></div>
+<div class="transfer-strip"><strong>Use it aloud</strong><br/>Repeat the target word in a complete sentence, then keep the same sound when you speak spontaneously in class or in a colle.</div>
+</div>
+</article>
+<article aria-hidden="true" class="challenge-card challenge-argument" data-challenge-card="" id="challengeArgument">
+<div class="challenge-top">
+<div class="challenge-id"><span aria-hidden="true" class="challenge-icon">→</span><span class="challenge-type">Build</span></div>
+</div>
+<h3>Build the argument</h3>
+<p class="challenge-intro">Choose the three parts in the order that makes the reasoning clearest.</p>
+<div class="challenge-stage">
+<div class="argument-bank" id="argumentBank"></div>
+<div aria-label="Your proposed order" class="argument-answer" id="argumentAnswer"></div>
+<div class="challenge-actions">
+<button class="challenge-control primary" id="argumentCheck" type="button">Check the order</button>
+<button class="challenge-control" id="argumentReset" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="challenge-feedback" id="argumentFeedback"></div>
+<div class="challenge-actions"><button class="challenge-control" id="argumentNext" type="button">Another argument</button></div>
+<div class="transfer-strip"><strong>Test it in a colle</strong><br/>Use the same pattern aloud: make a claim, support it with a precise example and explain why that example matters.</div>
+</div>
+</article>
+</div>
+<div class="play-footnote"><span aria-hidden="true" class="dot"></span><p><strong>Finish by speaking.</strong> Say one new sentence, fact or argument aloud before you leave the activity.</p></div>
+</div>
 </section>
 
-
-<!-- ============ PLAY & PRACTISE ============ -->
-<section class="play-zone" id="play-practise">
-  <div class="wrap">
-    <div class="play-head">
-      <div class="sec-head">
-        <div class="eyebrow">Five-minute challenges</div>
-        <h2>Play, notice and practise.</h2>
-        <p>Start with one quick challenge. The correction explains the point, then gives you one small target to reuse aloud in English class or in your next colle.</p>
+  <section class="home-explore" aria-labelledby="exploreTitle">
+    <div class="wrap">
+      <div class="sec-head explore-head">
+        <div class="eyebrow">Everything in one place</div>
+        <h2 id="exploreTitle">Explore by objective.</h2>
+        <p>Use these sections when you already know what you need. Otherwise, return to one of the three routes above.</p>
       </div>
-      <button class="surprise-btn" id="surpriseChallenge" type="button"><span aria-hidden="true">✦</span> Surprise me</button>
-    </div>
-
-    <div class="challenge-grid">
-      <article class="challenge-card challenge-fix" id="challengeFix" data-challenge-card>
-        <div class="challenge-top">
-          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">✓</span><span class="challenge-type">Choose</span></div>
-        </div>
-        <h3>Fix the sentence</h3>
-        <p class="challenge-intro">Choose the strongest correction, then read the explanation.</p>
-        <div class="challenge-stage">
-          <p class="challenge-prompt" id="fixPrompt"></p>
-          <div class="challenge-options" id="fixOptions"></div>
-          <div class="challenge-feedback" id="fixFeedback" aria-live="polite"></div>
-          <div class="challenge-actions"><button class="challenge-control" id="fixNext" type="button">Another sentence</button></div>
-          <div class="transfer-strip"><strong>Use it beyond the screen</strong><br>Say one accurate sentence with the same structure in class, then reuse it naturally in a colle.</div>
-        </div>
-      </article>
-
-      <article class="challenge-card challenge-country" id="challengeCountry" data-challenge-card>
-        <div class="challenge-top">
-          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">?</span><span class="challenge-type">Retrieve</span></div>
-        </div>
-        <h3>Guess the country</h3>
-        <p class="challenge-intro">Reveal the clues one by one and identify the country they describe.</p>
-        <div class="challenge-stage">
-          <p class="challenge-clue">Which country is it?</p>
-          <ul class="country-clue-list" id="countryClues"></ul>
-          <div class="challenge-actions">
-            <button class="challenge-control primary" id="revealClue" type="button">Reveal a clue</button>
-          </div>
-          <div class="challenge-options" id="countryOptions"></div>
-          <div class="challenge-feedback" id="countryFeedback" aria-live="polite"></div>
-          <div class="challenge-actions"><button class="challenge-control" id="countryNext" type="button">Another country</button></div>
-          <div class="transfer-strip"><strong>Take it to class</strong><br>Explain one clue aloud and connect it to a current debate before trying to reuse it as evidence in a colle.</div>
-        </div>
-      </article>
-
-      <article class="challenge-card challenge-sound" id="challengeSound" data-challenge-card>
-        <div class="challenge-top">
-          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">♪</span><span class="challenge-type">Listen</span></div>
-        </div>
-        <h3>Hear the difference</h3>
-        <p class="challenge-intro">Listen to one word and identify what the browser voice said.</p>
-        <div class="challenge-stage">
-          <div class="sound-panel">
-            <button class="sound-listen" id="soundListen" type="button" aria-label="Listen to the word">▶</button>
-            <div class="sound-note">You can listen more than once. The selected UK, US, AU or CA voice is used when available.</div>
-          </div>
-          <div class="challenge-options" id="soundOptions"></div>
-          <div class="challenge-feedback" id="soundFeedback" aria-live="polite"></div>
-          <div class="challenge-actions"><button class="challenge-control" id="soundNext" type="button">Another pair</button></div>
-          <div class="transfer-strip"><strong>Use it aloud</strong><br>Repeat the target word in a complete sentence, then keep the same sound when you speak spontaneously in class or in a colle.</div>
-        </div>
-      </article>
-
-      <article class="challenge-card challenge-argument" id="challengeArgument" data-challenge-card>
-        <div class="challenge-top">
-          <div class="challenge-id"><span class="challenge-icon" aria-hidden="true">→</span><span class="challenge-type">Build</span></div>
-        </div>
-        <h3>Build the argument</h3>
-        <p class="challenge-intro">Choose the three parts in the order that makes the reasoning clearest.</p>
-        <div class="challenge-stage">
-          <div class="argument-bank" id="argumentBank"></div>
-          <div class="argument-answer" id="argumentAnswer" aria-label="Your proposed order"></div>
-          <div class="challenge-actions">
-            <button class="challenge-control primary" id="argumentCheck" type="button">Check the order</button>
-            <button class="challenge-control" id="argumentReset" type="button">Reset</button>
-          </div>
-          <div class="challenge-feedback" id="argumentFeedback" aria-live="polite"></div>
-          <div class="challenge-actions"><button class="challenge-control" id="argumentNext" type="button">Another argument</button></div>
-          <div class="transfer-strip"><strong>Test it in a colle</strong><br>Use the same pattern aloud: make a claim, support it with a precise example and explain why that example matters.</div>
-        </div>
-      </article>
-    </div>
-
-    <div class="play-footnote"><span class="dot" aria-hidden="true"></span><p><strong>These challenges are a starting point, not an endpoint.</strong> The real objective is to reuse one corrected structure, one fact, one sound or one argument pattern in class and in real colles.</p></div>
-  </div>
-</section>
-
-<!-- ============ LEARNING PATHWAY ============ -->
-<section class="pathway">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">From self-study to real progress</div>
-      <h2>English classes and colles are indispensable.</h2>
-      <p>Independent practice prepares you. Classes and real colles are where you speak spontaneously, test your understanding, receive feedback and turn preparation into lasting progress.</p>
-    </div>
-
-    <div class="pathway-grid">
-      <article class="path-step">
-        <span class="n">1</span>
-        <h3>Prepare independently</h3>
-        <p>Review a skill, study vocabulary, explore a topic or prepare useful examples.</p>
-      </article>
-      <article class="path-step">
-        <span class="n">2</span>
-        <h3>Use it in class</h3>
-        <p>Ask questions, test your understanding and actively reuse what you have learnt.</p>
-      </article>
-      <article class="path-step">
-        <span class="n">3</span>
-        <h3>Test it in colles</h3>
-        <p>Turn preparation into structured, precise and convincing spoken English.</p>
-      </article>
-      <article class="path-step">
-        <span class="n">4</span>
-        <h3>Improve through feedback</h3>
-        <p>Use your teachers’ comments to decide what you should work on next.</p>
-      </article>
-      <article class="path-step">
-        <span class="n">5</span>
-        <h3>Go further at the CDI</h3>
-        <p>Read beyond online summaries, compare sources and strengthen your examples.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============ FOUNDATION PATH ============ -->
-<section class="foundations" id="foundations">
-  <div class="wrap">
-    <div class="foundation-head">
-      <div class="sec-head">
-        <div class="eyebrow">A guided route into the site</div>
-        <h2>Build your foundations.</h2>
-        <p>Work through a few essential skills in a clear order, then reuse one small target aloud in class and in your next colle.</p>
-      </div>
-      <div class="foundation-intro">
-        <strong>This route may help if you often translate word for word, struggle to build complete sentences or lose confidence when speaking.</strong>
-        It is not a separate or simplified course: it is a guided way into the same CPGE content.
+      <div class="explore-grid">
+        <article class="explore-card">
+          <span class="explore-icon t-navy">C</span>
+          <h3>Prepare a colle</h3>
+          <p>Understand the task, build your argument and practise speaking.</p>
+          <nav aria-label="Prepare a colle">
+            <a href="methodology.html" data-track-route data-route-title="Methodology">Methodology</a>
+            <a href="colle-trainer.html" data-track-route data-route-title="Colle Trainer">Colle Trainer</a>
+            <a href="jury-reports.html" data-track-route data-route-title="Jury Reports">Jury Reports</a>
+          </nav>
+        </article>
+        <article class="explore-card">
+          <span class="explore-icon t-terra">A</span>
+          <h3>Build accurate English</h3>
+          <p>Develop the language you need to express ideas clearly and precisely.</p>
+          <nav aria-label="Build accurate English">
+            <a href="vocabulary.html" data-track-route data-route-title="Vocabulary">Vocabulary</a>
+            <a href="grammar.html" data-track-route data-route-title="Grammar">Grammar</a>
+            <a href="pronunciation.html" data-track-route data-route-title="Pronunciation">Pronunciation</a>
+          </nav>
+        </article>
+        <article class="explore-card">
+          <span class="explore-icon t-sage">W</span>
+          <h3>Understand the world</h3>
+          <p>Build context, historical perspective and reliable examples.</p>
+          <nav aria-label="Understand the world">
+            <a href="civilisation.html" data-track-route data-route-title="Civilisation">Civilisation</a>
+            <a href="timelines.html" data-track-route data-route-title="Timelines">Timelines</a>
+            <a href="resources.html" data-track-route data-route-title="Resources">Resources</a>
+          </nav>
+        </article>
+        <article class="explore-card">
+          <span class="explore-icon t-gold">P</span>
+          <h3>Keep progressing</h3>
+          <p>Resume your route, follow guided missions and protect your progress.</p>
+          <nav aria-label="Keep progressing">
+            <a href="help.html" data-track-route data-route-title="My learning plan">Guided learning plan</a>
+            <a href="progress-backup.html" data-track-route data-route-title="My progress">Export or import progress</a>
+          </nav>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="foundation-steps">
-      <article class="foundation-step">
-        <span class="step-number">1</span>
-        <h3>Build a clear sentence</h3>
-        <p>Review word order, complete sentences, negatives and simple questions before adding complexity.</p>
-        <div class="transfer-target"><strong>Use it aloud</strong>Produce one complete sentence during your next English class.</div>
-        <a class="foundation-link" href="cpge_grammar_chapter01_basic_sentence_structure_premium.html">Start with sentence structure <span class="ar">→</span></a>
-      </article>
-
-      <article class="foundation-step">
-        <span class="step-number">2</span>
-        <h3>Control the essential tenses</h3>
-        <p>Focus first on the present, the past, the present perfect and the main ways of referring to the future.</p>
-        <div class="transfer-target"><strong>Use it aloud</strong>Explain one fact or event with a tense you have just reviewed.</div>
-        <a class="foundation-link" href="grammar.html#pathways">Review the essential tenses <span class="ar">→</span></a>
-      </article>
-
-      <article class="foundation-step">
-        <span class="step-number">3</span>
-        <h3>Build core vocabulary</h3>
-        <p>Learn useful verbs, simple connectors and a few expressions that help you explain, compare and qualify ideas.</p>
-        <div class="transfer-target"><strong>Use it aloud</strong>Choose two expressions and deliberately use them in class.</div>
-        <a class="foundation-link" href="vocabulary.html">Build my core vocabulary <span class="ar">→</span></a>
-      </article>
-
-      <article class="foundation-step">
-        <span class="step-number">4</span>
-        <h3>Speak more clearly</h3>
-        <p>Start with TH sounds, final consonants, key-word stress, pauses and a less monotonous intonation.</p>
-        <div class="transfer-target"><strong>Use it aloud</strong>Choose one pronunciation target for your next class or colle.</div>
-        <a class="foundation-link" href="pronunciation.html#th-workshop">Improve clarity and confidence <span class="ar">→</span></a>
-      </article>
-
-      <article class="foundation-step">
-        <span class="step-number">5</span>
-        <h3>Build a short spoken answer</h3>
-        <p>Practise a simple structure: introduce the issue, make one point, support it with one example and explain why it matters.</p>
-        <div class="transfer-target"><strong>Use it aloud</strong>Test the same short answer in class, then develop it in a colle.</div>
-        <a class="foundation-link" href="colle-trainer.html">Build a short response <span class="ar">→</span></a>
-      </article>
+  <section class="home-transfer" aria-labelledby="transferTitle">
+    <div class="wrap transfer-card">
+      <div>
+        <div class="eyebrow">Self-study becomes useful when you speak</div>
+        <h2 id="transferTitle">Prepare here. Use it in class. Test it in colles.</h2>
+        <p>This site helps you prepare, but it cannot replace regular speaking, individual feedback from your teachers or further research at the CDI.</p>
+      </div>
+      <a class="btn btn-primary" href="colle-trainer.html" data-track-route data-route-title="Colle Trainer">Put it into practice <span class="ar" aria-hidden="true">→</span></a>
     </div>
-
-    <div class="foundation-transfer">
-      <span class="transfer-icon" aria-hidden="true">→</span>
-      <p><strong>Your goal is not to finish the website.</strong> Prepare one manageable element here, try it in English class, test it again in a real colle and use your teacher’s feedback to choose the next step.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GOAL-BASED NAVIGATION ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Start with a clear objective</div>
-      <h2>What do you need to work on today?</h2>
-      <p>Choose a goal rather than wandering through the site. Each section should lead to something you can reuse in class or test in a colle.</p>
-    </div>
-
-    <div class="goals-grid">
-      <article class="goal-group">
-        <h3>Prepare for a colle</h3>
-        <p>Understand the task, organise your ideas and practise speaking under realistic conditions.</p>
-        <div class="goal-links">
-          <a class="goal-link" href="methodology.html">
-            <span class="mini-ico t-navy">M</span>
-            <span class="txt"><span class="title">Methodology</span><span class="desc">Analyse documents, identify the key issue, formulate a relevant key question and build an effective plan.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="colle-trainer.html">
-            <span class="mini-ico t-gold">C</span>
-            <span class="txt"><span class="title">Colle Trainer</span><span class="desc">Practise structuring your ideas, speaking clearly and responding to follow-up questions.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="jury-reports.html">
-            <span class="mini-ico t-teal">J</span>
-            <span class="txt"><span class="title">Jury Reports</span><span class="desc">Understand what examiners expect, reward and repeatedly criticise.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="goal-group">
-        <h3>Build your language and knowledge</h3>
-        <p>Develop the vocabulary, context and historical perspective needed for stronger arguments.</p>
-        <div class="goal-links">
-          <a class="goal-link" href="vocabulary.html">
-            <span class="mini-ico t-terra">V</span>
-            <span class="txt"><span class="title">Vocabulary</span><span class="desc">Study, memorise and reuse precise vocabulary in class and in colles.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="grammar.html">
-            <span class="mini-ico t-navy">G</span>
-            <span class="txt"><span class="title">Grammar</span><span class="desc">Build accurate structures, practise them actively and reuse them spontaneously in class and in your colles.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="pronunciation.html">
-            <span class="mini-ico t-gold">P</span>
-            <span class="txt"><span class="title">Pronunciation</span><span class="desc">Train sounds, stress and intonation, then test them where it matters: in English class and in real colles.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="civilisation.html">
-            <span class="mini-ico t-sage">C</span>
-            <span class="txt"><span class="title">Civilisation</span><span class="desc">Build the contextual knowledge needed to understand documents and support arguments.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="timelines.html">
-            <span class="mini-ico t-navy">T</span>
-            <span class="txt"><span class="title">Timelines</span><span class="desc">Identify turning points, continuities and connections rather than memorising isolated dates.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="goal-group">
-        <h3>Research further</h3>
-        <p>Find reliable material, then move beyond the website and continue your research at the CDI.</p>
-        <div class="goal-links">
-          <a class="goal-link" href="resources.html">
-            <span class="mini-ico t-teal">R</span>
-            <span class="txt"><span class="title">Resources</span><span class="desc">Find articles, podcasts, videos and reliable sources for further reading and listening.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="goal-group">
-        <h3>Work quickly</h3>
-        <p>Use short revision tools when time is limited, without confusing emergency revision with long-term preparation.</p>
-        <div class="goal-links">
-          <a class="goal-link" href="grammar.html#practice">
-            <span class="mini-ico t-rose">5</span>
-            <span class="txt"><span class="title">Five-minute Grammar Workout</span><span class="desc">Use a short interactive activity, then choose one structure to produce aloud in class.</span></span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="goal-link" href="pronunciation.html#daily-challenge">
-            <span class="mini-ico t-gold">P</span>
-            <span class="txt"><span class="title">Today’s Pronunciation Challenge</span><span class="desc">Practise one sound, stress or intonation target and carry it into your next class or colle.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CLOSING MESSAGE ============ -->
-<section class="closing-band">
-  <div class="wrap closing-card">
-    <div>
-      <div class="eyebrow" style="color:var(--gold)">Autonomous does not mean isolated</div>
-      <h2>Bring your work back into the classroom.</h2>
-      <p>Prepare here, test your ideas in class and in colles, listen to your teachers’ feedback and return with a clearer objective. Regular visits to the CDI will help you verify information, broaden your perspective and build stronger examples.</p>
-    </div>
-    <div class="closing-actions">
-      <a class="btn btn-primary" href="methodology.html">Choose a skill to improve <span class="ar">→</span></a>
-      <a class="btn btn-ghost" href="resources.html">Explore reliable sources</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -1446,7 +1336,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">English Colles in Lyon</div>
-      <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a><a href="progress-backup.html" style="font-weight:700;text-decoration:underline">Progress</a></nav>
+      <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     </div>
     <div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div>
     <div class="foot-copy" style="margin-top:12px">🔒 <strong>Privacy:</strong> no progress data is stored on a server or transmitted elsewhere. It remains in this device's browser. You can export it and import it on another device from the <a href="progress-backup.html" style="font-weight:700;color:#c95f42 !important;text-decoration:underline !important;text-underline-offset:3px">Progress</a> page.</div> <div class="foot-copy">Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon.</div>  
@@ -1810,18 +1700,146 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
   });
   q('#argumentNext').addEventListener('click',loadArgument);
   loadArgument();
-
-  /* Surprise me */
-  q('#surpriseChallenge').addEventListener('click',function(){
-    var cards=qa('[data-challenge-card]');
-    var card=cards[Math.floor(Math.random()*cards.length)];
-    cards.forEach(function(c){c.classList.remove('is-highlighted');});
-    card.scrollIntoView({behavior:document.body.classList.contains('noanim')?'auto':'smooth',block:'center'});
-    window.setTimeout(function(){card.classList.add('is-highlighted');},200);
-  });
+  /* One challenge at a time */
+  var cards=qa('[data-challenge-card]');
+  var currentChallenge=Math.floor((new Date()-new Date(2026,0,1))/86400000)%cards.length;
+  if(currentChallenge<0) currentChallenge+=cards.length;
+  function showChallenge(index,moveFocus){
+    currentChallenge=(index+cards.length)%cards.length;
+    cards.forEach(function(card,i){
+      var active=i===currentChallenge;
+      card.classList.toggle('active',active);
+      card.setAttribute('aria-hidden',active?'false':'true');
+    });
+    var position=q('#challengePosition');
+    if(position) position.textContent=(currentChallenge+1)+' of '+cards.length;
+    if(moveFocus){
+      var activeCard=cards[currentChallenge];
+      activeCard.scrollIntoView({behavior:document.body.classList.contains('noanim')?'auto':'smooth',block:'center'});
+      window.setTimeout(function(){activeCard.classList.add('is-highlighted');},180);
+      window.setTimeout(function(){activeCard.classList.remove('is-highlighted');},1400);
+    }
+  }
+  showChallenge(currentChallenge,false);
+  q('#surpriseChallenge').addEventListener('click',function(){showChallenge(currentChallenge+1,true);});
 })();
 </script>
 
-<script src="site-core.js?v=20260715-2"></script>
+
+<script>
+/* ===== Homepage orientation, search and daily tabs ===== */
+(function(){
+  var searchData=[
+    {title:'What is a colle?',meta:'Methodology · Getting started',url:'methodology.html',badge:'M',keys:'colle format oral exam preparation'},
+    {title:'Take the methodology diagnostic',meta:'Methodology · First visit',url:'methodology.html#diagMount',badge:'M',keys:'diagnostic test first visit start'},
+    {title:'Contextualise a document',meta:'Methodology · Introduction',url:'methodology.html',badge:'M',keys:'context context background introduction contextualisation'},
+    {title:'Find a relevant key question',meta:'Methodology · Problematisation',url:'methodology.html',badge:'M',keys:'key question problematique issue no to what extent'},
+    {title:'Build an effective plan',meta:'Methodology · Structure',url:'methodology.html',badge:'M',keys:'plan outline argument parts no pros cons'},
+    {title:'Summarise a document',meta:'Methodology · Summary',url:'methodology.html',badge:'M',keys:'summary summarise main ideas essential information'},
+    {title:'Prepare my next colle',meta:'Colle Trainer · Timed practice',url:'colle-trainer.html',badge:'C',keys:'timer speaking follow up questions oral practice'},
+    {title:'Follow a guided learning plan',meta:'Guided support',url:'help.html',badge:'P',keys:'weak difficult beginner foundations missions diagnostic'},
+    {title:'Build vocabulary',meta:'Vocabulary · Chapters and review',url:'vocabulary.html',badge:'V',keys:'words expressions lexicon flashcards vocabulary'},
+    {title:'Improve grammar accuracy',meta:'Grammar · Lessons and practice',url:'grammar.html',badge:'G',keys:'grammar tense articles prepositions conditionals modal passive'},
+    {title:'Practise TH sounds',meta:'Pronunciation · Sound accuracy',url:'pronunciation.html#th-workshop',badge:'PR',keys:'th pronunciation sounds think this tongue'},
+    {title:'Work on stress and rhythm',meta:'Pronunciation · Rhythm',url:'pronunciation.html',badge:'PR',keys:'stress rhythm schwa weak forms connected speech'},
+    {title:'Improve intonation',meta:'Pronunciation · Melody',url:'pronunciation.html',badge:'PR',keys:'intonation melody voice monotone speaking'},
+    {title:'Explore the United Kingdom',meta:'Civilisation · Country atlas',url:'civilisation.html',badge:'UK',keys:'britain uk united kingdom politics society brexit'},
+    {title:'Explore the United States',meta:'Civilisation · Country atlas',url:'civilisation.html',badge:'US',keys:'usa united states america politics constitution'},
+    {title:'Explore Ireland',meta:'Civilisation · Country atlas',url:'civilisation.html',badge:'IE',keys:'ireland partition good friday agreement'},
+    {title:'Explore Canada',meta:'Civilisation · Country atlas',url:'civilisation.html',badge:'CA',keys:'canada federalism bilingualism indigenous'},
+    {title:'Explore Australia and New Zealand',meta:'Civilisation · Country atlases',url:'civilisation.html',badge:'ANZ',keys:'australia new zealand maori aboriginal'},
+    {title:'Explore India and South Africa',meta:'Civilisation · Country atlases',url:'civilisation.html',badge:'W',keys:'india south africa apartheid democracy'},
+    {title:'Review historical turning points',meta:'Timelines · Eight countries',url:'timelines.html',badge:'T',keys:'timeline dates history events chronology'},
+    {title:'Understand Brexit',meta:'Timeline and civilisation',url:'timelines.html',badge:'UK',keys:'brexit referendum european union'},
+    {title:'Read jury reports',meta:'Examiner expectations',url:'jury-reports.html',badge:'J',keys:'jury examiner expectations mistakes concours reports'},
+    {title:'Find reliable articles, podcasts and videos',meta:'Resources',url:'resources.html',badge:'R',keys:'resources news article podcast video reliable source'},
+    {title:'Export or import my progress',meta:'My progress',url:'progress-backup.html',badge:'P',keys:'progress backup export import save device'}
+  ];
+
+  var input=document.getElementById('siteSearch');
+  var results=document.getElementById('searchSuggestions');
+  var clear=document.getElementById('clearSearch');
+  var activeIndex=-1;
+  var visible=[];
+  function normalise(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function saveRoute(url,title){
+    LS.set('eclyon_last_route',JSON.stringify({url:url,title:title||'My last route'}));
+    refreshContinue();
+  }
+  function refreshContinue(){
+    var link=document.getElementById('continueRoute');
+    var raw=LS.get('eclyon_last_route','');
+    if(!raw){link.hidden=true;return;}
+    try{
+      var data=JSON.parse(raw);
+      if(!data.url){link.hidden=true;return;}
+      link.href=data.url;
+      link.innerHTML='Continue: '+(data.title||'my last route')+' <span class="ar" aria-hidden="true">→</span>';
+      link.hidden=false;
+    }catch(e){link.hidden=true;}
+  }
+  document.querySelectorAll('[data-track-route]').forEach(function(link){
+    link.addEventListener('click',function(){saveRoute(link.getAttribute('href'),link.dataset.routeTitle||link.textContent.trim());});
+  });
+  refreshContinue();
+
+  function render(query){
+    var q=normalise(query.trim());
+    visible=(q?searchData.filter(function(item){return normalise(item.title+' '+item.meta+' '+item.keys).indexOf(q)!==-1;}):searchData.slice(0,6)).slice(0,8);
+    activeIndex=-1;
+    results.innerHTML='';
+    if(!visible.length){
+      results.innerHTML='<div class="search-empty">No exact suggestion yet. Try a broader word such as <strong>grammar</strong>, <strong>colle</strong> or <strong>Brexit</strong>.</div>';
+    }else{
+      visible.forEach(function(item,index){
+        var a=document.createElement('a');
+        a.href=item.url;
+        a.className='search-result';
+        a.setAttribute('role','option');
+        a.dataset.index=index;
+        a.innerHTML='<span class="sr-badge">'+item.badge+'</span><span class="sr-copy"><span class="sr-title">'+item.title+'</span><span class="sr-meta">'+item.meta+'</span></span>';
+        a.addEventListener('click',function(){saveRoute(item.url,item.title);});
+        results.appendChild(a);
+      });
+    }
+    results.hidden=false;
+    input.setAttribute('aria-expanded','true');
+  }
+  function closeResults(){results.hidden=true;input.setAttribute('aria-expanded','false');activeIndex=-1;}
+  function updateActive(){
+    var items=results.querySelectorAll('.search-result');
+    items.forEach(function(item,i){item.classList.toggle('active',i===activeIndex);});
+    if(activeIndex>=0&&items[activeIndex]) items[activeIndex].scrollIntoView({block:'nearest'});
+  }
+  input.addEventListener('focus',function(){render(input.value);});
+  input.addEventListener('input',function(){clear.hidden=!input.value;render(input.value);});
+  input.addEventListener('keydown',function(e){
+    var items=results.querySelectorAll('.search-result');
+    if(e.key==='ArrowDown'&&items.length){e.preventDefault();activeIndex=(activeIndex+1)%items.length;updateActive();}
+    else if(e.key==='ArrowUp'&&items.length){e.preventDefault();activeIndex=(activeIndex-1+items.length)%items.length;updateActive();}
+    else if(e.key==='Enter'&&activeIndex>=0&&items[activeIndex]){e.preventDefault();items[activeIndex].click();}
+    else if(e.key==='Escape'){closeResults();input.blur();}
+  });
+  clear.addEventListener('click',function(){input.value='';clear.hidden=true;render('');input.focus();});
+  document.addEventListener('click',function(e){if(!e.target.closest('.home-search'))closeResults();});
+
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('[data-daily-tab]'));
+  var panels=Array.prototype.slice.call(document.querySelectorAll('[data-daily-panel]'));
+  function panelReady(name){
+    if(name==='word') return !!document.getElementById('wotdTerm').textContent.trim();
+    if(name==='civi') return !!document.getElementById('civiFact').textContent.trim();
+    return true;
+  }
+  function showDaily(name){
+    if(!panelReady(name)) name='news';
+    tabs.forEach(function(tab){var on=tab.dataset.dailyTab===name;tab.classList.toggle('on',on);tab.setAttribute('aria-selected',on?'true':'false');});
+    panels.forEach(function(panel){panel.hidden=panel.dataset.dailyPanel!==name;});
+    LS.set('eclyon_home_daily',name);
+  }
+  tabs.forEach(function(tab){tab.addEventListener('click',function(){showDaily(tab.dataset.dailyTab);});});
+  showDaily(LS.get('eclyon_home_daily','news'));
+})();
+</script>
+<script src="site-core.js?v=20260722-1"></script>
 </body>
 </html>
