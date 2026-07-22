@@ -1,0 +1,322 @@
+[
+  {
+    "year": -65000,
+    "date": "At least 65,000 years ago",
+    "era": "first",
+    "tag": "First Peoples",
+    "title": "First Peoples establish enduring cultures",
+    "summary": "Aboriginal and Torres Strait Islander peoples develop the world’s oldest continuing cultures.",
+    "what": "Hundreds of nations created distinct languages, laws, economies and relationships with Country.",
+    "why": "Australian history cannot begin in 1788 without reproducing the logic of terra nullius.",
+    "keywords": [
+      "First Nations",
+      "Country",
+      "continuous cultures"
+    ],
+    "colle": "How should a settler nation rewrite its founding story?"
+  },
+  {
+    "year": 1770,
+    "date": "1770",
+    "era": "colonial",
+    "tag": "Colonisation & expansion",
+    "title": "Cook claims the east coast for Britain",
+    "summary": "British imperial claims precede settlement.",
+    "what": "James Cook mapped the east coast and claimed it for Britain as New South Wales.",
+    "why": "The claim ignored existing sovereignty and prepared the way for colonisation.",
+    "keywords": [
+      "James Cook",
+      "British Empire",
+      "terra nullius"
+    ],
+    "colle": "Can exploration be separated from conquest?"
+  },
+  {
+    "year": 1788,
+    "date": "1788",
+    "era": "colonial",
+    "tag": "Colonisation & expansion",
+    "title": "The First Fleet",
+    "summary": "A penal colony is established at Sydney Cove.",
+    "what": "British convicts, marines and officials arrived and founded New South Wales.",
+    "why": "The event is celebrated as national origins by some and remembered as invasion by many Indigenous Australians.",
+    "keywords": [
+      "First Fleet",
+      "convict colony",
+      "Invasion Day"
+    ],
+    "colle": "Should Australia Day remain on 26 January?"
+  },
+  {
+    "year": 1851,
+    "date": "1851",
+    "era": "colonial",
+    "tag": "Colonisation & expansion",
+    "title": "The gold rushes",
+    "summary": "Migration and wealth transform the colonies.",
+    "what": "Gold discoveries attracted migrants from around the world and accelerated urban growth.",
+    "why": "The period promoted social mobility but also racism, environmental damage and conflict over immigration.",
+    "keywords": [
+      "gold rush",
+      "migration",
+      "prosperity"
+    ],
+    "colle": "Did the gold rush create a more democratic society?"
+  },
+  {
+    "year": 1854,
+    "date": "1854",
+    "era": "colonial",
+    "tag": "Colonisation & expansion",
+    "title": "The Eureka Stockade",
+    "summary": "Miners rebel against colonial authority.",
+    "what": "Gold miners fought troops after demanding fair licences and political representation.",
+    "why": "Eureka became a flexible national symbol claimed by democrats, labour activists and nationalists.",
+    "keywords": [
+      "Eureka Stockade",
+      "miners",
+      "democracy"
+    ],
+    "colle": "Why can one rebellion support very different political myths?"
+  },
+  {
+    "year": 1901,
+    "date": "1901",
+    "era": "nation",
+    "tag": "Federation & nation-building",
+    "title": "Federation and White Australia",
+    "summary": "The Commonwealth is created alongside racial exclusion.",
+    "what": "Six colonies federated, while the Immigration Restriction Act became the foundation of the White Australia policy.",
+    "why": "The new democracy combined advanced political institutions with an explicitly racial vision of nationhood.",
+    "keywords": [
+      "Federation",
+      "White Australia",
+      "Commonwealth"
+    ],
+    "colle": "Was racism built into the Australian nation?"
+  },
+  {
+    "year": 1915,
+    "date": "1915",
+    "era": "nation",
+    "tag": "Federation & nation-building",
+    "title": "Gallipoli and ANZAC",
+    "summary": "Military defeat becomes a founding national myth.",
+    "what": "Australian and New Zealand forces suffered heavy losses in the failed Gallipoli campaign.",
+    "why": "ANZAC remembrance celebrates sacrifice and mateship but can overshadow Indigenous history and other wartime experiences.",
+    "keywords": [
+      "ANZAC",
+      "Gallipoli",
+      "mateship"
+    ],
+    "colle": "Does ANZAC unite Australia or narrow its national story?"
+  },
+  {
+    "year": 1942,
+    "date": "1942",
+    "era": "nation",
+    "tag": "Federation & nation-building",
+    "title": "The fall of Singapore and the turn to America",
+    "summary": "Britain can no longer guarantee Australia’s security.",
+    "what": "Japan captured Singapore and Australia increasingly relied on the United States during the Pacific War.",
+    "why": "The strategic pivot reshaped foreign policy while Britain remained culturally important.",
+    "keywords": [
+      "fall of Singapore",
+      "US alliance",
+      "Pacific War"
+    ],
+    "colle": "Is Australia too dependent on the United States?"
+  },
+  {
+    "year": 1962,
+    "date": "1962",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "Federal voting rights for Indigenous Australians",
+    "summary": "Remaining federal exclusions are removed.",
+    "what": "Legislation gave all Aboriginal and Torres Strait Islander adults the option to enrol and vote in federal elections.",
+    "why": "Formal political inclusion advanced, though enrolment did not become compulsory for Indigenous citizens until later.",
+    "keywords": [
+      "Indigenous voting rights",
+      "franchise",
+      "citizenship"
+    ],
+    "colle": "Does formal equality guarantee political power?"
+  },
+  {
+    "year": 1967,
+    "date": "1967",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "The 1967 referendum",
+    "summary": "A huge majority approves constitutional change concerning Indigenous Australians.",
+    "what": "Voters allowed the Commonwealth to make laws for Aboriginal people and removed their exclusion from population counts.",
+    "why": "The referendum became a symbol of recognition, although it did not grant citizenship or voting rights.",
+    "keywords": [
+      "1967 referendum",
+      "constitutional recognition",
+      "Indigenous rights"
+    ],
+    "colle": "Why do national myths sometimes simplify legal change?"
+  },
+  {
+    "year": 1973,
+    "date": "1973",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "The White Australia policy ends",
+    "summary": "Immigration policy is formally made non-racial.",
+    "what": "The Whitlam government completed the dismantling of discriminatory selection rules and promoted multiculturalism.",
+    "why": "The change transformed Australia’s population and its relationship with Asia.",
+    "keywords": [
+      "multiculturalism",
+      "immigration",
+      "Asia-Pacific"
+    ],
+    "colle": "Has multiculturalism replaced Australia’s racial past?"
+  },
+  {
+    "year": 1975,
+    "date": "1975",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "The Dismissal",
+    "summary": "The Governor-General removes the Prime Minister.",
+    "what": "John Kerr dismissed Gough Whitlam during a constitutional crisis over supply.",
+    "why": "The event demonstrated that the Crown’s reserve powers can still have decisive political effects.",
+    "keywords": [
+      "the Dismissal",
+      "Governor-General",
+      "reserve powers"
+    ],
+    "colle": "Should Australia replace the monarchy with a republic?"
+  },
+  {
+    "year": 1986,
+    "date": "1986",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "The Australia Act",
+    "summary": "Remaining constitutional links with Britain are ended.",
+    "what": "Australian and British legislation removed the UK Parliament’s final powers over Australian law and appeals.",
+    "why": "It completed legal independence without changing the monarchy.",
+    "keywords": [
+      "Australia Act",
+      "legal independence",
+      "monarchy"
+    ],
+    "colle": "Can a country be fully independent while sharing a monarch?"
+  },
+  {
+    "year": 1992,
+    "date": "1992",
+    "era": "rights",
+    "tag": "Rights & recognition",
+    "title": "The Mabo decision",
+    "summary": "The High Court rejects terra nullius.",
+    "what": "The Court recognised native title and the Meriam people’s continuing connection to land.",
+    "why": "Mabo transformed property law and forced the country to confront the legal fiction behind colonisation.",
+    "keywords": [
+      "Mabo",
+      "native title",
+      "terra nullius"
+    ],
+    "colle": "Can courts repair historical injustice?"
+  },
+  {
+    "year": 1996,
+    "date": "1996",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "Port Arthur and national gun reform",
+    "summary": "Mass murder produces rapid bipartisan legislation.",
+    "what": "After 35 people were killed in Tasmania, governments agreed to strict firearms controls and a buyback.",
+    "why": "The response is often cited internationally as evidence that political consensus can reduce gun violence.",
+    "keywords": [
+      "Port Arthur",
+      "gun control",
+      "National Firearms Agreement"
+    ],
+    "colle": "Why was Australia able to adopt gun reform when the US has not?"
+  },
+  {
+    "year": 1999,
+    "date": "1999",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "The republic referendum",
+    "summary": "Australians vote to retain the monarchy.",
+    "what": "The proposed model for a president appointed by Parliament was rejected by 54.9% of voters.",
+    "why": "The result showed that support for a republic does not automatically produce agreement on its form.",
+    "keywords": [
+      "republic referendum",
+      "monarchy",
+      "constitutional reform"
+    ],
+    "colle": "Could a future republic referendum succeed?"
+  },
+  {
+    "year": 2008,
+    "date": "2008",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "The National Apology",
+    "summary": "The Prime Minister apologises to the Stolen Generations.",
+    "what": "Kevin Rudd acknowledged policies that removed Indigenous children from families.",
+    "why": "The apology was a landmark in recognition, but gaps in health, education, incarceration and life expectancy persisted.",
+    "keywords": [
+      "Stolen Generations",
+      "National Apology",
+      "reconciliation"
+    ],
+    "colle": "Can symbolic apology matter without material repair?"
+  },
+  {
+    "year": 2017,
+    "date": "2017",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "Marriage equality",
+    "summary": "Parliament legalises same-sex marriage after a postal survey.",
+    "what": "A national survey returned a clear Yes vote and legislation followed.",
+    "why": "The episode showed both rapid social liberalisation and controversy over using a non-binding public vote for minority rights.",
+    "keywords": [
+      "marriage equality",
+      "postal survey",
+      "LGBT rights"
+    ],
+    "colle": "Should minority rights be put to a popular vote?"
+  },
+  {
+    "year": 2023,
+    "date": "2023",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "The Voice referendum",
+    "summary": "Voters reject an Indigenous Voice to Parliament.",
+    "what": "The proposed constitutional advisory body failed nationally and in every state.",
+    "why": "The result exposed uncertainty, misinformation and deep disagreement over recognition and practical reform.",
+    "keywords": [
+      "Voice to Parliament",
+      "referendum",
+      "Indigenous recognition"
+    ],
+    "colle": "Why did the Voice referendum fail?"
+  },
+  {
+    "year": 2025,
+    "date": "2025",
+    "era": "contemporary",
+    "tag": "Contemporary Australia",
+    "title": "Labor wins a second term with an enlarged majority",
+    "summary": "Anthony Albanese is returned decisively.",
+    "what": "The Australian Labor Party won 94 of 150 House seats in the federal election.",
+    "why": "The result strengthened Labor while cost of living, housing, climate policy and the future of the Coalition remained central debates.",
+    "keywords": [
+      "2025 election",
+      "Anthony Albanese",
+      "Labor majority"
+    ],
+    "colle": "Does a large parliamentary majority make bold reform more likely?"
+  }
+]

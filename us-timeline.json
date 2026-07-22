@@ -1,0 +1,498 @@
+[
+  {
+    "year": 1607,
+    "date": "1607",
+    "era": "origins",
+    "tag": "Colonies & foundations",
+    "title": "Jamestown is founded",
+    "summary": "The first permanent English settlement takes root in Virginia.",
+    "what": "The Virginia Company established Jamestown as a commercial colony.",
+    "why": "It began the expansion of English settlement and the dispossession of Indigenous peoples along the Atlantic coast.",
+    "keywords": [
+      "Jamestown",
+      "settler colonialism",
+      "Virginia"
+    ],
+    "colle": "Can a nation celebrate its origins without hiding colonial violence?"
+  },
+  {
+    "year": 1619,
+    "date": "1619",
+    "era": "origins",
+    "tag": "Colonies & foundations",
+    "title": "Representative government and forced labour in Virginia",
+    "summary": "Two foundations of colonial America emerge in the same year.",
+    "what": "Virginia’s first representative assembly met, while the first recorded Africans in English Virginia arrived under coercive conditions.",
+    "why": "The date captures the contradiction between self-government for some and racial exploitation for others.",
+    "keywords": [
+      "House of Burgesses",
+      "racial slavery",
+      "Virginia"
+    ],
+    "colle": "Was inequality built into American democracy from the beginning?"
+  },
+  {
+    "year": 1776,
+    "date": "1776",
+    "era": "origins",
+    "tag": "Colonies & foundations",
+    "title": "Declaration of Independence",
+    "summary": "The colonies proclaim a universal language of rights.",
+    "what": "The Declaration announced separation from Britain and asserted that all people possess unalienable rights.",
+    "why": "Its promise of equality remains the yardstick for debates about citizenship, race and justice.",
+    "keywords": [
+      "independence",
+      "natural rights",
+      "equality"
+    ],
+    "colle": "Has America lived up to its founding promise of equality?"
+  },
+  {
+    "year": 1787,
+    "date": "1787",
+    "era": "origins",
+    "tag": "Colonies & foundations",
+    "title": "The Constitution",
+    "summary": "Federalism and checks and balances become the political framework.",
+    "what": "Delegates created a stronger federal government divided among executive, legislative and judicial branches.",
+    "why": "Nearly every modern institutional dispute turns on how this eighteenth-century document should be interpreted.",
+    "keywords": [
+      "federalism",
+      "checks and balances",
+      "separation of powers"
+    ],
+    "colle": "Are checks and balances still working?"
+  },
+  {
+    "year": 1791,
+    "date": "1791",
+    "era": "origins",
+    "tag": "Colonies & foundations",
+    "title": "The Bill of Rights",
+    "summary": "Civil liberties are added to the Constitution.",
+    "what": "The first ten amendments protected freedoms such as speech, religion, due process and the right to bear arms.",
+    "why": "Their interpretation remains central to arguments about individual liberty and public safety.",
+    "keywords": [
+      "First Amendment",
+      "Second Amendment",
+      "civil liberties"
+    ],
+    "colle": "Are constitutional rights too difficult to adapt to modern society?"
+  },
+  {
+    "year": 1803,
+    "date": "1803",
+    "era": "expansion",
+    "tag": "Expansion & conflict",
+    "title": "The Louisiana Purchase",
+    "summary": "The country doubles in size.",
+    "what": "The United States bought a vast territory from France and accelerated westward expansion.",
+    "why": "Expansion strengthened the republic but intensified Indigenous dispossession and conflict over the spread of slavery.",
+    "keywords": [
+      "westward expansion",
+      "Manifest Destiny",
+      "Indigenous dispossession"
+    ],
+    "colle": "Can territorial expansion ever be separated from violence?"
+  },
+  {
+    "year": 1830,
+    "date": "1830s",
+    "era": "expansion",
+    "tag": "Expansion & conflict",
+    "title": "Indian Removal",
+    "summary": "Federal policy forces Indigenous nations westward.",
+    "what": "The Indian Removal Act enabled the expulsion of Native peoples from their homelands, culminating in the Trail of Tears.",
+    "why": "It exposes the gap between democratic ideals and settler colonialism.",
+    "keywords": [
+      "Trail of Tears",
+      "Native Americans",
+      "forced removal"
+    ],
+    "colle": "How should the United States address the legacy of Indigenous dispossession?"
+  },
+  {
+    "year": 1861,
+    "date": "1861–65",
+    "era": "expansion",
+    "tag": "Expansion & conflict",
+    "title": "The Civil War",
+    "summary": "The Union survives a war fought over slavery and federal power.",
+    "what": "Eleven slaveholding states seceded; Union victory preserved the country and destroyed legal slavery.",
+    "why": "The conflict remains central to disputes over race, states’ rights and national memory.",
+    "keywords": [
+      "Civil War",
+      "Union",
+      "Confederacy"
+    ],
+    "colle": "Why does the Civil War remain politically alive?"
+  },
+  {
+    "year": 1865,
+    "date": "1865",
+    "era": "expansion",
+    "tag": "Expansion & conflict",
+    "title": "The Thirteenth Amendment",
+    "summary": "Slavery is abolished nationwide.",
+    "what": "The amendment prohibited slavery and involuntary servitude, except as punishment for crime.",
+    "why": "Abolition ended legal bondage but did not end racial domination or economic exploitation.",
+    "keywords": [
+      "abolition",
+      "Thirteenth Amendment",
+      "racial justice"
+    ],
+    "colle": "Did emancipation create genuine freedom?"
+  },
+  {
+    "year": 1868,
+    "date": "1868",
+    "era": "expansion",
+    "tag": "Expansion & conflict",
+    "title": "The Fourteenth Amendment",
+    "summary": "Citizenship and equal protection enter the Constitution.",
+    "what": "The amendment defined national citizenship and required states to provide due process and equal protection.",
+    "why": "It became the constitutional foundation for civil-rights litigation, including school desegregation and marriage equality.",
+    "keywords": [
+      "equal protection",
+      "citizenship",
+      "due process"
+    ],
+    "colle": "Should courts use the Fourteenth Amendment to expand rights?"
+  },
+  {
+    "year": 1890,
+    "date": "c. 1890–1920",
+    "era": "industrial",
+    "tag": "Industrial America",
+    "title": "Industrialisation and mass immigration",
+    "summary": "The United States becomes an urban industrial power.",
+    "what": "Factories, railways and corporations expanded while millions of immigrants arrived and labour conflict intensified.",
+    "why": "The period created enormous wealth but also inequality, segregation and pressure for progressive reform.",
+    "keywords": [
+      "industrialisation",
+      "immigration",
+      "Gilded Age"
+    ],
+    "colle": "Does economic dynamism inevitably produce inequality?"
+  },
+  {
+    "year": 1929,
+    "date": "1929",
+    "era": "crisis",
+    "tag": "Crisis & global power",
+    "title": "The Wall Street Crash",
+    "summary": "Financial collapse begins the Great Depression.",
+    "what": "Bank failures, unemployment and falling production devastated households and businesses.",
+    "why": "The crisis discredited laissez-faire assumptions and expanded expectations of federal responsibility.",
+    "keywords": [
+      "Great Depression",
+      "unemployment",
+      "financial regulation"
+    ],
+    "colle": "How much should government intervene during an economic crisis?"
+  },
+  {
+    "year": 1933,
+    "date": "1933–39",
+    "era": "crisis",
+    "tag": "Crisis & global power",
+    "title": "The New Deal",
+    "summary": "Franklin D. Roosevelt expands the federal state.",
+    "what": "Public works, social insurance, labour protections and financial regulation sought relief, recovery and reform.",
+    "why": "The New Deal created a lasting debate over whether federal power protects freedom or threatens it.",
+    "keywords": [
+      "New Deal",
+      "Social Security",
+      "federal government"
+    ],
+    "colle": "Did the New Deal save capitalism by reforming it?"
+  },
+  {
+    "year": 1941,
+    "date": "1941",
+    "era": "crisis",
+    "tag": "Crisis & global power",
+    "title": "Pearl Harbor and entry into WWII",
+    "summary": "The United States enters the Second World War.",
+    "what": "Japan’s attack on Pearl Harbor brought the country into a global conflict.",
+    "why": "Wartime mobilisation ended the Depression, expanded federal power and accelerated America’s rise to superpower status.",
+    "keywords": [
+      "Pearl Harbor",
+      "wartime mobilisation",
+      "superpower"
+    ],
+    "colle": "How did war transform the role of the United States?"
+  },
+  {
+    "year": 1945,
+    "date": "1945",
+    "era": "crisis",
+    "tag": "Crisis & global power",
+    "title": "The atomic bomb and the post-war order",
+    "summary": "The United States emerges as a global superpower.",
+    "what": "Atomic bombs were dropped on Hiroshima and Nagasaki, and the US helped design institutions such as the United Nations.",
+    "why": "The moment began the nuclear age and a permanent American leadership role in world affairs.",
+    "keywords": [
+      "nuclear weapons",
+      "United Nations",
+      "global leadership"
+    ],
+    "colle": "Can the use of atomic weapons ever be justified?"
+  },
+  {
+    "year": 1954,
+    "date": "1954",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "Brown v. Board of Education",
+    "summary": "The Supreme Court rejects segregated public schools.",
+    "what": "The Court ruled that separate educational facilities are inherently unequal.",
+    "why": "The decision gave constitutional force to the Civil Rights Movement, though implementation met fierce resistance.",
+    "keywords": [
+      "school desegregation",
+      "Supreme Court",
+      "equal protection"
+    ],
+    "colle": "Can court decisions change society without political enforcement?"
+  },
+  {
+    "year": 1963,
+    "date": "1963",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "The March on Washington",
+    "summary": "Martin Luther King Jr delivers “I Have a Dream”.",
+    "what": "A huge interracial demonstration demanded civil and economic rights.",
+    "why": "The speech became a moral reference point, but its radical demands for economic justice are often softened in public memory.",
+    "keywords": [
+      "Martin Luther King Jr",
+      "March on Washington",
+      "racial equality"
+    ],
+    "colle": "Has the dream of racial equality been achieved?"
+  },
+  {
+    "year": 1964,
+    "date": "1964",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "The Civil Rights Act",
+    "summary": "Federal law attacks segregation and discrimination.",
+    "what": "The Act prohibited discrimination in public accommodations and employment on grounds including race, colour, religion, sex and national origin.",
+    "why": "It marked a decisive federal intervention against Jim Crow.",
+    "keywords": [
+      "Civil Rights Act",
+      "desegregation",
+      "employment discrimination"
+    ],
+    "colle": "Is anti-discrimination law enough to produce equality?"
+  },
+  {
+    "year": 1965,
+    "date": "1965",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "The Voting Rights Act",
+    "summary": "Federal power protects access to the ballot.",
+    "what": "The Act targeted racial barriers such as literacy tests and authorised federal oversight in jurisdictions with histories of discrimination.",
+    "why": "Later court decisions and state laws revived debate over how voting rights should be protected.",
+    "keywords": [
+      "voting rights",
+      "Jim Crow",
+      "voter suppression"
+    ],
+    "colle": "Is voting access equally protected across the United States?"
+  },
+  {
+    "year": 1969,
+    "date": "1969",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "The Moon landing",
+    "summary": "Apollo 11 places humans on the Moon.",
+    "what": "Neil Armstrong and Buzz Aldrin walked on the lunar surface during the Cold War space race.",
+    "why": "The achievement symbolised technological ambition, federal investment and American soft power.",
+    "keywords": [
+      "Apollo 11",
+      "space race",
+      "innovation"
+    ],
+    "colle": "Can large public projects still unite a divided nation?"
+  },
+  {
+    "year": 1974,
+    "date": "1974",
+    "era": "rights",
+    "tag": "Civil rights & social change",
+    "title": "Watergate and Nixon’s resignation",
+    "summary": "A president resigns after abuse of power.",
+    "what": "Investigations into the Watergate break-in exposed obstruction and misuse of executive authority.",
+    "why": "The scandal strengthened oversight but also deepened long-term distrust of institutions.",
+    "keywords": [
+      "Watergate",
+      "executive power",
+      "accountability"
+    ],
+    "colle": "Can democratic institutions effectively restrain a president?"
+  },
+  {
+    "year": 1980,
+    "date": "1980",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "The Reagan revolution",
+    "summary": "Conservatism reshapes national politics.",
+    "what": "Ronald Reagan promoted tax cuts, deregulation, military strength and a smaller domestic role for government.",
+    "why": "Reaganism shifted political debate to the right and still shapes arguments about taxes, welfare and national identity.",
+    "keywords": [
+      "Reaganomics",
+      "conservatism",
+      "deregulation"
+    ],
+    "colle": "Did Reagan restore confidence or increase inequality?"
+  },
+  {
+    "year": 2001,
+    "date": "2001",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "The 9/11 attacks",
+    "summary": "Terrorist attacks reshape security and foreign policy.",
+    "what": "Al-Qaeda attacks killed nearly 3,000 people and prompted wars in Afghanistan and Iraq.",
+    "why": "The “war on terror” expanded surveillance and executive power while raising enduring questions about civil liberties.",
+    "keywords": [
+      "9/11",
+      "war on terror",
+      "Homeland Security"
+    ],
+    "colle": "Did the response to 9/11 sacrifice too much liberty for security?"
+  },
+  {
+    "year": 2008,
+    "date": "2008",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Financial crisis and Obama’s election",
+    "summary": "Economic collapse coincides with a historic election.",
+    "what": "A severe financial crisis triggered bailouts and recession, while Barack Obama became the first Black president.",
+    "why": "The year symbolised both racial progress and anger at economic inequality and political elites.",
+    "keywords": [
+      "Barack Obama",
+      "financial crisis",
+      "racial progress"
+    ],
+    "colle": "Did Obama’s election mark a post-racial turning point?"
+  },
+  {
+    "year": 2010,
+    "date": "2010",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "The Affordable Care Act",
+    "summary": "The federal government expands health-insurance coverage.",
+    "what": "“Obamacare” created marketplaces, subsidies and protections for people with pre-existing conditions.",
+    "why": "Healthcare became a defining ideological battle over rights, markets and federal authority.",
+    "keywords": [
+      "Obamacare",
+      "health insurance",
+      "federal reform"
+    ],
+    "colle": "Should healthcare be treated as a right?"
+  },
+  {
+    "year": 2015,
+    "date": "2015",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Obergefell v. Hodges",
+    "summary": "Same-sex marriage becomes a constitutional right.",
+    "what": "The Supreme Court required all states to license and recognise same-sex marriages.",
+    "why": "The ruling marked rapid social change and intensified debate over judicial power and religious liberty.",
+    "keywords": [
+      "marriage equality",
+      "LGBT rights",
+      "Supreme Court"
+    ],
+    "colle": "Should fundamental rights depend on court rulings?"
+  },
+  {
+    "year": 2020,
+    "date": "2020",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Pandemic, George Floyd and mass protest",
+    "summary": "A health crisis and racial reckoning collide.",
+    "what": "COVID-19 caused mass death and economic disruption, while George Floyd’s murder sparked nationwide Black Lives Matter protests.",
+    "why": "The year exposed inequalities in health, policing and political trust.",
+    "keywords": [
+      "COVID-19",
+      "Black Lives Matter",
+      "police reform"
+    ],
+    "colle": "Why did the pandemic deepen America’s political divisions?"
+  },
+  {
+    "year": 2021,
+    "date": "6 January 2021",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "The Capitol attack",
+    "summary": "A mob attempts to disrupt the certification of the presidential election.",
+    "what": "Supporters of Donald Trump stormed the Capitol as Congress counted electoral votes.",
+    "why": "The attack made election denial and the peaceful transfer of power central tests of American democracy.",
+    "keywords": [
+      "January 6",
+      "election denial",
+      "peaceful transfer of power"
+    ],
+    "colle": "How resilient is American democracy when electoral legitimacy is rejected?"
+  },
+  {
+    "year": 2022,
+    "date": "2022",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Dobbs overturns Roe v. Wade",
+    "summary": "Federal constitutional protection for abortion ends.",
+    "what": "The Supreme Court returned abortion regulation to elected governments, producing sharply different state laws.",
+    "why": "The decision intensified the culture wars and highlighted the political power of judicial appointments.",
+    "keywords": [
+      "Dobbs",
+      "abortion",
+      "states’ rights"
+    ],
+    "colle": "Why does abortion remain such a defining political issue?"
+  },
+  {
+    "year": 2024,
+    "date": "2024",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Donald Trump wins a second, non-consecutive term",
+    "summary": "Voters return Trump to the White House.",
+    "what": "Trump defeated Kamala Harris and Republicans also won control of Congress.",
+    "why": "The result confirmed the strength of populist nationalism and raised new questions about presidential power, institutions and polarisation.",
+    "keywords": [
+      "2024 election",
+      "Donald Trump",
+      "polarisation"
+    ],
+    "colle": "What explains the durability of Trumpism?"
+  },
+  {
+    "year": 2025,
+    "date": "20 January 2025",
+    "era": "contemporary",
+    "tag": "Contemporary America",
+    "title": "Trump begins his second presidency",
+    "summary": "Donald Trump is sworn in as the 47th president.",
+    "what": "The administration began with an “America First” programme and extensive use of executive action.",
+    "why": "The return of a former president after defeat and impeachment is unprecedented in modern US politics and tests constitutional norms.",
+    "keywords": [
+      "second Trump presidency",
+      "executive orders",
+      "America First"
+    ],
+    "colle": "Is the modern presidency becoming too powerful?"
+  }
+]

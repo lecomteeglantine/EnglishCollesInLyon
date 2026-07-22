@@ -1,0 +1,354 @@
+[
+  {
+    "year": -1000,
+    "date": "Before European colonisation",
+    "era": "indigenous",
+    "tag": "Indigenous foundations",
+    "title": "Diverse Indigenous nations flourish",
+    "summary": "First Nations, Inuit and Métis histories predate Canada by millennia.",
+    "what": "Complex societies developed distinct political systems, economies, languages and relationships with the land.",
+    "why": "Treaty rights, sovereignty and reconciliation cannot be understood if Canadian history begins with Europeans.",
+    "keywords": [
+      "First Nations",
+      "Inuit",
+      "Métis"
+    ],
+    "colle": "Can a settler state fully recognise Indigenous sovereignty?"
+  },
+  {
+    "year": 1608,
+    "date": "1608",
+    "era": "colonial",
+    "tag": "French & British North America",
+    "title": "Quebec City is founded",
+    "summary": "New France gains a permanent political centre.",
+    "what": "Samuel de Champlain established Quebec as a trading and administrative settlement.",
+    "why": "French language, civil law and Catholic culture became enduring foundations of Quebec’s distinct identity.",
+    "keywords": [
+      "New France",
+      "Quebec",
+      "French Canada"
+    ],
+    "colle": "Is Quebec a nation within Canada?"
+  },
+  {
+    "year": 1759,
+    "date": "1759",
+    "era": "colonial",
+    "tag": "French & British North America",
+    "title": "The Battle of the Plains of Abraham",
+    "summary": "British victory decides the fate of New France.",
+    "what": "British forces defeated the French outside Quebec City during the Seven Years’ War.",
+    "why": "The conquest created a bilingual and bicultural political problem that still shapes federalism.",
+    "keywords": [
+      "British conquest",
+      "Plains of Abraham",
+      "French Canada"
+    ],
+    "colle": "Did conquest create or merely reveal Canada’s dual identity?"
+  },
+  {
+    "year": 1763,
+    "date": "1763",
+    "era": "colonial",
+    "tag": "French & British North America",
+    "title": "The Royal Proclamation",
+    "summary": "The Crown sets rules for Indigenous land acquisition.",
+    "what": "The proclamation recognised that Indigenous lands could be ceded only to the Crown through treaties.",
+    "why": "It remains a constitutional reference in Indigenous rights claims, despite repeated violations in practice.",
+    "keywords": [
+      "Royal Proclamation",
+      "treaties",
+      "Indigenous land rights"
+    ],
+    "colle": "Can historical treaties constrain a modern state?"
+  },
+  {
+    "year": 1812,
+    "date": "1812–14",
+    "era": "colonial",
+    "tag": "French & British North America",
+    "title": "The War of 1812",
+    "summary": "British North America resists invasion from the United States.",
+    "what": "British forces, colonial militias and Indigenous allies defended the colonies during war with the US.",
+    "why": "The conflict became a nation-building story, though it often underplays the decisive role and later betrayal of Indigenous allies.",
+    "keywords": [
+      "War of 1812",
+      "United States",
+      "Indigenous allies"
+    ],
+    "colle": "How are national myths created from ambiguous wars?"
+  },
+  {
+    "year": 1867,
+    "date": "1867",
+    "era": "nation",
+    "tag": "Confederation & nation-building",
+    "title": "Confederation",
+    "summary": "Canada becomes a federal dominion.",
+    "what": "Ontario, Quebec, Nova Scotia and New Brunswick formed a federation under the British North America Act.",
+    "why": "Federalism was designed to combine unity with regional and linguistic diversity.",
+    "keywords": [
+      "Confederation",
+      "federalism",
+      "Dominion"
+    ],
+    "colle": "Does Canadian federalism protect diversity or produce permanent conflict?"
+  },
+  {
+    "year": 1885,
+    "date": "1885",
+    "era": "nation",
+    "tag": "Confederation & nation-building",
+    "title": "The railway and the North-West Resistance",
+    "summary": "Continental expansion is consolidated through force and infrastructure.",
+    "what": "The Canadian Pacific Railway was completed as Métis and First Nations resistance was defeated and Louis Riel executed.",
+    "why": "The year links national development to Indigenous dispossession and French-English tensions.",
+    "keywords": [
+      "Canadian Pacific Railway",
+      "Louis Riel",
+      "Métis"
+    ],
+    "colle": "Can nation-building be separated from colonial violence?"
+  },
+  {
+    "year": 1917,
+    "date": "1917",
+    "era": "nation",
+    "tag": "Confederation & nation-building",
+    "title": "Vimy Ridge and the conscription crisis",
+    "summary": "War strengthens national identity but divides French and English Canada.",
+    "what": "Canadian forces captured Vimy Ridge, while compulsory military service provoked fierce opposition in Quebec.",
+    "why": "The contrast shows how the same war can unite a country symbolically and divide it politically.",
+    "keywords": [
+      "Vimy Ridge",
+      "conscription crisis",
+      "French-English relations"
+    ],
+    "colle": "Do wars create national unity or expose national divisions?"
+  },
+  {
+    "year": 1931,
+    "date": "1931",
+    "era": "nation",
+    "tag": "Confederation & nation-building",
+    "title": "The Statute of Westminster",
+    "summary": "Canada gains legislative autonomy from Britain.",
+    "what": "The statute recognised the equality of self-governing dominions with the United Kingdom.",
+    "why": "It marked a major stage in Canada’s gradual, peaceful path to full sovereignty.",
+    "keywords": [
+      "Statute of Westminster",
+      "sovereignty",
+      "Commonwealth"
+    ],
+    "colle": "Why was Canadian independence so gradual?"
+  },
+  {
+    "year": 1947,
+    "date": "1947",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "Canadian citizenship is created",
+    "summary": "Canadians receive a distinct legal nationality.",
+    "what": "The Canadian Citizenship Act came into force, separating Canadian citizenship from the broader status of British subject.",
+    "why": "Citizenship became a tool for defining an independent and increasingly diverse country.",
+    "keywords": [
+      "Canadian citizenship",
+      "national identity",
+      "immigration"
+    ],
+    "colle": "What should citizenship require beyond legal status?"
+  },
+  {
+    "year": 1960,
+    "date": "1960",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "First Nations people gain the federal vote without losing status",
+    "summary": "A major formal barrier to political participation is removed.",
+    "what": "Status First Nations adults could vote federally without being forced to give up treaty status.",
+    "why": "The reform ended one discriminatory rule but did not resolve colonial control under the Indian Act.",
+    "keywords": [
+      "federal vote",
+      "Indian Act",
+      "political rights"
+    ],
+    "colle": "Can equal voting rights coexist with colonial institutions?"
+  },
+  {
+    "year": 1965,
+    "date": "1965",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "The Maple Leaf flag",
+    "summary": "Canada adopts a distinctive national symbol.",
+    "what": "The new red-and-white flag replaced the Canadian Red Ensign after a divisive parliamentary debate.",
+    "why": "The flag signalled a more independent identity less centred on the British Empire.",
+    "keywords": [
+      "Maple Leaf",
+      "flag debate",
+      "national identity"
+    ],
+    "colle": "Can a new symbol successfully reinvent a country?"
+  },
+  {
+    "year": 1969,
+    "date": "1969",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "The Official Languages Act",
+    "summary": "English and French receive equal status in federal institutions.",
+    "what": "The Act established official bilingualism across the federal government.",
+    "why": "It aimed to protect linguistic duality while provoking debate in both Quebec and western Canada.",
+    "keywords": [
+      "official bilingualism",
+      "French language",
+      "federal institutions"
+    ],
+    "colle": "Is official bilingualism a success?"
+  },
+  {
+    "year": 1970,
+    "date": "1970",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "The October Crisis",
+    "summary": "Political violence tests civil liberties.",
+    "what": "After kidnappings by the FLQ, Pierre Trudeau invoked the War Measures Act and deployed troops.",
+    "why": "The crisis remains a key debate about terrorism, emergency powers and Quebec nationalism.",
+    "keywords": [
+      "October Crisis",
+      "FLQ",
+      "War Measures Act"
+    ],
+    "colle": "When may a democracy suspend civil liberties?"
+  },
+  {
+    "year": 1971,
+    "date": "1971",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "Official multiculturalism",
+    "summary": "Canada adopts multiculturalism as federal policy.",
+    "what": "The government recognised cultural diversity within a bilingual framework.",
+    "why": "The “mosaic” became central to Canada’s self-image and immigration model.",
+    "keywords": [
+      "multiculturalism",
+      "mosaic",
+      "immigration"
+    ],
+    "colle": "Does multiculturalism create inclusion or weaken a shared identity?"
+  },
+  {
+    "year": 1982,
+    "date": "1982",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "Patriation and the Charter",
+    "summary": "Canada brings its constitution home.",
+    "what": "The Constitution Act created a domestic amendment procedure and entrenched the Charter of Rights and Freedoms.",
+    "why": "The Charter strengthened judicial review, while Quebec’s government did not consent to the agreement.",
+    "keywords": [
+      "Charter of Rights",
+      "patriation",
+      "judicial review"
+    ],
+    "colle": "Has the Charter transferred too much power to judges?"
+  },
+  {
+    "year": 1995,
+    "date": "1995",
+    "era": "identity",
+    "tag": "Rights & identity",
+    "title": "The Quebec referendum",
+    "summary": "Canada comes within one percentage point of breaking apart.",
+    "what": "Quebec voters rejected sovereignty by 50.58% to 49.42%.",
+    "why": "The razor-thin result forced renewed debate over national unity, recognition and the rules of secession.",
+    "keywords": [
+      "Quebec sovereignty",
+      "referendum",
+      "national unity"
+    ],
+    "colle": "Could Quebec independence return as a major issue?"
+  },
+  {
+    "year": 1999,
+    "date": "1999",
+    "era": "contemporary",
+    "tag": "Contemporary Canada",
+    "title": "Nunavut is created",
+    "summary": "A new territory reflects Inuit self-government.",
+    "what": "Nunavut was separated from the Northwest Territories following the largest Indigenous land-claim settlement in Canadian history.",
+    "why": "It gave Inuit people greater political control while highlighting the continuing challenges of housing, services and Arctic sovereignty.",
+    "keywords": [
+      "Nunavut",
+      "Inuit self-government",
+      "Arctic"
+    ],
+    "colle": "Can territorial autonomy deliver decolonisation?"
+  },
+  {
+    "year": 2008,
+    "date": "2008",
+    "era": "contemporary",
+    "tag": "Contemporary Canada",
+    "title": "Residential-school apology",
+    "summary": "The federal government formally apologises to former pupils.",
+    "what": "The Prime Minister apologised for a system that removed Indigenous children from families and sought to erase cultures and languages.",
+    "why": "The apology opened a national reckoning but did not itself repair intergenerational harm.",
+    "keywords": [
+      "residential schools",
+      "apology",
+      "cultural genocide"
+    ],
+    "colle": "What makes a state apology meaningful?"
+  },
+  {
+    "year": 2015,
+    "date": "2015",
+    "era": "contemporary",
+    "tag": "Contemporary Canada",
+    "title": "Truth and Reconciliation Commission",
+    "summary": "The residential-school system is documented as cultural genocide.",
+    "what": "The Commission issued 94 Calls to Action after hearing testimony from survivors.",
+    "why": "Reconciliation became a central national commitment and a test of whether symbolic recognition produces structural change.",
+    "keywords": [
+      "Truth and Reconciliation",
+      "Calls to Action",
+      "Indigenous justice"
+    ],
+    "colle": "Why has implementation of reconciliation been so slow?"
+  },
+  {
+    "year": 2021,
+    "date": "2021",
+    "era": "contemporary",
+    "tag": "Contemporary Canada",
+    "title": "Unmarked burial sites renew the reckoning",
+    "summary": "Ground-penetrating radar findings intensify grief and anger.",
+    "what": "Indigenous communities announced evidence of probable unmarked graves near former residential schools.",
+    "why": "The discoveries made the violence of assimilation impossible for many Canadians to treat as distant history.",
+    "keywords": [
+      "unmarked graves",
+      "residential schools",
+      "historical memory"
+    ],
+    "colle": "How should schools and public institutions teach colonial violence?"
+  },
+  {
+    "year": 2025,
+    "date": "2025",
+    "era": "contemporary",
+    "tag": "Contemporary Canada",
+    "title": "Mark Carney becomes Prime Minister and wins a minority",
+    "summary": "Leadership changes amid tensions with the United States.",
+    "what": "Mark Carney was sworn in in March and the Liberals won 169 of 343 seats in the April federal election.",
+    "why": "The election centred on sovereignty, economic security and Canada’s relationship with the United States.",
+    "keywords": [
+      "Mark Carney",
+      "2025 election",
+      "minority government"
+    ],
+    "colle": "Can external pressure strengthen Canadian national unity?"
+  }
+]

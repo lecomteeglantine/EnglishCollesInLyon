@@ -1,0 +1,338 @@
+[
+  {
+    "year": 1280,
+    "date": "c. 1250–1300",
+    "era": "maori",
+    "tag": "Māori foundations",
+    "title": "Polynesian settlement",
+    "summary": "The ancestors of Māori settle Aotearoa.",
+    "what": "Polynesian navigators established communities that developed distinct iwi, hapū, language and tikanga.",
+    "why": "Māori sovereignty and biculturalism are foundational, not later additions to New Zealand history.",
+    "keywords": [
+      "Māori",
+      "Aotearoa",
+      "tikanga"
+    ],
+    "colle": "What does it mean to recognise Indigenous sovereignty in a modern state?"
+  },
+  {
+    "year": 1642,
+    "date": "1642",
+    "era": "colonial",
+    "tag": "Encounter & colonisation",
+    "title": "Abel Tasman reaches New Zealand",
+    "summary": "The first recorded European encounter is violent.",
+    "what": "Tasman’s expedition sighted the islands and clashed with Māori in Golden Bay.",
+    "why": "The encounter began European mapping without establishing control.",
+    "keywords": [
+      "Abel Tasman",
+      "European encounter",
+      "Golden Bay"
+    ],
+    "colle": "Why do “discovery” narratives erase Indigenous knowledge?"
+  },
+  {
+    "year": 1769,
+    "date": "1769",
+    "era": "colonial",
+    "tag": "Encounter & colonisation",
+    "title": "Cook maps the islands",
+    "summary": "British knowledge and imperial interest expand.",
+    "what": "James Cook circumnavigated and mapped New Zealand while engaging in both exchange and conflict with Māori.",
+    "why": "His voyages prepared later trade, missionary activity and colonisation.",
+    "keywords": [
+      "James Cook",
+      "mapping",
+      "British Empire"
+    ],
+    "colle": "Can exploration ever be politically neutral?"
+  },
+  {
+    "year": 1840,
+    "date": "1840",
+    "era": "colonial",
+    "tag": "Encounter & colonisation",
+    "title": "The Treaty of Waitangi",
+    "summary": "The foundational agreement is signed in English and Māori.",
+    "what": "Many rangatira signed versions that differed over whether sovereignty or governance was ceded.",
+    "why": "Conflicting texts and repeated breaches remain central to law, politics and national identity.",
+    "keywords": [
+      "Treaty of Waitangi",
+      "rangatiratanga",
+      "Crown"
+    ],
+    "colle": "Can a state be legitimate when its founding treaty is disputed?"
+  },
+  {
+    "year": 1845,
+    "date": "1845–72",
+    "era": "colonial",
+    "tag": "Encounter & colonisation",
+    "title": "The New Zealand Wars",
+    "summary": "Conflict accompanies land acquisition and Crown expansion.",
+    "what": "British and colonial forces fought Māori movements resisting loss of land and authority.",
+    "why": "Confiscations created grievances that later Treaty settlements sought to address.",
+    "keywords": [
+      "New Zealand Wars",
+      "land confiscation",
+      "Māori resistance"
+    ],
+    "colle": "How should a country commemorate wars once excluded from national memory?"
+  },
+  {
+    "year": 1867,
+    "date": "1867",
+    "era": "colonial",
+    "tag": "Encounter & colonisation",
+    "title": "Māori parliamentary seats",
+    "summary": "Reserved representation is created.",
+    "what": "Four Māori electorates were established, initially as a temporary measure.",
+    "why": "The seats provided representation but also reflected unequal assumptions about property and citizenship.",
+    "keywords": [
+      "Māori electorates",
+      "representation",
+      "Parliament"
+    ],
+    "colle": "Do reserved seats strengthen equality or institutionalise difference?"
+  },
+  {
+    "year": 1893,
+    "date": "1893",
+    "era": "reform",
+    "tag": "Democracy & reform",
+    "title": "Women’s suffrage",
+    "summary": "New Zealand becomes the first self-governing country where women vote nationally.",
+    "what": "A mass campaign led by figures including Kate Sheppard secured the vote for women.",
+    "why": "The achievement became a durable symbol of progressive national identity.",
+    "keywords": [
+      "women’s suffrage",
+      "Kate Sheppard",
+      "democracy"
+    ],
+    "colle": "Why did New Zealand lead the world on women’s suffrage?"
+  },
+  {
+    "year": 1907,
+    "date": "1907",
+    "era": "nation",
+    "tag": "Nation & independence",
+    "title": "Dominion status",
+    "summary": "New Zealand becomes a dominion within the British Empire.",
+    "what": "The constitutional label changed while strong political and cultural ties to Britain remained.",
+    "why": "It illustrates the gradual rather than revolutionary path to independence.",
+    "keywords": [
+      "Dominion",
+      "British Empire",
+      "constitutional evolution"
+    ],
+    "colle": "When does a colony truly become independent?"
+  },
+  {
+    "year": 1915,
+    "date": "1915",
+    "era": "nation",
+    "tag": "Nation & independence",
+    "title": "Gallipoli and ANZAC",
+    "summary": "Shared sacrifice with Australia becomes a national myth.",
+    "what": "New Zealand troops suffered heavy casualties in the failed Gallipoli campaign.",
+    "why": "ANZAC memory strengthened national consciousness while remaining intertwined with Empire.",
+    "keywords": [
+      "ANZAC",
+      "Gallipoli",
+      "national memory"
+    ],
+    "colle": "Does wartime sacrifice provide a healthy basis for national identity?"
+  },
+  {
+    "year": 1947,
+    "date": "1947",
+    "era": "nation",
+    "tag": "Nation & independence",
+    "title": "Full legislative independence",
+    "summary": "Parliament adopts the Statute of Westminster.",
+    "what": "New Zealand accepted full legislative autonomy from Britain.",
+    "why": "The late adoption reflected enduring attachment to Britain and the absence of a dramatic independence struggle.",
+    "keywords": [
+      "Statute of Westminster",
+      "independence",
+      "Britain"
+    ],
+    "colle": "Why was New Zealand slow to formalise independence?"
+  },
+  {
+    "year": 1975,
+    "date": "1975",
+    "era": "bicultural",
+    "tag": "Bicultural revival",
+    "title": "The Waitangi Tribunal and Land March",
+    "summary": "Māori protest forces historical grievances onto the national agenda.",
+    "what": "The Tribunal was created to examine Treaty claims, while the Land March opposed further alienation of Māori land.",
+    "why": "The year marked a turning point in the Māori renaissance and the politics of redress.",
+    "keywords": [
+      "Waitangi Tribunal",
+      "Land March",
+      "Māori renaissance"
+    ],
+    "colle": "Can legal settlements repair cultural and territorial dispossession?"
+  },
+  {
+    "year": 1984,
+    "date": "1984–90",
+    "era": "bicultural",
+    "tag": "Bicultural revival",
+    "title": "Rogernomics",
+    "summary": "Rapid market reform transforms the economy.",
+    "what": "The Labour government deregulated finance, cut subsidies and privatised state assets.",
+    "why": "The reforms increased efficiency in some sectors but also unemployment, inequality and debate over neoliberalism.",
+    "keywords": [
+      "Rogernomics",
+      "deregulation",
+      "inequality"
+    ],
+    "colle": "Did market reform modernise New Zealand at too high a social cost?"
+  },
+  {
+    "year": 1985,
+    "date": "1985–87",
+    "era": "bicultural",
+    "tag": "Bicultural revival",
+    "title": "Rainbow Warrior and the nuclear-free policy",
+    "summary": "New Zealand asserts an independent foreign policy.",
+    "what": "French agents sank the Greenpeace ship Rainbow Warrior, while nuclear-free legislation restricted visits by nuclear-capable vessels.",
+    "why": "The dispute with France and the United States made anti-nuclear policy a badge of national independence.",
+    "keywords": [
+      "Rainbow Warrior",
+      "nuclear-free",
+      "foreign policy"
+    ],
+    "colle": "Can a small country influence global security norms?"
+  },
+  {
+    "year": 1987,
+    "date": "1987",
+    "era": "bicultural",
+    "tag": "Bicultural revival",
+    "title": "Te reo Māori becomes an official language",
+    "summary": "The state recognises the Māori language.",
+    "what": "The Māori Language Act granted official status and created institutions to support revitalisation.",
+    "why": "Language revival became central to biculturalism and decolonisation.",
+    "keywords": [
+      "te reo Māori",
+      "language revival",
+      "biculturalism"
+    ],
+    "colle": "Can official status reverse language decline?"
+  },
+  {
+    "year": 1993,
+    "date": "1993–96",
+    "era": "bicultural",
+    "tag": "Bicultural revival",
+    "title": "MMP electoral reform",
+    "summary": "Voters replace first-past-the-post with proportional representation.",
+    "what": "A referendum adopted Mixed Member Proportional representation, first used in 1996.",
+    "why": "MMP diversified Parliament and made coalition government normal.",
+    "keywords": [
+      "MMP",
+      "proportional representation",
+      "coalitions"
+    ],
+    "colle": "Does proportional representation improve democratic legitimacy?"
+  },
+  {
+    "year": 2011,
+    "date": "2011",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "The Christchurch earthquake",
+    "summary": "A major disaster reshapes the country’s second-largest city.",
+    "what": "The earthquake killed 185 people and caused extensive destruction.",
+    "why": "Recovery raised questions about resilience, insurance, urban planning and centralised decision-making.",
+    "keywords": [
+      "Christchurch earthquake",
+      "resilience",
+      "reconstruction"
+    ],
+    "colle": "How should governments balance speed and participation after disaster?"
+  },
+  {
+    "year": 2017,
+    "date": "2017",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "Jacinda Ardern becomes Prime Minister",
+    "summary": "A new style of progressive leadership gains global attention.",
+    "what": "Ardern formed a coalition government and emphasised empathy, child poverty reduction and wellbeing.",
+    "why": "Her leadership became a global symbol while domestic debates continued over housing, inequality and delivery.",
+    "keywords": [
+      "Jacinda Ardern",
+      "wellbeing budget",
+      "progressive leadership"
+    ],
+    "colle": "Does political empathy translate into effective government?"
+  },
+  {
+    "year": 2019,
+    "date": "2019",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "The Christchurch mosque attacks",
+    "summary": "White-supremacist terrorism kills 51 worshippers.",
+    "what": "A gunman attacked two mosques; the government rapidly tightened firearms laws and promoted social solidarity.",
+    "why": "The response was praised internationally but also exposed Islamophobia and online extremism.",
+    "keywords": [
+      "Christchurch attacks",
+      "gun reform",
+      "extremism"
+    ],
+    "colle": "Can decisive gun reform prevent future violence?"
+  },
+  {
+    "year": 2020,
+    "date": "2020",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "The COVID-19 response",
+    "summary": "An elimination strategy wins global attention.",
+    "what": "Strict border controls, lockdowns and public-health communication initially kept deaths low.",
+    "why": "The strategy reinforced the image of competent small-state government but later produced fatigue and polarisation.",
+    "keywords": [
+      "COVID-19",
+      "elimination strategy",
+      "public trust"
+    ],
+    "colle": "Why did pandemic consensus eventually weaken?"
+  },
+  {
+    "year": 2023,
+    "date": "2023",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "National returns to power",
+    "summary": "Christopher Luxon forms a three-party coalition.",
+    "what": "National governed with ACT and New Zealand First after Labour’s support fell sharply.",
+    "why": "The change brought a more conservative programme and renewed conflict over Māori policy, public spending and the Treaty.",
+    "keywords": [
+      "Christopher Luxon",
+      "coalition government",
+      "2023 election"
+    ],
+    "colle": "Is New Zealand entering a more polarised political era?"
+  },
+  {
+    "year": 2024,
+    "date": "2024–25",
+    "era": "contemporary",
+    "tag": "Contemporary New Zealand",
+    "title": "The Treaty Principles Bill debate",
+    "summary": "A proposed rewrite of Treaty principles triggers mass opposition and is defeated.",
+    "what": "ACT’s bill passed a first reading amid a major hīkoi but was rejected at its second reading in April 2025.",
+    "why": "The controversy revealed deep disagreement over equality, partnership, Māori rights and the meaning of the Treaty.",
+    "keywords": [
+      "Treaty Principles Bill",
+      "hīkoi",
+      "Māori rights"
+    ],
+    "colle": "Can one legal definition settle the meaning of the Treaty of Waitangi?"
+  }
+]

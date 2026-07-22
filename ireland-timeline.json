@@ -1,0 +1,338 @@
+[
+  {
+    "year": 1169,
+    "date": "1169–71",
+    "era": "conquest",
+    "tag": "Conquest & plantation",
+    "title": "The Anglo-Norman invasion",
+    "summary": "English political involvement begins.",
+    "what": "Anglo-Norman forces arrived and Henry II claimed authority over Ireland.",
+    "why": "The intervention began centuries of contested English and later British rule.",
+    "keywords": [
+      "Anglo-Norman invasion",
+      "English rule",
+      "colonisation"
+    ],
+    "colle": "How far back must we go to understand a modern conflict?"
+  },
+  {
+    "year": 1607,
+    "date": "1607",
+    "era": "conquest",
+    "tag": "Conquest & plantation",
+    "title": "The Flight of the Earls",
+    "summary": "Gaelic political power collapses in Ulster.",
+    "what": "Leading Gaelic lords left Ireland after defeat, opening the way for large-scale plantation.",
+    "why": "The settlement of Protestant communities in Ulster shaped later unionism and partition.",
+    "keywords": [
+      "Ulster Plantation",
+      "Gaelic Ireland",
+      "settler colonialism"
+    ],
+    "colle": "How did plantation shape modern identities in Ireland?"
+  },
+  {
+    "year": 1690,
+    "date": "1690",
+    "era": "conquest",
+    "tag": "Conquest & plantation",
+    "title": "The Battle of the Boyne",
+    "summary": "Williamite victory confirms Protestant political dominance.",
+    "what": "William III defeated James II in a conflict tied to wider European struggles.",
+    "why": "The battle remains a powerful symbol in Northern Irish unionist culture.",
+    "keywords": [
+      "Battle of the Boyne",
+      "Williamite victory",
+      "unionist memory"
+    ],
+    "colle": "Why do historical victories remain politically sensitive?"
+  },
+  {
+    "year": 1801,
+    "date": "1801",
+    "era": "union",
+    "tag": "Union & famine",
+    "title": "The Act of Union",
+    "summary": "Ireland is incorporated into the United Kingdom.",
+    "what": "The Irish Parliament was abolished and representation transferred to Westminster.",
+    "why": "The Union created the institutional framework against which modern Irish nationalism developed.",
+    "keywords": [
+      "Act of Union",
+      "Westminster",
+      "Irish nationalism"
+    ],
+    "colle": "Did the Union make reform easier or independence inevitable?"
+  },
+  {
+    "year": 1829,
+    "date": "1829",
+    "era": "union",
+    "tag": "Union & famine",
+    "title": "Catholic Emancipation",
+    "summary": "Most legal restrictions on Catholic political participation are removed.",
+    "what": "Daniel O’Connell’s mass movement pressured Westminster to allow Catholics to sit in Parliament.",
+    "why": "The campaign demonstrated the power of peaceful popular mobilisation.",
+    "keywords": [
+      "Daniel O’Connell",
+      "Catholic Emancipation",
+      "mass politics"
+    ],
+    "colle": "Can constitutional campaigning achieve revolutionary change?"
+  },
+  {
+    "year": 1845,
+    "date": "1845–52",
+    "era": "union",
+    "tag": "Union & famine",
+    "title": "The Great Famine",
+    "summary": "Crop failure becomes a demographic catastrophe.",
+    "what": "Potato blight caused hunger, disease and mass emigration while British policy responses proved gravely inadequate.",
+    "why": "The Famine transformed population, diaspora and attitudes to British rule.",
+    "keywords": [
+      "Great Famine",
+      "emigration",
+      "British policy"
+    ],
+    "colle": "Was the Famine a natural disaster or a political failure?"
+  },
+  {
+    "year": 1916,
+    "date": "1916",
+    "era": "revolution",
+    "tag": "Revolution & partition",
+    "title": "The Easter Rising",
+    "summary": "A failed rebellion becomes the symbolic spark of independence.",
+    "what": "Republicans seized key buildings in Dublin and proclaimed an Irish Republic before being defeated.",
+    "why": "The execution of its leaders shifted public opinion towards separatism.",
+    "keywords": [
+      "Easter Rising",
+      "republicanism",
+      "martyrdom"
+    ],
+    "colle": "Why can a military defeat become a political victory?"
+  },
+  {
+    "year": 1919,
+    "date": "1919–21",
+    "era": "revolution",
+    "tag": "Revolution & partition",
+    "title": "The War of Independence",
+    "summary": "Guerrilla conflict challenges British rule.",
+    "what": "The IRA fought British forces while the revolutionary Dáil claimed democratic legitimacy.",
+    "why": "The conflict forced negotiations but also hardened divisions over sovereignty and violence.",
+    "keywords": [
+      "War of Independence",
+      "IRA",
+      "Dáil Éireann"
+    ],
+    "colle": "Can political violence be legitimate in an anti-colonial struggle?"
+  },
+  {
+    "year": 1921,
+    "date": "1921",
+    "era": "revolution",
+    "tag": "Revolution & partition",
+    "title": "Partition and the Anglo-Irish Treaty",
+    "summary": "The island is divided and the Irish Free State is agreed.",
+    "what": "The Treaty created a self-governing dominion while six counties remained in Northern Ireland.",
+    "why": "Partition produced two states and left competing national identities unresolved.",
+    "keywords": [
+      "partition",
+      "Anglo-Irish Treaty",
+      "Northern Ireland"
+    ],
+    "colle": "Was partition inevitable?"
+  },
+  {
+    "year": 1922,
+    "date": "1922–23",
+    "era": "revolution",
+    "tag": "Revolution & partition",
+    "title": "The Civil War",
+    "summary": "Former allies fight over the Treaty.",
+    "what": "Pro- and anti-Treaty forces fought over the status and limits of the new state.",
+    "why": "The conflict shaped party politics for generations, especially Fianna Fáil and Fine Gael.",
+    "keywords": [
+      "Civil War",
+      "pro-Treaty",
+      "anti-Treaty"
+    ],
+    "colle": "Why did the Civil War structure Irish politics for so long?"
+  },
+  {
+    "year": 1937,
+    "date": "1937",
+    "era": "republic",
+    "tag": "Republic & modernisation",
+    "title": "The Constitution",
+    "summary": "A new constitutional order asserts sovereignty.",
+    "what": "Bunreacht na hÉireann created the office of President and defined the institutions of the state.",
+    "why": "Frequent referendums have allowed the constitution to become a vehicle for social change.",
+    "keywords": [
+      "Bunreacht na hÉireann",
+      "referendum",
+      "sovereignty"
+    ],
+    "colle": "Does frequent constitutional voting strengthen democracy?"
+  },
+  {
+    "year": 1949,
+    "date": "1949",
+    "era": "republic",
+    "tag": "Republic & modernisation",
+    "title": "Ireland becomes a republic",
+    "summary": "The state formally leaves the Commonwealth.",
+    "what": "The Republic of Ireland Act ended the remaining external role of the British monarch.",
+    "why": "The change completed constitutional separation while Northern Ireland remained within the UK.",
+    "keywords": [
+      "republic",
+      "Commonwealth",
+      "sovereignty"
+    ],
+    "colle": "How important are symbols in completing independence?"
+  },
+  {
+    "year": 1973,
+    "date": "1973",
+    "era": "europe",
+    "tag": "Europe & prosperity",
+    "title": "Ireland joins the EEC",
+    "summary": "European membership accelerates economic and social change.",
+    "what": "Ireland entered the European Economic Community alongside the United Kingdom and Denmark.",
+    "why": "Europe provided markets, funding and a counterweight to economic dependence on Britain.",
+    "keywords": [
+      "European integration",
+      "modernisation",
+      "structural funds"
+    ],
+    "colle": "How did Europe transform Ireland’s place in the world?"
+  },
+  {
+    "year": 1985,
+    "date": "1985",
+    "era": "europe",
+    "tag": "Europe & prosperity",
+    "title": "The Anglo-Irish Agreement",
+    "summary": "Dublin gains a consultative role in Northern Irish affairs.",
+    "what": "The British and Irish governments agreed to closer cooperation despite unionist opposition.",
+    "why": "It established habits of intergovernmental partnership that helped prepare the peace process.",
+    "keywords": [
+      "Anglo-Irish Agreement",
+      "Northern Ireland",
+      "cooperation"
+    ],
+    "colle": "Can outside governments help resolve identity conflicts?"
+  },
+  {
+    "year": 1995,
+    "date": "1990s–2007",
+    "era": "europe",
+    "tag": "Europe & prosperity",
+    "title": "The Celtic Tiger",
+    "summary": "Rapid growth transforms a once-poor economy.",
+    "what": "Foreign investment, EU membership, education and a young workforce drove exceptional expansion.",
+    "why": "Prosperity encouraged immigration and social confidence but also created dependence on property and multinational capital.",
+    "keywords": [
+      "Celtic Tiger",
+      "foreign investment",
+      "globalisation"
+    ],
+    "colle": "Is Ireland’s economic model too dependent on multinational companies?"
+  },
+  {
+    "year": 1998,
+    "date": "1998",
+    "era": "europe",
+    "tag": "Europe & prosperity",
+    "title": "The Good Friday Agreement",
+    "summary": "A new framework brings peace to Northern Ireland.",
+    "what": "The agreement created power-sharing, cross-border institutions and consent-based constitutional rules.",
+    "why": "It largely ended the Troubles and made cooperation between London, Dublin and Belfast central to stability.",
+    "keywords": [
+      "Good Friday Agreement",
+      "power-sharing",
+      "peace process"
+    ],
+    "colle": "Is a united Ireland now more realistic?"
+  },
+  {
+    "year": 2008,
+    "date": "2008–10",
+    "era": "contemporary",
+    "tag": "Contemporary Ireland",
+    "title": "The financial crash and bailout",
+    "summary": "The Celtic Tiger collapses.",
+    "what": "A property and banking crisis forced the state to guarantee banks and accept an EU-IMF assistance programme.",
+    "why": "Austerity reshaped politics, housing and public trust.",
+    "keywords": [
+      "banking crisis",
+      "austerity",
+      "EU-IMF bailout"
+    ],
+    "colle": "Did Ireland recover from the crash at too high a social cost?"
+  },
+  {
+    "year": 2015,
+    "date": "2015",
+    "era": "contemporary",
+    "tag": "Contemporary Ireland",
+    "title": "Marriage equality referendum",
+    "summary": "Ireland becomes the first country to legalise same-sex marriage by popular vote.",
+    "what": "A decisive referendum amended the constitution to permit marriage regardless of sex.",
+    "why": "The result symbolised rapid secularisation and generational change.",
+    "keywords": [
+      "marriage equality",
+      "referendum",
+      "secularisation"
+    ],
+    "colle": "How did Ireland liberalise so quickly?"
+  },
+  {
+    "year": 2018,
+    "date": "2018",
+    "era": "contemporary",
+    "tag": "Contemporary Ireland",
+    "title": "Abortion referendum",
+    "summary": "Voters repeal the constitutional ban on abortion.",
+    "what": "The electorate removed the Eighth Amendment, allowing Parliament to legislate for abortion access.",
+    "why": "The vote marked a major shift in women’s rights and the declining authority of the Catholic Church.",
+    "keywords": [
+      "abortion",
+      "women’s rights",
+      "Eighth Amendment"
+    ],
+    "colle": "Should fundamental rights be decided by referendum?"
+  },
+  {
+    "year": 2020,
+    "date": "2020",
+    "era": "contemporary",
+    "tag": "Contemporary Ireland",
+    "title": "Sinn Féin’s electoral breakthrough",
+    "summary": "The old two-party system is disrupted.",
+    "what": "Sinn Féin won the largest share of first-preference votes, although Fianna Fáil, Fine Gael and the Greens formed a coalition.",
+    "why": "Housing, reunification and generational change became central to a more fragmented party system.",
+    "keywords": [
+      "Sinn Féin",
+      "housing crisis",
+      "party realignment"
+    ],
+    "colle": "Is Ireland moving beyond its Civil War party system?"
+  },
+  {
+    "year": 2024,
+    "date": "2024–25",
+    "era": "contemporary",
+    "tag": "Contemporary Ireland",
+    "title": "Election and a new coalition",
+    "summary": "Fianna Fáil and Fine Gael remain at the centre of government.",
+    "what": "After the November 2024 election, Micheál Martin became Taoiseach in January 2025 with support from Fianna Fáil, Fine Gael and independent deputies.",
+    "why": "The outcome showed both continuity and pressure from housing shortages, migration debates and Sinn Féin’s challenge.",
+    "keywords": [
+      "2024 election",
+      "Micheál Martin",
+      "coalition government"
+    ],
+    "colle": "Can centrist coalition government solve Ireland’s housing crisis?"
+  }
+]

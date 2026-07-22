@@ -1,0 +1,370 @@
+[
+  {
+    "year": 1000,
+    "date": "c. 1000–1300",
+    "era": "precolonial",
+    "tag": "African societies & colonisation",
+    "title": "Mapungubwe flourishes",
+    "summary": "A sophisticated southern African kingdom controls regional trade.",
+    "what": "Mapungubwe developed elite political authority and traded gold and ivory across the Indian Ocean world.",
+    "why": "It challenges colonial narratives that present complex state formation as a European import.",
+    "keywords": [
+      "Mapungubwe",
+      "African kingdoms",
+      "Indian Ocean trade"
+    ],
+    "colle": "Why are precolonial African states often absent from national narratives?"
+  },
+  {
+    "year": 1652,
+    "date": "1652",
+    "era": "colonial",
+    "tag": "African societies & colonisation",
+    "title": "Dutch settlement at the Cape",
+    "summary": "A permanent settler colony is established.",
+    "what": "The Dutch East India Company created a refreshment station that expanded through land seizure, forced labour and slavery.",
+    "why": "The settlement laid foundations for Afrikaner identity and racial hierarchy.",
+    "keywords": [
+      "Cape Colony",
+      "Dutch East India Company",
+      "settler colonialism"
+    ],
+    "colle": "How did labour and land shape racial categories?"
+  },
+  {
+    "year": 1835,
+    "date": "1830s–40s",
+    "era": "colonial",
+    "tag": "African societies & colonisation",
+    "title": "The Great Trek",
+    "summary": "Boer settlers move inland beyond British rule.",
+    "what": "Thousands of Voortrekkers established republics after conflicts with African kingdoms and communities.",
+    "why": "The Trek became a powerful Afrikaner nationalist myth of independence and divine mission.",
+    "keywords": [
+      "Great Trek",
+      "Voortrekkers",
+      "Afrikaner nationalism"
+    ],
+    "colle": "How do migration stories become nationalist myths?"
+  },
+  {
+    "year": 1867,
+    "date": "1867–86",
+    "era": "colonial",
+    "tag": "African societies & colonisation",
+    "title": "Diamonds and gold",
+    "summary": "Mineral discoveries transform the region.",
+    "what": "Diamonds at Kimberley and gold on the Witwatersrand produced rapid industrialisation and migrant labour.",
+    "why": "The mineral economy intensified imperial rivalry, urbanisation and racial labour control.",
+    "keywords": [
+      "diamonds",
+      "gold",
+      "migrant labour"
+    ],
+    "colle": "Did mining create modern South Africa or entrench inequality?"
+  },
+  {
+    "year": 1899,
+    "date": "1899–1902",
+    "era": "colonial",
+    "tag": "African societies & colonisation",
+    "title": "The South African War",
+    "summary": "Britain defeats the Boer republics.",
+    "what": "The war included guerrilla fighting and British concentration camps for Boer and Black civilians.",
+    "why": "Its settlement reconciled white elites while largely excluding the Black majority.",
+    "keywords": [
+      "South African War",
+      "concentration camps",
+      "British Empire"
+    ],
+    "colle": "Can reconciliation between former enemies be unjust to excluded groups?"
+  },
+  {
+    "year": 1910,
+    "date": "1910",
+    "era": "segregation",
+    "tag": "Union & segregation",
+    "title": "The Union of South Africa",
+    "summary": "A self-governing dominion unites four colonies.",
+    "what": "Political power was consolidated in a white-controlled state within the British Empire.",
+    "why": "Union created national institutions while excluding most Black South Africans from citizenship and power.",
+    "keywords": [
+      "Union of South Africa",
+      "white minority rule",
+      "Dominion"
+    ],
+    "colle": "Was the modern state founded on racial exclusion?"
+  },
+  {
+    "year": 1912,
+    "date": "1912",
+    "era": "segregation",
+    "tag": "Union & segregation",
+    "title": "The ANC is founded",
+    "summary": "A national organisation begins the struggle for African political rights.",
+    "what": "The South African Native National Congress, later the ANC, sought to resist dispossession and exclusion.",
+    "why": "It became the leading liberation movement and later the dominant governing party.",
+    "keywords": [
+      "ANC",
+      "liberation movement",
+      "African nationalism"
+    ],
+    "colle": "Can a liberation movement successfully become a governing party?"
+  },
+  {
+    "year": 1913,
+    "date": "1913",
+    "era": "segregation",
+    "tag": "Union & segregation",
+    "title": "The Natives Land Act",
+    "summary": "Black land ownership is severely restricted.",
+    "what": "The law confined most African land rights to small designated reserves.",
+    "why": "It entrenched dispossession, rural poverty and the migrant-labour system long before formal apartheid.",
+    "keywords": [
+      "Natives Land Act",
+      "land dispossession",
+      "segregation"
+    ],
+    "colle": "Should land reform prioritise restitution, redistribution or productivity?"
+  },
+  {
+    "year": 1948,
+    "date": "1948",
+    "era": "apartheid",
+    "tag": "Apartheid",
+    "title": "Apartheid begins",
+    "summary": "The National Party formalises racial separation.",
+    "what": "A network of laws classified people by race and controlled residence, work, education, movement and political rights.",
+    "why": "Apartheid converted existing segregation into a comprehensive authoritarian system.",
+    "keywords": [
+      "apartheid",
+      "racial classification",
+      "National Party"
+    ],
+    "colle": "How did law make racial domination appear normal?"
+  },
+  {
+    "year": 1955,
+    "date": "1955",
+    "era": "apartheid",
+    "tag": "Apartheid",
+    "title": "The Freedom Charter",
+    "summary": "The anti-apartheid movement sets out a democratic alternative.",
+    "what": "The Congress of the People declared that South Africa belongs to all who live in it.",
+    "why": "Its principles influenced the later democratic constitution and continue to shape arguments about social and economic justice.",
+    "keywords": [
+      "Freedom Charter",
+      "Congress of the People",
+      "non-racialism"
+    ],
+    "colle": "Has post-apartheid South Africa fulfilled the Freedom Charter?"
+  },
+  {
+    "year": 1960,
+    "date": "1960",
+    "era": "apartheid",
+    "tag": "Apartheid",
+    "title": "The Sharpeville massacre",
+    "summary": "Police kill protesters opposing pass laws.",
+    "what": "Sixty-nine people were killed, many shot in the back, during a peaceful demonstration.",
+    "why": "The massacre prompted international outrage, the banning of liberation movements and a turn towards armed struggle.",
+    "keywords": [
+      "Sharpeville",
+      "pass laws",
+      "state violence"
+    ],
+    "colle": "When does repression make armed resistance inevitable?"
+  },
+  {
+    "year": 1964,
+    "date": "1964",
+    "era": "apartheid",
+    "tag": "Apartheid",
+    "title": "The Rivonia Trial",
+    "summary": "Nelson Mandela and other leaders receive life sentences.",
+    "what": "The defendants used the trial to condemn apartheid and explain the turn to sabotage.",
+    "why": "Mandela’s imprisonment made him a global symbol of resistance.",
+    "keywords": [
+      "Rivonia Trial",
+      "Nelson Mandela",
+      "political prisoners"
+    ],
+    "colle": "Can a political trial strengthen the cause it seeks to suppress?"
+  },
+  {
+    "year": 1976,
+    "date": "1976",
+    "era": "apartheid",
+    "tag": "Apartheid",
+    "title": "The Soweto Uprising",
+    "summary": "Schoolchildren revolt against apartheid education.",
+    "what": "Police fired on students protesting compulsory Afrikaans instruction.",
+    "why": "The uprising radicalised a generation and destroyed the regime’s claim to stability.",
+    "keywords": [
+      "Soweto Uprising",
+      "Bantu Education",
+      "youth protest"
+    ],
+    "colle": "Why are students often central to democratic movements?"
+  },
+  {
+    "year": 1990,
+    "date": "1990",
+    "era": "transition",
+    "tag": "Transition to democracy",
+    "title": "Mandela is freed and the ANC unbanned",
+    "summary": "Negotiated transition begins.",
+    "what": "President F. W. de Klerk lifted bans on liberation movements and released Nelson Mandela.",
+    "why": "The decision opened a difficult process combining negotiation, violence and constitutional compromise.",
+    "keywords": [
+      "Mandela released",
+      "de Klerk",
+      "negotiations"
+    ],
+    "colle": "Why did apartheid end through negotiation rather than revolution?"
+  },
+  {
+    "year": 1994,
+    "date": "1994",
+    "era": "transition",
+    "tag": "Transition to democracy",
+    "title": "The first democratic election",
+    "summary": "Universal suffrage creates the “Rainbow Nation”.",
+    "what": "The ANC won the election and Nelson Mandela became president in a Government of National Unity.",
+    "why": "The peaceful transfer of power became a global symbol of democratic possibility.",
+    "keywords": [
+      "1994 election",
+      "Nelson Mandela",
+      "Rainbow Nation"
+    ],
+    "colle": "Was the negotiated transition too generous to the old elite?"
+  },
+  {
+    "year": 1996,
+    "date": "1996",
+    "era": "transition",
+    "tag": "Transition to democracy",
+    "title": "The Constitution and the TRC",
+    "summary": "A rights-based constitution and public reckoning shape the new democracy.",
+    "what": "The constitution entrenched equality and socio-economic rights, while the Truth and Reconciliation Commission heard testimony about apartheid crimes.",
+    "why": "South Africa became a model of constitutionalism and restorative justice, though material inequality endured.",
+    "keywords": [
+      "Constitution",
+      "Truth and Reconciliation Commission",
+      "restorative justice"
+    ],
+    "colle": "Can truth and reconciliation substitute for punishment and redistribution?"
+  },
+  {
+    "year": 1999,
+    "date": "1999",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "The Mbeki presidency",
+    "summary": "The post-Mandela era prioritises African renewal and economic growth.",
+    "what": "Thabo Mbeki promoted the African Renaissance and market-oriented policy but his government’s HIV/AIDS denialism caused immense harm.",
+    "why": "The period illustrates the tension between technocratic ambition and democratic accountability.",
+    "keywords": [
+      "Thabo Mbeki",
+      "African Renaissance",
+      "HIV/AIDS"
+    ],
+    "colle": "How should democracies respond when leaders reject scientific evidence?"
+  },
+  {
+    "year": 2010,
+    "date": "2010",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "The FIFA World Cup",
+    "summary": "South Africa hosts a global sporting event.",
+    "what": "The first World Cup held in Africa showcased infrastructure, culture and national pride.",
+    "why": "The event strengthened soft power but also raised questions about public spending and lasting benefits.",
+    "keywords": [
+      "FIFA World Cup",
+      "soft power",
+      "nation branding"
+    ],
+    "colle": "Do mega-events produce lasting social benefits?"
+  },
+  {
+    "year": 2012,
+    "date": "2012",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "The Marikana massacre",
+    "summary": "Police kill striking mineworkers.",
+    "what": "Thirty-four workers were shot during a labour dispute at a platinum mine.",
+    "why": "Marikana exposed the persistence of economic inequality, labour conflict and state violence after apartheid.",
+    "keywords": [
+      "Marikana",
+      "mineworkers",
+      "police violence"
+    ],
+    "colle": "Why has political freedom not ended economic exploitation?"
+  },
+  {
+    "year": 2015,
+    "date": "2015–16",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "Rhodes Must Fall and Fees Must Fall",
+    "summary": "Students demand decolonisation and affordable education.",
+    "what": "Campus movements challenged colonial symbols, curricula, fees and institutional racism.",
+    "why": "They placed unfinished transformation and generational frustration at the centre of national debate.",
+    "keywords": [
+      "Rhodes Must Fall",
+      "Fees Must Fall",
+      "decolonisation"
+    ],
+    "colle": "What would a genuinely decolonised university look like?"
+  },
+  {
+    "year": 2018,
+    "date": "2018",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "Zuma resigns",
+    "summary": "A presidency defined by “state capture” ends.",
+    "what": "Jacob Zuma left office under pressure from the ANC after years of corruption allegations and institutional damage.",
+    "why": "The transition to Cyril Ramaphosa promised renewal but revealed the difficulty of reforming a dominant party from within.",
+    "keywords": [
+      "Jacob Zuma",
+      "state capture",
+      "Cyril Ramaphosa"
+    ],
+    "colle": "Can a dominant party effectively police its own corruption?"
+  },
+  {
+    "year": 2021,
+    "date": "2021",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "July unrest",
+    "summary": "Violence and looting expose social fragility.",
+    "what": "Protests after Zuma’s imprisonment escalated into widespread unrest, particularly in KwaZulu-Natal and Gauteng.",
+    "why": "The crisis revealed inequality, unemployment, weak institutions and political factionalism.",
+    "keywords": [
+      "July unrest",
+      "unemployment",
+      "state capacity"
+    ],
+    "colle": "How does extreme inequality threaten democracy?"
+  },
+  {
+    "year": 2024,
+    "date": "2024",
+    "era": "democracy",
+    "tag": "Democratic South Africa",
+    "title": "The ANC loses its majority and a GNU is formed",
+    "summary": "One-party dominance ends after thirty years.",
+    "what": "The ANC won about 40% of the vote, Cyril Ramaphosa was re-elected by Parliament and a multi-party Government of National Unity was formed.",
+    "why": "The shift created an unprecedented test of coalition politics, accountability and policy compromise.",
+    "keywords": [
+      "2024 election",
+      "Government of National Unity",
+      "coalition politics"
+    ],
+    "colle": "Can coalition government renew South African democracy?"
+  }
+]

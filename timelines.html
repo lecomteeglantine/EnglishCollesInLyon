@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chronologies · English Colles in Lyon</title>
-<meta name="description" content="Frise chronologique interactive du Royaume-Uni pour préparer les colles d'anglais en CPGE.">
+<title>Timelines · English Colles in Lyon</title>
+<meta name="description" content="Interactive timelines of the United Kingdom, United States, Ireland, Canada, Australia, New Zealand, India and South Africa for CPGE English colles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -213,7 +213,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:34px 0}
 .jalon-btn.primary{background:var(--terra,#C46A4A);border-color:var(--terra,#C46A4A);color:#fff}
 .jalon-copied{color:#4e6b4a;font-weight:700;font-size:.85rem;margin-top:10px;display:none}
 
-/* ===== frise visuelle ===== */
+/* ===== Visual timeline ===== */
 .frise-wrap{background:var(--card,#fff);border:1px solid var(--line,#E6D8C8);border-radius:16px;padding:18px 6px 10px;margin-bottom:26px;box-shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07)}
 .frise-hint{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5d6b66;padding:0 16px 10px}
 .frise{display:flex;overflow-x:auto;position:relative;padding:26px 16px 12px;scrollbar-width:thin}
@@ -275,21 +275,21 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Aller au contenu</a>
+<a href="#main" class="skip">Skip to content</a>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="index.html" aria-label="English Colles in Lyon — accueil">
+    <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
       <span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
       <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html" class="active" aria-current="page">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html" class="active" aria-current="page">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="top-tools">
-      <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
+      <div class="accent" id="accent" role="group" aria-label="Choose an accent">
         <button data-acc="UK" class="on">UK</button><button data-acc="US">US</button><button data-acc="AU">AU</button><button data-acc="CA">CA</button>
       </div>
-      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog"><span aria-hidden="true">◐</span><span class="lbl">Accessibilité</span></button>
+      <button class="a11y-btn" id="openA11y" aria-haspopup="dialog"><span aria-hidden="true">◐</span><span class="lbl">Accessibility</span></button>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -297,18 +297,18 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </header>
 
 <div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Réglages d'accessibilité">
-  <div class="ph"><h2>Accessibilité</h2><button class="close" id="closeA11y" aria-label="Fermer">×</button></div>
+<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+  <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
-    <div class="a11y-group"><span class="lbl">Taille du texte</span>
+    <div class="a11y-group"><span class="lbl">Text size</span>
       <div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div>
     </div>
-    <div class="a11y-group"><span class="lbl">Affichage</span>
-      <button class="opt-toggle" data-opt="contrast"><span>Contraste élevé</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="dys"><span>Police de lecture confortable</span><span class="state">Off</span></button>
-      <button class="opt-toggle" data-opt="noanim"><span>Réduire les animations</span><span class="state">Off</span></button>
+    <div class="a11y-group"><span class="lbl">Display</span>
+      <button class="opt-toggle" data-opt="contrast"><span>High contrast</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="dys"><span>Comfortable reading font</span><span class="state">Off</span></button>
+      <button class="opt-toggle" data-opt="noanim"><span>Reduce animations</span><span class="state">Off</span></button>
     </div>
-    <p class="a11y-foot">Tes réglages sont mémorisés sur cet appareil.</p>
+    <p class="a11y-foot">Your settings are saved on this device.</p>
   </div>
 </aside>
 
@@ -318,13 +318,13 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div>
       <div class="eyebrow">Civilisation · Interactive timeline</div>
       <h1 id="tlH1">The United Kingdom through time</h1>
-      <p class="lead">Une frise chronologique interactive pour retenir les dates essentielles, comprendre leur importance et les réutiliser intelligemment en colle.</p>
-      <p class="hint">Clique sur chaque événement pour afficher les explications, le vocabulaire et un angle de colle.</p>
+      <p class="lead">An interactive timeline to learn essential dates, understand why they matter and use them effectively in class and in colles.</p>
+      <p class="hint">Select an event to reveal the explanation, key vocabulary and a possible colle angle.</p>
     </div>
     <aside class="country-panel">
       <div class="title"><div class="flag tl-flag" aria-hidden="true" id="tlFlag"></div><div><h2 id="tlName">United Kingdom</h2><p id="tlStrap"></p></div></div>
       <div class="country-select">
-        <label for="country">Choisir un pays</label>
+        <label for="country">Choose a country</label>
         <select id="country">
           <option value="gb" selected>United Kingdom</option>
           <option value="us">United States</option>
@@ -344,32 +344,32 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <section class="controls-section">
   <div class="wrap">
     <div class="controls">
-      <div class="control"><label for="search">Rechercher un événement ou un mot-clé</label><input id="search" type="search" placeholder="Ex. Brexit, monarchy, NHS, Empire…"></div>
-      <div class="control"><label for="sort">Ordre d'affichage</label><select id="sort"><option value="asc">Du plus ancien au plus récent</option><option value="desc">Du plus récent au plus ancien</option></select></div>
+      <div class="control"><label for="search">Search for an event or keyword</label><input id="search" type="search" placeholder="Ex. Brexit, monarchy, NHS, Empire…"></div>
+      <div class="control"><label for="sort">Display order</label><select id="sort"><option value="asc">Oldest to newest</option><option value="desc">Newest to oldest</option></select></div>
     </div>
-    <div class="pills" id="pills" aria-label="Filtrer par période"></div>
-    <div class="result-count" id="resultCount">24 événements affichés</div>
+    <div class="pills" id="pills" aria-label="Filter by historical period"></div>
+    <div class="result-count" id="resultCount">35 events displayed</div>
   </div>
 </section>
 
 <section class="timeline-section">
   <div class="wrap">
     <div class="frise-wrap">
-      <div class="frise-hint">La frise — clique sur un point pour ouvrir l'événement ↓</div>
-      <div class="frise" id="frise" role="list" aria-label="Frise chronologique"></div>
+      <div class="frise-hint">Timeline overview — select a point to open the event ↓</div>
+      <div class="frise" id="frise" role="list" aria-label="Historical timeline"></div>
     </div>
     <div class="timeline" id="timeline"></div>
-    <div class="empty" id="empty">Aucun événement ne correspond à ta recherche.</div>
+    <div class="empty" id="empty">No event matches your search.</div>
   </div>
 </section>
 
 <section class="toolkit">
   <div class="wrap">
     <div class="eyebrow">Colle toolkit</div>
-    <h2>Comment utiliser cette frise en colle</h2>
+    <h2>How to use this timeline in a colle</h2>
     <div class="toolkit-grid">
-      <div class="tool-card"><h3>La méthode en 4 étapes</h3><ol><li>Retenir la date et le nom de l'événement.</li><li>Expliquer ce qui s'est passé en une phrase.</li><li>Donner trois mots-clés précis.</li><li>Relier l'événement à un débat contemporain.</li></ol></div>
-      <div class="tool-card"><h3>Les dates prioritaires</h3><ul id="priorityList"></ul></div>
+      <div class="tool-card"><h3>The four-step method</h3><ol><li>Remember the date and the name of the event.</li><li>Explain what happened in one clear sentence.</li><li>Use three precise keywords.</li><li>Connect the event to a contemporary debate.</li></ol></div>
+      <div class="tool-card"><h3>Priority dates</h3><ul id="priorityList"></ul></div>
     </div>
   </div>
 </section>
@@ -379,11 +379,11 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div class="quiz-box">
       <div class="eyebrow" style="color:#D9A441">Mini quiz</div>
       <h2>Test your timeline</h2>
-      <p>Une question aléatoire à la fois.</p>
+      <p>One random question at a time.</p>
       <div class="quiz-question" id="quizQuestion"></div>
       <div class="quiz-options" id="quizOptions"></div>
       <div class="quiz-feedback" id="quizFeedback"></div>
-      <button class="quiz-next" id="quizNext">Question suivante</button>
+      <button class="quiz-next" id="quizNext">Next question</button>
     </div>
   </div>
 </section>
@@ -393,12 +393,12 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div class="radar-box">
       <div class="radar-head">
         <div>
-          <div class="eyebrow" style="color:#C46A4A">Radar d'actualité · non vérifié</div>
-          <h2 id="radarTitle">L'actualité récente à considérer</h2>
-          <p class="radar-warn">⚠️ Ces titres viennent directement de la presse du jour et <b>ne font pas partie de la frise officielle</b> : ils ne sont ni sélectionnés ni vérifiés. À toi de juger : si un événement te semble marquant, ajoute-le à <b>ta</b> frise personnelle.</p>
+          <div class="eyebrow" style="color:#C46A4A">Current-affairs radar · unverified</div>
+          <h2 id="radarTitle">Recent developments to consider</h2>
+          <p class="radar-warn">⚠️ These headlines come directly from the day’s news and <b>are not part of the official timeline</b>: they have not been selected or verified. Decide whether an event is historically significant before adding it to <b>your</b> personal timeline.</p>
         </div>
       </div>
-      <ul class="radar-list" id="radarList"><li class="radar-loading">Chargement de la presse…</li></ul>
+      <ul class="radar-list" id="radarList"><li class="radar-loading">Loading the news…</li></ul>
       <p class="radar-foot" id="radarFoot"></p>
     </div>
   </div>
@@ -407,22 +407,22 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 
 <div class="jalon-mask" id="jalonMask" role="dialog" aria-modal="true" aria-labelledby="jalonH">
   <div class="jalon-card">
-    <h3 id="jalonH">Copier la ligne de ce jalon</h3>
-    <p>Copie cette ligne au format des dossiers de civilisation. Tu peux la garder dans tes notes, la partager, ou la proposer pour enrichir la frise commune. <b>Vérifie et corrige la date et la formulation</b> : c'est en réfléchissant toi-même que tu progresses.</p>
+    <h3 id="jalonH">Copy this milestone line</h3>
+    <p>Copy this line in the format used in the civilisation files. Keep it in your notes, share it or suggest it for the common timeline. <b>Check and improve the date and wording</b>: deciding why an event matters is part of the learning process.</p>
     <div class="jalon-code" id="jalonCode"></div>
     <div class="jalon-actions">
-      <button class="jalon-btn primary" id="jalonCopy">Copier la ligne</button>
-      <button class="jalon-btn" id="jalonClose">Fermer</button>
+      <button class="jalon-btn primary" id="jalonCopy">Copy the line</button>
+      <button class="jalon-btn" id="jalonClose">Close</button>
     </div>
-    <div class="jalon-copied" id="jalonCopied">✓ Copié dans le presse-papier</div>
+    <div class="jalon-copied" id="jalonCopied">✓ Copied to the clipboard</div>
   </div>
 </div>
 
 <footer>
   <div class="wrap foot-grid">
     <div class="foot-brand">English Colles in Lyon</div>
-    <nav class="foot-nav" aria-label="Navigation de pied de page"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
-    <div class="foot-copy">Outil pédagogique pour la préparation des colles d'anglais en CPGE.</div>
+    <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    <div class="foot-copy">A learning resource for CPGE English classes and colles.</div>
   </div>
 <div class="ecl-author-footer">
   <span>Designed and created by</span>
@@ -431,9 +431,9 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </div>
 </footer>
 
-<script src="timeline-data.js"></script>
+<script src="timeline-data.js?v=20260722"></script>
 <script>
-/* ===== Frises multi-pays : les données viennent de timeline-data.js ===== */
+/* ===== Multi-country timelines: data loaded from timeline-data.js ===== */
 const T = window.TIMELINES || {};
 const timeline=document.getElementById("timeline");
 let currentFilter="all";
@@ -446,7 +446,7 @@ document.getElementById("country").value = country;
 
 function escapeHTML(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));}
 
-/* ===== icônes thématiques (choisies selon le contenu de l'événement) ===== */
+/* ===== Thematic icons selected from each event’s content ===== */
 const TICONS = {
   crown:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l-1.5-9L8 12l4-7 4 7 5.5-4L20 17Z"/><path d="M5 20h14"/></svg>',
   scroll:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>',
@@ -506,7 +506,7 @@ function renderMeta(){
   c.events.slice().sort((a,b)=>a.year-b.year).forEach(e=>{ if(!eras.some(x=>x.era===e.era)) eras.push({era:e.era,tag:e.tag}); });
   document.getElementById("statPeriods").textContent = eras.length;
   const pills = document.getElementById("pills");
-  pills.innerHTML = '<button class="pill on" data-filter="all">Toutes les périodes</button>' +
+  pills.innerHTML = '<button class="pill on" data-filter="all">All periods</button>' +
     eras.map(x=>`<button class="pill" data-filter="${escapeHTML(x.era)}">${escapeHTML(x.tag)}</button>`).join("");
   currentFilter = "all";
   pills.querySelectorAll(".pill").forEach(p=>p.addEventListener("click",()=>{
@@ -549,7 +549,7 @@ function render(){
     renderMeta();render();
   }));
   renderFrise(filtered.slice().sort((a,b)=>a.year-b.year));
-  document.getElementById("resultCount").textContent=`${filtered.length} événement${filtered.length>1?"s":""} affiché${filtered.length>1?"s":""}`;
+  document.getElementById("resultCount").textContent=`${filtered.length} event${filtered.length===1?"":"s"} displayed`;
   document.getElementById("empty").style.display=filtered.length?"none":"block";
   document.querySelectorAll(".event-toggle").forEach(btn=>btn.addEventListener("click",()=>{
     const card=btn.closest(".event-card"); card.classList.toggle("open");
@@ -565,19 +565,19 @@ document.getElementById("country").addEventListener("change",()=>{
   renderMeta();render();buildQuiz();loadQuiz();loadRadar();
 });
 
-/* ===== Quiz généré depuis les événements du pays ===== */
+/* ===== Quiz generated from the selected country’s events ===== */
 let quiz=[], qi=0;
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function buildQuiz(){
   const ev = cur().events;
   quiz = [];
   if(ev.length < 4) return;
-  // Type 1 : « When was … ? »  ·  Type 2 : « What happened in … ? »
+  // Type 1: date recognition · Type 2: event recognition
   shuffle(ev.slice()).slice(0, 10).forEach((e, k)=>{
     if(k % 2 === 0){
       const wrong = shuffle(ev.filter(x=>x.date!==e.date).map(x=>x.date)).slice(0,3);
       const opts = shuffle([e.date, ...wrong]);
-      quiz.push({q:`When: ${e.title}?`, a:opts, c:opts.indexOf(e.date), e:`${e.date} — ${e.summary}`});
+      quiz.push({q:`When did “${e.title}” happen?`, a:opts, c:opts.indexOf(e.date), e:`${e.date} — ${e.summary}`});
     } else {
       const wrong = shuffle(ev.filter(x=>x.title!==e.title).map(x=>x.title)).slice(0,3);
       const opts = shuffle([e.title, ...wrong]);
@@ -605,7 +605,7 @@ function loadQuiz(){
 }
 document.getElementById("quizNext").addEventListener("click",()=>{qi=(qi+1)%quiz.length;loadQuiz();});
 
-/* ===== frise visuelle ===== */
+/* ===== Visual timeline ===== */
 const ERA_COLORS = ["#243B53","#D9A441","#C46A4A","#7A9B76","#0072CE","#6A4C93","#8A5A2B"];
 function eraColor(era){
   const eras = [];
@@ -633,34 +633,34 @@ function renderFrise(list){
   }));
 }
 
-/* ===== radar d'actualité (piste 2 : proposition, jamais insertion auto) ===== */
+/* ===== Current-affairs radar: suggestions only, never inserted automatically ===== */
 const RADAR_WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
 function loadRadar(){
   const list = document.getElementById("radarList");
   const foot = document.getElementById("radarFoot");
-  document.getElementById("radarTitle").textContent = "L'actualité récente à considérer — " + cur().name.replace(/^the /i,"");
-  list.innerHTML = '<li class="radar-loading">Chargement de la presse…</li>';
+  document.getElementById("radarTitle").textContent = "Recent developments to consider — " + cur().name.replace(/^the /i,"");
+  list.innerHTML = '<li class="radar-loading">Loading the news…</li>';
   foot.textContent = "";
   fetch(RADAR_WORKER + "?country=" + country + "&n=6")
     .then(r=>r.json())
     .then(d=>{
-      if(!d.items || !d.items.length){ list.innerHTML = '<li class="radar-loading">Pas d\'actualité disponible pour le moment.</li>'; return; }
+      if(!d.items || !d.items.length){ list.innerHTML = '<li class="radar-loading">No recent news is available at the moment.</li>'; return; }
       list.innerHTML = d.items.map((it,i)=>`
         <li class="radar-item">
           <span class="ri-main">
             <a class="ri-title" href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)} ↗</a>
-            <span class="ri-src">${escapeHTML(d.source)} · aujourd'hui</span>
+            <span class="ri-src">${escapeHTML(d.source)} · today</span>
           </span>
           <div class="ri-actions">
             <button class="ri-add" data-i="${i}">➕ Add to my timeline</button>
             <button class="ri-copy" data-i="${i}">📋 Copy the line</button>
           </div>
         </li>`).join("");
-      foot.textContent = "Source : " + d.source + ". Titres récupérés automatiquement, non filtrés.";
+      foot.textContent = "Source: " + d.source + ". Headlines are retrieved automatically and are not filtered.";
       list.querySelectorAll(".ri-add").forEach(btn=>btn.addEventListener("click",()=>addToMine(d.items[+btn.dataset.i],btn)));
       list.querySelectorAll(".ri-copy").forEach(btn=>btn.addEventListener("click",()=>openJalon(d.items[+btn.dataset.i])));
     })
-    .catch(()=>{ list.innerHTML = '<li class="radar-loading">Presse momentanément indisponible.</li>'; });
+    .catch(()=>{ list.innerHTML = '<li class="radar-loading">The news feed is temporarily unavailable.</li>'; });
 }
 
 function addToMine(item, btn){
@@ -686,9 +686,9 @@ function addToMine(item, btn){
 
 function openJalon(item){
   const year = new Date().getFullYear();
-  // ligne au format attendu par le dossier :  - **AAAA — Titre** → pourquoi ça compte.
+  // Line format used in the civilisation files.
   const clean = item.title.replace(/\s+/g," ").trim();
-  const line = `- **${year} — ${clean}** → à compléter : pourquoi cet événement compte pour la civilisation du pays.`;
+  const line = `- **${year} — ${clean}** → To complete: explain why this event matters to the country’s civilisation.`;
   document.getElementById("jalonCode").textContent = line;
   document.getElementById("jalonCopied").style.display = "none";
   document.getElementById("jalonMask").classList.add("on");
@@ -697,7 +697,7 @@ function openJalon(item){
     navigator.clipboard.writeText(line).then(()=>{
       document.getElementById("jalonCopied").style.display = "block";
     }).catch(()=>{
-      // repli : sélectionner le texte pour copie manuelle
+      // Fallback: select the text for manual copying
       const r = document.createRange(); r.selectNodeContents(document.getElementById("jalonCode"));
       const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
     });
@@ -707,7 +707,7 @@ document.getElementById("jalonClose").addEventListener("click",()=>document.getE
 document.getElementById("jalonMask").addEventListener("click",e=>{ if(e.target.id==="jalonMask") e.currentTarget.classList.remove("on"); });
 
 
-/* init */
+/* Initialisation */
 renderMeta();render();buildQuiz();loadQuiz();loadRadar();
 
 /* Mobile nav */

@@ -1,0 +1,402 @@
+[
+  {
+    "year": 1757,
+    "date": "1757",
+    "era": "company",
+    "tag": "Company rule & the Raj",
+    "title": "The Battle of Plassey",
+    "summary": "The East India Company becomes a territorial power.",
+    "what": "Company forces defeated the Nawab of Bengal and gained decisive influence over a wealthy province.",
+    "why": "Commercial power turned into colonial rule, making private corporate violence central to the origins of the Raj.",
+    "keywords": [
+      "East India Company",
+      "Plassey",
+      "colonial rule"
+    ],
+    "colle": "Can a private company become an empire?"
+  },
+  {
+    "year": 1857,
+    "date": "1857–58",
+    "era": "company",
+    "tag": "Company rule & the Raj",
+    "title": "The Rebellion of 1857",
+    "summary": "A vast uprising ends Company rule.",
+    "what": "Indian soldiers and civilians rebelled across northern and central India in a conflict remembered variously as a mutiny or a war of independence.",
+    "why": "Britain transferred power to the Crown and reorganised the Raj.",
+    "keywords": [
+      "1857 Rebellion",
+      "Sepoy Mutiny",
+      "British Raj"
+    ],
+    "colle": "How does the name given to a rebellion shape historical memory?"
+  },
+  {
+    "year": 1885,
+    "date": "1885",
+    "era": "nationalism",
+    "tag": "Nationalism & independence",
+    "title": "The Indian National Congress is founded",
+    "summary": "An all-India political organisation emerges.",
+    "what": "Educated Indian leaders created a forum that initially sought reform within the Empire.",
+    "why": "Congress later became the principal movement for mass anti-colonial nationalism.",
+    "keywords": [
+      "Indian National Congress",
+      "nationalism",
+      "self-government"
+    ],
+    "colle": "How do moderate reform movements become revolutionary?"
+  },
+  {
+    "year": 1905,
+    "date": "1905",
+    "era": "nationalism",
+    "tag": "Nationalism & independence",
+    "title": "Partition of Bengal and Swadeshi",
+    "summary": "British administrative division provokes mass resistance.",
+    "what": "The partition of Bengal was opposed through boycotts, indigenous production and political mobilisation.",
+    "why": "The Swadeshi movement broadened nationalism but also sharpened communal and regional tensions.",
+    "keywords": [
+      "Partition of Bengal",
+      "Swadeshi",
+      "boycott"
+    ],
+    "colle": "Can economic nationalism unite a diverse society?"
+  },
+  {
+    "year": 1919,
+    "date": "1919",
+    "era": "nationalism",
+    "tag": "Nationalism & independence",
+    "title": "The Amritsar massacre",
+    "summary": "British troops kill unarmed civilians at Jallianwala Bagh.",
+    "what": "General Dyer ordered fire on a trapped crowd, causing hundreds of deaths.",
+    "why": "The massacre destroyed faith in gradual imperial reform for many Indians.",
+    "keywords": [
+      "Amritsar massacre",
+      "Jallianwala Bagh",
+      "colonial violence"
+    ],
+    "colle": "Can an empire retain legitimacy after state violence?"
+  },
+  {
+    "year": 1930,
+    "date": "1930",
+    "era": "nationalism",
+    "tag": "Nationalism & independence",
+    "title": "The Salt March",
+    "summary": "Gandhi turns salt into a symbol of civil disobedience.",
+    "what": "Marchers defied the colonial salt monopoly through a carefully staged non-violent campaign.",
+    "why": "The action demonstrated the political power of mass participation, symbolism and media attention.",
+    "keywords": [
+      "Mahatma Gandhi",
+      "Salt March",
+      "civil disobedience"
+    ],
+    "colle": "Is non-violent resistance more effective than armed struggle?"
+  },
+  {
+    "year": 1942,
+    "date": "1942",
+    "era": "nationalism",
+    "tag": "Nationalism & independence",
+    "title": "The Quit India Movement",
+    "summary": "Congress demands immediate British withdrawal.",
+    "what": "Leaders were arrested as protests and repression spread during the Second World War.",
+    "why": "Although suppressed, the movement showed that post-war imperial rule would be unsustainable.",
+    "keywords": [
+      "Quit India",
+      "Congress",
+      "decolonisation"
+    ],
+    "colle": "Did the Second World War make Indian independence inevitable?"
+  },
+  {
+    "year": 1947,
+    "date": "1947",
+    "era": "republic",
+    "tag": "Independence & republic",
+    "title": "Independence and Partition",
+    "summary": "Freedom arrives with mass displacement and killing.",
+    "what": "British India was divided into India and Pakistan, prompting one of history’s largest forced migrations.",
+    "why": "Partition remains central to relations with Pakistan, minority politics and the Kashmir dispute.",
+    "keywords": [
+      "Partition",
+      "independence",
+      "communal violence"
+    ],
+    "colle": "Was Partition the unavoidable price of independence?"
+  },
+  {
+    "year": 1950,
+    "date": "1950",
+    "era": "republic",
+    "tag": "Independence & republic",
+    "title": "The Constitution",
+    "summary": "India becomes a sovereign democratic republic.",
+    "what": "The constitution established universal adult suffrage, federalism, fundamental rights and a secular state.",
+    "why": "It created democratic institutions on an extraordinary scale in a poor, diverse and recently partitioned country.",
+    "keywords": [
+      "Constitution",
+      "secularism",
+      "universal suffrage"
+    ],
+    "colle": "How has India sustained democracy despite immense diversity?"
+  },
+  {
+    "year": 1951,
+    "date": "1951–52",
+    "era": "republic",
+    "tag": "Independence & republic",
+    "title": "The first general election",
+    "summary": "Hundreds of millions participate in universal suffrage.",
+    "what": "India organised a vast multi-phase election despite poverty, illiteracy and limited infrastructure.",
+    "why": "The success gave democratic legitimacy to the republic and normalised electoral competition.",
+    "keywords": [
+      "first general election",
+      "Election Commission",
+      "mass democracy"
+    ],
+    "colle": "Why did democracy take root in India?"
+  },
+  {
+    "year": 1971,
+    "date": "1971",
+    "era": "republic",
+    "tag": "Independence & republic",
+    "title": "War and the creation of Bangladesh",
+    "summary": "India defeats Pakistan in a decisive regional war.",
+    "what": "India intervened after mass displacement and conflict in East Pakistan, which became Bangladesh.",
+    "why": "The victory confirmed India’s regional power but deepened rivalry with Pakistan.",
+    "keywords": [
+      "Bangladesh",
+      "India-Pakistan war",
+      "regional power"
+    ],
+    "colle": "Can humanitarian intervention be separated from strategic interest?"
+  },
+  {
+    "year": 1975,
+    "date": "1975–77",
+    "era": "republic",
+    "tag": "Independence & republic",
+    "title": "The Emergency",
+    "summary": "Democratic freedoms are suspended.",
+    "what": "Indira Gandhi’s government ruled by decree, censored the press and detained opponents.",
+    "why": "Voters later removed her from office, making the period both a warning about authoritarianism and evidence of democratic resilience.",
+    "keywords": [
+      "the Emergency",
+      "Indira Gandhi",
+      "civil liberties"
+    ],
+    "colle": "Could India’s democracy survive another Emergency?"
+  },
+  {
+    "year": 1984,
+    "date": "1984",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "Operation Blue Star and Indira Gandhi’s assassination",
+    "summary": "Conflict in Punjab produces national trauma.",
+    "what": "The army entered the Golden Temple to remove militants; Sikh bodyguards later assassinated the Prime Minister, followed by anti-Sikh massacres.",
+    "why": "The year exposed the dangers of religious conflict, state force and impunity.",
+    "keywords": [
+      "Operation Blue Star",
+      "anti-Sikh violence",
+      "Punjab"
+    ],
+    "colle": "How should democracies respond to separatist violence without targeting communities?"
+  },
+  {
+    "year": 1991,
+    "date": "1991",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "Economic liberalisation",
+    "summary": "India turns away from a heavily regulated economy.",
+    "what": "A balance-of-payments crisis prompted deregulation, lower trade barriers and greater foreign investment.",
+    "why": "Reform accelerated growth and created a large middle class while widening regional and social inequalities.",
+    "keywords": [
+      "liberalisation",
+      "economic growth",
+      "inequality"
+    ],
+    "colle": "Has liberalisation benefited India fairly?"
+  },
+  {
+    "year": 1992,
+    "date": "1992",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "The demolition of the Babri Masjid",
+    "summary": "Hindu nationalist mobilisation reaches a turning point.",
+    "what": "A Hindu nationalist crowd destroyed the mosque at Ayodhya, triggering communal violence.",
+    "why": "The event accelerated the rise of the BJP and made religion even more central to national politics.",
+    "keywords": [
+      "Babri Masjid",
+      "Hindutva",
+      "communalism"
+    ],
+    "colle": "Can India remain both Hindu-majority and secular?"
+  },
+  {
+    "year": 1998,
+    "date": "1998",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "Nuclear tests",
+    "summary": "India openly declares itself a nuclear-armed power.",
+    "what": "The government conducted tests at Pokhran, followed by Pakistani tests.",
+    "why": "Nuclear weapons enhanced status and deterrence while increasing regional risk.",
+    "keywords": [
+      "Pokhran",
+      "nuclear weapons",
+      "Pakistan"
+    ],
+    "colle": "Do nuclear weapons make South Asia safer?"
+  },
+  {
+    "year": 2005,
+    "date": "2005",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "The Right to Information Act",
+    "summary": "Citizens gain a powerful anti-corruption tool.",
+    "what": "The law allowed people to request records from public authorities.",
+    "why": "It strengthened transparency and grassroots accountability, although later implementation and institutional independence became contested.",
+    "keywords": [
+      "Right to Information",
+      "transparency",
+      "corruption"
+    ],
+    "colle": "Can transparency laws overcome entrenched corruption?"
+  },
+  {
+    "year": 2008,
+    "date": "2008",
+    "era": "transformation",
+    "tag": "Conflict & transformation",
+    "title": "The Mumbai attacks",
+    "summary": "Coordinated terrorism strikes India’s financial capital.",
+    "what": "Ten attackers targeted hotels, a railway station and other sites, killing more than 160 people.",
+    "why": "The attacks reshaped security policy and intensified India-Pakistan tensions.",
+    "keywords": [
+      "Mumbai attacks",
+      "terrorism",
+      "security"
+    ],
+    "colle": "How should democracies respond to cross-border terrorism?"
+  },
+  {
+    "year": 2014,
+    "date": "2014",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Narendra Modi comes to power",
+    "summary": "The BJP wins a parliamentary majority.",
+    "what": "Modi campaigned on development, strong leadership and Hindu nationalist themes.",
+    "why": "The election began a dominant political era that reshaped federalism, media, welfare and the meaning of secularism.",
+    "keywords": [
+      "Narendra Modi",
+      "BJP",
+      "Hindutva"
+    ],
+    "colle": "Has Modi strengthened India or weakened its pluralism?"
+  },
+  {
+    "year": 2016,
+    "date": "2016",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Demonetisation",
+    "summary": "Most high-value banknotes are suddenly withdrawn.",
+    "what": "The government presented the measure as an attack on undeclared wealth and counterfeit currency.",
+    "why": "The disruption accelerated digital payments but its economic benefits remain heavily disputed.",
+    "keywords": [
+      "demonetisation",
+      "cash economy",
+      "digital payments"
+    ],
+    "colle": "Was demonetisation bold reform or avoidable disruption?"
+  },
+  {
+    "year": 2017,
+    "date": "2017",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "The Goods and Services Tax",
+    "summary": "A national indirect tax seeks to create one market.",
+    "what": "GST replaced many state and federal taxes with a unified system.",
+    "why": "The reform strengthened economic integration but created complexity for small businesses and federal tensions.",
+    "keywords": [
+      "GST",
+      "single market",
+      "federalism"
+    ],
+    "colle": "Can economic centralisation coexist with Indian federalism?"
+  },
+  {
+    "year": 2019,
+    "date": "2019",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Article 370 is abrogated",
+    "summary": "Jammu and Kashmir loses its special constitutional status.",
+    "what": "The government divided the former state into two union territories and imposed sweeping security restrictions.",
+    "why": "Supporters called it integration; critics saw an attack on federalism, rights and Kashmiri consent.",
+    "keywords": [
+      "Article 370",
+      "Kashmir",
+      "federalism"
+    ],
+    "colle": "Can national integration be imposed without local consent?"
+  },
+  {
+    "year": 2020,
+    "date": "2020–21",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Farm laws and mass protest",
+    "summary": "Farmers force the repeal of major market reforms.",
+    "what": "Three agricultural laws prompted a year-long protest movement around Delhi.",
+    "why": "Their withdrawal showed that mass mobilisation can still constrain a strong majority government.",
+    "keywords": [
+      "farmers’ protests",
+      "agriculture",
+      "protest"
+    ],
+    "colle": "How powerful is civil society under a dominant government?"
+  },
+  {
+    "year": 2023,
+    "date": "2023",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Population, G20 and the Moon",
+    "summary": "India’s global profile rises sharply.",
+    "what": "India became the world’s most populous country, hosted the G20 summit and landed Chandrayaan-3 near the Moon’s south pole.",
+    "why": "The achievements reinforced claims that India is an emerging technological and diplomatic power.",
+    "keywords": [
+      "G20",
+      "Chandrayaan-3",
+      "demographic power"
+    ],
+    "colle": "Can India convert global prestige into broad domestic development?"
+  },
+  {
+    "year": 2024,
+    "date": "2024",
+    "era": "modi",
+    "tag": "The Modi era",
+    "title": "Modi wins a third term without a BJP majority",
+    "summary": "Coalition politics returns at the national level.",
+    "what": "The BJP remained the largest party but lost its single-party majority; the NDA coalition kept Narendra Modi in office.",
+    "why": "The result checked BJP dominance while confirming Modi’s continuing centrality.",
+    "keywords": [
+      "2024 election",
+      "NDA coalition",
+      "third term"
+    ],
+    "colle": "Did the 2024 election strengthen Indian democracy?"
+  }
+]
