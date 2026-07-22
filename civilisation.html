@@ -142,10 +142,14 @@ footer{background:var(--navy);color:#fff;text-align:center;padding:25px 20px}.fo
 @media(max-width:880px){.hero-grid,.theme-shell{grid-template-columns:1fr}.start-grid{grid-template-columns:repeat(2,1fr)}.countries,.games{grid-template-columns:1fr}.theme-tabs{grid-template-columns:repeat(3,1fr)}.theme-tab{text-align:center}.hero{padding-top:32px}}
 @media(max-width:580px){:root{--base:16px}.wrap{padding-inline:14px}.top-in{min-height:64px}.brand .sub{display:none}.tool-btn .label{display:none}.accent-note{display:none}.start-grid,.theme-tabs,.theme-country-grid{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:8px}.country-actions{flex-direction:column;align-items:stretch}.btn{width:100%}.compare-controls,.builder-row{grid-template-columns:1fr}.hero h1{font-size:2.55rem}.start-card p{min-height:0}}
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
+<meta name="author" content="Eglantine Lecomte">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a class="skip ecl-legacy-shell" href="#main">Skip to content</a>
+<header class="top ecl-legacy-shell">
   <div class="wrap top-in">
     <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
       <span class="name">English Colles in Lyon</span><span class="by">by Eglantine Lecomte</span><span class="sub">CPGE English · Independent practice · Colles</span>
@@ -161,8 +165,8 @@ footer{background:var(--navy);color:#fff;text-align:center;padding:25px 20px}.fo
   </div>
   <div class="accent-note" id="accentNote" aria-live="polite"></div>
 </header>
-<div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+<div class="scrim ecl-legacy-shell" id="scrim"></div>
+<aside class="a11y-panel ecl-legacy-shell" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
   <div class="panel-head"><h2>Accessibility</h2><button class="close" id="closeA11y" type="button" aria-label="Close accessibility settings">×</button></div>
   <div class="a11y-body">
     <div class="a11y-group"><span class="label">Text size</span><div class="segmented"><button class="seg-btn" data-size="0">A</button><button class="seg-btn" data-size="1">A+</button><button class="seg-btn" data-size="2">A++</button></div></div>
@@ -191,7 +195,7 @@ footer{background:var(--navy);color:#fff;text-align:center;padding:25px 20px}.fo
   <article class="game-card"><div class="game-head"><h3>Key Question Builder</h3><span class="game-badge">methodology</span></div><p>Combine a country with a tension to build an analytical question.</p><div class="game-stage"><div class="builder-row"><select id="builderCountry" aria-label="Country"></select><select id="builderTension" aria-label="Tension"></select></div><div class="generated-question" id="builtQuestion"></div></div><div class="game-actions"><button class="btn primary" id="buildQuestion">Build another question</button></div></article>
 </div><div class="transfer"><span class="transfer-icon" aria-hidden="true">↗</span><div><h3>Take the knowledge back to class.</h3><p>The atlas is preparation, not a substitute for speaking. Reuse one precise fact, one tension and one comparison in class or in your next colle.</p></div></div></div></section>
 </main>
-<footer><div class="footer-title">English Colles in Lyon</div><div class="footer-by">Designed and created by Eglantine Lecomte</div><div class="footer-note">Civilisation knowledge should be reused in English class and in colles.</div></footer>
+<footer class="ecl-legacy-shell"><div class="footer-title">English Colles in Lyon</div><div class="footer-by">Designed and created by Eglantine Lecomte</div><div class="footer-note">Civilisation knowledge should be reused in English class and in colles.</div></footer>
 <div class="modal" id="challengeModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><div class="panel-head"><h2 id="modalTitle">Country challenge</h2><button class="close" id="closeModal" aria-label="Close challenge">×</button></div><div class="modal-body"><p id="modalIntro"></p><ol class="modal-clues" id="modalClues"></ol><p class="generated-question" id="modalQuestion"></p><div class="modal-actions"><a class="btn primary" id="modalLink" href="#">Open the atlas →</a><button class="btn ghost" id="anotherChallenge" type="button">Another challenge</button></div></div></div></div>
 <script>
 const COUNTRIES=[
@@ -329,5 +333,6 @@ function applyPrefs(){document.documentElement.style.setProperty('--base',[17,18
 $$('[data-size]').forEach(b=>b.addEventListener('click',()=>{prefs.size=Number(b.dataset.size);applyPrefs()}));$$('[data-option]').forEach(b=>b.addEventListener('click',()=>{const map={contrast:'contrast',font:'font',motion:'motion',focus:'focus'};prefs[map[b.dataset.option]]=!prefs[map[b.dataset.option]];applyPrefs()}));$$('[data-accent]').forEach(b=>b.addEventListener('click',()=>{prefs.accent=b.dataset.accent;applyPrefs()}));
 renderCountries();renderTheme();newDetective();newTension();newCompare();buildQuestion();applyPrefs();
 </script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>
