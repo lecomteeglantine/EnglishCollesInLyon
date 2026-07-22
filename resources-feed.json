@@ -1,194 +1,220 @@
 {
   "version": 2,
-  "generatedAt": "2026-07-22T07:43:55.694Z",
-  "status": "ok",
+  "checkedAt": "2026-07-22T18:36:20.267Z",
+  "generatedAt": "2026-07-22T18:36:20.267Z",
+  "lastSuccessfulAt": "2026-07-22T18:36:20.267Z",
+  "status": "partial",
   "items": [
     {
-      "title": "Producer price inflation, UK: June 2026 including services, April to June 2026",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/producerpriceinflationukjune2026includingservicesapriltojune2026",
-      "date": "2026-07-22T06:00:00.000Z",
+      "title": "Natalie Fleet leaves 'triggering' safeguarding minister role",
+      "source": "BBC UK",
+      "url": "https://www.bbc.co.uk/news/articles/cq56g2n083do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-22T17:33:56.000Z",
       "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
     },
     {
-      "title": "Producer price inflation, UK: June 2026, including services, April to June 2026 time series",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/producerpriceinflationukjune2026includingservicesapriltojune2026timeseries",
-      "date": "2026-07-22T06:00:00.000Z",
-      "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
-    },
-    {
-      "title": "Consumer price inflation, UK: June 2026 time series",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukjune2026timeseries",
-      "date": "2026-07-22T06:00:00.000Z",
-      "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
-    },
-    {
-      "title": "Untitled publication",
-      "source": "NPR News Now",
-      "url": "1870aabd-fd97-46d0-aea9-45144f39aefe",
-      "date": "2026-07-22T07:11:15.000Z",
+      "title": "Robotic Servicing Mission Launches with NASA Support",
+      "source": "NASA",
+      "url": "https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/",
+      "date": "2026-07-22T18:04:15.000Z",
       "country": "United States",
-      "format": "Podcast",
-      "topic": "Politics",
-      "kind": "Podcast"
+      "format": "News",
+      "topic": "Science & technology",
+      "kind": "Official"
     },
     {
-      "title": "Untitled publication",
-      "source": "NPR News Now",
-      "url": "d0a56735-5ff0-485f-8bba-66e81a3c73f1",
-      "date": "2026-07-22T06:11:01.000Z",
-      "country": "United States",
-      "format": "Podcast",
+      "title": "Two giant anteaters and an armadillo arrive at Dublin Zoo",
+      "source": "RTÉ News",
+      "url": "https://www.rte.ie/news/2026/0722/1584660-dublinzoo-dublin-animals/",
+      "date": "2026-07-22T17:13:15.000Z",
+      "country": "Ireland",
+      "format": "News",
       "topic": "Politics",
-      "kind": "Podcast"
+      "kind": "News"
     },
     {
-      "title": "More warehouses of Russian online retailer Wildberries hit by Ukraine, officials say",
+      "title": "Angelina Jolie and Brad Pitt’s daughter Vivienne files to drop Pitt's last name",
+      "source": "CBC News",
+      "url": "https://www.cbc.ca/news/entertainment/angelina-jolie-brad-pitt-daughter-wants-to-drop-dads-last-name-9.7279580?cmp=rss",
+      "date": "2026-07-22T18:04:23.000Z",
+      "country": "Canada",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "The nefarious rise of Putin is skewered in this satirical drama",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-23/vladimir-putin-the-wizard-of-the-kremlin-interview/106943216",
+      "date": "2026-07-22T18:30:00.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Toxic gas from rotting fish waste nearly killed two workers aboard fishing boat",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/emergencies_local/773528/toxic-gas-from-rotting-fish-waste-nearly-killed-two-workers-aboard-fishing-boat",
+      "date": "2026-07-22T18:05:36.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Body of Uttar Pradesh native fished out of Vilangad river",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/body-of-uttar-pradesh-native-fished-out-of-vilangad-river/article71252922.ece",
+      "date": "2026-07-22T18:31:18.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "MEC to engage Gauteng taxi leaders amid growing tensions",
+      "source": "SABC News",
+      "url": "https://www.sabcnews.com/sabcnews/mec-to-engage-gauteng-taxi-leaders-amid-growing-tensions/",
+      "date": "2026-07-22T18:24:00.000Z",
+      "country": "South Africa",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Mamdani backs off pledge to arrest Netanyahu citing lack of authority",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:38:20.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/c204p64pqzno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-22T17:54:57.000Z",
       "country": "International",
       "format": "News",
       "topic": "International relations",
       "kind": "News"
     },
     {
-      "title": "Rural suburb flagged as home for proposed $40b 'hyperscale' data centre",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/beetaloo-digital-energy-ai-hyperscale-data-centre-40-billion/106943690",
-      "date": "2026-07-22T07:36:33.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Waikato hospitals revert to paperwork after major IT outage",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/health/771868/waikato-hospitals-revert-to-paperwork-after-major-it-outage",
-      "date": "2026-07-22T07:31:20.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Streeting apologises after early prisoner release comments heard on mic",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/cgk4x44mm50o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:30:05.000Z",
-      "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "PC Harper killers may be eligible for early release",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/c89nxj4d5pqo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:30:03.000Z",
-      "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Drink spiking charge against Melbourne socialite Amy Tossoun thrown out",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/charge-withdrawn-amy-tossoun-mount-buller/106943852",
-      "date": "2026-07-22T07:13:39.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Queensland mayors take disaster funding fight to Melbourne",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/qld-mayors-protest-disaster-funding/106945790",
-      "date": "2026-07-22T07:06:54.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "$16 million mansion set for demolition catches fire twice in a night",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/two-fires-one-night-sapphire-beach-mansion/106944642",
-      "date": "2026-07-22T07:06:01.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Auckland school forced to cancel school camp as families unable to afford it",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/education/771967/auckland-school-forced-to-cancel-school-camp-as-families-unable-to-afford-it",
-      "date": "2026-07-22T07:00:57.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Southland man's kidney cancer surgery delayed for weeks amid urologist staffing woes",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/health/771976/southland-man-s-kidney-cancer-surgery-delayed-for-weeks-amid-urologist-staffing-woes",
-      "date": "2026-07-22T06:44:54.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Public toilets in Mackenzie District to get $2.5 million investment",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/community/772021/public-toilets-in-mackenzie-district-to-get-2-point-5-million-investment",
-      "date": "2026-07-22T06:31:33.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "UK's largest wind farm to be rebuilt with fewer, larger turbines",
-      "source": "BBC Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/cvgl9vp4vqvo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T06:12:32.000Z",
+      "title": "OpenAI says new systems went rogue",
+      "source": "BBC Global News Podcast",
+      "url": "http://www.bbc.co.uk/programmes/p0p085bb",
+      "date": "2026-07-22T15:53:00.000Z",
       "country": "International",
+      "format": "Podcast",
+      "topic": "International relations",
+      "kind": "Podcast"
+    },
+    {
+      "title": "IUML trains guns on Revenue Minister A.P. Anil Kumar",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/iuml-trains-guns-on-revenue-minister-ap-anil-kumar/article71253086.ece",
+      "date": "2026-07-22T18:30:08.000Z",
+      "country": "India",
       "format": "News",
-      "topic": "Science & technology",
+      "topic": "Politics",
       "kind": "News"
     },
     {
-      "title": "Burnham pulls back on suggestion to increase income tax allowance",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c935g67wyvgo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T06:10:45.000Z",
-      "country": "United Kingdom",
+      "title": "You reckon you know the Logies? Try our quiz",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-23/logies-2026-quiz-australian-tv-awards-night/106942148",
+      "date": "2026-07-22T18:30:00.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "How Nintendo's tariff hike ended with angry gamers and a lawsuit",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-23/nintendo-tariff-refund-case-explained/106944498",
+      "date": "2026-07-22T18:30:00.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Vismaya Mohanlal, other Malayalam actors face online harassment over support to Jantar Mantar protests",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/vismaya-mohanlal-other-malayalam-actors-face-cyberattack-over-support-to-jantar-mantar-protests/article71252557.ece",
+      "date": "2026-07-22T18:26:12.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Lawyers back protesters, urge PM to order probe on police crackdown",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/lawyers-back-protesters-urge-pm-to-order-probe-on-police-crackdown/article71253665.ece",
+      "date": "2026-07-22T18:22:49.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Jantar Mantar protest LIVE: Heavy security deployed at Jantar Mantar, as crowd of protesters swells",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/cjp-jantar-mantar-protest-live-updates-rahul-gandhi-news-abhijeet-dipke-sonam-wangchuk-saurav-das-parliament-session/article71251952.ece",
+      "date": "2026-07-22T18:22:29.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Sikkim NHPC tunnel disaster: Search for Malayali geologist continues",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/sikkim-nhpc-tunnel-disaster-search-for-malayali-geologist-continues/article71254137.ece",
+      "date": "2026-07-22T18:21:50.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Student bodies to hold ‘Chalo Lok Bhavan’ protest on July 23",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/andhra-pradesh/student-bodies-to-hold-chalo-lok-bhavan-protest-on-july-23/article71254681.ece",
+      "date": "2026-07-22T18:13:53.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Chipko movement was a challenge to hierarchy of development: Murali Sivaramakrishnan",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/chipko-movement-was-a-challenge-to-hierarchy-of-development-murali-sivaramakrishnan/article71254725.ece",
+      "date": "2026-07-22T18:07:20.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "What to know about Ukraine's military shakeup",
+      "source": "NPR News",
+      "url": "https://www.npr.org/2026/07/22/g-s1-134813/ukraine-military-shakeup-zelenskyy",
+      "date": "2026-07-22T18:01:18.000Z",
+      "country": "United States",
       "format": "News",
       "topic": "Politics",
       "kind": "News"
     }
   ],
   "sources": {
-    "successful": 16,
-    "failed": 0,
-    "failures": []
-  },
-  "checkedAt": "2026-07-22T07:43:55.694Z",
-  "lastSuccessfulAt": "2026-07-22T07:43:55.694Z"
+    "attempted": 18,
+    "successful": 17,
+    "failed": 1,
+    "failures": [
+      {
+        "source": "Mail & Guardian",
+        "error": "HTTP 404"
+      }
+    ]
+  }
 }
