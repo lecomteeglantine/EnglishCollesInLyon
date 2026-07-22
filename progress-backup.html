@@ -161,10 +161,14 @@
       * { scroll-behavior: auto !important; transition: none !important; }
     }
   </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
+<meta name="author" content="Eglantine Lecomte">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header>
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a class="skip ecl-legacy-shell" href="#main">Skip to content</a>
+<header class="ecl-legacy-shell">
   <div class="head">
     <div class="brand">
       <strong>English Colles in Lyon</strong>
@@ -216,7 +220,7 @@
   </details>
 </main>
 
-<footer>Designed and created by Eglantine Lecomte · Progress is stored locally in your browser.</footer>
+<footer class="ecl-legacy-shell">Designed and created by Eglantine Lecomte · Progress is stored locally in your browser.</footer>
 
 <script>
 (() => {
@@ -370,5 +374,6 @@
   updateStatus();
 })();
 </script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>

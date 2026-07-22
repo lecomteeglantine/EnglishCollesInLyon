@@ -1,10 +1,11 @@
 /* English Colles in Lyon — service worker (offline support without stale update traps) */
-const VERSION = 'eclyon-v5-clean-transfer-20260715';
+const VERSION = 'eclyon-v6-shared-shell-20260722';
 const CORE = [
   './', 'index.html', 'methodology.html', 'civilisation.html', 'vocabulary.html',
   'grammar.html', 'pronunciation.html', 'timelines.html', 'colle-trainer.html',
-  'resources.html', 'jury-reports.html', 'manifest.json', 'icon-192.png',
-  'icon-512.png', 'icon-180.png', 'site-core.js'
+  'resources.html', 'jury-reports.html', 'progress-backup.html', 'help.html',
+  'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png',
+  'site-core.js', 'site-shell.js', 'site-shell.css'
 ];
 
 self.addEventListener('install', event => {

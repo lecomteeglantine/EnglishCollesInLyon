@@ -15,10 +15,13 @@
 @media(max-width:1050px){nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg2);padding:12px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:11px}.menu-btn{display:block}.lesson-card{grid-template-columns:44px 1fr}.video-card{grid-column:2}.path-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.wrap{width:min(100% - 26px,var(--max))}.hero{padding:42px 0}.hero-grid,.diagnostic,.studio-grid{grid-template-columns:1fr}.hero-panel{order:-1}.section{padding:42px 0}.section-head{display:block}.section-head p{margin-top:9px}.path-grid,.library-grid{grid-template-columns:1fr}.lesson-card{grid-template-columns:1fr;padding:16px}.lesson-number{font-size:1rem}.video-card{grid-column:auto}.task-grid,.answer-grid,.score-grid{grid-template-columns:1fr}.accent-picker{grid-template-columns:1fr 1fr}.header-tools .mini-btn .long{display:none}}
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
 </head>
 <body>
-<a class="skip" href="#main">Skip to the main content</a>
-<header>
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a class="skip ecl-legacy-shell" href="#main">Skip to the main content</a>
+<header class="ecl-legacy-shell">
   <div class="wrap topbar">
     <a class="brand" href="index.html"><b>English Colles in Lyon</b><small>by Eglantine Lecomte</small></a>
     <nav id="siteNav" aria-label="Main navigation">
@@ -27,7 +30,7 @@
     <div class="header-tools"><button class="mini-btn" id="a11yOpen" type="button" aria-expanded="false">Aa <span class="long">Accessibility</span></button><button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button></div>
   </div>
 </header>
-<div class="a11y-panel" id="a11yPanel" aria-label="Accessibility options">
+<div class="a11y-panel ecl-legacy-shell" id="a11yPanel" aria-label="Accessibility options">
   <h2>Reading settings</h2>
   <div class="a11y-row"><button type="button" data-size="16">A−</button><button type="button" data-size="18">A</button><button type="button" data-size="21">A+</button></div>
   <div class="a11y-row"><button type="button" id="contrastBtn">High contrast</button><button type="button" id="motionBtn">Reduce motion</button></div>
@@ -473,7 +476,7 @@
   </div>
 </section>
 </main>
-<footer><div class="wrap footer-grid"><div class="footer-brand">English Colles in Lyon<small>by Eglantine Lecomte</small></div><div class="footer-links"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="#main">Back to top ↑</a></div></div></footer>
+<footer class="ecl-legacy-shell"><div class="wrap footer-grid"><div class="footer-brand">English Colles in Lyon<small>by Eglantine Lecomte</small></div><div class="footer-links"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="#main">Back to top ↑</a></div></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{
@@ -518,5 +521,6 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInte
 updateProgress();
 })();
 </script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>
