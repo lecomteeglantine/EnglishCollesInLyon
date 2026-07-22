@@ -1,13 +1,13 @@
 /* English Colles in Lyon — network-first updates with exact offline fallbacks */
-const VERSION = 'eclyon-v7-automatic-content-20260722';
+const VERSION = 'eclyon-v8-english-interface-20260722';
 const CORE = [
   './', 'index.html', 'methodology.html', 'civilisation.html', 'vocabulary.html',
   'grammar.html', 'pronunciation.html', 'timelines.html', 'colle-trainer.html',
-  'resources.html', 'jury-reports.html', 'progress-backup.html', 'help.html',
+  'resources.html', 'jury-reports.html', 'flashcards.html', 'progress-backup.html', 'help.html',
   'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png',
   'site-core.js', 'site-shell.js', 'site-shell.css',
   'daily-news.json', 'resources-feed.json', 'resources-link-status.json',
-  'jury-reports-status.json', 'jury-reports-detected.json'
+  'jury-reports-data.json', 'jury-reports-status.json', 'jury-reports-detected.json'
 ];
 const DYNAMIC_JSON = /\/(?:daily-news|resources-feed|resources-link-status|jury-reports-status|jury-reports-detected)\.json$/i;
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -176,9 +176,9 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     <div class="brand">
       <span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
-      <span class="sub">CPGE · Anglais</span>
+      <span class="sub">CPGE English · Vocabulary practice</span>
     </div>
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="methodology.html">Methodology</a>
       <a href="civilisation.html">Civilisation</a>
@@ -194,24 +194,24 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <main>
   <div class="wrap">
     <div class="page-head">
-      <div class="eyebrow">Vocabulaire</div>
+      <div class="eyebrow">Vocabulary practice</div>
       <h1>Flashcards</h1>
-      <p>Choisis un chapitre, retourne les cartes, et trie ce que tu maîtrises. Les mots « à revoir » reviennent en fin de pile jusqu'à ce que tu les connaisses.</p>
+      <p>Choose a chapter, flip the cards and sort what you know. Cards marked “Review again” return to the end of the deck until you master them.</p>
     </div>
 
     <div class="controls">
       <div class="field">
-        <label for="chapSel">Chapitre</label>
+        <label for="chapSel">Chapter</label>
         <select id="chapSel"></select>
       </div>
       <div class="field" style="max-width:240px">
-        <label id="dirLabel">Sens</label>
+        <label id="dirLabel">Direction</label>
         <div class="seg" role="group" aria-labelledby="dirLabel">
           <button type="button" id="dirEN" aria-pressed="true">EN → FR</button>
           <button type="button" id="dirFR" aria-pressed="false">FR → EN</button>
         </div>
       </div>
-      <button class="btn primary" id="startBtn" type="button">Commencer</button>
+      <button class="btn primary" id="startBtn" type="button">Start session</button>
     </div>
 
     <section class="study" id="study" aria-live="polite">
@@ -222,32 +222,32 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       </div>
 
       <div class="scene">
-        <div class="fcard" id="fcard" tabindex="0" role="button" aria-label="Carte de vocabulaire. Appuie pour retourner.">
+        <div class="fcard" id="fcard" tabindex="0" role="button" aria-label="Vocabulary card. Press to flip.">
           <div class="face front" id="faceFront"></div>
           <div class="face back" id="faceBack"></div>
         </div>
       </div>
 
       <div class="actions">
-        <button class="btn again" id="againBtn" type="button">↺ À revoir</button>
-        <button class="btn know" id="knowBtn" type="button">✓ Je connais</button>
+        <button class="btn again" id="againBtn" type="button">↺ Review again</button>
+        <button class="btn know" id="knowBtn" type="button">✓ I know it</button>
       </div>
-      <p class="kbd-help"><kbd>Espace</kbd> retourner · <kbd>1</kbd> à revoir · <kbd>2</kbd> je connais · <kbd>L</kbd> écouter</p>
+      <p class="kbd-help"><kbd>Space</kbd> flip · <kbd>1</kbd> review again · <kbd>2</kbd> I know it · <kbd>L</kbd> listen</p>
     </section>
 
     <section class="done" id="done">
-      <h2>Session terminée !</h2>
+      <h2>Session complete!</h2>
       <div class="score" id="score"></div>
       <p id="doneMsg"></p>
       <div class="actions">
-        <button class="btn again" id="redoBtn" type="button">↺ Revoir les cartes difficiles</button>
-        <button class="btn primary" id="restartBtn" type="button">Recommencer le chapitre</button>
+        <button class="btn again" id="redoBtn" type="button">↺ Review difficult cards</button>
+        <button class="btn primary" id="restartBtn" type="button">Restart the chapter</button>
       </div>
     </section>
   </div>
 </main>
 
-<footer class="ecl-legacy-shell">English Colles in Lyon — Flashcards de vocabulaire CPGE<div class="ecl-author-footer">
+<footer class="ecl-legacy-shell">English Colles in Lyon — CPGE vocabulary flashcards<div class="ecl-author-footer">
   <span>Designed and created by</span>
   <strong>Eglantine Lecomte</strong>
   <span>· English Colles in Lyon</span>
@@ -317,7 +317,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     parts[p].forEach(function(c){
       var o = document.createElement("option");
       o.value = c.id;
-      o.textContent = "Ch. " + c.chapter + " — " + c.title + " (" + c.count + " mots)";
+      o.textContent = "Ch. " + c.chapter + " — " + c.title + " (" + c.count + " words)";
       og.appendChild(o);
     });
     chapSel.appendChild(og);
@@ -379,13 +379,13 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     fcard.classList.remove("flipped");
 
     var frontHTML, backHTML;
-    var speakTermBtn = '<button type="button" class="speak" data-say="' + esc(e.term) + '" aria-label="Écouter la prononciation" title="Écouter">🔊</button>';
-    var speakExBtn = '<button type="button" class="speak small" data-say="' + esc(e.ex) + '" aria-label="Écouter la phrase d\'exemple" title="Écouter la phrase">🔊</button>';
+    var speakTermBtn = '<button type="button" class="speak" data-say="' + esc(e.term) + '" aria-label="Listen to the pronunciation" title="Listen">🔊</button>';
+    var speakExBtn = '<button type="button" class="speak small" data-say="' + esc(e.ex) + '" aria-label="Écouter la phrase d\'exemple" title="Listen to the sentence">🔊</button>';
     if (direction === "EN"){
       frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
         '<div class="term-row"><div class="term">' + esc(e.term) + '</div>' + speakTermBtn + '</div>' +
         (e.ipa ? '<div class="ipa">' + esc(e.ipa) + '</div>' : '') +
-        '<span class="hint">Appuie pour voir la traduction</span>';
+        '<span class="hint">Press to reveal the translation</span>';
       backHTML = '<div class="fr">' + esc(e.fr) + '</div>' +
         (e.pron ? '<div class="pron">' + esc(e.pron) + '</div>' : '') +
         '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
@@ -393,7 +393,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     } else {
       frontHTML = '<span class="sec">' + esc(card.sec) + '</span>' +
         '<div class="term">' + esc(e.fr) + '</div>' +
-        '<span class="hint">Appuie pour voir le mot anglais</span>';
+        '<span class="hint">Press to reveal the English word</span>';
       backHTML = '<div class="term-row"><div class="fr">' + esc(e.term) + '</div>' + speakTermBtn + '</div>' +
         '<div class="pron">' + esc(e.ipa) + (e.pron ? ' · ' + esc(e.pron) : '') + '</div>' +
         '<div class="lbl">Definition</div><div class="txt">' + esc(e.def) + '</div>' +
@@ -426,8 +426,8 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
     scoreEl.textContent = knownCount + " / " + total;
     var hard = hardCards.length;
     doneMsg.textContent = hard === 0
-      ? "Toutes les cartes maîtrisées du premier coup. Impressionnant !"
-      : hard + (hard > 1 ? " cartes ont demandé" : " carte a demandé") + " plusieurs passages. Tu peux les revoir tout de suite.";
+      ? "You mastered every card on the first attempt. Excellent!"
+      : hard + (hard > 1 ? " cards required" : " card required") + " several attempts. You can review them now.";
     document.getElementById("redoBtn").style.display = hard === 0 ? "none" : "";
     done.scrollIntoView({behavior:"smooth", block:"center"});
   }
@@ -471,7 +471,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 
   if (chapters.length === 0){
     document.querySelector(".controls").innerHTML =
-      '<p style="color:var(--muted)">Aucune donnée de vocabulaire trouvée. Vérifie que <strong>vocab-data.js</strong> est bien présent à côté de cette page.</p>';
+      '<p style="color:var(--muted)">No vocabulary data was found. Check that <strong>vocab-data.js</strong> is stored next to this page.</p>';
   }
 })();
 </script>

@@ -3,8 +3,8 @@
     "title": "Jury Reports Decoder",
     "curatedThrough": 2025,
     "lastCurated": "2026-07-14",
-    "scope": "CPGE économiques, commerciales et scientifiques — hors CPGE littéraires et hors Agro-Véto BCPST.",
-    "principle": "Les liens officiels sont détectés automatiquement. Les synthèses pédagogiques restent validées avant publication."
+    "scope": "Economic and commercial CPGE programmes, and the scientific CPGE programmes covered by the examination banks listed below.",
+    "principle": "Official links are detected automatically. Teaching summaries are reviewed before publication."
   },
   "tracks": [
     "ECG",
@@ -20,7 +20,7 @@
   "families": [
     {
       "id": "commerce",
-      "label": "Écoles de commerce",
+      "label": "Business schools",
       "tracks": [
         "ECG",
         "ECT"
@@ -28,7 +28,7 @@
     },
     {
       "id": "science",
-      "label": "Écoles d’ingénieurs",
+      "label": "Engineering schools",
       "tracks": [
         "MP",
         "MPI",
@@ -42,37 +42,37 @@
   ],
   "consensus": {
     "do": [
-      "Répondre exactement à la consigne et respecter le format demandé.",
-      "Hiérarchiser les informations au lieu de restituer le document dans l’ordre.",
-      "Construire un commentaire réellement personnel, argumenté et illustré.",
-      "Mobiliser des exemples précis, exacts et pertinents.",
-      "Employer une langue claire, correcte et naturelle avant de chercher l’effet.",
-      "Préserver un vrai temps d’échange à l’oral et écouter les questions.",
-      "Relire ou se corriger : grammaire de base, orthographe, calques et faux amis."
+      "Answer the exact question and follow the required format.",
+      "Prioritise information instead of reproducing the document in its original order.",
+      "Build a genuinely personal, reasoned and well-illustrated commentary.",
+      "Use precise, accurate and relevant examples.",
+      "Aim for clear, correct and natural English before trying to sound sophisticated.",
+      "Leave enough time for genuine interaction and listen carefully to the questions.",
+      "Proofread or self-correct: basic grammar, spelling, literal translations and false friends."
     ],
     "avoid": [
-      "Paraphraser, raconter ou décrire sans analyser.",
-      "Plaquer un cours, une introduction ou un plan préparé à l’avance.",
-      "Réciter des expressions idiomatiques mal maîtrisées.",
-      "Confondre résumé, synthèse et commentaire personnel.",
-      "Inventer des citations, des chiffres ou des références.",
-      "Faire un plan binaire automatique « advantages / disadvantages ».",
-      "Parler longtemps pour masquer le manque de contenu.",
-      "Lire ses notes au lieu de communiquer avec le jury."
+      "Paraphrasing, narrating or describing without analysing.",
+      "Forcing a pre-learned lesson, introduction or plan onto the document.",
+      "Reciting idiomatic expressions that you do not fully control.",
+      "Confusing a summary, a synthesis and a personal commentary.",
+      "Inventing quotations, figures or references.",
+      "Using an automatic “advantages versus disadvantages” plan.",
+      "Speaking at length to conceal a lack of substance.",
+      "Reading notes instead of communicating with the examiners."
     ],
     "recommend": [
-      "S’entraîner dans les conditions exactes de durée du concours visé.",
-      "Lire et écouter régulièrement la presse anglophone, puis vérifier les faits au CDI.",
-      "Transformer chaque retour de professeur ou de colleur en objectif de travail précis.",
-      "Travailler l’expression spontanée, la prononciation et l’interaction, pas seulement l’exposé.",
-      "Comparer plusieurs rapports d’un même concours pour repérer les remarques récurrentes.",
-      "Réutiliser activement en cours et en colle le vocabulaire et les connaissances préparés sur le site."
+      "Practise under the exact time conditions of the examination you are preparing.",
+      "Read and listen to English-language news regularly, then check facts through reliable sources and the school library.",
+      "Turn each comment from a teacher or examiner into one precise learning target.",
+      "Practise spontaneous speech, pronunciation and interaction, not only the prepared presentation.",
+      "Compare several reports from the same examination to identify recurring comments.",
+      "Actively reuse in class and in colles the vocabulary and knowledge prepared on this site."
     ]
   },
   "warnings": [
     {
       "id": "paraphrase",
-      "label": "Paraphrase / restitution linéaire",
+      "label": "Paraphrase or linear retelling",
       "bce": 3,
       "ecricome": 2,
       "centrale": 3,
@@ -84,7 +84,7 @@
     },
     {
       "id": "plaque",
-      "label": "Cours ou phrases plaqués",
+      "label": "Pre-learned material forced onto the task",
       "bce": 3,
       "ecricome": 3,
       "centrale": 3,
@@ -96,7 +96,7 @@
     },
     {
       "id": "examples",
-      "label": "Exemples vagues ou inexacts",
+      "label": "Vague or inaccurate examples",
       "bce": 3,
       "ecricome": 3,
       "centrale": 2,
@@ -108,7 +108,7 @@
     },
     {
       "id": "language",
-      "label": "Langue artificielle ou erreurs de base",
+      "label": "Artificial language or basic errors",
       "bce": 3,
       "ecricome": 3,
       "centrale": 3,
@@ -120,7 +120,7 @@
     },
     {
       "id": "time",
-      "label": "Mauvaise gestion du temps",
+      "label": "Poor time management",
       "bce": 2,
       "ecricome": 2,
       "centrale": 3,
@@ -132,7 +132,7 @@
     },
     {
       "id": "interaction",
-      "label": "Interaction insuffisante",
+      "label": "Insufficient interaction",
       "bce": 2,
       "ecricome": 3,
       "centrale": 3,
@@ -154,49 +154,49 @@
         "ECT"
       ],
       "assessments": [
-        "Écrit",
-        "Oral selon les écoles"
+        "Written",
+        "Oral depending on the school"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.concours-bce.com/annales",
       "color": "terra",
       "format": [
-        "Écrit ELVi : résumé analytique comparatif, essai argumenté et traduction selon la langue et le niveau.",
-        "L’oral n’est pas unique : les modalités dépendent des écoles de la banque.",
-        "Les consignes de longueur et la distinction entre les exercices sont strictement évaluées."
+        "ELVi written paper: comparative analytical summary, argumentative essay and translation, depending on the language and level.",
+        "There is no single oral format: arrangements depend on the individual schools within the examination bank.",
+        "Word limits and the distinction between the different tasks are assessed strictly."
       ],
       "do": [
-        "Comparer réellement les documents dans le résumé analytique, sans opinion personnelle.",
-        "Répondre clairement à la question de l’essai et prendre une position nuancée.",
-        "Exploiter le dossier sans le répéter, puis ajouter des références exactes.",
-        "Traduire le sens, le registre et les nuances plutôt que les mots isolément.",
-        "Respecter le nombre de mots et organiser des paragraphes lisibles."
+        "Compare the documents genuinely in the analytical summary, without adding a personal opinion.",
+        "Answer the essay question clearly and adopt a nuanced position.",
+        "Use the source material without merely repeating it, then add accurate references.",
+        "Translate meaning, register and nuance rather than isolated words.",
+        "Respect the word limit and organise the answer into readable paragraphs."
       ],
       "avoid": [
-        "Transformer le résumé comparatif en dissertation.",
-        "Introduire un commentaire personnel dans la première question.",
-        "Plaquer des éléments de cours non adaptés au sujet.",
-        "Accumuler des expressions idiomatiques peu maîtrisées.",
-        "Inventer ou attribuer incorrectement une citation."
+        "Turning the comparative summary into an essay.",
+        "Adding personal commentary to the first task.",
+        "Forcing irrelevant course material onto the topic.",
+        "Accumulating poorly controlled idiomatic expressions.",
+        "Inventing or misattributing a quotation."
       ],
       "recommend": [
-        "Faire des entraînements séparés pour chaque sous-épreuve.",
-        "Chronométrer la répartition du temps entre résumé, essai, traduction et relecture.",
-        "Constituer une banque d’exemples vérifiés par grands thèmes du monde anglophone.",
-        "Relire systématiquement les structures grammaticales de base."
+        "Practise each subtask separately.",
+        "Time the division between summary, essay, translation and proofreading.",
+        "Build a bank of verified examples organised by major themes in the English-speaking world.",
+        "Systematically review core grammar structures."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "ELVi LVA Anglais — rapport 2025",
-          "type": "Écrit",
+          "label": "ELVi English LVA — 2025 report",
+          "type": "Written",
           "url": "https://www.concours-bce.com/sites/default/files/2025-10/75%20-%20ELVi%20LVA%20Anglais%202025.pdf",
           "status": "curated"
         },
         {
           "year": 2025,
-          "label": "ELVi LVB Anglais — rapport 2025",
-          "type": "Écrit",
+          "label": "ELVi English LVB — 2025 report",
+          "type": "Written",
           "url": "https://www.concours-bce.com/annales",
           "status": "official-page"
         }
@@ -212,49 +212,49 @@
         "ECT"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.ecricome.org/ecricome-prepa-langues-vivantes/",
       "color": "gold",
       "format": [
-        "Écrit : annales commentées avec esprit de l’épreuve, barèmes, corrigés et rapport.",
-        "Oral : document vidéo, préparation, restitution, commentaire et entretien.",
-        "L’épreuve valorise à la fois la maîtrise linguistique et une expression claire et argumentée."
+        "Written paper: annotated past papers explaining the purpose of the task, marking criteria, model answers and examiner feedback.",
+        "Oral examination: video document, preparation, structured account, commentary and interview.",
+        "The examination rewards both linguistic control and clear, well-reasoned expression."
       ],
       "do": [
-        "Contextualiser précisément le document dès l’introduction.",
-        "Distinguer nettement restitution et commentaire.",
-        "Construire un commentaire autour d’une question directrice pertinente.",
-        "Conserver assez de temps pour un échange réel avec le jury.",
-        "Adapter les connaissances au document et au sujet."
+        "Contextualise the document precisely from the introduction.",
+        "Keep the account of the document clearly separate from the commentary.",
+        "Build the commentary around a relevant key question.",
+        "Leave enough time for genuine discussion with the examiners.",
+        "Adapt your knowledge to the document and the exact topic."
       ],
       "avoid": [
-        "Raconter la vidéo image par image.",
-        "Annoncer mécaniquement un plan appris ou réciter une accroche spectaculaire.",
-        "Répéter dans le commentaire ce qui a déjà été dit dans la restitution.",
-        "Donner des réponses minimales pendant l’entretien.",
-        "Employer une langue excessivement ambitieuse mais incorrecte."
+        "Narrating the video image by image.",
+        "Mechanically announcing a memorised plan or reciting a spectacular hook.",
+        "Repeating in the commentary what has already been said in the account.",
+        "Giving minimal answers during the interview.",
+        "Using overambitious but inaccurate language."
       ],
       "recommend": [
-        "S’entraîner à partir de vidéos courtes d’actualité.",
-        "Travailler la prise de notes visuelle et sonore.",
-        "Préparer des transitions naturelles entre restitution, commentaire et entretien.",
-        "S’enregistrer puis corriger débit, prononciation et temps de parole."
+        "Practise with short current-affairs videos.",
+        "Develop efficient visual and audio note-taking.",
+        "Prepare natural transitions between the account, commentary and interview.",
+        "Record yourself, then correct pace, pronunciation and speaking time."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Annales ECRICOME Anglais LVA 2025",
-          "type": "Écrit",
+          "label": "ECRICOME English LVA past paper 2025",
+          "type": "Written",
           "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-All_Angl_Esp_LVA.pdf",
           "status": "curated"
         },
         {
           "year": 2025,
-          "label": "Annales ECRICOME Anglais LVB 2025",
-          "type": "Écrit",
+          "label": "ECRICOME English LVB past paper 2025",
+          "type": "Written",
           "url": "https://www.ecricome.org/wp-content/uploads/2025/09/ANNALES-PREPA_2025-All_Angl_Esp_LVB.pdf",
           "status": "curated"
         }
@@ -273,42 +273,42 @@
         "TSI"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.concours-centrale-supelec.fr/sujets-rapports",
       "color": "navy",
       "format": [
-        "Écrit : synthèse en langue étrangère à partir d’un dossier pluriel.",
-        "Oral : choix entre deux articles récents, 20 minutes de préparation, exposé de 10 minutes maximum puis entretien.",
-        "Le jury évalue problématisation, hiérarchisation, synthèse, richesse et correction linguistiques."
+        "Written paper: a synthesis in the foreign language based on a multi-document dossier.",
+        "Oral examination: choose between two recent articles, prepare for 20 minutes, speak for no more than 10 minutes, then take part in an interview.",
+        "Examiners assess the key question, prioritisation, synthesis, range and linguistic accuracy."
       ],
       "do": [
-        "Formuler une problématique qui couvre l’ensemble du dossier.",
-        "Croiser les documents et hiérarchiser les idées.",
-        "Adopter une position de médiateur à l’écrit, sans avis personnel.",
-        "À l’oral, produire un compte rendu synthétique puis un commentaire argumenté et illustré.",
-        "Préserver environ dix minutes pour l’échange."
+        "Formulate a key question that covers the whole dossier.",
+        "Cross-reference the documents and prioritise the ideas.",
+        "Act as a neutral mediator in the written synthesis, without giving a personal opinion.",
+        "At the oral, produce a concise account followed by a reasoned, well-illustrated commentary.",
+        "Keep approximately ten minutes for interaction."
       ],
       "avoid": [
-        "Juxtaposer des mini-résumés document par document.",
-        "Employer should ou must pour imposer une opinion dans une synthèse neutre.",
-        "Ajouter des titres et intertitres artificiels.",
-        "Négliger les sources ou les documents iconographiques.",
-        "Lire un texte rédigé pendant la préparation."
+        "Placing separate mini-summaries of each document side by side.",
+        "Using should or must to impose an opinion in a neutral synthesis.",
+        "Adding artificial headings and subheadings.",
+        "Neglecting sources or visual documents.",
+        "Reading a text written during preparation."
       ],
       "recommend": [
-        "Travailler la reformulation et les opérateurs de convergence et divergence.",
-        "S’entraîner à produire un titre informatif et une problématique complète.",
-        "Lire des articles récents pour l’oral et développer une culture du monde anglophone.",
-        "Utiliser une montre non connectée pour calibrer l’exposé."
+        "Practise reformulation and language showing convergence and divergence.",
+        "Train yourself to produce an informative title and a complete key question.",
+        "Read recent articles for oral practice and develop knowledge of the English-speaking world.",
+        "Use an authorised non-connected watch to calibrate the presentation."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Rapports du jury CentraleSupélec 2025",
-          "type": "Écrit et oral",
+          "label": "CentraleSupélec examiner reports 2025",
+          "type": "Written and oral",
           "url": "https://www.concours-centrale-supelec.fr/sujets-rapports",
           "status": "curated"
         }
@@ -326,56 +326,56 @@
         "PSI"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://concoursminesponts.fr/archives/",
       "color": "sage",
       "format": [
-        "Les rapports de l’écrit et de l’oral sont publiés séparément.",
-        "Un complément méthodologique officiel précise les attentes de l’épreuve écrite d’anglais.",
-        "Les candidats doivent consulter les rapports annuels en plus des annales."
+        "Written and oral examiner reports are published separately.",
+        "An official methodology supplement explains the expectations of the English written paper.",
+        "Candidates should consult the annual reports as well as the past papers."
       ],
       "do": [
-        "Respecter précisément la nature de l’exercice et les consignes.",
-        "Construire une démonstration lisible et appuyée sur des éléments pertinents.",
-        "Montrer de l’autonomie et exploiter les indications de l’examinateur.",
-        "Soigner la qualité de langue et la clarté de la communication.",
-        "Préparer les deux années du programme et l’actualité anglophone."
+        "Follow the exact nature of the task and every instruction.",
+        "Build a clear line of reasoning supported by relevant evidence.",
+        "Show independence and use the examiner’s prompts constructively.",
+        "Pay attention to linguistic quality and clarity of communication.",
+        "Prepare the full two-year syllabus and current affairs in the English-speaking world."
       ],
       "avoid": [
-        "Réduire la préparation aux seuls sujets des années précédentes.",
-        "Négliger la méthodologie spécifique du concours.",
-        "Refuser ou ignorer les pistes proposées par l’examinateur.",
-        "Accumuler des idées sans articulation.",
-        "Confondre quantité de parole et qualité de contenu."
+        "Restricting preparation to previous years’ papers.",
+        "Neglecting the methodology specific to this examination.",
+        "Rejecting or ignoring avenues suggested by the examiner.",
+        "Accumulating ideas without linking them.",
+        "Confusing quantity of speech with quality of content."
       ],
       "recommend": [
-        "Lire le complément méthodologique avant de commencer les annales.",
-        "Comparer le rapport de l’écrit et celui de l’oral.",
-        "Transformer chaque remarque récurrente en exercice ciblé.",
-        "S’entraîner à expliquer et défendre une idée plutôt qu’à réciter."
+        "Read the methodology supplement before beginning the past papers.",
+        "Compare the written and oral examiner reports.",
+        "Turn each recurring comment into a targeted exercise.",
+        "Practise explaining and defending an idea rather than reciting."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Rapport écrit Mines-Ponts 2025",
-          "type": "Écrit",
+          "label": "Mines-Ponts written examiner report 2025",
+          "type": "Written",
           "url": "https://concoursminesponts.fr/wp-content/uploads/2025/10/Rapport-Ecrit-2025-VF.pdf",
           "status": "curated"
         },
         {
           "year": 2025,
-          "label": "Rapport oral Mines-Ponts 2025",
+          "label": "Mines-Ponts oral examiner report 2025",
           "type": "Oral",
           "url": "https://concoursminesponts.fr/wp-content/uploads/2025/10/Rapport-Oral-2025-VF.pdf",
           "status": "curated"
         },
         {
           "year": 2025,
-          "label": "Complément méthodologique — anglais écrit",
-          "type": "Méthodologie",
+          "label": "Methodology supplement — written English",
+          "type": "Methodology",
           "url": "https://concoursminesponts.fr/wp-content/uploads/2025/03/Complement_methodologique_Anglais-ecrit.pdf",
           "status": "curated"
         }
@@ -395,49 +395,49 @@
         "TPC"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.concours-commun-inp.fr/fr/epreuves/annales/annales-epreuves-communes.html",
       "color": "teal",
       "format": [
-        "Écrit commun de langue vivante et rapports publiés par session.",
-        "Oral : écoute d’un document, compte rendu structuré, commentaire et entretien.",
-        "En 2025, le rapport rappelle une épreuve de 25 minutes et une prise de parole continue attendue de 15 à 20 minutes."
+        "A common modern-language written paper is accompanied by session reports.",
+        "Oral examination: listen to a document, give a structured account, present a commentary and take part in an interview.",
+        "The 2025 report describes a 25-minute examination and expects 15 to 20 minutes of continuous speaking."
       ],
       "do": [
-        "Présenter source, date et thème du document dès l’introduction.",
-        "Produire un compte rendu structuré, non chronologique.",
-        "Marquer clairement le passage au commentaire et annoncer son organisation.",
-        "Prendre du recul, élargir avec des exemples et défendre un point de vue.",
-        "Gérer le temps pour laisser une place réelle à l’entretien."
+        "Present the source, date and subject of the document in the introduction.",
+        "Give a structured, non-chronological account.",
+        "Clearly signal the move to the commentary and announce its organisation.",
+        "Step back from the document, broaden the discussion with examples and defend a viewpoint.",
+        "Manage the time so that the interview has a genuine place."
       ],
       "avoid": [
-        "Terminer automatiquement au bout de 8 à 10 minutes comme dans certaines colles.",
-        "Restituer en vrac les notes prises pendant l’écoute.",
-        "Escamoter le commentaire personnel.",
-        "Plaquer un commentaire sans rapport avec le document.",
-        "Parler beaucoup sans contenu pour faire illusion."
+        "Automatically stopping after 8 to 10 minutes as in some classroom colles.",
+        "Delivering listening notes in an unstructured list.",
+        "Skipping the personal commentary.",
+        "Forcing a commentary that is unrelated to the document.",
+        "Speaking at length without substance."
       ],
       "recommend": [
-        "S’entraîner explicitement à des exposés de 15 à 20 minutes.",
-        "Préparer des transitions et des plans de commentaire flexibles.",
-        "Travailler contact visuel, débit, posture et spontanéité.",
-        "Revoir les erreurs grammaticales élémentaires et la formation des questions."
+        "Practise presentations lasting 15 to 20 minutes.",
+        "Prepare flexible transitions and commentary structures.",
+        "Work on eye contact, pace, posture and spontaneity.",
+        "Review basic grammar errors and question formation."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Rapport de l’épreuve orale de langue vivante 2025",
+          "label": "Modern-language oral examiner report 2025",
           "type": "Oral",
           "url": "https://www.concours-commun-inp.fr/_resource/annales%20%C3%A9crits/2025/Ep%20Communes/LV_ORAL_2025_19.09.pdf?download=true",
           "status": "curated"
         },
         {
           "year": 2026,
-          "label": "Annales communes — rapports 2026 à venir",
-          "type": "Suivi",
+          "label": "Common papers — 2026 reports forthcoming",
+          "type": "Monitoring",
           "url": "https://www.concours-commun-inp.fr/fr/epreuves/annales/annales-epreuves-communes.html",
           "status": "waiting"
         }
@@ -455,42 +455,42 @@
         "PSI"
       ],
       "assessments": [
-        "Écrit",
-        "Oraux propres aux écoles"
+        "Written",
+        "School-specific oral exams"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.e3a-polytech.fr/annales-et-rapport/",
       "color": "rose",
       "format": [
-        "Les sujets de langues sont publiés dans les annales de la banque.",
-        "Certaines épreuves sont mutualisées ; les oraux sont organisés par les écoles ou groupes d’écoles.",
-        "Les modalités doivent donc être vérifiées dans la notice et auprès de chaque centre d’oral."
+        "Language papers are published in the examination bank’s past-paper archive.",
+        "Some written papers are shared with other examination banks; oral examinations are organised by individual schools or groups of schools.",
+        "Candidates must therefore check the current regulations and the arrangements of each oral examination centre."
       ],
       "do": [
-        "Vérifier quelles épreuves sont réellement utilisées par les écoles visées.",
-        "Consulter la notice de la session en plus des annales.",
-        "Travailler la précision linguistique et la synthèse demandées à l’écrit.",
-        "Préparer séparément les modalités propres aux écoles pour l’oral.",
-        "Contrôler chaque année les éventuelles mutualisations avec CCINP."
+        "Check which examinations are actually used by the schools you are targeting.",
+        "Read the current regulations as well as the past papers.",
+        "Practise the linguistic accuracy and synthesis required in the written paper.",
+        "Prepare separately for each school’s oral format.",
+        "Check every year whether any papers are shared with CCINP."
       ],
       "avoid": [
-        "Supposer que toutes les écoles organisent le même oral.",
-        "Confondre sujet, corrigé et rapport de jury.",
-        "Préparer un format oral générique sans vérifier la notice.",
-        "Se fier à une ancienne modalité non confirmée.",
-        "Négliger les consignes spécifiques de l’école."
+        "Assuming that all schools use the same oral format.",
+        "Confusing a paper, model answer and examiner report.",
+        "Preparing a generic oral format without checking the current regulations.",
+        "Relying on an old format that has not been confirmed.",
+        "Neglecting school-specific instructions."
       ],
       "recommend": [
-        "Utiliser cette page comme portail vers les sources officielles à jour.",
-        "Créer une fiche personnelle par école visée.",
-        "Vérifier les modalités dès la publication des notices.",
-        "Consulter son professeur pour hiérarchiser les concours réellement préparés."
+        "Use this page as a gateway to current official sources.",
+        "Create a personal fact sheet for each target school.",
+        "Check arrangements as soon as the new regulations are published.",
+        "Ask your teacher to help prioritise the examinations you are actually preparing."
       ],
       "reports": [
         {
           "year": 2026,
-          "label": "Annales et rapports e3a-Polytech",
-          "type": "Portail officiel",
+          "label": "e3a-Polytech past papers and reports",
+          "type": "Official portal",
           "url": "https://www.e3a-polytech.fr/annales-et-rapport/",
           "status": "official-page"
         }
@@ -505,49 +505,49 @@
         "PT"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.banquept.fr/article231.html",
       "color": "gold",
       "format": [
-        "Oral d’anglais obligatoire 2025 : 20 minutes de préparation puis 20 minutes d’exposé et d’entretien.",
-        "L’exposé ne doit pas dépasser 12 minutes afin de préserver un échange significatif.",
-        "Les archives distinguent rapports de l’écrit, rapports de l’oral et annales."
+        "Compulsory English oral in 2025: 20 minutes of preparation followed by a 20-minute presentation and interview.",
+        "The presentation should not exceed 12 minutes, leaving meaningful time for interaction.",
+        "The archive separates written reports, oral reports and past papers."
       ],
       "do": [
-        "Résumer en faisant ressortir les points saillants et leurs liens.",
-        "Construire un commentaire problématisé, nuancé et illustré.",
-        "Communiquer avec le jury, varier le ton et montrer de l’intérêt.",
-        "Être capable d’expliquer chaque mot ou expression utilisé.",
-        "Préserver suffisamment de temps pour l’entretien."
+        "Summarise the main points and the links between them.",
+        "Build a problem-driven, nuanced and well-illustrated commentary.",
+        "Communicate with the examiners, vary your tone and show genuine interest.",
+        "Be able to explain every word or expression you use.",
+        "Leave sufficient time for the interview."
       ],
       "avoid": [
-        "Lire des notes trop abondantes.",
-        "Réciter un discours appris au lieu de discuter.",
-        "Employer un hook théâtral et artificiel.",
-        "Faire un commentaire binaire avantages / inconvénients.",
-        "Utiliser des stéréotypes ou des généralités non étayées."
+        "Reading from over-detailed notes.",
+        "Reciting a learned speech instead of discussing.",
+        "Using a theatrical, artificial hook.",
+        "Building a binary advantages-versus-disadvantages commentary.",
+        "Using stereotypes or unsupported generalisations."
       ],
       "recommend": [
-        "S’entraîner à l’expression spontanée sur des sujets abstraits.",
-        "Travailler la prononciation des mots fréquents et l’accentuation.",
-        "Limiter volontairement l’exposé à dix ou douze minutes.",
-        "Pratiquer un entretien authentique avec relances et approfondissements."
+        "Practise spontaneous expression on abstract topics.",
+        "Work on the pronunciation and stress of frequent words.",
+        "Deliberately limit the presentation to ten or twelve minutes.",
+        "Practise genuine interviews with follow-up questions and deeper discussion."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Rapport oral anglais LV1 — Banque PT 2025",
+          "label": "Banque PT English LV1 oral examiner report 2025",
           "type": "Oral",
           "url": "https://www.banquept.fr/documents/ecrit/rapport/2025/rapport_lv_ang_oral_2025.pdf",
           "status": "curated"
         },
         {
           "year": 2025,
-          "label": "Rapports de l’écrit — Banque PT",
-          "type": "Écrit",
+          "label": "Banque PT written examiner reports",
+          "type": "Written",
           "url": "https://www.banquept.fr/article154.html",
           "status": "official-page"
         }
@@ -567,48 +567,48 @@
         "TSI"
       ],
       "assessments": [
-        "Écrit",
+        "Written",
         "Oral"
       ],
       "latestCuratedYear": 2025,
       "officialPage": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports",
       "color": "navy",
       "format": [
-        "Oral : vidéo d’actualité de 4 à 6 minutes, 30 minutes de préparation et 20 minutes d’épreuve.",
-        "Restitution précise et structurée, commentaire problématisé puis entretien.",
-        "Le jury évalue compréhension, précision de la langue, autonomie langagière et qualité de la réflexion."
+        "Oral examination: a 4-to-6-minute current-affairs video, 30 minutes of preparation and a 20-minute examination.",
+        "Give a precise, structured account, then a problem-driven commentary and an interview.",
+        "Examiners assess comprehension, linguistic precision, independent language use and quality of thought."
       ],
       "do": [
-        "Exploiter le son, les images, le ton et la construction de la séquence.",
-        "Trouver le juste équilibre entre idées principales et données précises.",
-        "Construire le commentaire autour d’une vraie problématique.",
-        "Conclure rapidement lorsque le jury le demande.",
-        "Laisser environ dix minutes à l’échange."
+        "Use the sound, images, tone and construction of the sequence.",
+        "Find the right balance between main ideas and precise details.",
+        "Build the commentary around a genuine key question.",
+        "Conclude promptly when the examiner asks you to do so.",
+        "Leave approximately ten minutes for interaction."
       ],
       "avoid": [
-        "Dépasser dix minutes de prise de parole initiale.",
-        "Décrire la vidéo sans organiser la restitution.",
-        "Introduire de nouveaux exemples dans une conclusion tardive.",
-        "Ignorer les éléments visuels ou le contexte médiatique.",
-        "Réciter un commentaire sans s’adapter aux questions."
+        "Exceeding ten minutes for the initial presentation.",
+        "Describing the video without structuring the account.",
+        "Introducing new examples in a delayed conclusion.",
+        "Ignoring the visual elements or media context.",
+        "Reciting a commentary without adapting to questions."
       ],
       "recommend": [
-        "S’entraîner avec les vidéos officielles mises en ligne.",
-        "Utiliser un chronomètre ou une montre autorisée.",
-        "Travailler la reformulation précise des chiffres, fonctions et noms propres.",
-        "Développer des réponses autonomes pendant l’entretien."
+        "Practise with the official videos published online.",
+        "Use an authorised timer or watch.",
+        "Practise accurate reformulation of figures, roles and proper names.",
+        "Develop independent, extended answers during the interview."
       ],
       "reports": [
         {
           "year": 2025,
-          "label": "Sujets et rapports — École polytechnique",
-          "type": "Écrit et oral",
+          "label": "Papers and examiner reports — École Polytechnique",
+          "type": "Written and oral",
           "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports",
           "status": "official-page"
         },
         {
           "year": 2024,
-          "label": "Rapport oral d’anglais MP / MPI / PC / PSI",
+          "label": "English oral examiner report — MP / MPI / PC / PSI",
           "type": "Oral",
           "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sites/admission/files/content/2024%20MP%2C%20MPI%2C%20PC%20RAPPORT%20ORAL%20D%27ANGLAIS.pdf",
           "status": "curated"
@@ -618,28 +618,28 @@
   ],
   "actions": [
     {
-      "warning": "Le jury signale une paraphrase ou une restitution linéaire.",
-      "work": "Methodology → repérer, hiérarchiser et reformuler les idées essentielles.",
+      "warning": "The examiners identify paraphrase or a linear account of the document.",
+      "work": "Methodology → identify, prioritise and reformulate the essential ideas.",
       "url": "methodology.html"
     },
     {
-      "warning": "Le commentaire manque d’exemples ou de contexte.",
-      "work": "Civilisation → construire des exemples exacts et reliés à un enjeu.",
+      "warning": "The commentary lacks examples or contextual knowledge.",
+      "work": "Civilisation → build accurate examples connected to a clear issue.",
       "url": "civilisation.html"
     },
     {
-      "warning": "La langue paraît artificielle ou imprécise.",
-      "work": "Vocabulary → Study, Memorise, Challenge, puis réutiliser en cours et en colle.",
+      "warning": "The language sounds artificial or imprecise.",
+      "work": "Vocabulary → Study, Memorise and Challenge, then reuse the language in class and in colles.",
       "url": "vocabulary.html"
     },
     {
-      "warning": "La prise de parole manque de structure ou de spontanéité.",
-      "work": "Colle Trainer → répéter dans les conditions du concours et exploiter le feedback.",
+      "warning": "The presentation lacks structure or spontaneity.",
+      "work": "Colle Trainer → practise under examination conditions and act on feedback.",
       "url": "colle-trainer.html"
     },
     {
-      "warning": "Les références sont vagues ou peu fiables.",
-      "work": "Resources + CDI → vérifier les faits, croiser les sources et approfondir.",
+      "warning": "References are vague or unreliable.",
+      "work": "Resources and the school library → verify facts, cross-check sources and deepen your knowledge.",
       "url": "resources.html"
     }
   ]

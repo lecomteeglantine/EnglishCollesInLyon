@@ -1,0 +1,12 @@
+English interface correction — 22 July 2026
+
+Updated:
+- jury-reports.html
+- jury-reports-data.json
+- jury-reports-status.json
+- scripts/update-jury-reports.mjs
+- flashcards.html
+- colle-trainer.html
+- SOURCE-methodology.html
+
+Official examination-body names and verbatim document titles may remain in French when they are proper names or titles supplied by the official source. All site navigation, explanations, controls, statuses and curated teaching guidance are now in English.

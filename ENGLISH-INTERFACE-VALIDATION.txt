@@ -1,0 +1,13 @@
+English interface validation — 22 July 2026
+
+JSON files parsed: 21
+Root HTML pages checked: 202
+Changed interactive pages checked: 4
+Duplicate HTML IDs: none
+Inline JavaScript syntax: valid
+Monitoring and service-worker JavaScript syntax: valid
+French visible interface markers on main pages: none
+Root public pages declaring lang="fr": none
+Navigation links accidentally detected as jury reports: none
+
+Result: PASS

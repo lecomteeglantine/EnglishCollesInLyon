@@ -38,6 +38,9 @@ function extractLinks(html,source){
   while((m=re.exec(html))){
     const url=absolute(m[1],source.url);if(!url)continue;
     const label=stripTags(m[2])||decode(m[1]);
+    const normalisedLabel=label.toLowerCase().replace(/\s+/g," ").trim();
+    if(/^(aller au contenu(?: principal)?|skip to (?:main )?content|accueil|home|menu|voir plus|en savoir plus)$/.test(normalisedLabel))continue;
+    try{const parsed=new URL(url);if(parsed.hash&&parsed.pathname===new URL(source.url).pathname)continue}catch{}
     const hay=(label+" "+url).toLowerCase();
     const relevant=source.allEnglish||source.keywords.some(k=>hay.includes(k.toLowerCase()));
     const docLike=/\.pdf(?:$|\?)/i.test(url)||/rapport|report|annale|sujet|notice|anglais|english|langue|lva|lvb/i.test(hay);
@@ -75,8 +78,8 @@ const status={
   lastRun:now.toISOString(),lastSuccessfulRun:documents.length?now.toISOString():null,
   sourcesChecked:cfg.sources.length-errors.length,documentsFound:documents.length,
   reportsFound:reportCount,newDocuments:newCount,errors,
-  message:newCount?`${newCount} nouveau(x) document(s) officiel(s) détecté(s). Les synthèses doivent être validées.`:
-    errors.length?"Le contrôle est terminé, mais certaines sources n’ont pas répondu.":"Aucun nouveau document officiel détecté."
+  message:newCount?`${newCount} new official document(s) detected. Teaching summaries must be reviewed before publication.`:
+    errors.length?"The check is complete, but some official sources did not respond.":"No new official document detected."
 };
 await fs.writeFile(STATUS_FILE,JSON.stringify(status,null,2)+"\n");
 console.log(status.message);

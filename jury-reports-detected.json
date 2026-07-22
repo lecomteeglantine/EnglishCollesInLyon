@@ -6246,16 +6246,6 @@
       "sourceId": "centrale",
       "sourceName": "CentraleSupélec",
       "year": null,
-      "label": "Aller au contenu principal",
-      "type": "report",
-      "url": "https://www.concours-centrale-supelec.fr/sujets-rapports#main-content",
-      "firstSeen": "2026-07-14",
-      "isNew": false
-    },
-    {
-      "sourceId": "centrale",
-      "sourceName": "CentraleSupélec",
-      "year": null,
       "label": "Sujets & rapports",
       "type": "report",
       "url": "https://www.concours-centrale-supelec.fr/sujets-rapports",
@@ -6349,16 +6339,6 @@
       "label": "#",
       "type": "report",
       "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports#",
-      "firstSeen": "2026-07-14",
-      "isNew": false
-    },
-    {
-      "sourceId": "xens",
-      "sourceName": "École polytechnique / ENS",
-      "year": null,
-      "label": "Aller au contenu principal",
-      "type": "report",
-      "url": "https://www.polytechnique.edu/admission-cycle-ingenieur/sujets-et-rapports#mainTag",
       "firstSeen": "2026-07-14",
       "isNew": false
     },

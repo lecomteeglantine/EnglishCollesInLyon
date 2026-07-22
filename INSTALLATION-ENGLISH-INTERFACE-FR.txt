@@ -1,0 +1,16 @@
+MISE À JOUR « INTERFACE EN ANGLAIS » — 22 JUILLET 2026
+
+Option recommandée
+1. Décompressez EnglishCollesInLyon-english-interface-fix-2026-07.zip.
+2. Remplacez le contenu du dépôt GitHub par le contenu du dossier EnglishCollesInLyon-main.
+3. Validez avec Commit changes.
+4. Rechargez le site avec Ctrl + Shift + R.
+
+Cette mise à jour :
+- traduit intégralement Jury Reports et ses données pédagogiques ;
+- traduit l’interface des Flashcards ;
+- corrige les dernières mentions françaises du Colle Trainer ;
+- empêche le robot des rapports d’enregistrer les liens de navigation ;
+- actualise le cache hors ligne.
+
+Les noms officiels des banques de concours et certains titres fournis par leurs sites restent dans leur langue officielle afin de conserver une correspondance exacte avec les documents sources.
