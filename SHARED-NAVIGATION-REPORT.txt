@@ -1,0 +1,8 @@
+English Colles in Lyon — shared navigation validation
+Public pages checked: 198
+Main pages unified: 13
+Grammar chapter pages covered: 89
+Vocabulary chapter pages covered: 87
+Country atlas pages covered: 9
+Missing navigation targets: 0
+Validation issues: 0
