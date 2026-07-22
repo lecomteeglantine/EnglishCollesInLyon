@@ -1005,12 +1005,15 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 @media(max-width:760px){.route-grid{grid-template-columns:1fr}.route-card{min-height:0}.transfer-card{grid-template-columns:1fr}.home-actions .btn{width:100%}.daily-dock{padding:14px}.home-hero{padding-top:32px}}
 @media(max-width:560px){.explore-grid{grid-template-columns:1fr}.search-suggestions{top:80px}.home-intro h1{font-size:2.25rem}.daily-tabs button{font-size:.72rem}.transfer-card{padding:24px 20px}.home-challenge .play-head{align-items:flex-start}}
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a href="#main" class="skip ecl-legacy-shell">Skip to content</a>
 
 <!-- ============ HEADER ============ -->
-<header class="top">
+<header class="top ecl-legacy-shell">
   <div class="top-in">
     <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
       <span class="name">English Colles in Lyon</span>
@@ -1036,8 +1039,8 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </header>
 
 <!-- ============ ACCESSIBILITY PANEL ============ -->
-<div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+<div class="scrim ecl-legacy-shell" id="scrim"></div>
+<aside class="a11y-panel ecl-legacy-shell" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
   <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
     <div class="a11y-group">
@@ -1332,7 +1335,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer>
+<footer class="ecl-legacy-shell">
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">English Colles in Lyon</div>
@@ -1841,5 +1844,6 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 })();
 </script>
 <script src="site-core.js?v=20260722-1"></script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>

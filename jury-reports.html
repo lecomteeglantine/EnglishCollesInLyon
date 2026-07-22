@@ -139,10 +139,13 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   .ecl-author-footer{font-size:.76rem!important}
 }
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
 </head>
 <body>
-<a href="#main" class="skip">Aller au contenu</a>
-<header class="top">
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a href="#main" class="skip ecl-legacy-shell">Aller au contenu</a>
+<header class="top ecl-legacy-shell">
   <div class="top-in">
     <a class="brand" href="index.html"><span class="name">English Colles in Lyon</span>
       <span class="ecl-author-byline">by Eglantine Lecomte</span><span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span></a>
@@ -154,7 +157,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
   </div>
 </header>
 
-<div class="scrim" id="scrim"></div>
+<div class="scrim ecl-legacy-shell" id="scrim"></div>
 <aside class="panel" id="panel" role="dialog" aria-modal="true" aria-label="Réglages d’accessibilité">
   <div class="panel-head"><h2>Accessibilité</h2><button class="close" id="closePanel">×</button></div>
   <div class="setting"><b>Taille du texte</b><div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div></div>
@@ -234,7 +237,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 </section>
 </main>
 
-<footer>
+<footer class="ecl-legacy-shell">
   <div class="wrap foot">
     <div class="foot-brand">English Colles in Lyon</div>
     <nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
@@ -336,5 +339,6 @@ $$(".toggle").forEach(b=>{const o=b.dataset.opt;function apply(on){document.body
 </script>
 
 <script src="site-core.js?v=20260715-2"></script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>

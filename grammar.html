@@ -660,10 +660,14 @@ html{scroll-behavior:smooth}
 }
 
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260722-2">
+<meta name="author" content="Eglantine Lecomte">
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<header class="top">
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260722-2"></script>
+<a href="#main" class="skip ecl-legacy-shell">Skip to content</a>
+<header class="top ecl-legacy-shell">
   <div class="top-in">
     <a class="brand" href="index.html" aria-label="English Colles in Lyon — home">
       <span class="name">English Colles in Lyon</span>
@@ -684,8 +688,8 @@ html{scroll-behavior:smooth}
   </div>
   <div class="accent-note" id="accentNote" aria-live="polite">Accent selected: UK English</div>
 </header>
-<div class="scrim" id="scrim"></div>
-<aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
+<div class="scrim ecl-legacy-shell" id="scrim"></div>
+<aside class="a11y-panel ecl-legacy-shell" id="a11yPanel" role="dialog" aria-modal="true" aria-label="Accessibility settings">
   <div class="ph"><h2>Accessibility</h2><button class="close" id="closeA11y" aria-label="Close">×</button></div>
   <div class="a11y-body">
     <div class="a11y-group"><span class="lbl">Text size</span><div class="seg" id="sizeSeg"><button data-size="0" class="on">A</button><button data-size="1">A+</button><button data-size="2">A++</button></div></div>
@@ -757,7 +761,7 @@ html{scroll-behavior:smooth}
 </section>
 </main>
 
-<footer>
+<footer class="ecl-legacy-shell">
   <div class="wrap"><div class="foot-grid"><div class="foot-brand">English Colles in Lyon</div><nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav></div><div class="site-principle">Prepare here · Use it in class · Test it in colles · Explore further at the CDI.</div><div class="foot-copy">Designed and created by <strong>Eglantine Lecomte</strong> · English Colles in Lyon.</div></div>
 </footer>
 
@@ -809,5 +813,6 @@ renderChapters();updateProgress();nextQuestion();randomTransfer();
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}</script>
 
 <script src="site-core.js?v=20260715-2"></script>
+<div id="ecl-site-footer"></div>
 </body>
 </html>
