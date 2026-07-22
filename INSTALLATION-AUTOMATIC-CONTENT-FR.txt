@@ -1,0 +1,17 @@
+MISE À JOUR DES CONTENUS AUTOMATIQUES — ENGLISH COLLES IN LYON
+
+1. Remplacez le contenu du dépôt GitHub par le contenu du dossier EnglishCollesInLyon-main.
+2. Validez avec Commit changes.
+3. Dans GitHub, ouvrez l’onglet Actions.
+4. Lancez manuellement, une fois, les workflows suivants :
+   - Update daily country news
+   - Update resource feed
+   - Check resource links
+5. Attendez la publication de GitHub Pages, puis rechargez le site avec Ctrl + Shift + R.
+
+Ensuite, les mises à jour se feront automatiquement selon leur calendrier.
+
+IMPORTANT :
+- Une ancienne actualité n’est plus présentée comme une actualité du jour.
+- En cas de panne, le site indique qu’il affiche une copie sauvegardée.
+- Si aucune copie fiable n’existe, un message d’indisponibilité apparaît.

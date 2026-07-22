@@ -638,32 +638,53 @@ function renderFrise(list){
 
 /* ===== Current-affairs radar: suggestions only, never inserted automatically ===== */
 const RADAR_WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
+const RADAR_CACHE_KEY = "eclyon_timeline_radar_cache_v2";
+const RADAR_COUNTRY_NAMES={gb:"United Kingdom",us:"United States",ie:"Ireland",ca:"Canada",au:"Australia",nz:"New Zealand",in:"India",za:"South Africa"};
+function radarReadCache(){try{return JSON.parse(localStorage.getItem(RADAR_CACHE_KEY)||'{}')}catch(e){return {}}}
+function radarSave(code,items,meta){try{const all=radarReadCache();all[code]={items,meta:meta||{},savedAt:new Date().toISOString()};localStorage.setItem(RADAR_CACHE_KEY,JSON.stringify(all))}catch(e){}}
+function radarStamp(value){if(!value)return "publication date unavailable";const d=new Date(value);return isNaN(d)?"publication date unavailable":d.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
+function radarRender(items,mode,meta){
+  const list=document.getElementById("radarList"),foot=document.getElementById("radarFoot");meta=meta||{};
+  if(!items||!items.length){list.innerHTML='<li class="radar-loading">No reliable recent development is available for this country.</li>';foot.textContent="The verified historical timeline remains available above.";return}
+  list.innerHTML=items.slice(0,6).map((it,i)=>`
+    <li class="radar-item">
+      <span class="ri-main">
+        <a class="ri-title" href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)} ↗</a>
+        <span class="ri-src">${escapeHTML(it.source||meta.source||"News source")} · ${radarStamp(it.date||it.publishedAt)}</span>
+      </span>
+      <div class="ri-actions">
+        <button class="ri-add" data-i="${i}">➕ Add to my timeline</button>
+        <button class="ri-copy" data-i="${i}">📋 Copy the line</button>
+      </div>
+    </li>`).join("");
+  foot.textContent=mode==="live"?`Recent headlines loaded from the repository feed. Last successful update: ${radarStamp(meta.lastSuccessfulAt||meta.checkedAt)}. Review each source before using it.`:`Showing the last saved headlines because the live feed is unavailable. Saved ${radarStamp(meta.savedAt||meta.checkedAt)}. Review each source before using it.`;
+  const shown=items.slice(0,6);
+  list.querySelectorAll(".ri-add").forEach(btn=>btn.addEventListener("click",()=>addToMine(shown[+btn.dataset.i],btn)));
+  list.querySelectorAll(".ri-copy").forEach(btn=>btn.addEventListener("click",()=>openJalon(shown[+btn.dataset.i])));
+}
+function externalRadarBackup(){
+  return fetch(RADAR_WORKER+"?country="+country+"&n=6",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(d=>{
+    if(!d.items||!d.items.length)throw new Error("No recent items");
+    const items=d.items.map(it=>({...it,source:it.source||d.source,date:it.date||it.publishedAt||null}));
+    radarSave(country,items,{source:d.source,checkedAt:new Date().toISOString()});
+    radarRender(items,"saved",{source:d.source,checkedAt:new Date().toISOString()});
+  });
+}
 function loadRadar(){
-  const list = document.getElementById("radarList");
-  const foot = document.getElementById("radarFoot");
-  document.getElementById("radarTitle").textContent = "Recent developments to consider — " + cur().name.replace(/^the /i,"");
-  list.innerHTML = '<li class="radar-loading">Loading the news…</li>';
-  foot.textContent = "";
-  fetch(RADAR_WORKER + "?country=" + country + "&n=6")
-    .then(r=>r.json())
-    .then(d=>{
-      if(!d.items || !d.items.length){ list.innerHTML = '<li class="radar-loading">No recent news is available at the moment.</li>'; return; }
-      list.innerHTML = d.items.map((it,i)=>`
-        <li class="radar-item">
-          <span class="ri-main">
-            <a class="ri-title" href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)} ↗</a>
-            <span class="ri-src">${escapeHTML(d.source)} · today</span>
-          </span>
-          <div class="ri-actions">
-            <button class="ri-add" data-i="${i}">➕ Add to my timeline</button>
-            <button class="ri-copy" data-i="${i}">📋 Copy the line</button>
-          </div>
-        </li>`).join("");
-      foot.textContent = "Source: " + d.source + ". Headlines are retrieved automatically and are not filtered.";
-      list.querySelectorAll(".ri-add").forEach(btn=>btn.addEventListener("click",()=>addToMine(d.items[+btn.dataset.i],btn)));
-      list.querySelectorAll(".ri-copy").forEach(btn=>btn.addEventListener("click",()=>openJalon(d.items[+btn.dataset.i])));
-    })
-    .catch(()=>{ list.innerHTML = '<li class="radar-loading">The news feed is temporarily unavailable.</li>'; });
+  const list=document.getElementById("radarList"),foot=document.getElementById("radarFoot");
+  document.getElementById("radarTitle").textContent="Recent developments to consider — "+cur().name.replace(/^the /i,"");
+  list.innerHTML='<li class="radar-loading">Checking the latest successful update…</li>';foot.textContent="";
+  fetch("resources-feed.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(data=>{
+    const target=RADAR_COUNTRY_NAMES[country];
+    const items=(data.items||[]).filter(item=>item.country===target&&item.title&&item.url);
+    if(!items.length)throw new Error("No country item in repository feed");
+    radarSave(country,items,{checkedAt:data.checkedAt,lastSuccessfulAt:data.lastSuccessfulAt});
+    radarRender(items,data.status==="degraded"?"saved":"live",{checkedAt:data.checkedAt,lastSuccessfulAt:data.lastSuccessfulAt});
+  }).catch(()=>externalRadarBackup().catch(()=>{
+    const saved=radarReadCache()[country];
+    if(saved&&saved.items&&saved.items.length)radarRender(saved.items,"saved",{...(saved.meta||{}),savedAt:saved.savedAt});
+    else{list.innerHTML='<li class="radar-loading">The recent-news feed is temporarily unavailable and no saved copy exists.</li>';foot.textContent="No old headline is being presented as current. The verified historical timeline remains available above."}
+  }));
 }
 
 function addToMine(item, btn){

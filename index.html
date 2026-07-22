@@ -188,6 +188,9 @@ section{padding:54px 0}
   font-size:.9rem;line-height:1.55;color:var(--ink);
 }
 .news-question strong{color:var(--navy);display:inline-block;margin-bottom:3px}
+.news-freshness{margin-top:11px;padding-top:10px;border-top:1px dashed var(--line);font-size:.74rem;line-height:1.45;color:var(--muted)}
+.news-freshness.live{color:#4f744b}.news-freshness.saved{color:#8a642d}.news-freshness.error{color:#934c3c}
+.daily-data-error{padding:14px;border:1px dashed var(--terra);border-radius:11px;background:#fff8f4;color:var(--muted);font-size:.86rem;line-height:1.5}
 
 /* --- Word of the Day --- */
 .wotd{
@@ -1109,6 +1112,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
                 <span class="news-date">Checking today’s update…</span>
                 <span class="news-country">English-speaking world</span>
               </div>
+              <div class="news-freshness" id="newsFreshness">Checking the latest successful update…</div>
               <div class="news-title">Loading today’s brief…</div>
               <div class="news-source">Automatic update</div>
               <a href="resources.html" target="_blank" rel="noopener" class="news-link">Explore reliable resources →</a>
@@ -1396,49 +1400,81 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
 }); 
     
    
-   /* ===== Daily Brief : rotation quotidienne sur les 8 pays ===== */
+   /* ===== Daily Brief: repository file first, explicit saved fallback ===== */
    (function(){
-     var codes = ["gb","us","ie","ca","au","nz","in","za"];
-     var day = Math.floor((new Date() - new Date(2026, 0, 1)) / 86400000);
-     var code = codes[((day % codes.length) + codes.length) % codes.length];
-     var B = (window.BRIEF || {})[code] || {};
+     var codes=["gb","us","ie","ca","au","nz","in","za"];
+     var day=Math.floor((new Date()-new Date(2026,0,1))/86400000);
+     var code=codes[((day%codes.length)+codes.length)%codes.length];
+     var CACHE_KEY="eclyon_daily_news_cache_v2";
 
-     function show(d){
-       var dateEl = document.querySelector(".news-date");
-       dateEl.textContent = d.date || "Update unavailable";
-       if (d.iso) dateEl.dataset.iso = d.iso;
-       document.querySelector(".news-country").textContent = d.country || "English-speaking world";
-       document.querySelector(".news-title").textContent = d.title || "The automatic brief is temporarily unavailable";
-       document.querySelector(".news-source").textContent = d.source || "";
-       var link = document.querySelector(".news-link");
-       link.setAttribute("href", d.url || "resources.html");
-       link.textContent = d.url ? "Read article →" : "Explore reliable resources →";
-       document.querySelector(".news-question").innerHTML =
-         "<strong>Question for discussion:</strong><br>" + (d.question || "What current story could you bring into class or a colle today?");
+     function readCache(){
+       try{return JSON.parse(localStorage.getItem(CACHE_KEY)||'{"countries":{}}')}catch(e){return {countries:{}}}
+     }
+     function saveCache(countryCode,item,meta){
+       try{
+         var cache=readCache();cache.countries=cache.countries||{};
+         cache.countries[countryCode]={item:item,meta:meta||{},savedAt:new Date().toISOString()};
+         localStorage.setItem(CACHE_KEY,JSON.stringify(cache));
+       }catch(e){}
+     }
+     function stamp(value){
+       if(!value)return "date unavailable";
+       var d=new Date(value);if(isNaN(d))return "date unavailable";
+       return d.toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
+     }
+     function articleDate(value){
+       if(!value)return "Publication date unavailable";
+       var d=new Date(value);if(isNaN(d))return "Publication date unavailable";
+       return d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+     }
+     function fetchJSON(url,timeout){
+       var controller=new AbortController();var timer=setTimeout(function(){controller.abort()},timeout||6500);
+       return fetch(url,{cache:"no-store",signal:controller.signal}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).finally(function(){clearTimeout(timer)});
+     }
+     function show(item,meta){
+       meta=meta||{};
+       var dateEl=document.querySelector(".news-date");
+       dateEl.textContent=articleDate(item.publishedAt||item.date||item.iso);
+       document.querySelector(".news-country").textContent=item.country||"English-speaking world";
+       document.querySelector(".news-title").textContent=item.title||"The automatic brief is temporarily unavailable";
+       document.querySelector(".news-source").textContent=item.source||"Source unavailable";
+       var link=document.querySelector(".news-link");
+       var usable=/^https?:\/\//i.test(item.url||"")||/\.html(?:$|#)/.test(item.url||"");
+       link.setAttribute("href",usable?item.url:"resources.html");
+       link.textContent=usable&&item.url!=="resources.html"?"Read article →":"Explore reliable resources →";
+       document.querySelector(".news-question").innerHTML="<strong>Question for discussion:</strong><br>"+(item.question||"What current story could you bring into class or a colle today?");
+       var freshness=document.getElementById("newsFreshness");
+       freshness.className="news-freshness "+(meta.mode==="live"?"live":meta.mode==="saved"?"saved":"error");
+       if(meta.mode==="live") freshness.textContent="Last successful automatic update: "+stamp(meta.lastSuccessfulAt||meta.checkedAt||item.fetchedAt)+"."+(meta.partial?" Some sources were temporarily unavailable.":"");
+       else if(meta.mode==="saved") freshness.textContent="Showing the last saved story for this country. Latest automatic check: "+stamp(meta.checkedAt||meta.savedAt)+".";
+       else freshness.textContent=meta.message||"No reliable current brief is available. An old story is not being presented as today's update.";
+     }
+     function showUnavailable(){
+       show({country:"English-speaking world",title:"No reliable current brief is available",source:"Automatic update unavailable",url:"resources.html",question:"Choose one reliable source and identify a story you could contextualise in class."},{mode:"error",message:"The live file and saved copy are unavailable. An old headline is not being passed off as today's news."});
+     }
+     function externalBackup(){
+       return fetchJSON("https://english-colles-country-news.lecomte-eglantine.workers.dev/?country="+code+"&n=1",5000).then(function(data){
+         if(!data.items||!data.items.length)throw new Error("No external item");
+         var raw=data.items[0],B=(window.BRIEF||{})[code]||{},qs=B.questions||[];
+         var item={countryCode:code,country:B.name||data.country,title:raw.title,source:data.source,url:raw.url,publishedAt:raw.date||raw.publishedAt||null,question:qs.length?qs[day%qs.length]:"How would you bring this story into a colle?"};
+         saveCache(code,item,{checkedAt:new Date().toISOString(),source:"external backup"});
+         show(item,{mode:"saved",checkedAt:new Date().toISOString()});
+       });
      }
 
-     fetch("https://english-colles-country-news.lecomte-eglantine.workers.dev/?country=" + code + "&n=1")
-       .then(function(r){ return r.json(); })
-       .then(function(data){
-         if (!data.items || !data.items.length) throw new Error("no items");
-         var qs = B.questions || [];
-         show({
-           date: new Date().toLocaleDateString("en-GB", { weekday:"long", day:"numeric", month:"long", year:"numeric" }),
-           iso: new Date().toISOString(),
-           country: B.name || data.country,
-           title: data.items[0].title,
-           source: data.source,
-           url: data.items[0].url,
-           question: qs.length ? qs[day % qs.length] : "How would you bring this story into a colle?"
-         });
-       })
-       .catch(function(){
-         // secours : l'ancien service mono-pays
-         fetch("https://english-colles-news.lecomte-eglantine.workers.dev/")
-           .then(function(r){ return r.json(); })
-           .then(show)
-           .catch(function(e){ console.error("News widget error:", e); });
+     fetchJSON("daily-news.json",6500).then(function(data){
+       var countries=data&&data.countries||{},item=countries[code];
+       if(!item||!item.title)throw new Error("Country item missing");
+       saveCache(code,item,{checkedAt:data.checkedAt,lastSuccessfulAt:data.lastSuccessfulAt,status:data.status});
+       var isSaved=!!item.cached||data.status==="degraded"||!data.lastSuccessfulAt;
+       show(item,{mode:isSaved?"saved":"live",checkedAt:data.checkedAt,lastSuccessfulAt:data.lastSuccessfulAt,partial:data.status==="partial"});
+     }).catch(function(){
+       externalBackup().catch(function(){
+         var saved=(readCache().countries||{})[code];
+         if(saved&&saved.item)show(saved.item,{mode:"saved",checkedAt:saved.meta&&saved.meta.checkedAt,savedAt:saved.savedAt});
+         else showUnavailable();
        });
+     });
    })();
 </script>
 <script>
@@ -1451,7 +1487,8 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 (function(){
   var list = window.CIVI || [];
   var box = document.getElementById('civi');
-  if (!list.length || !box) return;
+  if (!box) return;
+  if (!list.length){box.hidden=false;box.querySelector('.wotd-body').innerHTML='<div class="daily-data-error">The civilisation fact could not be loaded. The Civilisation Lab remains available.</div>';return;}
   var now = new Date();
   var dayNumber = Math.floor((now - new Date(2026, 0, 1)) / 86400000);
   var f = list[((dayNumber % list.length) + list.length) % list.length];
@@ -1476,7 +1513,8 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
 (function(){
   var list = window.WOTD || [];
   var box = document.getElementById('wotd');
-  if (!list.length || !box) return;
+  if (!box) return;
+  if (!list.length){box.hidden=false;box.querySelector('.wotd-body').innerHTML='<div class="daily-data-error">The word of the day could not be loaded. The vocabulary library remains available.</div>';return;}
 
   // Mot du jour : même mot pour tout le monde, change chaque jour à minuit (heure locale)
   var now = new Date();

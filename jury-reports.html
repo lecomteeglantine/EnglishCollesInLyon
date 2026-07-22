@@ -256,10 +256,27 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const safe=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
-const state={data:null,detected:null,status:null};
+const state={data:null,detected:null,status:null,loadModes:{}};
 const LS={get(k,d){try{return localStorage.getItem(k)??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 
-async function loadJSON(url,fallback){try{const r=await fetch(url,{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch(e){return fallback}}
+async function loadJSON(url,fallback){
+  const cacheKey="eclyon_jury_cache_"+url;
+  try{
+    const r=await fetch(url,{cache:"no-store"});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    const data=await r.json();
+    state.loadModes[url]="live";
+    LS.set(cacheKey,JSON.stringify({savedAt:new Date().toISOString(),data}));
+    return data;
+  }catch(e){
+    try{
+      const saved=JSON.parse(LS.get(cacheKey,""));
+      if(saved&&saved.data){state.loadModes[url]="cache";return saved.data}
+    }catch(_e){}
+    state.loadModes[url]="unavailable";
+    return fallback;
+  }
+}
 function bullets(a){return "<ul>"+a.map(x=>"<li>"+safe(x)+"</li>").join("")+"</ul>"}
 
 function renderConsensus(){
@@ -270,18 +287,18 @@ function renderConsensus(){
 }
 
 function fillFilters(){
-  $("#track").innerHTML='<option value="">Toutes</option>'+state.data.tracks.map(t=>`<option>${safe(t)}</option>`).join("");
+  $("#track").innerHTML='<option value="">All tracks</option>'+state.data.tracks.map(t=>`<option>${safe(t)}</option>`).join("");
 }
 function searchable(c){return [c.short,c.name,c.family,...c.tracks,...c.assessments,...c.format,...c.do,...c.avoid,...c.recommend].join(" ").toLowerCase()}
 function renderCompetitions(){
   const q=$("#search").value.trim().toLowerCase(),tr=$("#track").value,fa=$("#family").value,as=$("#assessment").value;
   const list=state.data.competitions.filter(c=>(!q||searchable(c).includes(q))&&(!tr||c.tracks.includes(tr))&&(!fa||c.family===fa)&&(!as||c.assessments.some(x=>x.includes(as))));
-  $("#resultCount").textContent=list.length+" concours ou banques affichés";
+  $("#resultCount").textContent=list.length+" competitions or examination groups shown";
   $("#empty").classList.toggle("on",!list.length);
   $("#competitionGrid").innerHTML=list.map(c=>`<article class="competition" data-color="${safe(c.color)}">
     <div class="comp-top"><div><h3>${safe(c.short)}</h3><div class="fullname">${safe(c.name)}</div></div><span class="year">Curated through ${c.latestCuratedYear}</span></div>
     <div class="tags">${c.tracks.map(t=>`<span class="tag">${safe(t)}</span>`).join("")}${c.assessments.map(t=>`<span class="tag assess">${safe(t)}</span>`).join("")}</div>
-    <p class="snapshot"><strong>Format :</strong> ${safe(c.format[0])}</p>
+    <p class="snapshot"><strong>Format:</strong> ${safe(c.format[0])}</p>
     <div class="comp-actions"><button class="open-decoder" data-id="${safe(c.id)}">Open decoder</button><a class="official" href="${safe(c.officialPage)}" target="_blank" rel="noopener">Official source ↗</a></div>
   </article>`).join("");
   $$(".open-decoder").forEach(b=>b.onclick=()=>openCompetition(b.dataset.id));
@@ -301,13 +318,24 @@ function closeModal(){$("#modal").classList.remove("on");document.body.style.ove
 
 function renderLatest(){
   const docs=(state.detected?.documents||[]).slice().sort((a,b)=>(b.year||0)-(a.year||0)||String(b.firstSeen).localeCompare(String(a.firstSeen))).slice(0,12);
-  $("#latestGrid").innerHTML=docs.map(d=>`<article class="report-card"><div class="report-meta"><span class="badge">${safe(d.sourceName)}</span><span class="badge">${safe(d.year||"Year unknown")}</span>${d.isNew?'<span class="badge new">New · summary pending review</span>':""}</div><h3>${safe(d.label)}</h3><p>${safe(d.type||"official document")} · first detected ${safe(d.firstSeen||"—")}</p><a href="${safe(d.url)}" target="_blank" rel="noopener">Open official document →</a></article>`).join("")||"<p>Aucun document détecté pour le moment.</p>";
+  $("#latestGrid").innerHTML=docs.map(d=>`<article class="report-card"><div class="report-meta"><span class="badge">${safe(d.sourceName)}</span><span class="badge">${safe(d.year||"Year unknown")}</span>${d.isNew?'<span class="badge new">New · summary pending review</span>':""}</div><h3>${safe(d.label)}</h3><p>${safe(d.type||"official document")} · first detected ${safe(d.firstSeen||"—")}</p><a href="${safe(d.url)}" target="_blank" rel="noopener">Open official document →</a></article>`).join("")||"<p>No newly detected official document is available yet.</p>";
 }
 function renderStatus(){
-  const s=state.status||{},card=$("#statusCard");
+  const s=state.status||{},card=$("#statusCard"),mode=state.loadModes["jury-reports-status.json"];
   $("#stSources").textContent=s.sourcesChecked??0;$("#stDocs").textContent=s.documentsFound??0;$("#stNew").textContent=s.newDocuments??0;
-  if(s.lastSuccessfulRun){card.classList.add(s.errors?.length?"warn":"ok");$("#statusTitle").textContent=s.errors?.length?"Monitoring completed with warnings":"Automatic monitoring active";$("#statusMsg").textContent=`Last successful check: ${new Date(s.lastSuccessfulRun).toLocaleString("fr-FR")}. ${s.message||""}`}
-  else{$("#statusTitle").textContent="Ready for first automatic check";$("#statusMsg").textContent=s.message||"Le suivi automatique n’a pas encore été lancé."}
+  if(s.lastSuccessfulRun){
+    card.classList.add(s.errors?.length||mode==="cache"?"warn":"ok");
+    $("#statusTitle").textContent=mode==="cache"?"Showing the last saved monitoring report":(s.errors?.length?"Monitoring completed with warnings":"Automatic monitoring active");
+    const note=mode==="cache"?" Live status is temporarily unavailable; these are the last successfully saved results.":"";
+    $("#statusMsg").textContent=`Last successful check: ${new Date(s.lastSuccessfulRun).toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"})}. ${s.message||""}${note}`;
+  }else if(mode==="unavailable"){
+    card.classList.add("warn");
+    $("#statusTitle").textContent="Monitoring status temporarily unavailable";
+    $("#statusMsg").textContent="No previous monitoring report is stored on this device. The curated jury guidance below remains available.";
+  }else{
+    $("#statusTitle").textContent="Ready for first automatic check";
+    $("#statusMsg").textContent=s.message||"Automatic monitoring has not run yet.";
+  }
 }
 function renderHeat(){
   const heads=[["bce","BCE"],["ecricome","ECRICOME"],["centrale","Centrale"],["mines","Mines"],["ccinp","CCINP"],["e3a","e3a"],["pt","PT"],["xens","X / ENS"]];

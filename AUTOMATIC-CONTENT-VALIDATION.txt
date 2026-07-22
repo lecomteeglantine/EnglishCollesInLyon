@@ -1,0 +1,10 @@
+Validation completed on 22 July 2026
+
+- 7 JSON files parsed successfully.
+- 9 GitHub Actions workflow files parsed successfully.
+- 4 standalone JavaScript files passed node --check.
+- Inline JavaScript passed node --check in index.html, resources.html, timelines.html and jury-reports.html.
+- No duplicate HTML IDs were found in the four modified pages.
+- Expected cache and freshness markers are present.
+
+A final visual check should still be performed after GitHub Pages publishes the update.

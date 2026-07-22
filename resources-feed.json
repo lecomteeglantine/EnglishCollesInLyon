@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "generatedAt": "2026-07-22T07:43:55.694Z",
   "status": "ok",
   "items": [
@@ -188,5 +188,7 @@
     "successful": 16,
     "failed": 0,
     "failures": []
-  }
+  },
+  "checkedAt": "2026-07-22T07:43:55.694Z",
+  "lastSuccessfulAt": "2026-07-22T07:43:55.694Z"
 }

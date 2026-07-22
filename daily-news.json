@@ -1,29 +1,119 @@
-[
-  {
-    "title": "UK universities face financial pressure",
-    "country": "🇬🇧 United Kingdom",
-    "summary": "Several British universities are struggling with rising costs and fewer international students.",
-    "vocabulary": ["tuition fees", "funding", "international students"],
-    "toeicQuestion": "What problem are some UK universities facing?",
-    "answer": "They are facing financial pressure.",
-    "discussion": "Should higher education be mostly funded by students or by the state?"
+{
+  "version": 2,
+  "checkedAt": "2026-07-22T14:00:00.000Z",
+  "generatedAt": "2026-07-22T14:00:00.000Z",
+  "lastSuccessfulAt": null,
+  "status": "degraded",
+  "freshCountries": 0,
+  "countries": {
+    "gb": {
+      "countryCode": "gb",
+      "country": "the United Kingdom",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in the United Kingdom would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "us": {
+      "countryCode": "us",
+      "country": "the United States",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in the United States would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "ie": {
+      "countryCode": "ie",
+      "country": "Ireland",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in Ireland would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "ca": {
+      "countryCode": "ca",
+      "country": "Canada",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in Canada would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "au": {
+      "countryCode": "au",
+      "country": "Australia",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in Australia would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "nz": {
+      "countryCode": "nz",
+      "country": "New Zealand",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in New Zealand would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "in": {
+      "countryCode": "in",
+      "country": "India",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in India would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    },
+    "za": {
+      "countryCode": "za",
+      "country": "South Africa",
+      "title": "First automatic country update pending",
+      "source": "English Colles in Lyon",
+      "url": "resources.html",
+      "publishedAt": null,
+      "summary": "Run the daily-news workflow once after installation to replace this safe placeholder with a current, sourced story.",
+      "question": "Which current development in South Africa would be most useful to discuss in class or in a colle?",
+      "fetchedAt": "2026-07-22T14:00:00.000Z",
+      "cached": true,
+      "cacheReason": "The first GitHub Actions refresh has not run yet."
+    }
   },
-  {
-    "title": "Canada invests in clean energy",
-    "country": "🇨🇦 Canada",
-    "summary": "Canada is increasing investment in renewable energy projects to reduce carbon emissions.",
-    "vocabulary": ["renewable energy", "investment", "carbon emissions"],
-    "toeicQuestion": "Why is Canada investing in clean energy?",
-    "answer": "To reduce carbon emissions.",
-    "discussion": "Can clean energy create enough jobs to replace fossil fuels?"
-  },
-  {
-    "title": "Australian cities prepare for extreme heat",
-    "country": "🇦🇺 Australia",
-    "summary": "Cities in Australia are adapting public spaces to protect people during hotter summers.",
-    "vocabulary": ["heatwave", "public spaces", "adapt"],
-    "toeicQuestion": "What are Australian cities preparing for?",
-    "answer": "They are preparing for extreme heat.",
-    "discussion": "How should cities adapt to climate change?"
+  "sources": {
+    "attempted": 0,
+    "failed": 0,
+    "failures": []
   }
-]
+}
