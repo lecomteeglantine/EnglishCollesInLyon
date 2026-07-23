@@ -1,0 +1,16 @@
+INSTALLATION — MY LEARNING PATH
+================================
+
+Option recommandée :
+1. Décompressez l'archive complète.
+2. Remplacez le contenu du dépôt GitHub par celui du dossier EnglishCollesInLyon-main.
+3. Validez avec Commit changes.
+4. Dans Actions, lancez une fois « Build global search index » si GitHub ne le lance pas automatiquement.
+5. Rechargez le site avec Ctrl + Shift + R.
+
+La nouvelle page est : learning-path.html
+
+Le bouton du header auparavant nommé « My progress » ouvre désormais « My Learning Path ».
+La sauvegarde reste disponible depuis My Learning Path grâce au bouton « Export or import my progress ».
+
+Aucune donnée d'étudiant n'est envoyée vers un serveur. Le tableau de bord lit seulement les données localStorage du navigateur.

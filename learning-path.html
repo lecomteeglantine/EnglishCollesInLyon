@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Learning Path · English Colles in Lyon</title>
+<meta name="description" content="Your progress, priorities and next steps in one place: continue your work, review difficult points and prepare your next English colle.">
+<meta name="author" content="Eglantine Lecomte">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-shell.css?v=20260723-path-1">
+<style>
+:root{--bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--teal:#3C8390;--rose:#B06A78;--card:#fff;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 12px 34px rgba(36,59,83,.08);--shadow-lg:0 3px 8px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.14);--radius:18px;--max:1120px;--font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--display:"Fraunces",Georgia,serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:18px;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;color:var(--navy)}p{margin:0}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}.eyebrow{color:var(--terra);font-size:.71rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 17px;border:1px solid transparent;border-radius:12px;font-weight:700;font-size:.88rem;transition:.16s}.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.btn-primary{background:var(--terra);color:#fff}.btn-navy{background:var(--navy);color:#fff}.btn-ghost{background:#fff;border-color:var(--line);color:var(--navy)}.btn-sage{background:var(--sage);color:#fff}
+.hero{padding:48px 0 30px;background:radial-gradient(circle at 90% 10%,rgba(217,164,65,.18),transparent 28%),radial-gradient(circle at 4% 90%,rgba(122,155,118,.15),transparent 27%)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(310px,.88fr);gap:30px;align-items:center}.hero h1{font-size:clamp(2.25rem,6vw,4rem);max-width:11ch}.hero-copy{font-size:1.08rem;max-width:58ch;margin-top:15px}.hero-note{color:var(--muted);font-size:.88rem;margin-top:9px}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.colle-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow-lg)}.colle-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.colle-card h2{font-size:1.32rem;margin-top:4px}.countdown{display:grid;place-items:center;flex:none;width:72px;height:72px;border-radius:18px;background:var(--navy);color:#fff;text-align:center}.countdown strong{display:block;font-family:var(--display);font-size:1.8rem;line-height:1}.countdown span{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.colle-form{display:flex;gap:8px;margin-top:17px}.colle-form input{flex:1;min-width:0;min-height:44px;border:1px solid var(--line);border-radius:11px;background:var(--bg2);padding:0 12px;color:var(--ink)}.colle-form button{min-height:44px;border:0;border-radius:11px;background:var(--terra);color:#fff;padding:0 14px;font-weight:700}.colle-status{margin-top:12px;color:var(--muted);font-size:.84rem}.colle-status strong{color:var(--navy)}
+.summary{padding:8px 0 42px}.summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.summary-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:var(--shadow)}.summary-card span{display:block;color:var(--muted);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.summary-card strong{display:block;color:var(--navy);font-family:var(--display);font-size:1.55rem;margin-top:5px;line-height:1.15}.summary-card small{display:block;color:var(--muted);font-size:.74rem;margin-top:5px}
+.section{padding:48px 0}.section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.section-head>div{max-width:66ch}.section-head h2{font-size:clamp(1.55rem,4vw,2.2rem);margin-top:4px}.section-head p{color:var(--muted);margin-top:9px}.priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.priority-card{--accent:var(--terra);display:flex;flex-direction:column;min-height:280px;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:19px;padding:21px;box-shadow:var(--shadow)}.priority-card:nth-child(2){--accent:var(--sage)}.priority-card:nth-child(3){--accent:var(--navy)}.priority-number{display:grid;place-items:center;width:37px;height:37px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700}.priority-card h3{font-size:1.3rem;margin-top:15px}.priority-card p{color:var(--muted);font-size:.9rem;margin-top:9px}.priority-meta{display:inline-flex;align-self:flex-start;margin-top:12px;padding:5px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,#fff);color:var(--accent);font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.priority-card .btn{align-self:flex-start;margin-top:auto;padding-top:0}
+.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.skill-card{--accent:var(--navy);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.skill-card[data-kind="methodology"]{--accent:var(--gold)}.skill-card[data-kind="grammar"]{--accent:var(--terra)}.skill-card[data-kind="pronunciation"]{--accent:var(--teal)}.skill-card[data-kind="guided"]{--accent:var(--sage)}.skill-card[data-kind="vocabulary"]{--accent:var(--rose)}.skill-top{display:flex;align-items:flex-start;gap:13px}.skill-icon{display:grid;place-items:center;flex:none;width:45px;height:45px;border-radius:13px;background:var(--accent);color:#fff;font-weight:700}.skill-main{flex:1}.skill-main h3{font-size:1.2rem}.skill-main p{color:var(--muted);font-size:.82rem;margin-top:4px}.skill-value{color:var(--accent);font-weight:700;font-size:.82rem}.meter{height:9px;margin-top:15px;border-radius:99px;background:#efe8de;overflow:hidden}.meter span{display:block;height:100%;border-radius:inherit;background:var(--accent);width:0}.skill-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px}.skill-foot small{color:var(--muted);font-size:.75rem}.skill-foot a{color:var(--accent);font-size:.8rem;font-weight:700}.review-card{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;background:linear-gradient(135deg,#fff,#f7efe9);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.review-numbers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.review-number{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}.review-number strong{display:block;font-family:var(--display);font-size:1.6rem;color:var(--rose)}.review-number span{color:var(--muted);font-size:.76rem}
+.lower-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:22px;box-shadow:var(--shadow)}.panel h2{font-size:1.35rem}.panel-copy{color:var(--muted);font-size:.87rem;margin-top:7px}.activity-list{display:grid;gap:9px;margin-top:18px}.activity-item{display:flex;align-items:center;gap:12px;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}.activity-dot{width:10px;height:10px;border-radius:50%;background:var(--sage);flex:none}.activity-main{min-width:0;flex:1}.activity-main strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.86rem}.activity-main span{display:block;color:var(--muted);font-size:.72rem}.activity-item a{color:var(--terra);font-size:.76rem;font-weight:700}.empty{margin-top:17px;padding:16px;border:1px dashed var(--line);border-radius:13px;background:var(--bg2);color:var(--muted);font-size:.84rem}.privacy{display:flex;align-items:flex-start;gap:12px;margin-top:17px;padding:14px;border-left:4px solid var(--sage);border-radius:11px;background:#eef3f1;color:var(--muted);font-size:.8rem}.privacy strong{color:var(--navy)}.tools{display:grid;gap:10px;margin-top:18px}.tool-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);transition:.15s}.tool-link:hover{border-color:var(--terra);background:#fff}.tool-link strong{font-size:.87rem;color:var(--navy)}.tool-link span{display:block;color:var(--muted);font-size:.74rem;margin-top:2px}.tool-link b{color:var(--terra)}
+.reset-row{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:17px;padding-top:15px;border-top:1px dashed var(--line)}.reset-row span{color:var(--muted);font-size:.76rem}.text-button{border:0;background:transparent;color:var(--terra);font-weight:700;font-size:.76rem;padding:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:920px){.hero-grid,.review-card,.lower-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:repeat(2,1fr)}.priority-grid{grid-template-columns:1fr}.priority-card{min-height:0}.skill-grid{grid-template-columns:1fr}.review-card{grid-column:auto}}
+@media(max-width:600px){body{font-size:17px}.wrap{width:min(calc(100% - 24px),var(--max))}.hero{padding-top:34px}.hero h1{max-width:none}.hero-actions,.colle-form,.section-head{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}.colle-form button{width:100%}.summary-grid{grid-template-columns:1fr 1fr}.summary-card{padding:14px}.summary-card strong{font-size:1.3rem}.section{padding:38px 0}.skill-foot{align-items:flex-start;flex-direction:column}.review-numbers{grid-template-columns:1fr}.countdown{width:64px;height:64px}}
+</style>
+</head>
+<body>
+<div id="ecl-site-header"></div>
+<script src="site-shell.js?v=20260723-path-1"></script>
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Your progress · Your priorities · Your next steps</div>
+      <h1>My Learning Path</h1>
+      <p class="hero-copy">See what you have already worked on, what needs attention and the most useful thing to do next.</p>
+      <p class="hero-note">This page reads the progress saved in this browser. It does not grade you and nothing is sent to a server.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" id="mainNextAction" href="help.html">Start my next step →</a>
+        <a class="btn btn-ghost" href="colle-trainer.html">Practise a complete colle</a>
+      </div>
+    </div>
+    <aside class="colle-card" aria-labelledby="colleTitle">
+      <div class="colle-top">
+        <div><div class="eyebrow">Planning anchor</div><h2 id="colleTitle">My next colle</h2></div>
+        <div class="countdown" id="countdown" aria-live="polite"><strong>—</strong><span>days</span></div>
+      </div>
+      <form class="colle-form" id="colleForm"><label class="sr-only" for="colleDate">Date of my next colle</label><input id="colleDate" type="date"><button type="submit">Save date</button></form>
+      <p class="colle-status" id="colleStatus">Add a date to make today’s priorities more precise.</p>
+    </aside>
+  </div>
+</section>
+<section class="summary"><div class="wrap summary-grid" id="summaryGrid"></div></section>
+<section class="section alt" aria-labelledby="nextTitle">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Do less, but do the right thing</div><h2 id="nextTitle">What should I do next?</h2><p>The recommendations below are based on the work stored on this device. They change as you complete lessons and missions.</p></div><a class="btn btn-ghost" href="help.html">Open my guided plan</a></div><div class="priority-grid" id="priorityGrid"></div></div>
+</section>
+<section class="section" aria-labelledby="skillsTitle">
+  <div class="wrap"><div class="section-head"><div><div class="eyebrow">Evidence, not pressure</div><h2 id="skillsTitle">My progress by area</h2><p>Progress bars only appear where the site has meaningful completion data. Vocabulary is shown as a review queue instead of a misleading percentage.</p></div></div><div class="skill-grid" id="skillGrid"></div></div>
+</section>
+<section class="section alt" aria-labelledby="recentTitle">
+  <div class="wrap lower-grid">
+    <article class="panel"><div class="eyebrow">Continue where you stopped</div><h2 id="recentTitle">Recent activity</h2><p class="panel-copy">Pages visited on this device appear here. Opening a lesson records it automatically.</p><div class="activity-list" id="activityList"></div></article>
+    <article class="panel"><div class="eyebrow">Keep your work safe</div><h2>Progress tools</h2><p class="panel-copy">Your work remains in this browser unless you export it. Make a backup before changing device or clearing browser data.</p><div class="tools"><a class="tool-link" href="progress-backup.html"><div><strong>Export or import my progress</strong><span>Create a backup file or restore one.</span></div><b>→</b></a><a class="tool-link" href="help.html"><div><strong>Guided Learning Plan</strong><span>Take a skills check and work through focused missions.</span></div><b>→</b></a><a class="tool-link" href="vocabulary.html"><div><strong>My vocabulary review</strong><span>Return to saved words and previous mistakes.</span></div><b>→</b></a></div><div class="privacy"><span aria-hidden="true">🔒</span><p><strong>Private by design.</strong> This dashboard reads local browser data only. It cannot see work completed on another device until you import a backup.</p></div><div class="reset-row"><span>Remove only the date and recent-activity history from this dashboard.</span><button class="text-button" id="resetDashboard" type="button">Reset dashboard history</button></div></article>
+  </div>
+</section>
+</main>
+<script src="help-data.js"></script>
+<script src="methodology-data.js"></script>
+<script>
+(function(){
+'use strict';
+const $=s=>document.querySelector(s);
+const readJSON=(key,fallback)=>{try{const raw=localStorage.getItem(key);return raw===null?fallback:JSON.parse(raw)}catch(_){return fallback}};
+const writeJSON=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch(_){}};
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+const pct=(a,b)=>b?Math.round(a/b*100):0;
+const today=new Date();today.setHours(0,0,0,0);
+const settings=readJSON('ecl_learning_path_settings_v1',{});
+const help=readJSON('eclyon_help_state_v1',{});
+const grammar=readJSON('eclGrammarProgressV1',{});
+const methodDone=readJSON('ecl_methodology_done_v3',[]);
+const methodPractice=readJSON('ecl_methodology_practice_v3',{});
+const pronunciation=readJSON('ecl-pronunciation-video-progress-v1',{done:[]});
+const vocabSaved=readJSON('ecl_vocab_saved',[]);
+const vocabMistakes=readJSON('ecl_vocab_mistakes',[]);
+const activity=readJSON('ecl_learning_activity_v1',[]);
+const lastRoute=readJSON('eclyon_last_route',null);
+const helpSkills=window.HELP_DATA?.skills||[];
+const helpById=Object.fromEntries(helpSkills.map(s=>[s.id,s]));
+const methodModules=window.METHO?.modules||[];
+const helpReady=Object.values(help.statuses||{}).filter(v=>v==='ready'||v==='consolidated').length;
+const helpPlan=Array.isArray(help.plan)?help.plan:[];
+const helpDone=helpPlan.filter(id=>help.missionWork?.[id]?.complete).length;
+const nextMissionId=helpPlan.find(id=>!help.missionWork?.[id]?.complete);
+const nextMission=nextMissionId?helpById[nextMissionId]:null;
+const grammarValues=Object.values(grammar);
+const grammarDone=grammarValues.filter(v=>v==='ready'||v==='studied').length;
+const grammarRevise=grammarValues.filter(v=>v==='revise').length;
+const grammarActive=grammarValues.filter(v=>v==='studying').length;
+const pronunciationDone=Array.isArray(pronunciation.done)?pronunciation.done.length:0;
+const methodCount=Array.isArray(methodDone)?methodDone.length:0;
+const methodStarted=Object.keys(methodPractice||{}).length;
+const recentSeven=activity.filter(x=>Date.now()-new Date(x.ts).getTime()<7*86400000);
+const activeDays=new Set(recentSeven.map(x=>new Date(x.ts).toISOString().slice(0,10))).size;
+
+function nextColleInfo(){
+  const raw=settings.nextColleDate;if(!raw)return null;
+  const date=new Date(raw+'T12:00:00');if(Number.isNaN(date.getTime()))return null;
+  const base=new Date(today);const days=Math.ceil((date-base)/86400000);return {raw,date,days};
+}
+function renderColle(){
+  const info=nextColleInfo(),input=$('#colleDate'),box=$('#countdown'),status=$('#colleStatus');
+  input.value=info?.raw||'';
+  if(!info){box.innerHTML='<strong>—</strong><span>days</span>';status.textContent='Add a date to make today’s priorities more precise.';return}
+  const display=info.days<0?0:info.days;box.innerHTML='<strong>'+display+'</strong><span>'+(info.days===1?'day':'days')+'</span>';
+  const dateText=info.date.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+  if(info.days<0)status.innerHTML='<strong>'+dateText+'</strong> has passed. Save your next date when you know it.';
+  else if(info.days===0)status.innerHTML='<strong>Your colle is today.</strong> Prioritise a short oral run-through, not new content.';
+  else if(info.days<=3)status.innerHTML='<strong>'+info.days+' day'+(info.days===1?'':'s')+' left.</strong> Practise a complete timed performance today.';
+  else status.innerHTML='<strong>'+dateText+'.</strong> You still have time to improve one focused skill before a full simulation.';
+}
+$('#colleForm').addEventListener('submit',e=>{e.preventDefault();settings.nextColleDate=$('#colleDate').value||'';writeJSON('ecl_learning_path_settings_v1',settings);renderColle();renderPriorities()});
+
+function renderSummary(){
+  const totalEvidence=helpReady+grammarDone+methodCount+pronunciationDone;
+  const data=[
+    ['Active this week',activeDays,activeDays===1?'1 learning day':'Learning days recorded'],
+    ['Guided missions',helpPlan.length?helpDone+'/'+helpPlan.length:'Not started',helpPlan.length?'Current learning cycle':'Take a skills check'],
+    ['Review queue',vocabMistakes.length+grammarRevise,(vocabMistakes.length+grammarRevise)===1?'1 item needs attention':'Vocabulary and grammar'],
+    ['Completed evidence',totalEvidence,'Skills, chapters, modules and lessons']
+  ];
+  $('#summaryGrid').innerHTML=data.map(([label,value,note])=>'<article class="summary-card"><span>'+esc(label)+'</span><strong>'+esc(value)+'</strong><small>'+esc(note)+'</small></article>').join('');
+}
+function makePriority(title,desc,meta,url,label){return {title,desc,meta,url,label}}
+function buildPriorities(){
+  const info=nextColleInfo(),items=[];
+  const add=x=>{if(x&&!items.some(y=>y.url===x.url&&y.title===x.title))items.push(x)};
+  if(info&&info.days>=0&&info.days<=3)add(makePriority('Run a complete timed colle','Your next colle is close. Practise structure, timing and delivery together instead of starting a large new chapter.','Colle preparation','colle-trainer.html','Start the trainer'));
+  if(nextMission)add(makePriority(nextMission.title,nextMission.short||'Continue the next focused mission selected by your guided plan.','Guided mission','help.html','Continue mission'));
+  else if(helpPlan.length&&helpDone===helpPlan.length)add(makePriority('Start a new progress check','You completed the current cycle. Recheck your skills and generate a new set of priorities.','Guided plan','help.html','Start the next cycle'));
+  else if(!helpPlan.length)add(makePriority('Build my first learning plan','Take a short skills check so the site can recommend a manageable sequence of missions.','Best starting point','help.html','Start my skills check'));
+  if(vocabMistakes.length)add(makePriority('Review '+vocabMistakes.length+' difficult word'+(vocabMistakes.length===1?'':'s'),'Return to words previously missed before adding more vocabulary.','Spaced review','vocabulary.html#games','Open vocabulary review'));
+  if(grammarRevise)add(makePriority('Revisit '+grammarRevise+' grammar chapter'+(grammarRevise===1?'':'s'),'You marked these chapters as needing revision. Work on one, then use the target form in an oral answer.','Accuracy','grammar.html','Choose a chapter'));
+  if(methodCount<methodModules.length)add(makePriority('Strengthen one methodology skill','Continue the methodology course and immediately reuse the technique on a real document.','Colle method','methodology.html','Continue methodology'));
+  if(pronunciationDone<13)add(makePriority('Complete one pronunciation lesson','A short video-and-imitation session will improve intelligibility more than passive listening.','Oral delivery','pronunciation.html','Open pronunciation'));
+  add(makePriority('Turn today’s work into speech','Choose one current topic and speak for sixty seconds without reading full sentences.','Transfer to colles','colle-trainer.html','Practise aloud'));
+  return items.slice(0,3);
+}
+function renderPriorities(){
+  const items=buildPriorities();
+  $('#priorityGrid').innerHTML=items.map((x,i)=>'<article class="priority-card"><span class="priority-number">'+(i+1)+'</span><span class="priority-meta">'+esc(x.meta)+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.desc)+'</p><a class="btn btn-ghost" href="'+esc(x.url)+'">'+esc(x.label)+' →</a></article>').join('');
+  const first=items[0],button=$('#mainNextAction');if(first){button.href=first.url;button.textContent=first.label+' →'}
+}
+function skillCard(kind,letter,title,desc,done,total,detail,url){
+  const value=pct(done,total);return '<article class="skill-card" data-kind="'+kind+'"><div class="skill-top"><span class="skill-icon">'+letter+'</span><div class="skill-main"><h3>'+esc(title)+'</h3><p>'+esc(desc)+'</p></div><span class="skill-value">'+value+'%</span></div><div class="meter" aria-label="'+value+' percent"><span style="width:'+value+'%"></span></div><div class="skill-foot"><small>'+esc(detail)+'</small><a href="'+url+'">Continue →</a></div></article>';
+}
+function renderSkills(){
+  const methodTotal=methodModules.length||20,helpTotal=helpSkills.length||51;
+  const cards=[
+    skillCard('guided','P','Guided Learning Plan','Skills checked, practised and revisited across learning cycles.',helpReady,helpTotal,helpReady+' of '+helpTotal+' skills ready or consolidated','help.html'),
+    skillCard('methodology','M','Methodology','Modules completed only after interactive practice and real-world actions.',methodCount,methodTotal,methodCount+' of '+methodTotal+' modules completed'+(methodStarted?' · '+methodStarted+' started':''),'methodology.html'),
+    skillCard('grammar','G','Grammar','Chapters marked studied or ready to use.',grammarDone,86,grammarDone+' of 86 chapters · '+grammarActive+' in progress · '+grammarRevise+' to revise','grammar.html'),
+    skillCard('pronunciation','P','Pronunciation','Video lessons completed through listening, imitation and reuse.',pronunciationDone,13,pronunciationDone+' of 13 lessons completed','pronunciation.html')
+  ];
+  cards.push('<article class="review-card"><div><div class="eyebrow">Vocabulary is not a percentage</div><h3>My vocabulary review queue</h3><p class="panel-copy">Saved words are material you chose to keep. Mistakes are words that should return before you add more. The useful goal is a manageable review queue, not an inflated “mastery” score.</p><div class="hero-actions"><a class="btn btn-primary" href="vocabulary.html#games">Review vocabulary</a><a class="btn btn-ghost" href="flashcards.html">Open flashcards</a></div></div><div class="review-numbers"><div class="review-number"><strong>'+vocabSaved.length+'</strong><span>saved words and expressions</span></div><div class="review-number"><strong>'+vocabMistakes.length+'</strong><span>previous mistakes to revisit</span></div></div></article>');
+  $('#skillGrid').innerHTML=cards.join('');
+}
+function friendlyTime(ts){
+  const d=new Date(ts),diff=Date.now()-d.getTime();if(diff<60000)return'just now';if(diff<3600000)return Math.floor(diff/60000)+' min ago';if(diff<86400000)return Math.floor(diff/3600000)+' h ago';if(diff<7*86400000)return Math.floor(diff/86400000)+' day'+(Math.floor(diff/86400000)===1?'':'s')+' ago';return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+}
+function renderActivity(){
+  const unique=[],seen=new Set();
+  for(const item of activity){if(!item||item.path==='learning-path.html'||seen.has(item.path))continue;seen.add(item.path);unique.push(item);if(unique.length===6)break}
+  if(!unique.length&&lastRoute?.url)unique.push({path:lastRoute.url,title:lastRoute.title||'My last route',category:'Saved route',ts:new Date().toISOString()});
+  $('#activityList').innerHTML=unique.length?unique.map(x=>'<div class="activity-item"><span class="activity-dot"></span><div class="activity-main"><strong>'+esc(x.title||x.path)+'</strong><span>'+esc(x.category||'Learning activity')+' · '+friendlyTime(x.ts)+'</span></div><a href="'+esc(x.path)+'">Open →</a></div>').join(''):'<div class="empty">No learning activity has been recorded yet. Open a grammar chapter, a methodology module or a pronunciation lesson, then return here.</div>';
+}
+$('#resetDashboard').addEventListener('click',()=>{if(confirm('Remove the saved colle date and recent-activity history from this dashboard? Your course progress will not be deleted.')){localStorage.removeItem('ecl_learning_path_settings_v1');localStorage.removeItem('ecl_learning_activity_v1');location.reload()}});
+renderColle();renderSummary();renderPriorities();renderSkills();renderActivity();
+})();
+</script>
+<div id="ecl-site-footer"></div>
+</body>
+</html>

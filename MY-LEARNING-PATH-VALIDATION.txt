@@ -1,0 +1,19 @@
+MY LEARNING PATH — VALIDATION
+=============================
+
+- New central dashboard: learning-path.html
+- Shared header link renamed to My Learning Path
+- Existing progress backup preserved and linked from the dashboard
+- Existing Guided Learning Plan preserved as the diagnostic/mission engine
+- Grammar progress read from eclGrammarProgressV1
+- Methodology progress read from ecl_methodology_done_v3 and ecl_methodology_practice_v3
+- Pronunciation progress read from ecl-pronunciation-video-progress-v1
+- Vocabulary saved/review data read from ecl_vocab_saved and ecl_vocab_mistakes
+- Guided-plan data read from eclyon_help_state_v1
+- Optional next-colle date stored locally
+- Recent learning-page visits recorded locally by site-shell.js
+- Search index rebuilt and includes My Learning Path
+- PWA manifest and service-worker cache updated
+- Dashboard inline JavaScript syntax checked
+- Empty and populated dashboard runtime scenarios passed in a mocked DOM
+- 199 public pages use the new shell asset version

@@ -11,11 +11,11 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "20260722-2"
+VERSION = "20260723-path-1"
 CORE_PAGES = {
     "index.html", "methodology.html", "civilisation.html", "vocabulary.html",
     "grammar.html", "pronunciation.html", "timelines.html", "colle-trainer.html",
-    "resources.html", "jury-reports.html", "progress-backup.html", "help.html",
+    "resources.html", "jury-reports.html", "learning-path.html", "progress-backup.html", "help.html",
     "flashcards.html",
 }
 EXCLUDED = {
