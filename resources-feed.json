@@ -1,194 +1,220 @@
 {
   "version": 2,
-  "generatedAt": "2026-07-22T07:43:55.694Z",
-  "status": "ok",
+  "checkedAt": "2026-07-23T18:39:28.954Z",
+  "generatedAt": "2026-07-23T18:39:28.954Z",
+  "lastSuccessfulAt": "2026-07-23T18:39:28.954Z",
+  "status": "partial",
   "items": [
     {
-      "title": "Producer price inflation, UK: June 2026 including services, April to June 2026",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/producerpriceinflationukjune2026includingservicesapriltojune2026",
-      "date": "2026-07-22T06:00:00.000Z",
+      "title": "Burnham pauses early prison release scheme",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2lpjw516eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-23T18:17:54.000Z",
       "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
-    },
-    {
-      "title": "Producer price inflation, UK: June 2026, including services, April to June 2026 time series",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/producerpriceinflationukjune2026includingservicesapriltojune2026timeseries",
-      "date": "2026-07-22T06:00:00.000Z",
-      "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
-    },
-    {
-      "title": "Consumer price inflation, UK: June 2026 time series",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukjune2026timeseries",
-      "date": "2026-07-22T06:00:00.000Z",
-      "country": "United Kingdom",
-      "format": "Data",
-      "topic": "Economy",
-      "kind": "Official"
-    },
-    {
-      "title": "Untitled publication",
-      "source": "NPR News Now",
-      "url": "1870aabd-fd97-46d0-aea9-45144f39aefe",
-      "date": "2026-07-22T07:11:15.000Z",
-      "country": "United States",
-      "format": "Podcast",
+      "format": "News",
       "topic": "Politics",
-      "kind": "Podcast"
+      "kind": "News"
     },
     {
-      "title": "Untitled publication",
-      "source": "NPR News Now",
-      "url": "d0a56735-5ff0-485f-8bba-66e81a3c73f1",
-      "date": "2026-07-22T06:11:01.000Z",
+      "title": "For a 2nd time, House approves resolution to end the war in Iran in a rebuke to Trump",
+      "source": "NPR News",
+      "url": "https://www.npr.org/2026/07/23/nx-s1-5904515/congress-iran-war-powers-vote",
+      "date": "2026-07-23T17:35:02.000Z",
       "country": "United States",
-      "format": "Podcast",
+      "format": "News",
       "topic": "Politics",
-      "kind": "Podcast"
+      "kind": "News"
     },
     {
-      "title": "More warehouses of Russian online retailer Wildberries hit by Ukraine, officials say",
+      "title": "Ex-rugby star Horgan sued for repossession of Dublin home",
+      "source": "RTÉ News",
+      "url": "https://www.rte.ie/news/courts/2026/0723/1584842-shane-horgan-courts/",
+      "date": "2026-07-23T17:28:14.000Z",
+      "country": "Ireland",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Owner of Ontario bakery ‘panicked’ when Google's AI Overview mistakenly said they were shutting down",
+      "source": "CBC News",
+      "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/anna-maes-millbank-not-closing-google-ai-overview-made-mistake-9.7281070?cmp=rss",
+      "date": "2026-07-23T18:21:39.000Z",
+      "country": "Canada",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Friday news quiz: World Cup winners, rock legends and Barnaby Joyce's dog",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-24/abc-news-quiz-july-24/106935898",
+      "date": "2026-07-23T18:30:00.000Z",
+      "country": "Australia",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Long-time Wellington party flat shut down by council",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/community/781441/long-time-wellington-party-flat-shut-down-by-council",
+      "date": "2026-07-23T18:29:45.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Muttil tree-felling case: Kerala High Court upholds cheating charges against Augustine brothers",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/muttil-tree-felling-case-kerala-high-court-upholds-cheating-charges-against-augustine-brothers/article71259436.ece",
+      "date": "2026-07-23T18:35:14.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Govender brothers murder trial hears allegations of domestic violence",
+      "source": "SABC News",
+      "url": "https://www.sabcnews.com/sabcnews/govender-brothers-murder-trial-hears-allegations-of-domestic-violence/",
+      "date": "2026-07-23T17:55:58.000Z",
+      "country": "South Africa",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Saudis must recognise Israel for nuclear deal, says Trump",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:38:20.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/cwye71yq8wwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-07-23T17:58:02.000Z",
       "country": "International",
       "format": "News",
       "topic": "International relations",
       "kind": "News"
     },
     {
-      "title": "Rural suburb flagged as home for proposed $40b 'hyperscale' data centre",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/beetaloo-digital-energy-ai-hyperscale-data-centre-40-billion/106943690",
-      "date": "2026-07-22T07:36:33.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Waikato hospitals revert to paperwork after major IT outage",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/health/771868/waikato-hospitals-revert-to-paperwork-after-major-it-outage",
-      "date": "2026-07-22T07:31:20.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Streeting apologises after early prisoner release comments heard on mic",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/cgk4x44mm50o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:30:05.000Z",
+      "title": "Co-operative Capital Bill [HL]",
+      "source": "UK Parliament Bills",
+      "url": "https://bills.parliament.uk/bills/4279",
+      "date": "2026-07-23T16:49:46.000Z",
       "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "PC Harper killers may be eligible for early release",
-      "source": "BBC UK",
-      "url": "https://www.bbc.co.uk/news/articles/c89nxj4d5pqo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T07:30:03.000Z",
-      "country": "United Kingdom",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Drink spiking charge against Melbourne socialite Amy Tossoun thrown out",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/charge-withdrawn-amy-tossoun-mount-buller/106943852",
-      "date": "2026-07-22T07:13:39.000Z",
-      "country": "Australia",
-      "format": "News",
+      "format": "Primary source",
       "topic": "Politics",
-      "kind": "News"
+      "kind": "Official"
     },
     {
-      "title": "Queensland mayors take disaster funding fight to Melbourne",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/qld-mayors-protest-disaster-funding/106945790",
-      "date": "2026-07-22T07:06:54.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "$16 million mansion set for demolition catches fire twice in a night",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-07-22/two-fires-one-night-sapphire-beach-mansion/106944642",
-      "date": "2026-07-22T07:06:01.000Z",
-      "country": "Australia",
-      "format": "News",
-      "topic": "Politics",
-      "kind": "News"
-    },
-    {
-      "title": "Auckland school forced to cancel school camp as families unable to afford it",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/education/771967/auckland-school-forced-to-cancel-school-camp-as-families-unable-to-afford-it",
-      "date": "2026-07-22T07:00:57.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Southland man's kidney cancer surgery delayed for weeks amid urologist staffing woes",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/health/771976/southland-man-s-kidney-cancer-surgery-delayed-for-weeks-amid-urologist-staffing-woes",
-      "date": "2026-07-22T06:44:54.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "Public toilets in Mackenzie District to get $2.5 million investment",
-      "source": "RNZ News",
-      "url": "https://www.rnz.co.nz/news/community/772021/public-toilets-in-mackenzie-district-to-get-2-point-5-million-investment",
-      "date": "2026-07-22T06:31:33.000Z",
-      "country": "New Zealand",
-      "format": "News",
-      "topic": "Society",
-      "kind": "News"
-    },
-    {
-      "title": "UK's largest wind farm to be rebuilt with fewer, larger turbines",
-      "source": "BBC Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/cvgl9vp4vqvo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T06:12:32.000Z",
+      "title": "Houthis in Yemen target Saudi oil exports",
+      "source": "BBC Global News Podcast",
+      "url": "http://www.bbc.co.uk/programmes/p0p0hk2r",
+      "date": "2026-07-23T15:49:00.000Z",
       "country": "International",
+      "format": "Podcast",
+      "topic": "International relations",
+      "kind": "Podcast"
+    },
+    {
+      "title": "Adolescence creator swaps therapy for chains in new movie",
+      "source": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/2026-07-24/what-to-watch-in-cinemas-in-july/106940720",
+      "date": "2026-07-23T18:30:00.000Z",
+      "country": "Australia",
       "format": "News",
-      "topic": "Science & technology",
+      "topic": "Politics",
       "kind": "News"
     },
     {
-      "title": "Burnham pulls back on suggestion to increase income tax allowance",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c935g67wyvgo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-07-22T06:10:45.000Z",
-      "country": "United Kingdom",
+      "title": "Jantar Mantar protest LIVE: Government and CJP delegation have likely agreed to meet tomorrow, a government source says",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/cjp-jantar-mantar-protest-live-updates-abhijeet-dipke-saurav-das-sonam-wangchuk-hunger-strike-dharmendra-pradhan-resignation/article71256169.ece",
+      "date": "2026-07-23T18:29:39.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Woman who almost died in Auckland swimming pool returns to thank her saviours",
+      "source": "RNZ News",
+      "url": "https://www.rnz.co.nz/news/community/781432/woman-who-almost-died-in-auckland-swimming-pool-returns-to-thank-her-saviours",
+      "date": "2026-07-23T18:29:22.000Z",
+      "country": "New Zealand",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Kerala High Court quashes sexual harassment case against Boby Chemmanur",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/kerala-high-court-quashes-sexual-harassment-case-against-boby-chemmanur/article71259467.ece",
+      "date": "2026-07-23T18:27:17.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "University of Toronto mathematician Jacob Tsimerman wins Fields Medal",
+      "source": "CBC News",
+      "url": "https://www.cbc.ca/news/science/fields-medal-jacob-tsimerman-9.7281134?cmp=rss",
+      "date": "2026-07-23T18:14:07.000Z",
+      "country": "Canada",
+      "format": "News",
+      "topic": "Society",
+      "kind": "News"
+    },
+    {
+      "title": "Kerala government reconstitutes prison advisory committees",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/kerala/kerala-government-reconstitutes-prison-advisory-committees/article71258842.ece",
+      "date": "2026-07-23T18:09:56.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Delhi High Court notifies designated court to deal with criminal cases arising from exam paper leaks",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/delhi-high-court-notifies-designated-court-to-deal-with-criminal-cases-arising-from-exam-paper-leaks/article71259539.ece",
+      "date": "2026-07-23T18:08:29.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "AU distance education examination postponed to August 4 over State bandh",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/andhra-pradesh/au-distance-education-examination-postponed-to-august-4-over-state-bandh/article71258934.ece",
+      "date": "2026-07-23T18:04:57.000Z",
+      "country": "India",
+      "format": "News",
+      "topic": "Politics",
+      "kind": "News"
+    },
+    {
+      "title": "Students stage protest against paper leaks, police action in Delhi",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/andhra-pradesh/students-stage-protest-against-paper-leaks-police-action-in-delhi/article71259107.ece",
+      "date": "2026-07-23T17:59:20.000Z",
+      "country": "India",
       "format": "News",
       "topic": "Politics",
       "kind": "News"
     }
   ],
   "sources": {
-    "successful": 16,
-    "failed": 0,
-    "failures": []
-  },
-  "checkedAt": "2026-07-22T07:43:55.694Z",
-  "lastSuccessfulAt": "2026-07-22T07:43:55.694Z"
+    "attempted": 18,
+    "successful": 17,
+    "failed": 1,
+    "failures": [
+      {
+        "source": "Mail & Guardian",
+        "error": "HTTP 404"
+      }
+    ]
+  }
 }
