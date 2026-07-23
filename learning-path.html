@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site-shell.css?v=20260723-path-1">
+<link rel="stylesheet" href="site-shell.css?v=20260723-review-1">
 <style>
 :root{--bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--teal:#3C8390;--rose:#B06A78;--card:#fff;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 12px 34px rgba(36,59,83,.08);--shadow-lg:0 3px 8px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.14);--radius:18px;--max:1120px;--font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--display:"Fraunces",Georgia,serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:18px;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;color:var(--navy)}p{margin:0}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}.eyebrow{color:var(--terra);font-size:.71rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 17px;border:1px solid transparent;border-radius:12px;font-weight:700;font-size:.88rem;transition:.16s}.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.btn-primary{background:var(--terra);color:#fff}.btn-navy{background:var(--navy);color:#fff}.btn-ghost{background:#fff;border-color:var(--line);color:var(--navy)}.btn-sage{background:var(--sage);color:#fff}
@@ -22,11 +22,16 @@
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:920px){.hero-grid,.review-card,.lower-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:repeat(2,1fr)}.priority-grid{grid-template-columns:1fr}.priority-card{min-height:0}.skill-grid{grid-template-columns:1fr}.review-card{grid-column:auto}}
 @media(max-width:600px){body{font-size:17px}.wrap{width:min(calc(100% - 24px),var(--max))}.hero{padding-top:34px}.hero h1{max-width:none}.hero-actions,.colle-form,.section-head{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}.colle-form button{width:100%}.summary-grid{grid-template-columns:1fr 1fr}.summary-card{padding:14px}.summary-card strong{font-size:1.3rem}.section{padding:38px 0}.skill-foot{align-items:flex-start;flex-direction:column}.review-numbers{grid-template-columns:1fr}.countdown{width:64px;height:64px}}
+
+.review-band{background:linear-gradient(135deg,#243B53,#315a72);color:#fff;border-radius:24px;padding:27px;box-shadow:var(--shadow-lg)}
+.review-band h2{color:#fff}.review-band p{margin-top:8px;opacity:.9;max-width:64ch}.review-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.review-band-stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:13px;padding:14px}.review-band-stat strong{display:block;font-family:var(--display);font-size:1.75rem;color:#fff}.review-band-stat span{font-size:.72rem;opacity:.82}.review-band-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}.review-band-actions .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.38)}
+@media(max-width:760px){.review-band-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <div id="ecl-site-header"></div>
-<script src="site-shell.js?v=20260723-path-1"></script>
+<script src="review-engine.js?v=20260723-review-1"></script>
+<script src="site-shell.js?v=20260723-review-1"></script>
 <main id="main">
 <section class="hero">
   <div class="wrap hero-grid">
@@ -57,6 +62,10 @@
 <section class="section" aria-labelledby="skillsTitle">
   <div class="wrap"><div class="section-head"><div><div class="eyebrow">Evidence, not pressure</div><h2 id="skillsTitle">My progress by area</h2><p>Progress bars only appear where the site has meaningful completion data. Vocabulary is shown as a review queue instead of a misleading percentage.</p></div></div><div class="skill-grid" id="skillGrid"></div></div>
 </section>
+
+<section class="section alt" aria-labelledby="reviewTodayTitle">
+  <div class="wrap"><article class="review-band"><div class="eyebrow" style="color:#F1C66A">Spaced review</div><h2 id="reviewTodayTitle">Review due today</h2><p id="reviewBandCopy">Difficult words, fragile grammar and saved civilisation facts return at useful intervals.</p><div class="review-band-grid"><div class="review-band-stat"><strong id="reviewDue">0</strong><span>due now</span></div><div class="review-band-stat"><strong id="reviewDifficult">0</strong><span>difficult items</span></div><div class="review-band-stat"><strong id="reviewMastered">0</strong><span>recently mastered</span></div><div class="review-band-stat"><strong id="reviewTotal">0</strong><span>active items</span></div></div><div class="review-band-actions"><a class="btn btn-primary" href="review.html?mode=5">Start a 5-minute review</a><a class="btn btn-ghost" href="review.html?mode=colle">Review before my next colle</a><a class="btn btn-ghost" href="review.html">Manage my review queue</a></div></article></div>
+</section>
 <section class="section alt" aria-labelledby="recentTitle">
   <div class="wrap lower-grid">
     <article class="panel"><div class="eyebrow">Continue where you stopped</div><h2 id="recentTitle">Recent activity</h2><p class="panel-copy">Pages visited on this device appear here. Opening a lesson records it automatically.</p><div class="activity-list" id="activityList"></div></article>
@@ -70,6 +79,7 @@
 (function(){
 'use strict';
 const $=s=>document.querySelector(s);
+const review=window.ECLReview;
 const readJSON=(key,fallback)=>{try{const raw=localStorage.getItem(key);return raw===null?fallback:JSON.parse(raw)}catch(_){return fallback}};
 const writeJSON=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch(_){}};
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -124,10 +134,11 @@ $('#colleForm').addEventListener('submit',e=>{e.preventDefault();settings.nextCo
 
 function renderSummary(){
   const totalEvidence=helpReady+grammarDone+methodCount+pronunciationDone;
+  const reviewStats=review?review.stats():{due:vocabMistakes.length+grammarRevise};
   const data=[
     ['Active this week',activeDays,activeDays===1?'1 learning day':'Learning days recorded'],
     ['Guided missions',helpPlan.length?helpDone+'/'+helpPlan.length:'Not started',helpPlan.length?'Current learning cycle':'Take a skills check'],
-    ['Review queue',vocabMistakes.length+grammarRevise,(vocabMistakes.length+grammarRevise)===1?'1 item needs attention':'Vocabulary and grammar'],
+    ['Review due today',reviewStats.due,reviewStats.due===1?'1 item ready now':'Spaced review queue'],
     ['Completed evidence',totalEvidence,'Skills, chapters, modules and lessons']
   ];
   $('#summaryGrid').innerHTML=data.map(([label,value,note])=>'<article class="summary-card"><span>'+esc(label)+'</span><strong>'+esc(value)+'</strong><small>'+esc(note)+'</small></article>').join('');
@@ -136,12 +147,12 @@ function makePriority(title,desc,meta,url,label){return {title,desc,meta,url,lab
 function buildPriorities(){
   const info=nextColleInfo(),items=[];
   const add=x=>{if(x&&!items.some(y=>y.url===x.url&&y.title===x.title))items.push(x)};
+  const reviewStats=review?review.stats():{due:vocabMistakes.length+grammarRevise};
+  if(reviewStats.due)add(makePriority('Review '+reviewStats.due+' item'+(reviewStats.due===1?'':'s')+' due today','Retrieve difficult material before adding more. The queue mixes vocabulary, grammar and saved knowledge at useful intervals.','Spaced review','review.html?mode=5','Start a 5-minute review'));
   if(info&&info.days>=0&&info.days<=3)add(makePriority('Run a complete timed colle','Your next colle is close. Practise structure, timing and delivery together instead of starting a large new chapter.','Colle preparation','colle-trainer.html','Start the trainer'));
   if(nextMission)add(makePriority(nextMission.title,nextMission.short||'Continue the next focused mission selected by your guided plan.','Guided mission','help.html','Continue mission'));
   else if(helpPlan.length&&helpDone===helpPlan.length)add(makePriority('Start a new progress check','You completed the current cycle. Recheck your skills and generate a new set of priorities.','Guided plan','help.html','Start the next cycle'));
   else if(!helpPlan.length)add(makePriority('Build my first learning plan','Take a short skills check so the site can recommend a manageable sequence of missions.','Best starting point','help.html','Start my skills check'));
-  if(vocabMistakes.length)add(makePriority('Review '+vocabMistakes.length+' difficult word'+(vocabMistakes.length===1?'':'s'),'Return to words previously missed before adding more vocabulary.','Spaced review','vocabulary.html#games','Open vocabulary review'));
-  if(grammarRevise)add(makePriority('Revisit '+grammarRevise+' grammar chapter'+(grammarRevise===1?'':'s'),'You marked these chapters as needing revision. Work on one, then use the target form in an oral answer.','Accuracy','grammar.html','Choose a chapter'));
   if(methodCount<methodModules.length)add(makePriority('Strengthen one methodology skill','Continue the methodology course and immediately reuse the technique on a real document.','Colle method','methodology.html','Continue methodology'));
   if(pronunciationDone<13)add(makePriority('Complete one pronunciation lesson','A short video-and-imitation session will improve intelligibility more than passive listening.','Oral delivery','pronunciation.html','Open pronunciation'));
   add(makePriority('Turn today’s work into speech','Choose one current topic and speak for sixty seconds without reading full sentences.','Transfer to colles','colle-trainer.html','Practise aloud'));
@@ -163,8 +174,18 @@ function renderSkills(){
     skillCard('grammar','G','Grammar','Chapters marked studied or ready to use.',grammarDone,86,grammarDone+' of 86 chapters · '+grammarActive+' in progress · '+grammarRevise+' to revise','grammar.html'),
     skillCard('pronunciation','P','Pronunciation','Video lessons completed through listening, imitation and reuse.',pronunciationDone,13,pronunciationDone+' of 13 lessons completed','pronunciation.html')
   ];
-  cards.push('<article class="review-card"><div><div class="eyebrow">Vocabulary is not a percentage</div><h3>My vocabulary review queue</h3><p class="panel-copy">Saved words are material you chose to keep. Mistakes are words that should return before you add more. The useful goal is a manageable review queue, not an inflated “mastery” score.</p><div class="hero-actions"><a class="btn btn-primary" href="vocabulary.html#games">Review vocabulary</a><a class="btn btn-ghost" href="flashcards.html">Open flashcards</a></div></div><div class="review-numbers"><div class="review-number"><strong>'+vocabSaved.length+'</strong><span>saved words and expressions</span></div><div class="review-number"><strong>'+vocabMistakes.length+'</strong><span>previous mistakes to revisit</span></div></div></article>');
+  const rs=review?review.stats():{due:vocabMistakes.length,difficult:vocabMistakes.length};
+  cards.push('<article class="review-card"><div><div class="eyebrow">Review is not a percentage</div><h3>My spaced-review queue</h3><p class="panel-copy">Words, grammar, country knowledge and oral skills return at gradually increasing intervals. The goal is retrieval and reuse, not an inflated mastery score.</p><div class="hero-actions"><a class="btn btn-primary" href="review.html?mode=5">Review what is due</a><a class="btn btn-ghost" href="review.html">Open Review Studio</a></div></div><div class="review-numbers"><div class="review-number"><strong>'+rs.due+'</strong><span>items due now</span></div><div class="review-number"><strong>'+rs.difficult+'</strong><span>difficult items</span></div></div></article>');
   $('#skillGrid').innerHTML=cards.join('');
+}
+
+function renderReviewBand(){
+  const rs=review?review.stats():{due:0,difficult:0,mastered:0,total:0,nextDue:null};
+  $('#reviewDue').textContent=rs.due;$('#reviewDifficult').textContent=rs.difficult;$('#reviewMastered').textContent=rs.mastered;$('#reviewTotal').textContent=rs.total;
+  const copy=$('#reviewBandCopy');
+  if(rs.due)copy.textContent=rs.due+' item'+(rs.due===1?' is':'s are')+' ready now. Difficult material appears first.';
+  else if(rs.nextDue)copy.textContent='Nothing is due right now. Your next scheduled review is '+new Date(rs.nextDue).toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+'.';
+  else copy.textContent='Save a word, mark grammar as “Needs revision” or save a civilisation fact to build your first queue.';
 }
 function friendlyTime(ts){
   const d=new Date(ts),diff=Date.now()-d.getTime();if(diff<60000)return'just now';if(diff<3600000)return Math.floor(diff/60000)+' min ago';if(diff<86400000)return Math.floor(diff/3600000)+' h ago';if(diff<7*86400000)return Math.floor(diff/86400000)+' day'+(Math.floor(diff/86400000)===1?'':'s')+' ago';return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
@@ -176,7 +197,12 @@ function renderActivity(){
   $('#activityList').innerHTML=unique.length?unique.map(x=>'<div class="activity-item"><span class="activity-dot"></span><div class="activity-main"><strong>'+esc(x.title||x.path)+'</strong><span>'+esc(x.category||'Learning activity')+' · '+friendlyTime(x.ts)+'</span></div><a href="'+esc(x.path)+'">Open →</a></div>').join(''):'<div class="empty">No learning activity has been recorded yet. Open a grammar chapter, a methodology module or a pronunciation lesson, then return here.</div>';
 }
 $('#resetDashboard').addEventListener('click',()=>{if(confirm('Remove the saved colle date and recent-activity history from this dashboard? Your course progress will not be deleted.')){localStorage.removeItem('ecl_learning_path_settings_v1');localStorage.removeItem('ecl_learning_activity_v1');location.reload()}});
-renderColle();renderSummary();renderPriorities();renderSkills();renderActivity();
+async function initialise(){
+  renderColle();renderSummary();renderPriorities();renderSkills();renderReviewBand();renderActivity();
+  if(review){await review.syncSources();renderSummary();renderPriorities();renderSkills();renderReviewBand()}
+}
+window.addEventListener('eclreview:change',()=>{renderSummary();renderPriorities();renderSkills();renderReviewBand()});
+initialise();
 })();
 </script>
 <div id="ecl-site-footer"></div>

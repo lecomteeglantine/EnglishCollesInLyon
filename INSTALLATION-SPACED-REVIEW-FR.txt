@@ -1,0 +1,32 @@
+ENGLISH COLLES IN LYON — INSTALLATION DE LA RÉVISION ESPACÉE
+Version : juillet 2026
+
+INSTALLATION RECOMMANDÉE
+1. Décompresser l’archive complète.
+2. Remplacer le contenu du dépôt GitHub par le dossier EnglishCollesInLyon-main.
+3. Valider avec Commit changes.
+4. Dans Actions, lancer une fois « Build global search index » si l’action ne démarre pas automatiquement.
+5. Recharger le site avec Ctrl + Shift + R.
+
+NOUVELLE PAGE
+review.html — Review Studio
+
+FONCTIONNEMENT
+- Les mots sauvegardés et les mots ratés sont importés depuis Vocabulary.
+- Les chapitres marqués « Needs revision » sont importés depuis Grammar.
+- Les étudiants peuvent ajouter des événements des timelines, des faits de civilisation, des leçons de prononciation et des avertissements de jury.
+- Après chaque rappel, ils choisissent Again, Difficult, Almost there ou Mastered.
+- La prochaine date de révision est calculée localement dans le navigateur.
+- My Learning Path affiche le nombre d’éléments à revoir aujourd’hui et propose une session de cinq minutes.
+
+CONFIDENTIALITÉ ET SAUVEGARDE
+Toutes les données restent dans le localStorage du navigateur. progress-backup.html exporte déjà l’ensemble du localStorage, y compris la nouvelle file de révision.
+
+MISE À JOUR AUTOMATIQUE
+build_search_index.py reconstruit désormais :
+- search-index.json
+- search-vocabulary-index.json
+- review-vocabulary-index.json
+- review-grammar-index.json
+
+Le workflow GitHub « Build global search index » enregistre ces quatre fichiers.

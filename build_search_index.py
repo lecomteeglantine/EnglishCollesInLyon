@@ -19,6 +19,8 @@ import unicodedata
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "search-index.json"
 VOCAB_OUTPUT = ROOT / "search-vocabulary-index.json"
+REVIEW_VOCAB_OUTPUT = ROOT / "review-vocabulary-index.json"
+REVIEW_GRAMMAR_OUTPUT = ROOT / "review-grammar-index.json"
 
 CORE_PAGES = {
     "index.html": ("Home", "Start here, choose a learning route and continue your work."),
@@ -32,6 +34,7 @@ CORE_PAGES = {
     "resources.html": ("Resources", "Find reliable news, podcasts, videos, institutions and reference sources."),
     "jury-reports.html": ("Jury Reports", "Turn recurring examiner feedback into practical preparation actions."),
     "learning-path.html": ("My Learning Path", "See your progress, priorities, review queue and most useful next step."),
+    "review.html": ("Review Studio", "Review vocabulary, grammar, civilisation and oral skills at gradually increasing intervals."),
     "progress-backup.html": ("Progress backup", "Export, import and protect the progress saved on this device."),
     "help.html": ("Guided Learning Plan", "Follow a clear progressive plan when you need more structure or confidence."),
     "flashcards.html": ("Vocabulary flashcards", "Review vocabulary actively in English and French."),
@@ -40,7 +43,7 @@ CORE_PAGES = {
 CORE_SECTION_FILES = {
     "index.html", "methodology.html", "civilisation.html", "pronunciation.html",
     "colle-trainer.html", "resources.html", "jury-reports.html", "help.html",
-    "learning-path.html", "progress-backup.html", "timelines.html",
+    "learning-path.html", "review.html", "progress-backup.html", "timelines.html",
 }
 
 GENERIC_HEADINGS = {
@@ -65,6 +68,23 @@ def read_assignment(path: Path):
     return value
 
 
+def read_named_assignment(path: Path, name: str, default=None):
+    text = path.read_text(encoding="utf-8")
+    marker = f"window.{name}"
+    start = text.find(marker)
+    if start < 0:
+        return default
+    pos = text.find("=", start)
+    if pos < 0:
+        return default
+    decoder = JSONDecoder()
+    try:
+        value, _ = decoder.raw_decode(text[pos + 1:].lstrip())
+        return value
+    except (ValueError, json.JSONDecodeError):
+        return default
+
+
 def clean(value, limit: int = 320) -> str:
     text = BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)
     text = re.sub(r"\s+", " ", text).strip()
@@ -84,6 +104,8 @@ def normalise(value: str) -> str:
 entries: list[dict] = []
 vocab_terms: list[list] = []
 vocab_chapters: list[dict] = []
+review_vocab_terms: list[list] = []
+review_grammar_chapters: list[dict] = []
 seen: set[tuple[str, str, str]] = set()
 
 
@@ -141,7 +163,10 @@ for filename in CORE_SECTION_FILES:
 
 
 # Grammar chapters.
-grammar = read_assignment(ROOT / "grammar-data.js")
+grammar_path = ROOT / "grammar-data.js"
+grammar = read_assignment(grammar_path)
+grammar_questions = read_named_assignment(grammar_path, "GRAMMAR_QUESTIONS", []) or []
+questions_by_chapter = {int(q.get("c")): q for q in grammar_questions if q.get("c") is not None}
 for chapter in grammar:
     number = chapter.get("n")
     title = chapter.get("title", "")
@@ -151,6 +176,19 @@ for chapter in grammar:
     add(title=title, category="Grammar", url=file, target=title,
         description=desc, context=f"Grammar · Chapter {number}",
         keywords=[title, desc, track, "grammar rule exercise colle"], priority=84)
+    q = questions_by_chapter.get(int(number)) if number is not None else None
+    review_question = None
+    if q:
+        review_question = {
+            "q": clean(q.get("q", ""), 220),
+            "options": [clean(option, 180) for option in q.get("o", [])],
+            "answer": q.get("a"),
+            "explain": clean(q.get("e", ""), 260),
+        }
+    review_grammar_chapters.append({
+        "n": number, "title": title, "file": file, "desc": desc,
+        "track": track, "question": review_question,
+    })
 
 
 # Vocabulary chapters and all terms, including French equivalents for retrieval.
@@ -172,8 +210,13 @@ for chapter in vocab.get("chapters", []):
             term = clean(item.get("term", ""), 100)
             french = clean(item.get("fr", ""), 120)
             if term:
-                # Compact dedicated index: [English term, French equivalent, chapter index, section].
+                # Compact dedicated search index: [English term, French equivalent, chapter index, section].
                 vocab_terms.append([term, french, chapter_index, clean(section_title, 90)])
+                key = f"{term}|||{chapter.get('id', f'p{part}c{chapter_no}')}"
+                review_vocab_terms.append([
+                    key, term, french, clean(item.get("def", ""), 360),
+                    clean(item.get("ex", ""), 360), chapter_file, chapter_title,
+                ])
 
 
 # Methodology modules, lesson sections and tools.
@@ -289,5 +332,13 @@ OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
 vocab_payload = {"version": 1, "generatedAt": generated, "count": len(vocab_terms),
                  "chapters": vocab_chapters, "entries": vocab_terms}
 VOCAB_OUTPUT.write_text(json.dumps(vocab_payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+review_vocab_payload = {"version": 1, "generatedAt": generated, "count": len(review_vocab_terms),
+                        "entries": review_vocab_terms}
+REVIEW_VOCAB_OUTPUT.write_text(json.dumps(review_vocab_payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+review_grammar_payload = {"version": 1, "generatedAt": generated, "count": len(review_grammar_chapters),
+                          "chapters": review_grammar_chapters}
+REVIEW_GRAMMAR_OUTPUT.write_text(json.dumps(review_grammar_payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print(f"Core search index: {len(entries):,} entries, {OUTPUT.stat().st_size / 1024:.1f} KiB")
 print(f"Vocabulary index: {len(vocab_terms):,} entries, {VOCAB_OUTPUT.stat().st_size / 1024:.1f} KiB")
+print(f"Review vocabulary index: {len(review_vocab_terms):,} entries, {REVIEW_VOCAB_OUTPUT.stat().st_size / 1024:.1f} KiB")
+print(f"Review grammar index: {len(review_grammar_chapters):,} chapters, {REVIEW_GRAMMAR_OUTPUT.stat().st_size / 1024:.1f} KiB")

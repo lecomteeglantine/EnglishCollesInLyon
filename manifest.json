@@ -38,6 +38,19 @@
       ]
     },
     {
+      "name": "Review Studio",
+      "short_name": "Review",
+      "description": "Review due vocabulary, grammar and civilisation items.",
+      "url": "review.html",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
       "name": "Colle Trainer",
       "short_name": "Colle Trainer",
       "description": "Practise a complete English colle.",

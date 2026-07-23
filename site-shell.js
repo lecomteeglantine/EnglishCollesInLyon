@@ -3,7 +3,7 @@
   if(window.ECLShell) return;
   document.body.classList.add('ecl-shell-installed');
 
-  const SHELL_VERSION='20260723-path-1';
+  const SHELL_VERSION='20260723-review-1';
   const STORE={
     get(key,fallback){try{const value=localStorage.getItem(key);return value===null?fallback:value}catch(_){return fallback}},
     set(key,value){try{localStorage.setItem(key,value)}catch(_){} }
@@ -45,7 +45,7 @@
   }
   function navMarkup(){return routes.map(([href,label])=>`<a href="${href}" class="${href===activeHref?'active':''}" ${href===activeHref?'aria-current="page"':''}>${escapeHtml(label)}</a>`).join('')}
   function headerMarkup(){
-    const progressActive=path==='learning-path.html';
+    const progressActive=path==='learning-path.html'||path==='review.html';
     return `<a class="ecl-shell-skip" href="#main">Skip to content</a>
       <div class="ecl-shell-header ${staticShell?'ecl-shell-static':''}" role="banner" lang="en">
         <div class="ecl-shell-wrap ecl-shell-main">
@@ -59,7 +59,7 @@
               ${['UK','US','AU','CA'].map(a=>`<button type="button" data-ecl-shell-accent="${a}" aria-pressed="false">${a}</button>`).join('')}
             </div>
             <button class="ecl-shell-tool ecl-shell-search" id="eclShellSearchOpen" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Search the whole site">${icons.search}<span class="ecl-shell-tool-label">Search</span></button>
-            <a class="ecl-shell-tool ecl-shell-progress" href="learning-path.html" ${progressActive?'aria-current="page"':''} aria-label="Open My Learning Path">${icons.progress}<span class="ecl-shell-tool-label">My Learning Path</span></a>
+            <a class="ecl-shell-tool ecl-shell-progress" href="learning-path.html" ${progressActive?'aria-current="page"':''} aria-label="Open My Learning Path">${icons.progress}<span class="ecl-shell-tool-label">My Learning Path</span><span class="ecl-shell-review-badge" id="eclReviewBadge" hidden></span></a>
             <button class="ecl-shell-tool ecl-shell-access" id="eclShellA11yOpen" type="button" aria-haspopup="dialog" aria-expanded="false">${icons.access}<span class="ecl-shell-tool-label">Accessibility</span></button>
             <button class="ecl-shell-menu-button" id="eclShellMenuButton" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
           </div>
@@ -104,7 +104,7 @@
   function footerMarkup(){return `<div class="ecl-shell-footer" role="contentinfo" lang="en">
       <div class="ecl-shell-footer-grid">
         <div><div class="ecl-shell-footer-title">English Colles in Lyon</div><div class="ecl-shell-footer-author">Designed and created by Eglantine Lecomte</div><p class="ecl-shell-footer-copy">Build knowledge independently, practise it actively, then reuse it in class and in real colles.</p></div>
-        <nav class="ecl-shell-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><button type="button" id="eclFooterSearch">Search</button><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="learning-path.html">My Learning Path</a><a href="#main">Back to top ↑</a></nav>
+        <nav class="ecl-shell-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><button type="button" id="eclFooterSearch">Search</button><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="learning-path.html">My Learning Path</a><a href="review.html">Review Studio</a><a href="#main">Back to top ↑</a></nav>
       </div><div class="ecl-shell-footer-bottom">CPGE English · Independent practice · Classroom transfer · Colles</div>
     </div>`}
   function syncA11yControls(){
@@ -190,6 +190,7 @@
   }
   function quickLinks(){
     return `<div class="ecl-search-empty"><p>Popular starting points</p><div class="ecl-search-quick"><a href="learning-path.html"><strong>Open My Learning Path</strong><span>Progress, priorities and next steps</span></a>
+      <a href="review.html"><strong>Review what is due</strong><span>Spaced vocabulary, grammar and civilisation review</span></a>
       <a href="colle-trainer.html"><strong>Prepare my next colle</strong><span>Document, timing and oral practice</span></a>
       <a href="methodology.html"><strong>Improve my method</strong><span>Summary, key question, plan and examples</span></a>
       <a href="help.html"><strong>Follow a guided plan</strong><span>A clear route when English feels difficult</span></a>
@@ -284,6 +285,11 @@
     });
   }
 
+  function syncReviewBadge(){
+    const badge=document.getElementById('eclReviewBadge');if(!badge||!window.ECLReview)return;
+    const count=window.ECLReview.stats().due;badge.textContent=count>99?'99+':String(count);badge.hidden=count<1;badge.setAttribute('aria-label',count+' review item'+(count===1?'':'s')+' due');
+  }
+
   function bind(){
     const menu=document.getElementById('eclShellMenuButton'),nav=document.getElementById('eclShellNavRow');
     if(menu&&nav) menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
@@ -301,7 +307,7 @@
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel&&panel.classList.contains('open'))close()});
     document.querySelectorAll('[data-ecl-shell-size]').forEach(button=>button.addEventListener('click',()=>{STORE.set('eclyon_shell_size',button.dataset.eclShellSize);applyPrefs();syncA11yControls()}));
     document.querySelectorAll('[data-ecl-shell-pref]').forEach(button=>button.addEventListener('click',()=>{const key='eclyon_shell_'+button.dataset.eclShellPref;STORE.set(key,STORE.get(key,'0')==='1'?'0':'1');applyPrefs();syncA11yControls()}));
-    bindSearch();
+    bindSearch();syncReviewBadge();window.addEventListener('eclreview:change',syncReviewBadge);
   }
   function renderHeader(){
     const target=document.getElementById('ecl-site-header');if(!target||target.dataset.rendered)return;
@@ -359,7 +365,7 @@
     const excluded=new Set(['learning-path.html','progress-backup.html']);
     if(excluded.has(path))return;
     const category=path.startsWith('cpge_grammar_')?'Grammar':path.startsWith('cpge_vocab_')||path==='flashcards.html'?'Vocabulary':path.startsWith('colle-atlas-')?'Civilisation':({
-      'methodology.html':'Methodology','civilisation.html':'Civilisation','vocabulary.html':'Vocabulary','grammar.html':'Grammar','pronunciation.html':'Pronunciation','timelines.html':'Timelines','colle-trainer.html':'Colle practice','resources.html':'Resources','jury-reports.html':'Jury Reports','help.html':'Guided plan','index.html':'Home'
+      'methodology.html':'Methodology','civilisation.html':'Civilisation','vocabulary.html':'Vocabulary','grammar.html':'Grammar','pronunciation.html':'Pronunciation','timelines.html':'Timelines','colle-trainer.html':'Colle practice','resources.html':'Resources','jury-reports.html':'Jury Reports','review.html':'Spaced review','help.html':'Guided plan','index.html':'Home'
     }[path]||'Learning activity');
     const title=(document.querySelector('main h1')?.textContent||document.title||path).trim().replace(/\s+/g,' ');
     let items=[];try{items=JSON.parse(STORE.get('ecl_learning_activity_v1','[]'))||[]}catch(_){items=[]}

@@ -1,0 +1,16 @@
+SPACED REVIEW VALIDATION — 23 July 2026
+
+PASS — 200 public HTML pages contain one current review-engine script and one current site-shell script.
+PASS — apply_site_shell.py is idempotent: a second run changed 0 pages.
+PASS — 11,122 vocabulary entries generated with exact keys matching Vocabulary localStorage.
+PASS — 86 grammar chapters generated; available diagnostic questions are included with choices and explanations.
+PASS — core import, scheduling, grading, persistence, manual addition and removal tested in Node with mocked browser storage.
+PASS — review.html, learning-path.html, pronunciation.html, timelines.html, jury-reports.html and the UK atlas have valid inline JavaScript syntax.
+PASS — review-engine.js, site-shell.js and service-worker.js pass node --check.
+PASS — apply_site_shell.py and build_search_index.py compile successfully.
+PASS — JSON indexes and manifest are valid.
+PASS — GitHub workflow YAML files parse successfully.
+PASS — no duplicate HTML IDs found on the 200 public pages.
+PASS — all indexed Grammar and Vocabulary target files exist.
+
+LIMITATION — automated Chromium navigation to a local test server was blocked by the execution environment. Functional engine logic and page structure were therefore validated through static checks and isolated JavaScript tests rather than a full end-to-end browser run.

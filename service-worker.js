@@ -1,12 +1,12 @@
 /* English Colles in Lyon — network-first updates with exact offline fallbacks */
-const VERSION = 'eclyon-v10-learning-path-20260723';
+const VERSION = 'eclyon-v11-spaced-review-20260723';
 const CORE = [
   './', 'index.html', 'methodology.html', 'civilisation.html', 'vocabulary.html',
   'grammar.html', 'pronunciation.html', 'timelines.html', 'colle-trainer.html',
-  'resources.html', 'jury-reports.html', 'flashcards.html', 'learning-path.html', 'progress-backup.html', 'help.html',
+  'resources.html', 'jury-reports.html', 'flashcards.html', 'learning-path.html', 'review.html', 'progress-backup.html', 'help.html',
   'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-180.png',
-  'site-core.js', 'site-shell.js', 'site-shell.css',
-  'search-index.json', 'search-vocabulary-index.json',
+  'site-core.js', 'site-shell.js', 'site-shell.css', 'review-engine.js',
+  'search-index.json', 'search-vocabulary-index.json', 'review-grammar-index.json',
   'daily-news.json', 'resources-feed.json', 'resources-link-status.json',
   'jury-reports-data.json', 'jury-reports-status.json', 'jury-reports-detected.json'
 ];
