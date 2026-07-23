@@ -9,7 +9,7 @@ Option recommandée
 Cette mise à jour :
 - traduit intégralement Jury Reports et ses données pédagogiques ;
 - traduit l’interface des Flashcards ;
-- corrige les dernières mentions françaises du Colle Trainer ;
+- corrige les dernières mentions françaises du Mission Builder ;
 - empêche le robot des rapports d’enregistrer les liens de navigation ;
 - actualise le cache hors ligne.
 
