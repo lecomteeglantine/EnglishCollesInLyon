@@ -1,0 +1,32 @@
+GLOBAL SEARCH VALIDATION — 22 July 2026
+
+Coverage
+- 198 public HTML pages use the shared search-enabled shell.
+- 725 structured results are indexed across pages, sections, grammar, methodology,
+  timelines, civilisation, pronunciation, resources and jury reports.
+- 11,122 individual vocabulary entries are indexed separately for faster loading.
+- French vocabulary equivalents are searchable.
+
+Behaviour checked
+- Exact searches: Brexit, democracy, present perfect, Magna Carta.
+- French query: démocratie -> democracy.
+- Simple typo: Brext -> The Brexit referendum / Brexit.
+- Mixed result categories and duplicate vocabulary-title suppression.
+- Internal result URLs all resolve to existing files.
+- Direct-result links carry an eclFind target for scrolling and highlighting.
+- Keyboard hooks: Ctrl/Cmd + K, /, arrows, Enter and Escape.
+- Search remains visible in the mobile header.
+
+Technical validation
+- site-shell.js: valid JavaScript syntax.
+- service-worker.js: valid JavaScript syntax.
+- build_search_index.py and apply_site_shell.py: valid Python syntax.
+- 10 GitHub Actions workflow files parse as YAML.
+- search-index.json and search-vocabulary-index.json parse successfully.
+- Service worker caches both indexes and ignores cache-busting query strings in
+  its offline fallback.
+- Every public page references site-shell.js/css version 20260722-search-1.
+
+Deployment note
+A final visual check should be made on the published GitHub Pages site after the
+new files have been committed and the service worker has refreshed.
