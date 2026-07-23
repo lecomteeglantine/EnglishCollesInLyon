@@ -34,6 +34,9 @@ jobs:
       - name: Reconstruire les fichiers générés
         run: python3 build_all.py
 
+      - name: Réappliquer le header et le footer communs
+        run: python3 apply_site_shell.py
+
       - name: Publier les fichiers reconstruits
         run: |
           git config user.name "site-builder"

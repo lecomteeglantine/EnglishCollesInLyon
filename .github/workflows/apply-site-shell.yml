@@ -1,0 +1,40 @@
+name: Apply shared site navigation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apply_site_shell.py"
+      - "site-shell.js"
+      - "site-shell.css"
+      - "review-engine.js"
+
+permissions:
+  contents: write
+
+jobs:
+  apply-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply shared header and footer
+        run: python3 apply_site_shell.py
+
+      - name: Commit updated pages
+        run: |
+          git config user.name "site-shell"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "The shared site shell is already up to date."
+          else
+            git commit -m "Apply shared navigation across the site"
+            git push
+          fi

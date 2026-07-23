@@ -1,0 +1,65 @@
+name: Build global search index
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'build_search_index.py'
+      - 'grammar-data.js'
+      - 'vocab-data.js'
+      - 'methodology-data.js'
+      - 'timeline-data.js'
+      - 'jury-reports-data.json'
+      - 'resources-data.json'
+      - 'index.html'
+      - 'methodology.html'
+      - 'civilisation.html'
+      - 'pronunciation.html'
+      - 'timelines.html'
+      - 'colle-trainer.html'
+      - 'resources.html'
+      - 'jury-reports.html'
+      - 'help.html'
+      - 'learning-path.html'
+      - 'review.html'
+      - 'progress-backup.html'
+      - 'flashcards.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: global-search-index
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4
+
+      - name: Rebuild the search indexes
+        run: python build_search_index.py
+
+      - name: Commit changed indexes
+        shell: bash
+        run: |
+          if git diff --quiet -- search-index.json search-vocabulary-index.json review-vocabulary-index.json review-grammar-index.json; then
+            echo "The search indexes are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add search-index.json search-vocabulary-index.json review-vocabulary-index.json review-grammar-index.json
+          git commit -m "Update global search index"
+          git push

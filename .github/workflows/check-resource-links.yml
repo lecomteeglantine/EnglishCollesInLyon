@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "37 6 * * 1"
+concurrency:
+  group: check-resource-links
+  cancel-in-progress: false
+
 permissions:
   contents: write
 jobs:
