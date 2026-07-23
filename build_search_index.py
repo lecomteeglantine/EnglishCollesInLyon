@@ -30,7 +30,7 @@ CORE_PAGES = {
     "grammar.html": ("Grammar", "Choose a structured grammar path and practise accurate English for oral examinations."),
     "pronunciation.html": ("Pronunciation", "Improve sounds, stress, rhythm, intonation and oral delivery through guided practice."),
     "timelines.html": ("Timelines", "Search verified historical milestones across eight English-speaking countries."),
-    "colle-trainer.html": ("Colle Trainer", "Prepare a complete oral task with documents, timing, prompts and feedback."),
+    "colle-trainer.html": ("Colle Mission Builder", "Build a complete oral mission from one document: context, key question, language, timed speaking and follow-up questions."),
     "resources.html": ("Resources", "Find reliable news, podcasts, videos, institutions and reference sources."),
     "jury-reports.html": ("Jury Reports", "Turn recurring examiner feedback into practical preparation actions."),
     "learning-path.html": ("My Learning Path", "See your progress, priorities, review queue and most useful next step."),

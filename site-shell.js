@@ -15,7 +15,7 @@
   const routes=[
     ['index.html','Home'],['methodology.html','Methodology'],['civilisation.html','Civilisation'],
     ['vocabulary.html','Vocabulary'],['grammar.html','Grammar'],['pronunciation.html','Pronunciation'],
-    ['timelines.html','Timelines'],['colle-trainer.html','Colle Trainer'],['resources.html','Resources'],
+    ['timelines.html','Timelines'],['colle-trainer.html','Mission Builder'],['resources.html','Resources'],
     ['jury-reports.html','Jury Reports']
   ];
   const activeHref=path.startsWith('cpge_grammar_')?'grammar.html':
@@ -104,7 +104,7 @@
   function footerMarkup(){return `<div class="ecl-shell-footer" role="contentinfo" lang="en">
       <div class="ecl-shell-footer-grid">
         <div><div class="ecl-shell-footer-title">English Colles in Lyon</div><div class="ecl-shell-footer-author">Designed and created by Eglantine Lecomte</div><p class="ecl-shell-footer-copy">Build knowledge independently, practise it actively, then reuse it in class and in real colles.</p></div>
-        <nav class="ecl-shell-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><button type="button" id="eclFooterSearch">Search</button><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="learning-path.html">My Learning Path</a><a href="review.html">Review Studio</a><a href="#main">Back to top ↑</a></nav>
+        <nav class="ecl-shell-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><button type="button" id="eclFooterSearch">Search</button><a href="colle-trainer.html">Mission Builder</a><a href="resources.html">Resources</a><a href="learning-path.html">My Learning Path</a><a href="review.html">Review Studio</a><a href="#main">Back to top ↑</a></nav>
       </div><div class="ecl-shell-footer-bottom">CPGE English · Independent practice · Classroom transfer · Colles</div>
     </div>`}
   function syncA11yControls(){
@@ -191,7 +191,7 @@
   function quickLinks(){
     return `<div class="ecl-search-empty"><p>Popular starting points</p><div class="ecl-search-quick"><a href="learning-path.html"><strong>Open My Learning Path</strong><span>Progress, priorities and next steps</span></a>
       <a href="review.html"><strong>Review what is due</strong><span>Spaced vocabulary, grammar and civilisation review</span></a>
-      <a href="colle-trainer.html"><strong>Prepare my next colle</strong><span>Document, timing and oral practice</span></a>
+      <a href="colle-trainer.html"><strong>Build a Colle Mission</strong><span>Document, method, language and timed speaking</span></a>
       <a href="methodology.html"><strong>Improve my method</strong><span>Summary, key question, plan and examples</span></a>
       <a href="help.html"><strong>Follow a guided plan</strong><span>A clear route when English feels difficult</span></a>
       <a href="pronunciation.html"><strong>Work on pronunciation</strong><span>Sounds, stress, rhythm and intonation</span></a>
@@ -365,7 +365,7 @@
     const excluded=new Set(['learning-path.html','progress-backup.html']);
     if(excluded.has(path))return;
     const category=path.startsWith('cpge_grammar_')?'Grammar':path.startsWith('cpge_vocab_')||path==='flashcards.html'?'Vocabulary':path.startsWith('colle-atlas-')?'Civilisation':({
-      'methodology.html':'Methodology','civilisation.html':'Civilisation','vocabulary.html':'Vocabulary','grammar.html':'Grammar','pronunciation.html':'Pronunciation','timelines.html':'Timelines','colle-trainer.html':'Colle practice','resources.html':'Resources','jury-reports.html':'Jury Reports','review.html':'Spaced review','help.html':'Guided plan','index.html':'Home'
+      'methodology.html':'Methodology','civilisation.html':'Civilisation','vocabulary.html':'Vocabulary','grammar.html':'Grammar','pronunciation.html':'Pronunciation','timelines.html':'Timelines','colle-trainer.html':'Colle Mission','resources.html':'Resources','jury-reports.html':'Jury Reports','review.html':'Spaced review','help.html':'Guided plan','index.html':'Home'
     }[path]||'Learning activity');
     const title=(document.querySelector('main h1')?.textContent||document.title||path).trim().replace(/\s+/g,' ');
     let items=[];try{items=JSON.parse(STORE.get('ecl_learning_activity_v1','[]'))||[]}catch(_){items=[]}
