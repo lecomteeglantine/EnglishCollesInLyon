@@ -51,9 +51,9 @@
       ]
     },
     {
-      "name": "Colle Trainer",
-      "short_name": "Colle Trainer",
-      "description": "Practise a complete English colle.",
+      "name": "Colle Mission Builder",
+      "short_name": "Mission Builder",
+      "description": "Build and practise a complete English colle mission.",
       "url": "colle-trainer.html",
       "icons": [
         {
