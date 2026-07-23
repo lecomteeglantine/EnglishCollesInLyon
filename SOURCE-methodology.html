@@ -580,7 +580,7 @@ footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-t
       <span class="ecl-author-byline">by Eglantine Lecomte</span>
       <span class="sub">CPGE English · Colles · Vocabulary · Civilisation</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html" class="active" aria-current="page">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="methodology.html" class="active" aria-current="page">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Mission Builder</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
     <div class="top-tools">
       <div class="accent" id="accent" role="group" aria-label="Choisir un accent">
         <button data-acc="UK" class="on">UK</button>
@@ -781,7 +781,7 @@ document.querySelectorAll('.opt-toggle').forEach(btn=>{
     if(fr.doc==="all") html += '<p class="ex-intro">The same method, applied to our fil-rouge documents:</p>';
     else if(M.docs[fr.doc]) html += docCard(fr.doc);
     html += fr.steps.map(function(s){return '<div class="fr-step"><h5>'+esc(s.h)+'</h5><p>'+esc(s.p)+'</p></div>';}).join("");
-    if(fr.link) html += '<a class="cta-link" href="colle-trainer.html">Open the Colle Trainer \u2192</a>';
+    if(fr.link) html += '<a class="cta-link" href="colle-trainer.html">Open the Mission Builder \u2192</a>';
     if(fr.sim) html += '<button class="cta-link" data-opensim="1">Launch the simulator \u2193</button>';
     html += '</div>';
     return html;

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site-shell.css?v=20260723-review-1">
+<link rel="stylesheet" href="site-shell.css?v=20260723-mission-1">
 <style>
 :root{--bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--teal:#3C8390;--rose:#B06A78;--card:#fff;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 12px 34px rgba(36,59,83,.08);--shadow-lg:0 3px 8px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.14);--radius:18px;--max:1120px;--font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--display:"Fraunces",Georgia,serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:18px;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;color:var(--navy)}p{margin:0}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}.eyebrow{color:var(--terra);font-size:.71rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 17px;border:1px solid transparent;border-radius:12px;font-weight:700;font-size:.88rem;transition:.16s}.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.btn-primary{background:var(--terra);color:#fff}.btn-navy{background:var(--navy);color:#fff}.btn-ghost{background:#fff;border-color:var(--line);color:var(--navy)}.btn-sage{background:var(--sage);color:#fff}
@@ -20,8 +20,9 @@
 .lower-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:22px;box-shadow:var(--shadow)}.panel h2{font-size:1.35rem}.panel-copy{color:var(--muted);font-size:.87rem;margin-top:7px}.activity-list{display:grid;gap:9px;margin-top:18px}.activity-item{display:flex;align-items:center;gap:12px;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}.activity-dot{width:10px;height:10px;border-radius:50%;background:var(--sage);flex:none}.activity-main{min-width:0;flex:1}.activity-main strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.86rem}.activity-main span{display:block;color:var(--muted);font-size:.72rem}.activity-item a{color:var(--terra);font-size:.76rem;font-weight:700}.empty{margin-top:17px;padding:16px;border:1px dashed var(--line);border-radius:13px;background:var(--bg2);color:var(--muted);font-size:.84rem}.privacy{display:flex;align-items:flex-start;gap:12px;margin-top:17px;padding:14px;border-left:4px solid var(--sage);border-radius:11px;background:#eef3f1;color:var(--muted);font-size:.8rem}.privacy strong{color:var(--navy)}.tools{display:grid;gap:10px;margin-top:18px}.tool-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);transition:.15s}.tool-link:hover{border-color:var(--terra);background:#fff}.tool-link strong{font-size:.87rem;color:var(--navy)}.tool-link span{display:block;color:var(--muted);font-size:.74rem;margin-top:2px}.tool-link b{color:var(--terra)}
 .reset-row{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:17px;padding-top:15px;border-top:1px dashed var(--line)}.reset-row span{color:var(--muted);font-size:.76rem}.text-button{border:0;background:transparent;color:var(--terra);font-weight:700;font-size:.76rem;padding:8px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.mission-band{padding:0 0 38px}.mission-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-left:6px solid var(--sage);border-radius:19px;padding:21px;box-shadow:var(--shadow)}.mission-card[hidden]{display:none}.mission-card h2{font-size:1.3rem;margin-top:4px}.mission-card p{color:var(--muted);font-size:.84rem;margin-top:7px}.mission-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.mission-tags span{padding:5px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:.68rem;font-weight:700}.mission-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.mission-progress{height:8px;border-radius:99px;background:#e7ded2;overflow:hidden;margin-top:13px}.mission-progress span{display:block;height:100%;border-radius:inherit;background:var(--sage)}
 @media(max-width:920px){.hero-grid,.review-card,.lower-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:repeat(2,1fr)}.priority-grid{grid-template-columns:1fr}.priority-card{min-height:0}.skill-grid{grid-template-columns:1fr}.review-card{grid-column:auto}}
-@media(max-width:600px){body{font-size:17px}.wrap{width:min(calc(100% - 24px),var(--max))}.hero{padding-top:34px}.hero h1{max-width:none}.hero-actions,.colle-form,.section-head{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}.colle-form button{width:100%}.summary-grid{grid-template-columns:1fr 1fr}.summary-card{padding:14px}.summary-card strong{font-size:1.3rem}.section{padding:38px 0}.skill-foot{align-items:flex-start;flex-direction:column}.review-numbers{grid-template-columns:1fr}.countdown{width:64px;height:64px}}
+@media(max-width:600px){.mission-card{grid-template-columns:1fr}.mission-actions{justify-content:flex-start}.mission-actions .btn{width:100%}body{font-size:17px}.wrap{width:min(calc(100% - 24px),var(--max))}.hero{padding-top:34px}.hero h1{max-width:none}.hero-actions,.colle-form,.section-head{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}.colle-form button{width:100%}.summary-grid{grid-template-columns:1fr 1fr}.summary-card{padding:14px}.summary-card strong{font-size:1.3rem}.section{padding:38px 0}.skill-foot{align-items:flex-start;flex-direction:column}.review-numbers{grid-template-columns:1fr}.countdown{width:64px;height:64px}}
 
 .review-band{background:linear-gradient(135deg,#243B53,#315a72);color:#fff;border-radius:24px;padding:27px;box-shadow:var(--shadow-lg)}
 .review-band h2{color:#fff}.review-band p{margin-top:8px;opacity:.9;max-width:64ch}.review-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.review-band-stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:13px;padding:14px}.review-band-stat strong{display:block;font-family:var(--display);font-size:1.75rem;color:#fff}.review-band-stat span{font-size:.72rem;opacity:.82}.review-band-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}.review-band-actions .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.38)}
@@ -31,7 +32,7 @@
 <body>
 <div id="ecl-site-header"></div>
 <script src="review-engine.js?v=20260723-review-1"></script>
-<script src="site-shell.js?v=20260723-review-1"></script>
+<script src="site-shell.js?v=20260723-mission-1"></script>
 <main id="main">
 <section class="hero">
   <div class="wrap hero-grid">
@@ -42,7 +43,7 @@
       <p class="hero-note">This page reads the progress saved in this browser. It does not grade you and nothing is sent to a server.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" id="mainNextAction" href="help.html">Start my next step →</a>
-        <a class="btn btn-ghost" href="colle-trainer.html">Practise a complete colle</a>
+        <a class="btn btn-ghost" href="colle-trainer.html">Build a complete colle mission</a>
       </div>
     </div>
     <aside class="colle-card" aria-labelledby="colleTitle">
@@ -56,6 +57,7 @@
   </div>
 </section>
 <section class="summary"><div class="wrap summary-grid" id="summaryGrid"></div></section>
+<section class="mission-band" aria-labelledby="activeMissionTitle"><div class="wrap"><article class="mission-card" id="missionCard" hidden><div><div class="eyebrow" id="missionEyebrow">Active colle mission</div><h2 id="activeMissionTitle">Continue my Colle Mission</h2><p id="missionCopy"></p><div class="mission-tags" id="missionTags"></div><div class="mission-progress"><span id="missionProgress"></span></div></div><div class="mission-actions"><a class="btn btn-sage" id="missionPrimary" href="colle-trainer.html?resume=1">Resume mission</a><a class="btn btn-ghost" href="colle-trainer.html">Build a new mission</a></div></article></div></section>
 <section class="section alt" aria-labelledby="nextTitle">
   <div class="wrap"><div class="section-head"><div><div class="eyebrow">Do less, but do the right thing</div><h2 id="nextTitle">What should I do next?</h2><p>The recommendations below are based on the work stored on this device. They change as you complete lessons and missions.</p></div><a class="btn btn-ghost" href="help.html">Open my guided plan</a></div><div class="priority-grid" id="priorityGrid"></div></div>
 </section>
@@ -96,6 +98,9 @@ const vocabSaved=readJSON('ecl_vocab_saved',[]);
 const vocabMistakes=readJSON('ecl_vocab_mistakes',[]);
 const activity=readJSON('ecl_learning_activity_v1',[]);
 const lastRoute=readJSON('eclyon_last_route',null);
+const activeColleMission=readJSON('ecl_colle_mission_current_v2',null);
+const lastColleMission=readJSON('ecl_colle_mission_last_v2',null);
+const colleMissionHistory=readJSON('ecl_colle_mission_history_v2',[]);
 const helpSkills=window.HELP_DATA?.skills||[];
 const helpById=Object.fromEntries(helpSkills.map(s=>[s.id,s]));
 const methodModules=window.METHO?.modules||[];
@@ -127,7 +132,7 @@ function renderColle(){
   const dateText=info.date.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
   if(info.days<0)status.innerHTML='<strong>'+dateText+'</strong> has passed. Save your next date when you know it.';
   else if(info.days===0)status.innerHTML='<strong>Your colle is today.</strong> Prioritise a short oral run-through, not new content.';
-  else if(info.days<=3)status.innerHTML='<strong>'+info.days+' day'+(info.days===1?'':'s')+' left.</strong> Practise a complete timed performance today.';
+  else if(info.days<=3)status.innerHTML='<strong>'+info.days+' day'+(info.days===1?'':'s')+' left.</strong> Build and deliver a complete timed mission today.';
   else status.innerHTML='<strong>'+dateText+'.</strong> You still have time to improve one focused skill before a full simulation.';
 }
 $('#colleForm').addEventListener('submit',e=>{e.preventDefault();settings.nextColleDate=$('#colleDate').value||'';writeJSON('ecl_learning_path_settings_v1',settings);renderColle();renderPriorities()});
@@ -139,7 +144,7 @@ function renderSummary(){
     ['Active this week',activeDays,activeDays===1?'1 learning day':'Learning days recorded'],
     ['Guided missions',helpPlan.length?helpDone+'/'+helpPlan.length:'Not started',helpPlan.length?'Current learning cycle':'Take a skills check'],
     ['Review due today',reviewStats.due,reviewStats.due===1?'1 item ready now':'Spaced review queue'],
-    ['Completed evidence',totalEvidence,'Skills, chapters, modules and lessons']
+    ['Completed missions',colleMissionHistory.length,colleMissionHistory.length===1?'1 complete oral mission':'Saved Colle Mission history']
   ];
   $('#summaryGrid').innerHTML=data.map(([label,value,note])=>'<article class="summary-card"><span>'+esc(label)+'</span><strong>'+esc(value)+'</strong><small>'+esc(note)+'</small></article>').join('');
 }
@@ -148,14 +153,15 @@ function buildPriorities(){
   const info=nextColleInfo(),items=[];
   const add=x=>{if(x&&!items.some(y=>y.url===x.url&&y.title===x.title))items.push(x)};
   const reviewStats=review?review.stats():{due:vocabMistakes.length+grammarRevise};
+  if(activeColleMission&&!activeColleMission.completedAt)add(makePriority('Continue my Colle Mission',activeColleMission.document?.title||'Resume the complete oral mission saved on this device.','Colle Mission · stage '+((activeColleMission.stage||0)+1)+' of 5','colle-trainer.html?resume=1','Resume mission'));
   if(reviewStats.due)add(makePriority('Review '+reviewStats.due+' item'+(reviewStats.due===1?'':'s')+' due today','Retrieve difficult material before adding more. The queue mixes vocabulary, grammar and saved knowledge at useful intervals.','Spaced review','review.html?mode=5','Start a 5-minute review'));
-  if(info&&info.days>=0&&info.days<=3)add(makePriority('Run a complete timed colle','Your next colle is close. Practise structure, timing and delivery together instead of starting a large new chapter.','Colle preparation','colle-trainer.html','Start the trainer'));
+  if(info&&info.days>=0&&info.days<=3)add(makePriority('Build a complete timed mission','Your next colle is close. Prepare one document, connect method and language, then practise delivery and follow-up questions.','Colle Mission','colle-trainer.html','Build the mission'));
   if(nextMission)add(makePriority(nextMission.title,nextMission.short||'Continue the next focused mission selected by your guided plan.','Guided mission','help.html','Continue mission'));
   else if(helpPlan.length&&helpDone===helpPlan.length)add(makePriority('Start a new progress check','You completed the current cycle. Recheck your skills and generate a new set of priorities.','Guided plan','help.html','Start the next cycle'));
   else if(!helpPlan.length)add(makePriority('Build my first learning plan','Take a short skills check so the site can recommend a manageable sequence of missions.','Best starting point','help.html','Start my skills check'));
   if(methodCount<methodModules.length)add(makePriority('Strengthen one methodology skill','Continue the methodology course and immediately reuse the technique on a real document.','Colle method','methodology.html','Continue methodology'));
   if(pronunciationDone<13)add(makePriority('Complete one pronunciation lesson','A short video-and-imitation session will improve intelligibility more than passive listening.','Oral delivery','pronunciation.html','Open pronunciation'));
-  add(makePriority('Turn today’s work into speech','Choose one current topic and speak for sixty seconds without reading full sentences.','Transfer to colles','colle-trainer.html','Practise aloud'));
+  add(makePriority('Build a complete oral mission','Choose one document and connect context, method, language, delivery and follow-up interaction.','Colle Mission Builder','colle-trainer.html','Build a mission'));
   return items.slice(0,3);
 }
 function renderPriorities(){
@@ -187,6 +193,24 @@ function renderReviewBand(){
   else if(rs.nextDue)copy.textContent='Nothing is due right now. Your next scheduled review is '+new Date(rs.nextDue).toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})+'.';
   else copy.textContent='Save a word, mark grammar as “Needs revision” or save a civilisation fact to build your first queue.';
 }
+function renderMission(){
+  const card=$('#missionCard');
+  const modeLabels={guided:'Guided Mission',standard:'Standard Colle',challenge:'Challenge Mode'};
+  const countries={gb:'United Kingdom',us:'United States',ie:'Ireland',ca:'Canada',au:'Australia',nz:'New Zealand',in:'India',za:'South Africa'};
+  if(activeColleMission&&!activeColleMission.completedAt){
+    card.hidden=false;$('#missionEyebrow').textContent='Active colle mission';$('#activeMissionTitle').textContent='Continue my Colle Mission';
+    $('#missionCopy').textContent=activeColleMission.document?.title||'A complete oral mission is saved on this device.';
+    $('#missionTags').innerHTML=['Stage '+((activeColleMission.stage||0)+1)+' of 5',modeLabels[activeColleMission.config?.mode]||'Mission',countries[activeColleMission.config?.country]||'',activeColleMission.config?.focus||''].filter(Boolean).map(x=>'<span>'+esc(x)+'</span>').join('');
+    $('#missionProgress').style.width=Math.round((((activeColleMission.stage||0)+1)/5)*100)+'%';$('#missionPrimary').href='colle-trainer.html?resume=1';$('#missionPrimary').textContent='Resume mission';return;
+  }
+  if(lastColleMission?.completedAt){
+    card.hidden=false;$('#missionEyebrow').textContent='Last completed mission';$('#activeMissionTitle').textContent='Mission completed';
+    $('#missionCopy').textContent=lastColleMission.document?.title||'Your latest oral mission is complete.';
+    $('#missionTags').innerHTML=[modeLabels[lastColleMission.config?.mode]||'Mission',countries[lastColleMission.config?.country]||'',new Date(lastColleMission.completedAt).toLocaleDateString('en-GB',{day:'numeric',month:'short'})].filter(Boolean).map(x=>'<span>'+esc(x)+'</span>').join('');
+    $('#missionProgress').style.width='100%';$('#missionPrimary').href='colle-trainer.html';$('#missionPrimary').textContent='Build another mission';return;
+  }
+  card.hidden=true;
+}
 function friendlyTime(ts){
   const d=new Date(ts),diff=Date.now()-d.getTime();if(diff<60000)return'just now';if(diff<3600000)return Math.floor(diff/60000)+' min ago';if(diff<86400000)return Math.floor(diff/3600000)+' h ago';if(diff<7*86400000)return Math.floor(diff/86400000)+' day'+(Math.floor(diff/86400000)===1?'':'s')+' ago';return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
 }
@@ -198,7 +222,7 @@ function renderActivity(){
 }
 $('#resetDashboard').addEventListener('click',()=>{if(confirm('Remove the saved colle date and recent-activity history from this dashboard? Your course progress will not be deleted.')){localStorage.removeItem('ecl_learning_path_settings_v1');localStorage.removeItem('ecl_learning_activity_v1');location.reload()}});
 async function initialise(){
-  renderColle();renderSummary();renderPriorities();renderSkills();renderReviewBand();renderActivity();
+  renderColle();renderSummary();renderMission();renderPriorities();renderSkills();renderReviewBand();renderActivity();
   if(review){await review.syncSources();renderSummary();renderPriorities();renderSkills();renderReviewBand()}
 }
 window.addEventListener('eclreview:change',()=>{renderSummary();renderPriorities();renderSkills();renderReviewBand()});

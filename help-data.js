@@ -3078,7 +3078,7 @@ window.HELP_DATA = {
           "Notes are a map, not a script: Turn full sentences into keywords, arrows, abbreviations, examples, transitions, key dates, pronunciation reminders. You should be able to speak from a glance, not read.",
           "Phrases to handle a difficulty: 'Let me rephrase that.' · 'What I mean is…' · 'I should qualify that point.' · 'A more accurate way of putting it would be…' · 'Let me start again.' · 'The main point is…' · 'I can't recall the exact figure, but the broader trend is…' — and never invent a forgotten figure."
         ],
-        "model": "Train it in the Colle Trainer: The Colle Trainer draws a real document of the day, walks you through analysis, question and plan, then times your spoken performance — with a full transition bank. That is where delivery is built.",
+        "model": "Train it in the Mission Builder: The Mission Builder lets you choose a current source or your own document, then connects analysis, context, language, timed speaking and follow-up questions. That is where delivery is built.",
         "commonError": "Avoid: Reading every word, eyes down, flat tone, no transitions. Better: Glancing at keyword notes, eyes up, signposting each move, slowing on the key question.",
         "practice": [
           {

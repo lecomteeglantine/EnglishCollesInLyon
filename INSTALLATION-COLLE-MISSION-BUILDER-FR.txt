@@ -1,0 +1,25 @@
+INSTALLATION — COLLE MISSION BUILDER
+
+Version complète recommandée
+1. Décompressez EnglishCollesInLyon-colle-mission-builder-2026-07.zip.
+2. Ouvrez le dossier EnglishCollesInLyon-main.
+3. Remplacez le contenu du dépôt GitHub par son contenu.
+4. Validez avec Commit changes.
+5. Rechargez le site avec Ctrl + Shift + R.
+
+La page conserve l'adresse colle-trainer.html afin de ne casser aucun ancien lien.
+Le menu affiche désormais Mission Builder.
+
+Fonctions principales
+- Guided Mission, Standard Colle et Challenge Mode
+- document proposé ou document personnel
+- compréhension et regard critique sur la source
+- contextualisation, tension centrale, key question et plan
+- vocabulaire, grammaire et prononciation reliés au sujet
+- minuteurs de préparation et de prise de parole
+- questions de relance
+- enregistrement vocal privé dans le navigateur
+- autoévaluation et ajout des difficultés à Review Studio
+- sauvegarde et reprise depuis My Learning Path
+
+Aucun retour professeur et aucun outil enseignant n'ont été ajoutés.

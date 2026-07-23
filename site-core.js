@@ -15,7 +15,7 @@
     ['grammar.html', 'Grammar'],
     ['pronunciation.html', 'Pronunciation'],
     ['timelines.html', 'Timelines'],
-    ['colle-trainer.html', 'Colle Trainer'],
+    ['colle-trainer.html', 'Mission Builder'],
     ['resources.html', 'Resources'],
     ['jury-reports.html', 'Jury Reports']
   ];
@@ -141,7 +141,7 @@
       'timelines.html': ['timelines', 'Timelines', 'Choose one turning point. Explain why it matters in thirty seconds, connect it to a present-day debate in class and reuse it as a contextualised example in your next colle.'],
       'resources.html': ['resources', 'Resources', 'Bring one reliable fact and one genuine question from a source to English class. Reuse the source as evidence or context in your next colle.'],
       'jury-reports.html': ['jury-reports', 'Jury Reports', 'Choose one recurring jury warning. Turn it into a concrete checklist item, test it in your next colle and ask your teacher whether the improvement is visible.'],
-      'colle-trainer.html': ['colle-trainer', 'Colle Trainer', 'Identify one weakness during this practice. Ask about it in English class, test one specific improvement in your next real colle and record the feedback afterwards.']
+      'colle-trainer.html': ['colle-trainer', 'Mission Builder', 'Build one complete oral mission from a document: contextualise it, formulate a key question, prepare precise language and speak against the clock.']
     };
     const entry = profiles[p];
     if (entry) return { id: entry[0], domain: entry[1], task: entry[2] };

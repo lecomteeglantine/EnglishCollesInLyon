@@ -11,7 +11,8 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "20260723-review-1"
+SHELL_VERSION = "20260723-mission-1"
+REVIEW_VERSION = "20260723-review-1"
 CORE_PAGES = {
     "index.html", "methodology.html", "civilisation.html", "vocabulary.html",
     "grammar.html", "pronunciation.html", "timelines.html", "colle-trainer.html",
@@ -23,11 +24,11 @@ EXCLUDED = {
     "atlas-engine.html",
 }
 
-CSS_LINK = f'<link rel="stylesheet" href="site-shell.css?v={VERSION}">'
+CSS_LINK = f'<link rel="stylesheet" href="site-shell.css?v={SHELL_VERSION}">'
 HEADER_INSERT = (
     '<div id="ecl-site-header"></div>\n'
-    f'<script src="review-engine.js?v={VERSION}"></script>\n'
-    f'<script src="site-shell.js?v={VERSION}"></script>'
+    f'<script src="review-engine.js?v={REVIEW_VERSION}"></script>\n'
+    f'<script src="site-shell.js?v={SHELL_VERSION}"></script>'
 )
 FOOTER_INSERT = '<div id="ecl-site-footer"></div>'
 
@@ -92,16 +93,16 @@ def transform(path: Path) -> tuple[str, bool]:
     if "review-engine.js" in text:
         text = re.sub(
             r'<script\b[^>]*src=["\']review-engine\.js(?:\?v=[^"\']*)?["\'][^>]*>\s*</script>',
-            f'<script src="review-engine.js?v={VERSION}"></script>', text, count=1, flags=re.I,
+            f'<script src="review-engine.js?v={REVIEW_VERSION}"></script>', text, count=1, flags=re.I,
         )
     text = re.sub(
         r'<script\b[^>]*src=["\']site-shell\.js(?:\?v=[^"\']*)?["\'][^>]*>\s*</script>',
-        f'<script src="site-shell.js?v={VERSION}"></script>', text, count=1, flags=re.I,
+        f'<script src="site-shell.js?v={SHELL_VERSION}"></script>', text, count=1, flags=re.I,
     )
     if "review-engine.js" not in text and "site-shell.js" in text:
         text = re.sub(
             r'(<script\b[^>]*src=["\']site-shell\.js(?:\?v=[^"\']*)?["\'][^>]*>\s*</script>)',
-            lambda m: f'<script src="review-engine.js?v={VERSION}"></script>\n{m.group(1)}',
+            lambda m: f'<script src="review-engine.js?v={REVIEW_VERSION}"></script>\n{m.group(1)}',
             text, count=1, flags=re.I,
         )
     if not re.search(r'<meta\s+name=["\']author["\']', text, re.I):

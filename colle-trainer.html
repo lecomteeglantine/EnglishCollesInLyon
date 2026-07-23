@@ -3,329 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colle Trainer · English Colles in Lyon</title>
+<title>Colle Mission Builder · English Colles in Lyon</title>
+<meta name="description" content="Build a complete English colle mission: choose a current document, contextualise it, prepare language, speak against the clock and review your performance.">
+<meta name="author" content="Eglantine Lecomte">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#FAF3E7;--bg2:#FFF7ED;--ink:#22312F;--muted:#5d6b66;--navy:#243B53;--terra:#C46A4A;--sage:#7A9B76;--gold:#D9A441;--card:#FFF;--line:#E6D8C8;--shadow:0 1px 2px rgba(36,59,83,.05),0 10px 30px rgba(36,59,83,.07);--shadow-lg:0 2px 6px rgba(36,59,83,.08),0 24px 60px rgba(36,59,83,.13);--r:16px;--tap:48px;--maxw:1000px;--font:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--display:"Fraunces",Georgia,serif}
-*{box-sizing:border-box}html{font-size:18px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}p{margin:0}a{color:inherit;text-decoration:none}button{font-family:inherit;font-size:1rem;cursor:pointer}
-.top{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:14px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
-.brand{display:flex;flex-direction:column;line-height:1.05;min-height:var(--tap);justify-content:center}
-.brand .name{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--navy)}.brand .sub{font-size:.7rem;color:var(--muted);letter-spacing:.04em}
-.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}.nav a{padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:600;min-height:40px;display:inline-flex;align-items:center}.nav a:hover{background:#fff;color:var(--terra)}.nav a.active{color:var(--terra)}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}main{padding:30px 0 60px}
-.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
-.page-head h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin-top:6px}.page-head p{color:var(--muted);margin-top:8px;max-width:64ch}
-.setup{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin-top:24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
-.field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:170px}
-.field label{font-size:.8rem;font-weight:700;color:var(--navy)}
-.field select{min-height:var(--tap);border:1px solid var(--line);border-radius:11px;padding:8px 12px;font-family:inherit;font-size:.95rem;background:var(--bg2)}
-.btn{min-height:var(--tap);border-radius:12px;border:1.5px solid var(--line);background:var(--bg2);color:var(--ink);font-weight:700;padding:10px 20px;display:inline-flex;align-items:center;gap:8px}
-.btn:hover{background:#fff}.btn.primary{background:var(--terra);border-color:var(--terra);color:#fff}.btn.primary:hover{background:#b25e41}
-.dossier{margin-top:28px;display:none}.dossier.on{display:block}
-.dossier h2{color:var(--navy);font-size:1.3rem;margin-bottom:4px}.dossier .sub{color:var(--muted);font-size:.9rem;margin-bottom:16px}
-.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px;transition:transform .14s,box-shadow .25s}
-.doc:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-.doc .kind{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px}
-.doc.article .kind{color:var(--navy)}.doc.podcast .kind{color:var(--terra)}
-.doc h3{font-size:1.05rem;color:var(--ink);line-height:1.35}
-.doc .src{font-size:.8rem;color:var(--muted)}
-.doc .acts{display:flex;gap:8px;margin-top:auto;padding-top:6px}
-.doc .acts a,.doc .acts button{flex:1;text-align:center;min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-size:.84rem;font-weight:700;border:1px solid var(--line);background:var(--bg2)}
-.doc .acts .pick{background:var(--sage);border-color:var(--sage);color:#fff}.doc .acts .pick:hover{background:#688a64}
-.doc .acts .open:hover{color:var(--terra)}
-.loading{color:var(--muted);font-style:italic;padding:20px 0}
-.workshop{margin-top:30px;display:none}.workshop.on{display:block}
-.chosen{background:var(--navy);color:#fff;border-radius:var(--r);padding:18px 20px;margin-bottom:20px}
-.chosen .kind{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-.chosen h2{color:#fff;font-size:1.2rem;margin:6px 0 4px}.chosen a{color:#ffd9c7;text-decoration:underline;font-size:.88rem;font-weight:700}
-.chosen audio{width:100%;margin-top:12px}
-.steps{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.stepbtn{flex:1;min-width:120px;min-height:44px;border-radius:11px;border:1.5px solid var(--line);background:var(--card);font-weight:700;font-size:.86rem;color:var(--muted)}
-.stepbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}.stepbtn.done{border-color:var(--sage);color:var(--sage)}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px}
-
-.qfam h4{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
-.qfam ul{margin:0;padding-left:20px}.qfam li{margin:7px 0;line-height:1.5}
-.notes{width:100%;min-height:120px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:.95rem;background:var(--bg2);margin-top:12px;resize:vertical}
-.timer-box{text-align:center;padding:14px 0}
-.timer{font-family:var(--display);font-size:3rem;color:var(--navy);font-variant-numeric:tabular-nums}
-.timer.warn{color:var(--terra)}
-.timer-ctrl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-.hint{font-size:.85rem;color:var(--muted);margin-top:10px;text-align:center}
-.nav-steps{display:flex;justify-content:space-between;margin-top:18px;gap:10px}
-footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
-a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
-@media (max-width:640px){.nav{display:none}}
-
-.step-lead{margin:8px 0 18px;color:var(--muted);line-height:1.6}
-.lvl{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 16px;background:var(--bg2)}
-.lvl-h{display:flex;align-items:flex-start;gap:12px;margin-bottom:6px}
-.lvl-n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:600}
-.lvl-t{font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--navy)}
-.lvl-i{font-size:.85rem;color:var(--muted);margin-top:2px}
-.qfam{margin-top:14px}.qfam h4{font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--terra);margin-bottom:7px}
-.qfam ul{margin:0;padding-left:20px}.qfam li{margin:7px 0;line-height:1.55}
-.toolbox{border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:15px 17px;margin:0 0 16px;background:#fff}
-.tb-h{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--navy)}
-.tb-i{font-size:.86rem;color:var(--muted);margin:4px 0 10px;line-height:1.5}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:.85rem;font-weight:600;color:var(--ink)}
-.chip.tension{background:#fff4ec;border-color:#f0cbb4;color:#a85a3c}
-.altfam{margin-top:12px}.altfam-t{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);margin-bottom:5px}
-.altfam ul{margin:0;padding-left:20px}.altfam li{margin:5px 0;line-height:1.5}
-.plan-tips{margin:0;padding-left:20px}.plan-tips li{margin:6px 0;line-height:1.55;color:var(--ink)}
-.notes-lab{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin:6px 0 0}
-
-
-.fi{display:inline-grid;place-items:center;width:20px;height:20px;vertical-align:-4px;margin-right:6px;color:var(--terra)}
-.fi svg{width:15px;height:15px}
-.lvl-n svg{width:17px;height:17px;stroke:#fff}
-.ei{display:inline-grid;place-items:center;width:18px;height:18px;vertical-align:-3px;margin-right:6px}
-.ei svg{width:14px;height:14px;stroke:var(--terra)}
-.eyebrow{display:inline-flex;align-items:center}
-.classnote{display:flex;gap:16px;align-items:flex-start;margin-top:22px;background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:14px;padding:20px 22px}
-.cn-ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--sage);display:grid;place-items:center}
-.cn-ic svg{width:22px;height:22px;stroke:#fff}
-.classnote h3{font-family:var(--display);font-weight:600;font-size:1.12rem;color:var(--navy);margin:0 0 8px}
-.classnote p{font-size:.9rem;color:var(--ink);line-height:1.6;margin:0 0 8px}
-.classnote p:last-child{margin-bottom:0}
-
-
-/* ===== Stabilised training session ===== */
-.setup{display:grid;grid-template-columns:repeat(5,minmax(135px,1fr));gap:12px;align-items:end}
-.setup .btn{min-width:170px}.setup-note{grid-column:1/-1;font-size:.82rem;color:var(--muted);line-height:1.45;margin-top:-2px}
-.session-toolbar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:linear-gradient(135deg,#eef3f1,#fff8f4);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
-.session-meta{display:flex;gap:8px;flex-wrap:wrap}.session-chip{display:inline-flex;align-items:center;min-height:30px;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.76rem;font-weight:700;color:var(--navy)}
-.prep-clock{display:flex;align-items:center;gap:8px;justify-content:flex-end}.prep-time{font-family:var(--display);font-size:1.5rem;color:var(--navy);font-variant-numeric:tabular-nums;min-width:70px;text-align:center}.prep-time.warn{color:var(--terra)}
-.icon-btn{min-height:38px;padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--navy);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
-.prompt-block{border:1px solid var(--line);border-radius:12px;background:var(--bg2);margin:12px 0;overflow:hidden}.prompt-block summary{cursor:pointer;padding:12px 14px;font-weight:700;color:var(--navy);background:#fff}.prompt-block .prompt-body{padding:5px 15px 13px}.prompt-block ul{margin:6px 0 0;padding-left:20px}.prompt-block li{margin:7px 0;line-height:1.5}
-.focus-callout{border-left:5px solid var(--terra);background:#fff7f2;border-radius:12px;padding:14px 16px;margin:14px 0;color:var(--ink)}.focus-callout strong{color:var(--navy)}
-.speaking-grid{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(300px,1.2fr);gap:16px}.studio-card{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:18px}.studio-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}.studio-card .timer{font-size:2.65rem}.record-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.record-status{min-height:1.4em;margin-top:8px;font-size:.84rem;color:var(--muted)}.record-playback{width:100%;margin-top:10px}.privacy-note{font-size:.78rem;color:var(--muted);margin-top:9px;line-height:1.45}
-.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.review-card{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:16px}.review-card h3{font-size:1.02rem;color:var(--navy);margin-bottom:10px}.review-check{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(230,216,200,.75);font-size:.9rem}.review-check:last-child{border-bottom:0}.review-check input{width:18px;height:18px;margin-top:3px;accent-color:var(--terra)}
-.transfer-box{margin-top:16px;border:1px solid var(--line);border-left:5px solid var(--sage);border-radius:14px;background:#fff;padding:18px}.transfer-box h3{font-size:1.08rem;color:var(--navy);margin-bottom:6px}.transfer-result{min-height:1.4em;margin-top:10px;color:var(--sage);font-weight:700;font-size:.88rem}
-.inline-label{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin:12px 0 5px}.compact-notes{min-height:78px}.stepbtn{min-width:150px}.chosen .chosen-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.chosen .chosen-meta span{font-size:.74rem;font-weight:700;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);border-radius:999px;padding:4px 9px}
-@media(max-width:900px){.setup{grid-template-columns:1fr 1fr}.setup .btn{min-width:0}.speaking-grid,.review-grid{grid-template-columns:1fr}}
-@media(max-width:640px){.setup{grid-template-columns:1fr}.session-toolbar{grid-template-columns:1fr}.prep-clock{justify-content:flex-start}.steps{display:grid;grid-template-columns:1fr 1fr}.stepbtn{min-width:0}.nav-steps{flex-direction:column}.nav-steps .btn{width:100%}}
-</style>
-  <meta name="author" content="Eglantine Lecomte">
-<style id="ecl-author-signature-style">
-.ecl-author-byline{
-  display:block!important;margin-top:2px!important;
-  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  font-size:.66rem!important;line-height:1.2!important;font-weight:700!important;
-  letter-spacing:.055em!important;color:#C46A4A!important;text-transform:none!important;
-}
-.ecl-site-signature{
-  display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:center!important;gap:1px!important;width:100%!important;min-height:54px!important;
-  padding:7px 16px!important;margin:0!important;border:0!important;border-radius:0!important;
-  background:#243B53!important;color:#fff!important;text-decoration:none!important;text-align:center!important;
-  box-shadow:none!important;font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  position:relative!important;z-index:2!important;
-}
-.ecl-site-signature:hover{background:#2f5573!important;color:#fff!important}
-.ecl-site-signature .ecl-site-title{
-  font-family:Georgia,"Times New Roman",serif!important;font-size:1.03rem!important;
-  line-height:1.15!important;font-weight:700!important;letter-spacing:0!important;
-}
-.ecl-site-signature .ecl-site-author{
-  font-size:.7rem!important;line-height:1.2!important;font-weight:700!important;
-  letter-spacing:.055em!important;color:#F1C66A!important;
-}
-.ecl-author-footer{
-  display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;
-  gap:.35em!important;width:100%!important;max-width:1120px!important;margin:18px auto 0!important;
-  padding:14px 16px 0!important;border-top:1px dashed rgba(122,155,118,.55)!important;
-  color:#5d6b66!important;background:transparent!important;text-align:center!important;
-  font-family:"Atkinson Hyperlegible",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif!important;
-  font-size:.82rem!important;line-height:1.45!important;font-weight:400!important;
-}
-.ecl-author-footer strong{color:#243B53!important;font-weight:700!important}
-footer.ecl-generated-footer{
-  display:block!important;width:100%!important;margin:0!important;padding:22px 16px!important;
-  border-top:1px solid #E6D8C8!important;background:#FFF7ED!important;
-}
-footer.ecl-generated-footer .ecl-author-footer{margin:0 auto!important;padding-top:0!important;border-top:0!important}
-@media(max-width:560px){
-  .ecl-site-signature{min-height:49px!important;padding:6px 12px!important}
-  .ecl-site-signature .ecl-site-title{font-size:.96rem!important}
-  .ecl-author-footer{font-size:.76rem!important}
-}
-</style>
-<link rel="stylesheet" href="site-shell.css?v=20260723-path-1">
+<link rel="stylesheet" href="site-shell.css?v=20260723-mission-1">
+<link rel="stylesheet" href="colle-mission-builder.css?v=20260723-mission-1">
 </head>
 <body>
 <div id="ecl-site-header"></div>
-<script src="site-shell.js?v=20260723-path-1"></script>
-<header class="top ecl-legacy-shell"><div class="wrap">
-  <div class="brand"><span class="name">English Colles in Lyon</span>
-      <span class="ecl-author-byline">by Eglantine Lecomte</span><span class="sub">CPGE English · Colle practice</span></div>
-  <nav class="nav"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html" class="active" aria-current="page">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav>
-</div></header>
-<main><div class="wrap">
-  <div class="page-head"><div class="eyebrow">Colle Trainer</div><h1>Prepare a colle on today's news</h1>
-    <p>A dossier of authentic documents from today — articles and podcasts. Pick one, then work through three steps: interrogate the document, frame a question and plan, and speak against the clock.</p></div>
+<script src="review-engine.js?v=20260723-review-1"></script>
+<script src="site-shell.js?v=20260723-mission-1"></script>
 
-  <div class="setup">
-    <div class="field"><label for="ctCountry">Country</label>
-      <select id="ctCountry"><option value="gb">United Kingdom</option><option value="us">United States</option><option value="ie">Ireland</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="in">India</option><option value="za">South Africa</option></select></div>
-    <div class="field"><label for="ctLevel">Support level</label><select id="ctLevel"><option value="foundation">Guided</option><option value="standard" selected>Standard</option><option value="advanced">Advanced</option></select></div>
-    <div class="field"><label for="ctPrep">Preparation time</label><select id="ctPrep"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="25">25 minutes</option></select></div>
-    <div class="field"><label for="ctSpeak">Speaking time</label><select id="ctSpeak"><option value="5">5 minutes</option><option value="8" selected>8 minutes</option><option value="10">10 minutes</option></select></div>
-    <div class="field"><label for="ctFocus">Priority</label><select id="ctFocus"><option value="contextualisation">Contextualisation</option><option value="key question" selected>Key question</option><option value="plan and transitions">Plan & transitions</option><option value="examples and evidence">Examples & evidence</option><option value="grammar and vocabulary">Grammar & vocabulary</option><option value="pronunciation and intonation">Pronunciation & intonation</option></select></div>
-    <button class="btn primary" id="ctGo">Draw today’s dossier</button>
-    <p class="setup-note">The trainer prepares you. The skill must then be used in English class, tested in a real colle and improved through your teacher’s feedback.</p>
-  </div>
-
-  <section class="dossier" id="dossier">
-    <h2>Today's dossier</h2><p class="sub" id="dossierSub"></p>
-    <div class="docs" id="docsList"><p class="loading">Loading today's documents…</p></div>
-  </section>
-
-  <section class="workshop" id="workshop">
-    <div class="chosen" id="chosen"></div>
-    <div class="session-toolbar" id="sessionToolbar">
-      <div class="session-meta" id="sessionMeta"></div>
-      <div class="prep-clock" aria-label="Preparation timer"><span class="prep-time" id="prepTime">20:00</span><button class="icon-btn" id="prepStart" type="button">Start</button><button class="icon-btn" id="prepReset" type="button">Reset</button></div>
-    </div>
-    <div class="steps">
-      <button class="stepbtn on" data-s="0" id="sb0">1 · Analyse</button>
-      <button class="stepbtn" data-s="1" id="sb1">2 · Question &amp; plan</button>
-      <button class="stepbtn" data-s="2" id="sb2">3 · Speak & record</button>
-      <button class="stepbtn" data-s="3" id="sb3">4 · Review & transfer</button>
-    </div>
-    <div class="panel" id="stepPanel"></div>
-    <div class="nav-steps">
-      <button class="btn" id="ctBack">← Change document</button>
-      <button class="btn primary" id="ctNext">Next step →</button>
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Colle Mission Builder</div>
+        <h1>Turn one document into a complete oral mission.</h1>
+        <p class="hero-copy">Choose a current article, podcast, video, data source or your own document. The builder then connects comprehension, contextualisation, vocabulary, grammar, pronunciation, timed speaking and follow-up questions.</p>
+        <p class="hero-note">The purpose is not to fill in every box. It is to prepare a clear, analytical and reusable oral response without writing a script.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#setup">Build a new mission</a>
+          <button class="btn btn-ghost" type="button" id="heroResume" hidden>Resume my saved mission</button>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Mission sequence">
+        <h2>One mission, five stages</h2>
+        <p>Each stage feeds the next, so the whole site converges towards oral performance.</p>
+        <div class="hero-flow">
+          <div><b>1</b> Understand and interrogate</div>
+          <div><b>2</b> Contextualise and problematise</div>
+          <div><b>3</b> Prepare precise language</div>
+          <div><b>4</b> Speak and face follow-ups</div>
+          <div><b>5</b> Review and save</div>
+        </div>
+      </aside>
     </div>
   </section>
-</div></main>
-<footer class="ecl-legacy-shell"><nav class="foot-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="methodology.html">Methodology</a><a href="civilisation.html">Civilisation</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="pronunciation.html">Pronunciation</a><a href="timelines.html">Timelines</a><a href="colle-trainer.html">Colle Trainer</a><a href="resources.html">Resources</a><a href="jury-reports.html">Jury Reports</a></nav><div class="site-principle">Prepare here · Use it in class · Test it in colles · Improve through feedback.</div><div class="ecl-author-footer">
-  <span>Designed and created by</span>
-  <strong>Eglantine Lecomte</strong>
-  <span>· English Colles in Lyon</span>
-</div>
-</footer>
 
-<script>
-const METHOD = {"n1": {"label": "Level 1 · Read & locate", "intro": "Fast, factual mapping. Answer each in one spoken sentence before moving on.", "groups": [["What & who", ["What kind of document is this, and who produced it (author, outlet, genre)?", "What is its central claim or story, in a single sentence?", "Who are the people, groups or institutions involved?"]], ["Where & when", ["Where is this set, and what do I already know about this country's history, economy and politics?", "When does it take place, and which event or trend does it belong to?"]], ["Say & silence", ["What is explicitly stated — and what is implied, assumed or left unsaid?", "Which word would I replace 'speaks about' with: addresses, highlights, examines, sheds light on, investigates…?"]]]}, "n2": {"label": "Level 2 · Analyse in depth", "intro": "This is where a strong candidate stands out. Pick the questions that bite on your document — you don't need them all.", "groups": [["Source, voice & reliability", ["Who is speaking, from what position, and with what authority or interest in this stance?", "Who is the intended audience, and how does that shape what is said and how?", "How far can this source be trusted — what bias, blind spots or omissions should I flag, and what would I cross-check?"]], ["Rhetoric & argument", ["By what means does the text try to persuade (examples, statistics, cited authorities, emotional register)?", "What effect is sought on the reader, and which devices produce it (irony, generalisation, a single case turned into a rule)?", "Where is the reasoning weakest — which link would an opponent attack first?", "Does the evidence actually support the conclusion, or is there a leap?"]], ["Ideology, assumptions & the unsaid", ["What does the document take for granted without arguing for it?", "What worldview or ideology underpins it — would it be shared elsewhere, or in another era?", "What is strategically left out, and who benefits from that silence?", "Whose voice is missing from this account?"]], ["The central tension", ["What conflict of values or interests structures the document beneath the surface?", "What is the strongest argument on the opposing side — the one you cannot dismiss?", "What paradox does the situation reveal (what is proclaimed vs what is done, what should work but doesn't)?"]], ["Causes, stakes & consequences", ["What are the underlying causes, beyond the ones the document names?", "What is genuinely at stake here — for whom, and in what timeframe?", "What are the likely consequences, intended and unintended?"]], ["Historical & historiographical depth", ["Is this a new development or the latest chapter of a long story?", "How have interpretations of this issue shifted over time — is there a scholarly debate behind it?", "What past parallel illuminates or complicates the present case?"]], ["Ethical & political dimension", ["What ethical question does the situation raise, beyond its practical aspects?", "Which competing principles are in play (liberty vs security, equality vs merit, individual vs community)?", "What would each major political tradition make of this?"]], ["Cultural & conceptual perspective", ["Of what wider debate is this particular case merely one instance?", "Which comparison with another English-speaking country sharpens or nuances the point?", "Which concept, author or theory would raise the analysis a level (name it, don't just gesture at it)?"]], ["Language & style", ["What does the register, tone or lexical field reveal about the intention?", "Which tenses or modals matter for interpretation — past for a rupture, future for a projection, modals for probability?", "Is there a key phrase whose exact wording carries the argument?"]]]}, "verbs": {"label": "Toolbox · don't say 'the document speaks about'", "intro": "Present the document with a precise verb instead:", "chips": ["addresses…", "highlights…", "focuses on…", "examines…", "outlines…", "sheds light on…", "emphasises…", "deals with…", "investigates…"]}, "keyq": {"label": "A key question = a tension", "intro": "A strong problematic exposes a problem, a contradiction or an implicit issue — a limitation, a criticism, a contradiction, or a hidden stake. Always look for a tension:", "tensions": ["Criticism vs Justification", "Progress vs Danger", "Individual vs Society", "Freedom vs Control", "Tradition vs Change", "Equality vs Merit", "Global vs National", "Rights vs Responsibilities"]}, "alt": {"label": "Frame the question · alternatives to 'To what extent'", "intro": "Match the family to your tension, then complete the opener:", "families": [["For analysis", ["How does… influence…?", "What factors explain…?", "What is at stake in…?"]], ["For balanced arguments", ["How far can it be argued that…?", "What are the limits of the claim that…?", "Is it more accurate to say… or…?"]], ["For critical thinking / debate", ["Should we consider… as…?", "Is it justified to claim that…?", "Can… be explained by… alone?"]], ["For causation & impact", ["What role did… play in…?", "How significant was… in…?", "What are the underlying causes of…?", "What explains the impact of…?"]], ["For comparison", ["How does… compare with…?", "What distinguishes… from…?", "Which had a greater impact:… or…?", "In what ways are… and… similar / different?"]]]}, "plan": {"label": "Build a two- or three-part plan", "intro": "Each part = one governing idea + one piece of evidence (from the document or your own knowledge). Avoid a flat for/against; aim for a movement of thought.", "tips": ["Part I usually takes the document's claim seriously; Part II complicates or challenges it; Part III (optional) reframes or transcends the opposition.", "End each part with a mini-conclusion that launches the next.", "Your conclusion should answer your key question and open onto a wider horizon — never just summarise."]}, "transitions": {"label": "Transition bank for speaking", "intro": "A good transition shows the reasoning that links your parts. Pick by function:", "groups": [["Open onto the problematic", ["The article therefore raises a broader question: …", "Beyond the specific case discussed in the article, this issue prompts us to wonder whether…", "This example illustrates a wider debate regarding…", "This leads us to the following question: …"]], ["Announce the plan", ["A twofold approach can be adopted. First, I will focus on…, then I will analyse…", "To answer this question, I will begin by…, then move on to…, before finally considering…"]], ["Move to a new part", ["Another aspect worth considering is…", "Another perspective would be to consider…", "The issue can also be approached from a different angle."]], ["Widen / deepen", ["Beyond the economic dimension, the issue also raises ethical concerns.", "Beyond this particular example, the question reflects a broader trend.", "More fundamentally, this debate raises the question of…", "At a deeper level, the issue concerns…"]], ["Nuance in conclusion", ["The debate should not be reduced to a simple opposition between X and Y."]]]}};
-const WORKER = "https://english-colles-country-news.lecomte-eglantine.workers.dev/";
-const CNAME = {gb:"United Kingdom",us:"United States",ie:"Ireland",ca:"Canada",au:"Australia",nz:"New Zealand",in:"India",za:"South Africa"};
-const esc = value => String(value || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-const fmt = seconds => String(Math.floor(Math.max(0,seconds)/60)).padStart(2,"0")+":"+String(Math.max(0,seconds)%60).padStart(2,"0");
-const IC = {chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-4a8 8 0 1 1 18-7Z"/></svg>'};
+  <section class="resume-band" id="resumeBand" hidden>
+    <div class="wrap">
+      <article class="resume-card">
+        <div class="resume-main"><strong id="resumeTitle">Saved mission</strong><span id="resumeMeta"></span></div>
+        <div class="resume-progress"><div class="mini-meter"><span id="resumeMeter"></span></div><small id="resumeStage"></small></div>
+        <button class="btn btn-sage btn-small" type="button" id="resumeMission">Resume</button>
+        <button class="btn btn-ghost btn-small" type="button" id="discardMission">Discard</button>
+      </article>
+    </div>
+  </section>
 
-let country="gb", dossier=[], chosen=null, step=0;
-let config={level:"standard",prep:20,speak:8,focus:"key question"};
-let work={analysis:"",keyQuestion:"",plan0:"",plan1:"",plan2:"",teacherQuestion:"",feedback:"",nextPriority:""};
-let prepRemain=1200, prepTimer=null, speakRemain=480, speakTimer=null;
-let mediaRecorder=null, mediaStream=null, mediaChunks=[], audioUrl="";
+  <section class="setup-section" id="setup">
+    <div class="wrap">
+      <header class="section-head ecl-legacy-shell">
+        <div class="eyebrow">1 · Choose the conditions</div>
+        <h2>What kind of mission do you need today?</h2>
+        <p>The level changes the quantity of guidance, not the intellectual ambition. All three modes lead to a real analytical response.</p>
+      </header>
 
-function readConfig(){
-  country=document.getElementById("ctCountry").value;
-  config={level:document.getElementById("ctLevel").value,prep:+document.getElementById("ctPrep").value,speak:+document.getElementById("ctSpeak").value,focus:document.getElementById("ctFocus").value};
-}
-function saveWork(){
-  const ids=["analysisNotes","keyQuestion","plan0","plan1","plan2","teacherQuestion","feedbackNote","nextPriority"];
-  const keys=["analysis","keyQuestion","plan0","plan1","plan2","teacherQuestion","feedback","nextPriority"];
-  ids.forEach((id,i)=>{const el=document.getElementById(id);if(el)work[keys[i]]=el.value;});
-  try{sessionStorage.setItem("eclColleTrainerWork",JSON.stringify({config,work}));}catch(_){ }
-}
-function restoreWork(){try{const raw=JSON.parse(sessionStorage.getItem("eclColleTrainerWork")||"null");if(raw&&raw.work)work={...work,...raw.work};}catch(_){ }}
+      <div class="mode-grid" role="radiogroup" aria-label="Mission mode">
+        <button class="mode-card" type="button" data-mode="guided" role="radio" aria-checked="false">
+          <span class="mode-check">✓</span><span class="mode-badge">More support</span>
+          <h3>Guided Mission</h3><p>Progressive prompts, sentence starters and visible method reminders. Best when you need a clear route through the task.</p>
+          <div class="mode-meta"><span>25 min preparation</span><span>8 min speaking</span><span>Hints open</span></div>
+        </button>
+        <button class="mode-card selected" type="button" data-mode="standard" role="radio" aria-checked="true">
+          <span class="mode-check">✓</span><span class="mode-badge">Realistic practice</span>
+          <h3>Standard Colle</h3><p>A complete preparation sequence with optional help. Best for regular training under familiar conditions.</p>
+          <div class="mode-meta"><span>20 min preparation</span><span>8 min speaking</span><span>Help on demand</span></div>
+        </button>
+        <button class="mode-card" type="button" data-mode="challenge" role="radio" aria-checked="false">
+          <span class="mode-check">✓</span><span class="mode-badge">Less support</span>
+          <h3>Challenge Mode</h3><p>Shorter preparation, fewer prompts and more unpredictable follow-up questions. Best when the standard route feels comfortable.</p>
+          <div class="mode-meta"><span>15 min preparation</span><span>8 min speaking</span><span>Surprise questions</span></div>
+        </button>
+      </div>
 
-document.getElementById("ctGo").addEventListener("click",()=>{readConfig();loadDossier();});
+      <div class="config-card">
+        <div class="config-grid">
+          <div class="field"><label for="missionCountry">Country</label><select id="missionCountry"><option value="gb">United Kingdom</option><option value="us">United States</option><option value="ie">Ireland</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="in">India</option><option value="za">South Africa</option></select></div>
+          <div class="field"><label for="missionFormat">Document format</label><select id="missionFormat"><option value="any">Any format</option><option value="article">Article</option><option value="audio">Podcast / audio</option><option value="video">Video</option><option value="data">Data / official report</option></select></div>
+          <div class="field"><label for="missionFocus">Main priority</label><select id="missionFocus"><option value="contextualisation">Contextualisation</option><option value="key question" selected>Key question</option><option value="plan and transitions">Plan and transitions</option><option value="examples and evidence">Examples and evidence</option><option value="grammar and vocabulary">Grammar and vocabulary</option><option value="pronunciation and intonation">Pronunciation and intonation</option></select></div>
+          <div class="field"><label for="missionPrep">Preparation time</label><select id="missionPrep"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="25">25 minutes</option><option value="30">30 minutes</option></select></div>
+        </div>
+        <div class="config-actions"><p>The speaking time is eight minutes by default and can be changed inside the mission. Your notes are stored only in this browser.</p><button class="btn btn-primary" type="button" id="findSources">Find mission documents</button></div>
+      </div>
+    </div>
+  </section>
 
-function loadDossier(){
-  stopAllTimers();
-  const section=document.getElementById("dossier"), list=document.getElementById("docsList");
-  document.getElementById("workshop").classList.remove("on"); section.classList.add("on");
-  document.getElementById("dossierSub").textContent=CNAME[country]+" · "+new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
-  list.innerHTML='<p class="loading">Loading today’s documents…</p>';
-  Promise.all([
-    fetch(WORKER+"?country="+country+"&n=3&type=news").then(r=>r.ok?r.json():Promise.reject()).catch(()=>({items:[]})),
-    fetch(WORKER+"?country="+country+"&n=2&type=podcast").then(r=>r.ok?r.json():Promise.reject()).catch(()=>({items:[]}))
-  ]).then(([news,pod])=>{
-    dossier=[];
-    (news.items||[]).slice(0,3).forEach(it=>dossier.push({kind:"article",src:news.source||"News source",title:it.title,url:it.url}));
-    (pod.items||[]).slice(0,2).forEach(it=>dossier.push({kind:"podcast",src:pod.source||"Podcast",title:it.title,url:it.url,audio:it.audio}));
-    if(!dossier.length){list.innerHTML='<p class="loading">No documents are available right now. Try another country or return later. You can also choose a source from the Resources page.</p>';return;}
-    list.innerHTML=dossier.map((d,i)=>`<article class="doc ${d.kind}"><span class="kind">${d.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(d.src)}</span><h3>${esc(d.title)}</h3><div class="acts"><a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">${d.kind==="podcast"?"Listen ↗":"Read ↗"}</a><button class="pick" data-i="${i}">Work on this document</button></div></article>`).join("");
-    list.querySelectorAll(".pick").forEach(button=>button.addEventListener("click",()=>startWorkshop(dossier[+button.dataset.i])));
-  });
-}
+  <section class="source-section" id="sources" hidden>
+    <div class="wrap">
+      <div class="source-toolbar">
+        <header class="section-head"><div class="eyebrow">2 · Choose the document</div><h2>Build the mission around one source.</h2><p id="sourceIntro">Current and stable sources are loaded from the site’s local feeds.</p><div class="source-status" id="sourceStatus" aria-live="polite"></div></header>
+        <div class="source-actions"><button class="btn btn-ghost btn-small" type="button" id="refreshSources">Refresh</button><button class="btn btn-navy btn-small" type="button" id="showCustom">Use my own document</button></div>
+      </div>
+      <div class="source-grid" id="sourceGrid"></div>
 
-function startWorkshop(documentItem){
-  chosen=documentItem; step=0; work={analysis:"",keyQuestion:"",plan0:"",plan1:"",plan2:"",teacherQuestion:"",feedback:"",nextPriority:""};
-  prepRemain=config.prep*60; speakRemain=config.speak*60; stopAllTimers(); revokeAudio();
-  document.getElementById("chosen").innerHTML=`<span class="kind">${chosen.kind==="podcast"?"🎧 Podcast":"📰 Article"} · ${esc(chosen.src)}</span><h2>${esc(chosen.title)}</h2><a href="${esc(chosen.url)}" target="_blank" rel="noopener">Open the ${chosen.kind} ↗</a>${chosen.audio?`<audio controls preload="none" src="${esc(chosen.audio)}"></audio>`:""}<div class="chosen-meta"><span>${esc(config.level)} support</span><span>${config.prep} min preparation</span><span>${config.speak} min speaking</span><span>Priority: ${esc(config.focus)}</span></div>`;
-  document.getElementById("workshop").classList.add("on"); updateSessionToolbar(); renderStep();
-  document.getElementById("workshop").scrollIntoView({behavior:"smooth",block:"start"});
-}
+      <div class="custom-card" id="customCard" hidden>
+        <h3>Use a document you already have</h3><p>Paste only the basic reference details. The document itself remains wherever you received it.</p>
+        <form class="custom-form" id="customForm">
+          <div><label for="customTitle">Document title</label><input id="customTitle" required></div>
+          <div><label for="customSource">Source or author</label><input id="customSource" required></div>
+          <div><label for="customFormat">Format</label><select id="customFormat"><option value="article">Article / written text</option><option value="audio">Podcast / audio</option><option value="video">Video</option><option value="data">Data / official report</option></select></div>
+          <div><label for="customTopic">Broad topic</label><select id="customTopic"><option>Politics</option><option>Society</option><option>Economy</option><option>Environment</option><option>Technology</option><option>Education</option><option>Health</option><option>International affairs</option><option>Culture</option></select></div>
+          <div class="wide"><label for="customUrl">Link, if available</label><input id="customUrl" type="url" placeholder="https://…"></div>
+          <div class="wide"><label for="customSummary">One-line reminder, if useful</label><textarea id="customSummary" placeholder="Do not paste the whole document. Add only the central issue or task instructions."></textarea></div>
+          <div class="wide custom-actions"><button class="btn btn-ghost" type="button" id="cancelCustom">Cancel</button><button class="btn btn-primary" type="submit">Use this document</button></div>
+        </form>
+      </div>
 
-function updateSessionToolbar(){
-  document.getElementById("sessionMeta").innerHTML=`<span class="session-chip">${esc(CNAME[country])}</span><span class="session-chip">${esc(config.level)} support</span><span class="session-chip">Priority: ${esc(config.focus)}</span>`;
-  const el=document.getElementById("prepTime"); el.textContent=fmt(prepRemain); el.classList.toggle("warn",prepRemain<=120);
-  const start=document.getElementById("prepStart"); start.textContent=prepTimer?"Pause":"Start";
-}
-function stopPrep(){if(prepTimer){clearInterval(prepTimer);prepTimer=null;}updateSessionToolbar();}
-function togglePrep(){
-  if(prepTimer){stopPrep();return;}
-  prepTimer=setInterval(()=>{prepRemain=Math.max(0,prepRemain-1);updateSessionToolbar();if(prepRemain===0)stopPrep();},1000); updateSessionToolbar();
-}
-document.getElementById("prepStart").addEventListener("click",togglePrep);
-document.getElementById("prepReset").addEventListener("click",()=>{stopPrep();prepRemain=config.prep*60;updateSessionToolbar();});
+      <div class="build-bar" id="buildBar" hidden><div class="build-inner"><div class="build-info"><strong>Selected document</strong><span id="selectedSource"></span></div><button class="btn btn-primary" type="button" id="buildMission">Build this mission →</button></div></div>
+    </div>
+  </section>
 
-function promptDetails(title,groups,open=false){
-  return `<details class="prompt-block" ${open?"open":""}><summary>${esc(title)}</summary><div class="prompt-body">${groups.map(group=>`<h4>${esc(group[0])}</h4><ul>${group[1].map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`).join("")}</div></details>`;
-}
-function renderStep(){
-  [0,1,2,3].forEach(i=>{const b=document.getElementById("sb"+i);b.classList.toggle("on",i===step);b.classList.toggle("done",i<step);});
-  const panel=document.getElementById("stepPanel");
-  const guided=config.level==="foundation", advanced=config.level==="advanced";
-  if(step===0){
-    const groups=METHOD.n1.groups;
-    panel.innerHTML=`<div class="eyebrow">Step 1 · Understand and interrogate</div><p class="step-lead">Read or listen once for the overall meaning. Then identify what matters. Do not answer every prompt: use the ones that expose the document’s central issue.</p><div class="focus-callout"><strong>Your priority today:</strong> ${esc(config.focus)}. Keep it visible while you work.</div>${promptDetails("Fast factual mapping",groups,!advanced)}${promptDetails("Deeper analysis",METHOD.n2.groups,guided)}<div class="toolbox"><div class="tb-h">Useful presentation verbs</div><div class="chips">${METHOD.verbs.chips.map(v=>`<span class="chip">${esc(v)}</span>`).join("")}</div></div><label class="inline-label" for="analysisNotes">Your essential notes — facts, tension, source limits and one useful example</label><textarea class="notes" id="analysisNotes" placeholder="Keep only what you could actually use aloud.">${esc(work.analysis)}</textarea>`;
-  } else if(step===1){
-    panel.innerHTML=`<div class="eyebrow">Step 2 · Build a key question and a moving plan</div><p class="step-lead">Your key question must expose a tension. Your plan must answer it through a movement of thought — never a flat “for / against” structure.</p><div class="focus-callout"><strong>Non-negotiable:</strong> contextualise the document before announcing the key question. Avoid “To what extent…”.</div><details class="prompt-block" ${guided?"open":""}><summary>Key-question models</summary><div class="prompt-body">${METHOD.alt.families.map(f=>`<h4>${esc(f[0])}</h4><ul>${f[1].map(q=>`<li>${esc(q)}</li>`).join("")}</ul>`).join("")}</div></details><label class="inline-label" for="keyQuestion">Your key question</label><textarea class="notes compact-notes" id="keyQuestion" placeholder="A genuine question built around the document’s central tension.">${esc(work.keyQuestion)}</textarea><div class="review-grid"><div><label class="inline-label" for="plan0">I — Take the claim or problem seriously</label><textarea class="notes compact-notes" id="plan0" placeholder="Governing idea + evidence + interpretation">${esc(work.plan0)}</textarea></div><div><label class="inline-label" for="plan1">II — Complicate, challenge or expose limits</label><textarea class="notes compact-notes" id="plan1" placeholder="Governing idea + evidence + transition">${esc(work.plan1)}</textarea></div></div><label class="inline-label" for="plan2">III — Reframe or widen the debate (optional)</label><textarea class="notes compact-notes" id="plan2" placeholder="A deeper perspective, comparison or wider stake">${esc(work.plan2)}</textarea>`;
-  } else if(step===2){
-    panel.innerHTML=`<div class="eyebrow">Step 3 · Speak, record and listen back</div><p class="step-lead">Speak from notes, not from a script. Focus on one priority only. Recording is private and remains in this browser tab.</p><div class="speaking-grid"><div class="studio-card"><h3>Speaking timer</h3><div class="timer" id="speakTime">${fmt(speakRemain)}</div><div class="timer-ctrl"><button class="btn primary" id="speakStart" type="button">Start</button><button class="btn" id="speakReset" type="button">Reset</button></div><p class="hint">Suggested structure: contextualisation → key question → plan → evidence → conclusion.</p></div><div class="studio-card"><h3>Private recording studio</h3><p>Record your response, then listen for structure, fluency and your selected priority: <strong>${esc(config.focus)}</strong>.</p><div class="record-controls"><button class="btn primary" id="recordStart" type="button">● Record</button><button class="btn" id="recordStop" type="button" disabled>Stop</button></div><div class="record-status" id="recordStatus">No recording yet.</div><audio class="record-playback" id="recordPlayback" controls hidden></audio><p class="privacy-note">Nothing is uploaded or sent to your teacher. The recording disappears when the page is closed or reloaded.</p></div></div><div class="classnote"><div class="cn-ic">${IC.chat}</div><div><h3>The website is only the rehearsal room</h3><p>Use this objective again in English class. Then test it under real conditions in your next colle and ask for specific feedback.</p></div></div>`;
-    setupSpeakingTimer(); setupRecorder();
-  } else {
-    panel.innerHTML=`<div class="eyebrow">Step 4 · Review, take it to class and test it in a colle</div><p class="step-lead">Self-evaluation is useful only when it leads to a precise action outside the screen.</p><div class="review-grid"><div class="review-card"><h3>Quick self-evaluation</h3>${[
-      "I contextualised the document before analysing it.","I formulated a genuine key question.","My plan answered that question and moved forward.","I used precise, contextualised evidence.","I reused accurate grammar and vocabulary.","My stress and intonation helped the listener follow my ideas."
-    ].map((label,i)=>`<label class="review-check"><input type="checkbox" id="eval${i}"><span>${label}</span></label>`).join("")}</div><div class="review-card"><h3>Prepare the feedback loop</h3><label class="inline-label" for="teacherQuestion">One question to ask in English class</label><textarea class="notes compact-notes" id="teacherQuestion" placeholder="What do I still not understand or know how to do?">${esc(work.teacherQuestion)}</textarea><label class="inline-label" for="feedbackNote">Teacher feedback received</label><textarea class="notes compact-notes" id="feedbackNote" placeholder="Complete this after class or after the real colle.">${esc(work.feedback)}</textarea><label class="inline-label" for="nextPriority">One priority for the next real colle</label><textarea class="notes compact-notes" id="nextPriority" placeholder="Keep it specific and manageable.">${esc(work.nextPriority||config.focus)}</textarea></div></div><div class="transfer-box"><h3>Take this into English class and your next colle</h3><p><strong>English class:</strong> ask your question and use one prepared element aloud.<br><strong>Next colle:</strong> focus on one manageable priority and collect precise feedback.<br><strong>Afterwards:</strong> update your notes above with what your teacher actually corrected.</p></div>`;
-  }
-  panel.querySelectorAll("textarea").forEach(el=>el.addEventListener("input",saveWork));
-  document.getElementById("ctNext").textContent=step<3?"Next step →":"Finish and return to the dossier";
-}
+  <section class="workspace" id="workspace" aria-live="polite">
+    <div class="mission-ribbon"><div class="wrap ribbon-inner"><div class="ribbon-title"><strong id="ribbonTitle"></strong><span id="ribbonMeta"></span></div><div class="ribbon-tools"><div class="ribbon-pill">Preparation <strong id="prepClock">20:00</strong></div><button type="button" id="prepToggle">Start</button><button type="button" id="prepReset">Reset</button><button type="button" id="saveAndExit">Save and exit</button></div></div></div>
+    <div class="wrap">
+      <nav class="stage-nav" id="stageNav" aria-label="Mission stages">
+        <button class="stage-tab active" type="button" data-stage="0"><span>1</span>Understand</button>
+        <button class="stage-tab" type="button" data-stage="1"><span>2</span>Context</button>
+        <button class="stage-tab" type="button" data-stage="2"><span>3</span>Language</button>
+        <button class="stage-tab" type="button" data-stage="3"><span>4</span>Speak</button>
+        <button class="stage-tab" type="button" data-stage="4"><span>5</span>Review</button>
+      </nav>
+      <section class="stage-panel" id="stagePanel"></section>
+      <div class="stage-actions"><span class="autosave" id="autosaveStatus">Saved locally.</span><div class="stage-action-buttons"><button class="btn btn-ghost" type="button" id="previousStage">← Previous</button><button class="btn btn-primary" type="button" id="nextStage">Next stage →</button></div></div>
+    </div>
+  </section>
 
-function setupSpeakingTimer(){
-  const el=document.getElementById("speakTime"), start=document.getElementById("speakStart");
-  const paint=()=>{if(!el)return;el.textContent=fmt(speakRemain);el.classList.toggle("warn",speakRemain<=60);if(start)start.textContent=speakTimer?"Pause":"Start";}; paint();
-  start.addEventListener("click",()=>{if(speakTimer){clearInterval(speakTimer);speakTimer=null;paint();return;}speakTimer=setInterval(()=>{speakRemain=Math.max(0,speakRemain-1);paint();if(speakRemain===0){clearInterval(speakTimer);speakTimer=null;paint();}},1000);paint();});
-  document.getElementById("speakReset").addEventListener("click",()=>{if(speakTimer)clearInterval(speakTimer);speakTimer=null;speakRemain=config.speak*60;paint();});
-}
-function setupRecorder(){
-  const start=document.getElementById("recordStart"), stop=document.getElementById("recordStop"), status=document.getElementById("recordStatus"), playback=document.getElementById("recordPlayback");
-  if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){start.disabled=true;status.textContent="Audio recording is not supported by this browser.";return;}
-  start.addEventListener("click",async()=>{try{revokeAudio();mediaStream=await navigator.mediaDevices.getUserMedia({audio:true});mediaChunks=[];mediaRecorder=new MediaRecorder(mediaStream);mediaRecorder.ondataavailable=e=>{if(e.data.size)mediaChunks.push(e.data);};mediaRecorder.onstop=()=>{const blob=new Blob(mediaChunks,{type:mediaRecorder.mimeType||"audio/webm"});audioUrl=URL.createObjectURL(blob);playback.src=audioUrl;playback.hidden=false;status.textContent="Recording ready. Listen back before completing the review.";mediaStream?.getTracks().forEach(t=>t.stop());mediaStream=null;};mediaRecorder.start();start.disabled=true;stop.disabled=false;status.textContent="Recording… Speak naturally from your notes.";}catch(_){status.textContent="Microphone access was blocked. You can still use the timer and speak aloud.";}});
-  stop.addEventListener("click",()=>{if(mediaRecorder&&mediaRecorder.state!=="inactive")mediaRecorder.stop();start.disabled=false;stop.disabled=true;});
-}
-function revokeAudio(){if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl="";}if(mediaStream){mediaStream.getTracks().forEach(t=>t.stop());mediaStream=null;}}
-function stopAllTimers(){stopPrep();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}}
+  <section class="history" id="historySection" hidden>
+    <div class="wrap"><header class="section-head"><div class="eyebrow">Recent practice</div><h2>Completed missions on this device</h2><p>This is a private local history, not a score or a ranking.</p></header><div class="history-grid" id="historyGrid"></div></div>
+  </section>
+</main>
 
-document.getElementById("ctNext").addEventListener("click",()=>{saveWork();if(step<3){step++;renderStep();}else{stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});}});
-document.getElementById("ctBack").addEventListener("click",()=>{saveWork();stopAllTimers();revokeAudio();document.getElementById("workshop").classList.remove("on");document.getElementById("dossier").scrollIntoView({behavior:"smooth"});});
-[0,1,2,3].forEach(i=>document.getElementById("sb"+i).addEventListener("click",()=>{saveWork();if(speakTimer){clearInterval(speakTimer);speakTimer=null;}step=i;renderStep();}));
-restoreWork();
-</script>
-
-<script src="site-core.js?v=20260715-3"></script>
+<script src="colle-mission-builder.js?v=20260723-mission-1"></script>
 <div id="ecl-site-footer"></div>
-</body></html>
+</body>
+</html>
