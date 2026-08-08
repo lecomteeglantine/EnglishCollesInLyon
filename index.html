@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="English Colles in Lyon is a private CPGE English learning space designed for independent preparation, active use in class and progress through colles.">
+  <meta name="description" content="English Colles in Lyon is a private CPGE English learning space for independent preparation, active classroom practice and progress through colles.">
   <meta name="theme-color" content="#153a5b">
   <title>English Colles in Lyon · Private CPGE English learning space</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,517 +11,260 @@
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --cream:#faf3e7;
-      --cream-2:#fff8ef;
+      --cream:#fbf5ec;
       --paper:#fffdf9;
       --navy:#153a5b;
-      --navy-2:#234e70;
-      --terracotta:#d26747;
-      --terracotta-dark:#b84f32;
-      --ink:#20303a;
-      --muted:#5d6b66;
-      --line:#ead9c8;
-      --sage:#e6f0e9;
-      --sage-dark:#2f6f55;
-      --gold:#f5d69b;
-      --sky:#e7f1f7;
-      --shadow:0 24px 70px rgba(38,47,45,.11);
-      --shadow-soft:0 12px 34px rgba(38,47,45,.07);
-      --radius:26px;
+      --terracotta:#cf6547;
+      --terracotta-dark:#af4d32;
+      --ink:#26343c;
+      --muted:#66716d;
+      --line:#eadbcc;
+      --soft-blue:#edf4f7;
+      --soft-green:#edf5ef;
+      --soft-orange:#fff1ea;
+      --shadow:0 14px 38px rgba(26,48,61,.08);
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:120px}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 15% 20%,rgba(210,103,71,.08),transparent 28%),
-        radial-gradient(circle at 84% 75%,rgba(35,78,112,.08),transparent 30%),
-        var(--cream);
-      font-family:"Atkinson Hyperlegible",Arial,sans-serif;
-      line-height:1.55;
-    }
-
-    a{color:inherit}
+    html{scroll-behavior:smooth;scroll-padding-top:110px}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"Atkinson Hyperlegible",Arial,sans-serif;line-height:1.55}
     img,video{max-width:100%;display:block}
-    button,input,summary{font:inherit}
-    .skip-link{position:absolute;left:-9999px;top:auto}
-    .skip-link:focus{left:16px;top:16px;z-index:100;background:#fff;padding:12px 16px;border-radius:10px}
+    a{color:inherit}
+    h1,h2,h3{font-family:"Fraunces",Georgia,serif;color:var(--navy);line-height:1.08;margin-top:0}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+    .skip-link{position:absolute;left:-9999px}.skip-link:focus{left:12px;top:12px;background:white;padding:10px 14px;z-index:1000;border-radius:10px}
 
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:40;
-      background:rgba(250,243,231,.96);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(21,58,91,.10);
-    }
-    .header-main{
-      width:min(1320px,calc(100% - 40px));
-      margin:auto;
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.08;flex:0 0 auto}
-    .brand strong{font-family:"Fraunces",Georgia,serif;font-size:1.5rem;color:var(--navy)}
-    .brand span{margin-top:5px;color:var(--terracotta);font-weight:700}
-    .brand small{margin-top:4px;color:var(--muted);font-size:.88rem}
-
-    .header-right{display:flex;align-items:center;gap:18px;min-width:0}
-    .mini-nav{display:flex;align-items:center;gap:18px;white-space:nowrap}
-    .mini-nav a{text-decoration:none;color:var(--muted);font-weight:700;font-size:.94rem}
-    .mini-nav a:hover{color:var(--navy)}
-    .header-actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap}
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:50px;
-      padding:0 22px;
-      border-radius:14px;
-      border:2px solid transparent;
-      text-decoration:none;
-      font-weight:700;
-      transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
-    }
-    .btn:hover{transform:translateY(-2px)}
-    .btn:focus-visible,summary:focus-visible{outline:4px solid rgba(210,103,71,.28);outline-offset:3px}
-    .btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 12px 28px rgba(210,103,71,.22)}
+    header{position:sticky;top:0;z-index:50;background:rgba(251,245,236,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(21,58,91,.10)}
+    .header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.08}
+    .brand strong{font-family:"Fraunces",Georgia,serif;color:var(--navy);font-size:1.45rem}
+    .brand span{color:var(--terracotta);font-weight:700;margin-top:4px}
+    .brand small{color:var(--muted);font-size:.82rem;margin-top:3px}
+    .header-actions{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:13px;text-decoration:none;font-weight:700;border:2px solid transparent;transition:.16s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--terracotta);color:white;box-shadow:0 8px 22px rgba(207,101,71,.20)}
     .btn-primary:hover{background:var(--terracotta-dark)}
     .btn-secondary{background:var(--paper);border-color:var(--line);color:var(--navy)}
-    .btn-secondary:hover{box-shadow:0 10px 25px rgba(21,58,91,.10)}
-    .btn-small{min-height:43px;padding:0 16px;font-size:.94rem}
 
-    main{overflow:hidden}
-    .hero{
-      width:min(1320px,calc(100% - 40px));
-      margin:0 auto;
-      padding:80px 0 52px;
-      display:grid;
-      grid-template-columns:minmax(0,1.08fr) minmax(380px,.92fr);
-      gap:62px;
-      align-items:center;
-    }
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff7ef;
-      color:var(--terracotta-dark);
-      border:1px solid #f0d1c4;
-      font-size:.86rem;
-      font-weight:700;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-    h1,h2,h3{font-family:"Fraunces",Georgia,serif;color:var(--navy);line-height:1.05;margin-top:0}
-    h1{font-size:clamp(3.4rem,6.6vw,6.5rem);letter-spacing:-.045em;margin:28px 0 24px;max-width:900px}
-    .hero-copy>p{font-size:clamp(1.08rem,1.5vw,1.32rem);max-width:720px;margin:0 0 17px}
-    .hero-note{color:var(--muted)}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
-    .microcopy{font-size:.93rem!important;color:var(--muted);margin-top:13px!important}
+    .hero{padding:72px 0 58px;display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
+    .eyebrow{display:inline-block;color:var(--terracotta-dark);font-size:.82rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:20px}
+    h1{font-size:clamp(3.2rem,6vw,5.8rem);letter-spacing:-.04em;margin-bottom:22px;max-width:770px}
+    .hero .lead{font-size:1.2rem;max-width:690px;margin:0 0 15px}
+    .hero .note{color:var(--muted);max-width:700px;margin:0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .micro{color:var(--muted);font-size:.9rem;margin-top:12px}
+    .hero-panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow)}
+    .hero-panel h2{font-size:1.8rem;margin-bottom:8px}
+    .hero-panel>p{color:var(--muted);margin:0 0 20px}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .mini-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+    .mini-card b{display:block;color:var(--navy);margin-bottom:3px}.mini-card span{color:var(--muted);font-size:.9rem}
 
-    .hero-card{
-      position:relative;
-      background:rgba(255,253,249,.94);
-      border:1px solid var(--line);
-      border-radius:32px;
-      padding:30px;
-      box-shadow:var(--shadow);
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute;
-      width:170px;height:170px;
-      border-radius:50%;
-      background:rgba(210,103,71,.12);
-      right:-55px;top:-55px;
-      z-index:-1;
-    }
-    .hero-card-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
-    .hero-card-top h2{font-size:1.95rem;margin:0}
-    .private-badge{padding:7px 11px;border-radius:999px;background:var(--sage);color:#187e4e;font-weight:700;font-size:.86rem}
-    .loop-mini{display:grid;gap:10px}
-    .loop-mini-row{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
-    .loop-mini-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#fff0e9;font-size:1.25rem}
-    .loop-mini-row strong{display:block;color:var(--navy)}
-    .loop-mini-row span{display:block;color:var(--muted);font-size:.92rem;margin-top:2px}
-    .hero-card-note{margin:18px 0 0;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.94rem}
+    .section{padding:66px 0}
+    .section-head{max-width:760px;margin-bottom:30px}
+    .section-label{color:var(--terracotta-dark);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+    .section h2{font-size:clamp(2.3rem,4vw,3.8rem);margin:8px 0 12px}
+    .section-head p{color:var(--muted);font-size:1.08rem;margin:0}
 
-    .section{width:min(1320px,calc(100% - 40px));margin:0 auto;padding:74px 0}
-    .section-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:50px;align-items:end;margin-bottom:36px}
-    .section-label{color:var(--terracotta-dark);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.86rem}
-    .section h2{font-size:clamp(2.55rem,4vw,4.3rem);margin:10px 0 0}
-    .section-intro{font-size:1.13rem;color:var(--muted);margin:0;max-width:760px}
+    .loop{background:var(--navy);color:white;border-radius:28px;padding:34px;box-shadow:var(--shadow)}
+    .loop h2{color:white;margin-bottom:10px}.loop-intro{color:#d8e5ec;max-width:850px;margin:0}
+    .loop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+    .loop-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:20px}
+    .loop-step strong{display:block;color:white;margin-bottom:5px}.loop-step span{color:#cfdee7;font-size:.93rem}
+    .loop-num{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--terracotta);font-weight:700;margin-bottom:12px}
+    .loop-quote{margin:24px 0 0;border-left:4px solid var(--terracotta);padding:12px 0 12px 18px;font-family:"Fraunces",Georgia,serif;font-size:1.45rem;color:white}
 
-    .principle{
-      background:var(--navy);
-      color:#fff;
-      border-radius:34px;
-      padding:48px;
-      box-shadow:var(--shadow);
-    }
-    .principle h2{color:#fff;margin-bottom:14px}
-    .principle>p{max-width:860px;color:#dbe6ec;font-size:1.12rem}
-    .learning-loop{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
-    .loop-step{position:relative;border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:24px 20px;background:rgba(255,255,255,.05)}
-    .loop-step:not(:last-child):after{content:"→";position:absolute;right:-15px;top:50%;transform:translateY(-50%);width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:var(--terracotta);color:white;font-weight:700;z-index:2}
-    .loop-step .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--terracotta);font-weight:700;margin-bottom:15px}
-    .loop-step h3{color:#fff;font-family:"Atkinson Hyperlegible",Arial,sans-serif;font-size:1.08rem;margin:0 0 7px}
-    .loop-step p{margin:0;color:#cbd9e1;font-size:.94rem}
-    .principle-quote{margin:30px 0 0;padding:22px 24px;border-left:5px solid var(--terracotta);background:rgba(255,255,255,.07);border-radius:0 18px 18px 0;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.35rem,2.3vw,2.15rem);color:#fff}
+    .video-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:26px;align-items:start}
+    .video-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+    .video-shell{aspect-ratio:16/9;background:#0f2434;border-radius:17px;overflow:hidden}.video-shell video{width:100%;height:100%;object-fit:contain}
+    .video-caption{color:var(--muted);font-size:.9rem;margin:12px 3px 0}
+    .video-side{display:grid;gap:12px}
+    .side-card{border:1px solid var(--line);background:var(--paper);border-radius:18px;padding:19px}
+    .side-card strong{display:block;color:var(--navy);margin-bottom:5px}.side-card p{margin:0;color:var(--muted);font-size:.94rem}
+    .side-card.highlight{background:var(--soft-orange)}
 
-    .video-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:28px;align-items:stretch}
-    .video-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:20px;box-shadow:var(--shadow-soft)}
-    .video-shell{overflow:hidden;border-radius:20px;background:#0d2235;aspect-ratio:16/9;display:grid;place-items:center}
-    .video-shell video{width:100%;height:100%;object-fit:contain;background:#0d2235}
-    .video-note{margin:15px 4px 2px;color:var(--muted);font-size:.94rem}
-    .tour-points{display:grid;gap:14px}
-    .tour-point{padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,253,249,.85)}
-    .tour-point strong{display:block;color:var(--navy);font-size:1.05rem;margin-bottom:6px}
-    .tour-point p{margin:0;color:var(--muted)}
-    .tour-cta{padding:24px;border-radius:22px;background:#fff0e9;border:1px solid #f0d1c4}
-    .tour-cta p{margin:0 0 16px;color:var(--ink)}
+    .preview{display:grid;grid-template-columns:1fr .9fr;gap:30px;align-items:center}
+    .shot{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:10px;box-shadow:var(--shadow)}
+    .shot img{border-radius:16px;width:100%}
+    .preview-copy h3{font-size:2rem;margin-bottom:12px}.preview-copy p{color:var(--muted);margin:0 0 16px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid var(--line);background:var(--paper);color:var(--navy);padding:7px 10px;border-radius:999px;font-size:.88rem;font-weight:700}
 
-    .preview-shot{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:30px;align-items:center}
-    .browser-frame{border:1px solid var(--line);border-radius:26px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
-    .browser-bar{height:42px;background:#f0e6d9;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
-    .browser-bar span{width:10px;height:10px;border-radius:50%;background:#d8c4b3}
-    .browser-frame img{width:100%;height:auto}
-    .preview-copy h3{font-size:2.25rem;margin-bottom:14px}
-    .preview-copy p{color:var(--muted);font-size:1.06rem}
-    .preview-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-    .preview-tag{padding:8px 11px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--navy);font-weight:700;font-size:.9rem}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .feature{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:20px;min-height:215px;display:flex;flex-direction:column}
+    .icon{font-size:1.4rem;margin-bottom:12px}.feature h3{font-size:1.22rem;margin-bottom:8px}.feature p{color:var(--muted);font-size:.94rem;margin:0}
+    .reuse{margin-top:auto!important;padding-top:14px;border-top:1px solid var(--line);font-weight:700!important;color:var(--navy)!important}.reuse span{color:var(--terracotta-dark)}
 
-    .feature-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-    .feature-card{background:rgba(255,253,249,.88);border:1px solid var(--line);border-radius:22px;padding:22px;min-height:250px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
-    .feature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#fff0e9;font-size:1.42rem;margin-bottom:18px}
-    .feature-card h3{font-size:1.28rem;margin-bottom:9px}
-    .feature-card p{margin:0;color:var(--muted);font-size:.96rem}
-    .class-use{margin-top:auto!important;padding-top:15px;border-top:1px solid var(--line);color:var(--navy)!important;font-size:.91rem!important;font-weight:700}
-    .class-use span{color:var(--terracotta-dark)}
+    .class-band{background:var(--soft-blue);border-top:1px solid #dbe7ed;border-bottom:1px solid #dbe7ed}
+    .class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .class-card{background:rgba(255,255,255,.72);border:1px solid #d8e5ec;border-radius:20px;padding:24px}
+    .class-card:nth-child(2){background:#fff7f1;border-color:#efd9cc}.class-card:nth-child(3){background:var(--soft-green);border-color:#d9e8dc}
+    .class-card h3{font-size:1.55rem;margin-bottom:10px}.class-card p{margin:0;color:var(--muted)}
+    .class-banner{margin-top:18px;padding:18px 22px;border-radius:18px;background:var(--navy);color:white;text-align:center;font-family:"Fraunces",Georgia,serif;font-size:1.35rem}
 
-    .three-spaces{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .space-card{border-radius:26px;padding:30px;border:1px solid var(--line);background:var(--paper);box-shadow:var(--shadow-soft)}
-    .space-card:nth-child(2){background:var(--sky)}
-    .space-card:nth-child(3){background:var(--sage)}
-    .space-kicker{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:12px}
-    .space-card h3{font-size:1.8rem;margin-bottom:12px}
-    .space-card ul{margin:0;padding-left:20px;color:var(--muted)}
-    .space-card li+li{margin-top:7px}
-    .spaces-banner{margin-top:20px;padding:24px 28px;border-radius:22px;background:var(--navy);color:#fff;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.35rem,2.2vw,2rem);text-align:center}
+    .start-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 19px}
+    summary{cursor:pointer;list-style:none;padding:18px 32px 18px 0;font-weight:700;color:var(--navy);position:relative}
+    summary::-webkit-details-marker{display:none}summary:after{content:"+";position:absolute;right:0;top:15px;font-size:1.4rem;color:var(--terracotta)}details[open] summary:after{content:"–"}
+    details p{color:var(--muted);margin:0 0 18px}
 
-    .scenario{background:linear-gradient(135deg,#fffdf9,#fff5eb);border:1px solid var(--line);border-radius:34px;padding:44px;box-shadow:var(--shadow-soft)}
-    .scenario-top{display:flex;justify-content:space-between;gap:28px;align-items:flex-start;margin-bottom:30px}
-    .scenario-top h2{margin-bottom:12px}
-    .scenario-top p{margin:0;color:var(--muted);max-width:680px;font-size:1.08rem}
-    .scenario-badge{flex:0 0 auto;padding:12px 16px;border-radius:16px;background:var(--gold);color:#664e20;font-weight:700}
-    .scenario-flow{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;align-items:stretch}
-    .scenario-step{position:relative;padding:17px 13px;border-radius:18px;background:white;border:1px solid var(--line);text-align:center;min-height:142px;display:flex;flex-direction:column;justify-content:center}
-    .scenario-step:not(:last-child):after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--terracotta-dark);font-weight:700;z-index:2}
-    .scenario-step strong{color:var(--navy);font-size:.95rem;line-height:1.2;margin-bottom:6px}
-    .scenario-step span{color:var(--muted);font-size:.84rem;line-height:1.3}
-    .scenario-step.highlight{background:var(--navy);border-color:var(--navy)}
-    .scenario-step.highlight strong,.scenario-step.highlight span{color:white}
-
-    .start-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    details.start-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-soft);overflow:hidden}
-    details.start-card[open]{border-color:#dfb49f}
-    details.start-card summary{list-style:none;cursor:pointer;padding:24px 58px 24px 24px;position:relative;font-family:"Fraunces",Georgia,serif;color:var(--navy);font-size:1.45rem;line-height:1.15}
-    details.start-card summary::-webkit-details-marker{display:none}
-    details.start-card summary:after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:#fff0e9;display:grid;place-items:center;font-family:"Atkinson Hyperlegible",Arial,sans-serif;font-weight:700;color:var(--terracotta-dark)}
-    details.start-card[open] summary:after{content:"−"}
-    .start-body{padding:0 24px 24px;color:var(--muted)}
-    .start-body p{margin-top:0}
-    .start-body strong{color:var(--navy)}
-
-    .access-journey{background:var(--navy);color:#fff;border-radius:34px;padding:44px;box-shadow:var(--shadow)}
-    .access-journey h2{color:#fff;margin-bottom:14px}
-    .access-journey>p{max-width:790px;color:#dbe6ec;font-size:1.1rem}
-    .access-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
-    .access-step{border-top:1px solid rgba(255,255,255,.22);padding-top:19px}
-    .access-num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--terracotta);font-weight:700;margin-bottom:14px}
-    .access-step h3{color:#fff;font-family:"Atkinson Hyperlegible",Arial,sans-serif;margin:0 0 7px;font-size:1.05rem}
-    .access-step p{margin:0;color:#cbd9e1;font-size:.94rem}
-
-    .cta{width:min(1180px,calc(100% - 40px));margin:32px auto 92px;background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:58px;text-align:center;box-shadow:var(--shadow)}
-    .cta h2{font-size:clamp(2.65rem,5vw,4.9rem);margin-bottom:18px}
-    .cta p{max-width:720px;margin:0 auto 30px;color:var(--muted);font-size:1.12rem}
-    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-    footer{border-top:1px solid rgba(21,58,91,.10);padding:30px 20px 38px;text-align:center;color:var(--muted)}
-    footer strong{color:var(--navy)}
+    .cta{margin:18px auto 72px;background:var(--navy);border-radius:28px;padding:42px;color:white;text-align:center}
+    .cta h2{color:white;font-size:clamp(2.2rem,4vw,3.6rem);margin-bottom:10px}.cta p{color:#d8e5ec;max-width:700px;margin:0 auto 24px}.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.cta .btn-secondary{background:white}
+    footer{border-top:1px solid rgba(21,58,91,.10);padding:28px 0 38px;color:var(--muted);text-align:center}footer strong{color:var(--navy)}
     .mobile-access{display:none}
 
-    @media (max-width:1180px){
-      .mini-nav{display:none}
-      .feature-grid{grid-template-columns:repeat(3,1fr)}
-      .scenario-flow{grid-template-columns:repeat(4,1fr)}
-      .scenario-step:nth-child(4):after{display:none}
+    @media(max-width:980px){
+      .hero,.video-grid,.preview{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.loop-grid{grid-template-columns:repeat(2,1fr)}.class-grid{grid-template-columns:1fr}.hero{padding-top:54px}.hero-panel{max-width:720px}
     }
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr;gap:40px;padding-top:58px}
-      .section-head{grid-template-columns:1fr;gap:17px}
-      .video-layout,.preview-shot{grid-template-columns:1fr}
-      .learning-loop{grid-template-columns:repeat(2,1fr)}
-      .loop-step:nth-child(2):after{display:none}
-      .three-spaces{grid-template-columns:1fr}
-      .access-steps{grid-template-columns:repeat(2,1fr)}
-      .feature-grid{grid-template-columns:repeat(2,1fr)}
-      .scenario-flow{grid-template-columns:repeat(2,1fr)}
-      .scenario-step:nth-child(even):after{display:none}
-      .scenario-step:nth-child(4):after{display:none}
+    @media(max-width:720px){
+      body{padding-bottom:72px}.wrap{width:min(100% - 24px,1180px)}.header-inner{min-height:70px}.brand small{display:none}.header-actions{display:none}h1{font-size:clamp(3rem,14vw,4.6rem)}.hero{padding:44px 0 38px}.section{padding:52px 0}.loop{padding:26px 20px}.loop-grid,.features,.start-grid,.mini-grid{grid-template-columns:1fr}.video-card{padding:10px}.cta{width:min(100% - 24px,1180px);padding:34px 20px;margin-bottom:28px}.mobile-access{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:70;grid-template-columns:1fr 1.15fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(251,245,236,.98);border-top:1px solid rgba(21,58,91,.14);box-shadow:0 -8px 26px rgba(21,58,91,.08)}.mobile-access .btn{min-height:48px;padding:0 10px;font-size:.9rem}
     }
-    @media (max-width:720px){
-      body{padding-bottom:74px}
-      html{scroll-padding-top:94px}
-      .header-main{width:min(100% - 24px,1320px);padding:11px 0;min-height:72px}
-      .brand small{display:none}
-      .brand strong{font-size:1.2rem}
-      .brand span{font-size:.84rem}
-      .header-actions{display:none}
-      .hero,.section{width:min(100% - 28px,1320px)}
-      .hero{padding-top:44px}
-      h1{font-size:clamp(3rem,14vw,4.55rem)}
-      .hero-card{padding:21px}
-      .section{padding:58px 0}
-      .principle,.scenario,.access-journey{padding:30px 22px}
-      .learning-loop,.feature-grid,.access-steps,.start-grid,.scenario-flow{grid-template-columns:1fr}
-      .loop-step:after,.scenario-step:after{display:none!important}
-      .video-card{padding:12px}
-      .preview-copy h3{font-size:1.9rem}
-      .scenario-top{flex-direction:column}
-      .scenario-badge{align-self:flex-start}
-      .cta{width:min(100% - 28px,1180px);padding:38px 22px;margin-bottom:52px}
-      .mobile-access{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.12fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(250,243,231,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(21,58,91,.14);box-shadow:0 -10px 30px rgba(21,58,91,.08)}
-      .mobile-access .btn{min-height:48px;padding:0 12px;font-size:.92rem}
-    }
-    @media (max-width:430px){
-      .brand strong{font-size:1.08rem}
-      .brand span{font-size:.78rem}
-      .hero-actions .btn{width:100%}
-      .hero-card-top{align-items:flex-start;flex-direction:column}
-    }
-    @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="header-main">
+  <header>
+    <div class="wrap header-inner">
       <a class="brand" href="#main" aria-label="English Colles in Lyon — home">
         <strong>English Colles in Lyon</strong>
         <span>by Eglantine Lecomte</span>
-        <small>CPGE English · Independent practice · Class · Colles</small>
+        <small>CPGE English · Independent practice · Colles</small>
       </a>
-      <div class="header-right">
-        <nav class="mini-nav" aria-label="Explore this page">
-          <a href="#how-it-works">How it works</a>
-          <a href="#tour">Take a tour</a>
-          <a href="#inside">Inside the site</a>
-          <a href="#start">Where to start</a>
-        </nav>
-        <nav class="header-actions" aria-label="Access options">
-          <a class="btn btn-secondary btn-small" href="https://englishcollesinlyon-private.pages.dev/sign-in">I already have an account</a>
-          <a class="btn btn-primary btn-small" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
-        </nav>
-      </div>
+      <nav class="header-actions" aria-label="Access options">
+        <a class="btn btn-secondary" href="https://englishcollesinlyon-private.pages.dev/sign-in">I already have an account</a>
+        <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
+      </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
+    <section class="wrap hero">
+      <div>
         <span class="eyebrow">Private CPGE English learning space</span>
-        <h1 id="hero-title">Prepare independently. Practise together. Perform in class and in colles.</h1>
-        <p>English Colles in Lyon brings methodology, language practice and knowledge of the English-speaking world together in one guided learning space.</p>
-        <p class="hero-note"><strong>The site is not a replacement for English lessons or colles.</strong> It helps you prepare between sessions so that you arrive with more to say, more language to use and clearer questions to ask.</p>
+        <h1>Prepare independently. Practise together. Perform in colles.</h1>
+        <p class="lead">A guided space for methodology, language, civilisation and regular practice between lessons.</p>
+        <p class="note">The aim is not to replace English class. Prepare here, reuse what you have learnt in class, test it in your colles, then use feedback to decide what to work on next.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
           <a class="btn btn-secondary" href="https://englishcollesinlyon-private.pages.dev/sign-in">I already have an account</a>
         </div>
-        <p class="microcopy">Access is personal and every request is reviewed before activation.</p>
+        <p class="micro">Access is personal and requests are reviewed before activation.</p>
       </div>
-
-      <aside class="hero-card" aria-label="How the learning cycle works">
-        <div class="hero-card-top">
-          <h2>One learning cycle</h2>
-          <span class="private-badge">Private access</span>
+      <aside class="hero-panel" aria-label="What is inside the site">
+        <h2>Inside the learning space</h2>
+        <p>Everything is organised around one goal: giving you useful material to bring back into class and colles.</p>
+        <div class="mini-grid">
+          <div class="mini-card"><b>🧭 Methodology</b><span>Understand, structure, problematise.</span></div>
+          <div class="mini-card"><b>🌍 Civilisation</b><span>Build context and connections.</span></div>
+          <div class="mini-card"><b>🗣 Language</b><span>Vocabulary, grammar, pronunciation.</span></div>
+          <div class="mini-card"><b>🎯 Guided practice</b><span>Diagnostics, missions and progress.</span></div>
         </div>
-        <div class="loop-mini">
-          <div class="loop-mini-row"><div class="loop-mini-icon" aria-hidden="true">🧭</div><div><strong>Prepare on the site</strong><span>Explore, revise, practise and identify what you need.</span></div></div>
-          <div class="loop-mini-row"><div class="loop-mini-icon" aria-hidden="true">🏫</div><div><strong>Use it in English class</strong><span>Speak, ask questions, test vocabulary and connect ideas.</span></div></div>
-          <div class="loop-mini-row"><div class="loop-mini-icon" aria-hidden="true">🎤</div><div><strong>Apply it in your colle</strong><span>Use your knowledge and strategies under real conditions.</span></div></div>
-          <div class="loop-mini-row"><div class="loop-mini-icon" aria-hidden="true">↺</div><div><strong>Come back with feedback</strong><span>Turn comments and difficulties into your next priorities.</span></div></div>
-        </div>
-        <p class="hero-card-note"><strong>Prepare here. Experiment in class. Perform in your colles. Learn from feedback. Repeat.</strong></p>
       </aside>
     </section>
 
-    <section class="section" id="how-it-works" aria-labelledby="how-title">
-      <div class="principle">
-        <span class="section-label" style="color:#f3a58d">How this is meant to work</span>
-        <h2 id="how-title">Independent preparation becomes useful when you bring it back into real English.</h2>
-        <p>Use the site to build knowledge, language and strategies at your own pace. Then reuse them actively with your teacher and classmates and put them under pressure in a real colle. Feedback gives you the next thing to work on.</p>
-        <div class="learning-loop" aria-label="Learning cycle">
-          <article class="loop-step"><span class="num">1</span><h3>Prepare</h3><p>Read, listen, revise, practise and build background knowledge independently.</p></article>
-          <article class="loop-step"><span class="num">2</span><h3>Practise in class</h3><p>Reuse new language, discuss documents, ask questions and try ideas aloud.</p></article>
-          <article class="loop-step"><span class="num">3</span><h3>Perform in your colle</h3><p>Apply methodology and knowledge under real oral-exam conditions.</p></article>
-          <article class="loop-step"><span class="num">4</span><h3>Use feedback</h3><p>Come back with a clearer idea of what to consolidate, correct or explore next.</p></article>
+    <section class="wrap section" id="how-it-works">
+      <div class="loop">
+        <h2>How this site is meant to work</h2>
+        <p class="loop-intro">Independent work matters most when it feeds real interaction. The site is one part of a continuous learning loop.</p>
+        <div class="loop-grid">
+          <div class="loop-step"><div class="loop-num">1</div><strong>Prepare</strong><span>Explore, revise and practise independently.</span></div>
+          <div class="loop-step"><div class="loop-num">2</div><strong>Use it in class</strong><span>Reuse vocabulary, ideas and strategies aloud.</span></div>
+          <div class="loop-step"><div class="loop-num">3</div><strong>Test it in a colle</strong><span>Apply what you prepared under real conditions.</span></div>
+          <div class="loop-step"><div class="loop-num">4</div><strong>Use feedback</strong><span>Come back with a clearer next priority.</span></div>
         </div>
-        <p class="principle-quote">The website is a training ground — not the finish line.</p>
+        <p class="loop-quote">The website is a training ground — not the finish line.</p>
       </div>
     </section>
 
-    <section class="section" id="tour" aria-labelledby="tour-title">
+    <section class="wrap section" id="tour">
       <div class="section-head">
-        <div>
-          <span class="section-label">Take a tour</span>
-          <h2 id="tour-title">See how the learning space works.</h2>
-        </div>
-        <p class="section-intro">The presentation video gives you a quick guided tour of the site: where to start, how to practise, how to follow your progress and how each tool supports the work you do in class and in colles.</p>
+        <span class="section-label">Take a tour</span>
+        <h2>See how the learning space works.</h2>
+        <p>The presentation shows the main tools, how to find your way around the site and how independent work connects to class and colles.</p>
       </div>
-      <div class="video-layout">
+      <div class="video-grid">
         <div class="video-card">
           <div class="video-shell">
-            <video controls preload="metadata" playsinline poster="preview-home.png" aria-label="Presentation of the English Colles in Lyon learning space">
+            <video controls preload="metadata" playsinline aria-label="Presentation of English Colles in Lyon">
               <source src="presentation-video-english-colles.mp4" type="video/mp4">
-              Your browser cannot play this video. <a href="presentation-video-english-colles.mp4">Open the video file.</a>
+              Your browser cannot play this video.
             </video>
           </div>
-          <p class="video-note">The video is an introduction to the learning space. Full activities and resources remain available only after sign-in.</p>
+          <p class="video-caption">Presentation video · English Colles in Lyon</p>
         </div>
-        <div class="tour-points">
-          <article class="tour-point"><strong>Find the right starting point</strong><p>Use diagnostics, guided routes and short daily activities instead of trying to do everything at once.</p></article>
-          <article class="tour-point"><strong>Practise in different ways</strong><p>Lessons, quizzes, games, videos, timelines, vocabulary tools, pronunciation practice and oral missions.</p></article>
-          <article class="tour-point"><strong>Bring the work into class</strong><p>The goal is not to collect completed activities: it is to have more precise English and better ideas to use with other people.</p></article>
-          <div class="tour-cta"><p><strong>Want to explore the complete learning space?</strong></p><a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a></div>
+        <div class="video-side">
+          <div class="side-card"><strong>Find your starting point</strong><p>Use diagnostics and guided routes instead of browsing at random.</p></div>
+          <div class="side-card"><strong>Practise actively</strong><p>Short tasks, quizzes, pronunciation work and oral preparation turn content into practice.</p></div>
+          <div class="side-card highlight"><strong>Then bring it to class</strong><p>Ask questions, experiment with new language and reuse what you prepared when discussing documents.</p></div>
+          <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="preview-title">
-      <div class="preview-shot">
-        <div class="browser-frame" aria-label="Preview screenshot of the private learning space">
-          <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <img src="preview-home.png" alt="Preview of the English Colles in Lyon private homepage showing navigation, learning routes and the daily English routine.">
-        </div>
+    <section class="wrap section">
+      <div class="preview">
+        <div class="shot"><img src="preview-home.png" alt="Preview of the private English Colles in Lyon homepage"></div>
         <div class="preview-copy">
-          <span class="section-label">A real look inside</span>
-          <h3 id="preview-title">A learning space designed to help you know what to do next.</h3>
-          <p>The private site combines structured learning paths with quick activities you can use regularly. You can prepare a specific colle, build a longer-term routine or target one precise weakness.</p>
-          <p><strong>What matters is what happens afterwards:</strong> take the vocabulary, context, pronunciation, methodology or questions you have worked on and use them in English class and in your next colle.</p>
-          <div class="preview-tags" aria-label="Examples of tools inside the site">
-            <span class="preview-tag">Daily English routine</span>
-            <span class="preview-tag">Diagnostics</span>
-            <span class="preview-tag">Learning path</span>
-            <span class="preview-tag">Search</span>
-            <span class="preview-tag">Colle preparation</span>
-            <span class="preview-tag">Progress tools</span>
-          </div>
+          <span class="section-label">A real learning dashboard</span>
+          <h3>Know what to do next.</h3>
+          <p>The private homepage brings together daily practice, preparation routes, learning priorities and quick access to the main areas of the site.</p>
+          <div class="pill-row"><span class="pill">Daily routine</span><span class="pill">Learning path</span><span class="pill">Colle preparation</span><span class="pill">Search</span><span class="pill">Accessibility</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="inside" aria-labelledby="inside-title">
+    <section class="wrap section" id="inside">
       <div class="section-head">
-        <div>
-          <span class="section-label">Inside the learning space</span>
-          <h2 id="inside-title">Different tools. One purpose: better English you can actually use.</h2>
-        </div>
-        <p class="section-intro">Each section gives you something concrete to take into a lesson, a discussion or a colle. The site is built for active reuse, not passive browsing.</p>
+        <span class="section-label">Explore the learning space</span>
+        <h2>Different tools, one purpose.</h2>
+        <p>Each area gives you something concrete to reuse aloud, discuss with a teacher or test in a real colle.</p>
       </div>
-      <div class="feature-grid">
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🧭</div><h3>Methodology</h3><p>Work on document analysis, contextualisation, key questions, structure, summaries and conclusions.</p><p class="class-use"><span>Bring it to class:</span> test your key question and structure aloud.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🌍</div><h3>Civilisation</h3><p>Build the historical and political context needed to understand current debates across the English-speaking world.</p><p class="class-use"><span>Bring it to class:</span> use context to enrich discussion and examples.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🗣️</div><h3>Vocabulary</h3><p>Learn and retrieve useful language through lessons, flashcards, pronunciation support, games and revision lists.</p><p class="class-use"><span>Bring it to class:</span> deliberately reuse new words when speaking.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🧩</div><h3>Grammar</h3><p>Identify gaps, review structures through short lessons and practise until they become easier to produce spontaneously.</p><p class="class-use"><span>Bring it to class:</span> notice and reuse the structures you revised.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🎧</div><h3>Pronunciation</h3><p>Work on sounds, word stress, rhythm, linking and intonation with guided practice.</p><p class="class-use"><span>Bring it to class:</span> experiment with clearer delivery and ask for feedback.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🕰️</div><h3>Timelines</h3><p>Explore major turning points and follow links to articles and videos for deeper understanding.</p><p class="class-use"><span>Bring it to class:</span> connect current issues with relevant historical moments.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🎯</div><h3>Colle Mission Builder</h3><p>Turn one document into a complete oral mission with context, language, timed speaking and follow-up questions.</p><p class="class-use"><span>Bring it to your colle:</span> practise the whole process, not isolated tricks.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">🧠</div><h3>My Learning Path</h3><p>Use diagnostics, priorities and review tasks to decide what will make the biggest difference next.</p><p class="class-use"><span>Bring it to class:</span> use lessons and feedback to adjust your priorities.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">📚</div><h3>Resources</h3><p>Find reliable articles, podcasts, videos and further material to prepare your English work more efficiently.</p><p class="class-use"><span>Bring it to class:</span> arrive with examples, questions and useful sources.</p></article>
-        <article class="feature-card"><div class="feature-icon" aria-hidden="true">📋</div><h3>Jury Reports</h3><p>Turn recurring examiner comments and official expectations into practical preparation decisions.</p><p class="class-use"><span>Bring it to your colle:</span> compare your performance with explicit expectations.</p></article>
+      <div class="features">
+        <article class="feature"><div class="icon">🧭</div><h3>Methodology</h3><p>Understand documents, contextualise, summarise, build a key question and organise your response.</p><p class="reuse"><span>Bring it to class:</span> test your structure and reasoning orally.</p></article>
+        <article class="feature"><div class="icon">🌍</div><h3>Civilisation</h3><p>Explore countries, institutions, historical turning points and contemporary debates.</p><p class="reuse"><span>Bring it to class:</span> use context to make your comments more precise.</p></article>
+        <article class="feature"><div class="icon">🗣</div><h3>Vocabulary</h3><p>Learn, hear, revise and practise useful vocabulary through lessons, flashcards and games.</p><p class="reuse"><span>Bring it to class:</span> deliberately reuse new words when speaking.</p></article>
+        <article class="feature"><div class="icon">🧩</div><h3>Grammar</h3><p>Identify weak points and revise them through short lessons, quizzes and videos.</p><p class="reuse"><span>Bring it to class:</span> notice the structures you use — and correct them.</p></article>
+        <article class="feature"><div class="icon">🎧</div><h3>Pronunciation</h3><p>Work on sounds, stress, rhythm, intonation and connected speech.</p><p class="reuse"><span>Bring it to class:</span> practise intelligibility in real interaction.</p></article>
+        <article class="feature"><div class="icon">🕰</div><h3>Timelines</h3><p>Connect key events through chronological overviews, articles and videos.</p><p class="reuse"><span>Bring it to class:</span> place documents in a wider historical context.</p></article>
+        <article class="feature"><div class="icon">📚</div><h3>Resources & Jury Reports</h3><p>Use reliable resources and turn recurring examiner feedback into practical preparation.</p><p class="reuse"><span>Bring it to class:</span> compare your work with actual expectations.</p></article>
+        <article class="feature"><div class="icon">🎯</div><h3>Learning Path</h3><p>Use diagnostics, missions and review priorities to decide what to work on next.</p><p class="reuse"><span>Bring it to class:</span> ask for help where your diagnostic shows a real need.</p></article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="spaces-title">
+    <section class="class-band section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-label">The important part</span>
+          <h2>Independent work only becomes useful when you use it.</h2>
+          <p>These three spaces support one another. None is designed to replace the others.</p>
+        </div>
+        <div class="class-grid">
+          <div class="class-card"><h3>On the website</h3><p>Prepare, discover, practise, identify weaknesses and build useful material.</p></div>
+          <div class="class-card"><h3>In English class</h3><p>Interact, ask questions, experiment, reuse language and learn from immediate feedback.</p></div>
+          <div class="class-card"><h3>In your colles</h3><p>Apply strategies under real conditions, receive feedback and identify your next priorities.</p></div>
+        </div>
+        <div class="class-banner">Prepare here. Experiment in class. Perform in your colles. Learn from feedback. Repeat.</div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="start">
       <div class="section-head">
-        <div>
-          <span class="section-label">Three places, one progression</span>
-          <h2 id="spaces-title">The site, your English class and your colles work together.</h2>
-        </div>
-        <p class="section-intro">None of these spaces does exactly the same job. The strongest progress comes from moving between them instead of treating online work as a separate subject.</p>
-      </div>
-      <div class="three-spaces">
-        <article class="space-card"><span class="space-kicker">On the website</span><h3>Prepare and target</h3><ul><li>Build knowledge and vocabulary.</li><li>Practise grammar and pronunciation.</li><li>Identify weaknesses.</li><li>Prepare documents and oral strategies.</li></ul></article>
-        <article class="space-card"><span class="space-kicker">In English class</span><h3>Interact and experiment</h3><ul><li>Speak before everything feels perfect.</li><li>Reuse what you prepared.</li><li>Ask questions and compare ideas.</li><li>Get immediate guidance and correction.</li></ul></article>
-        <article class="space-card"><span class="space-kicker">In your colles</span><h3>Apply and receive feedback</h3><ul><li>Work under real time pressure.</li><li>Organise your thinking aloud.</li><li>Use knowledge and language flexibly.</li><li>Turn feedback into your next learning goal.</li></ul></article>
-      </div>
-      <div class="spaces-banner">Your English classes and colles are not an optional extra: they are where preparation becomes real language use.</div>
-    </section>
-
-    <section class="section" aria-labelledby="scenario-title">
-      <div class="scenario">
-        <div class="scenario-top">
-          <div><span class="section-label">What does that look like in practice?</span><h2 id="scenario-title">Your colle is on climate policy next week.</h2><p>Instead of opening random pages, use the site as part of a complete preparation cycle and deliberately carry the work into class.</p></div>
-          <span class="scenario-badge">Example route</span>
-        </div>
-        <div class="scenario-flow">
-          <div class="scenario-step"><strong>Explore context</strong><span>Build the civilisation background you need.</span></div>
-          <div class="scenario-step"><strong>Build language</strong><span>Collect useful vocabulary and structures.</span></div>
-          <div class="scenario-step"><strong>Check delivery</strong><span>Work on pronunciation and key terms.</span></div>
-          <div class="scenario-step"><strong>Prepare method</strong><span>Contextualise, find a key question and structure.</span></div>
-          <div class="scenario-step highlight"><strong>Use it in class</strong><span>Discuss, test ideas, ask questions and reuse language.</span></div>
-          <div class="scenario-step highlight"><strong>Use it in your colle</strong><span>Apply the preparation under real conditions.</span></div>
-          <div class="scenario-step"><strong>Return with feedback</strong><span>Decide what you need to improve next.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="start" aria-labelledby="start-title">
-      <div class="section-head">
-        <div>
-          <span class="section-label">Where should I start?</span>
-          <h2 id="start-title">Choose the route that matches what you need today.</h2>
-        </div>
-        <p class="section-intro">You do not need to explore everything at once. Start with one purpose, follow a short route and then bring something concrete into class or your next colle.</p>
+        <span class="section-label">Where should I start?</span>
+        <h2>Choose the route that matches what you need now.</h2>
+        <p>You do not need to use everything at once.</p>
       </div>
       <div class="start-grid">
-        <details class="start-card"><summary>I’m new to the site</summary><div class="start-body"><p>Start with the homepage and the guided orientation. See the main tools, choose one short activity and learn how progress is organised.</p><p><strong>Best first goal:</strong> understand the learning cycle rather than trying every section.</p></div></details>
-        <details class="start-card"><summary>I find English difficult and need a clear plan</summary><div class="start-body"><p>Use the Guided Learning Plan and diagnostics to identify a manageable priority in vocabulary, grammar, pronunciation, methodology or civilisation.</p><p><strong>Best first goal:</strong> work on one priority and then try to use it in class.</p></div></details>
-        <details class="start-card"><summary>I have a colle coming up</summary><div class="start-body"><p>Use methodology, civilisation, language tools and the Colle Mission Builder to prepare the actual task rather than revising English in the abstract.</p><p><strong>Best first goal:</strong> arrive in class with a key question, useful language and at least one point you want to test aloud.</p></div></details>
-        <details class="start-card"><summary>I want to improve regularly</summary><div class="start-body"><p>Use the daily English routine, your learning path and short review activities to build continuity between lessons and colles.</p><p><strong>Best first goal:</strong> do a little often, then reuse it. Regular retrieval beats passive rereading.</p></div></details>
+        <details><summary>I’m new to the site</summary><p>Start with the homepage and the presentation video. Then choose one clear goal rather than opening every section.</p></details>
+        <details><summary>I find English difficult</summary><p>Use the Guided Learning Plan and diagnostics to identify manageable priorities and work progressively.</p></details>
+        <details><summary>I have a colle coming up</summary><p>Use methodology, relevant civilisation background, vocabulary and pronunciation work, then test your preparation aloud.</p></details>
+        <details><summary>I want to improve regularly</summary><p>Use the daily routine for a short dose of news, vocabulary and civilisation, and reuse something from it in class.</p></details>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="access-title">
-      <div class="access-journey">
-        <span class="section-label" style="color:#f3a58d">How access works</span>
-        <h2 id="access-title">A simple, controlled route into the private learning space.</h2>
-        <p>The complete site is not publicly available. Requests are reviewed manually so that access remains personal and the learning space can be reserved for approved users.</p>
-        <div class="access-steps">
-          <article class="access-step"><span class="access-num">1</span><h3>Send a request</h3><p>Complete the short access form with an email address you can check.</p></article>
-          <article class="access-step"><span class="access-num">2</span><h3>Wait for review</h3><p>Each request is reviewed individually before an account is activated.</p></article>
-          <article class="access-step"><span class="access-num">3</span><h3>Create your password</h3><p>Approved users receive a secure invitation by email.</p></article>
-          <article class="access-step"><span class="access-num">4</span><h3>Enter the learning space</h3><p>Sign in with your approved account and begin your preparation.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" aria-labelledby="cta-title">
-      <span class="eyebrow">Ready to enter?</span>
-      <h2 id="cta-title">Request access to the complete learning space.</h2>
-      <p>Prepare independently, then use what you have worked on in English class and in your colles. If your account has already been approved, you can sign in directly.</p>
+    <section class="wrap cta">
+      <h2>Ready to enter the learning space?</h2>
+      <p>Request personal access to use the complete activities, learning tools and resources. Already approved? Sign in directly.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
         <a class="btn btn-secondary" href="https://englishcollesinlyon-private.pages.dev/sign-in">I already have an account</a>
@@ -529,10 +272,7 @@
     </section>
   </main>
 
-  <footer>
-    <strong>English Colles in Lyon</strong><br>
-    Designed and created by Eglantine Lecomte · Independent preparation to be put into practice in class and in colles.
-  </footer>
+  <footer><div class="wrap"><strong>English Colles in Lyon</strong><br>Designed and created by Eglantine Lecomte · Independent preparation to be put into practice in class and in colles.</div></footer>
 
   <nav class="mobile-access" aria-label="Quick access options">
     <a class="btn btn-secondary" href="https://englishcollesinlyon-private.pages.dev/sign-in">Sign in</a>
