@@ -74,10 +74,20 @@
     .loop-num{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--terracotta);font-weight:700;margin-bottom:12px}
     .loop-quote{margin:24px 0 0;border-left:4px solid var(--terracotta);padding:12px 0 12px 18px;font-family:"Fraunces",Georgia,serif;font-size:1.45rem;color:white}
 
-    .video-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:26px;align-items:start}
-    .video-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+    .video-intro{display:grid;grid-template-columns:1fr .72fr;gap:26px;align-items:start}
+    .video-launch{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+    .video-launch h3{font-size:1.8rem;margin:0 0 10px}.video-launch p{color:var(--muted);margin:0 0 20px}
+    .video-toggle{cursor:pointer;font:inherit}
+    .video-toggle .play-mark{font-size:1rem;margin-right:8px}
+    .video-panel{margin-top:20px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+    .video-panel[hidden]{display:none}
+    .video-panel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 2px 14px}
+    .video-panel-head h3{font-size:1.35rem;margin:0}
+    .video-close{cursor:pointer;border:1px solid var(--line);background:white;color:var(--navy);width:40px;height:40px;border-radius:12px;font:700 1.35rem/1 Arial,sans-serif}
+    .video-close:hover{background:var(--soft-orange)}
     .video-shell{aspect-ratio:16/9;background:#0f2434;border-radius:17px;overflow:hidden}.video-shell video{width:100%;height:100%;object-fit:contain}
     .video-caption{color:var(--muted);font-size:.9rem;margin:12px 3px 0}
+    .video-status{margin:12px 3px 0;color:var(--terracotta-dark);font-weight:700}
     .video-side{display:grid;gap:12px}
     .side-card{border:1px solid var(--line);background:var(--paper);border-radius:18px;padding:19px}
     .side-card strong{display:block;color:var(--navy);margin-bottom:5px}.side-card p{margin:0;color:var(--muted);font-size:.94rem}
@@ -113,7 +123,7 @@
     .mobile-access{display:none}
 
     @media(max-width:980px){
-      .hero,.video-grid,.preview{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.loop-grid{grid-template-columns:repeat(2,1fr)}.class-grid{grid-template-columns:1fr}.hero{padding-top:54px}.hero-panel{max-width:720px}
+      .hero,.video-intro,.preview{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.loop-grid{grid-template-columns:repeat(2,1fr)}.class-grid{grid-template-columns:1fr}.hero{padding-top:54px}.hero-panel{max-width:720px}
     }
     @media(max-width:720px){
       body{padding-bottom:72px}.wrap{width:min(100% - 24px,1180px)}.header-inner{min-height:70px}.brand small{display:none}.header-actions{display:none}h1{font-size:clamp(3rem,14vw,4.6rem)}.hero{padding:44px 0 38px}.section{padding:52px 0}.loop{padding:26px 20px}.loop-grid,.features,.start-grid,.mini-grid{grid-template-columns:1fr}.video-card{padding:10px}.cta{width:min(100% - 24px,1180px);padding:34px 20px;margin-bottom:28px}.mobile-access{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:70;grid-template-columns:1fr 1.15fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(251,245,236,.98);border-top:1px solid rgba(21,58,91,.14);box-shadow:0 -8px 26px rgba(21,58,91,.08)}.mobile-access .btn{min-height:48px;padding:0 10px;font-size:.9rem}
@@ -183,22 +193,28 @@
         <h2>See how the learning space works.</h2>
         <p>The presentation shows the main tools, how to find your way around the site and how independent work connects to class and colles.</p>
       </div>
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="video-shell">
-            <video controls preload="metadata" playsinline aria-label="Presentation of English Colles in Lyon">
-              <source src="presentation-video-english-colles.mp4" type="video/mp4">
-              Your browser cannot play this video.
-            </video>
-          </div>
-          <p class="video-caption">Presentation video · English Colles in Lyon</p>
+      <div class="video-intro">
+        <div class="video-launch">
+          <h3>Watch the presentation</h3>
+          <p>The video stays out of the way until you want it. Open it here, watch the tour, then close it and continue exploring the page.</p>
+          <button class="btn btn-primary video-toggle" id="presentationVideoToggle" type="button" aria-expanded="false" aria-controls="presentationVideoPanel"><span class="play-mark" aria-hidden="true">▶</span> Watch the presentation video</button>
         </div>
         <div class="video-side">
           <div class="side-card"><strong>Find your starting point</strong><p>Use diagnostics and guided routes instead of browsing at random.</p></div>
           <div class="side-card"><strong>Practise actively</strong><p>Short tasks, quizzes, pronunciation work and oral preparation turn content into practice.</p></div>
           <div class="side-card highlight"><strong>Then bring it to class</strong><p>Ask questions, experiment with new language and reuse what you prepared when discussing documents.</p></div>
-          <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
         </div>
+      </div>
+      <div class="video-panel" id="presentationVideoPanel" hidden aria-label="Presentation video">
+        <div class="video-panel-head">
+          <h3>How to use English Colles in Lyon</h3>
+          <button class="video-close" id="presentationVideoClose" type="button" aria-label="Close presentation video">×</button>
+        </div>
+        <div class="video-shell">
+          <video id="presentationVideo" controls preload="none" playsinline aria-label="Presentation of English Colles in Lyon"></video>
+        </div>
+        <p class="video-caption">Presentation video · English Colles in Lyon</p>
+        <p class="video-status" id="presentationVideoStatus" hidden></p>
       </div>
     </section>
 
@@ -278,5 +294,73 @@
     <a class="btn btn-secondary" href="https://englishcollesinlyon-private.pages.dev/sign-in">Sign in</a>
     <a class="btn btn-primary" href="https://englishcollesinlyon-private.pages.dev/request-access">Request access</a>
   </nav>
+
+  <script>
+  (function(){
+    'use strict';
+    var toggle=document.getElementById('presentationVideoToggle');
+    var panel=document.getElementById('presentationVideoPanel');
+    var close=document.getElementById('presentationVideoClose');
+    var video=document.getElementById('presentationVideo');
+    var status=document.getElementById('presentationVideoStatus');
+    if(!toggle||!panel||!close||!video)return;
+
+    var candidates=[
+      'presentation-video-english-colles.mp4?v=20260808-2',
+      'https://raw.githubusercontent.com/lecomteeglantine/EnglishCollesInLyon/main/presentation-video-english-colles.mp4'
+    ];
+    var candidateIndex=0;
+    var loaded=false;
+
+    function showStatus(message){
+      if(!status)return;
+      status.textContent=message;
+      status.hidden=false;
+    }
+    function hideStatus(){if(status)status.hidden=true;}
+    function loadCandidate(index){
+      if(index>=candidates.length){
+        showStatus('The presentation video could not be loaded. Please refresh the page and try again.');
+        return;
+      }
+      candidateIndex=index;
+      hideStatus();
+      video.src=candidates[index];
+      video.load();
+    }
+    function ensureLoaded(){
+      if(!loaded){loaded=true;loadCandidate(0);}
+    }
+    function openPanel(){
+      panel.hidden=false;
+      toggle.setAttribute('aria-expanded','true');
+      toggle.innerHTML='<span class="play-mark" aria-hidden="true">▲</span> Hide the presentation video';
+      ensureLoaded();
+      window.requestAnimationFrame(function(){
+        panel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+      });
+    }
+    function closePanel(returnFocus){
+      video.pause();
+      panel.hidden=true;
+      toggle.setAttribute('aria-expanded','false');
+      toggle.innerHTML='<span class="play-mark" aria-hidden="true">▶</span> Watch the presentation video';
+      if(returnFocus)toggle.focus();
+    }
+    toggle.addEventListener('click',function(){
+      if(panel.hidden)openPanel();else closePanel(false);
+    });
+    close.addEventListener('click',function(){closePanel(true);});
+    video.addEventListener('loadedmetadata',hideStatus);
+    video.addEventListener('canplay',hideStatus);
+    video.addEventListener('error',function(){
+      if(candidateIndex+1<candidates.length)loadCandidate(candidateIndex+1);
+      else showStatus('The presentation video could not be loaded. Please refresh the page and try again.');
+    });
+    document.addEventListener('keydown',function(event){
+      if(event.key==='Escape'&&!panel.hidden)closePanel(true);
+    });
+  })();
+  </script>
 </body>
 </html>
